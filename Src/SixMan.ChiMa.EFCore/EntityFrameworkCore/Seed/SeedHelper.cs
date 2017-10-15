@@ -19,7 +19,7 @@ namespace SixMan.ChiMa.EFCore.Seed
 
         public static void SeedHostDb(ChiMaDbContext context)
         {
-            context.SuppressAutoSetTenantId = true;
+            context.SuppressAutoSetTenantId = false;
 
             // Host seed
             new InitialHostDbBuilder(context).Create();
