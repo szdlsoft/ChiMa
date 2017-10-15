@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.0|AnyCPU'">
-    <OutputPath>D:\work\ChiMa\SixMan.ChiMa\Release\</OutputPath>
+    <OutputPath>bin\debug\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +27,7 @@
     <PackageReference Include="Abp" Version="3.1.1" />
     <PackageReference Include="Abp.AutoMapper" Version="3.1.1" />
     <PackageReference Include="Abp.ZeroCore.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.0.0" />

@@ -20,7 +20,7 @@ namespace SixMan.ChiMa.Domain.Web
             }
 
             var directoryInfo = new DirectoryInfo(coreAssemblyDirectoryPath);
-            while (!DirectoryContains(directoryInfo.FullName, "SixMan.ChiMa.Domain.sln"))
+            while (!DirectoryContains(directoryInfo.FullName, "SixMan.ChiMa.sln"))
             {
                 if (directoryInfo.Parent == null)
                 {
@@ -30,13 +30,19 @@ namespace SixMan.ChiMa.Domain.Web
                 directoryInfo = directoryInfo.Parent;
             }
 
-            var webMvcFolder = Path.Combine(directoryInfo.FullName, "src", "SixMan.ChiMa.Domain.Web.Mvc");
+            //var webMvcFolder = Path.Combine(directoryInfo.FullName, "src", "SixMan.ChiMa.Migrator");
+            //if (Directory.Exists(webMvcFolder))
+            //{
+            //    return webMvcFolder;
+            //}
+
+            var webMvcFolder = Path.Combine(directoryInfo.FullName, "src", "SixMan.ChiMa.Web.Mvc");
             if (Directory.Exists(webMvcFolder))
             {
                 return webMvcFolder;
             }
 
-            var webHostFolder = Path.Combine(directoryInfo.FullName, "src", "SixMan.ChiMa.Domain.Web.Host");
+            var webHostFolder = Path.Combine(directoryInfo.FullName, "src", "SixMan.ChiMa.Web.Host");
             if (Directory.Exists(webHostFolder))
             {
                 return webHostFolder;

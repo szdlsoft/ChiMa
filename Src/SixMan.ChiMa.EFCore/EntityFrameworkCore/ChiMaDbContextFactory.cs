@@ -13,9 +13,10 @@ namespace SixMan.ChiMa.EFCore
         public ChiMaDbContext CreateDbContext(string[] args)
         {
             var builder = new DbContextOptionsBuilder<ChiMaDbContext>();
-            var configuration = AppConfigurations.Get(WebContentDirectoryFinder.CalculateContentRootFolder());
+            //var configuration = AppConfigurations.Get(WebContentDirectoryFinder.CalculateContentRootFolder());
 
-            ChiMaDbContextConfigurer.Configure(builder, configuration.GetConnectionString(ChiMaConsts.ConnectionStringName));
+            //ChiMaDbContextConfigurer.Configure(builder, configuration.GetConnectionString(ChiMaConsts.ConnectionStringName));
+            ChiMaDbContextConfigurer.Configure(builder, "Server=localhost; Database=ChiMaDb; Trusted_Connection=True;");
 
             return new ChiMaDbContext(builder.Options);
         }
