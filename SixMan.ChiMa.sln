@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Doc", "1 Doc", "{3F143782-E980-4B0C-B65E-3F1057DE916C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Src", "2 Src", "{F85E4326-A408-49D4-885B-5E3C39C8860A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Test", "3 Test", "{249065D3-B69F-44EC-BF8F-A0720FC1CA08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Release", "4 Release", "{7B2711D1-C9FD-476C-8EE4-CB255B0E5893}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.EFCore", "Src\SixMan.ChiMa.EFCore\SixMan.ChiMa.EFCore.csproj", "{B87D54EB-8728-4FB5-B9DA-C87A85B63DAF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.Domain", "Src\SixMan.ChiMa.Domain\SixMan.ChiMa.Domain.csproj", "{36AE6D02-240E-4F2D-B0C5-66380B4EC007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixMan.ChiMa.Migrator", "Src\SixMan.ChiMa.Migrator\SixMan.ChiMa.Migrator.csproj", "{BBA63D71-DAAC-43A8-9EB4-5E98D6F49CAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B87D54EB-8728-4FB5-B9DA-C87A85B63DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87D54EB-8728-4FB5-B9DA-C87A85B63DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87D54EB-8728-4FB5-B9DA-C87A85B63DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87D54EB-8728-4FB5-B9DA-C87A85B63DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36AE6D02-240E-4F2D-B0C5-66380B4EC007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36AE6D02-240E-4F2D-B0C5-66380B4EC007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36AE6D02-240E-4F2D-B0C5-66380B4EC007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36AE6D02-240E-4F2D-B0C5-66380B4EC007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA63D71-DAAC-43A8-9EB4-5E98D6F49CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA63D71-DAAC-43A8-9EB4-5E98D6F49CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA63D71-DAAC-43A8-9EB4-5E98D6F49CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA63D71-DAAC-43A8-9EB4-5E98D6F49CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B87D54EB-8728-4FB5-B9DA-C87A85B63DAF} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
+		{36AE6D02-240E-4F2D-B0C5-66380B4EC007} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
+		{BBA63D71-DAAC-43A8-9EB4-5E98D6F49CAC} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E10C072C-15D7-4DD0-805A-0CD7E471545F}
+	EndGlobalSection
+EndGlobal
