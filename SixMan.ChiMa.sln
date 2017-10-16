@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Doc", "1 Doc", "{3F143782-E980-4B0C-B65E-3F1057DE916C}"
 	ProjectSection(SolutionItems) = preProject
-		Doc\吃嘛Excel导入模板.xls = Doc\吃嘛Excel导入模板.xls
+		Doc\吃嘛Excel导入模板_食材.xls = Doc\吃嘛Excel导入模板_食材.xls
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Src", "2 Src", "{F85E4326-A408-49D4-885B-5E3C39C8860A}"
@@ -25,6 +25,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "需求", "需求", "{68E45E
 		Doc\需求\用户关系.jpg = Doc\需求\用户关系.jpg
 		Doc\需求\菜品关系.jpg = Doc\需求\菜品关系.jpg
 		Doc\需求\食材关系.jpg = Doc\需求\食材关系.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "数据导入模板", "数据导入模板", "{46A9C3EF-ACB0-49A5-88EA-ED27437C46B7}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\吃嘛Excel导入模板_食材.xls = Doc\吃嘛Excel导入模板_食材.xls
 	EndProjectSection
 EndProject
 Global
@@ -54,6 +59,7 @@ Global
 		{36AE6D02-240E-4F2D-B0C5-66380B4EC007} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
 		{BBA63D71-DAAC-43A8-9EB4-5E98D6F49CAC} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
 		{68E45EAA-002C-4494-A901-88BF1DB227BF} = {3F143782-E980-4B0C-B65E-3F1057DE916C}
+		{46A9C3EF-ACB0-49A5-88EA-ED27437C46B7} = {3F143782-E980-4B0C-B65E-3F1057DE916C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E10C072C-15D7-4DD0-805A-0CD7E471545F}
