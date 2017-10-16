@@ -20,6 +20,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.Domain", "Src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.Migrator", "Src\SixMan.ChiMa.Migrator\SixMan.ChiMa.Migrator.csproj", "{BBA63D71-DAAC-43A8-9EB4-5E98D6F49CAC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "需求", "需求", "{68E45EAA-002C-4494-A901-88BF1DB227BF}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\需求\用户关系.jpg = Doc\需求\用户关系.jpg
+		Doc\需求\菜品关系.jpg = Doc\需求\菜品关系.jpg
+		Doc\需求\食材关系.jpg = Doc\需求\食材关系.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +53,7 @@ Global
 		{B87D54EB-8728-4FB5-B9DA-C87A85B63DAF} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
 		{36AE6D02-240E-4F2D-B0C5-66380B4EC007} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
 		{BBA63D71-DAAC-43A8-9EB4-5E98D6F49CAC} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
+		{68E45EAA-002C-4494-A901-88BF1DB227BF} = {3F143782-E980-4B0C-B65E-3F1057DE916C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E10C072C-15D7-4DD0-805A-0CD7E471545F}

@@ -1,4 +1,5 @@
 ﻿using Sixman.Chima.Domain.Base;
+using Sixman.Chima.Domain.Dish;
 using Sixman.Chima.Domain.Interface;
 using System;
 using System.Collections.Generic;
@@ -11,15 +12,11 @@ namespace Sixman.Chima.Domain.Food
     /// 食材
     /// </summary>
     public class FoodMaterial 
-        : ChiMaEntityBase
-        , IDescription
+        : DescriptionBase
     {
         public long FoodMaterialCategoryId { get; set; }
         public FoodMaterialCategory FoodMaterialCategory { get; set; }
-        [Required]
-        [StringLength(256)]
-        ///描述
-        public string Description { get; set; }
+        
         /// <summary>
         /// 卡路里
         /// </summary>
@@ -48,6 +45,7 @@ namespace Sixman.Chima.Domain.Food
         public string Season { get; set; }
 
         public ICollection<FoodMaterialHealthAffect> FoodMaterialHealthAffects { get; set; }
+        public ICollection<DishBom> DishBoms { get; set; }
 
     }
 }
