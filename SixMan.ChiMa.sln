@@ -26,6 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "需求", "需求", "{68E45E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "数据导入模板", "数据导入模板", "{46A9C3EF-ACB0-49A5-88EA-ED27437C46B7}"
 	ProjectSection(SolutionItems) = preProject
+		Doc\数据导入模板\菜品.xls = Doc\数据导入模板\菜品.xls
 		Doc\数据导入模板\食材.xls = Doc\数据导入模板\食材.xls
 	EndProjectSection
 EndProject
