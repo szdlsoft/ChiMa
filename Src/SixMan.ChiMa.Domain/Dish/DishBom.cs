@@ -18,8 +18,14 @@ namespace Sixman.Chima.Domain.Dish
         public long FoodMaterialId { get; set; }
         public FoodMaterial FoodMaterial { get; set; }
         /// <summary>
-        /// 配比
+        /// 配比，百分比
         /// </summary>
-        public double Matching { get; set; }
+        public int Matching { get; set; }
+        /// <summary>
+        /// 配比方式，
+        /// 0：百分比，用与主食材
+        /// 1：模糊值，用于佐料食材
+        /// </summary>
+        public int MatchingType { get; set; }
     }
 }

@@ -23,7 +23,6 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<Dish> Dish { get; set; }
         public virtual DbSet<DishBom> DishBom { get; set; }
         public virtual DbSet<Cookery> Cookery { get; set; }
-        public virtual DbSet<Condiment> Condiment { get; set; }
 
         public ChiMaDbContext(DbContextOptions<ChiMaDbContext> options)
             : base(options)

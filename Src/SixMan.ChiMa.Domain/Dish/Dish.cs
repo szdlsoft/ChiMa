@@ -41,9 +41,9 @@ namespace Sixman.Chima.Domain.Dish
         /// </summary>
         public ICollection<DishBom> DishBoms { get; set; }
         /// <summary>
-        /// 佐料
+        /// 佐料应作为食材的一种，加入bom
         /// </summary>
-        public ICollection<Condiment> Condiments { get; set; }
+        //public ICollection<Condiment> Condiments { get; set; }
         /// <summary>
         /// 烹饪法步骤
         /// </summary>
