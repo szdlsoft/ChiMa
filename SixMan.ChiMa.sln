@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Doc", "1 Doc", "{3F143782-E980-4B0C-B65E-3F1057DE916C}"
-	ProjectSection(SolutionItems) = preProject
-		Doc\吃嘛Excel导入模板_食材.xls = Doc\吃嘛Excel导入模板_食材.xls
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Src", "2 Src", "{F85E4326-A408-49D4-885B-5E3C39C8860A}"
 EndProject
@@ -29,7 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "需求", "需求", "{68E45E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "数据导入模板", "数据导入模板", "{46A9C3EF-ACB0-49A5-88EA-ED27437C46B7}"
 	ProjectSection(SolutionItems) = preProject
-		Doc\吃嘛Excel导入模板_食材.xls = Doc\吃嘛Excel导入模板_食材.xls
+		Doc\数据导入模板\食材.xls = Doc\数据导入模板\食材.xls
 	EndProjectSection
 EndProject
 Global
