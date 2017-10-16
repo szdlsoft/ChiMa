@@ -15,9 +15,10 @@ using System;
 namespace SixMan.ChiMa.Migrations
 {
     [DbContext(typeof(ChiMaDbContext))]
-    partial class ChiMaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171016124231_Add_hc_h_mha")]
+    partial class Add_hc_h_mha
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -995,8 +996,6 @@ namespace SixMan.ChiMa.Migrations
 
                     b.HasIndex("FoodMaterialId");
 
-                    b.HasIndex("HealthConcernId");
-
                     b.ToTable("FoodMaterialHealthAffect");
                 });
 
@@ -1264,11 +1263,6 @@ namespace SixMan.ChiMa.Migrations
                     b.HasOne("Sixman.Chima.Domain.Food.FoodMaterial")
                         .WithMany("FoodMaterialHealthAffects")
                         .HasForeignKey("FoodMaterialId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Sixman.Chima.Domain.Food.HealthConcern")
-                        .WithMany("FoodMaterialHealthAffects")
-                        .HasForeignKey("HealthConcernId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

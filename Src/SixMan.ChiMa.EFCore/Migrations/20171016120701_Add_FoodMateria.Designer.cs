@@ -15,9 +15,10 @@ using System;
 namespace SixMan.ChiMa.Migrations
 {
     [DbContext(typeof(ChiMaDbContext))]
-    partial class ChiMaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171016120701_Add_FoodMateria")]
+    partial class Add_FoodMateria
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -964,109 +965,6 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("FoodMaterialCategory");
                 });
 
-            modelBuilder.Entity("Sixman.Chima.Domain.Food.FoodMaterialHealthAffect", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AffectDegree");
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<long?>("DeleterUserId");
-
-                    b.Property<DateTime?>("DeletionTime");
-
-                    b.Property<string>("ExtensionData");
-
-                    b.Property<long>("FoodMaterialId");
-
-                    b.Property<long>("HealthConcernId");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FoodMaterialId");
-
-                    b.HasIndex("HealthConcernId");
-
-                    b.ToTable("FoodMaterialHealthAffect");
-                });
-
-            modelBuilder.Entity("Sixman.Chima.Domain.Food.HealthConcern", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<long?>("DeleterUserId");
-
-                    b.Property<DateTime?>("DeletionTime");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(256);
-
-                    b.Property<string>("ExtensionData");
-
-                    b.Property<long>("HealthConcernCategoryId");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("HealthConcernCategoryId");
-
-                    b.ToTable("HealthConcern");
-                });
-
-            modelBuilder.Entity("Sixman.Chima.Domain.Food.HealthConcernCategory", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Code")
-                        .HasMaxLength(50);
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<long?>("DeleterUserId");
-
-                    b.Property<DateTime?>("DeletionTime");
-
-                    b.Property<string>("ExtensionData");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("HealthConcernCategory");
-                });
-
             modelBuilder.Entity("SixMan.ChiMa.Domain.MultiTenancy.Tenant", b =>
                 {
                     b.Property<int>("Id")
@@ -1256,27 +1154,6 @@ namespace SixMan.ChiMa.Migrations
                     b.HasOne("Sixman.Chima.Domain.Food.FoodMaterialCategory", "FoodMaterialCategory")
                         .WithMany()
                         .HasForeignKey("FoodMaterialCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Sixman.Chima.Domain.Food.FoodMaterialHealthAffect", b =>
-                {
-                    b.HasOne("Sixman.Chima.Domain.Food.FoodMaterial")
-                        .WithMany("FoodMaterialHealthAffects")
-                        .HasForeignKey("FoodMaterialId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Sixman.Chima.Domain.Food.HealthConcern")
-                        .WithMany("FoodMaterialHealthAffects")
-                        .HasForeignKey("HealthConcernId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Sixman.Chima.Domain.Food.HealthConcern", b =>
-                {
-                    b.HasOne("Sixman.Chima.Domain.Food.HealthConcernCategory", "HealthConcernCategory")
-                        .WithMany()
-                        .HasForeignKey("HealthConcernCategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

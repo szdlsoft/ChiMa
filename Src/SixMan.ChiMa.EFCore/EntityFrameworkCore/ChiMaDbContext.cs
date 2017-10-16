@@ -11,10 +11,19 @@ namespace SixMan.ChiMa.EFCore
     {
         /* Define an IDbSet for each entity of the application */
         public virtual DbSet<FoodMaterialCategory> FoodMaterialCategory { get; set; }
+        public virtual DbSet<FoodMaterial> FoodMaterial { get; set; }
+        public virtual DbSet<HealthConcernCategory> HealthConcernCategory { get; set; }
+        public virtual DbSet<HealthConcern> HealthConcern { get; set; }
+        public virtual DbSet<FoodMaterialHealthAffect> FoodMaterialHealthAffect { get; set; }
 
         public ChiMaDbContext(DbContextOptions<ChiMaDbContext> options)
             : base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
