@@ -41,6 +41,9 @@ namespace Sixman.Chima.Domain.Food
         /// 碳水化合物
         /// </summary>
         public int Carbohydrate { get; set; }
+        /// <summary>
+        /// 时令
+        /// </summary>
         [StringLength(50)]
         public string Season { get; set; }
 
