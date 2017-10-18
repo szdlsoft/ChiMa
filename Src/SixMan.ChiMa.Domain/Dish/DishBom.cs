@@ -19,7 +19,7 @@ namespace Sixman.Chima.Domain.Dish
         public FoodMaterial FoodMaterial { get; set; }
         /// <summary>
         /// 配比，百分比
-        /// </summary>
+        /// </summary>biao
         public int Matching { get; set; }
         /// <summary>
         /// 配比方式，
