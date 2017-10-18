@@ -17,6 +17,10 @@ namespace Sixman.Chima.Domain.Dish
         /// 菜系
         /// </summary>
         public DishCategory DishCategory { get; set; }
+        /// <summary>
+        /// 英文名称
+        /// </summary>
+        public string EnglishName { get; set; }
         public long TasteId { get; set; }
         /// <summary>
         /// 口味
@@ -40,10 +44,7 @@ namespace Sixman.Chima.Domain.Dish
         /// 食材配比
         /// </summary>
         public ICollection<DishBom> DishBoms { get; set; }
-        /// <summary>
-        /// 佐料应作为食材的一种，加入bom
-        /// </summary>
-        //public ICollection<Condiment> Condiments { get; set; }
+        
         /// <summary>
         /// 烹饪法步骤
         /// </summary>
