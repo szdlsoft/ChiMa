@@ -3,7 +3,7 @@ using Abp.Authorization;
 using Abp.Authorization.Roles;
 using SixMan.ChiMa.Domain.Authorization.Roles;
 
-namespace SixMan.ChiMa.Roles.Dto
+namespace SixMan.ChiMa.Application.Roles.Dto
 {
     public class RoleMapProfile : Profile
     {

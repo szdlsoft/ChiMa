@@ -11,10 +11,10 @@ using Abp.IdentityFramework;
 using SixMan.ChiMa.Domain.Authorization;
 using SixMan.ChiMa.Domain.Authorization.Users;
 using SixMan.ChiMa.Domain.Authorization.Roles;
-using SixMan.ChiMa.Users.Dto;
-using SixMan.ChiMa.Roles.Dto;
+using SixMan.ChiMa.Application.Users.Dto;
+using SixMan.ChiMa.Application.Roles.Dto;
 
-namespace SixMan.ChiMa.Users
+namespace SixMan.ChiMa.Application.Users
 {
     [AbpAuthorize(PermissionNames.Pages_Users)]
     public class UserAppService : AsyncCrudAppService<User, UserDto, long, PagedResultRequestDto, CreateUserDto, UserDto>, IUserAppService

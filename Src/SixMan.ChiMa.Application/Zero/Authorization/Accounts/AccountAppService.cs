@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
 using Abp.Configuration;
 using Abp.Zero.Configuration;
-using SixMan.ChiMa.Authorization.Accounts.Dto;
+using SixMan.ChiMa.Application.Authorization.Accounts.Dto;
 using SixMan.ChiMa.Domain.Authorization.Users;
 
-namespace SixMan.ChiMa.Authorization.Accounts
+namespace SixMan.ChiMa.Application.Authorization.Accounts
 {
     public class AccountAppService : ChiMaAppServiceBase, IAccountAppService
     {

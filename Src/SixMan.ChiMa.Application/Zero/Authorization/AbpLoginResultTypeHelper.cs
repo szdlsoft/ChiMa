@@ -3,14 +3,15 @@ using Abp;
 using Abp.Authorization;
 using Abp.Dependency;
 using Abp.UI;
+using SixMan.ChiMa.Domain;
 
-namespace SixMan.ChiMa.Authorization
+namespace SixMan.ChiMa.Application.Authorization
 {
     public class AbpLoginResultTypeHelper : AbpServiceBase, ITransientDependency
     {
         public AbpLoginResultTypeHelper()
         {
-            LocalizationSourceName = AbpProjectNameConsts.LocalizationSourceName;
+            LocalizationSourceName = ChiMaConsts.LocalizationSourceName;
         }
 
         public Exception CreateExceptionForFailedLoginAttempt(AbpLoginResultType result, string usernameOrEmailAddress, string tenancyName)

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SixMan.ChiMa.Sessions.Dto
+namespace SixMan.ChiMa.Application.Sessions.Dto
 {
     public class ApplicationInfoDto
     {

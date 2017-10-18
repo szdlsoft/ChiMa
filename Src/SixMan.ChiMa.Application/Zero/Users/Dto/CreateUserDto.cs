@@ -5,7 +5,7 @@ using Abp.AutoMapper;
 using Abp.Runtime.Validation;
 using SixMan.ChiMa.Domain.Authorization.Users;
 
-namespace SixMan.ChiMa.Users.Dto
+namespace SixMan.ChiMa.Application.Users.Dto
 {
     [AutoMapTo(typeof(User))]
     public class CreateUserDto : IShouldNormalize

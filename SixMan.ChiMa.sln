@@ -24,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "需求", "需求", "{68E45E
 		Doc\需求\菜品关系.jpg = Doc\需求\菜品关系.jpg
 		Doc\需求\菜品构成比.xlsx = Doc\需求\菜品构成比.xlsx
 		Doc\需求\食材关系.jpg = Doc\需求\食材关系.jpg
+		Doc\需求\食材营养素-中文标注.xlsx = Doc\需求\食材营养素-中文标注.xlsx
 		Doc\需求\食材营养素.xlsx = Doc\需求\食材营养素.xlsx
 	EndProjectSection
 EndProject
@@ -34,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "数据导入模板", "数�
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.Application", "Src\SixMan.ChiMa.Application\SixMan.ChiMa.Application.csproj", "{9CB7DE87-C53B-4A4C-8219-05D39BCABE96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{5949190F-7927-4E9F-9280-C1D66212B5F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +71,7 @@ Global
 		{68E45EAA-002C-4494-A901-88BF1DB227BF} = {3F143782-E980-4B0C-B65E-3F1057DE916C}
 		{46A9C3EF-ACB0-49A5-88EA-ED27437C46B7} = {3F143782-E980-4B0C-B65E-3F1057DE916C}
 		{9CB7DE87-C53B-4A4C-8219-05D39BCABE96} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
+		{5949190F-7927-4E9F-9280-C1D66212B5F4} = {3F143782-E980-4B0C-B65E-3F1057DE916C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E10C072C-15D7-4DD0-805A-0CD7E471545F}

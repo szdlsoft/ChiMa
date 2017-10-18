@@ -5,7 +5,7 @@ using Abp.Authorization.Users;
 using Abp.Extensions;
 using SixMan.ChiMa.Domain.Validation;
 
-namespace SixMan.ChiMa.Authorization.Accounts.Dto
+namespace SixMan.ChiMa.Application.Authorization.Accounts.Dto
 {
     public class RegisterInput : IValidatableObject
     {

@@ -13,10 +13,10 @@ using SixMan.ChiMa.Domain.Authorization;
 using SixMan.ChiMa.Domain.Authorization.Roles;
 using SixMan.ChiMa.Domain.Authorization.Users;
 using SixMan.ChiMa.Domain.Editions;
-using SixMan.ChiMa.MultiTenancy.Dto;
+using SixMan.ChiMa.Application.MultiTenancy.Dto;
 using SixMan.ChiMa.Domain.MultiTenancy;
 
-namespace SixMan.ChiMa.MultiTenancy
+namespace SixMan.ChiMa.Application.MultiTenancy
 {
     [AbpAuthorize(PermissionNames.Pages_Tenants)]
     public class TenantAppService : AsyncCrudAppService<Tenant, TenantDto, int, PagedResultRequestDto, CreateTenantDto, TenantDto>, ITenantAppService

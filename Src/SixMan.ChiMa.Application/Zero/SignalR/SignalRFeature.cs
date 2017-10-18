@@ -1,4 +1,4 @@
-﻿namespace SixMan.ChiMa.SignalR
+﻿namespace SixMan.ChiMa.Application.SignalR
 {
     public static class SignalRFeature
     {

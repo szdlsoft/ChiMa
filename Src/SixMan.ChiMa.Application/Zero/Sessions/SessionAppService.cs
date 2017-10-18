@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.Auditing;
-using SixMan.ChiMa.Sessions.Dto;
-using SixMan.ChiMa.SignalR;
+using SixMan.ChiMa.Application.Sessions.Dto;
+using SixMan.ChiMa.Application.SignalR;
+using SixMan.ChiMa.Domain;
 
-namespace SixMan.ChiMa.Sessions
+namespace SixMan.ChiMa.Application.Sessions
 {
     public class SessionAppService : ChiMaAppServiceBase, ISessionAppService
     {

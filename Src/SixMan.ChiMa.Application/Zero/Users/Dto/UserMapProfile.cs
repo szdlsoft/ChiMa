@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using SixMan.ChiMa.Domain.Authorization.Users;
 
-namespace SixMan.ChiMa.Users.Dto
+namespace SixMan.ChiMa.Application.Users.Dto
 {
     public class UserMapProfile : Profile
     {

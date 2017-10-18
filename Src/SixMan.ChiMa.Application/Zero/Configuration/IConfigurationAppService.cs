@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using SixMan.ChiMa.Configuration.Dto;
+using SixMan.ChiMa.Application.Configuration.Dto;
 
-namespace SixMan.ChiMa.Configuration
+namespace SixMan.ChiMa.Application.Configuration
 {
     public interface IConfigurationAppService
     {

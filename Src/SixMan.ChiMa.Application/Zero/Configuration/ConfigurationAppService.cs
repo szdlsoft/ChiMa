@@ -1,9 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Abp.Authorization;
 using Abp.Runtime.Session;
-using SixMan.ChiMa.Configuration.Dto;
+using SixMan.ChiMa.Application.Configuration.Dto;
+using SixMan.ChiMa.Domain.Configuration;
 
-namespace SixMan.ChiMa.Configuration
+namespace SixMan.ChiMa.Application.Configuration
 {
     [AbpAuthorize]
     public class ConfigurationAppService : ChiMaAppServiceBase, IConfigurationAppService

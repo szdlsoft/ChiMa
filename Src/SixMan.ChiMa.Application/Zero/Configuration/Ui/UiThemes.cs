@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SixMan.ChiMa.Configuration.Ui
+namespace SixMan.ChiMa.Application.Configuration.Ui
 {
     public static class UiThemes
     {

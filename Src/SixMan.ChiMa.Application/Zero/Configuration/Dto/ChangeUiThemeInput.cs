@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SixMan.ChiMa.Configuration.Dto
+namespace SixMan.ChiMa.Application.Configuration.Dto
 {
     public class ChangeUiThemeInput
     {

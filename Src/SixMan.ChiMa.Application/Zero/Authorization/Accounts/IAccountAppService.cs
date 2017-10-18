@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Abp.Application.Services;
-using SixMan.ChiMa.Authorization.Accounts.Dto;
+using SixMan.ChiMa.Application.Authorization.Accounts.Dto;
 
-namespace SixMan.ChiMa.Authorization.Accounts
+namespace SixMan.ChiMa.Application.Authorization.Accounts
 {
     public interface IAccountAppService : IApplicationService
     {

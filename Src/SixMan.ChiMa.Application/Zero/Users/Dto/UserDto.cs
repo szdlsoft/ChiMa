@@ -5,7 +5,7 @@ using Abp.Authorization.Users;
 using Abp.AutoMapper;
 using SixMan.ChiMa.Domain.Authorization.Users;
 
-namespace SixMan.ChiMa.Users.Dto
+namespace SixMan.ChiMa.Application.Users.Dto
 {
     [AutoMapFrom(typeof(User))]
     public class UserDto : EntityDto<long>

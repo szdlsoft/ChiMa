@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Abp.Application.Services;
-using SixMan.ChiMa.Sessions.Dto;
+using SixMan.ChiMa.Application.Sessions.Dto;
 
-namespace SixMan.ChiMa.Sessions
+namespace SixMan.ChiMa.Application.Sessions
 {
     public interface ISessionAppService : IApplicationService
     {

@@ -4,7 +4,7 @@ using Abp.AutoMapper;
 using Abp.MultiTenancy;
 using SixMan.ChiMa.Domain.MultiTenancy;
 
-namespace SixMan.ChiMa.MultiTenancy.Dto
+namespace SixMan.ChiMa.Application.MultiTenancy.Dto
 {
     [AutoMapTo(typeof(Tenant))]
     public class CreateTenantDto

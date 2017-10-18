@@ -12,9 +12,9 @@ using Abp.UI;
 using SixMan.ChiMa.Domain.Authorization.Roles;
 using SixMan.ChiMa.Domain.Authorization.Users;
 using SixMan.ChiMa.Domain.Authorization;
-using SixMan.ChiMa.Roles.Dto;
+using SixMan.ChiMa.Application.Roles.Dto;
 
-namespace SixMan.ChiMa.Roles
+namespace SixMan.ChiMa.Application.Roles
 {
     [AbpAuthorize(PermissionNames.Pages_Roles)]
     public class RoleAppService : AsyncCrudAppService<Role, RoleDto, int, PagedResultRequestDto, CreateRoleDto, RoleDto>, IRoleAppService

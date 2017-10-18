@@ -1,11 +1,11 @@
 ﻿using Abp.AutoMapper;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
-using SixMan.ChiMa.Authorization;
+using SixMan.ChiMa.Application.Authorization;
 using SixMan.ChiMa.Domain;
 using SixMan.ChiMa.Domain.Authorization;
 
-namespace SixMan.ChiMa
+namespace SixMan.ChiMa.Application
 {
     [DependsOn(
         typeof(ChiMaDomainModule), 

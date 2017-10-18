@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SixMan.ChiMa.Net.MimeTypes
+namespace SixMan.ChiMa.Application.Net.MimeTypes
 {
     /* Copied from:
      * http://stackoverflow.com/questions/10362140/asp-mvc-are-there-any-constants-for-the-default-content-types */

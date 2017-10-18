@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Abp.MultiTenancy;
 
-namespace SixMan.ChiMa.Authorization.Accounts.Dto
+namespace SixMan.ChiMa.Application.Authorization.Accounts.Dto
 {
     public class IsTenantAvailableInput
     {

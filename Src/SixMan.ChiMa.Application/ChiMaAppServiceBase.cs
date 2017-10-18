@@ -8,7 +8,7 @@ using SixMan.ChiMa.Domain.MultiTenancy;
 using SixMan.ChiMa.Domain.Authorization.Users;
 using SixMan.ChiMa.Domain;
 
-namespace SixMan.ChiMa
+namespace SixMan.ChiMa.Application
 {
     /// <summary>
     /// Derive your application services from this class.

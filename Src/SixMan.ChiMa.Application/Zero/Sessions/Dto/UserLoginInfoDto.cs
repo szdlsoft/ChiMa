@@ -2,7 +2,7 @@
 using Abp.AutoMapper;
 using SixMan.ChiMa.Domain.Authorization.Users;
 
-namespace SixMan.ChiMa.Sessions.Dto
+namespace SixMan.ChiMa.Application.Sessions.Dto
 {
     [AutoMapFrom(typeof(User))]
     public class UserLoginInfoDto : EntityDto<long>

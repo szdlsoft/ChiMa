@@ -1,4 +1,4 @@
-﻿namespace SixMan.ChiMa
+﻿namespace SixMan.ChiMa.Application
 {
     public class AppConsts
     {

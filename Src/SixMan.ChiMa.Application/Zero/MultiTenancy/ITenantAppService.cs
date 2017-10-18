@@ -1,8 +1,8 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using SixMan.ChiMa.MultiTenancy.Dto;
+using SixMan.ChiMa.Application.MultiTenancy.Dto;
 
-namespace SixMan.ChiMa.MultiTenancy
+namespace SixMan.ChiMa.Application.MultiTenancy
 {
     public interface ITenantAppService : IAsyncCrudAppService<TenantDto, int, PagedResultRequestDto, CreateTenantDto, TenantDto>
     {

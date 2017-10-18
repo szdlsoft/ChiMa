@@ -5,7 +5,7 @@ using Abp.Authorization.Roles;
 using Abp.AutoMapper;
 using SixMan.ChiMa.Domain.Authorization.Roles;
 
-namespace SixMan.ChiMa.Roles.Dto
+namespace SixMan.ChiMa.Application.Roles.Dto
 {
     [AutoMap(typeof(Role))]
     public class RoleDto : EntityDto<int>
