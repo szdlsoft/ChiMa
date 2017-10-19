@@ -1,0 +1,996 @@
+DEBUG 2017-10-20 06:19:46,751 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-10-20 06:19:47,017 [2    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2017-10-20 06:19:47,047 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Web.Startup.ChiMaWebMvcModule, SixMan.ChiMa.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,053 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.ChiMaWebCoreModule, SixMan.ChiMa.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,054 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,055 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, Sixman.Chima.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,055 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,056 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,056 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,057 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,058 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,058 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,059 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,060 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,060 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,061 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:47,068 [2    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2017-10-20 06:19:47,212 [2    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-10-20 06:19:47,212 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-10-20 06:19:47,212 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpProjectName (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-10-20 06:19:47,212 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-10-20 06:19:47,759 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-10-20 06:19:49,443 [2    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-10-20 06:19:49,474 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-10-20 06:19:49,483 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-10-20 06:19:49,484 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpProjectName
+DEBUG 2017-10-20 06:19:49,486 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-10-20 06:19:49,802 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-10-20 06:19:49,892 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2017-10-20 06:19:49,892 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2017-10-20 06:19:49,896 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2017-10-20 06:19:49,898 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2017-10-20 06:19:49,898 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-10-20 06:19:49,898 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-10-20 06:19:49,898 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2017-10-20 06:19:49,898 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2017-10-20 06:19:49,898 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2017-10-20 06:19:49,899 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-10-20 06:19:49,900 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2017-10-20 06:19:49,900 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+INFO  2017-10-20 06:19:55,946 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+WARN  2017-10-20 06:20:03,041 [13   ] Mvc.Authorization.AbpAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.<OnAuthorizationAsync>d__8.MoveNext() in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.<OnAuthorizationAsync>d__8.MoveNext() in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2017-10-20 06:20:03,068 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2017-10-20 06:20:03,092 [13   ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2017-10-20 06:20:03,113 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2017-10-20 06:20:03,128 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 702.135ms
+INFO  2017-10-20 06:20:03,148 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7311.2456ms 302 
+INFO  2017-10-20 06:20:03,178 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Account/Login?ReturnUrl=%2F  
+INFO  2017-10-20 06:20:08,355 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) with arguments (, /, ) - ModelState is Valid
+INFO  2017-10-20 06:20:13,166 [5    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+WARN  2017-10-20 06:20:13,368 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'LogIn' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:20:13,370 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'UserNameOrEmail' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:20:13,371 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Password' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:20:13,372 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'RememberMe' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:20:13,372 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'LogIn' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:20:13,381 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Register' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:20:13,872 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) in 10644.346ms
+ERROR 2017-10-20 06:20:14,210 [5    ] nostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+yar2h5op.a0w(1387,29): error CS0234: The type or namespace name 'Timing' does not exist in the namespace 'SixMan.ChiMa' (are you missing an assembly reference?)
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Account\_Layout.cshtml(76,74): error CS0103: The name 'AppVersionHelper' does not exist in the current context
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Account\_Layout.cshtml(76,101): error CS0103: The name 'AppVersionHelper' does not exist in the current context
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromPath(String executingFilePath, String pagePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.GetPage(String executingFilePath, String pagePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.GetLayoutPage(ViewContext context, String executingFilePath, String layoutPath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Authentication.JwtBearer.JwtTokenMiddleware.<>c.<<UseJwtTokenMiddleware>b__0_0>d.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Authentication\JwtBearer\JwtTokenMiddleware.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+INFO  2017-10-20 06:20:14,628 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11397.0555ms 500 text/html; charset=utf-8
+INFO  2017-10-20 06:22:28,231 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Account/Login?ReturnUrl=%2F  
+INFO  2017-10-20 06:22:28,309 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) with arguments (, /, ) - ModelState is Valid
+INFO  2017-10-20 06:22:28,405 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+WARN  2017-10-20 06:22:28,411 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'LogIn' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:22:28,412 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'UserNameOrEmail' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:22:28,413 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Password' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:22:28,414 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'RememberMe' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:22:28,414 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'LogIn' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:22:28,415 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Register' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:22:28,462 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) in 214.1964ms
+ERROR 2017-10-20 06:22:28,810 [12   ] nostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+yar2h5op.a0w(1387,29): error CS0234: The type or namespace name 'Timing' does not exist in the namespace 'SixMan.ChiMa' (are you missing an assembly reference?)
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Account\_Layout.cshtml(76,74): error CS0103: The name 'AppVersionHelper' does not exist in the current context
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Account\_Layout.cshtml(76,101): error CS0103: The name 'AppVersionHelper' does not exist in the current context
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromPath(String executingFilePath, String pagePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.GetPage(String executingFilePath, String pagePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.GetLayoutPage(ViewContext context, String executingFilePath, String layoutPath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Authentication.JwtBearer.JwtTokenMiddleware.<>c.<<UseJwtTokenMiddleware>b__0_0>d.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Authentication\JwtBearer\JwtTokenMiddleware.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+INFO  2017-10-20 06:22:29,125 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 838.3697ms 500 text/html; charset=utf-8
+INFO  2017-10-20 06:22:42,470 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Account/Login?ReturnUrl=%2F  
+INFO  2017-10-20 06:22:42,552 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) with arguments (, /, ) - ModelState is Valid
+INFO  2017-10-20 06:22:42,632 [5    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+WARN  2017-10-20 06:22:42,636 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'LogIn' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:22:42,637 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'UserNameOrEmail' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:22:42,639 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Password' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:22:42,640 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'RememberMe' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:22:42,642 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'LogIn' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:22:42,644 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Register' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:22:43,012 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) in 528.9634ms
+ERROR 2017-10-20 06:22:43,373 [5    ] nostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Account\_Layout.cshtml(76,74): error CS0103: The name 'AppVersionHelper' does not exist in the current context
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Account\_Layout.cshtml(76,101): error CS0103: The name 'AppVersionHelper' does not exist in the current context
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromPath(String executingFilePath, String pagePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.GetPage(String executingFilePath, String pagePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.GetLayoutPage(ViewContext context, String executingFilePath, String layoutPath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Authentication.JwtBearer.JwtTokenMiddleware.<>c.<<UseJwtTokenMiddleware>b__0_0>d.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Authentication\JwtBearer\JwtTokenMiddleware.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+INFO  2017-10-20 06:22:43,668 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1137.05ms 500 text/html; charset=utf-8
+INFO  2017-10-20 06:24:06,872 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Account/Login?ReturnUrl=%2F  
+INFO  2017-10-20 06:24:06,966 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) with arguments (, /, ) - ModelState is Valid
+INFO  2017-10-20 06:24:07,091 [5    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+WARN  2017-10-20 06:24:07,094 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'LogIn' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:24:07,095 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'UserNameOrEmail' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:24:07,095 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Password' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:24:07,096 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'RememberMe' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:24:07,097 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'LogIn' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:24:07,098 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Register' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:24:08,849 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) in 1962.4055ms
+INFO  2017-10-20 06:24:08,862 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2011.0446ms 200 text/html; charset=utf-8
+INFO  2017-10-20 06:24:08,955 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/bootstrap/dist/css/bootstrap.css?v=rYUBh-J0b_zGCzbG02wJhid-ncHyd0BsoUYpjLLSowk  
+INFO  2017-10-20 06:24:09,028 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/toastr/toastr.css?v=W8a9WvLyUO7CXtOC4f9LoUMwkywM7JSq-Xm5kNsYW08  
+INFO  2017-10-20 06:24:09,106 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css?v=l7wu43l7XpKWzFn29hiH8AFe4I_CNzbCPmaAQivPYMg  
+INFO  2017-10-20 06:24:09,126 [32   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/toastr/toastr.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\toastr\toastr.css'
+INFO  2017-10-20 06:24:09,143 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/sweetalert/dist/sweetalert.css?v=k66BSDvi6XBdtM2RH6QQvCz2wk81XcWsiZ3kn6uFTmM  
+INFO  2017-10-20 06:24:09,301 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/material-icons/materialicons.css?v=2SsVsQpWRHM3EJ4D4MT4RRpiEXbEuK0vEjPxVr5P7Ek  
+INFO  2017-10-20 06:24:09,358 [27   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert/dist/sweetalert.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\sweetalert\dist\sweetalert.css'
+INFO  2017-10-20 06:24:09,501 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 290.0723ms 200 text/css
+INFO  2017-10-20 06:24:09,542 [28   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\famfamfam-flags\dist\sprite\famfamfam-flags.css'
+INFO  2017-10-20 06:24:09,688 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+INFO  2017-10-20 06:24:09,701 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 458.9977ms 200 text/css
+INFO  2017-10-20 06:24:09,740 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 637.2424ms 200 text/css
+INFO  2017-10-20 06:24:09,875 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/font-awesome/css/font-awesome.css?v=NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w  
+INFO  2017-10-20 06:24:09,930 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/Waves/dist/waves.css?v=0zP86LzXedNkkBjePtKrMTAPuIy6EzHfGlyYvsmGLBw  
+INFO  2017-10-20 06:24:09,950 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/animate.css/animate.css?v=00w68NO3TLuHjKRHJmjrrgJBDtG_6OhbJEu1gtHcsuo  
+INFO  2017-10-20 06:24:09,973 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/roboto.css?v=DWPiEyLnt8XZ68WQeudmZPGSejowhmQNUUhaX8dYF1Q  
+INFO  2017-10-20 06:24:09,976 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 971.4606ms 200 text/css
+INFO  2017-10-20 06:24:09,993 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/material-icons/materialicons.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\material-icons\materialicons.css'
+INFO  2017-10-20 06:24:10,069 [32   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/font-awesome/css/font-awesome.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\font-awesome\css\font-awesome.css'
+INFO  2017-10-20 06:24:10,085 [28   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/animate.css/animate.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\animate.css\animate.css'
+INFO  2017-10-20 06:24:10,115 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/css/materialize.css?v=OdWlipUYj8b9Oa4RyT45njteIcxH-4pGocqe0r0V8js  
+INFO  2017-10-20 06:24:10,130 [27   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Waves/dist/waves.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Waves\dist\waves.css'
+INFO  2017-10-20 06:24:10,160 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/materialize.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\css\materialize.css'
+INFO  2017-10-20 06:24:10,197 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 350.4217ms 200 text/css
+INFO  2017-10-20 06:24:10,217 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 267.5306ms 200 text/css
+INFO  2017-10-20 06:24:10,243 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1130.1593ms 200 text/css
+INFO  2017-10-20 06:24:10,330 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/json2/json2.js?v=EZJ68U7eUi8uSP0MRRUalYten2eOlhREE9kJOIbIeYg  
+INFO  2017-10-20 06:24:10,344 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 190.2971ms 200 text/css
+INFO  2017-10-20 06:24:10,379 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Account/Login.css?v=Hq5aBVr9vqsOYI_zoZha7PxZnLUdiilICi-gjP3RrfU  
+INFO  2017-10-20 06:24:10,413 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/css/style.css?v=yL1_ikVC9k-ZNukgUJ_Jk9cK0TBzvJLMIohPbHrAf0g  
+INFO  2017-10-20 06:24:10,417 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/roboto.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\roboto.css'
+INFO  2017-10-20 06:24:10,420 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 442.7899ms 200 text/css
+INFO  2017-10-20 06:24:10,459 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/json2/json2.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\json2\json2.js'
+INFO  2017-10-20 06:24:10,495 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1564.4211ms 200 text/css
+INFO  2017-10-20 06:24:10,545 [25   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/Login.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Account\Login.css'
+INFO  2017-10-20 06:24:10,579 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/bootstrap/dist/js/bootstrap.js?v=3vw5dArBhZ2OJ4XtRzIIQJYn6Hrd1fePLeqsuToS1R0  
+INFO  2017-10-20 06:24:10,586 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/style.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\css\style.css'
+INFO  2017-10-20 06:24:10,590 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery/dist/jquery.js?v=oYqpLeqZe9cetUDV-TFiBZHp3uJ-X4F5eLs4W6uSTSE  
+INFO  2017-10-20 06:24:10,613 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 238.99ms 200 application/javascript
+INFO  2017-10-20 06:24:10,696 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery\dist\jquery.js'
+INFO  2017-10-20 06:24:10,753 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 246.3244ms 200 text/css
+INFO  2017-10-20 06:24:10,769 [32   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+INFO  2017-10-20 06:24:10,848 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 360.8221ms 200 text/css
+INFO  2017-10-20 06:24:10,887 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/dist/jquery.validate.js?v=KuzD50lDGNI5jq_ipt4hwDpSJk3fhseTR1jdvaBoZLs  
+INFO  2017-10-20 06:24:10,911 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Account/_Layout.css?v=vIEtxnpR3ZrYbYcueRr_mJ9XuJJzDprh4sMCwvRBcqk  
+INFO  2017-10-20 06:24:10,926 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 364.3054ms 200 application/javascript
+INFO  2017-10-20 06:24:10,940 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/moment/min/moment-with-locales.js?v=7CN4bWPV0U57HDA4YjdCBKCAynhqdWErjNn-5rrsW_I  
+INFO  2017-10-20 06:24:11,023 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 220.8657ms 200 application/javascript
+INFO  2017-10-20 06:24:11,175 [25   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+INFO  2017-10-20 06:24:11,202 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/moment/min/moment-with-locales.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\moment\min\moment-with-locales.js'
+INFO  2017-10-20 06:24:11,226 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/blockUI/jquery.blockUI.js?v=oQaw-JJuUcJQ9QVYMcFnPxICDT-hv8-kuxT2FNzTGhc  
+INFO  2017-10-20 06:24:11,258 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/toastr/toastr.js?v=C7DJ6LzTt1Hvj9fd-yRnySs3I4T2B8XmQ3TqXQjc00g  
+INFO  2017-10-20 06:24:11,271 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/sweetalert/dist/sweetalert-dev.js?v=Y6AEuvugryve80FgzPE3e2EONgfiYPcaSaqF-vIFGIA  
+INFO  2017-10-20 06:24:11,300 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert/dist/sweetalert-dev.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\sweetalert\dist\sweetalert-dev.js'
+INFO  2017-10-20 06:24:11,317 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/_Layout.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Account\_Layout.css'
+INFO  2017-10-20 06:24:11,450 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 690.0949ms 200 text/css
+INFO  2017-10-20 06:24:11,485 [28   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/blockUI/jquery.blockUI.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\blockUI\jquery.blockUI.js'
+INFO  2017-10-20 06:24:11,550 [32   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/toastr/toastr.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\toastr\toastr.js'
+INFO  2017-10-20 06:24:11,593 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 647.2093ms 200 application/javascript
+INFO  2017-10-20 06:24:11,630 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 511.6962ms 200 application/javascript
+INFO  2017-10-20 06:24:11,640 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 286.8437ms 200 application/javascript
+INFO  2017-10-20 06:24:11,737 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/spin.js/jquery.spin.js?v=EG38bUU5b2M64hy9cNAzu_cQBEsiBYsDifOcoHqNd2k  
+INFO  2017-10-20 06:24:11,768 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 423.2977ms 200 application/javascript
+INFO  2017-10-20 06:24:11,815 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 363.546ms 200 application/javascript
+INFO  2017-10-20 06:24:11,835 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2  
+INFO  2017-10-20 06:24:11,856 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2  
+INFO  2017-10-20 06:24:11,898 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2  
+INFO  2017-10-20 06:24:11,923 [25   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2'
+INFO  2017-10-20 06:24:11,955 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/u0TOpm082MNkS5K0Q4rhqvesZW2xOQ-xsNqO47m55DA.woff2  
+INFO  2017-10-20 06:24:11,985 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/spin.js/jquery.spin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\spin.js\jquery.spin.js'
+INFO  2017-10-20 06:24:12,014 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2'
+INFO  2017-10-20 06:24:12,063 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 346.7524ms 200 font/woff2
+INFO  2017-10-20 06:24:12,081 [7    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2'
+INFO  2017-10-20 06:24:12,111 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/spin.js/spin.js?v=GySbz3oZXNlwoawo5PpYy0iM38B-q3jyi_HLw00uxy0  
+INFO  2017-10-20 06:24:12,114 [32   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/u0TOpm082MNkS5K0Q4rhqvesZW2xOQ-xsNqO47m55DA.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\u0TOpm082MNkS5K0Q4rhqvesZW2xOQ-xsNqO47m55DA.woff2'
+INFO  2017-10-20 06:24:12,203 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 355.6249ms 200 font/woff2
+INFO  2017-10-20 06:24:12,227 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 358.4384ms 200 font/woff2
+INFO  2017-10-20 06:24:12,233 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 286.5565ms 200 font/woff2
+INFO  2017-10-20 06:24:12,288 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/CWB0XYA8bzo0kSThX0UTuA.woff2  
+INFO  2017-10-20 06:24:12,296 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/spin.js/spin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\spin.js\spin.js'
+INFO  2017-10-20 06:24:12,331 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/77FXFjRbGzN4aCrSFhlh3hJtnKITppOI_IvcXXDNrsc.woff2  
+INFO  2017-10-20 06:24:12,357 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 302.26ms 200 application/javascript
+INFO  2017-10-20 06:24:12,410 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/isZ-wbCXNKAbnjo6_TwHThJtnKITppOI_IvcXXDNrsc.woff2  
+INFO  2017-10-20 06:24:12,419 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/CWB0XYA8bzo0kSThX0UTuA.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\CWB0XYA8bzo0kSThX0UTuA.woff2'
+INFO  2017-10-20 06:24:12,430 [26   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/77FXFjRbGzN4aCrSFhlh3hJtnKITppOI_IvcXXDNrsc.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\77FXFjRbGzN4aCrSFhlh3hJtnKITppOI_IvcXXDNrsc.woff2'
+INFO  2017-10-20 06:24:12,485 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 344.6916ms 200 font/woff2
+INFO  2017-10-20 06:24:12,503 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 302.362ms 200 application/javascript
+INFO  2017-10-20 06:24:12,543 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 180.0435ms 200 font/woff2
+INFO  2017-10-20 06:24:12,576 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2  
+INFO  2017-10-20 06:24:12,586 [32   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/isZ-wbCXNKAbnjo6_TwHThJtnKITppOI_IvcXXDNrsc.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\isZ-wbCXNKAbnjo6_TwHThJtnKITppOI_IvcXXDNrsc.woff2'
+INFO  2017-10-20 06:24:12,632 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/jSN2CGVDbcVyCnfJfjSdfBJtnKITppOI_IvcXXDNrsc.woff2  
+INFO  2017-10-20 06:24:12,690 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2  
+INFO  2017-10-20 06:24:12,693 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 380.5265ms 200 font/woff2
+INFO  2017-10-20 06:24:12,776 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2'
+INFO  2017-10-20 06:24:12,783 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/PwZc-YbIL414wB9rB1IAPRJtnKITppOI_IvcXXDNrsc.woff2  
+INFO  2017-10-20 06:24:12,829 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/jSN2CGVDbcVyCnfJfjSdfBJtnKITppOI_IvcXXDNrsc.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\jSN2CGVDbcVyCnfJfjSdfBJtnKITppOI_IvcXXDNrsc.woff2'
+INFO  2017-10-20 06:24:12,844 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/UX6i4JxQDm3fVTc1CPuwqhJtnKITppOI_IvcXXDNrsc.woff2  
+INFO  2017-10-20 06:24:12,928 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2'
+INFO  2017-10-20 06:24:12,962 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2  
+INFO  2017-10-20 06:24:13,019 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 280.3438ms 200 font/woff2
+INFO  2017-10-20 06:24:13,056 [26   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/PwZc-YbIL414wB9rB1IAPRJtnKITppOI_IvcXXDNrsc.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\PwZc-YbIL414wB9rB1IAPRJtnKITppOI_IvcXXDNrsc.woff2'
+INFO  2017-10-20 06:24:13,113 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/UX6i4JxQDm3fVTc1CPuwqhJtnKITppOI_IvcXXDNrsc.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\UX6i4JxQDm3fVTc1CPuwqhJtnKITppOI_IvcXXDNrsc.woff2'
+INFO  2017-10-20 06:24:13,177 [27   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2'
+INFO  2017-10-20 06:24:13,364 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 485.853ms 200 font/woff2
+INFO  2017-10-20 06:24:13,397 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/material-icons/materialicons.woff2  
+INFO  2017-10-20 06:24:13,423 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 603.7256ms 200 font/woff2
+INFO  2017-10-20 06:24:13,425 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 403.5596ms 200 font/woff2
+INFO  2017-10-20 06:24:13,443 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 576.2201ms 200 font/woff2
+INFO  2017-10-20 06:24:13,451 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js?v=PCUhVDVZp55Lu8KbdjXlvgXrD5vWl9TLhmEbULarsqU  
+INFO  2017-10-20 06:24:13,480 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/abp.js?v=8Fv5Ryar8BgkV6_q_U-zsW2dA57HxErdoXVKogeTUy4  
+INFO  2017-10-20 06:24:13,497 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/material-icons/materialicons.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\material-icons\materialicons.woff2'
+INFO  2017-10-20 06:24:13,524 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 565.0035ms 200 font/woff2
+INFO  2017-10-20 06:24:13,620 [26   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/abp.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\abp.js'
+INFO  2017-10-20 06:24:13,656 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js?v=ImopdkB8alCil1HigOwW3CDqWKsLZXyplf7TXBbjRnE  
+INFO  2017-10-20 06:24:13,684 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.jquery.js'
+INFO  2017-10-20 06:24:13,686 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 297.5556ms 200 font/woff2
+INFO  2017-10-20 06:24:13,739 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 261.0542ms 200 application/javascript
+INFO  2017-10-20 06:24:13,746 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/fonts/roboto/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2  
+INFO  2017-10-20 06:24:13,785 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/Waves/dist/waves.js?v=Lar7zQhqgdoUsaqhuwkgnWgsC-eRWIxHhJPV-QtrDog  
+INFO  2017-10-20 06:24:13,787 [27   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.toastr.js'
+INFO  2017-10-20 06:24:13,847 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js?v=pHFl_MDwwZLcdWvFBdIWQRNd1TYnlLqWz81WI3l1bNA  
+INFO  2017-10-20 06:24:13,896 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 167.8323ms 200 application/javascript
+INFO  2017-10-20 06:24:13,926 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 263.1701ms 200 application/javascript
+INFO  2017-10-20 06:24:13,962 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js?v=Y3zoG-hSFKmbS3BHKo_wFWRPbyzJXKoNrnF73uFdtqU  
+INFO  2017-10-20 06:24:14,026 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Waves/dist/waves.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Waves\dist\waves.js'
+INFO  2017-10-20 06:24:14,103 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/js/admin.js?v=tVnerWKWo6Bi-SXoAqQMoiI16S5Ta0AzFUZerddubZE  
+INFO  2017-10-20 06:24:14,122 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js?v=RJuGDX616JN_UziXsmKnth0alpECKCx0gtxKZVrZWxY  
+INFO  2017-10-20 06:24:14,158 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.blockUI.js'
+INFO  2017-10-20 06:24:14,169 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 447.0545ms 200 application/javascript
+INFO  2017-10-20 06:24:14,199 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.sweet-alert.js'
+INFO  2017-10-20 06:24:14,518 [27   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/admin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\js\admin.js'
+INFO  2017-10-20 06:24:14,574 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 457.6341ms 200 application/javascript
+INFO  2017-10-20 06:24:14,620 [26   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.spin.js'
+INFO  2017-10-20 06:24:14,880 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/js/main.js?v=GmU_olKtI9zeSkSj74hvcxYvV346pQbe6-QCCCstV7c  
+INFO  2017-10-20 06:24:14,969 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 513.1264ms 200 application/javascript
+INFO  2017-10-20 06:24:15,148 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 708.0068ms 200 application/javascript
+INFO  2017-10-20 06:24:15,196 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2'
+INFO  2017-10-20 06:24:15,223 [32   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/main.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\js\main.js'
+INFO  2017-10-20 06:24:15,226 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636440771898052777  
+INFO  2017-10-20 06:24:15,277 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636440771898052777  
+INFO  2017-10-20 06:24:15,414 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Account/Login.js?v=o2PUQBkwW7VjtzD5RNxKPa3oShr3fMFHds_2dwIAV5M  
+INFO  2017-10-20 06:24:15,485 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1535.8186ms 200 font/woff2
+INFO  2017-10-20 06:24:15,505 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 788.7185ms 200 application/javascript
+INFO  2017-10-20 06:24:15,516 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2017-10-20 06:24:15,538 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 746.7084ms 200 application/javascript
+INFO  2017-10-20 06:24:15,601 [27   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/Login.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Account\Login.js'
+INFO  2017-10-20 06:24:15,827 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 484.4113ms 200 application/javascript
+INFO  2017-10-20 06:24:15,888 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+WARN  2017-10-20 06:24:16,088 [28   ] naries.DictionaryBasedLocalizationSource - Can not find 'About' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:24:16,089 [28   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:24:16,151 [28   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-10-20 06:24:16,162 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 894.2668ms
+INFO  2017-10-20 06:24:16,170 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1316.4488ms 200 application/x-javascript; charset=utf-8
+INFO  2017-10-20 06:24:16,238 [23   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-10-20 06:24:16,249 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 755.3681ms
+INFO  2017-10-20 06:24:16,261 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1079.5699ms 200 text/plain; charset=utf-8
+INFO  2017-10-20 06:24:25,288 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/Login application/x-www-form-urlencoded 272
+INFO  2017-10-20 06:24:25,418 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) with arguments (SixMan.ChiMa.Web.Models.Account.LoginViewModel, /, ) - ModelState is Valid
+INFO  2017-10-20 06:24:26,856 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application signed in.
+INFO  2017-10-20 06:24:27,750 [32   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2017-10-20 06:24:27,780 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) in 2457.2782ms
+INFO  2017-10-20 06:24:27,791 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2503.8515ms 200 application/json; charset=utf-8
+INFO  2017-10-20 06:24:27,827 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2017-10-20 06:24:27,873 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:24:27,902 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: admin.
+INFO  2017-10-20 06:24:27,954 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+INFO  2017-10-20 06:24:28,366 [32   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2017-10-20 06:24:28,958 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 1076.4701ms
+ERROR 2017-10-20 06:24:29,304 [32   ] nostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\_Layout.cshtml(6,20): error CS0234: The type or namespace name 'SignalR' does not exist in the namespace 'SixMan.ChiMa' (are you missing an assembly reference?)
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\_Layout.cshtml(22,61): error CS0103: The name 'AppSettingNames' does not exist in the current context
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\_Layout.cshtml(137,38): error CS0103: The name 'AppVersionHelper' does not exist in the current context
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\_Layout.cshtml(137,65): error CS0103: The name 'AppVersionHelper' does not exist in the current context
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\_Layout.cshtml(178,14): error CS0103: The name 'SignalRFeature' does not exist in the current context
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\_Layout.cshtml(197,10): error CS0103: The name 'SignalRFeature' does not exist in the current context
+vr5akqrk.bew(1771,29): error CS0234: The type or namespace name 'Timing' does not exist in the namespace 'SixMan.ChiMa' (are you missing an assembly reference?)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromPath(String executingFilePath, String pagePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.GetPage(String executingFilePath, String pagePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.GetLayoutPage(ViewContext context, String executingFilePath, String layoutPath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Authentication.JwtBearer.JwtTokenMiddleware.<>c.<<UseJwtTokenMiddleware>b__0_0>d.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Authentication\JwtBearer\JwtTokenMiddleware.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+INFO  2017-10-20 06:24:30,047 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2151.7201ms 500 text/html; charset=utf-8
+INFO  2017-10-20 06:25:58,650 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2017-10-20 06:25:58,684 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:25:58,700 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: admin.
+INFO  2017-10-20 06:25:58,766 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+INFO  2017-10-20 06:25:58,945 [30   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2017-10-20 06:25:59,466 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 770.3001ms
+ERROR 2017-10-20 06:25:59,912 [30   ] nostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\_Layout.cshtml(22,61): error CS0103: The name 'AppSettingNames' does not exist in the current context
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromPath(String executingFilePath, String pagePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.GetPage(String executingFilePath, String pagePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.GetLayoutPage(ViewContext context, String executingFilePath, String layoutPath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Authentication.JwtBearer.JwtTokenMiddleware.<>c.<<UseJwtTokenMiddleware>b__0_0>d.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Authentication\JwtBearer\JwtTokenMiddleware.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+INFO  2017-10-20 06:26:00,106 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1429.696ms 500 text/html; charset=utf-8
+INFO  2017-10-20 06:26:39,198 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2017-10-20 06:26:39,260 [30   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:26:39,343 [30   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: admin.
+INFO  2017-10-20 06:26:39,483 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+INFO  2017-10-20 06:26:39,587 [15   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+WARN  2017-10-20 06:26:41,066 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:26:41,102 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'HomePage' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:26:41,741 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:26:41,742 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:26:41,743 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'About' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:26:41,744 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:26:42,579 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 3308.5777ms
+ERROR 2017-10-20 06:26:43,168 [12   ] nostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\Components\RightSideBar\Default.cshtml(1,34): error CS0234: The type or namespace name 'Ui' does not exist in the namespace 'SixMan.ChiMa.Configuration' (are you missing an assembly reference?)
+D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\Components\RightSideBar\Default.cshtml(11,40): error CS0103: The name 'UiThemes' does not exist in the current context
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult.<ExecuteAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker.<InvokeAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.<InvokeCoreAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AspNetCore._Views_Shared__Layout_cshtml.<<ExecuteAsync>b__64_19>d.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\_Layout.cshtml:line 143
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.<SetOutputContentAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at AspNetCore._Views_Shared__Layout_cshtml.<ExecuteAsync>d__64.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\Views\Shared\_Layout.cshtml:line 70
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageCoreAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Authentication.JwtBearer.JwtTokenMiddleware.<>c.<<UseJwtTokenMiddleware>b__0_0>d.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Authentication\JwtBearer\JwtTokenMiddleware.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+INFO  2017-10-20 06:26:43,335 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4316.6882ms 500 text/html; charset=utf-8
+INFO  2017-10-20 06:27:40,897 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2017-10-20 06:27:40,913 [30   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:27:40,922 [30   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: admin.
+INFO  2017-10-20 06:27:41,001 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+INFO  2017-10-20 06:27:41,099 [32   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+WARN  2017-10-20 06:27:41,272 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:41,277 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'HomePage' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:41,279 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:41,282 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:41,282 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'About' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:41,283 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:27:41,710 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 785.9315ms
+INFO  2017-10-20 06:27:41,725 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 822.8782ms 200 text/html; charset=utf-8
+INFO  2017-10-20 06:27:41,804 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/bootstrap-select/dist/css/bootstrap-select.css?v=a7N4Jki3LzSbThclvqbu4nF45twcjuc772JGFhY9qwk  
+INFO  2017-10-20 06:27:41,829 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/images/user.png  
+INFO  2017-10-20 06:27:41,860 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Shared/_Layout.css?v=uq7unI_U0xZr0Pbyzeu6KfbJKHVFuv0wNJ4CrrhQknw  
+INFO  2017-10-20 06:27:41,942 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/bootstrap-select/dist/js/bootstrap-select.js?v=_KDPX2Vvqq8sySMxlLNJxt9j6Cmb8i_xp602ozhYxzI  
+INFO  2017-10-20 06:27:41,979 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/morris.js/morris.css?v=szHusaozbQctTn4FX-3l5E0A5zoxz7-ne4fr8NgWJlw  
+INFO  2017-10-20 06:27:42,010 [30   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-select/dist/css/bootstrap-select.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-select\dist\css\bootstrap-select.css'
+INFO  2017-10-20 06:27:42,029 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/css/themes/all-themes.css?v=XaAlkmhL9gA6mBxpcxGYAWxggxkIpRmT9qGbKejs6eA  
+INFO  2017-10-20 06:27:42,033 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/user.png'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\images\user.png'
+INFO  2017-10-20 06:27:42,076 [43   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-select/dist/js/bootstrap-select.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-select\dist\js\bootstrap-select.js'
+INFO  2017-10-20 06:27:42,094 [32   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/_Layout.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Shared\_Layout.css'
+INFO  2017-10-20 06:27:42,158 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 350.3965ms 200 text/css
+INFO  2017-10-20 06:27:42,175 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 303.2102ms 200 text/css
+INFO  2017-10-20 06:27:42,195 [44   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/morris.js/morris.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\morris.js\morris.css'
+INFO  2017-10-20 06:27:42,227 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 313.8321ms 200 application/javascript
+INFO  2017-10-20 06:27:42,259 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 324.0426ms 200 image/png
+INFO  2017-10-20 06:27:42,369 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 403.6202ms 200 text/css
+INFO  2017-10-20 06:27:42,423 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/js/admin.js  
+INFO  2017-10-20 06:27:42,428 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-slimscroll/jquery.slimscroll.js?v=4K6ZHzwMYR5_eU2SeDIaByus_qki9IFY8hmxl5U6D1Y  
+INFO  2017-10-20 06:27:42,436 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Shared/_Layout.js?v=jOYc7_5N1zFKt3qTihQ-9Kc0wjSMXkAeHUXNyvn8sYo  
+INFO  2017-10-20 06:27:42,493 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-countTo/jquery.countTo.js?v=AGGYFLOyVnIKn_2UCDl9D_5VWf8wHWCOtm9YU0P9g6I  
+INFO  2017-10-20 06:27:42,561 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/push.js/push.js?v=HDxbpm8oBKwe1bmX9Z1SahYYA7zEbc1dk7LfopvOvoE  
+INFO  2017-10-20 06:27:42,633 [44   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-countTo/jquery.countTo.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-countTo\jquery.countTo.js'
+INFO  2017-10-20 06:27:42,651 [43   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/_Layout.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Shared\_Layout.js'
+INFO  2017-10-20 06:27:42,664 [32   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/admin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\js\admin.js'
+INFO  2017-10-20 06:27:42,673 [30   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-slimscroll/jquery.slimscroll.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-slimscroll\jquery.slimscroll.js'
+INFO  2017-10-20 06:27:42,702 [46   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/push.js/push.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\push.js\push.js'
+INFO  2017-10-20 06:27:42,871 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 428.6967ms 200 application/javascript
+INFO  2017-10-20 06:27:42,885 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 170.9994ms 200 application/javascript
+INFO  2017-10-20 06:27:42,903 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 425.9515ms 200 application/javascript
+INFO  2017-10-20 06:27:42,920 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 395.6125ms 200 application/javascript
+INFO  2017-10-20 06:27:42,941 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 398.2212ms 200 application/javascript
+INFO  2017-10-20 06:27:43,022 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/themes/all-themes.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\css\themes\all-themes.css'
+INFO  2017-10-20 06:27:43,040 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/chart.js/dist/Chart.bundle.js?v=TQAtDUIU_0XtXZLNjMBV8noK8jNSngwHlgtC_PvsRAk  
+INFO  2017-10-20 06:27:43,150 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/morris.js/morris.js?v=cQB75DEaDbn4oSiaWgdoh3TuZCHSO-kYdD_Ehka48Ro  
+INFO  2017-10-20 06:27:43,212 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/raphael/raphael.js?v=MPXjTSEImVJI1834JAHubdK7Lts1VTUPJmCQ9zKAjyA  
+INFO  2017-10-20 06:27:43,237 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/Flot/jquery.flot.resize.js?v=i59RRvMkqw-28mDu6YRzKo77gmM7k9aPZMtcw45wgu4  
+INFO  2017-10-20 06:27:43,309 [45   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/chart.js/dist/Chart.bundle.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\chart.js\dist\Chart.bundle.js'
+INFO  2017-10-20 06:27:43,317 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/Flot/jquery.flot.js?v=t7kx8nPDixJ3ucbB9OBcTsCYhaSHvdrzJ54tfkmjjhI  
+INFO  2017-10-20 06:27:43,392 [43   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/morris.js/morris.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\morris.js\morris.js'
+INFO  2017-10-20 06:27:43,458 [46   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.resize.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.resize.js'
+INFO  2017-10-20 06:27:43,492 [44   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/raphael/raphael.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\raphael\raphael.js'
+INFO  2017-10-20 06:27:43,579 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1316.8571ms 200 text/css
+INFO  2017-10-20 06:27:43,659 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 492.0947ms 200 application/javascript
+INFO  2017-10-20 06:27:43,673 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 445.7083ms 200 application/javascript
+INFO  2017-10-20 06:27:43,678 [30   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.js'
+INFO  2017-10-20 06:27:43,702 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 518.3492ms 200 application/javascript
+INFO  2017-10-20 06:27:43,875 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+INFO  2017-10-20 06:27:43,886 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/images/user-img-background.jpg  
+INFO  2017-10-20 06:27:43,902 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/Flot/jquery.flot.categories.js?v=boFmSyjqeVxzSQb0qhVhRkCnWsf705mn-5CEBAaYNRo  
+INFO  2017-10-20 06:27:43,912 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 711.5677ms 200 application/javascript
+INFO  2017-10-20 06:27:43,931 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 715.9965ms 200 application/javascript
+INFO  2017-10-20 06:27:43,940 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/Flot/jquery.flot.pie.js?v=RsEWYd9gdLG1bCIcU8j59Rkvf_1O7HtzoD1TRUs22cU  
+INFO  2017-10-20 06:27:43,994 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.pie.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.pie.js'
+INFO  2017-10-20 06:27:44,040 [46   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/user-img-background.jpg'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\images\user-img-background.jpg'
+INFO  2017-10-20 06:27:44,021 [48   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2'
+INFO  2017-10-20 06:27:44,078 [47   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.categories.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.categories.js'
+INFO  2017-10-20 06:27:44,155 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 429.7728ms 200 application/javascript
+INFO  2017-10-20 06:27:44,238 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-sparkline/dist/jquery.sparkline.js?v=k0LZZpXY4vJp6vbA5CL5bb20Ou0IO3Shz-J6U6Vq56c  
+INFO  2017-10-20 06:27:44,255 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/Flot/jquery.flot.time.js?v=pYLIMq3HE4prBar2HxbrrCdHAfG-Sv6nfnOaHDS5xBo  
+INFO  2017-10-20 06:27:44,276 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 294.3112ms 200 image/jpeg
+INFO  2017-10-20 06:27:44,301 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 398.743ms 200 font/woff2
+INFO  2017-10-20 06:27:44,325 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 280.6293ms 200 application/javascript
+INFO  2017-10-20 06:27:44,378 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.time.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.time.js'
+INFO  2017-10-20 06:27:44,426 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Home/Index.js?v=tRGDdqeVjO63iaO1qvGPpKF2NuT2riEOyYovlY_otk0  
+INFO  2017-10-20 06:27:44,429 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 377.5778ms 200 application/javascript
+INFO  2017-10-20 06:27:44,459 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Home/Index.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Home\Index.js'
+INFO  2017-10-20 06:27:44,463 [43   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-sparkline/dist/jquery.sparkline.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-sparkline\dist\jquery.sparkline.js'
+INFO  2017-10-20 06:27:44,478 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 254.5954ms 200 application/javascript
+INFO  2017-10-20 06:27:44,520 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 465.2002ms 200 application/javascript
+INFO  2017-10-20 06:27:56,174 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Users  
+INFO  2017-10-20 06:27:56,217 [30   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:27:56,247 [30   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: admin.
+INFO  2017-10-20 06:27:56,619 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.UsersController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+INFO  2017-10-20 06:27:57,999 [32   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Users/Index.cshtml.
+WARN  2017-10-20 06:27:58,015 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,015 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'UserName' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,016 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'FullName' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,017 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'EmailAddress' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,018 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'IsActive' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,018 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Actions' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,020 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,021 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,022 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewUser' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,028 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'UserName' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,029 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Name' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,030 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Surname' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,030 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'EmailAddress' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,031 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Password' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,032 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,033 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'IsActive' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,035 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Cancel' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,035 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Save' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,221 [42   ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,225 [42   ] naries.DictionaryBasedLocalizationSource - Can not find 'HomePage' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,226 [42   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,227 [42   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,228 [42   ] naries.DictionaryBasedLocalizationSource - Can not find 'About' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,229 [42   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:27:58,258 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.UsersController.Index (SixMan.ChiMa.Web.Mvc) in 2019.1146ms
+INFO  2017-10-20 06:27:58,274 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2133.5142ms 200 text/html; charset=utf-8
+INFO  2017-10-20 06:27:58,357 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636440771898052777  
+INFO  2017-10-20 06:27:58,361 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636440771898052777  
+INFO  2017-10-20 06:27:58,375 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Users/Index.js?v=TISCa1v85LEMN-54sxImJFRkCnjSAt_QY-sDi6gxXGk  
+INFO  2017-10-20 06:27:58,420 [30   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:27:58,431 [32   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:27:58,634 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Users/Index.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Users\Index.js'
+INFO  2017-10-20 06:27:58,677 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2017-10-20 06:27:58,689 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 318.4768ms 200 application/javascript
+INFO  2017-10-20 06:27:58,704 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-10-20 06:27:58,715 [32   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+WARN  2017-10-20 06:27:58,726 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'HomePage' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:27:58,726 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 213.4626ms
+WARN  2017-10-20 06:27:58,733 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,741 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:27:58,742 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 414.9384ms 200 text/plain; charset=utf-8
+WARN  2017-10-20 06:27:58,745 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'About' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:27:58,750 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:27:58,785 [30   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-10-20 06:27:58,800 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 361.597ms
+INFO  2017-10-20 06:27:58,822 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 485.0099ms 200 application/x-javascript; charset=utf-8
+INFO  2017-10-20 06:28:02,130 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Roles  
+INFO  2017-10-20 06:28:02,149 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:28:02,180 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: admin.
+INFO  2017-10-20 06:28:02,515 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.RolesController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+WARN  2017-10-20 06:28:02,999 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,000 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:28:03,459 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Roles/Index.cshtml.
+WARN  2017-10-20 06:28:03,481 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,482 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,482 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,483 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Actions' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,484 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,485 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,487 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewRole' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,492 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,493 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,495 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Cancel' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,496 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Save' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,670 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,675 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'HomePage' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,677 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,678 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,679 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'About' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:03,680 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:28:03,724 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.RolesController.Index (SixMan.ChiMa.Web.Mvc) in 1542.6547ms
+INFO  2017-10-20 06:28:03,750 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1607.7806ms 200 text/html; charset=utf-8
+INFO  2017-10-20 06:28:03,809 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Roles/Index.js?v=OKM0jzzo9Tl4KLCW8AgedO-ukLR48o1BnH44BLzbkLc  
+INFO  2017-10-20 06:28:03,856 [30   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Roles/Index.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Roles\Index.js'
+INFO  2017-10-20 06:28:03,894 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 79.3582ms 200 application/javascript
+INFO  2017-10-20 06:28:03,930 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636440771898052777  
+INFO  2017-10-20 06:28:03,933 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636440771898052777  
+INFO  2017-10-20 06:28:03,961 [15   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:28:03,974 [32   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:28:04,045 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2017-10-20 06:28:04,100 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-10-20 06:28:04,110 [32   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-10-20 06:28:04,123 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 67.1492ms
+WARN  2017-10-20 06:28:04,129 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'HomePage' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:04,131 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:04,137 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:28:04,141 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 355.3164ms 200 text/plain; charset=utf-8
+WARN  2017-10-20 06:28:04,141 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'About' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:04,152 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:28:04,199 [15   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-10-20 06:28:04,212 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 233.6345ms
+INFO  2017-10-20 06:28:04,228 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 433.2531ms 200 application/x-javascript; charset=utf-8
+INFO  2017-10-20 06:28:06,961 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/About  
+INFO  2017-10-20 06:28:06,980 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:28:06,993 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: admin.
+INFO  2017-10-20 06:28:07,045 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AboutController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+INFO  2017-10-20 06:28:07,280 [15   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/About/Index.cshtml.
+WARN  2017-10-20 06:28:07,497 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:07,501 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'HomePage' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:07,503 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:07,504 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:07,504 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'About' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:07,505 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:28:07,533 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AboutController.Index (SixMan.ChiMa.Web.Mvc) in 536.2397ms
+INFO  2017-10-20 06:28:07,594 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 584.2581ms 200 text/html; charset=utf-8
+INFO  2017-10-20 06:28:07,701 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636440771898052777  
+INFO  2017-10-20 06:28:07,711 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636440771898052777  
+INFO  2017-10-20 06:28:07,722 [47   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:28:07,833 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:28:07,911 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2017-10-20 06:28:07,922 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-10-20 06:28:07,934 [12   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+WARN  2017-10-20 06:28:07,951 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'HomePage' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:28:07,954 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 95.2878ms
+WARN  2017-10-20 06:28:07,954 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:07,957 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:07,959 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'About' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:07,961 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:28:08,001 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 341.4801ms 200 text/plain; charset=utf-8
+INFO  2017-10-20 06:28:08,024 [47   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-10-20 06:28:08,063 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 295.1914ms
+INFO  2017-10-20 06:28:08,072 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 434.1141ms 200 application/x-javascript; charset=utf-8
+INFO  2017-10-20 06:28:25,803 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/About  
+INFO  2017-10-20 06:28:25,817 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-10-20 06:28:25,827 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: admin.
+INFO  2017-10-20 06:28:25,877 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AboutController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+INFO  2017-10-20 06:28:25,960 [30   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/About/Index.cshtml.
+WARN  2017-10-20 06:28:26,131 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:26,135 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'HomePage' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:26,137 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:26,139 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:26,140 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'About' in localization source 'AbpProjectName'!
+WARN  2017-10-20 06:28:26,140 [47   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'AbpProjectName'!
+INFO  2017-10-20 06:28:26,264 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AboutController.Index (SixMan.ChiMa.Web.Mvc) in 434.9593ms
+INFO  2017-10-20 06:28:26,329 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 470.3961ms 200 text/html; charset=utf-8

@@ -10,7 +10,7 @@ namespace SixMan.ChiMa.Application
     [DependsOn(
         typeof(ChiMaDomainModule), 
         typeof(AbpAutoMapperModule))]
-    public class SixManApplicationModule : AbpModule
+    public class ChiMaApplicationModule : AbpModule
     {
         public override void PreInitialize()
         {
@@ -19,7 +19,7 @@ namespace SixMan.ChiMa.Application
 
         public override void Initialize()
         {
-            var thisAssembly = typeof(SixManApplicationModule).GetAssembly();
+            var thisAssembly = typeof(ChiMaApplicationModule).GetAssembly();
 
             IocManager.RegisterAssemblyByConvention(thisAssembly);
 
