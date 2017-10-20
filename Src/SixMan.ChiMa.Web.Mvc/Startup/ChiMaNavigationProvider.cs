@@ -135,6 +135,8 @@ namespace SixMan.ChiMa.Web.Startup
 
         private static ILocalizableString L(string name)
         {
+            var source = LocalizationHelper.GetSource("ChiMa");
+            var s1 = source.GetString("HomePage");
             return new LocalizableString(name, ChiMaConsts.LocalizationSourceName);
         }
     }

@@ -46,7 +46,7 @@ namespace SixMan.ChiMa
             );
 
             // Use database for language management
-            Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();
+            //Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();
 
             Configuration.Modules.AbpAspNetCore()
                  .CreateControllersForAppServices(

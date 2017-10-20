@@ -24,7 +24,7 @@ namespace SixMan.ChiMa.Domain
             Configuration.Modules.Zero().EntityTypes.Role = typeof(Role);
             Configuration.Modules.Zero().EntityTypes.User = typeof(User);
 
-            AbpProjectNameLocalizationConfigurer.Configure(Configuration.Localization);
+            ChiMaLocalizationConfigurer.Configure(Configuration.Localization);
 
             // Enable this line to create a multi-tenant application.
             Configuration.MultiTenancy.IsEnabled = ChiMaConsts.MultiTenancyEnabled;
