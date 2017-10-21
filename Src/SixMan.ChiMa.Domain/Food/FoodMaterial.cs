@@ -1,18 +1,18 @@
-﻿using Sixman.Chima.Domain.Base;
-using Sixman.Chima.Domain.Dish;
-using Sixman.Chima.Domain.Interface;
+﻿using SixMan.ChiMa.Domain.Base;
+using SixMan.ChiMa.Domain.Dish;
+using SixMan.ChiMa.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Sixman.Chima.Domain.Food
+namespace SixMan.ChiMa.Domain.Food
 {
     /// <summary>
     /// 食材
     /// </summary>
     public class FoodMaterial 
-        : DescriptionBase
+        : MultiMediaBase
     {
         public long FoodMaterialCategoryId { get; set; }
         public FoodMaterialCategory FoodMaterialCategory { get; set; }

@@ -3,8 +3,9 @@ using Abp.Zero.EntityFrameworkCore;
 using SixMan.ChiMa.Domain.Authorization.Roles;
 using SixMan.ChiMa.Domain.Authorization.Users;
 using SixMan.ChiMa.Domain.MultiTenancy;
-using Sixman.Chima.Domain.Food;
-using Sixman.Chima.Domain.Dish;
+using SixMan.ChiMa.Domain.Food;
+using SixMan.ChiMa.Domain.Dish;
+using SixMan.ChiMa.Domain.Base;
 
 namespace SixMan.ChiMa.EFCore
 {
@@ -32,6 +33,13 @@ namespace SixMan.ChiMa.EFCore
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            //一下会建新表
+            //modelBuilder.Entity<FoodMaterialCategory>().HasBaseType<CategoryBase>();
+            //modelBuilder.Entity<HealthConcernCategory>().HasBaseType<CategoryBase>();
+
+            //modelBuilder.Entity<DishCategory>().HasBaseType<CategoryBase>();
+            //modelBuilder.Entity<Taste>().HasBaseType<CategoryBase>();
+            //modelBuilder.Entity<CookMethod>().HasBaseType<CategoryBase>();
         }
     }
 }

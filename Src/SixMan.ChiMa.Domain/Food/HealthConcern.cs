@@ -1,11 +1,11 @@
-﻿using Sixman.Chima.Domain.Base;
-using Sixman.Chima.Domain.Interface;
+﻿using SixMan.ChiMa.Domain.Base;
+using SixMan.ChiMa.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Sixman.Chima.Domain.Food
+namespace SixMan.ChiMa.Domain.Food
 {
     /// <summary>
     /// 健康关注

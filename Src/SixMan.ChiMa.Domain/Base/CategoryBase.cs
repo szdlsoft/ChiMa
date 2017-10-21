@@ -1,19 +1,24 @@
-﻿using Sixman.Chima.Domain.Interface;
+﻿using SixMan.ChiMa.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace Sixman.Chima.Domain.Base
+namespace SixMan.ChiMa.Domain.Base
 {
     public abstract class CategoryBase
         : ChiMaEntityBase
         , ICategory
     {
+        public const int MaxNameLength = 50;
+        public const int MaxCodeLength = 50;
+
         [Required]
-        [StringLength(50)]
+        [StringLength(MaxNameLength)]
         public string Name { get; set; }
-        [StringLength(50)]
+        [StringLength(MaxCodeLength)]
         public string Code { get; set; }
+        
     }
 }

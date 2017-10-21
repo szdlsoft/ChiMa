@@ -15,9 +15,10 @@ using System;
 namespace SixMan.ChiMa.Migrations
 {
     [DbContext(typeof(ChiMaDbContext))]
-    partial class ChiMaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171021115433_Add_MulitMedia")]
+    partial class Add_MulitMedia
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

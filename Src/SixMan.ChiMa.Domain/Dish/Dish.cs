@@ -1,16 +1,16 @@
-﻿using Sixman.Chima.Domain.Base;
-using Sixman.Chima.Domain.Interface;
+﻿using SixMan.ChiMa.Domain.Base;
+using SixMan.ChiMa.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sixman.Chima.Domain.Dish
+namespace SixMan.ChiMa.Domain.Dish
 {
     /// <summary>
     /// 菜品
     /// </summary>
     public class Dish
-        : DescriptionBase
+        : MultiMediaBase
     {
         public long DishCategoryId { get; set; }
         /// <summary>

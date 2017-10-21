@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sixman.Chima.Domain.Interface
+namespace SixMan.ChiMa.Domain.Interface
 {
     public interface ICategory
     {

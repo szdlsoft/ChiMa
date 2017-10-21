@@ -1,10 +1,10 @@
-﻿using Sixman.Chima.Domain.Base;
-using Sixman.Chima.Domain.Food;
+﻿using SixMan.ChiMa.Domain.Base;
+using SixMan.ChiMa.Domain.Food;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sixman.Chima.Domain.Dish
+namespace SixMan.ChiMa.Domain.Dish
 {
     /// <summary>
     /// 食材配比

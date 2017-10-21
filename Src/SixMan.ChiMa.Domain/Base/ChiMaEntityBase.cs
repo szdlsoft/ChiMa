@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sixman.Chima.Domain.Base
+namespace SixMan.ChiMa.Domain.Base
 {
     public abstract class ChiMaEntityBase
         : FullAuditedEntity<long>

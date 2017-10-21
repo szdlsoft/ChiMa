@@ -15,9 +15,10 @@ using System;
 namespace SixMan.ChiMa.Migrations
 {
     [DbContext(typeof(ChiMaDbContext))]
-    partial class ChiMaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171021113013_FoodMateialCategory_Add_Parent")]
+    partial class FoodMateialCategory_Add_Parent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -882,7 +883,7 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("AbpUsers");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.Cookery", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Dish.Cookery", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
@@ -929,7 +930,7 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("Cookery");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.CookMethod", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Dish.CookMethod", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
@@ -962,13 +963,10 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("CookMethod");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.Dish", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Dish.Dish", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Audio")
-                        .HasMaxLength(512);
 
                     b.Property<long>("CookMethodId");
 
@@ -998,15 +996,9 @@ namespace SixMan.ChiMa.Migrations
 
                     b.Property<long?>("LastModifierUserId");
 
-                    b.Property<string>("Photo")
-                        .HasMaxLength(512);
-
                     b.Property<int?>("PreProcessTime");
 
                     b.Property<long>("TasteId");
-
-                    b.Property<string>("Video")
-                        .HasMaxLength(512);
 
                     b.HasKey("Id");
 
@@ -1019,7 +1011,7 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("Dish");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.DishBom", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Dish.DishBom", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
@@ -1057,7 +1049,7 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("DishBom");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.DishCategory", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Dish.DishCategory", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
@@ -1090,7 +1082,7 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("DishCategory");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.Taste", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Dish.Taste", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
@@ -1123,15 +1115,12 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("Taste");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.FoodMaterial", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Food.FoodMaterial", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<double?>("ASH");
-
-                    b.Property<string>("Audio")
-                        .HasMaxLength(512);
 
                     b.Property<double?>("CA");
 
@@ -1189,9 +1178,6 @@ namespace SixMan.ChiMa.Migrations
 
                     b.Property<double?>("P");
 
-                    b.Property<string>("Photo")
-                        .HasMaxLength(512);
-
                     b.Property<double?>("Protein");
 
                     b.Property<double?>("Retinol");
@@ -1204,9 +1190,6 @@ namespace SixMan.ChiMa.Migrations
                         .HasMaxLength(50);
 
                     b.Property<double?>("Thiamin");
-
-                    b.Property<string>("Video")
-                        .HasMaxLength(512);
 
                     b.Property<double?>("VitaminA");
 
@@ -1225,7 +1208,7 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("FoodMaterial");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.FoodMaterialCategory", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Food.FoodMaterialCategory", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
@@ -1262,7 +1245,7 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("FoodMaterialCategory");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.FoodMaterialHealthAffect", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Food.FoodMaterialHealthAffect", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
@@ -1298,7 +1281,7 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("FoodMaterialHealthAffect");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.HealthConcern", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Food.HealthConcern", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
@@ -1332,7 +1315,7 @@ namespace SixMan.ChiMa.Migrations
                     b.ToTable("HealthConcern");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.HealthConcernCategory", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Food.HealthConcernCategory", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
@@ -1549,75 +1532,75 @@ namespace SixMan.ChiMa.Migrations
                         .HasForeignKey("LastModifierUserId");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.Cookery", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Dish.Cookery", b =>
                 {
-                    b.HasOne("SixMan.ChiMa.Domain.Dish.Dish")
+                    b.HasOne("Sixman.Chima.Domain.Dish.Dish")
                         .WithMany("Cookerys")
                         .HasForeignKey("DishId");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.Dish", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Dish.Dish", b =>
                 {
-                    b.HasOne("SixMan.ChiMa.Domain.Dish.CookMethod", "CookMethod")
+                    b.HasOne("Sixman.Chima.Domain.Dish.CookMethod", "CookMethod")
                         .WithMany()
                         .HasForeignKey("CookMethodId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("SixMan.ChiMa.Domain.Dish.DishCategory", "DishCategory")
+                    b.HasOne("Sixman.Chima.Domain.Dish.DishCategory", "DishCategory")
                         .WithMany()
                         .HasForeignKey("DishCategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("SixMan.ChiMa.Domain.Dish.Taste", "Taste")
+                    b.HasOne("Sixman.Chima.Domain.Dish.Taste", "Taste")
                         .WithMany()
                         .HasForeignKey("TasteId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.DishBom", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Dish.DishBom", b =>
                 {
-                    b.HasOne("SixMan.ChiMa.Domain.Dish.Dish", "Dish")
+                    b.HasOne("Sixman.Chima.Domain.Dish.Dish", "Dish")
                         .WithMany("DishBoms")
                         .HasForeignKey("DishId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("SixMan.ChiMa.Domain.Food.FoodMaterial", "FoodMaterial")
+                    b.HasOne("Sixman.Chima.Domain.Food.FoodMaterial", "FoodMaterial")
                         .WithMany("DishBoms")
                         .HasForeignKey("FoodMaterialId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.FoodMaterial", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Food.FoodMaterial", b =>
                 {
-                    b.HasOne("SixMan.ChiMa.Domain.Food.FoodMaterialCategory", "FoodMaterialCategory")
+                    b.HasOne("Sixman.Chima.Domain.Food.FoodMaterialCategory", "FoodMaterialCategory")
                         .WithMany()
                         .HasForeignKey("FoodMaterialCategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.FoodMaterialCategory", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Food.FoodMaterialCategory", b =>
                 {
-                    b.HasOne("SixMan.ChiMa.Domain.Food.FoodMaterialCategory", "Parent")
-                        .WithMany("Childern")
+                    b.HasOne("Sixman.Chima.Domain.Food.FoodMaterialCategory", "Parent")
+                        .WithMany()
                         .HasForeignKey("ParentId");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.FoodMaterialHealthAffect", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Food.FoodMaterialHealthAffect", b =>
                 {
-                    b.HasOne("SixMan.ChiMa.Domain.Food.FoodMaterial")
+                    b.HasOne("Sixman.Chima.Domain.Food.FoodMaterial")
                         .WithMany("FoodMaterialHealthAffects")
                         .HasForeignKey("FoodMaterialId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("SixMan.ChiMa.Domain.Food.HealthConcern")
+                    b.HasOne("Sixman.Chima.Domain.Food.HealthConcern")
                         .WithMany("FoodMaterialHealthAffects")
                         .HasForeignKey("HealthConcernId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.HealthConcern", b =>
+            modelBuilder.Entity("Sixman.Chima.Domain.Food.HealthConcern", b =>
                 {
-                    b.HasOne("SixMan.ChiMa.Domain.Food.HealthConcernCategory", "HealthConcernCategory")
+                    b.HasOne("Sixman.Chima.Domain.Food.HealthConcernCategory", "HealthConcernCategory")
                         .WithMany()
                         .HasForeignKey("HealthConcernCategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
