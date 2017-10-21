@@ -5,11 +5,11 @@
     <TargetFrameworks>net461;netcoreapp2.0</TargetFrameworks>
     <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
     <AssemblyName>SixMan.ChiMa.Domain</AssemblyName>
-    <PackageId>Sixman.ChiMa.Domain</PackageId>
+    <PackageId>SixMan.ChiMa.Domain</PackageId>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <UserSecretsId>Sixman.ChiMa-56C2EF2F-ABD6-4EFC-AAF2-2E81C34E8FB1</UserSecretsId>
+    <UserSecretsId>SixMan.ChiMa-56C2EF2F-ABD6-4EFC-AAF2-2E81C34E8FB1</UserSecretsId>
     <RootNamespace>SixMan.ChiMa.Domain</RootNamespace>
   </PropertyGroup>
 
