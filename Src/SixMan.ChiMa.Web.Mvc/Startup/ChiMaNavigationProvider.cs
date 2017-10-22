@@ -56,42 +56,27 @@ namespace SixMan.ChiMa.Web.Startup
                     )
                 ).AddItem( //Menu items below is just for demonstration!
                     new MenuItemDefinition(
-                        "MultiLevelMenu",
-                        L("MultiLevelMenu"),
+                        PageNames.FoodMateria,
+                        L("FoodMateria"),
                         icon: "menu"
                     ).AddItem(
                         new MenuItemDefinition(
-                            "AspNetBoilerplate",
-                            new FixedLocalizableString("ASP.NET Boilerplate")
-                        ).AddItem(
-                            new MenuItemDefinition(
-                                "AspNetBoilerplateHome",
-                                new FixedLocalizableString("Home"),
-                                url: "https://aspnetboilerplate.com?ref=abptmpl"
-                            )
-                        ).AddItem(
-                            new MenuItemDefinition(
-                                "AspNetBoilerplateTemplates",
-                                new FixedLocalizableString("Templates"),
-                                url: "https://aspnetboilerplate.com/Templates?ref=abptmpl"
-                            )
-                        ).AddItem(
-                            new MenuItemDefinition(
-                                "AspNetBoilerplateSamples",
-                                new FixedLocalizableString("Samples"),
-                                url: "https://aspnetboilerplate.com/Samples?ref=abptmpl"
-                            )
-                        ).AddItem(
-                            new MenuItemDefinition(
-                                "AspNetBoilerplateDocuments",
-                                new FixedLocalizableString("Documents"),
-                                url: "https://aspnetboilerplate.com/Pages/Documents?ref=abptmpl"
-                            )
+                            PageNames.FoodMateriaCategory,
+                            L("FoodMateriaCategory"),
+                            url: "FoodMateriaCategory"
                         )
                     ).AddItem(
+                            new MenuItemDefinition(
+                               PageNames.FoodMateria,
+                               L("FoodMateria"),
+                               url: "FoodMateria"
+                            )
+                    )
+                  ).AddItem(
                         new MenuItemDefinition(
-                            "AspNetZero",
-                            new FixedLocalizableString("ASP.NET Zero")
+                            PageNames.Dish,
+                            L("Dish"),
+                            icon:"menu"
                         ).AddItem(
                             new MenuItemDefinition(
                                 "AspNetZeroHome",
@@ -104,39 +89,15 @@ namespace SixMan.ChiMa.Web.Startup
                                 new FixedLocalizableString("Description"),
                                 url: "https://aspnetzero.com/?ref=abptmpl#description"
                             )
-                        ).AddItem(
-                            new MenuItemDefinition(
-                                "AspNetZeroFeatures",
-                                new FixedLocalizableString("Features"),
-                                url: "https://aspnetzero.com/?ref=abptmpl#features"
-                            )
-                        ).AddItem(
-                            new MenuItemDefinition(
-                                "AspNetZeroPricing",
-                                new FixedLocalizableString("Pricing"),
-                                url: "https://aspnetzero.com/?ref=abptmpl#pricing"
-                            )
-                        ).AddItem(
-                            new MenuItemDefinition(
-                                "AspNetZeroFaq",
-                                new FixedLocalizableString("Faq"),
-                                url: "https://aspnetzero.com/Faq?ref=abptmpl"
-                            )
-                        ).AddItem(
-                            new MenuItemDefinition(
-                                "AspNetZeroDocuments",
-                                new FixedLocalizableString("Documents"),
-                                url: "https://aspnetzero.com/Documents?ref=abptmpl"
-                            )
                         )
-                    )
-                );
+                   )
+            ;
         }
 
         private static ILocalizableString L(string name)
         {
-            var source = LocalizationHelper.GetSource("ChiMa");
-            var s1 = source.GetString("HomePage");
+            //var source = LocalizationHelper.GetSource("ChiMa");
+            //var s1 = source.GetString("HomePage");
             return new LocalizableString(name, ChiMaConsts.LocalizationSourceName);
         }
     }
