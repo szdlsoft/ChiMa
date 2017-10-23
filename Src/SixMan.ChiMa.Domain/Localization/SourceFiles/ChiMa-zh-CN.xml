@@ -27,7 +27,9 @@
     <text name="Roles" value="角色"/>
 
     <text name="FoodMateria" value="食材"/>
+    <text name="FoodMateriaCategory" value="食材"/>
     <text name="Dish" value="菜品"/>
+    <text name="DishCategory" value="菜品"/>
     
   </texts>
 </localizationDictionary>

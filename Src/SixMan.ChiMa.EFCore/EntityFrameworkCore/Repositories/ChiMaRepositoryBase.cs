@@ -25,8 +25,8 @@ namespace SixMan.ChiMa.EFCore.Repositories
     /// This is a shortcut of <see cref="ChiMaRepositoryBase{TEntity,TPrimaryKey}"/> for <see cref="int"/> primary key.
     /// </summary>
     /// <typeparam name="TEntity">Entity type</typeparam>
-    public abstract class ChiMaRepositoryBase<TEntity> : ChiMaRepositoryBase<TEntity, int>
-        where TEntity : class, IEntity<int>
+    public abstract class ChiMaRepositoryBase<TEntity> : ChiMaRepositoryBase<TEntity, long>
+        where TEntity : class, IEntity<long>
     {
         protected ChiMaRepositoryBase(IDbContextProvider<ChiMaDbContext> dbContextProvider)
             : base(dbContextProvider)
