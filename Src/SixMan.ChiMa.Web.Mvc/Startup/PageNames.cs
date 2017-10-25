@@ -8,8 +8,8 @@
         public const string Users = "Users";
         public const string Roles = "Roles";
 
-        public const string FoodMateria = "FoodMateria";
-        public const string FoodMateriaCategory = "FoodMateriaCategory";
+        public const string FoodMaterial = "FoodMateria";
+        public const string FoodMaterialCategory = "FoodMateriaCategory";
         public const string Dish = "Dish";
     }
 }

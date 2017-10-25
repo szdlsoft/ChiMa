@@ -7,6 +7,7 @@ using SixMan.ChiMa.Application.Users;
 using SixMan.ChiMa.Web.Models.Users;
 using Microsoft.AspNetCore.Mvc;
 using SixMan.ChiMa.Domain.Authorization;
+using SixMan.ChiMa.Web.Models.FoodMaterialCategory;
 
 namespace SixMan.ChiMa.Web.Controllers
 {
@@ -24,7 +25,7 @@ namespace SixMan.ChiMa.Web.Controllers
         {
             var users = (await _userAppService.GetAll(new PagedResultRequestDto {MaxResultCount = int.MaxValue})).Items; //Paging not implemented yet
             var roles = (await _userAppService.GetRoles()).Items;
-            var model = new UserListViewModel
+            var model = new UserListViewModel()
             {
                 Users = users,
                 Roles = roles

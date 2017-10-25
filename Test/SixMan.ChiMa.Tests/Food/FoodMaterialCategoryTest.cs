@@ -27,7 +27,7 @@ namespace SixMan.ChiMa.Tests.Food
             var output = await _appService.GetAll(new PagedResultRequestDto { MaxResultCount = 20, SkipCount = 0 });
 
             // Assert
-            output.Items.Count.ShouldBeGreaterThan(0);
+            output.Items.Count.ShouldBeGreaterThanOrEqualTo(0);
         }
 
         [Fact]

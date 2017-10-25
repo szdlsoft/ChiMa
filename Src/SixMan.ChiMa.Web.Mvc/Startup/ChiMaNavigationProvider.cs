@@ -56,20 +56,20 @@ namespace SixMan.ChiMa.Web.Startup
                     )
                 ).AddItem( //Menu items below is just for demonstration!
                     new MenuItemDefinition(
-                        PageNames.FoodMateria,
-                        L("FoodMateria"),
+                        PageNames.FoodMaterial,
+                        L("FoodMaterial"),
                         icon: "menu"
                     ).AddItem(
                         new MenuItemDefinition(
-                            PageNames.FoodMateriaCategory,
-                            L("FoodMateriaCategory"),
-                            url: "FoodMateriaCategory"
+                            PageNames.FoodMaterialCategory,
+                            L("FoodMaterialCategory"),
+                            url: "FoodMaterialCategory"
                         )
                     ).AddItem(
                             new MenuItemDefinition(
-                               PageNames.FoodMateria,
-                               L("FoodMateria"),
-                               url: "FoodMateria"
+                               PageNames.FoodMaterial,
+                               L("FoodMaterial"),
+                               url: "FoodMaterial"
                             )
                     )
                   ).AddItem(
