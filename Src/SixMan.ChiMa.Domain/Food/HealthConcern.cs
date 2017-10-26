@@ -14,7 +14,6 @@ namespace SixMan.ChiMa.Domain.Food
         : ChiMaEntityBase
         , IDescription
     {
-        public long HealthConcernCategoryId { get; set; }
         public HealthConcernCategory HealthConcernCategory { get; set; }
         /// <summary>
         /// 描述

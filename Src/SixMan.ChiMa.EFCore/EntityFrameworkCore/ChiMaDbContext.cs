@@ -6,6 +6,8 @@ using SixMan.ChiMa.Domain.MultiTenancy;
 using SixMan.ChiMa.Domain.Food;
 using SixMan.ChiMa.Domain.Dish;
 using SixMan.ChiMa.Domain.Base;
+using SixMan.ChiMa.Domain.Family;
+using SixMan.ChiMa.Domain.Common;
 
 namespace SixMan.ChiMa.EFCore
 {
@@ -24,6 +26,10 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<Dish> Dish { get; set; }
         public virtual DbSet<DishBom> DishBom { get; set; }
         public virtual DbSet<Cookery> Cookery { get; set; }
+        //家庭
+        public virtual DbSet<Family> Family { get; set; }
+        public virtual DbSet<FamilyMember> FamilyMember { get; set; }
+        public virtual DbSet<PersonHealthAffect> PersonHealthAffect { get; set; }
 
         public ChiMaDbContext(DbContextOptions<ChiMaDbContext> options)
             : base(options)
@@ -40,6 +46,9 @@ namespace SixMan.ChiMa.EFCore
             //modelBuilder.Entity<DishCategory>().HasBaseType<CategoryBase>();
             //modelBuilder.Entity<Taste>().HasBaseType<CategoryBase>();
             //modelBuilder.Entity<CookMethod>().HasBaseType<CategoryBase>();
+            //efcore 不支持ComplexType
+            //modelBuilder.ComplexType<Range>();
+            modelBuilder.Entity<FamilyMember>().OwnsOne<Range>(fm => fm.Age);
         }
     }
 }

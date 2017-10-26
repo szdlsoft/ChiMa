@@ -1,19 +1,22 @@
 ﻿using SixMan.ChiMa.Domain.Base;
+using SixMan.ChiMa.Domain.Food;
 using SixMan.ChiMa.Domain.Interface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace SixMan.ChiMa.Domain.Food
+namespace SixMan.ChiMa.Domain.Family
 {
     /// <summary>
-    /// 食材健康影响
+    /// 人员健康影响
     /// </summary>
-    public class FoodMaterialHealthAffect
+    public class PersonHealthAffect
         : ChiMaEntityBase
         , IAffectDegree
     {
-        public FoodMaterial FoodMaterial { get; set; }
+        public FamilyMember FamilyMember { get; set; }
         public HealthConcern HealthConcern { get; set; }
         /// <summary>
         /// 影响程度
