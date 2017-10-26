@@ -2,6 +2,7 @@
 using SixMan.ChiMa.Domain.Common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,25 @@ namespace SixMan.ChiMa.Domain.Family
         /// 年龄段
         /// </summary>
         public Range Age{ get; set; }
+
+        //家庭昵称
+        [MaxLength(CategoryBase.MaxNameLength)]
+        public string NickName { get; set; }
+        //身高
+        public int Height { get; set; }
+        //体重
+        public int Weight { get; set; }
+        //忌口
+        [MaxLength(DescriptionBase.MaxDescriptionLength)]
+        public string AvoidFoods { get; set; }
+        //慢性病
+        [MaxLength(DescriptionBase.MaxDescriptionLength)]
+        public string Chronic { get; set; }
+        //职业
+        public Career Career { get; set; }
+        //收入
+        public Range Income { get; set; }
+
         /// <summary>
         /// 人员健康关注
         /// </summary>

@@ -1,12 +1,15 @@
 ﻿using System;
 using Abp.Authorization.Users;
 using Abp.Extensions;
+using SixMan.ChiMa.Domain.Family;
 
 namespace SixMan.ChiMa.Domain.Authorization.Users
 {
     public class User : AbpUser<User>
     {
         public const string DefaultPassword = "123qwe";
+
+        public UserInfo UserInfo { get; set; }
 
         public static string CreateRandomPassword()
         {

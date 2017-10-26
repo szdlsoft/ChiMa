@@ -30,6 +30,7 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<Family> Family { get; set; }
         public virtual DbSet<FamilyMember> FamilyMember { get; set; }
         public virtual DbSet<PersonHealthAffect> PersonHealthAffect { get; set; }
+        public virtual DbSet<UserInfo> UserInfo { get; set; }
 
         public ChiMaDbContext(DbContextOptions<ChiMaDbContext> options)
             : base(options)
@@ -49,6 +50,13 @@ namespace SixMan.ChiMa.EFCore
             //efcore 不支持ComplexType
             //modelBuilder.ComplexType<Range>();
             modelBuilder.Entity<FamilyMember>().OwnsOne<Range>(fm => fm.Age);
+            modelBuilder.Entity<FamilyMember>().OwnsOne<Range>(fm => fm.Income);
+
+            //用户和个人信息
+            modelBuilder.Entity<UserInfo>()
+                .HasOne(ui => ui.User)
+                .WithOne(u => u.UserInfo)
+                .HasForeignKey<UserInfo>(ui => ui.UserId);
         }
     }
 }
