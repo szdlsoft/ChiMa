@@ -32,6 +32,11 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<PersonHealthAffect> PersonHealthAffect { get; set; }
         public virtual DbSet<UserInfo> UserInfo { get; set; }
 
+        public virtual DbSet<UserFavoriteDish> UserFavoriteDish { get; set; }
+        public virtual DbSet<UserBrowseDish> UserBrowseDish { get; set; }
+        public virtual DbSet<UserCommentDish> UserCommentDish { get; set; }
+
+
         public ChiMaDbContext(DbContextOptions<ChiMaDbContext> options)
             : base(options)
         {

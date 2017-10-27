@@ -53,5 +53,17 @@ namespace SixMan.ChiMa.Domain.Family
         //粉丝
         [InverseProperty("Fan")]
         public ICollection<UserAttention> Fans { get; set; }
+        /// <summary>
+        /// 浏览过的菜谱
+        /// </summary>
+        public ICollection<UserBrowseDish> BrowseDishs { get; set; }
+        /// <summary>
+        /// 收藏的菜谱
+        /// </summary>
+        public ICollection<UserFavoriteDish> FavoriteDishs { get; set; }
+        /// <summary>
+        /// 自制的菜谱
+        /// </summary>
+        public ICollection<SixMan.ChiMa.Domain.Dish.Dish> HomeMadeDishs { get; set; }
     }
 }
