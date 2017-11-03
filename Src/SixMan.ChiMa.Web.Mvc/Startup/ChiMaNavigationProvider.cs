@@ -1,4 +1,5 @@
-﻿using Abp.Application.Navigation;
+﻿using System;
+using Abp.Application.Navigation;
 using Abp.Localization;
 using SixMan.ChiMa.Application.Authorization;
 using SixMan.ChiMa.Domain;
@@ -11,7 +12,53 @@ namespace SixMan.ChiMa.Web.Startup
     /// </summary>
     public class ChiMaNavigationProvider : NavigationProvider
     {
-        public override void SetNavigation(INavigationProviderContext context)
+        public override void SetNavigation(INavigationProviderContext context){
+            var HomeMenu =  new MenuItemDefinition(
+                        PageNames.Home,
+                        L("HomePage"),
+                        url: "",
+                        icon: "home",
+                        requiresAuthentication: true
+                    );
+            var SysMenu =  new MenuItemDefinition(
+                        PageNames.Tenants,
+                        L("System"),
+                        icon: "menu"
+                    );
+            MenuItemDefinition FoodMenu = CreateFooMenu();
+
+            MenuItemDefinition DishMenu = CreateDisMenu();            
+
+            context.Manager.MainMenu
+                .AddItem( HomeMenu) 
+                .AddItem( SysMenu )
+                .AddItem( FoodMenu)
+                .AddItem( DishMenu)
+                ;
+            
+        }
+
+        private MenuItemDefinition CreateDisMenu()
+        {
+            var DishMenu = new MenuItemDefinition(
+                                     PageNames.Dish,
+                                        L("Dish"),
+                                        icon: "menu"
+                                );
+            return DishMenu;
+        }
+
+        private MenuItemDefinition CreateFooMenu()
+        {
+            var FoodMenu = new MenuItemDefinition(
+                                    PageNames.FoodMaterial,
+                                    L("FoodMaterial"),
+                                    icon: "menu"
+                                );
+            return FoodMenu;
+        }
+
+        public  void xSetNavigation(INavigationProviderContext context)
         {
             context.Manager.MainMenu
                 .AddItem(
