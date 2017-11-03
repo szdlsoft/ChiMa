@@ -12,50 +12,111 @@ namespace SixMan.ChiMa.Web.Startup
     /// </summary>
     public class ChiMaNavigationProvider : NavigationProvider
     {
-        public override void SetNavigation(INavigationProviderContext context){
-            var HomeMenu =  new MenuItemDefinition(
+        public override void SetNavigation(INavigationProviderContext context)
+        {
+            var HomeMenu = new MenuItemDefinition(
                         PageNames.Home,
                         L("HomePage"),
                         url: "",
                         icon: "home",
                         requiresAuthentication: true
                     );
-            var SysMenu =  new MenuItemDefinition(
-                        PageNames.Tenants,
-                        L("System"),
-                        icon: "menu"
-                    );
-            MenuItemDefinition FoodMenu = CreateFooMenu();
+            MenuItemDefinition SysMenu = CreateSysMenu();
 
-            MenuItemDefinition DishMenu = CreateDisMenu();            
+            MenuItemDefinition FoodMenu = CreateFooMenu();
+            MenuItemDefinition DishMenu = CreateDisMenu();
 
             context.Manager.MainMenu
-                .AddItem( HomeMenu) 
-                .AddItem( SysMenu )
-                .AddItem( FoodMenu)
-                .AddItem( DishMenu)
+                .AddItem(HomeMenu)
+                .AddItem(SysMenu)
+                .AddItem(FoodMenu)
+                .AddItem(DishMenu)
                 ;
-            
+
+        }
+
+        private static MenuItemDefinition CreateSysMenu()
+        {
+            return new MenuItemDefinition(
+                        PageNames.System,
+                        L("System"),
+                        icon: "menu"
+                    ).AddItem(
+                        new MenuItemDefinition(
+                            PageNames.Users,
+                            L("Users"),
+                            url: "Users",
+                            icon: "people",
+                            requiredPermissionName: PermissionNames.Pages_Users
+                            )
+                     ).AddItem(
+                        new MenuItemDefinition(
+                            PageNames.Roles,
+                            L("Roles"),
+                            url: "Roles",
+                            icon: "local_offer",
+                            requiredPermissionName: PermissionNames.Pages_Roles
+                        )
+                    );
+
+
+
         }
 
         private MenuItemDefinition CreateDisMenu()
         {
-            var DishMenu = new MenuItemDefinition(
+            return
+                new MenuItemDefinition(
                                      PageNames.Dish,
                                         L("Dish"),
                                         icon: "menu"
-                                );
-            return DishMenu;
+                                ).AddItem(
+                            new MenuItemDefinition(
+                                "AspNetZeroHome",
+                                new FixedLocalizableString("Home"),
+                                url: "https://aspnetzero.com?ref=abptmpl"
+                            )
+                        ).AddItem(
+                            new MenuItemDefinition(
+                                "AspNetZeroDescription",
+                                new FixedLocalizableString("Description"),
+                                url: "https://aspnetzero.com/?ref=abptmpl#description"
+                            )
+                        ).AddItem(
+                            new MenuItemDefinition(
+                                "AspNetZeroHome",
+                                new FixedLocalizableString("Home"),
+                                url: "https://aspnetzero.com?ref=abptmpl"
+                            )
+                        ).AddItem(
+                            new MenuItemDefinition(
+                                "AspNetZeroDescription",
+                                new FixedLocalizableString("Description"),
+                                url: "https://aspnetzero.com/?ref=abptmpl#description"
+                            )
+                        );
         }
 
         private MenuItemDefinition CreateFooMenu()
         {
-            var FoodMenu = new MenuItemDefinition(
-                                    PageNames.FoodMaterial,
-                                    L("FoodMaterial"),
-                                    icon: "menu"
-                                );
-            return FoodMenu;
+            return
+                new MenuItemDefinition(
+                        PageNames.FoodMaterial,
+                        L("FoodMaterial"),
+                        icon: "menu"
+                        ).AddItem(
+                            new MenuItemDefinition(
+                            PageNames.FoodMaterialCategory,
+                            L("FoodMaterialCategory"),
+                            url: "FoodMaterialCategory"
+                            )
+                        ).AddItem(
+                            new MenuItemDefinition(
+                               PageNames.FoodMaterial,
+                               L("FoodMaterial"),
+                               url: "FoodMaterial"
+                            )
+                    );
         }
 
         public  void xSetNavigation(INavigationProviderContext context)
