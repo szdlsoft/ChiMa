@@ -1,17 +1,17 @@
 ﻿@using SixMan.ChiMa.Domain.Base
 @using SixMan.ChiMa.Web.Startup
-@model SixMan.ChiMa.Web.Models.FoodMaterialCategory.FoodMaterialCategoryListViewModel
+@model SixMan.ChiMa.Web.Models.FoodMaterialCategory.CategoryListViewModel
 @{
     ViewBag.CurrentPageName = PageNames.FoodMaterialCategory; //The menu item will be active for this page.
 }
 @section scripts
 {
     <environment names="Development">
-        <script src="~/view-resources/Views/Category/Index.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/FoodMateriaCategory/Index.js" asp-append-version="true"></script>
     </environment>
 
     <environment names="Staging,Production">
-        <script src="~/view-resources/Views/Category/Index.min.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/FoodMateriaCategory/Index.min.js" asp-append-version="true"></script>
     </environment>
 }
 <div class="row clearfix">
@@ -19,7 +19,7 @@
         <div class="card">
             <div class="header">
                 <h2>
-                    @L(ViewBag.CurrentPageName)
+                    @L("FoodMaterialCategory")
                 </h2>
                 <ul class="header-dropdown m-r--5">
                     <li class="dropdown">
@@ -71,11 +71,12 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">
-                    <span>@L("CreateNewCategory")</span>
+                    <span>@L("CreateNewFoodMaterialCategory")</span>
                 </h4>
             </div>
             <div class="modal-body">
                 <form name="categoryCreateForm" role="form" novalidate class="form-validation">
+                    
                         <div role="tabpanel" class="tab-pane animated fadeIn active" id="create-user-details">
                             
                             <div class="row clearfix">
@@ -83,7 +84,7 @@
                                     <div class="form-group form-float">
                                         <div class="form-line">
                                             <input type="text" name="Name" class="form-control" required maxlength="@CategoryBase.MaxNameLength">
-                                            <label class="form-label">@L("CategoryName")</label>
+                                            <label class="form-label">@L("FoodMaterialCategoryName")</label>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +92,7 @@
                                     <div class="form-group form-float">
                                         <div class="form-line">
                                             <input type="text" name="Code" class="form-control" required maxlength="@CategoryBase.MaxNameLength">
-                                            <label class="form-label">@L("CategoryCode")</label>
+                                            <label class="form-label">@L("FoodMaterialCategoryCode")</label>
                                         </div>
                                     </div>
                                 </div>

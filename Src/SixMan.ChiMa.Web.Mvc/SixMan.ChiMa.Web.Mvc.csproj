@@ -74,4 +74,10 @@
     <ProjectReference Include="..\SixMan.ChiMa.Web.Core\SixMan.ChiMa.Web.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Category\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

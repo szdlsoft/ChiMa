@@ -79,6 +79,10 @@ namespace SixMan.ChiMa.Web.Startup
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    "category", "Category/{category}/{action=Index}/{id?}",
+                    defaults:new {controller= "Category" }
+                    );
+                routes.MapRoute(
                     name: "defaultWithArea",
                     template: "{area}/{controller=Home}/{action=Index}/{id?}");
 

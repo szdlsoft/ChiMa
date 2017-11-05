@@ -1,4 +1,6 @@
-﻿namespace SixMan.ChiMa.Web.Startup
+﻿using System;
+
+namespace SixMan.ChiMa.Web.Startup
 {
     public class PageNames
     {
@@ -12,5 +14,10 @@
         public const string FoodMaterial = "FoodMateria";
         public const string FoodMaterialCategory = "FoodMateriaCategory";
         public const string Dish = "Dish";
+
+        internal static string Category(string category)
+        {
+            return $"{category}Category";
+        }
     }
 }
