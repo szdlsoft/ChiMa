@@ -8,6 +8,7 @@ using SixMan.ChiMa.Web.Models.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SixMan.ChiMa.Web.Controllers
@@ -23,12 +24,22 @@ namespace SixMan.ChiMa.Web.Controllers
         }
 
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int pageNumber=1,   int pageSize=2,
+                        CancellationToken cancellationToken = default(CancellationToken))
         {
-            var fmcs = (await _appService.GetAll(new PagedAndSortedResultRequestDto())).Items;
+            var reqestDto = new PagedAndSortedResultRequestDto()
+            {
+                Sorting = "Name",
+                MaxResultCount = pageSize,
+                SkipCount = (pageNumber * pageSize) - pageSize
+            };
+            var result = (await _appService.GetAll(reqestDto));
             var vm = new FoodMaterialCategoryListViewModel()
             {
-                Categories = fmcs,
+                Data = result.Items.ToList(),
+                TotalItems = result.TotalCount,
+                PageNumber = pageNumber,
+                PageSize = pageSize
             };
 
             return View(vm);

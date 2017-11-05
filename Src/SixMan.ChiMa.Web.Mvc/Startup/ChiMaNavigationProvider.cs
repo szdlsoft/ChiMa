@@ -108,7 +108,7 @@ namespace SixMan.ChiMa.Web.Startup
                             new MenuItemDefinition(
                             PageNames.FoodMaterialCategory,
                             L("FoodMaterialCategory"),
-                            url: "Category/FoodMaterial"
+                            url: "FoodMaterialCategory"
                             )
                         ).AddItem(
                             new MenuItemDefinition(

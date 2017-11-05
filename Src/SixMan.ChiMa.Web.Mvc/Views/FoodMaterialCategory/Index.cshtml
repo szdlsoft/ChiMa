@@ -7,11 +7,11 @@
 @section scripts
 {
     <environment names="Development">
-        <script src="~/view-resources/Views/Category/Index.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/FoodMateriaCategory/Index.js" asp-append-version="true"></script>
     </environment>
 
     <environment names="Staging,Production">
-        <script src="~/view-resources/Views/Category/Index.min.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/FoodMateriaCategory/Index.min.js" asp-append-version="true"></script>
     </environment>
 }
 <div class="row clearfix">
@@ -41,7 +41,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var category in Model.Categories)
+                        @foreach (var category in Model.Data)
                         {
                             <tr>
                                 <td>@category.Name</td>
@@ -63,7 +63,15 @@
                     <i class="material-icons">add</i>
                 </button>
             </div>
+            <div class="modal-footer">
+                <cs-pager asp-action="Index"
+                          asp-controller="FoodMaterialCategory"
+                          cs-paging-pagesize="@Model.PageSize"
+                          cs-paging-pagenumber="@Model.PageNumber"
+                          cs-paging-totalitems="@Model.TotalItems"></cs-pager>
+            </div>
         </div>
+        
     </div>
 </div>
 <div class="modal fade" id="CategoryCreateModal" tabindex="-1" role="dialog" aria-labelledby="CategoryCreateModalLabel" data-backdrop="static">

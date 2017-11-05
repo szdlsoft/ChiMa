@@ -43,6 +43,8 @@ namespace SixMan.ChiMa.Web.Startup
 
             services.AddScoped<IWebResourceManager, WebResourceManager>();
 
+            services.AddCloudscribePagination();
+
             //Configure Abp and Dependency Injection
             return services.AddAbp<ChiMaWebMvcModule>(options =>
             {
@@ -51,6 +53,8 @@ namespace SixMan.ChiMa.Web.Startup
                     f => f.UseAbpLog4Net().WithConfig("log4net.config")
                 );
             });
+
+
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
