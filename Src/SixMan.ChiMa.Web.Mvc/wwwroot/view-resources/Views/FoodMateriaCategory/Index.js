@@ -1,7 +1,12 @@
 ﻿(function() {
     $(function() {
 
-        var _categoryService = abp.services.app.foodMaterialCategory;
+        //var _categoryService = abp.services.app.foodMaterialCategory;
+        var _categoryService = {};
+        setCategoryService = function (categoryService) {
+            _categoryService = categoryService;
+        }
+
         var _$modal = $('#CategoryCreateModal');
         var _$form = _$modal.find('form');
        
