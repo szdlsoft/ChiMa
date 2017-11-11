@@ -1,0 +1,128 @@
+﻿@using SixMan.ChiMa.Domain.Base
+@using SixMan.ChiMa.Web.Startup
+@using SixMan.ChiMa.Application.Food.Dto
+@model SixMan.ChiMa.Web.Models.PagedResultVM<FoodMaterialDto>
+@{
+    ViewBag.CurrentPageName = PageNames.FoodMaterial; //The menu item will be active for this page.
+}
+@section scripts
+{
+    @*<script>
+        var _foodMaterialService = abp.services.app.FoodMaterial;
+    </script>*@
+
+    <environment names="Development">
+        <script src="~/view-resources/Views/FoodMaterial/Index.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/FoodMaterial/Index.min.js" asp-append-version="true"></script>
+    </environment>
+
+    <script>
+        $(function () {
+            setfoodMaterialService(abp.services.app.foodMaterial);
+        })
+    </script>
+    
+}
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    @L(ViewBag.CurrentPageName)
+                </h2>
+                <ul class="header-dropdown m-r--5">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a id="RefreshButton" href="javascript:void(0);" class="waves-effect waves-block"><i class="material-icons">refresh</i>Refresh</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="body table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>@L("Description")</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var dto in Model.Items)
+                        {
+                            <tr>
+                                <td>@dto.Description</td>
+                                <td class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">menu</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#" class="waves-effect waves-block edit-foodMaterial" data-foodMaterial-id="@dto.Id" data-toggle="modal" data-target="#foodMaterialEditModal"><i class="material-icons">edit</i>@L("Edit")</a></li>
+                                        <li><a href="#" class="waves-effect waves-block delete-foodMaterial" data-foodMaterial-id="@dto.Id" data-foodMaterial-description="@dto.Description"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#foodMaterialCreateModal">
+                    <i class="material-icons">add</i>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <cs-pager asp-action="Index"
+                          asp-controller="FoodMaterial"
+                          cs-paging-pagesize="@Model.PageSize"
+                          cs-paging-pagenumber="@Model.PageNumber"
+                          cs-paging-totalitems="@Model.TotalCount"></cs-pager>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="modal fade" id="foodMaterialCreateModal" tabindex="-1" role="dialog" aria-labelledby="foodMaterialCreateModalLabel" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <span>@L("CreateNewFoodMateial")</span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form name="foodMaterialCreateForm" role="form" novalidate class="form-validation">
+                        <div role="tabpanel" class="tab-pane animated fadeIn active" id="create-user-details">
+                            
+                            <div class="row clearfix">
+                                <div class="col-sm-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" name="Description" class="form-control" required maxlength="@DescriptionBase.MaxDescriptionLength">
+                                            <label class="form-label">@L("Description")</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div> 
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">@L("Cancel")</button>
+                        <button type="submit" class="btn btn-primary waves-effect">@L("Save")</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="foodMaterialEditModal" tabindex="-1" role="dialog" aria-labelledby="foodMaterialEditModalLabel" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>

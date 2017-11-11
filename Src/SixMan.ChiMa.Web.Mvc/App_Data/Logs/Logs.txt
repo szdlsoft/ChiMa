@@ -15956,3 +15956,706 @@ INFO  2017-11-06 21:25:46,310 [46   ] soft.AspNetCore.Hosting.Internal.WebHost -
 INFO  2017-11-06 21:25:46,374 [29   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
 INFO  2017-11-06 21:25:46,401 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 313.1255ms
 INFO  2017-11-06 21:25:46,440 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 881.9982ms 200 application/x-javascript; charset=utf-8
+DEBUG 2017-11-12 05:19:56,980 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-12 05:19:57,071 [2    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2017-11-12 05:19:57,097 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Web.Startup.ChiMaWebMvcModule, SixMan.ChiMa.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,103 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.ChiMaWebCoreModule, SixMan.ChiMa.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,103 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,104 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,104 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,105 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,105 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,107 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,107 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,108 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,109 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,109 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,110 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,111 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:57,117 [2    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2017-11-12 05:19:57,745 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 05:19:58,451 [2    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-11-12 05:19:58,479 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-12 05:19:58,487 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-12 05:19:58,493 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2017-11-12 05:19:58,495 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-11-12 05:19:58,673 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-12 05:19:58,765 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-11-12 05:19:58,765 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2017-11-12 05:19:58,771 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2017-11-12 05:19:58,772 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2017-11-12 05:19:58,772 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-11-12 05:19:58,772 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-11-12 05:19:58,772 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2017-11-12 05:19:58,772 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2017-11-12 05:19:58,772 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2017-11-12 05:19:58,773 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-11-12 05:19:58,773 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2017-11-12 05:19:58,773 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2017-11-12 05:19:58,774 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2017-11-12 05:19:58,774 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+INFO  2017-11-12 05:20:52,109 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/  
+INFO  2017-11-12 05:20:55,376 [10   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 05:20:56,269 [10   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: admin.
+INFO  2017-11-12 05:20:56,414 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+INFO  2017-11-12 05:21:04,471 [5    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+WARN  2017-11-12 05:21:07,792 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 05:21:10,082 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 13871.2763ms
+INFO  2017-11-12 05:21:10,088 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18050.3253ms 200 text/html; charset=utf-8
+INFO  2017-11-12 05:21:10,112 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/fonts/roboto/roboto.css?v=DWPiEyLnt8XZ68WQeudmZPGSejowhmQNUUhaX8dYF1Q  
+INFO  2017-11-12 05:21:10,120 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/roboto.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\roboto.css'
+INFO  2017-11-12 05:21:10,142 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/fonts/material-icons/materialicons.css?v=2SsVsQpWRHM3EJ4D4MT4RRpiEXbEuK0vEjPxVr5P7Ek  
+INFO  2017-11-12 05:21:10,143 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 25.7049ms 200 text/css
+INFO  2017-11-12 05:21:10,143 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/material-icons/materialicons.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\material-icons\materialicons.css'
+INFO  2017-11-12 05:21:10,144 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css?v=rYUBh-J0b_zGCzbG02wJhid-ncHyd0BsoUYpjLLSowk  
+INFO  2017-11-12 05:21:10,145 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+INFO  2017-11-12 05:21:10,149 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.1811ms 200 text/css
+INFO  2017-11-12 05:21:10,149 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap-select/dist/css/bootstrap-select.css?v=a7N4Jki3LzSbThclvqbu4nF45twcjuc772JGFhY9qwk  
+INFO  2017-11-12 05:21:10,150 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-select/dist/css/bootstrap-select.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-select\dist\css\bootstrap-select.css'
+INFO  2017-11-12 05:21:10,150 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.8163ms 200 text/css
+INFO  2017-11-12 05:21:10,151 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/toastr/toastr.css?v=W8a9WvLyUO7CXtOC4f9LoUMwkywM7JSq-Xm5kNsYW08  
+INFO  2017-11-12 05:21:10,152 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/toastr/toastr.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\toastr\toastr.css'
+INFO  2017-11-12 05:21:10,153 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/sweetalert/dist/sweetalert.css?v=k66BSDvi6XBdtM2RH6QQvCz2wk81XcWsiZ3kn6uFTmM  
+INFO  2017-11-12 05:21:10,154 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.3245ms 200 text/css
+INFO  2017-11-12 05:21:10,154 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert/dist/sweetalert.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\sweetalert\dist\sweetalert.css'
+INFO  2017-11-12 05:21:10,155 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.451ms 200 text/css
+INFO  2017-11-12 05:21:10,158 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.1574ms 200 text/css
+INFO  2017-11-12 05:21:10,263 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css?v=l7wu43l7XpKWzFn29hiH8AFe4I_CNzbCPmaAQivPYMg  
+INFO  2017-11-12 05:21:10,265 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\famfamfam-flags\dist\sprite\famfamfam-flags.css'
+INFO  2017-11-12 05:21:10,277 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.0838ms 200 text/css
+INFO  2017-11-12 05:21:10,278 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/font-awesome/css/font-awesome.css?v=NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w  
+INFO  2017-11-12 05:21:10,278 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/Waves/dist/waves.css?v=0zP86LzXedNkkBjePtKrMTAPuIy6EzHfGlyYvsmGLBw  
+INFO  2017-11-12 05:21:10,278 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Waves/dist/waves.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Waves\dist\waves.css'
+INFO  2017-11-12 05:21:10,278 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/font-awesome/css/font-awesome.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\font-awesome\css\font-awesome.css'
+INFO  2017-11-12 05:21:10,307 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/css/materialize.css?v=OdWlipUYj8b9Oa4RyT45njteIcxH-4pGocqe0r0V8js  
+INFO  2017-11-12 05:21:10,297 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.1891ms 200 text/css
+INFO  2017-11-12 05:21:10,307 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/materialize.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\css\materialize.css'
+INFO  2017-11-12 05:21:10,307 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Shared/_Layout.css?v=uq7unI_U0xZr0Pbyzeu6KfbJKHVFuv0wNJ4CrrhQknw  
+INFO  2017-11-12 05:21:10,307 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/_Layout.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Shared\_Layout.css'
+INFO  2017-11-12 05:21:10,308 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/css/style.css?v=yL1_ikVC9k-ZNukgUJ_Jk9cK0TBzvJLMIohPbHrAf0g  
+INFO  2017-11-12 05:21:10,307 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/animate.css/animate.css?v=00w68NO3TLuHjKRHJmjrrgJBDtG_6OhbJEu1gtHcsuo  
+INFO  2017-11-12 05:21:10,309 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/style.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\css\style.css'
+INFO  2017-11-12 05:21:10,309 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/css/themes/all-themes.css?v=XaAlkmhL9gA6mBxpcxGYAWxggxkIpRmT9qGbKejs6eA  
+INFO  2017-11-12 05:21:10,310 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/animate.css/animate.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\animate.css\animate.css'
+INFO  2017-11-12 05:21:10,310 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/themes/all-themes.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\css\themes\all-themes.css'
+INFO  2017-11-12 05:21:10,311 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 33.5159ms 200 text/css
+INFO  2017-11-12 05:21:10,312 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.0235ms 200 text/css
+INFO  2017-11-12 05:21:10,318 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.8196ms 200 text/css
+INFO  2017-11-12 05:21:10,320 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.4848ms 200 text/css
+INFO  2017-11-12 05:21:10,363 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 56.3366ms 200 text/css
+INFO  2017-11-12 05:21:10,363 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/morris.js/morris.css?v=szHusaozbQctTn4FX-3l5E0A5zoxz7-ne4fr8NgWJlw  
+INFO  2017-11-12 05:21:10,364 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/morris.js/morris.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\morris.js\morris.css'
+INFO  2017-11-12 05:21:10,365 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6435ms 200 text/css
+INFO  2017-11-12 05:21:10,383 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 75.2179ms 200 text/css
+INFO  2017-11-12 05:21:10,430 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/json2/json2.js?v=EZJ68U7eUi8uSP0MRRUalYten2eOlhREE9kJOIbIeYg  
+INFO  2017-11-12 05:21:10,431 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/json2/json2.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\json2\json2.js'
+INFO  2017-11-12 05:21:10,432 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2625ms 200 application/javascript
+INFO  2017-11-12 05:21:10,528 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js?v=oYqpLeqZe9cetUDV-TFiBZHp3uJ-X4F5eLs4W6uSTSE  
+INFO  2017-11-12 05:21:10,529 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery\dist\jquery.js'
+INFO  2017-11-12 05:21:10,530 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js?v=3vw5dArBhZ2OJ4XtRzIIQJYn6Hrd1fePLeqsuToS1R0  
+INFO  2017-11-12 05:21:10,530 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+INFO  2017-11-12 05:21:10,531 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/moment/min/moment-with-locales.js?v=7CN4bWPV0U57HDA4YjdCBKCAynhqdWErjNn-5rrsW_I  
+INFO  2017-11-12 05:21:10,532 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/moment/min/moment-with-locales.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\moment\min\moment-with-locales.js'
+INFO  2017-11-12 05:21:10,538 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.js?v=KuzD50lDGNI5jq_ipt4hwDpSJk3fhseTR1jdvaBoZLs  
+INFO  2017-11-12 05:21:10,539 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+INFO  2017-11-12 05:21:10,541 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.193ms 200 application/javascript
+INFO  2017-11-12 05:21:10,541 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/blockUI/jquery.blockUI.js?v=oQaw-JJuUcJQ9QVYMcFnPxICDT-hv8-kuxT2FNzTGhc  
+INFO  2017-11-12 05:21:10,542 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/blockUI/jquery.blockUI.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\blockUI\jquery.blockUI.js'
+INFO  2017-11-12 05:21:10,545 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/fonts/roboto/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2  
+INFO  2017-11-12 05:21:10,545 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2'
+INFO  2017-11-12 05:21:10,549 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.2256ms 200 application/javascript
+INFO  2017-11-12 05:21:10,551 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.9059ms 200 application/javascript
+INFO  2017-11-12 05:21:10,552 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/fonts/material-icons/materialicons.woff2  
+INFO  2017-11-12 05:21:10,553 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/material-icons/materialicons.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\material-icons\materialicons.woff2'
+INFO  2017-11-12 05:21:10,567 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 38.7908ms 200 application/javascript
+INFO  2017-11-12 05:21:10,569 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/fonts/roboto/CWB0XYA8bzo0kSThX0UTuA.woff2  
+INFO  2017-11-12 05:21:10,570 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/CWB0XYA8bzo0kSThX0UTuA.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\CWB0XYA8bzo0kSThX0UTuA.woff2'
+INFO  2017-11-12 05:21:10,613 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 68.3878ms 200 font/woff2
+INFO  2017-11-12 05:21:10,614 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 62.263ms 200 font/woff2
+INFO  2017-11-12 05:21:10,615 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 46.1947ms 200 font/woff2
+INFO  2017-11-12 05:21:10,616 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.53ms 200 application/javascript
+INFO  2017-11-12 05:21:10,644 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+INFO  2017-11-12 05:21:10,644 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2'
+INFO  2017-11-12 05:21:10,692 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/toastr/toastr.js?v=C7DJ6LzTt1Hvj9fd-yRnySs3I4T2B8XmQ3TqXQjc00g  
+INFO  2017-11-12 05:21:10,692 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/toastr/toastr.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\toastr\toastr.js'
+INFO  2017-11-12 05:21:10,694 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3085ms 200 application/javascript
+INFO  2017-11-12 05:21:10,695 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/sweetalert/dist/sweetalert-dev.js?v=Y6AEuvugryve80FgzPE3e2EONgfiYPcaSaqF-vIFGIA  
+INFO  2017-11-12 05:21:10,695 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert/dist/sweetalert-dev.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\sweetalert\dist\sweetalert-dev.js'
+INFO  2017-11-12 05:21:10,697 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/spin.js/spin.js?v=GySbz3oZXNlwoawo5PpYy0iM38B-q3jyi_HLw00uxy0  
+INFO  2017-11-12 05:21:10,698 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/spin.js/spin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\spin.js\spin.js'
+INFO  2017-11-12 05:21:10,700 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.967ms 200 application/javascript
+INFO  2017-11-12 05:21:10,701 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/spin.js/jquery.spin.js?v=EG38bUU5b2M64hy9cNAzu_cQBEsiBYsDifOcoHqNd2k  
+INFO  2017-11-12 05:21:10,702 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/spin.js/jquery.spin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\spin.js\jquery.spin.js'
+INFO  2017-11-12 05:21:10,704 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap-select/dist/js/bootstrap-select.js?v=_KDPX2Vvqq8sySMxlLNJxt9j6Cmb8i_xp602ozhYxzI  
+INFO  2017-11-12 05:21:10,705 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-select/dist/js/bootstrap-select.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-select\dist\js\bootstrap-select.js'
+INFO  2017-11-12 05:21:10,706 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-slimscroll/jquery.slimscroll.js?v=4K6ZHzwMYR5_eU2SeDIaByus_qki9IFY8hmxl5U6D1Y  
+INFO  2017-11-12 05:21:10,707 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-slimscroll/jquery.slimscroll.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-slimscroll\jquery.slimscroll.js'
+INFO  2017-11-12 05:21:10,708 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.7976ms 200 application/javascript
+INFO  2017-11-12 05:21:10,708 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.777ms 200 application/javascript
+INFO  2017-11-12 05:21:10,709 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.708ms 200 application/javascript
+INFO  2017-11-12 05:21:10,713 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.4677ms 200 application/javascript
+INFO  2017-11-12 05:21:10,715 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 71.5601ms 200 font/woff2
+INFO  2017-11-12 05:21:10,762 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/Waves/dist/waves.js?v=Lar7zQhqgdoUsaqhuwkgnWgsC-eRWIxHhJPV-QtrDog  
+INFO  2017-11-12 05:21:10,763 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Waves/dist/waves.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Waves\dist\waves.js'
+INFO  2017-11-12 05:21:10,765 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/push.js/push.js?v=HDxbpm8oBKwe1bmX9Z1SahYYA7zEbc1dk7LfopvOvoE  
+INFO  2017-11-12 05:21:10,766 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/push.js/push.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\push.js\push.js'
+INFO  2017-11-12 05:21:10,767 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/abp.js?v=8Fv5Ryar8BgkV6_q_U-zsW2dA57HxErdoXVKogeTUy4  
+INFO  2017-11-12 05:21:10,770 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/abp.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\abp.js'
+INFO  2017-11-12 05:21:10,771 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js?v=PCUhVDVZp55Lu8KbdjXlvgXrD5vWl9TLhmEbULarsqU  
+INFO  2017-11-12 05:21:10,771 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.jquery.js'
+INFO  2017-11-12 05:21:10,772 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.4391ms 200 application/javascript
+INFO  2017-11-12 05:21:10,774 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.4918ms 200 application/javascript
+INFO  2017-11-12 05:21:10,778 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.2373ms 200 application/javascript
+INFO  2017-11-12 05:21:10,782 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.9118ms 200 application/javascript
+INFO  2017-11-12 05:21:10,782 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js?v=Y3zoG-hSFKmbS3BHKo_wFWRPbyzJXKoNrnF73uFdtqU  
+INFO  2017-11-12 05:21:10,783 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js?v=ImopdkB8alCil1HigOwW3CDqWKsLZXyplf7TXBbjRnE  
+INFO  2017-11-12 05:21:10,783 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.blockUI.js'
+INFO  2017-11-12 05:21:10,789 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.toastr.js'
+INFO  2017-11-12 05:21:10,790 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.6177ms 200 application/javascript
+INFO  2017-11-12 05:21:10,790 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js?v=RJuGDX616JN_UziXsmKnth0alpECKCx0gtxKZVrZWxY  
+INFO  2017-11-12 05:21:10,790 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.5877ms 200 application/javascript
+INFO  2017-11-12 05:21:10,791 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.spin.js'
+INFO  2017-11-12 05:21:10,792 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.3802ms 200 application/javascript
+INFO  2017-11-12 05:21:10,834 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js?v=pHFl_MDwwZLcdWvFBdIWQRNd1TYnlLqWz81WI3l1bNA  
+INFO  2017-11-12 05:21:10,837 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.sweet-alert.js'
+INFO  2017-11-12 05:21:10,840 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.6291ms 200 application/javascript
+INFO  2017-11-12 05:21:10,841 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/js/admin.js  
+INFO  2017-11-12 05:21:10,841 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/admin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\js\admin.js'
+INFO  2017-11-12 05:21:10,843 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/js/main.js?v=GmU_olKtI9zeSkSj74hvcxYvV346pQbe6-QCCCstV7c  
+INFO  2017-11-12 05:21:10,844 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/main.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\js\main.js'
+INFO  2017-11-12 05:21:10,854 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.1018ms 200 application/javascript
+INFO  2017-11-12 05:21:10,855 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/raphael/raphael.js?v=MPXjTSEImVJI1834JAHubdK7Lts1VTUPJmCQ9zKAjyA  
+INFO  2017-11-12 05:21:10,856 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/raphael/raphael.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\raphael\raphael.js'
+INFO  2017-11-12 05:21:10,858 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Shared/_Layout.js?v=jOYc7_5N1zFKt3qTihQ-9Kc0wjSMXkAeHUXNyvn8sYo  
+INFO  2017-11-12 05:21:10,859 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/_Layout.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Shared\_Layout.js'
+INFO  2017-11-12 05:21:10,860 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636460607986773290  
+INFO  2017-11-12 05:21:10,883 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636460607986773290  
+INFO  2017-11-12 05:21:10,887 [10   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 05:21:10,891 [5    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 05:21:10,904 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-countTo/jquery.countTo.js?v=AGGYFLOyVnIKn_2UCDl9D_5VWf8wHWCOtm9YU0P9g6I  
+INFO  2017-11-12 05:21:10,905 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-countTo/jquery.countTo.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-countTo\jquery.countTo.js'
+INFO  2017-11-12 05:21:10,906 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 48.4847ms 200 application/javascript
+INFO  2017-11-12 05:21:10,908 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.3851ms 200 application/javascript
+INFO  2017-11-12 05:21:11,017 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/morris.js/morris.js?v=cQB75DEaDbn4oSiaWgdoh3TuZCHSO-kYdD_Ehka48Ro  
+INFO  2017-11-12 05:21:11,017 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/morris.js/morris.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\morris.js\morris.js'
+INFO  2017-11-12 05:21:11,017 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-11-12 05:21:11,027 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.7369ms 200 application/javascript
+INFO  2017-11-12 05:21:11,029 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 174.4871ms 200 application/javascript
+INFO  2017-11-12 05:21:11,033 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 191.5256ms 200 application/javascript
+INFO  2017-11-12 05:21:11,034 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/chart.js/dist/Chart.bundle.js?v=TQAtDUIU_0XtXZLNjMBV8noK8jNSngwHlgtC_PvsRAk  
+INFO  2017-11-12 05:21:11,040 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/chart.js/dist/Chart.bundle.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\chart.js\dist\Chart.bundle.js'
+INFO  2017-11-12 05:21:11,042 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/Flot/jquery.flot.js?v=t7kx8nPDixJ3ucbB9OBcTsCYhaSHvdrzJ54tfkmjjhI  
+INFO  2017-11-12 05:21:11,049 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.js'
+INFO  2017-11-12 05:21:11,059 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.0056ms 200 application/javascript
+INFO  2017-11-12 05:21:11,060 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/Flot/jquery.flot.resize.js?v=i59RRvMkqw-28mDu6YRzKo77gmM7k9aPZMtcw45wgu4  
+INFO  2017-11-12 05:21:11,061 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.resize.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.resize.js'
+INFO  2017-11-12 05:21:11,061 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/Flot/jquery.flot.pie.js?v=RsEWYd9gdLG1bCIcU8j59Rkvf_1O7HtzoD1TRUs22cU  
+INFO  2017-11-12 05:21:11,062 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.pie.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.pie.js'
+INFO  2017-11-12 05:21:11,063 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.8731ms 200 application/javascript
+INFO  2017-11-12 05:21:11,064 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.1085ms 200 application/javascript
+INFO  2017-11-12 05:21:10,957 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2017-11-12 05:21:11,231 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/Flot/jquery.flot.categories.js?v=boFmSyjqeVxzSQb0qhVhRkCnWsf705mn-5CEBAaYNRo  
+INFO  2017-11-12 05:21:11,231 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.categories.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.categories.js'
+INFO  2017-11-12 05:21:11,232 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/Flot/jquery.flot.time.js?v=pYLIMq3HE4prBar2HxbrrCdHAfG-Sv6nfnOaHDS5xBo  
+INFO  2017-11-12 05:21:11,232 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.time.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.time.js'
+INFO  2017-11-12 05:21:11,233 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-sparkline/dist/jquery.sparkline.js?v=k0LZZpXY4vJp6vbA5CL5bb20Ou0IO3Shz-J6U6Vq56c  
+INFO  2017-11-12 05:21:11,233 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-sparkline/dist/jquery.sparkline.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-sparkline\dist\jquery.sparkline.js'
+INFO  2017-11-12 05:21:11,234 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 200.4472ms 200 application/javascript
+INFO  2017-11-12 05:21:11,235 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.2018ms 200 application/javascript
+INFO  2017-11-12 05:21:11,236 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.5175ms 200 application/javascript
+INFO  2017-11-12 05:21:11,254 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.4613ms 200 application/javascript
+INFO  2017-11-12 05:21:11,366 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Home/Index.js?v=tRGDdqeVjO63iaO1qvGPpKF2NuT2riEOyYovlY_otk0  
+INFO  2017-11-12 05:21:11,367 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Home/Index.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Home\Index.js'
+INFO  2017-11-12 05:21:11,370 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.104ms 200 application/javascript
+WARN  2017-11-12 05:21:11,421 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 05:21:11,535 [5    ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-11-12 05:21:11,538 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 614.4015ms
+INFO  2017-11-12 05:21:11,538 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 655.7114ms 200 application/x-javascript; charset=utf-8
+INFO  2017-11-12 05:21:11,564 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 05:21:11,566 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 616.5105ms
+INFO  2017-11-12 05:21:11,566 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 706.4984ms 200 text/plain; charset=utf-8
+INFO  2017-11-12 05:21:11,577 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/images/user.png  
+INFO  2017-11-12 05:21:11,577 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/user.png'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\images\user.png'
+INFO  2017-11-12 05:21:11,588 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/famfamfam-flags/dist/sprite/famfamfam-flags.png  
+INFO  2017-11-12 05:21:11,589 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/famfamfam-flags/dist/sprite/famfamfam-flags.png'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\famfamfam-flags\dist\sprite\famfamfam-flags.png'
+INFO  2017-11-12 05:21:11,590 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.2915ms 200 image/png
+INFO  2017-11-12 05:21:11,631 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 42.3577ms 200 image/png
+INFO  2017-11-12 05:21:11,631 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/images/user-img-background.jpg  
+INFO  2017-11-12 05:21:11,633 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/user-img-background.jpg'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\images\user-img-background.jpg'
+INFO  2017-11-12 05:21:11,681 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.4063ms 200 image/jpeg
+INFO  2017-11-12 05:21:19,988 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/FoodMaterialCategory  
+INFO  2017-11-12 05:21:19,996 [16   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 05:21:20,296 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialCategoryController.Index (SixMan.ChiMa.Web.Mvc) with arguments (1, 10, System.Threading.CancellationToken) - ModelState is Valid
+INFO  2017-11-12 05:21:21,041 [11   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterialCategory/Index.cshtml.
+WARN  2017-11-12 05:21:21,109 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMateriaCategory' in localization source 'ChiMa'!
+WARN  2017-11-12 05:21:21,116 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Code' in localization source 'ChiMa'!
+WARN  2017-11-12 05:21:21,158 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewCategory' in localization source 'ChiMa'!
+WARN  2017-11-12 05:21:21,169 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'CategoryName' in localization source 'ChiMa'!
+WARN  2017-11-12 05:21:21,169 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'CategoryCode' in localization source 'ChiMa'!
+WARN  2017-11-12 05:21:21,192 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 05:21:21,224 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialCategoryController.Index (SixMan.ChiMa.Web.Mvc) in 1218.3151ms
+INFO  2017-11-12 05:21:21,226 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1237.4012ms 200 text/html; charset=utf-8
+INFO  2017-11-12 05:21:21,277 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636460607986773290  
+INFO  2017-11-12 05:21:21,283 [10   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 05:21:21,285 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-11-12 05:21:21,286 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 05:21:21,288 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 4.2999ms
+INFO  2017-11-12 05:21:21,292 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.3139ms 200 text/plain; charset=utf-8
+INFO  2017-11-12 05:21:21,292 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636460607986773290  
+INFO  2017-11-12 05:21:21,298 [10   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 05:21:21,302 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+WARN  2017-11-12 05:21:21,310 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 05:21:21,341 [10   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-11-12 05:21:21,347 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 48.2176ms
+INFO  2017-11-12 05:21:21,348 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 55.5311ms 200 application/x-javascript; charset=utf-8
+INFO  2017-11-12 05:21:21,348 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/FoodMateriaCategory/Index.js?v=uEXUxutbqSiMNWvULeu6rS2V-MZVKvaKnGOGfMnxBFw  
+INFO  2017-11-12 05:21:21,349 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/FoodMateriaCategory/Index.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\FoodMateriaCategory\Index.js'
+INFO  2017-11-12 05:21:21,349 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2215ms 200 application/javascript
+INFO  2017-11-12 05:21:38,679 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:5000/FoodMaterialCategory/EditFoodMaterialCategoryModal?categoryId=1 application/html 0
+INFO  2017-11-12 05:21:38,685 [11   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 05:21:38,704 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialCategoryController.EditFoodMaterialCategoryModal (SixMan.ChiMa.Web.Mvc) with arguments (1) - ModelState is Valid
+INFO  2017-11-12 05:21:39,475 [20   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterialCategory/_EditFoodMaterialCategoryModal.cshtml.
+WARN  2017-11-12 05:21:39,503 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'EditFoodMaterialCategory' in localization source 'ChiMa'!
+WARN  2017-11-12 05:21:39,830 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'Code' in localization source 'ChiMa'!
+INFO  2017-11-12 05:21:40,274 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialCategoryController.EditFoodMaterialCategoryModal (SixMan.ChiMa.Web.Mvc) in 1579.1341ms
+INFO  2017-11-12 05:21:40,276 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1596.4776ms 200 text/html; charset=utf-8
+INFO  2017-11-12 05:21:51,457 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:5000/FoodMaterialCategory/EditFoodMaterialCategoryModal?categoryId=1 application/html 0
+INFO  2017-11-12 05:21:51,464 [16   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 05:21:51,469 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialCategoryController.EditFoodMaterialCategoryModal (SixMan.ChiMa.Web.Mvc) with arguments (1) - ModelState is Valid
+INFO  2017-11-12 05:21:51,690 [20   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterialCategory/_EditFoodMaterialCategoryModal.cshtml.
+WARN  2017-11-12 05:21:51,690 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'EditFoodMaterialCategory' in localization source 'ChiMa'!
+WARN  2017-11-12 05:21:51,691 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'Code' in localization source 'ChiMa'!
+INFO  2017-11-12 05:21:51,691 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialCategoryController.EditFoodMaterialCategoryModal (SixMan.ChiMa.Web.Mvc) in 225.4789ms
+INFO  2017-11-12 05:21:51,692 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 234.4794ms 200 text/html; charset=utf-8
+DEBUG 2017-11-12 06:22:39,919 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-12 06:22:39,978 [2    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2017-11-12 06:22:39,997 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Web.Startup.ChiMaWebMvcModule, SixMan.ChiMa.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,001 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.ChiMaWebCoreModule, SixMan.ChiMa.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,002 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,002 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,003 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,003 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,004 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,005 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,005 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,006 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,006 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,006 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,007 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,007 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,012 [2    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2017-11-12 06:22:40,502 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-12 06:22:40,962 [2    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-11-12 06:22:40,978 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-12 06:22:40,983 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-12 06:22:40,986 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2017-11-12 06:22:40,987 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-11-12 06:22:41,102 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-12 06:22:41,154 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-11-12 06:22:41,154 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2017-11-12 06:22:41,158 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2017-11-12 06:22:41,158 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2017-11-12 06:22:41,159 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-11-12 06:22:41,159 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-11-12 06:22:41,159 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2017-11-12 06:22:41,159 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2017-11-12 06:22:41,159 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2017-11-12 06:22:41,159 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-11-12 06:22:41,160 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2017-11-12 06:22:41,160 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2017-11-12 06:22:41,160 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2017-11-12 06:22:41,160 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+INFO  2017-11-12 06:22:53,309 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/FoodMaterial  
+INFO  2017-11-12 06:22:54,542 [16   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:22:55,182 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) with arguments (1, 10, System.Threading.CancellationToken) - ModelState is Valid
+INFO  2017-11-12 06:22:59,008 [5    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterial/Index.cshtml.
+WARN  2017-11-12 06:22:59,137 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMateria' in localization source 'ChiMa'!
+WARN  2017-11-12 06:22:59,140 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:22:59,157 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewFoodMateial' in localization source 'ChiMa'!
+WARN  2017-11-12 06:22:59,164 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:23:00,432 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:23:01,092 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) in 6274.6168ms
+INFO  2017-11-12 06:23:01,099 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7815.6986ms 200 text/html; charset=utf-8
+INFO  2017-11-12 06:23:01,151 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636460645611048595  
+INFO  2017-11-12 06:23:01,162 [6    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:23:01,199 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636460645611048595  
+INFO  2017-11-12 06:23:01,205 [15   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:23:01,222 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2017-11-12 06:23:01,224 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/FoodMaterial/Index.js?v=Sa5kWXhcLCuDoIvZZwBpz7nCniCw4nHDqodCJhtJ9gg  
+INFO  2017-11-12 06:23:01,227 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/FoodMaterial/Index.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\FoodMaterial\Index.js'
+INFO  2017-11-12 06:23:01,231 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.1121ms 200 application/javascript
+INFO  2017-11-12 06:23:01,247 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+WARN  2017-11-12 06:23:01,333 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:23:01,383 [15   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:23:01,387 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 172.006ms
+INFO  2017-11-12 06:23:01,388 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 189.0991ms 200 application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:23:01,399 [6    ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 06:23:01,400 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 192.9873ms
+INFO  2017-11-12 06:23:01,406 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 252.7958ms 200 text/plain; charset=utf-8
+INFO  2017-11-12 06:26:15,557 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/FoodMaterialCategory  
+INFO  2017-11-12 06:26:15,567 [6    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:26:15,706 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialCategoryController.Index (SixMan.ChiMa.Web.Mvc) with arguments (1, 10, System.Threading.CancellationToken) - ModelState is Valid
+INFO  2017-11-12 06:26:15,985 [6    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterialCategory/Index.cshtml.
+WARN  2017-11-12 06:26:16,006 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMateriaCategory' in localization source 'ChiMa'!
+WARN  2017-11-12 06:26:16,008 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'Code' in localization source 'ChiMa'!
+WARN  2017-11-12 06:26:16,023 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewCategory' in localization source 'ChiMa'!
+WARN  2017-11-12 06:26:16,025 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'CategoryName' in localization source 'ChiMa'!
+WARN  2017-11-12 06:26:16,025 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'CategoryCode' in localization source 'ChiMa'!
+WARN  2017-11-12 06:26:16,045 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:26:16,067 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialCategoryController.Index (SixMan.ChiMa.Web.Mvc) in 493.4845ms
+INFO  2017-11-12 06:26:16,068 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 510.8187ms 200 text/html; charset=utf-8
+INFO  2017-11-12 06:26:19,644 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/FoodMaterial  
+INFO  2017-11-12 06:26:19,649 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:26:19,654 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) with arguments (1, 10, System.Threading.CancellationToken) - ModelState is Valid
+INFO  2017-11-12 06:26:19,676 [14   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterial/Index.cshtml.
+WARN  2017-11-12 06:26:19,676 [14   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMateria' in localization source 'ChiMa'!
+WARN  2017-11-12 06:26:19,676 [14   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:26:19,676 [14   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewFoodMateial' in localization source 'ChiMa'!
+WARN  2017-11-12 06:26:19,677 [14   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:26:19,691 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:26:19,703 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) in 52.4979ms
+INFO  2017-11-12 06:26:19,704 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 60.7586ms 200 text/html; charset=utf-8
+INFO  2017-11-12 06:26:19,747 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636460645611048595  
+INFO  2017-11-12 06:26:19,755 [17   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:26:19,758 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-11-12 06:26:19,760 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 06:26:19,760 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 3.9957ms
+INFO  2017-11-12 06:26:19,761 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.8026ms 200 text/plain; charset=utf-8
+INFO  2017-11-12 06:26:19,766 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636460645611048595  
+INFO  2017-11-12 06:26:19,773 [15   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:26:19,775 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+WARN  2017-11-12 06:26:19,780 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:26:19,785 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/FoodMaterial/Index.js?v=Sa5kWXhcLCuDoIvZZwBpz7nCniCw4nHDqodCJhtJ9gg  
+INFO  2017-11-12 06:26:19,787 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /view-resources/Views/FoodMaterial/Index.js was not modified
+INFO  2017-11-12 06:26:19,790 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.8311ms 304 application/javascript
+INFO  2017-11-12 06:26:19,797 [15   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:26:19,797 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 23.2742ms
+INFO  2017-11-12 06:26:19,798 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.4258ms 200 application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:26:36,503 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css.map  
+INFO  2017-11-12 06:26:36,503 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map'
+INFO  2017-11-12 06:26:36,504 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap-select/dist/css/bootstrap-select.css.map  
+INFO  2017-11-12 06:26:36,505 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-select/dist/css/bootstrap-select.css.map'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-select\dist\css\bootstrap-select.css.map'
+INFO  2017-11-12 06:26:36,523 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.6044ms 200 text/plain
+INFO  2017-11-12 06:26:36,566 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 63.1266ms 200 text/plain
+INFO  2017-11-12 06:32:16,948 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/FoodMaterial  
+INFO  2017-11-12 06:32:16,959 [15   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:32:16,963 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) with arguments (1, 10, System.Threading.CancellationToken) - ModelState is Valid
+INFO  2017-11-12 06:32:17,129 [15   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterial/Index.cshtml.
+WARN  2017-11-12 06:32:17,129 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMateria' in localization source 'ChiMa'!
+WARN  2017-11-12 06:32:17,129 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:32:17,130 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewFoodMateial' in localization source 'ChiMa'!
+WARN  2017-11-12 06:32:17,130 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:32:17,158 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:32:17,183 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) in 222.2541ms
+INFO  2017-11-12 06:32:17,184 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 236.2083ms 200 text/html; charset=utf-8
+INFO  2017-11-12 06:32:17,442 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636460645611048595  
+INFO  2017-11-12 06:32:17,456 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:32:17,459 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-11-12 06:32:17,459 [14   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 06:32:17,460 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 2.4452ms
+INFO  2017-11-12 06:32:17,460 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18.7311ms 200 text/plain; charset=utf-8
+INFO  2017-11-12 06:32:17,482 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/FoodMaterial/Index.js?v=LNR1MRenANzTyCl1V__P91ERbOYi38x63HKhNteV8hk  
+INFO  2017-11-12 06:32:17,482 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636460645611048595  
+INFO  2017-11-12 06:32:17,482 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/FoodMaterial/Index.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\FoodMaterial\Index.js'
+INFO  2017-11-12 06:32:17,483 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2531ms 200 application/javascript
+INFO  2017-11-12 06:32:17,516 [26   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:32:17,519 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+WARN  2017-11-12 06:32:17,530 [26   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:32:17,566 [26   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:32:17,569 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 51.0639ms
+INFO  2017-11-12 06:32:17,570 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 87.4359ms 200 application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:32:58,692 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/FoodMaterial  
+INFO  2017-11-12 06:32:58,700 [25   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:32:58,705 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) with arguments (1, 10, System.Threading.CancellationToken) - ModelState is Valid
+INFO  2017-11-12 06:32:58,724 [17   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterial/Index.cshtml.
+WARN  2017-11-12 06:32:58,725 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMateria' in localization source 'ChiMa'!
+WARN  2017-11-12 06:32:58,725 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:32:58,725 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewFoodMateial' in localization source 'ChiMa'!
+WARN  2017-11-12 06:32:58,725 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:32:58,742 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:32:58,756 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) in 53.6606ms
+INFO  2017-11-12 06:32:58,756 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 64.0998ms 200 text/html; charset=utf-8
+INFO  2017-11-12 06:32:58,817 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636460645611048595  
+INFO  2017-11-12 06:32:58,824 [15   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:32:58,826 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-11-12 06:32:58,827 [15   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 06:32:58,827 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 2.3522ms
+INFO  2017-11-12 06:32:58,830 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.0896ms 200 text/plain; charset=utf-8
+INFO  2017-11-12 06:32:58,834 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636460645611048595  
+INFO  2017-11-12 06:32:58,840 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:32:58,843 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+WARN  2017-11-12 06:32:58,853 [14   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:32:58,870 [14   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:32:58,873 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 30.5711ms
+INFO  2017-11-12 06:32:58,873 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 39.5166ms 200 application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:32:58,876 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/FoodMaterial/Index.js?v=LNR1MRenANzTyCl1V__P91ERbOYi38x63HKhNteV8hk  
+INFO  2017-11-12 06:32:58,876 [17   ] NetCore.StaticFiles.StaticFileMiddleware - The file /view-resources/Views/FoodMaterial/Index.js was not modified
+INFO  2017-11-12 06:32:58,877 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9745ms 304 application/javascript
+INFO  2017-11-12 06:33:31,184 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/FoodMaterial  
+INFO  2017-11-12 06:33:31,192 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:33:31,197 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) with arguments (1, 10, System.Threading.CancellationToken) - ModelState is Valid
+INFO  2017-11-12 06:33:31,246 [15   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterial/Index.cshtml.
+WARN  2017-11-12 06:33:31,247 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMateria' in localization source 'ChiMa'!
+WARN  2017-11-12 06:33:31,247 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:33:31,247 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewFoodMateial' in localization source 'ChiMa'!
+WARN  2017-11-12 06:33:31,247 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:33:31,270 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:33:31,290 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) in 95.4577ms
+INFO  2017-11-12 06:33:31,290 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 106.1069ms 200 text/html; charset=utf-8
+INFO  2017-11-12 06:33:31,373 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636460645611048595  
+INFO  2017-11-12 06:33:31,385 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:33:31,388 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-11-12 06:33:31,389 [14   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 06:33:31,389 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 2.5868ms
+INFO  2017-11-12 06:33:31,390 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.1532ms 200 text/plain; charset=utf-8
+INFO  2017-11-12 06:33:31,398 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636460645611048595  
+INFO  2017-11-12 06:33:31,406 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:33:31,408 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+WARN  2017-11-12 06:33:31,419 [14   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:33:31,436 [14   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:33:31,436 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 29.0385ms
+INFO  2017-11-12 06:33:31,438 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 40.3055ms 200 application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:33:31,441 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/FoodMaterial/Index.js?v=LNR1MRenANzTyCl1V__P91ERbOYi38x63HKhNteV8hk  
+INFO  2017-11-12 06:33:31,441 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /view-resources/Views/FoodMaterial/Index.js was not modified
+INFO  2017-11-12 06:33:31,442 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7906ms 304 application/javascript
+INFO  2017-11-12 06:34:15,147 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/FoodMaterial  
+INFO  2017-11-12 06:34:15,151 [15   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:34:15,153 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) with arguments (1, 10, System.Threading.CancellationToken) - ModelState is Valid
+INFO  2017-11-12 06:34:15,178 [19   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterial/Index.cshtml.
+WARN  2017-11-12 06:34:15,179 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMateria' in localization source 'ChiMa'!
+WARN  2017-11-12 06:34:15,179 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:34:15,179 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewFoodMateial' in localization source 'ChiMa'!
+WARN  2017-11-12 06:34:15,179 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:34:15,194 [24   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:34:15,207 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) in 54.6513ms
+INFO  2017-11-12 06:34:15,207 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 60.099ms 200 text/html; charset=utf-8
+INFO  2017-11-12 06:34:15,250 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636460645611048595  
+INFO  2017-11-12 06:34:15,259 [25   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:34:15,262 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-11-12 06:34:15,262 [25   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 06:34:15,263 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 2.3692ms
+INFO  2017-11-12 06:34:15,263 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.1895ms 200 text/plain; charset=utf-8
+INFO  2017-11-12 06:34:15,269 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636460645611048595  
+INFO  2017-11-12 06:34:15,280 [27   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:34:15,283 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+WARN  2017-11-12 06:34:15,291 [27   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:34:15,308 [27   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:34:15,310 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 28.34ms
+INFO  2017-11-12 06:34:15,311 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 42.554ms 200 application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:34:15,313 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/FoodMaterial/Index.js?v=LNR1MRenANzTyCl1V__P91ERbOYi38x63HKhNteV8hk  
+INFO  2017-11-12 06:34:15,314 [24   ] NetCore.StaticFiles.StaticFileMiddleware - The file /view-resources/Views/FoodMaterial/Index.js was not modified
+INFO  2017-11-12 06:34:15,314 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8256ms 304 application/javascript
+INFO  2017-11-12 06:34:50,564 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/FoodMaterial  
+INFO  2017-11-12 06:34:50,568 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:34:50,570 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) with arguments (1, 10, System.Threading.CancellationToken) - ModelState is Valid
+INFO  2017-11-12 06:34:50,796 [25   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterial/Index.cshtml.
+WARN  2017-11-12 06:34:50,822 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMateria' in localization source 'ChiMa'!
+WARN  2017-11-12 06:34:50,825 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:34:50,826 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewFoodMateial' in localization source 'ChiMa'!
+WARN  2017-11-12 06:34:50,828 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:34:50,842 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:34:50,859 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) in 290.4171ms
+INFO  2017-11-12 06:34:50,860 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 296.2902ms 200 text/html; charset=utf-8
+INFO  2017-11-12 06:34:50,918 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636460645611048595  
+INFO  2017-11-12 06:34:50,928 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:34:50,931 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-11-12 06:34:50,932 [14   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 06:34:50,932 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 2.2412ms
+INFO  2017-11-12 06:34:50,932 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.6914ms 200 text/plain; charset=utf-8
+INFO  2017-11-12 06:34:50,937 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636460645611048595  
+INFO  2017-11-12 06:34:50,951 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:34:50,954 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+WARN  2017-11-12 06:34:50,967 [14   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:34:50,986 [14   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:34:50,986 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 33.9515ms
+INFO  2017-11-12 06:34:50,987 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.9238ms 200 application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:34:50,993 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/FoodMaterial/Index.js?v=Uv0BZdmgYwGgW_R2wdWjC7OLR7AsFZ8dgazz09H4nvs  
+INFO  2017-11-12 06:34:50,994 [19   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/FoodMaterial/Index.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\FoodMaterial\Index.js'
+INFO  2017-11-12 06:34:50,995 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.1452ms 200 application/javascript
+INFO  2017-11-12 06:35:04,428 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:5000/api/services/app/FoodMaterial/Create application/json 27
+INFO  2017-11-12 06:35:04,434 [19   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+WARN  2017-11-12 06:35:04,688 [15   ] Mvc.ExceptionHandling.AbpExceptionFilter - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError() in D:\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 128
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() in D:\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 94
+   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.<OnActionExecutionAsync>d__3.MoveNext() in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Mvc\Validation\AbpValidationActionFilter.cs:line 35
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+WARN  2017-11-12 06:35:04,699 [15   ] Mvc.ExceptionHandling.AbpExceptionFilter - There are 1 validation errors:
+WARN  2017-11-12 06:35:04,700 [15   ] Mvc.ExceptionHandling.AbpExceptionFilter - The field Description must be a string or array type with a minimum length of '6'. (Description)
+INFO  2017-11-12 06:35:04,708 [15   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 06:35:04,725 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Food.FoodMaterialAppService.Create (SixMan.ChiMa.Application) in 275.0153ms
+INFO  2017-11-12 06:35:04,728 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 300.361ms 400 application/json; charset=utf-8
+INFO  2017-11-12 06:35:33,003 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:5000/api/services/app/FoodMaterial/Create application/json 32
+INFO  2017-11-12 06:35:33,010 [29   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:35:33,016 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Food.FoodMaterialAppService.Create (SixMan.ChiMa.Application) with arguments (SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto) - ModelState is Valid
+INFO  2017-11-12 06:35:33,290 [14   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 06:35:33,317 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Food.FoodMaterialAppService.Create (SixMan.ChiMa.Application) in 305.3872ms
+INFO  2017-11-12 06:35:33,317 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 314.3523ms 200 application/json; charset=utf-8
+INFO  2017-11-12 06:35:33,329 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/FoodMaterial  
+INFO  2017-11-12 06:35:33,335 [15   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:35:33,338 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) with arguments (1, 10, System.Threading.CancellationToken) - ModelState is Valid
+INFO  2017-11-12 06:35:33,382 [15   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/FoodMaterial/Index.cshtml.
+WARN  2017-11-12 06:35:33,384 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMateria' in localization source 'ChiMa'!
+WARN  2017-11-12 06:35:33,384 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:35:33,386 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewFoodMateial' in localization source 'ChiMa'!
+WARN  2017-11-12 06:35:33,386 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'Description' in localization source 'ChiMa'!
+WARN  2017-11-12 06:35:33,405 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:35:33,419 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.FoodMaterialController.Index (SixMan.ChiMa.Web.Mvc) in 81.0125ms
+INFO  2017-11-12 06:35:33,420 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 90.1337ms 200 text/html; charset=utf-8
+INFO  2017-11-12 06:35:33,442 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/fonts/roboto/roboto.css?v=DWPiEyLnt8XZ68WQeudmZPGSejowhmQNUUhaX8dYF1Q  
+INFO  2017-11-12 06:35:33,443 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /fonts/roboto/roboto.css was not modified
+INFO  2017-11-12 06:35:33,443 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9868ms 304 text/css
+INFO  2017-11-12 06:35:33,479 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/fonts/material-icons/materialicons.css?v=2SsVsQpWRHM3EJ4D4MT4RRpiEXbEuK0vEjPxVr5P7Ek  
+INFO  2017-11-12 06:35:33,479 [29   ] NetCore.StaticFiles.StaticFileMiddleware - The file /fonts/material-icons/materialicons.css was not modified
+INFO  2017-11-12 06:35:33,480 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6883ms 304 text/css
+INFO  2017-11-12 06:35:33,487 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css?v=rYUBh-J0b_zGCzbG02wJhid-ncHyd0BsoUYpjLLSowk  
+INFO  2017-11-12 06:35:33,488 [29   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+INFO  2017-11-12 06:35:33,489 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6ms 304 text/css
+INFO  2017-11-12 06:35:33,496 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/toastr/toastr.css?v=W8a9WvLyUO7CXtOC4f9LoUMwkywM7JSq-Xm5kNsYW08  
+INFO  2017-11-12 06:35:33,497 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/toastr/toastr.css was not modified
+INFO  2017-11-12 06:35:33,497 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7278ms 304 text/css
+INFO  2017-11-12 06:35:33,498 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/sweetalert/dist/sweetalert.css?v=k66BSDvi6XBdtM2RH6QQvCz2wk81XcWsiZ3kn6uFTmM  
+INFO  2017-11-12 06:35:33,499 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/sweetalert/dist/sweetalert.css was not modified
+INFO  2017-11-12 06:35:33,500 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2142ms 304 text/css
+INFO  2017-11-12 06:35:33,501 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap-select/dist/css/bootstrap-select.css?v=a7N4Jki3LzSbThclvqbu4nF45twcjuc772JGFhY9qwk  
+INFO  2017-11-12 06:35:33,507 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/font-awesome/css/font-awesome.css?v=NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w  
+INFO  2017-11-12 06:35:33,507 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/Waves/dist/waves.css?v=0zP86LzXedNkkBjePtKrMTAPuIy6EzHfGlyYvsmGLBw  
+INFO  2017-11-12 06:35:33,508 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/Waves/dist/waves.css was not modified
+INFO  2017-11-12 06:35:33,508 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/font-awesome/css/font-awesome.css was not modified
+INFO  2017-11-12 06:35:33,508 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.501ms 304 text/css
+INFO  2017-11-12 06:35:33,508 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.568ms 304 text/css
+INFO  2017-11-12 06:35:33,512 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/bootstrap-select/dist/css/bootstrap-select.css was not modified
+INFO  2017-11-12 06:35:33,513 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18.1627ms 304 text/css
+INFO  2017-11-12 06:35:33,516 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/animate.css/animate.css?v=00w68NO3TLuHjKRHJmjrrgJBDtG_6OhbJEu1gtHcsuo  
+INFO  2017-11-12 06:35:33,517 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css?v=l7wu43l7XpKWzFn29hiH8AFe4I_CNzbCPmaAQivPYMg  
+INFO  2017-11-12 06:35:33,518 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/animate.css/animate.css was not modified
+INFO  2017-11-12 06:35:33,518 [29   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/famfamfam-flags/dist/sprite/famfamfam-flags.css was not modified
+INFO  2017-11-12 06:35:33,539 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23.5652ms 304 text/css
+INFO  2017-11-12 06:35:33,539 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 22.1115ms 304 text/css
+INFO  2017-11-12 06:35:33,535 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/css/themes/all-themes.css?v=XaAlkmhL9gA6mBxpcxGYAWxggxkIpRmT9qGbKejs6eA  
+INFO  2017-11-12 06:35:33,539 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/themes/all-themes.css was not modified
+INFO  2017-11-12 06:35:33,540 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.6929ms 304 text/css
+INFO  2017-11-12 06:35:33,537 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Shared/_Layout.css?v=uq7unI_U0xZr0Pbyzeu6KfbJKHVFuv0wNJ4CrrhQknw  
+INFO  2017-11-12 06:35:33,542 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /view-resources/Views/Shared/_Layout.css was not modified
+INFO  2017-11-12 06:35:33,543 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.1559ms 304 text/css
+INFO  2017-11-12 06:35:33,528 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/css/materialize.css?v=OdWlipUYj8b9Oa4RyT45njteIcxH-4pGocqe0r0V8js  
+INFO  2017-11-12 06:35:33,530 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/css/style.css?v=yL1_ikVC9k-ZNukgUJ_Jk9cK0TBzvJLMIohPbHrAf0g  
+INFO  2017-11-12 06:35:33,558 [32   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/materialize.css was not modified
+INFO  2017-11-12 06:35:33,558 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 30.7413ms 304 text/css
+INFO  2017-11-12 06:35:33,560 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/style.css was not modified
+INFO  2017-11-12 06:35:33,562 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.1706ms 304 text/css
+INFO  2017-11-12 06:35:33,568 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/json2/json2.js?v=EZJ68U7eUi8uSP0MRRUalYten2eOlhREE9kJOIbIeYg  
+INFO  2017-11-12 06:35:33,568 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/json2/json2.js was not modified
+INFO  2017-11-12 06:35:33,569 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.7396ms 304 application/javascript
+INFO  2017-11-12 06:35:33,574 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js?v=oYqpLeqZe9cetUDV-TFiBZHp3uJ-X4F5eLs4W6uSTSE  
+INFO  2017-11-12 06:35:33,575 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery/dist/jquery.js was not modified
+INFO  2017-11-12 06:35:33,576 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.3654ms 304 application/javascript
+INFO  2017-11-12 06:35:33,580 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js?v=3vw5dArBhZ2OJ4XtRzIIQJYn6Hrd1fePLeqsuToS1R0  
+INFO  2017-11-12 06:35:33,581 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+INFO  2017-11-12 06:35:33,581 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3004ms 304 application/javascript
+INFO  2017-11-12 06:35:33,586 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/moment/min/moment-with-locales.js?v=7CN4bWPV0U57HDA4YjdCBKCAynhqdWErjNn-5rrsW_I  
+INFO  2017-11-12 06:35:33,587 [34   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/moment/min/moment-with-locales.js was not modified
+INFO  2017-11-12 06:35:33,587 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9211ms 304 application/javascript
+INFO  2017-11-12 06:35:33,593 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.js?v=KuzD50lDGNI5jq_ipt4hwDpSJk3fhseTR1jdvaBoZLs  
+INFO  2017-11-12 06:35:33,594 [35   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery-validation/dist/jquery.validate.js was not modified
+INFO  2017-11-12 06:35:33,594 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.7774ms 304 application/javascript
+INFO  2017-11-12 06:35:33,598 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/blockUI/jquery.blockUI.js?v=oQaw-JJuUcJQ9QVYMcFnPxICDT-hv8-kuxT2FNzTGhc  
+INFO  2017-11-12 06:35:33,599 [36   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/blockUI/jquery.blockUI.js was not modified
+INFO  2017-11-12 06:35:33,599 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8187ms 304 application/javascript
+INFO  2017-11-12 06:35:33,604 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/toastr/toastr.js?v=C7DJ6LzTt1Hvj9fd-yRnySs3I4T2B8XmQ3TqXQjc00g  
+INFO  2017-11-12 06:35:33,604 [38   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/toastr/toastr.js was not modified
+INFO  2017-11-12 06:35:33,605 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9881ms 304 application/javascript
+INFO  2017-11-12 06:35:33,608 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/sweetalert/dist/sweetalert-dev.js?v=Y6AEuvugryve80FgzPE3e2EONgfiYPcaSaqF-vIFGIA  
+INFO  2017-11-12 06:35:33,609 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/sweetalert/dist/sweetalert-dev.js was not modified
+INFO  2017-11-12 06:35:33,609 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0427ms 304 application/javascript
+INFO  2017-11-12 06:35:33,614 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/spin.js/spin.js?v=GySbz3oZXNlwoawo5PpYy0iM38B-q3jyi_HLw00uxy0  
+INFO  2017-11-12 06:35:33,615 [33   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/spin.js/spin.js was not modified
+INFO  2017-11-12 06:35:33,615 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2087ms 304 application/javascript
+INFO  2017-11-12 06:35:33,619 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/spin.js/jquery.spin.js?v=EG38bUU5b2M64hy9cNAzu_cQBEsiBYsDifOcoHqNd2k  
+INFO  2017-11-12 06:35:33,619 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/spin.js/jquery.spin.js was not modified
+INFO  2017-11-12 06:35:33,619 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7611ms 304 application/javascript
+INFO  2017-11-12 06:35:33,624 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap-select/dist/js/bootstrap-select.js?v=_KDPX2Vvqq8sySMxlLNJxt9j6Cmb8i_xp602ozhYxzI  
+INFO  2017-11-12 06:35:33,625 [34   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/bootstrap-select/dist/js/bootstrap-select.js was not modified
+INFO  2017-11-12 06:35:33,625 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.98ms 304 application/javascript
+INFO  2017-11-12 06:35:33,629 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-slimscroll/jquery.slimscroll.js?v=4K6ZHzwMYR5_eU2SeDIaByus_qki9IFY8hmxl5U6D1Y  
+INFO  2017-11-12 06:35:33,630 [37   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery-slimscroll/jquery.slimscroll.js was not modified
+INFO  2017-11-12 06:35:33,631 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0589ms 304 application/javascript
+INFO  2017-11-12 06:35:33,635 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/Waves/dist/waves.js?v=Lar7zQhqgdoUsaqhuwkgnWgsC-eRWIxHhJPV-QtrDog  
+INFO  2017-11-12 06:35:33,636 [29   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/Waves/dist/waves.js was not modified
+INFO  2017-11-12 06:35:33,636 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8499ms 304 application/javascript
+INFO  2017-11-12 06:35:33,641 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/push.js/push.js?v=HDxbpm8oBKwe1bmX9Z1SahYYA7zEbc1dk7LfopvOvoE  
+INFO  2017-11-12 06:35:33,641 [32   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/push.js/push.js was not modified
+INFO  2017-11-12 06:35:33,641 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7842ms 304 application/javascript
+INFO  2017-11-12 06:35:33,645 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/abp.js?v=8Fv5Ryar8BgkV6_q_U-zsW2dA57HxErdoXVKogeTUy4  
+INFO  2017-11-12 06:35:33,646 [38   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/abp.js was not modified
+INFO  2017-11-12 06:35:33,646 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8635ms 304 application/javascript
+INFO  2017-11-12 06:35:33,651 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js?v=PCUhVDVZp55Lu8KbdjXlvgXrD5vWl9TLhmEbULarsqU  
+INFO  2017-11-12 06:35:33,651 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js was not modified
+INFO  2017-11-12 06:35:33,652 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8072ms 304 application/javascript
+INFO  2017-11-12 06:35:33,656 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js?v=ImopdkB8alCil1HigOwW3CDqWKsLZXyplf7TXBbjRnE  
+INFO  2017-11-12 06:35:33,656 [36   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js was not modified
+INFO  2017-11-12 06:35:33,656 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8102ms 304 application/javascript
+INFO  2017-11-12 06:35:33,661 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js?v=Y3zoG-hSFKmbS3BHKo_wFWRPbyzJXKoNrnF73uFdtqU  
+INFO  2017-11-12 06:35:33,662 [29   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js was not modified
+INFO  2017-11-12 06:35:33,663 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.4766ms 304 application/javascript
+INFO  2017-11-12 06:35:33,667 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js?v=RJuGDX616JN_UziXsmKnth0alpECKCx0gtxKZVrZWxY  
+INFO  2017-11-12 06:35:33,668 [36   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js was not modified
+INFO  2017-11-12 06:35:33,668 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0875ms 304 application/javascript
+INFO  2017-11-12 06:35:33,673 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js?v=pHFl_MDwwZLcdWvFBdIWQRNd1TYnlLqWz81WI3l1bNA  
+INFO  2017-11-12 06:35:33,674 [36   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js was not modified
+INFO  2017-11-12 06:35:33,675 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9024ms 304 application/javascript
+INFO  2017-11-12 06:35:33,678 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/js/admin.js  
+INFO  2017-11-12 06:35:33,679 [36   ] NetCore.StaticFiles.StaticFileMiddleware - The file /js/admin.js was not modified
+INFO  2017-11-12 06:35:33,679 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0525ms 304 application/javascript
+INFO  2017-11-12 06:35:33,684 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/js/main.js?v=GmU_olKtI9zeSkSj74hvcxYvV346pQbe6-QCCCstV7c  
+INFO  2017-11-12 06:35:33,684 [36   ] NetCore.StaticFiles.StaticFileMiddleware - The file /js/main.js was not modified
+INFO  2017-11-12 06:35:33,684 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.7398ms 304 application/javascript
+INFO  2017-11-12 06:35:33,690 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Shared/_Layout.js?v=jOYc7_5N1zFKt3qTihQ-9Kc0wjSMXkAeHUXNyvn8sYo  
+INFO  2017-11-12 06:35:33,690 [36   ] NetCore.StaticFiles.StaticFileMiddleware - The file /view-resources/Views/Shared/_Layout.js was not modified
+INFO  2017-11-12 06:35:33,690 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.8076ms 304 application/javascript
+INFO  2017-11-12 06:35:33,695 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636460645611048595  
+INFO  2017-11-12 06:35:33,701 [29   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:35:33,704 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2017-11-12 06:35:33,705 [29   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2017-11-12 06:35:33,705 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 2.2225ms
+INFO  2017-11-12 06:35:33,706 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.894ms 200 text/plain; charset=utf-8
+INFO  2017-11-12 06:35:33,710 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636460645611048595  
+INFO  2017-11-12 06:35:33,716 [38   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2017-11-12 06:35:33,719 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+WARN  2017-11-12 06:35:33,727 [38   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2017-11-12 06:35:33,732 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/FoodMaterial/Index.js?v=Uv0BZdmgYwGgW_R2wdWjC7OLR7AsFZ8dgazz09H4nvs  
+INFO  2017-11-12 06:35:33,732 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /view-resources/Views/FoodMaterial/Index.js was not modified
+INFO  2017-11-12 06:35:33,733 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9211ms 304 application/javascript
+INFO  2017-11-12 06:35:33,736 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/images/user.png  
+INFO  2017-11-12 06:35:33,737 [36   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/user.png was not modified
+INFO  2017-11-12 06:35:33,737 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.9706ms 304 image/png
+INFO  2017-11-12 06:35:33,749 [38   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:35:33,749 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 32.4492ms
+INFO  2017-11-12 06:35:33,753 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 42.0958ms 200 application/x-javascript; charset=utf-8
+INFO  2017-11-12 06:35:33,770 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/fonts/roboto/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2  
+INFO  2017-11-12 06:35:33,770 [37   ] NetCore.StaticFiles.StaticFileMiddleware - The file /fonts/roboto/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2 was not modified
+INFO  2017-11-12 06:35:33,771 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0577ms 304 font/woff2
+INFO  2017-11-12 06:35:33,775 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/fonts/material-icons/materialicons.woff2  
+INFO  2017-11-12 06:35:33,776 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/fonts/roboto/CWB0XYA8bzo0kSThX0UTuA.woff2  
+INFO  2017-11-12 06:35:33,798 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+INFO  2017-11-12 06:35:33,800 [36   ] NetCore.StaticFiles.StaticFileMiddleware - The file /fonts/roboto/CWB0XYA8bzo0kSThX0UTuA.woff2 was not modified
+INFO  2017-11-12 06:35:33,802 [29   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/font-awesome/fonts/fontawesome-webfont.woff2 was not modified
+INFO  2017-11-12 06:35:33,803 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.3106ms 304 font/woff2
+INFO  2017-11-12 06:35:33,805 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 28.2376ms 304 font/woff2
+INFO  2017-11-12 06:35:33,790 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/images/user-img-background.jpg  
+INFO  2017-11-12 06:35:33,778 [37   ] NetCore.StaticFiles.StaticFileMiddleware - The file /fonts/material-icons/materialicons.woff2 was not modified
+INFO  2017-11-12 06:35:33,806 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 31.5575ms 304 font/woff2
+INFO  2017-11-12 06:35:33,808 [38   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/user-img-background.jpg was not modified
+INFO  2017-11-12 06:35:33,809 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18.2839ms 304 image/jpeg
