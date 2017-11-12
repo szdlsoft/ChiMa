@@ -64,7 +64,7 @@
             location.reload(true); //reload page to see new category!
         }
 
-        function deleteFoodMaterialCategory(categoryId, foodMaterialDescription) {
+        function deleteFoodMaterial(foodMaterialId, foodMaterialDescription) {
             abp.message.confirm(
                 "Delete foodMaterial '" + foodMaterialDescription + "'?",
                 function (isConfirmed) {

@@ -1,22 +1,23 @@
 ﻿(function ($) {
-
-    var _FoodMaterialCategoryService = abp.services.app.foodMaterialCategory;
-    var _$modal = $('#categoryEditModal');
-    var _$form = $('form[name=FoodMaterialCategoryEditForm]');
+    console.log("begin");
+    var _appService = abp.services.app.foodMaterial;
+    var _$modal = $('#foodMaterialEditModal');
+    var _$form = $('form[name=foodMaterialEditForm]');
 
     function save() {
 
         if (!_$form.valid()) {
+            console.log('form notvalid!');
             return;
         }
 
-        var FoodMaterialCategory = _$form.serializeFormToObject(); //serializeFormToObject is defined in main.js
-       
-
+        var FoodMaterial = _$form.serializeFormToObject(); //serializeFormToObject is defined in main.js
+        console.log('FoodMaterial:' + FoodMaterial);
+        //alert("forml ok!");
         abp.ui.setBusy(_$form);
-        _FoodMaterialCategoryService.update(FoodMaterialCategory).done(function () {
+        _appService.update(FoodMaterial).done(function () {
             _$modal.modal('hide');
-            location.reload(true); //reload page to see edited FoodMaterialCategory!
+            location.reload(true); //reload page to see edited FoodMaterial!
         }).always(function () {
             abp.ui.clearBusy(_$modal);
         });
@@ -24,6 +25,8 @@
 
     //Handle save button click
     _$form.closest('div.modal-content').find(".save-button").click(function (e) {
+        //alert("save botton click!");
+        console.log("save botton click!");
         e.preventDefault();
         save();
     });

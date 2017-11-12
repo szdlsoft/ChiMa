@@ -38,9 +38,9 @@ namespace SixMan.ChiMa.Web.Controllers
             return View(vm);
         }
 
-        public async Task<ActionResult> EditFoodMaterialModal(long categoryId)
+        public async Task<ActionResult> EditFoodMaterialModal(long foodMaterialId)
         {
-            var fmc = await _appService.Get(new EntityDto<long>(categoryId));
+            var fmc = await _appService.Get(new EntityDto<long>(foodMaterialId));
             var vm = new EditFoodMaterialModalViewModel()
             {
                 Current = fmc,
