@@ -22,20 +22,24 @@ namespace SixMan.ChiMa.Web.Controllers
             _appService = appService;
         }
 
+        public ActionResult Index()
+        {
+            return View();
+        }
 
-        public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = PagedResultVM.DEFAULT_PAGE_SIZE,
+        public ActionResult GetFoodMaterias(int offset = 0, int limit = PagedResultVM.DEFAULT_PAGE_SIZE,
                         CancellationToken cancellationToken = default(CancellationToken))
         {
             var reqestDto = new PagedAndSortedResultRequestDto()
             {
                 Sorting = "Description",
-                MaxResultCount = pageSize,
-                SkipCount = (pageNumber * pageSize) - pageSize
+                MaxResultCount = limit,
+                SkipCount = (offset * limit)
             };
-            var vm = (await _appService.GetAll(reqestDto))
-                .ToPagedResultVM(pageNumber, pageSize);
+            var result = _appService.GetAll(reqestDto).Result;
+            //var vm = result.ToBootstrapTablePagedResultVM(offset, limit);
 
-            return View(vm);
+            return Json(result);
         }
 
         public async Task<ActionResult> EditFoodMaterialModal(long foodMaterialId)

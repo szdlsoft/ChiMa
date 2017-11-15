@@ -53,6 +53,9 @@
       "wwwroot/lib/font-awesome/css/font-awesome.css",
       "wwwroot/lib/Waves/dist/waves.css",
       "wwwroot/lib/animate.css/animate.css",
+
+      "wwwroot/lib/bootstrap-table/dist/bootstrap-table.min.css",
+
       "wwwroot/css/materialize.css",
       "wwwroot/css/style.css",
       "wwwroot/css/themes/all-themes.css",

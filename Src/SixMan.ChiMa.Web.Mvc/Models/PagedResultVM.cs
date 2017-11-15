@@ -14,6 +14,13 @@ namespace SixMan.ChiMa.Web.Models
        
     }
 
+    public class BootstrapTablePagedResultVM<T>
+    {
+        public IReadOnlyList<T> rows { get; set; }
+        public int total { get; set; }
+
+    }
+
     public static class PagedResultVM
     {
         public const int DEFAULT_PAGE_SIZE = 10;
@@ -26,6 +33,16 @@ namespace SixMan.ChiMa.Web.Models
                 TotalCount = dto.TotalCount,
                 PageNumber = pageNumber,
                 PageSize = pageSize
+            };
+        }
+
+        public static BootstrapTablePagedResultVM<T> ToBootstrapTablePagedResultVM<T>(this PagedResultDto<T> dto, int pageNumber, int pageSize)
+           where T : class
+        {
+            return  new BootstrapTablePagedResultVM<T>
+            {
+                rows = dto.Items,
+                total = dto.TotalCount
             };
         }
     }

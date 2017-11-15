@@ -13,5 +13,7 @@ namespace SixMan.ChiMa.Application.Food
                 : IAsyncCrudAppService<FoodMaterialDto, long, PagedResultRequestDto, FoodMaterialDto, FoodMaterialDto>
 
     {
+        PagedResultDto<FoodMaterialDto> GetFoodMaterials(int offset , int limit );
+        void DeleteList(List<FoodMaterialDto> list);
     }
 }

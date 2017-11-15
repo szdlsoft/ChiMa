@@ -17,7 +17,7 @@
         abp.ui.setBusy(_$form);
         _appService.update(FoodMaterial).done(function () {
             _$modal.modal('hide');
-            location.reload(true); //reload page to see edited FoodMaterial!
+            //location.reload(true); //reload page to see edited FoodMaterial!
         }).always(function () {
             abp.ui.clearBusy(_$modal);
         });

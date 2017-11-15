@@ -19,5 +19,25 @@ namespace SixMan.ChiMa.Application.Food
         public FoodMaterialAppService(IRepository<FoodMaterial, long> repository) : base(repository)
         {
         }
+
+         public PagedResultDto<FoodMaterialDto> GetFoodMaterials(int offset , int limit )
+        {
+            var reqestDto = new PagedAndSortedResultRequestDto()
+            {
+                Sorting = "Description",
+                MaxResultCount = limit,
+                SkipCount = (offset * limit)
+            };
+            var result = this.GetAll(reqestDto).Result;
+          
+
+            return result;
+        }
+
+        public void DeleteList(List<FoodMaterialDto> list)
+        {
+            list.ForEach(item => this.Delete(item));
+        }
+
     }
 }
