@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Abp.Domain.Repositories;
+using SixMan.ChiMa.Application.Base;
 
 namespace SixMan.ChiMa.Application.Food
 {
@@ -34,9 +35,10 @@ namespace SixMan.ChiMa.Application.Food
             return result;
         }
 
-        public void DeleteList(List<FoodMaterialDto> list)
+        public void DeleteList(DeletListDto list)
         {
-            list.ForEach(item => this.Delete(item));
+            var ids = list.Ids.Split(',').Select(id => long.Parse(id));
+            ids.ToList().ForEach(id => Repository.Delete(Repository.Get(id)));
         }
 
     }

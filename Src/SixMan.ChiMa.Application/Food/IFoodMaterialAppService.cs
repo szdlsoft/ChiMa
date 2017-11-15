@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
+using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food.Dto;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,6 @@ namespace SixMan.ChiMa.Application.Food
 
     {
         PagedResultDto<FoodMaterialDto> GetFoodMaterials(int offset , int limit );
-        void DeleteList(List<FoodMaterialDto> list);
+        void DeleteList(DeletListDto list);
     }
 }

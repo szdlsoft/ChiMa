@@ -164,13 +164,19 @@ var operate = {
         $('#btn_delete').on("click", function () {
             var arrselectedData = tableInit.myViewModel.getSelections();
             //var data = JSON.stringify(arrselectedData);
+            var idsData = arrselectedData.map(function (item) {
+                return item.id;
+            }).join(",");
             var oDataModel = ko.toJS(arrselectedData);
             var _appService = abp.services.app.foodMaterial;
             abp.message.confirm(
             "Delete foodMaterial '"  + "'?",
                 function (isConfirmed) {
                     if (isConfirmed) {
-                        _appService.deleteList(arrselectedData).done(function () {
+                        _appService.deleteList({
+                            ids: idsData
+                        }
+                        ).done(function () {
                             tableInit.myViewModel.refresh();
                         });
                     }
