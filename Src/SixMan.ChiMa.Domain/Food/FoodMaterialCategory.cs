@@ -19,5 +19,10 @@ namespace SixMan.ChiMa.Domain.Food
         public FoodMaterialCategory Parent { get; set; }
 
         public List<FoodMaterialCategory> Childern { get; set; }
+
+        public FoodMaterialCategory() : base()
+        {
+
+        }
     }
 }

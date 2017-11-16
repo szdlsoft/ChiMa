@@ -20,6 +20,12 @@ namespace SixMan.ChiMa.Domain.Base
         public string Name { get; set; }
         [StringLength(MaxCodeLength)]
         public string Code { get; set; }
-        
+
+        public CategoryBase()
+        {
+            this.Code = (DateTime.Now.Millisecond % 10000).ToString("D4");
+            this.Name = "新类别" + Code;
+        }
+
     }
 }

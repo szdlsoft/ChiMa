@@ -29,6 +29,12 @@ ko.bindingHandlers.myBootstrapTable = {
             showToggle: true,
             totalField: 'totalCount',
             dataField: 'items',
+            responseHandler:  function (res) {
+                if (res.result) {
+                    return res.result;
+                }
+                return res;
+            }
         };
         this.params = $.extend({}, this.default, options || {});
 
@@ -41,6 +47,13 @@ ko.bindingHandlers.myBootstrapTable = {
         //刷新
         this.refresh = function () {
             that.bootstrapTable("refresh");
+        };
+        //新增
+        this.insertRow = function (data) {
+            that.bootstrapTable("insertRow", {
+                index: 0,
+                row:   data
+            });
         };
     };
 })(jQuery);
