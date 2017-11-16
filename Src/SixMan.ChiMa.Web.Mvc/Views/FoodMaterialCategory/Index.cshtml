@@ -19,11 +19,7 @@
         <script src="~/view-resources/Views/FoodMateriaCategory/Index.min.js" asp-append-version="true"></script>
     </environment>
 
-    <script>
-        $(function () {
-            setCategoryService(abp.services.app.foodMaterialCategory);
-        })
-    </script>
+   
     
 }
 
@@ -40,8 +36,8 @@
     <thead>
         <tr>
             <th data-checkbox="true"></th>
-            <th data-field="code">编码</th>
-            <th data-field="name">名称</th>
+            <th data-field="code" data-editable="true">编码</th>
+            <th data-field="name" data-editable="true">名称</th>
         </tr>
     </thead>
 </table>

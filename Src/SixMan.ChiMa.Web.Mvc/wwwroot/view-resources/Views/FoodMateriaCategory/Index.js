@@ -102,13 +102,37 @@ var tableInit = {
             method: 'get',                      //请求方式（*）
             toolbar: '#toolbar',                //工具按钮用哪个容器
             queryParams: function (param) {
-                return { MaxResultCount: param.limit, SkipCount: param.offset * param.limit };
+                return { MaxResultCount: param.limit, SkipCount: param.offset };
             },//传递参数（*）
             pagination: true,                   //是否显示分页（*）
             sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
             pageNumber: 1,                      //初始化加载第一页，默认第一页
             pageSize: 10,                       //每页的记录行数（*）
             pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+            onEditableSave: function (field, row, oldValue, $el) {
+                var dto = row;
+                ko.appService.update(dto).done(function (res) {
+                    alert("编辑成功");
+                    
+                })
+                //$.ajax({
+                //    type: "post",
+                //    url: "/Editable/Edit",
+                //    data: { strJson: JSON.stringify(row) },
+                //    success: function (data, status) {
+                //        if (status == "success") {
+                //            alert("编辑成功");
+                //        }
+                //    },
+                //    error: function () {
+                //        alert("Error");
+                //    },
+                //    complete: function () {
+
+                //    }
+
+                //});
+            }
         });
         ko.applyBindings(this.myViewModel, document.getElementById("tb_category"));
     }

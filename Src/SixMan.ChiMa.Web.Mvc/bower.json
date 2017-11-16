@@ -29,6 +29,9 @@
     "abp-web-resources": "^3.1.0",
     "knockout": "v3.4.2",
     "knockout-mapping": "2.4.1",
-    "bootstrap-table": "1.11.1"
+    "bootstrap-table": "1.11.1",
+    "x-editable": "1.5.1",
+    "bootstrap-editable-table": "v1.0.3",
+    "bootstrap-editable": "*"
   }
 }
