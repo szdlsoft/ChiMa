@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using SixMan.ChiMa.Web.Models;
+using SixMan.ChiMa.Application.Base;
 
 namespace SixMan.ChiMa.Web.Controllers
 {
@@ -25,17 +26,17 @@ namespace SixMan.ChiMa.Web.Controllers
         }
 
 
-        public async Task<IActionResult> Index(int pageNumber=1,   int pageSize= PagedResultVM.DEFAULT_PAGE_SIZE,
+        public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = PagedResultVM.DEFAULT_PAGE_SIZE,
                         CancellationToken cancellationToken = default(CancellationToken))
         {
-            var reqestDto = new PagedAndSortedResultRequestDto()
+            var reqestDto = new SortSearchPagedResultRequestDto()
             {
                 Sorting = "Name",
                 MaxResultCount = pageSize,
                 SkipCount = (pageNumber * pageSize) - pageSize
             };
             var vm = (await _appService.GetAll(reqestDto))
-                .ToPagedResultVM(pageNumber, pageSize);           
+                .ToPagedResultVM(pageNumber, pageSize);
 
             return View(vm);
         }

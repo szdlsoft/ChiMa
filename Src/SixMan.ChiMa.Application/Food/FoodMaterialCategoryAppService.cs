@@ -9,11 +9,14 @@ using Abp.Domain.Repositories;
 using SixMan.ChiMa.Application.Extensions;
 using SixMan.ChiMa.Application.Base;
 using System.Linq;
+using SixMan.ChiMa.Domain.Food.Repository;
+using SixMan.ChiMa.Domain.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace SixMan.ChiMa.Application.Food
 {
     public class FoodMaterialCategoryAppService
-        : AsyncCrudAppService<FoodMaterialCategory, FoodMaterialCategoryDto, long, PagedResultRequestDto, FoodMaterialCategoryDto, FoodMaterialCategoryDto>
+        : AdvancedAsyncCrudAppService<FoodMaterialCategory, FoodMaterialCategoryDto>
         , IFoodMaterialCategoryAppService
     {
         public FoodMaterialCategoryAppService(IRepository<FoodMaterialCategory, long> repository) 
@@ -21,16 +24,22 @@ namespace SixMan.ChiMa.Application.Food
         {
         }
 
-        public FoodMaterialCategoryDto Add()
+        protected override IQueryable<FoodMaterialCategory> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
         {
-            return Repository.Insert(new FoodMaterialCategory())
-                        .ToDto<FoodMaterialCategory, FoodMaterialCategoryDto>();
+            var query = base.CreateFilteredQuery(input);
+            if (input.Search.IsNotNullOrEmpty())
+            {
+                query = from c in query
+                        where EF.Functions.Like(c.Name, $"%{input.Search}%")
+                        select c;
+            }
+
+            return query;
         }
 
-        public void DeleteList(DeletListDto list)
+        protected override IQueryable<FoodMaterialCategory> ApplySorting(IQueryable<FoodMaterialCategory> query, SortSearchPagedResultRequestDto input)
         {
-            var ids = list.Ids.Split(',').Select(id => long.Parse(id));
-            ids.ToList().ForEach(id => Repository.Delete(Repository.Get(id)));
+            return base.ApplySorting(query,input);
         }
     }
 }

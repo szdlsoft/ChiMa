@@ -10,9 +10,9 @@ using System.Text;
 namespace SixMan.ChiMa.Application.Food
 {
     public interface IFoodMaterialCategoryAppService 
-        : IAsyncCrudAppService<FoodMaterialCategoryDto, long, PagedResultRequestDto, FoodMaterialCategoryDto, FoodMaterialCategoryDto>
+        : IAdvancedAsyncCrudAppService<FoodMaterialCategoryDto>
     {
-        FoodMaterialCategoryDto Add();
-        void DeleteList(DeletListDto list);
+        //FoodMaterialCategoryDto Add();
+        //void DeleteList(DeletListDto list);
     }
 }
