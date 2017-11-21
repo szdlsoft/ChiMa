@@ -11,10 +11,12 @@ using System.Threading.Tasks;
 namespace SixMan.ChiMa.Application.Food
 {
     public interface IFoodMaterialAppService
-                : IAsyncCrudAppService<FoodMaterialDto, long, PagedResultRequestDto, FoodMaterialDto, FoodMaterialDto>
+        : IAdvancedAsyncCrudAppService<FoodMaterialDto>
+    { 
+                //: IAsyncCrudAppService<FoodMaterialDto, long, PagedResultRequestDto, FoodMaterialDto, FoodMaterialDto>
 
-    {
-        PagedResultDto<FoodMaterialDto> GetFoodMaterials(int offset , int limit );
-        void DeleteList(DeletListDto list);
+    //{
+    //    PagedResultDto<FoodMaterialDto> GetFoodMaterials(int offset , int limit );
+    //    void DeleteList(DeletListDto list);
     }
 }

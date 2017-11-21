@@ -29,6 +29,21 @@ ko.bindingHandlers.myBootstrapTable = {
             showToggle: true,
             totalField: 'totalCount',
             dataField: 'items',
+            queryParams: function (param) {
+                return {
+                    MaxResultCount: param.limit
+                    , SkipCount: param.offset
+                    , Search: param.search
+                    , Sort: param.sort
+                    , Order: param.order
+                };
+            },//传递参数（*）
+            pagination: true, 
+            sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
+            pageNumber: 1,                      //初始化加载第一页，默认第一页
+            pageSize: 10,                       //每页的记录行数（*）
+            pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+
             responseHandler:  function (res) {
                 if (res.result) {
                     return res.result;

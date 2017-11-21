@@ -10,6 +10,7 @@ using Abp.Domain.Repositories;
 using SixMan.ChiMa.Application.Extensions;
 using SixMan.ChiMa.Domain.Extensions;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Dynamic.Core;
 
 namespace SixMan.ChiMa.Application.Base
 {
@@ -36,7 +37,22 @@ namespace SixMan.ChiMa.Application.Base
             ids.ToList().ForEach(id => Repository.Delete(Repository.Get(id)));
         }
 
-       
+        //protected override IQueryable<TEntity> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
+        //{
+        //    var query = base.CreateFilteredQuery(input);
+        //    if (input.Search.IsNotNullOrEmpty())
+        //    {
+        //        //query = from c in query
+        //        //where EF.Functions.Like("Name", $"%{input.Search}%")
+        //        //select c;
+        //        //string whereClause = $"Name like '%{input.Search}%'";
+        //        string whereClause = input.Search;
+        //        query = query.Where(whereClause);
+        //    }
+
+        //    return query;
+        //}
+
 
     }
 }

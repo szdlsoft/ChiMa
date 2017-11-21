@@ -2,6 +2,9 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Abp.Zero.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
 using SixMan.ChiMa.Domain;
 using SixMan.ChiMa.EFCore.Seed;
 
@@ -31,9 +34,19 @@ namespace SixMan.ChiMa.EFCore
                     {
                         ChiMaDbContextConfigurer.Configure(options.DbContextOptions, options.ConnectionString);
                     }
+
+                    options.DbContextOptions.UseLoggerFactory(MyLoggerFactory);
                 });
             }
         }
+
+        public static readonly LoggerFactory MyLoggerFactory
+            = new LoggerFactory(new[]
+            {
+                new ConsoleLoggerProvider((category, level)
+                    => category == DbLoggerCategory.Database.Command.Name
+                        || category == DbLoggerCategory.Query.Name, true)
+            });
 
         public override void Initialize()
         {

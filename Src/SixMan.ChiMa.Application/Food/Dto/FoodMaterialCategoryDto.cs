@@ -12,7 +12,7 @@ namespace SixMan.ChiMa.Application.Food.Dto
     [AutoMap(typeof(FoodMaterialCategory))]
     public class FoodMaterialCategoryDto 
         :  EntityDto<long>
-    {
+    { 
         [Required]
         [StringLength(CategoryBase.MaxNameLength)]
         public string Name { get; set; }

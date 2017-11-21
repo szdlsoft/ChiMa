@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Microsoft.AspNetCore.Mvc;
+using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food;
 using SixMan.ChiMa.Controllers;
 using SixMan.ChiMa.Web.Models;
@@ -30,7 +31,7 @@ namespace SixMan.ChiMa.Web.Controllers
         public ActionResult GetFoodMaterias(int offset = 0, int limit = PagedResultVM.DEFAULT_PAGE_SIZE,
                         CancellationToken cancellationToken = default(CancellationToken))
         {
-            var reqestDto = new PagedAndSortedResultRequestDto()
+            var reqestDto = new SortSearchPagedResultRequestDto()
             {
                 Sorting = "Description",
                 MaxResultCount = limit,

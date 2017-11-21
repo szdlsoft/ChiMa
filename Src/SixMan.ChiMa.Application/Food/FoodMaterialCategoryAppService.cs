@@ -22,6 +22,7 @@ namespace SixMan.ChiMa.Application.Food
         public FoodMaterialCategoryAppService(IRepository<FoodMaterialCategory, long> repository) 
             : base(repository)
         {
+
         }
 
         protected override IQueryable<FoodMaterialCategory> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
@@ -37,9 +38,5 @@ namespace SixMan.ChiMa.Application.Food
             return query;
         }
 
-        protected override IQueryable<FoodMaterialCategory> ApplySorting(IQueryable<FoodMaterialCategory> query, SortSearchPagedResultRequestDto input)
-        {
-            return base.ApplySorting(query,input);
-        }
     }
 }

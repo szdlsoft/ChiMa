@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Abp.Domain.Repositories;
 using SixMan.ChiMa.Application.Base;
+using SixMan.ChiMa.Domain.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace SixMan.ChiMa.Application.Food
 {
     public class FoodMaterialAppService
-        : AsyncCrudAppService<FoodMaterial, FoodMaterialDto, long, PagedResultRequestDto, FoodMaterialDto, FoodMaterialDto>
+       : AdvancedAsyncCrudAppService<FoodMaterial, FoodMaterialDto>
         , IFoodMaterialAppService
 
     {
@@ -21,24 +23,17 @@ namespace SixMan.ChiMa.Application.Food
         {
         }
 
-         public PagedResultDto<FoodMaterialDto> GetFoodMaterials(int offset , int limit )
+        protected override IQueryable<FoodMaterial> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
         {
-            var reqestDto = new PagedAndSortedResultRequestDto()
+            var query = base.CreateFilteredQuery(input);
+            if (input.Search.IsNotNullOrEmpty())
             {
-                Sorting = "Description",
-                MaxResultCount = limit,
-                SkipCount = (offset * limit)
-            };
-            var result = this.GetAll(reqestDto).Result;
-          
+                query = from c in query
+                        where EF.Functions.Like(c.Description, $"%{input.Search}%")
+                        select c;
+            }
 
-            return result;
-        }
-
-        public void DeleteList(DeletListDto list)
-        {
-            var ids = list.Ids.Split(',').Select(id => long.Parse(id));
-            ids.ToList().ForEach(id => Repository.Delete(Repository.Get(id)));
+            return query;
         }
 
     }
