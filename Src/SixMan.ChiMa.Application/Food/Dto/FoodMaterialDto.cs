@@ -133,5 +133,7 @@ namespace SixMan.ChiMa.Application.Food.Dto
         /// </summary>
         [StringLength(50)]
         public string Season { get; set; }
+
+        public string Category => FoodMaterialCategory?.Name;
     }
 }

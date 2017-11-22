@@ -36,23 +36,33 @@ namespace SixMan.ChiMa.Application.Base
             var ids = list.Ids.Split(',').Select(id => long.Parse(id));
             ids.ToList().ForEach(id => Repository.Delete(Repository.Get(id)));
         }
+       
 
-        //protected override IQueryable<TEntity> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
-        //{
-        //    var query = base.CreateFilteredQuery(input);
-        //    if (input.Search.IsNotNullOrEmpty())
-        //    {
-        //        //query = from c in query
-        //        //where EF.Functions.Like("Name", $"%{input.Search}%")
-        //        //select c;
-        //        //string whereClause = $"Name like '%{input.Search}%'";
-        //        string whereClause = input.Search;
-        //        query = query.Where(whereClause);
-        //    }
+        public override async Task<PagedResultDto<TEntityDto>> GetAll(SortSearchPagedResultRequestDto input)
+        {           
+            CheckGetAllPermission();
 
-        //    return query;
-        //}
+            var query = CreateFilteredQuery(input);
+
+            var totalCount = await AsyncQueryableExecuter.CountAsync(query);
+
+            query = ApplySorting(query, input);
+            query = ApplyPaging(query, input);
+
+            query = ApplyInclude(query);
 
 
+            var entities = await AsyncQueryableExecuter.ToListAsync(query);
+
+            return new PagedResultDto<TEntityDto>(
+                totalCount,
+                entities.Select(MapToEntityDto).ToList()
+            );
+        }
+
+        protected virtual IQueryable<TEntity> ApplyInclude(IQueryable<TEntity> query)
+        {
+            return query;
+        }
     }
 }

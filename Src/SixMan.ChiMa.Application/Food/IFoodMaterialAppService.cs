@@ -12,11 +12,12 @@ namespace SixMan.ChiMa.Application.Food
 {
     public interface IFoodMaterialAppService
         : IAdvancedAsyncCrudAppService<FoodMaterialDto>
-    { 
-                //: IAsyncCrudAppService<FoodMaterialDto, long, PagedResultRequestDto, FoodMaterialDto, FoodMaterialDto>
+    {
+        //: IAsyncCrudAppService<FoodMaterialDto, long, PagedResultRequestDto, FoodMaterialDto, FoodMaterialDto>
 
-    //{
-    //    PagedResultDto<FoodMaterialDto> GetFoodMaterials(int offset , int limit );
-    //    void DeleteList(DeletListDto list);
+        //{
+        //    PagedResultDto<FoodMaterialDto> GetFoodMaterials(int offset , int limit );
+        //    void DeleteList(DeletListDto list);
+        int Import(List<Dictionary<string, string>> importData);
     }
 }

@@ -19,8 +19,12 @@ namespace SixMan.ChiMa.Application.Food
         , IFoodMaterialAppService
 
     {
-        public FoodMaterialAppService(IRepository<FoodMaterial, long> repository) : base(repository)
+        private IRepository<FoodMaterialCategory, long> _categoryRepository;
+        public FoodMaterialAppService(IRepository<FoodMaterial, long> repository
+                                    , IRepository<FoodMaterialCategory, long> categoryRepository) 
+            : base(repository)
         {
+            _categoryRepository = categoryRepository;
         }
 
         protected override IQueryable<FoodMaterial> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
@@ -36,5 +40,63 @@ namespace SixMan.ChiMa.Application.Food
             return query;
         }
 
+        protected override IQueryable<FoodMaterial> ApplyInclude(IQueryable<FoodMaterial> query)
+        {
+            query = query.Include(e => e.FoodMaterialCategory);
+            return query;
+        }
+
+        public int Import(List<Dictionary<string,string>> importData)
+        {
+            int count = 0;
+            foreach(var row in importData)
+            {
+                count += ImportRow(row);
+            }
+            return count;
+        }
+
+        private int ImportRow(Dictionary<string, string> row)
+        {
+            var fmDescription = row["Description"];
+            FoodMaterial entity = Repository.GetAll().Where(e => e.Description == fmDescription).FirstOrDefault();
+            if( entity == null)
+            {
+                entity = new FoodMaterial();
+            }
+
+            try
+            {
+                var categoryName = row["FoodMaterialCategory"];
+                FoodMaterialCategory category = InsertOrGetCategory(categoryName);
+                row.Remove("FoodMaterialCategory"); //删除免import出错
+
+                entity.Import(row);
+                entity.FoodMaterialCategory = category;
+
+                Repository.InsertOrUpdate(entity);
+                return 1;
+            }
+            catch(Exception ex)
+            {
+                Logger.Error(ex.Message);
+                return 0;
+            }
+        }
+
+        private FoodMaterialCategory InsertOrGetCategory(string categoryName)
+        {
+            var category = _categoryRepository.GetAll().Where(c=>c.Name == categoryName).FirstOrDefault();
+            if( category == null)
+            {
+                category = new FoodMaterialCategory()
+                {
+                    Name = categoryName
+                };
+                category.Id = _categoryRepository.InsertAndGetId(category);
+            }
+
+            return category;
+        }
     }
 }

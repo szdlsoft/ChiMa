@@ -4,7 +4,9 @@ using SixMan.ChiMa.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Text;
+using System.Reflection;
 
 namespace SixMan.ChiMa.Domain.Food
 {
@@ -75,6 +77,8 @@ namespace SixMan.ChiMa.Domain.Food
         /// 维生素b2
         /// </summary>
         public double? Riboflavin { get; set; }
+
+
         /// <summary>
         /// 尼克酸
         /// </summary>
@@ -137,5 +141,48 @@ namespace SixMan.ChiMa.Domain.Food
         public ICollection<FoodMaterialHealthAffect> FoodMaterialHealthAffects { get; set; }
         public ICollection<DishBom> DishBoms { get; set; }
 
+
+        /// <summary>
+        /// 导入数据
+        /// </summary>
+        /// <param name="row"></param>
+        public void Import(Dictionary<string, string> row)
+        {
+            foreach(var key in row.Keys)
+            {
+                var pi = this.GetType().GetProperties().Where(p => p.Name == key).FirstOrDefault();
+                if( pi != null)
+                {
+                    var value = GetValue(pi, row[key]);
+                    if( value != null)
+                    {
+                        pi.SetValue(this, value);
+                    }
+                }
+            }
+        }
+        /// <summary>
+        /// 只支持string 和double? int?类型
+        /// </summary>
+        /// <param name="pi"></param>
+        /// <param name="v"></param>
+        /// <returns></returns>
+        private object GetValue(PropertyInfo pi, string v)
+        {
+            if(pi.PropertyType == typeof(string))
+            {
+                return v;
+            }
+            if(pi.PropertyType == typeof(double?))
+            {
+                return double.Parse(v);
+            }
+            if (pi.PropertyType == typeof(int?))
+            {
+                return int.Parse(v);
+            }
+
+            return null;
+        }
     }
 }

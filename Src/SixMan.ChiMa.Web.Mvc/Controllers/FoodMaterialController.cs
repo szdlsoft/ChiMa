@@ -80,23 +80,25 @@ namespace SixMan.ChiMa.Web.Controllers
                     ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
                     int rowCount = worksheet.Dimension.Rows;
                     int ColCount = worksheet.Dimension.Columns;
-                    bool bHeaderRow = true;
-                    for (int row = 1; row <= 4; row++)
+                    var importData = new List<Dictionary<string, string>>();
+                    for (int row = 5; row <= rowCount; row++)
                     {
+                        var rowData = new Dictionary<string, string>();
                         for (int col = 1; col <= ColCount; col++)
                         {
-                            if (bHeaderRow)
+                            var key = worksheet.Cells[2, col].Value?.ToString();
+                            var value = worksheet.Cells[row, col].Value?.ToString();
+                            if( key != null 
+                                && value != null)
                             {
-                                sb.Append(worksheet.Cells[row, col].Value?.ToString() + "\t");
-                            }
-                            else
-                            {
-                                sb.Append(worksheet.Cells[row, col].Value?.ToString() + "\t");
+                                rowData[key] = value;
                             }
                         }
-                        sb.Append(Environment.NewLine);
+                        importData.Add(rowData);
                     }
-                    return Content(sb.ToString());
+                    int importCount = _appService.Import(importData);
+                    System.IO.File.Delete(file.ToString());
+                    return Content($"{excelfile.FileName}共{rowCount}行 导入{importCount}行");
                 }
             }
             catch (Exception ex)
