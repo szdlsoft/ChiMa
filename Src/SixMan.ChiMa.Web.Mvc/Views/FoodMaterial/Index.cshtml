@@ -1,7 +1,7 @@
 ﻿@using SixMan.ChiMa.Domain.Base
 @using SixMan.ChiMa.Web.Startup
 @using SixMan.ChiMa.Application.Food.Dto
-@model SixMan.ChiMa.Web.Models.PagedResultVM<FoodMaterialDto>
+@model FoodMaterialDto
 @{
     ViewBag.CurrentPageName = PageNames.FoodMaterial; //The menu item will be active for this page.
 }
@@ -37,20 +37,22 @@
                 <h4 class="modal-title" id="myModalLabel">操作</h4>
             </div>
             <div class="modal-body">
-
-                <div class="form-group">
-                    <label for="txt_description">菜品名称</label>
-                    <input type="text" name="txt_description" data-bind="value:description" class="form-control" id="txt_description" placeholder="菜品名称">
-                </div>
-                <div class="form-group">
-                    <label for="txt_season">季节</label>
-                    <input type="text" name="txt_season" data-bind="value:season" class="form-control" id="txt_season" placeholder="季节">
-                </div>
-                
+                <form id="myForm">
+                    <div class="form-group">
+                        <label for="txt_description">菜品名称</label>
+                        <input asp-for="Description"
+                               type="text"  data-bind="value:description" class="form-control" id="txt_description" placeholder="菜品名称" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_season">季节</label>
+                        <input type="text" name="txt_season" data-bind="value:season" class="form-control" id="txt_season" placeholder="季节">
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
-                <button type="button" id="btn_submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+                <button type="button" id="btn_submit" class="btn btn-primary" ><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
             </div>
         </div>
     </div>
@@ -165,6 +167,12 @@
         //保存数据
         operateSave: function () {
             $('#btn_submit').on("click", function () {
+                var form = $("#myForm");
+                $.validator.unobtrusive.parse(form);
+                if (!form.valid()) {
+                    event.preventDefault();
+                    return;
+                }
                 //取到当前的viewmodel
                 var oViewModel = operate.DepartmentModel;
                 //将Viewmodel转换为数据model
@@ -181,8 +189,9 @@
                     ko.appService.update(oDataModel).done(function (res) {
                         alert(JSON.stringify(res));
                         tableInit.myViewModel.refresh();
-                    });
+                   });
                 }
+                $("#myModal").modal("hide");
 
             });
         },
