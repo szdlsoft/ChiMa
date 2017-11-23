@@ -11,6 +11,7 @@ using Abp.Domain.Repositories;
 using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Domain.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Abp.Domain.Uow;
 
 namespace SixMan.ChiMa.Application.Food
 {
@@ -46,6 +47,16 @@ namespace SixMan.ChiMa.Application.Food
             return query;
         }
 
+        protected override FoodMaterialDto MapToEntityDto(FoodMaterial entity)
+        {
+            var dto = base.MapToEntityDto(entity);
+            dto.Category = entity.FoodMaterialCategory?.Name;
+            //dto.FoodMaterialCategoryId = entity.FoodMaterialCategory?.Id;
+
+            return dto;
+        }
+
+        [UnitOfWork(IsDisabled = true)]
         public int Import(List<Dictionary<string,string>> importData)
         {
             int count = 0;

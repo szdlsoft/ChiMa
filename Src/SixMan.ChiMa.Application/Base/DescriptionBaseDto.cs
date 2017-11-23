@@ -11,7 +11,7 @@ namespace SixMan.ChiMa.Application
         , IDescription
     {
         public const int MaxDescriptionLength = 256;
-        public const int MinDescriptionLength = 6;
+        public const int MinDescriptionLength = 2;
         [Required]
         [StringLength(MaxDescriptionLength)]
         [MinLength(MinDescriptionLength)]

@@ -17,6 +17,7 @@ namespace SixMan.ChiMa.Domain.Food
         : MultiMediaBase
     {
         public FoodMaterialCategory FoodMaterialCategory { get; set; }
+        public long? FoodMaterialCategoryId { get; set; }
         /// <summary>
         /// 可食率
         /// </summary>

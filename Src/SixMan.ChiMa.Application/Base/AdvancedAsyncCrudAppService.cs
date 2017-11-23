@@ -64,5 +64,29 @@ namespace SixMan.ChiMa.Application.Base
         {
             return query;
         }
+
+        public override async Task<TEntityDto> Create(TEntityDto input)
+        {
+            CheckCreatePermission();
+
+            var entity = MapToEntity(input);
+
+            await Repository.InsertAsync(entity);
+            await CurrentUnitOfWork.SaveChangesAsync();
+
+            return MapToEntityDto(entity);
+        }
+
+        public override async Task<TEntityDto> Update(TEntityDto input)
+        {
+            CheckUpdatePermission();
+
+            var entity = await GetEntityByIdAsync(input.Id);
+
+            MapToEntity(input, entity);
+            await CurrentUnitOfWork.SaveChangesAsync();
+
+            return MapToEntityDto(entity);
+        }
     }
 }

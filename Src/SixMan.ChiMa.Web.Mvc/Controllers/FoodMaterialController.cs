@@ -1,7 +1,9 @@
 ﻿using Abp.Application.Services.Dto;
+using Abp.Domain.Uow;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using OfficeOpenXml;
 using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food;
@@ -15,6 +17,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using SixMan.ChiMa.Web.Extensions;
 
 namespace SixMan.ChiMa.Web.Controllers
 {
@@ -23,6 +26,8 @@ namespace SixMan.ChiMa.Web.Controllers
     {
         private readonly IFoodMaterialAppService _appService;
         private IHostingEnvironment _hostingEnvironment;
+
+        public IFoodMaterialCategoryAppService categoryService { get; set; }
 
 
         public FoodMaterialController(IFoodMaterialAppService appService, IHostingEnvironment hostingEnvironment)
@@ -33,35 +38,49 @@ namespace SixMan.ChiMa.Web.Controllers
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult GetFoodMaterias(int offset = 0, int limit = PagedResultVM.DEFAULT_PAGE_SIZE,
-                        CancellationToken cancellationToken = default(CancellationToken))
-        {
-            var reqestDto = new SortSearchPagedResultRequestDto()
-            {
-                Sorting = "Description",
-                MaxResultCount = limit,
-                SkipCount = (offset * limit)
-            };
-            var result = _appService.GetAll(reqestDto).Result;
-            //var vm = result.ToBootstrapTablePagedResultVM(offset, limit);
-
-            return Json(result);
-        }
-
-        public async Task<ActionResult> EditFoodMaterialModal(long foodMaterialId)
-        {
-            var fmc = await _appService.Get(new EntityDto<long>(foodMaterialId));
             var vm = new EditFoodMaterialModalViewModel()
             {
-                Current = fmc,
+                //Current = new Application.Food.Dto.FoodMaterialDto(),
+                Categories = categoryService.GetAll(SortSearchPagedResultRequestDto.All)
+                        .Result.Items
+                        .Select(c => new { Id = c.Id, Name = c.Name })
+                        .ToJson(),
+                AspCategories = categoryService.GetAll(SortSearchPagedResultRequestDto.All)
+                        .Result.Items
+                        .Select(c => new SelectListItem{ Value = c.Id.ToString(), Text = c.Name })
+                        .ToList()
             };
-            return View("_EditFoodMaterialModal", vm);
+                        
+            return View(vm);
         }
 
+        //public ActionResult GetFoodMaterias(int offset = 0, int limit = PagedResultVM.DEFAULT_PAGE_SIZE,
+        //                CancellationToken cancellationToken = default(CancellationToken))
+        //{
+        //    var reqestDto = new SortSearchPagedResultRequestDto()
+        //    {
+        //        Sorting = "Description",
+        //        MaxResultCount = limit,
+        //        SkipCount = (offset * limit)
+        //    };
+        //    var result = _appService.GetAll(reqestDto).Result;
+        //    //var vm = result.ToBootstrapTablePagedResultVM(offset, limit);
+
+        //    return Json(result);
+        //}
+
+        //public async Task<ActionResult> EditFoodMaterialModal(long foodMaterialId)
+        //{
+        //    var fmc = await _appService.Get(new EntityDto<long>(foodMaterialId));
+        //    var vm = new EditFoodMaterialModalViewModel()
+        //    {
+        //        Current = fmc,
+        //    };
+        //    return View("_EditFoodMaterialModal", vm);
+        //}
+
         [HttpPost]
+        [UnitOfWork(IsDisabled = true)]
         public IActionResult Import(IFormFile excelfile)
         {
             string sWebRootFolder = _hostingEnvironment.WebRootPath;

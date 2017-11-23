@@ -1,89 +1,97 @@
 ﻿@using SixMan.ChiMa.Web.Startup
 @{
-    ViewBag.CurrentPageName = PageNames.About; //The menu item will be active for this page.
+    Layout = "~/Views/Shared/_Layout - Copy.cshtml";
+    ViewBag.CurrentPageName = PageNames.FoodMaterial; //The menu item will be active for this page.
 }
+@*<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="~/favicon.ico">
+    <title>ChiMa</title>
+    <environment names="Development">
+        <link href="~/fonts/roboto/roboto.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/fonts/material-icons/materialicons.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/toastr/toastr.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/sweetalert/dist/sweetalert.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/Waves/dist/waves.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/animate.css/animate.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/materialize.css" rel="stylesheet" asp-append-version="true" /> 
+        <link href="~/css/style.css" rel="stylesheet" asp-append-version="true">
+        <link href="~/css/themes/all-themes.css" rel="stylesheet" asp-append-version="true" />
 
-<div class="row clearfix">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="card">
-            <div class="header">
-                <h2>
-                    About This Template
-                </h2>
-            </div>
-            <div class="body">
-                <p>
-                    This is a simple startup template based on ASP.NET Boilerplate framework and Module Zero.
-                    If you need an enterprise startup project, check <a href="http://aspnetzero.com?ref=abptmpl" target="_blank">ASP.NET ZERO</a>.
-                </p>
+        <link href="~/view-resources/Views/Shared/_Layout.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+   
+   
+</head>*@
 
-                <h3>What is ASP.NET Boilerplate?</h3>
-
-                <p>
-                    ASP.NET Boilerplate is an application framework built on latest <strong>ASP.NET Core</strong> framework.
-                    It makes easy to use authorization, dependency injection, validation, exception handling, localization, logging, caching, background jobs and so on.
-                    It's built on already familiar tools like Entity Framework, AutoMapper, Castle Windsor...
-                </p>
-
-                <p>
-                    ASP.NET Boilerplate implements <strong>NLayer architecture</strong> (Domain, Application, Infrastructure and Presentation Layers)
-                    and <strong>Domain Driven Design</strong> (Entities, Repositories, Domain/Application Services, DTO's...).
-                    Also implements and provides a good infrastructure to implement common software development <strong>best practices</strong>.
-                </p>
-                
-                <h3>What is Module Zero?</h3>
-
-                <p>
-                    ASP.NET Boilerplate framework is designed to be independent of any database
-                    schema and to be as generic as possible. Therefore, It leaves some concepts
-                    <strong>abstract</strong> and <strong>optional</strong> (like audit logging, permission and setting stores)
-                    which requires some <strong>data store</strong>.
-                </p>
-                <p>
-                    <strong>Module Zero </strong>implements all fundamental concepts of ASP.NET
-                    Boilerplate framework such as <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Tenant-Management">tenant management</a> (<strong>multi-tenancy</strong>),
-                    <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Role-Management">
-                        role management
-                    </a>, <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/User-Management">user management</a>,
-                    <a href="http://www.aspnetboilerplate.com/Pages/Documents/Authorization">authorization</a> (<a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Permission-Management">
-                        permission management
-                    </a>),
-                    <a href="http://www.aspnetboilerplate.com/Pages/Documents/Setting-Management">setting management</a>, <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Language-Management">
-                        language management
-                    </a>, <a href="http://www.aspnetboilerplate.com/Pages/Documents/Audit-Logging">audit logging</a>
-                    and so on.
-                </p>
-                <p>
-                    Module-Zero defines entities and implements <strong>domain logic</strong>
-                    (domain layer) and leaves application and presentation layers to you.
-                </p>
-
-                <h4>Based on Microsoft ASP.NET Core Identity</h4>
-
-                <p>
-                    Module Zero is based on Microsoft's
-                    <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity" target="_blank">ASP.NET Core Identity</a> library.
-                    It extends user and role managers and implements user and role stores using generic repositories.
-                </p>
-
-                <h3>Documentation</h3>
-                
-                <ul>
-                    <li>
-                        <a href="https://www.aspnetboilerplate.com/Pages/Documents/Zero/Startup-Template-Core">Documentation for this template</a>
-                    </li>
-                    <li>
-                        <a href="http://www.aspnetboilerplate.com/Pages/Documents">ASP.NET Boilerplate documentation</a> 
-                    </li>
-                </ul>
-
-                <h3>Source code</h3>
-
-                <p>
-                    This template is developed open source on Github. You can contribute to the template. 
-                    <a href="https://github.com/aspnetboilerplate/module-zero-core-template" target="_blank">https://github.com/aspnetboilerplate/module-zero-core-template</a>
-                </p>
-            </div>
-        </div>
-    </div>
+<div id="testForm">
+    <h2>testoptions</h2>
+    <select data-bind="options:testOptions,value:test, event:{change:whenchage}">
+    </select>
+    <h3>test:</h3>
+    <label data-bind="text:test"></label>
 </div>
+
+
+
+    @*<script src="~/lib/json2/json2.js" asp-append-version="true"></script>
+<script src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
+<script src="~/lib/moment/min/moment-with-locales.js" asp-append-version="true"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js" asp-append-version="true"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+<script src="~/lib/blockUI/jquery.blockUI.js" asp-append-version="true"></script>
+<script src="~/lib/toastr/toastr.js" asp-append-version="true"></script>
+<script src="~/lib/sweetalert/dist/sweetalert-dev.js" asp-append-version="true"></script>
+<script src="~/lib/spin.js/spin.js" asp-append-version="true"></script>
+<script src="~/lib/spin.js/jquery.spin.js" asp-append-version="true"></script>
+<script src="~/lib/bootstrap-select/dist/js/bootstrap-select.js" asp-append-version="true"></script>
+<script src="~/lib/jquery-slimscroll/jquery.slimscroll.js" asp-append-version="true"></script>
+<script src="~/lib/knockout/dist/knockout.js" asp-append-version="true"></script>
+<script src="~/lib/knockout-mapping/knockout.mapping.js" asp-append-version="true"></script>
+<script src="~/lib/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.js" asp-append-version="true"></script>
+<script src="~/lib/bootstrap-table/dist/bootstrap-table.js" asp-append-version="true"></script>
+<script src="~/lib/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js" asp-append-version="true"></script>
+<script src="~/lib/bootstrap-table/dist/extensions/editable/bootstrap-table-editable.js" asp-append-version="true"></script>
+<script src="~/js/knockout.bootstraptable.js" asp-append-version="true"></script>
+<script src="~/lib/Waves/dist/waves.js" asp-append-version="true"></script>
+<script src="~/lib/push.js/push.js" asp-append-version="true"></script>*@
+
+@section scripts
+    {
+<script>
+            function newEntityModel() {
+                var enityModel = {
+                    id: ko.observable(),
+                    description: ko.observable(),
+                    foodMaterialCategoryId: ko.observable(),
+                    season: ko.observable(),
+                    testOptions: ko.observableArray( ["One", "Two"]),
+                    test: ko.observable("Two"),
+                    whenchage: function (p) {
+                        alert('here:' + p.test());
+
+                    },
+                };
+                return enityModel;
+            }
+
+            //初始化
+            $(function () {
+                var vm = newEntityModel();
+                var dom = document.getElementById("testForm");
+                ko.applyBindings(vm, dom);
+
+            });
+</script>
+ }

@@ -12,6 +12,12 @@ namespace SixMan.ChiMa.Application.Base
         : PagedResultRequestDto
         , ISortedResultRequest
     {
+        public static SortSearchPagedResultRequestDto All = new SortSearchPagedResultRequestDto()
+        {
+            SkipCount =0,
+            MaxResultCount = int.MaxValue
+        };
+
         public string Search { get; set; }
         public string Sort { get; set; }
         public string Order { get; set; }

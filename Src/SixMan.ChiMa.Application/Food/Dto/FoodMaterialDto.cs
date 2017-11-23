@@ -14,7 +14,7 @@ namespace SixMan.ChiMa.Application.Food.Dto
     public class FoodMaterialDto
         : MultiMediaBaseDto
     {
-        public FoodMaterialCategory FoodMaterialCategory { get; set; }
+        //public FoodMaterialCategory FoodMaterialCategory { get; set; } 注意update时会发生'FoodMaterialCategory' 中的标识列插入显式值。
         /// <summary>
         /// 可食率
         /// </summary>
@@ -134,6 +134,8 @@ namespace SixMan.ChiMa.Application.Food.Dto
         [StringLength(50)]
         public string Season { get; set; }
 
-        public string Category => FoodMaterialCategory?.Name;
+        public string Category { get; set; }
+        public long? FoodMaterialCategoryId { get; set; }
+
     }
 }
