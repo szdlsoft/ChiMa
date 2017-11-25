@@ -16,6 +16,7 @@ namespace SixMan.ChiMa.Application
         [StringLength(MaxDescriptionLength)]
         [MinLength(MinDescriptionLength)]
         ///描述
+        [Display(Name ="名称",Order =0)]
         public string Description { get; set; }
     }
 }

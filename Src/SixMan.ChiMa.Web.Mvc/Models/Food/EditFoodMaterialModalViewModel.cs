@@ -5,6 +5,7 @@ using SixMan.ChiMa.Application.Users.Dto;
 using SixMan.ChiMa.Application.Food.Dto;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace SixMan.ChiMa.Web.Models.Food
 {
@@ -15,6 +16,8 @@ namespace SixMan.ChiMa.Web.Models.Food
         public HtmlString Categories { get; set; }
 
         public List<SelectListItem> AspCategories { get; set; }
+
+        public ModelMetadata Meata { get; set; }
 
     }
 }

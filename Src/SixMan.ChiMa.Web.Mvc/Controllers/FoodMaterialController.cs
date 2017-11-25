@@ -18,6 +18,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using SixMan.ChiMa.Web.Extensions;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using SixMan.ChiMa.Application.Food.Dto;
 
 namespace SixMan.ChiMa.Web.Controllers
 {
@@ -26,6 +28,7 @@ namespace SixMan.ChiMa.Web.Controllers
     {
         private readonly IFoodMaterialAppService _appService;
         private IHostingEnvironment _hostingEnvironment;
+        public IModelMetadataProvider metaProvider { get; set; }
 
         public IFoodMaterialCategoryAppService categoryService { get; set; }
 
@@ -47,10 +50,11 @@ namespace SixMan.ChiMa.Web.Controllers
                         .ToJson(),
                 AspCategories = categoryService.GetAll(SortSearchPagedResultRequestDto.All)
                         .Result.Items
-                        .Select(c => new SelectListItem{ Value = c.Id.ToString(), Text = c.Name })
-                        .ToList()
+                        .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
+                        .ToList(),
+                Meata = metaProvider.GetMetadataForType(typeof(FoodMaterialDto))
             };
-                        
+
             return View(vm);
         }
 

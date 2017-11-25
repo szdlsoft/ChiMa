@@ -17,5 +17,15 @@ namespace SixMan.ChiMa.Domain.Extensions
         {
             return !str.IsNullOrEmpty();
         }
+
+        public static bool IsInList(this string str, IEnumerable<string> list)
+        {
+            return list.Any(item => string.Compare(item, str,true) == 0);
+        }
+
+        public static bool IsNotInList(this string str, IEnumerable<string> list)
+        {
+            return !IsInList(str,list);
+        }
     }
 }

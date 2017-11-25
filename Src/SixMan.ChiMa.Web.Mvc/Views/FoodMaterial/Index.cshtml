@@ -1,14 +1,12 @@
 ﻿@using SixMan.ChiMa.Domain.Base
 @using SixMan.ChiMa.Web.Startup
 @using SixMan.ChiMa.Web.Models.Food
+@using Microsoft.AspNetCore.Mvc.ModelBinding
+@using SixMan.ChiMa.Web.Extensions
 @model EditFoodMaterialModalViewModel
 @{
     ViewBag.CurrentPageName = PageNames.FoodMaterial; //The menu item will be active for this page.
 }
-
-<div id="testForm">
-    <select data-bind="options:testOptions, value:test, event:{change:whenchage}" ></select>
-</div>
 
 <div id="toolbar" class="btn-group">
     <form id= "uploadForm">
@@ -26,15 +24,20 @@
         <button id="btn_delete" type="button" class="btn btn-default">
             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
         </button>
-    </div>
+</div>
 
 <table id="tb_dept" data-bind="myBootstrapTable:$root">
     <thead>
         <tr>
             <th data-checkbox="true"></th>
-            <th data-field="description">菜品名称</th>
-            <th data-field="category">类别</th>
-            <th data-field="season">季节</th>
+            @foreach (var property in Model.Meata.Properties)
+            {
+                if (property.ShowList() )
+                {
+
+                    <th data-field="@property.JsonPropertyName()">@property.Title()</th>
+                }
+            }
         </tr>
     </thead>
 </table>
@@ -95,8 +98,6 @@
             foodMaterialCategoryId: ko.observable(),
             season: ko.observable(),
             categories: ko.observableArray(@Model.Categories),
-            testOptions: ko.observableArray(["111","One", "Two"]),
-            test: ko.observable("One"),
             whenchage: function (p) {
                 alert('here:' + p);
 
@@ -128,7 +129,6 @@
             this.operateDelete();
             this.EntityModel = newEntityModel();
 
-            ko.applyBindings(this.EntityModel, document.getElementById("testForm"));
         },
         //导入
         operateUpload: function () {
