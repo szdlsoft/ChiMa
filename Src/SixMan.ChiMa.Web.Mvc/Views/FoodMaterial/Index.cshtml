@@ -30,13 +30,10 @@
     <thead>
         <tr>
             <th data-checkbox="true"></th>
-            @foreach (var property in Model.Meata.Properties)
+            @foreach (var property in Model.Meata.ShowProperties())
             {
-                if (property.ShowList())
-                {                    
-                    var width = property.PropertyName == "Description" ? "200" : "auto";                    
-                    <th data-field="@property.JsonPropertyName()" data-width="@width" >@property.Title()</th>
-                }
+                 var width = property.PropertyName == "Description" ? "200" : "auto";
+                 <th data-field="@property.JsonPropertyName()" data-width="@width" >@property.Title()</th>
             }
         </tr>
     </thead>
@@ -51,24 +48,9 @@
                 <h4 class="modal-title" id="myModalLabel">操作</h4>
             </div>
             <div class="modal-body">
-                <form id="myForm">
-                    <div class="form-group">
-                        <label for="txt_description">菜品名称</label>
-                        <input asp-for="Description"
-                               type="text"  data-bind="value:description" class="form-control" id="txt_description" placeholder="菜品名称" />
-                        <span asp-validation-for="Description" class="text-danger"></span>
-                    </div>
-                    <div class="form-group" >
-                        <label for="txt_category">类别</label>
-                        <select 
-                                data-bind="options:categories, optionsText:'Name', optionsValue:'Id', value: foodMaterialCategoryId" id="txt_category" ></select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="txt_season">季节</label>
-                        <input type="text" name="txt_season" data-bind="value:season" class="form-control" id="txt_season" placeholder="季节">
-                    </div>
-                </form>
+                <bg-form id="myForm"  asp-action="SignUp" asp-for="@Model">
+                         
+                </bg-form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
@@ -96,9 +78,10 @@
     function newEntityModel() {
         var enityModel = {
             id: ko.observable(),
-            description: ko.observable(),
-            foodMaterialCategoryId: ko.observable(),
-            season: ko.observable(),
+            @foreach (var property in Model.Meata.EditProperties())
+            {
+                @(@property.JsonPropertyName() + " : ko.observable(),");
+            }
             categories: ko.observableArray(@Model.Categories),
             whenchage: function (p) {
                 alert('here:' + p);

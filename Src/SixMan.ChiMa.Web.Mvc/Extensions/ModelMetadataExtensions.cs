@@ -22,10 +22,15 @@ namespace SixMan.ChiMa.Web.Extensions
             ,"CreatorUserId"
             ,
         };
-        public static bool ShowList(this ModelMetadata meta)
+        public static bool IsShow(this ModelMetadata meta)
         {
             return meta.PropertyName.IsNotInList(IgnoreShowList)
                    && !meta.PropertyName.EndsWith("Id");
+        }
+
+        public static bool IsEdit(this ModelMetadata meta)
+        {
+            return meta.PropertyName.IsNotInList(IgnoreShowList);
         }
 
         public static string Title(this ModelMetadata meta)
@@ -46,6 +51,16 @@ namespace SixMan.ChiMa.Web.Extensions
             }
 
             return "50px";
+        }
+
+        public static IEnumerable<ModelMetadata> ShowProperties(this ModelMetadata meta)
+        {
+            return meta.Properties.Where(p => p.IsShow());
+        }
+
+        public static IEnumerable<ModelMetadata> EditProperties(this ModelMetadata meta)
+        {
+            return meta.Properties.Where(p => p.IsEdit());
         }
     }
 }
