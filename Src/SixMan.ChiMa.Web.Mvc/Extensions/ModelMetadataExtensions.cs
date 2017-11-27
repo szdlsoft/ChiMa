@@ -37,5 +37,15 @@ namespace SixMan.ChiMa.Web.Extensions
         {
             return meta.PropertyName.ToCamelCase();
         }
+
+        public static string Width(this ModelMetadata meta)
+        {
+            if(string.Compare( meta.PropertyName, "Description", true) == 0)
+            {
+                return "30%";
+            }
+
+            return "50px";
+        }
     }
 }
