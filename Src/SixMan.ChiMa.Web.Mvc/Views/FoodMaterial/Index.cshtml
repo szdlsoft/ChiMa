@@ -30,9 +30,9 @@
     <thead>
         <tr>
             <th data-checkbox="true"></th>
-            @foreach (var property in Model.Meata.ShowProperties())
+            @foreach (var property in Model.Meta.ShowProperties())
             {
-                 var width = property.PropertyName == "Description" ? "200" : "auto";
+                var width = property.PropertyName == "Description" ? "200" : "auto";
                  <th data-field="@property.JsonPropertyName()" data-width="@width" >@property.Title()</th>
             }
         </tr>
@@ -49,6 +49,10 @@
             </div>
             <div class="modal-body">
                 <bg-form id="myForm"  asp-action="SignUp" asp-for="@Model">
+                    <div class="form-group" id="div_FoodMaterialCategoryId">
+                        <label for="txt_category">类别</label>
+                        <select data-bind="options:categories, optionsText:'Name', optionsValue:'Id', value: foodMaterialCategoryId" id="txt_category"></select>
+                    </div>                   
                          
                 </bg-form>
             </div>
@@ -78,7 +82,7 @@
     function newEntityModel() {
         var enityModel = {
             id: ko.observable(),
-            @foreach (var property in Model.Meata.EditProperties())
+            @foreach (var property in Model.Meta.EditProperties())
             {
                 @(@property.JsonPropertyName() + " : ko.observable(),");
             }

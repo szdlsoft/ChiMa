@@ -20,6 +20,7 @@ using System.Threading.Tasks;
 using SixMan.ChiMa.Web.Extensions;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using SixMan.ChiMa.Application.Food.Dto;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace SixMan.ChiMa.Web.Controllers
 {
@@ -48,41 +49,19 @@ namespace SixMan.ChiMa.Web.Controllers
                         .Result.Items
                         .Select(c => new { Id = c.Id, Name = c.Name })
                         .ToJson(),
-                AspCategories = categoryService.GetAll(SortSearchPagedResultRequestDto.All)
-                        .Result.Items
-                        .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
-                        .ToList(),
-                Meata = metaProvider.GetMetadataForType(typeof(FoodMaterialDto))
+                //AspCategories = categoryService.GetAll(SortSearchPagedResultRequestDto.All)
+                //        .Result.Items
+                //        .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
+                //        .ToList(),
+                Meta = metaProvider.GetMetadataForType(typeof(FoodMaterialDto))
             };
+
+            vm.ModelExplorer = new ModelExplorer(metaProvider, vm.Meta, new FoodMaterialDto());
 
             return View(vm);
         }
 
-        //public ActionResult GetFoodMaterias(int offset = 0, int limit = PagedResultVM.DEFAULT_PAGE_SIZE,
-        //                CancellationToken cancellationToken = default(CancellationToken))
-        //{
-        //    var reqestDto = new SortSearchPagedResultRequestDto()
-        //    {
-        //        Sorting = "Description",
-        //        MaxResultCount = limit,
-        //        SkipCount = (offset * limit)
-        //    };
-        //    var result = _appService.GetAll(reqestDto).Result;
-        //    //var vm = result.ToBootstrapTablePagedResultVM(offset, limit);
-
-        //    return Json(result);
-        //}
-
-        //public async Task<ActionResult> EditFoodMaterialModal(long foodMaterialId)
-        //{
-        //    var fmc = await _appService.Get(new EntityDto<long>(foodMaterialId));
-        //    var vm = new EditFoodMaterialModalViewModel()
-        //    {
-        //        Current = fmc,
-        //    };
-        //    return View("_EditFoodMaterialModal", vm);
-        //}
-
+        
         [HttpPost]
         [UnitOfWork(IsDisabled = true)]
         public IActionResult Import(IFormFile excelfile)

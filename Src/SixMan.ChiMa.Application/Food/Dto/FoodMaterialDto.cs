@@ -136,8 +136,11 @@ namespace SixMan.ChiMa.Application.Food.Dto
         [StringLength(50)]
         [Display(Name = "时令", Order = 6)]
         public string Season { get; set; }
+
+        [DataType("ReadOnly")]
         [Display(Name = "分类", Order = 5)]
         public string Category { get; set; }
+        [Display(Name = "分类", Order = 5)]
         public long? FoodMaterialCategoryId { get; set; }
 
     }

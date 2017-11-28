@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using SixMan.ChiMa.Web.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,19 +45,37 @@ namespace SixMan.ChiMa.Web.TagHelpers
             output.Attributes.Add("class", "form-horizontal");
 
             //获取子属性
-            var props = For.ModelExplorer.Properties;
+            //var props = For.ModelExplorer.EditProperties();
+            var props = ((IModelExplorerProvider)For.Model).ModelExplorer.EditProperties();
+            var innnerHtml = (await output.GetChildContentAsync()).GetContent();
+            Dictionary<string,string> propHtmls = HtmlParser.GetPropHtmls( innnerHtml);
             foreach (var prop in props)
             {
-                //生成表单
-                var div = new TagBuilder("div");
-                div.AddCssClass("form-group");
-                var label = Generator.GenerateLabel(ViewContext, prop, null, prop.Metadata.DisplayName, null);
-                var input = Generator.GenerateTextBox(ViewContext, prop, prop.Metadata.PropertyName, null, null, null);
-                var span = Generator.GenerateValidationMessage(ViewContext, prop, prop.Metadata.PropertyName, null, ViewContext.ValidationMessageElement, null);
-                div.InnerHtml.AppendHtml(label);
-                div.InnerHtml.AppendHtml(input);
-                div.InnerHtml.AppendHtml(span);
-                output.Content.AppendHtml(div);
+                string propHtml = propHtmls.ContainsKey(prop.Metadata.PropertyName)?
+                                        propHtmls[prop.Metadata.PropertyName] : null;
+                if( propHtml != null)
+                {
+                    output.Content.AppendHtml(propHtml);
+                }
+                else
+                {
+                    //生成表单
+                    var div = new TagBuilder("div");
+                    div.AddCssClass("form-group");
+                    var label = Generator.GenerateLabel(ViewContext, prop, null, prop.Metadata.DisplayName, null);
+                    TagBuilder input = GenerateInput(prop);
+                    var span = Generator.GenerateValidationMessage(ViewContext, prop, prop.Metadata.PropertyName, null, ViewContext.ValidationMessageElement
+                            , null);
+                    div.InnerHtml.AppendHtml(label);
+                    div.InnerHtml.AppendHtml("\n");
+                    div.InnerHtml.AppendHtml(input);
+                    div.InnerHtml.AppendHtml("\n");
+                    div.InnerHtml.AppendHtml(span);
+                    div.InnerHtml.AppendHtml("\n");
+                    output.Content.AppendHtml(div);
+                }
+
+                output.Content.AppendHtml("\n");
             }
             ////添加按钮
             //var btn = new TagBuilder("div");
@@ -70,9 +89,16 @@ namespace SixMan.ChiMa.Web.TagHelpers
             //btn.InnerHtml.AppendHtml(submit);
             //btn.InnerHtml.AppendHtml(reset);
             //output.Content.AppendHtml(btn);
-            //将原有的内容添加到标签内部
-            output.Content.AppendHtml(await output.GetChildContentAsync());
 
+            //将原有的内容添加到标签内部
+            //output.Content.AppendHtml(await output.GetChildContentAsync());
+
+        }
+
+        private TagBuilder GenerateInput(ModelExplorer prop)
+        {
+            return Generator.GenerateTextBox(ViewContext, prop, prop.Metadata.PropertyName, null, null
+                    , new { data_bind = $"value:{prop.Metadata.JsonPropertyName()}" });
         }
     }
 }
