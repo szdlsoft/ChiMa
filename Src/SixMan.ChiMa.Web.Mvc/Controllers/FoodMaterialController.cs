@@ -108,5 +108,30 @@ namespace SixMan.ChiMa.Web.Controllers
                 return Content(ex.Message);
             }
         }
+
+        [HttpPost]
+        [UnitOfWork(IsDisabled = true)]
+        public IActionResult UploadImg(string photo, IFormFile imgfile)
+        {            
+            //string photo = Request.Form["photo"];
+            //IFormFile imgfile = Request.Form.Files[0];
+            string sWebRootFolder = _hostingEnvironment.WebRootPath;
+            string sImgRootFolder = Path.Combine(sWebRootFolder, "Images");
+            string sFileName = photo;
+            FileInfo file = new FileInfo(Path.Combine(sImgRootFolder, sFileName));
+            try
+            {
+                using (FileStream fs = new FileStream(file.ToString(), FileMode.Create))
+                {
+                    imgfile.CopyTo(fs);
+                    fs.Flush();
+                }
+                return Content($"{photo} 上传成功");
+            }
+            catch(Exception ex)
+            {
+                return Content(ex.Message);
+            }
+        }
     }
 }

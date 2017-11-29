@@ -13,14 +13,17 @@ namespace SixMan.ChiMa.Application
        , IMultiMedia
     {
         public const int MaxUrlLength = 512;
+        public const string IMAGE = "图片";
+        public const string AUDIO = "音频";
+        public const string VIDEO = "视频";
 
-        [Display(Name = "图片",Order =50)]
+        [Display(Name = IMAGE, Order =4)]
         [StringLength(MaxUrlLength)]
         public string Photo { get ; set ; }
-        [Display(Name = "音频", Order = 51)]
+        [Display(Name = AUDIO, Order = 51)]
         [StringLength(MaxUrlLength)]
         public string Audio { get ; set ; }
-        [Display(Name = "视频", Order = 52)]
+        [Display(Name = VIDEO, Order = 52)]
         [StringLength(MaxUrlLength)]
         public string Video { get ; set ; }
     }

@@ -3,6 +3,7 @@
 @using SixMan.ChiMa.Web.Models.Food
 @using Microsoft.AspNetCore.Mvc.ModelBinding
 @using SixMan.ChiMa.Web.Extensions
+@using SixMan.ChiMa.Application
 @model EditFoodMaterialModalViewModel
 @{
     ViewBag.CurrentPageName = PageNames.FoodMaterial; //The menu item will be active for this page.
@@ -33,7 +34,14 @@
             @foreach (var property in Model.Meta.ShowProperties())
             {
                 var width = property.PropertyName == "Description" ? "200" : "auto";
-                 <th data-field="@property.JsonPropertyName()" data-width="@width" >@property.Title()</th>
+                if (property.DisplayName == MultiMediaBaseDto.IMAGE)
+                {
+                    <th data-field="@property.JsonPropertyName()" data-width="120" data-formatter="imgFormater">@property.Title()</th>
+                }
+                else
+                {
+                    <th data-field="@property.JsonPropertyName()" data-width="@width">@property.Title()</th>
+                }
             }
         </tr>
     </thead>
@@ -49,6 +57,14 @@
             </div>
             <div class="modal-body">
                 <bg-form id="myForm"  asp-action="SignUp" asp-for="@Model">
+                    <div class="form-group" id="div_Photo"  >
+                            <label for="photo">图片</label>
+                            <input type="text" data-bind="value:photo" id="photo" name="photo" readonly="readonly"/>
+                            <input  type="file"  id="imgfile" name="imgfile" />
+                            <button id="btn_upload_img" type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>上传
+                            </button>
+                    </div>   
                     <div class="form-group" id="div_FoodMaterialCategoryId">
                         <label for="txt_category">类别</label>
                         <select data-bind="options:categories, optionsText:'Name', optionsValue:'Id', value: foodMaterialCategoryId" id="txt_category"></select>
@@ -113,11 +129,12 @@
         //初始化按钮事件
         operateInit: function () {
             this.operateUpload();
+            this.operateUploadImg();
+
             this.operateAdd();
             this.operateUpdate();
             this.operateDelete();
             this.EntityModel = newEntityModel();
-
         },
         //导入
         operateUpload: function () {
@@ -132,6 +149,27 @@
                     success: function (message) {
                         alert(message);
                         tableInit.myViewModel.refresh();
+                    },
+                    error: function () {
+                        alert("上传文件出现错误！");
+                    }
+                });
+            });
+        },
+        //上传图像
+        operateUploadImg: function () {
+            $('#btn_upload_img').on("click", function () {
+                var formData = new FormData();
+                formData.append('photo', $("#photo")[0].value);
+                formData.append('imgfile', $("#imgfile")[0].files[0] );
+                $.ajax({
+                    type: "POST",
+                    url: "/FoodMaterial/UploadImg",
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    success: function (message) {
+                        alert(message);
                     },
                     error: function () {
                         alert("上传文件出现错误！");
@@ -310,9 +348,14 @@
         return {};
     }
 
-    function colFormater(value, row, index) {
-        var div = "<div style='min-width:100px;'>" + value + "</div>";
-        return div;
+    function imgFormater(value, row, index) {
+        if (value) {
+            var img = '<img class="img-rounded"  height="100" width="100" src="/images/' + value + '">' + '</img>';
+            return img;
+        }
+        else {
+            return '';
+        }
     }
 
 </script> 
