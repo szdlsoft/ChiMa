@@ -71,22 +71,24 @@ namespace SixMan.ChiMa.Application.Food
         protected override int ImportRow(Dictionary<string, string> row)
         {
             var fmDescription = row["Description"];
-            FoodMaterial entity = Repository.GetAll().Where(e => e.Description == fmDescription).FirstOrDefault();
-            if( entity == null)
+            var count = Repository.GetAll().AsNoTracking().Where(e => e.Description == fmDescription).Count();
+            if( count > 0 )
             {
-                entity = new FoodMaterial();
+                return 0;
             }
 
             try
             {
+                FoodMaterial entity = new FoodMaterial();
                 var categoryName = row["FoodMaterialCategory"];
                 FoodMaterialCategory category = InsertOrGetCategory(categoryName);
                 row.Remove("FoodMaterialCategory"); //删除免import出错
 
                 entity.Import(row);
-                entity.FoodMaterialCategory = category;
+                entity.FoodMaterialCategoryId = category.Id; // 必须用id,不能用
+                ///entity.FoodMaterialCategory = category; // 必须用id,不能用，否则会插入异常
 
-                Repository.InsertOrUpdate(entity);
+                Repository.Insert(entity); //相关数据会自动添加吗？
                 return 1;
             }
             catch(Exception ex)
@@ -98,14 +100,14 @@ namespace SixMan.ChiMa.Application.Food
 
         private FoodMaterialCategory InsertOrGetCategory(string categoryName)
         {
-            var category = _categoryRepository.GetAll().Where(c=>c.Name == categoryName).FirstOrDefault();
+            var category = _categoryRepository.GetAll().AsNoTracking().Where(c=>c.Name == categoryName).FirstOrDefault();
             if( category == null)
             {
                 category = new FoodMaterialCategory()
                 {
                     Name = categoryName
                 };
-                category.Id = _categoryRepository.InsertAndGetId(category);
+                category.Id = _categoryRepository.InsertAndGetId(category); //似乎必须加上！
             }
 
             return category;

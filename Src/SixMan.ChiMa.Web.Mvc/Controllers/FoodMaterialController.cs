@@ -63,7 +63,7 @@ namespace SixMan.ChiMa.Web.Controllers
 
         
         [HttpPost]
-        [UnitOfWork(IsDisabled = true)]
+        [UnitOfWork(false)]
         public IActionResult Import(IFormFile excelfile)
         {
             string sWebRootFolder = _hostingEnvironment.WebRootPath;
@@ -83,6 +83,7 @@ namespace SixMan.ChiMa.Web.Controllers
                     int rowCount = worksheet.Dimension.Rows;
                     int ColCount = worksheet.Dimension.Columns;
                     var importData = new List<Dictionary<string, string>>();
+                    //rowCount = 20;
                     for (int row = 5; row <= rowCount; row++)
                     {
                         var rowData = new Dictionary<string, string>();

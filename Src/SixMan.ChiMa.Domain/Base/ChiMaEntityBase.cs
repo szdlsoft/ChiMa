@@ -34,7 +34,7 @@ namespace SixMan.ChiMa.Domain.Base
         }
 
         /// <summary>
-        /// 只支持string 和double? int?类型
+        /// 只支持string 和double? int? long?类型
         /// </summary>
         /// <param name="pi"></param>
         /// <param name="v"></param>
@@ -52,6 +52,10 @@ namespace SixMan.ChiMa.Domain.Base
             if (pi.PropertyType == typeof(int?))
             {
                 return int.Parse(v);
+            }
+            if (pi.PropertyType == typeof(long?))
+            {
+                return long.Parse(v);
             }
 
             return null;
