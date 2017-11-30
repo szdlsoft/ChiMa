@@ -14,9 +14,14 @@ namespace SixMan.ChiMa.Domain.Dish
         : MultiMediaBase
     {
         /// <summary>
+        /// 导入id
+        /// 防止重复导入
+        /// </summary>
+        public long? ImportId { get; set; }
+        /// <summary>
         /// 菜系
         /// </summary>
-        public DishCategory DishCategory { get; set; }
+        public string DishCategory { get; set; }
         /// <summary>
         /// 英文名称
         /// </summary>
@@ -24,11 +29,11 @@ namespace SixMan.ChiMa.Domain.Dish
         /// <summary>
         /// 口味
         /// </summary>
-        public Taste Taste { get; set; }
+        public string Taste { get; set; }
         /// <summary>
         /// 烹饪方式
         /// </summary>
-        public CookMethod CookMethod { get; set; }
+        public string CookMethod { get; set; }
         
         /// <summary>
         /// 预处理时间
@@ -60,5 +65,6 @@ namespace SixMan.ChiMa.Domain.Dish
         /// 用户评论
         /// </summary>
         public ICollection<UserCommentDish> UserComments { get; set; }
+      
     }
 }

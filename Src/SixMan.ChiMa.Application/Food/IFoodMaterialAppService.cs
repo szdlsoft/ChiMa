@@ -2,6 +2,7 @@
 using Abp.Application.Services.Dto;
 using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food.Dto;
+using SixMan.ChiMa.Application.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,13 @@ namespace SixMan.ChiMa.Application.Food
 {
     public interface IFoodMaterialAppService
         : IAdvancedAsyncCrudAppService<FoodMaterialDto>
+        , IImportFromExcel
     {
         //: IAsyncCrudAppService<FoodMaterialDto, long, PagedResultRequestDto, FoodMaterialDto, FoodMaterialDto>
 
         //{
         //    PagedResultDto<FoodMaterialDto> GetFoodMaterials(int offset , int limit );
         //    void DeleteList(DeletListDto list);
-        int Import(List<Dictionary<string, string>> importData);
+        //int Import(List<Dictionary<string, string>> importData);
     }
 }

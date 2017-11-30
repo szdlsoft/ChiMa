@@ -16,6 +16,12 @@ namespace SixMan.ChiMa.Domain.Food
     public class FoodMaterial 
         : MultiMediaBase
     {
+        /// <summary>
+        /// 导入id
+        /// 可用于菜品导入关联
+        /// </summary>
+        public long? ImportId { get; set; }
+
         public FoodMaterialCategory FoodMaterialCategory { get; set; }
         public long? FoodMaterialCategoryId { get; set; }
         /// <summary>
@@ -143,47 +149,47 @@ namespace SixMan.ChiMa.Domain.Food
         public ICollection<DishBom> DishBoms { get; set; }
 
 
-        /// <summary>
-        /// 导入数据
-        /// </summary>
-        /// <param name="row"></param>
-        public void Import(Dictionary<string, string> row)
-        {
-            foreach(var key in row.Keys)
-            {
-                var pi = this.GetType().GetProperties().Where(p => p.Name == key).FirstOrDefault();
-                if( pi != null)
-                {
-                    var value = GetValue(pi, row[key]);
-                    if( value != null)
-                    {
-                        pi.SetValue(this, value);
-                    }
-                }
-            }
-        }
-        /// <summary>
-        /// 只支持string 和double? int?类型
-        /// </summary>
-        /// <param name="pi"></param>
-        /// <param name="v"></param>
-        /// <returns></returns>
-        private object GetValue(PropertyInfo pi, string v)
-        {
-            if(pi.PropertyType == typeof(string))
-            {
-                return v;
-            }
-            if(pi.PropertyType == typeof(double?))
-            {
-                return double.Parse(v);
-            }
-            if (pi.PropertyType == typeof(int?))
-            {
-                return int.Parse(v);
-            }
+        ///// <summary>
+        ///// 导入数据
+        ///// </summary>
+        ///// <param name="row"></param>
+        //public void Import(Dictionary<string, string> row)
+        //{
+        //    foreach(var key in row.Keys)
+        //    {
+        //        var pi = this.GetType().GetProperties().Where(p => p.Name == key).FirstOrDefault();
+        //        if( pi != null)
+        //        {
+        //            var value = GetValue(pi, row[key]);
+        //            if( value != null)
+        //            {
+        //                pi.SetValue(this, value);
+        //            }
+        //        }
+        //    }
+        //}
+        ///// <summary>
+        ///// 只支持string 和double? int?类型
+        ///// </summary>
+        ///// <param name="pi"></param>
+        ///// <param name="v"></param>
+        ///// <returns></returns>
+        //private object GetValue(PropertyInfo pi, string v)
+        //{
+        //    if(pi.PropertyType == typeof(string))
+        //    {
+        //        return v;
+        //    }
+        //    if(pi.PropertyType == typeof(double?))
+        //    {
+        //        return double.Parse(v);
+        //    }
+        //    if (pi.PropertyType == typeof(int?))
+        //    {
+        //        return int.Parse(v);
+        //    }
 
-            return null;
-        }
+        //    return null;
+        //}
     }
 }

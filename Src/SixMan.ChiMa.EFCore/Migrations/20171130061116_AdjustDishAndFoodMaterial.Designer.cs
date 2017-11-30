@@ -16,9 +16,10 @@ using System;
 namespace SixMan.ChiMa.Migrations
 {
     [DbContext(typeof(ChiMaDbContext))]
-    partial class ChiMaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171130061116_AdjustDishAndFoodMaterial")]
+    partial class AdjustDishAndFoodMaterial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1087,8 +1088,6 @@ namespace SixMan.ChiMa.Migrations
                     b.Property<double>("Matching");
 
                     b.Property<string>("MatchingDescription");
-
-                    b.Property<int>("Order");
 
                     b.Property<string>("PreProcess");
 

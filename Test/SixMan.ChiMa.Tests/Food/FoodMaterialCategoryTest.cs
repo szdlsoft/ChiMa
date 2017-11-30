@@ -1,6 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Microsoft.EntityFrameworkCore;
 using Shouldly;
+using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food;
 using SixMan.ChiMa.Application.Food.Dto;
 using System;
@@ -24,7 +25,7 @@ namespace SixMan.ChiMa.Tests.Food
         public async Task GetFoodMaterialCategory_Test()
         {
             // Act
-            var output = await _appService.GetAll(new PagedResultRequestDto { MaxResultCount = 20, SkipCount = 0 });
+            var output = await _appService.GetAll(new SortSearchPagedResultRequestDto { MaxResultCount = 20, SkipCount = 0 });
 
             // Assert
             output.Items.Count.ShouldBeGreaterThanOrEqualTo(0);
@@ -44,6 +45,8 @@ namespace SixMan.ChiMa.Tests.Food
             {
                 var johnNashUser = await context.FoodMaterialCategory.FirstOrDefaultAsync(u => u.Name == "111");
                 johnNashUser.ShouldNotBeNull();
+
+                
             });
         }
     }

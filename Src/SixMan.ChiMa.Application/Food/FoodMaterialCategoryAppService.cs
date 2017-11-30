@@ -38,5 +38,9 @@ namespace SixMan.ChiMa.Application.Food
             return query;
         }
 
+        protected override int ImportRow(Dictionary<string, string> row)
+        {
+            return 0;
+        }
     }
 }

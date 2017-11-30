@@ -11,12 +11,15 @@ using SixMan.ChiMa.Application.Extensions;
 using SixMan.ChiMa.Domain.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Dynamic.Core;
+using SixMan.ChiMa.Application.Interface;
+using Abp.Domain.Uow;
 
 namespace SixMan.ChiMa.Application.Base
 {
-    public class AdvancedAsyncCrudAppService<TEntity, TEntityDto>
+    public abstract class AdvancedAsyncCrudAppService<TEntity, TEntityDto>
         : AsyncCrudAppService<TEntity, TEntityDto, long, SortSearchPagedResultRequestDto, TEntityDto, TEntityDto>
         , IAdvancedAsyncCrudAppService<TEntityDto>
+        , IImportFromExcel
         where TEntity : class, IEntity<long>,new()
         where TEntityDto : IEntityDto<long>
     {
@@ -87,6 +90,23 @@ namespace SixMan.ChiMa.Application.Base
             await CurrentUnitOfWork.SaveChangesAsync();
 
             return MapToEntityDto(entity);
+        }
+        /// <summary>
+        /// 导入一行数据
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
+        protected abstract int ImportRow(Dictionary<string, string> row);
+
+        [UnitOfWork(IsDisabled = true)]
+        public int Import(List<Dictionary<string, string>> importData)
+        {
+            int count = 0;
+            foreach (var row in importData)
+            {
+                count += ImportRow(row);
+            }
+            return count;
         }
     }
 }

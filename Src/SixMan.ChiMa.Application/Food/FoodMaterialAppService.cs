@@ -57,18 +57,18 @@ namespace SixMan.ChiMa.Application.Food
             return dto;
         }
 
-        [UnitOfWork(IsDisabled = true)]
-        public int Import(List<Dictionary<string,string>> importData)
-        {
-            int count = 0;
-            foreach(var row in importData)
-            {
-                count += ImportRow(row);
-            }
-            return count;
-        }
+        //[UnitOfWork(IsDisabled = true)]
+        //public int Import(List<Dictionary<string,string>> importData)
+        //{
+        //    int count = 0;
+        //    foreach(var row in importData)
+        //    {
+        //        count += ImportRow(row);
+        //    }
+        //    return count;
+        //}
 
-        private int ImportRow(Dictionary<string, string> row)
+        protected override int ImportRow(Dictionary<string, string> row)
         {
             var fmDescription = row["Description"];
             FoodMaterial entity = Repository.GetAll().Where(e => e.Description == fmDescription).FirstOrDefault();

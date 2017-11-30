@@ -20,9 +20,9 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<HealthConcern> HealthConcern { get; set; }
         public virtual DbSet<FoodMaterialHealthAffect> FoodMaterialHealthAffect { get; set; }
         //菜品
-        public virtual DbSet<DishCategory> DishCategory { get; set; }
-        public virtual DbSet<Taste> Taste { get; set; }
-        public virtual DbSet<CookMethod> CookMethod { get; set; }
+        //public virtual DbSet<DishCategory> DishCategory { get; set; }
+        //public virtual DbSet<Taste> Taste { get; set; }
+        //public virtual DbSet<CookMethod> CookMethod { get; set; }
         public virtual DbSet<Dish> Dish { get; set; }
         public virtual DbSet<DishBom> DishBom { get; set; }
         public virtual DbSet<Cookery> Cookery { get; set; }
