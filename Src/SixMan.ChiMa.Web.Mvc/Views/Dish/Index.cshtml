@@ -15,7 +15,26 @@
             <div class="modal-body">
                 <bg-form id="myForm" asp-action="SignUp" asp-for="@Model">
                     @Html.Partial("~/Views/Shared/Modals/_CrudPhoto.cshtml") 
-                    
+                    <div class="form-group" id="div_DishBoms">
+                        <table id="tb_dishBoms" >
+                            <thead>
+                                <tr>                                    
+                                    <th data-field="foodMaterialName" data-editable="true">食材</th>
+                                    <th data-field="matching" data-editable="true"  >配比</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach:dishBoms">
+                                <tr>
+                                    <td >
+                                        <input type="text" data-bind="value:foodMaterialName" />
+                                    </td>
+                                    <td >
+                                        <input type="text" data-bind="value:matching"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>                        
+                    </div>
 
                 </bg-form>
             </div>
@@ -38,7 +57,14 @@
             id: ko.observable(),
             @foreach (var property in Model.Meta.EditProperties())
             {
-                @(@property.JsonPropertyName() + " : ko.observable(),");
+                if( property.PropertyName == "DishBoms")
+                {
+                    @(@property.JsonPropertyName() + " : ko.observableArray(),");
+                }
+                else
+                {
+                    @(@property.JsonPropertyName() + " : ko.observable(),");
+                }
             }
             whenchage: function (p) {
                 alert('here:' + p);
@@ -46,7 +72,7 @@
             },
         };
         return enityModel;
-     } 
+     }
 
      function isArray(o) {
          return Object.prototype.toString.call(o) == '[object Array]';

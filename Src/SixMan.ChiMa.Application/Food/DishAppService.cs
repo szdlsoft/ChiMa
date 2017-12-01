@@ -1,4 +1,5 @@
-﻿using Abp.Domain.Repositories;
+﻿using Abp.Application.Services.Dto;
+using Abp.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food.Dto;
@@ -8,6 +9,7 @@ using SixMan.ChiMa.Domain.Food;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SixMan.ChiMa.Application.Food
 {
@@ -17,6 +19,7 @@ namespace SixMan.ChiMa.Application.Food
 
     {
         private IRepository<FoodMaterial, long> _foodMaterialRepository;
+        public IRepository<DishBom, long> _dishBomRepository { get; set; }
         public DishAppService(IRepository<Dish, long> repository
                                     , IRepository<FoodMaterial, long> foodMaterialRepository) 
             : base(repository)
@@ -116,5 +119,13 @@ namespace SixMan.ChiMa.Application.Food
 
             return result;
         }
+
+        protected override void Delete(Dish entity)
+        {
+            _dishBomRepository.Delete(db => db.DishId == entity.Id);
+            Repository.Delete(entity);
+        }
+
+       
     }
 }

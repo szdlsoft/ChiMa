@@ -34,10 +34,15 @@ namespace SixMan.ChiMa.Application.Base
                         .ToDto<TEntity, TEntityDto>();
         }
 
-        public void DeleteList(DeletListDto list)
+        protected virtual void Delete(TEntity entity)
+        {
+            Repository.Delete(entity);
+        }
+
+        public virtual void DeleteList(DeletListDto list)
         {
             var ids = list.Ids.Split(',').Select(id => long.Parse(id));
-            ids.ToList().ForEach(id => Repository.Delete(Repository.Get(id)));
+            ids.ToList().ForEach(id => Delete(Repository.Get(id)));
         }
        
 
@@ -108,5 +113,6 @@ namespace SixMan.ChiMa.Application.Base
             }
             return count;
         }
+
     }
 }
