@@ -1,0 +1,72 @@
+﻿@using SixMan.ChiMa.Domain.Base
+@using SixMan.ChiMa.Web.Startup
+@using SixMan.ChiMa.Web.Models
+@using Microsoft.AspNetCore.Mvc.ModelBinding
+@using SixMan.ChiMa.Web.Views.Shared.Components.ListPage
+@using SixMan.ChiMa.Web.Extensions
+@using SixMan.ChiMa.Application
+@model MetaViewModel
+@{
+    ViewBag.CurrentPageName = PageNames.Dish; //The menu item will be active for this page.
+}
+    @await Component.InvokeAsync(typeof(ListPageViewComponent), Model.Meta)
+
+    @Html.Partial("~/Views/Shared/Modals/_CrudModalHeader.cshtml") 
+            <div class="modal-body">
+                <bg-form id="myForm" asp-action="SignUp" asp-for="@Model">
+                    @Html.Partial("~/Views/Shared/Modals/_CrudPhoto.cshtml") 
+                    
+
+                </bg-form>
+            </div>
+     @Html.Partial("~/Views/Shared/Modals/_CrudModalFooterWithSaveAndCancel.cshtml") 
+       
+
+@section scripts
+{
+ <script src="~/view-resources/Views/Shared/domainCrud.js"  asp-append-version="true"></script>
+ <script>
+    //初始化
+    $(function () {
+        //0, 设置service
+        ko.appService = abp.services.app.dish;
+        crudInit('Dish');
+    });
+
+    function newEntityModel() {
+        var enityModel = {
+            id: ko.observable(),
+            @foreach (var property in Model.Meta.EditProperties())
+            {
+                @(@property.JsonPropertyName() + " : ko.observable(),");
+            }
+            whenchage: function (p) {
+                alert('here:' + p);
+
+            },
+        };
+        return enityModel;
+     } 
+
+     function isArray(o) {
+         return Object.prototype.toString.call(o) == '[object Array]';
+     }
+
+     function colFormater(value, row, index) {
+         if (isArray(value)) {
+             var div = '<ul>';
+             $.each(value, function(index, item){
+                 var itemLi = '<li>' + item.foodMaterialName + ':' + item.matching +'</li>'
+                 div = div + itemLi;
+             });
+             div = div + "</ul>";
+             return div;
+         }
+         else {
+             return value;
+         }
+     }
+
+  </script> 
+
+}

@@ -53,7 +53,7 @@ namespace SixMan.ChiMa.Web.Controllers
             int ColCount = worksheet.Dimension.Columns;
             var importData = new List<Dictionary<string, string>>();
             rowCount = 20;
-            for (int row = 4; row <= rowCount; )
+            for (int row = 4; row <= rowCount; row++)
             {
                 var rowData = new Dictionary<string, string>();
                 //读菜品首行
@@ -73,7 +73,7 @@ namespace SixMan.ChiMa.Web.Controllers
                     {
                         break;
                     }
-                    row = row + 1;//下一行
+                    row ++;//下一行
 
                     ProcessOneRow(worksheet, ColCount, row,sbBom);                    
                 };

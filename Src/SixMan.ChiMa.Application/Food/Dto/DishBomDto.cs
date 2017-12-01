@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace SixMan.ChiMa.Application.Food.Dto
 {
+    [AutoMap(typeof(DishBom))]
     public class DishBomDto
        : EntityDto<long>
     {
@@ -17,6 +18,10 @@ namespace SixMan.ChiMa.Application.Food.Dto
         /// 字表顺序
         /// </summary>
         public int Order { get; set; }
+
+        public long DishId { get; set; }
+        public long FoodMaterialId { get; set; }
+
         /// <summary>
         /// 食材名称
         /// </summary>

@@ -95,7 +95,7 @@ namespace SixMan.ChiMa.Application.Food
             List<DishBom> result = new List<DishBom>();
             foreach ( var bom in boms.Split(';'))
             {
-                var vs = bom.Split(',');
+                var vs = bom.Split(':');
                 long foodImportId = long.Parse(vs[0]);
                 double match = double.Parse(vs[1]);
                 var fdmId = _foodMaterialRepository.GetAll().AsNoTracking()
