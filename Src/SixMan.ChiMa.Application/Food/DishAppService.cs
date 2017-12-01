@@ -65,7 +65,8 @@ namespace SixMan.ChiMa.Application.Food
         protected override int ImportRow(Dictionary<string, string> row)
         {
             var ImportId = long.Parse( row["ImportId"]); //防止重复导入
-            var count = Repository.GetAll().Where(e => e.ImportId == ImportId).Count();
+            var count = Repository.GetAll().AsNoTracking()
+                        .Where(e => e.ImportId == ImportId).Count();
             if( count >  0)
             {
                 return 0;
@@ -79,7 +80,7 @@ namespace SixMan.ChiMa.Application.Food
                 entity.Import(row);
                 entity.DishBoms = boms;
 
-                Repository.InsertOrUpdate(entity); //会新增关联字表呢？
+                Repository.Insert(entity); //会新增关联字表呢？
                 return 1;
             }
             catch(Exception ex)
@@ -97,12 +98,16 @@ namespace SixMan.ChiMa.Application.Food
                 var vs = bom.Split(',');
                 long foodImportId = long.Parse(vs[0]);
                 double match = double.Parse(vs[1]);
+                var fdmId = _foodMaterialRepository.GetAll().AsNoTracking()
+                                       .Where(fm => fm.ImportId == foodImportId)
+                                       .FirstOrDefault()?.Id;
+                if( fdmId == null)
+                {
+                    throw new Exception($"{foodImportId} 找不到");
+                }
                 var dm = new DishBom()
                 {
-                    FoodMaterial = _foodMaterialRepository.GetAll()
-                                       .Where(fm => fm.ImportId == foodImportId)
-                                       .FirstOrDefault(),
-                    Dish = dish,
+                    FoodMaterialId = fdmId.Value,
                     Matching = match
                 };
 

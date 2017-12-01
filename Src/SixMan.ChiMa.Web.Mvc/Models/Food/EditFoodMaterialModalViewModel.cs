@@ -12,19 +12,13 @@ using SixMan.ChiMa.Web.TagHelpers;
 namespace SixMan.ChiMa.Web.Models.Food
 {
     public class EditFoodMaterialModalViewModel 
-        : FoodMaterialDto
+        : MetaViewModel
         , IModelExplorerProvider
 
     {
-        //public FoodMaterialDto Current { get; set; }
-
         public HtmlString Categories { get; set; }
-
-        //public List<SelectListItem> AspCategories { get; set; }
-
-        public ModelMetadata Meta { get; set; }
-
-        public ModelExplorer ModelExplorer { get; set; }
+        //public ModelMetadata Meta { get; set; }
+        //public ModelExplorer ModelExplorer { get; set; }
 
     }
 }
