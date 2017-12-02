@@ -1,6 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 using SixMan.ChiMa.Domain.Dish;
+using SixMan.ChiMa.Domain.Food;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,6 +23,8 @@ namespace SixMan.ChiMa.Application.Food.Dto
         public long DishId { get; set; }
         public long FoodMaterialId { get; set; }
 
+        //public FoodMaterialDto FoodMaterial { get; set; }
+
         /// <summary>
         /// 食材名称
         /// </summary>
@@ -31,5 +34,9 @@ namespace SixMan.ChiMa.Application.Food.Dto
         /// 精确描述
         /// </summary>
         [Display(Name = "配比", Order = 11)] public double Matching { get; set; }
+        /// <summary>
+        /// 客户端删除标记
+        /// </summary>
+        public bool ClientDelete { get; set; }
     }
 }

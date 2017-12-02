@@ -1,5 +1,4 @@
-﻿using Abp.Application.Services.Dto;
-using Abp.Domain.Repositories;
+﻿using Abp.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food.Dto;
@@ -9,7 +8,6 @@ using SixMan.ChiMa.Domain.Food;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SixMan.ChiMa.Application.Food
 {
@@ -50,12 +48,10 @@ namespace SixMan.ChiMa.Application.Food
         protected override DishDto MapToEntityDto(Dish entity)
         {
             var dto = base.MapToEntityDto(entity);
-            dto.DishBoms = entity.DishBoms.Select( d => new DishBomDto()
-                                        {
-                                            Id = d.Id,
-                                            FoodMaterialName = d.FoodMaterial.Description,
-                                            Matching = d.Matching
-                                        } ).ToList();
+            foreach( var d in dto.DishBoms)
+            {
+                d.FoodMaterialName = entity.DishBoms.Where(e => e.Id == d.Id).FirstOrDefault()?.FoodMaterial?.Description;
+            }
             dto.Photo = dto.Photo ?? $"Dish/{entity.Id}.jpg";
 
             return dto;
@@ -126,6 +122,41 @@ namespace SixMan.ChiMa.Application.Food
             Repository.Delete(entity);
         }
 
-       
+        protected override void AttachChild(DishDto dto, Dish entity)
+        {
+            var dishBoms = dto.DishBoms;
+            entity.DishBoms = new List<DishBom>(); //取消关联
+
+            foreach (var item in dishBoms)
+            {
+                DishBom dbEntity = null;
+                if (item.Id == 0)
+                {
+                    if (!item.ClientDelete)
+                    {
+                        dbEntity = ObjectMapper.Map<DishBom>(item);
+                        //_dishBomRepository.Insert(dbEntity);
+                    }
+                }
+                else
+                {
+                    if (!item.ClientDelete)
+                    {
+                        dbEntity = _dishBomRepository.Get(item.Id);
+                        ObjectMapper.Map(item, dbEntity);
+                        //_dishBomRepository.Update(dbEntity);
+                    }
+                    else
+                    {
+                        _dishBomRepository.Delete(item.Id);
+                    }
+                }
+                if(dbEntity != null)
+                {
+                    entity.DishBoms.Add(dbEntity);
+                }
+            }
+
+        }
     }
 }

@@ -51,7 +51,7 @@ var operate = {
         this.operateAdd();
         this.operateUpdate();
         this.operateDelete();
-        this.EntityModel = newEntityModel();
+        this.EntityModel = new EntityModel();
     },
     //导入
     operateUpload: function () {
@@ -98,12 +98,14 @@ var operate = {
     operateAdd: function () {
         $('#btn_add').on("click", function () {
             $("#myModal").modal().on("shown.bs.modal", function () {
-                var oEmptyModel = newEntityModel();
+                var oEmptyModel = new EntityModel();
                 ko.utils.extend(operate.EntityModel, oEmptyModel);
                 ko.applyBindings(operate.EntityModel, document.getElementById("myModal"));
                 operate.operateSave();
             }).on('hidden.bs.modal', function () {
                 ko.cleanNode(document.getElementById("myModal"));
+                //ko.unapplyBindings($("myModal"), 0);
+                //operate.EntityModel.dishBoms.removeAll();
             });
         });
     },
@@ -119,8 +121,11 @@ var operate = {
                 operate.operateSave();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
+                //operate.EntityModel.dishBoms.removeAll();
                 ko.cleanNode(document.getElementById("myModal"));
-            });
+                //ko.cleanNode(document.getElementById("tbody_disBoms"));
+                //ko.applyBindings(operate.EntityModel, document.getElementById("myModal"));
+           });
         });
     },
     //删除

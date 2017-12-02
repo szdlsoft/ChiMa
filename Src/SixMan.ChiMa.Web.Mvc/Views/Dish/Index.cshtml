@@ -16,6 +16,7 @@
                 <bg-form id="myForm" asp-action="SignUp" asp-for="@Model">
                     @Html.Partial("~/Views/Shared/Modals/_CrudPhoto.cshtml") 
                     <div class="form-group" id="div_DishBoms">
+                        <button data-bind="click: addItem">新增食材</button>  
                         <table id="tb_dishBoms" >
                             <thead>
                                 <tr>                                    
@@ -23,15 +24,8 @@
                                     <th data-field="matching" data-editable="true"  >配比</th>
                                 </tr>
                             </thead>
-                            <tbody data-bind="foreach:dishBoms">
-                                <tr>
-                                    <td >
-                                        <input type="text" data-bind="value:foodMaterialName" />
-                                    </td>
-                                    <td >
-                                        <input type="text" data-bind="value:matching"/>
-                                    </td>
-                                </tr>
+                            <tbody  data-bind="template: { name: 'dishBomItem-template', foreach: dishBoms }"  id="tbody_disBoms">
+                               
                             </tbody>
                         </table>                        
                     </div>
@@ -44,6 +38,20 @@
 @section scripts
 {
  <script src="~/view-resources/Views/Shared/domainCrud.js"  asp-append-version="true"></script>
+<script type="text/html" id="dishBomItem-template">
+    <tr  data-bind="ifnot:clientDelete" >
+        <td>
+            <input type="text" data-bind="value:foodMaterialName" />
+        </td>
+        <td>
+            <input type="text" data-bind="value:matching" />
+        </td>
+        <td>删除：
+            <input type="checkbox" data-bind="checked:clientDelete" />
+        </td>
+        
+    </tr>
+ </script>
  <script>
     //初始化
     $(function () {
@@ -52,26 +60,34 @@
         crudInit('Dish');
     });
 
-    function newEntityModel() {
-        var enityModel = {
-            id: ko.observable(),
-            @foreach (var property in Model.Meta.EditProperties())
-            {
-                if( property.PropertyName == "DishBoms")
-                {
-                    @(@property.JsonPropertyName() + " : ko.observableArray(),");
-                }
-                else
-                {
-                    @(@property.JsonPropertyName() + " : ko.observable(),");
-                }
-            }
-            whenchage: function (p) {
-                alert('here:' + p);
+     function EntityModel() {
+         var self = this;
 
-            },
-        };
-        return enityModel;
+         self.id = ko.observable();
+     @foreach (var property in Model.Meta.EditProperties())
+     {
+        if( property.PropertyName == "DishBoms")
+        {
+          @:self.@property.JsonPropertyName()  = ko.observableArray();
+        }
+        else
+        {
+          @:self.@property.JsonPropertyName()  = ko.observable();
+        }
+      }
+     self.addItem = function () {
+            self.dishBoms.push({
+                foodMaterialName: ko.observable( "新食材"),
+                matching: ko.observable("0.01"),
+                clientDelete: ko.observable( false)
+            });
+     };
+
+     self.removeItem = function () {
+         $.each(self.dishBoms, function (index, item) {
+         });
+     };
+
      }
 
      function isArray(o) {
@@ -92,6 +108,8 @@
              return value;
          }
      }
+
+    
 
   </script> 
 

@@ -36,8 +36,17 @@
         crudInit('FoodMaterial');
     });
 
-    function newEntityModel() {
-        var enityModel = {
+     function EntityModel() {
+         var self = this;
+
+         self.id = ko.observable();
+          @foreach (var property in Model.Meta.EditProperties())
+            {
+                @:self.@property.JsonPropertyName() = ko.observable();
+            }
+
+         self.categories = ko.observableArray(@Model.Categories);
+        @*var enityModel = {
             id: ko.observable(),
             @foreach (var property in Model.Meta.EditProperties())
             {
@@ -49,8 +58,8 @@
 
             },
         };
-        return enityModel;
-    } 
+        return enityModel;*@
+    }
 
      function colFormater(value, row, index) {
          return value;

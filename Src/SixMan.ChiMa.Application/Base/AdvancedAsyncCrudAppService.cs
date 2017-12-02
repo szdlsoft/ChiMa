@@ -84,6 +84,17 @@ namespace SixMan.ChiMa.Application.Base
 
             return MapToEntityDto(entity);
         }
+       
+        protected virtual void AttachChild(TEntityDto updateInput, TEntity entity)
+        {
+
+        }
+
+        protected override void MapToEntity(TEntityDto updateInput, TEntity entity)
+        {
+            ObjectMapper.Map(updateInput, entity);
+            AttachChild(updateInput, entity);
+        }
 
         public override async Task<TEntityDto> Update(TEntityDto input)
         {
