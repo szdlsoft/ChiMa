@@ -24,7 +24,7 @@ namespace SixMan.ChiMa.Application.Food.Dto
         /// <summary>
         /// 食材配比
         /// </summary>
-        [Display(Name = "食材配比", Order = 12)] public ICollection<DishBomDto> DishBoms { get; set; }       
+        [Display(Name = "食材配比", Order = 1)] public ICollection<DishBomDto> DishBoms { get; set; }       
                /// 防止重复导入
         /// </summary>
         public long? ImportId { get; set; }

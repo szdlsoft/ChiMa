@@ -52,6 +52,7 @@ var operate = {
         this.operateUpdate();
         this.operateDelete();
         this.EntityModel = new EntityModel();
+
     },
     //导入
     operateUpload: function () {
@@ -114,15 +115,32 @@ var operate = {
             if (!operate.operateCheck(arrselectedData)) { return; }
             $("#myModal").modal({
                 backdrop: 'static'
-            }).on("shown.bs.modal", function () {
+            })
+            .on("shown.bs.modal", function () {
                 //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
+                //comboboxInit();
                 ko.utils.extend(operate.EntityModel, ko.mapping.fromJS(arrselectedData[0]));
                 ko.applyBindings(operate.EntityModel, document.getElementById("myModal"));
                 operate.operateSave();
-            }).on('hidden.bs.modal', function () {
+                })
+            .on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
                 ko.cleanNode(document.getElementById("myModal"));
-           });
+                })
+                ;
+           // var arrselectedData = tableInit.myViewModel.getSelections();
+           // if (!operate.operateCheck(arrselectedData)) { return; }
+           // $("#myModal").modal({
+           //     backdrop: 'static'
+           // }).on("shown.bs.modal", function () {
+           //     //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
+           //     ko.utils.extend(operate.EntityModel, ko.mapping.fromJS(arrselectedData[0]));
+           //     ko.applyBindings(operate.EntityModel, document.getElementById("myModal"));
+           //     operate.operateSave();
+           // }).on('hidden.bs.modal', function () {
+           //     //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
+           //     ko.cleanNode(document.getElementById("myModal"));
+           //});
         });
     },
     //删除
