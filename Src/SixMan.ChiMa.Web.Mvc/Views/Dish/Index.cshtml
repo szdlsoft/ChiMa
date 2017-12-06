@@ -206,7 +206,13 @@
                      return res.result;
                  }
                  return res;
+             },
+
+             onClickRow: function (row, $element) {
+                 var foodMaterialItem = row;
+
              }
+
          });
 
             //HideAddDialog();
@@ -245,12 +251,15 @@
          //HideAddDialog();
          //$('#newBomItemModal').modal('hide');
          var arrRes = $("#tb_foodMaterialList").bootstrapTable("getSelections");
-         $('#collapseAddMaterial').collapse('toggle');
+            $('#collapseAddMaterial').collapse('toggle');
+          
          $.each(arrRes, function (index, item) {
              //ko.utils.extend(operate.EntityModel, ko.mapping.fromJS(arrselectedData[0]));
              operate.EntityModel.addItem(item);
          });
-
+            $("#tb_foodMaterialList").bootstrapTable("uncheckAll");
+            //$("#tb_foodMaterialList").bootstrapTable("destroy");
+            comboboxInit();
      }
 
             function HideAddDialog() {

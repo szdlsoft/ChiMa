@@ -104,7 +104,9 @@ var operate = {
                 ko.applyBindings(operate.EntityModel, document.getElementById("myModal"));
                 operate.operateSave();
             }).on('hidden.bs.modal', function () {
+                $("#tb_foodMaterialList").bootstrapTable("destroy");
                 ko.cleanNode(document.getElementById("myModal"));
+                comboboxInit();
             });
         });
     },
@@ -125,7 +127,10 @@ var operate = {
                 })
             .on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
+                $("#tb_foodMaterialList").bootstrapTable("destroy");
                 ko.cleanNode(document.getElementById("myModal"));
+                comboboxInit();
+
                 })
                 ;
            // var arrselectedData = tableInit.myViewModel.getSelections();
