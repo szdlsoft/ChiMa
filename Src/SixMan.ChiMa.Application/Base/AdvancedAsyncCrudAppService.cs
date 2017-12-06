@@ -114,7 +114,7 @@ namespace SixMan.ChiMa.Application.Base
         /// <returns></returns>
         protected abstract int ImportRow(Dictionary<string, string> row);
 
-        [UnitOfWork(false)]
+        [UnitOfWork(IsDisabled=true)]
         public int Import(List<Dictionary<string, string>> importData)
         {
             int count = 0;

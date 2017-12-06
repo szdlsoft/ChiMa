@@ -33,7 +33,7 @@ namespace SixMan.ChiMa.Controllers
         }
 
         [HttpPost]
-        [UnitOfWork(false)]
+        [UnitOfWork(IsDisabled = true)]
         public IActionResult Import(IFormFile excelfile)
         {
             string sWebRootFolder = _hostingEnvironment.WebRootPath;
@@ -52,16 +52,26 @@ namespace SixMan.ChiMa.Controllers
                     ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
                     int rowCount = worksheet.Dimension.Rows;
 
-                    int importCount = Import(worksheet);
+                    int importCount = 0
+                        //Import(worksheet)
+                        ;
+
+                    string importWorkId = BuildImportWork(worksheet);
 
                     System.IO.File.Delete(file.ToString());
-                    return Content($"{excelfile.FileName}共{rowCount}行 导入{importCount}行");
+                    //return Json($"{excelfile.FileName}共{rowCount}行 导入{importCount}行");
+                    return Json(importWorkId);
                 }
             }
-            catch (Exception ex)
+            finally 
             {
-                return Content(ex.Message);
+                //return Json(ex.Message);
             }
+        }
+
+        private string BuildImportWork(ExcelWorksheet worksheet)
+        {
+            return "abcd1234";
         }
 
         [HttpPost]

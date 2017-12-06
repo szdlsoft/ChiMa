@@ -27,13 +27,18 @@
 
 @section scripts
 {
- <script src="~/view-resources/Views/Shared/domainCrud.js"  asp-append-version="true"></script>
+ @*<script src="~/view-resources/Views/Shared/domainCrud.js"  asp-append-version="true"></script>*@
  <script>
     //初始化
     $(function () {
         //0, 设置service
-        ko.appService = abp.services.app.foodMaterial;
-        crudInit('FoodMaterial');
+        //ko.appService = abp.services.app.foodMaterial;
+        //crudInit('FoodMaterial');
+        crudInit({
+            urlPath: 'FoodMaterial',
+            appService: abp.services.app.foodMaterial,
+           
+        });
     });
 
      function EntityModel() {

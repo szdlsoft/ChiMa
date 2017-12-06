@@ -52,7 +52,7 @@ namespace SixMan.ChiMa.Web.Controllers
             int rowCount = worksheet.Dimension.Rows;
             int ColCount = worksheet.Dimension.Columns;
             var importData = new List<Dictionary<string, string>>();
-            rowCount = 20;
+            //rowCount = 20;
             for (int row = 4; row <= rowCount; row++)
             {
                 var rowData = new Dictionary<string, string>();

@@ -1,10 +1,4 @@
-﻿<div id="toolbar" class="btn-group">
-    <form id="uploadForm">
-        <input id="uploadFile" type="file" name="excelfile" />
-        <button id="btn_upload" type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>导入
-        </button>
-    </form>
+﻿<div id="toolbar" class="btn-group">    
     <button id="btn_add" type="button" class="btn btn-default">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
     </button>
@@ -14,4 +8,27 @@
     <button id="btn_delete" type="button" class="btn btn-default">
         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
     </button>
+    <button id="btn_upload" type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>导入
+    </button>
+</div>
+
+<div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="importModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="importModalLabel">导入</h4>
+            </div>
+            <form id="uploadForm">
+                <input id="uploadFile" type="file" name="excelfile" />
+                <button id="btn_exeUpload" type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>执行导入
+                </button>
+            </form>
+            <div>
+
+            </div>
+        </div>
+    </div>
 </div>

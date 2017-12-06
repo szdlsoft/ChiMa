@@ -1,6 +1,8 @@
-﻿var urlDomain = '';
-function crudInit(domain) {
-    urlDomain = domain;
+﻿var domainCrud = domainCrud || {};
+function crudInit(options) {
+    //初始化配置
+    domainCrud.urlPath = options.urlPath || '';
+
     //1、初始化表格
     tableInit.Init();
     //2、注册增删改事件
@@ -15,7 +17,7 @@ function uploadImg() {
     formData.append('imgfile', $("#imgfile")[0].files[0]);
     $.ajax({
         type: "POST",
-        url: '/' + urlDomain + '/UploadImg',
+        url: '/' + domainCrud.urlPath + '/UploadImg',
         contentType: false,
         processData: false,
         data: formData,
@@ -33,7 +35,7 @@ var tableInit = {
     Init: function () {
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
-            url: '/api/services/app/' + urlDomain + '/GetAll',         //请求后台的URL（*）
+            url: '/api/services/app/' + domainCrud.urlPath + '/GetAll',         //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             toolbar: '#toolbar',                //工具按钮用哪个容器
         });
@@ -59,7 +61,7 @@ var operate = {
             var formData = new FormData($("#uploadForm")[0]);
             $.ajax({
                 type: "POST",
-                url: '/' + urlDomain + '/Import',
+                url: '/' + domainCrud.urlPath + '/Import',
                 contentType: false,
                 processData: false,
                 data: formData,
@@ -81,7 +83,7 @@ var operate = {
             formData.append('imgfile', $("#imgfile")[0].files[0]);
             $.ajax({
                 type: "POST",
-                url: '/' + urlDomain + '/UploadImg',
+                url: '/' + domainCrud.urlPath + '/UploadImg',
                 contentType: false,
                 processData: false,
                 data: formData,

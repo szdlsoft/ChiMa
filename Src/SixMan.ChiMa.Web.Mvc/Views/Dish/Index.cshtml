@@ -95,7 +95,7 @@
 
     @section scripts
         {
-        <script src="~/view-resources/Views/Shared/domainCrud2.js" asp-append-version="true"></script>
+        @*<script src="~/view-resources/Views/Shared/domainCrud2.js" asp-append-version="true"></script>*@
         <script type="text/html" id="dishBomItem-template">
             <tr data-bind="ifnot:clientDelete">
                 <td>
@@ -115,10 +115,18 @@
     //初始化
     $(function () {
         //0, 设置service
-        ko.appService = abp.services.app.dish;
-        crudInit('Dish');
+        //ko.appService = ;
+            crudInit({
+                urlPath : 'Dish',
+                appService: abp.services.app.dish,
+                onBeforeKoCleanNode: function () {
+                    $("#tb_foodMaterialList").bootstrapTable("destroy");
+                },
+                onAfterKoCleanNode: function () {
+                    comboboxInit();
+                }
+            });
         comboboxInit();
-        //enableMultiLevelModal();
     });
 
      function EntityModel() {
@@ -259,7 +267,7 @@
          });
             $("#tb_foodMaterialList").bootstrapTable("uncheckAll");
             //$("#tb_foodMaterialList").bootstrapTable("destroy");
-            comboboxInit();
+            //comboboxInit();
      }
 
             function HideAddDialog() {
