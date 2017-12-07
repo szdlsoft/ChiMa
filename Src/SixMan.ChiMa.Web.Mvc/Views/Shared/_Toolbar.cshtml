@@ -17,16 +17,25 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" ><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="importModalLabel">导入</h4>
             </div>
-            <form id="uploadForm">
+            <form id="uploadForm" data-bind="ifnot:uploadSuccess">
                 <input id="uploadFile" type="file" name="excelfile" />
-                <button id="btn_exeUpload" type="button" class="btn btn-default">
+                <button  type="button" class="btn btn-default" data-bind="click:exeUpload">
                     <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>执行导入
                 </button>
             </form>
-            <div>
+            <div  data-bind="if:uploadSuccess">
+                任务号: <b data-bind="text: workId"> </b>   
+                完成比例: <b data-bind="text: importPercent"> </b> 
+                是否完成：<b data-bind="text: importComplete"> </b> 
+                是否取消：<b data-bind="text: importCancel"> </b> 
+                <div>
+                    <button type="button" class="btn btn-default" data-bind="click:cancel">
+                        <span class="glyphicon glyphicon-off"></span>取消导入
+                    </button>
+                </div>
 
             </div>
         </div>

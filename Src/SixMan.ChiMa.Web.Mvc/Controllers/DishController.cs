@@ -114,5 +114,45 @@ namespace SixMan.ChiMa.Web.Controllers
                 }
             }
         }
+
+        protected override  void BuildImportWork(ExcelWorksheet worksheet, string taskId)
+        {
+            int rowCount = worksheet.Dimension.Rows;
+            int ColCount = worksheet.Dimension.Columns;
+            var importData = new List<Dictionary<string, string>>();
+            //rowCount = 20;
+            for (int row = 4; row <= rowCount; row++)
+            {
+                var rowData = new Dictionary<string, string>();
+                //读菜品首行
+                var sbBom = new StringBuilder();
+                ProcessOneRow(worksheet, ColCount, row, sbBom,
+                    (key, value) =>
+                    {
+                        rowData[key] = value;
+                    });
+                //读菜品续行的bom
+                //var sbBom = new StringBuilder();
+                while (true)
+                {
+                    var importId = worksheet.Cells[row + 1, 1].Value?.ToString();
+                    if (importId == null
+                        || importId != rowData["ImportId"])
+                    {
+                        break;
+                    }
+                    row++;//下一行
+
+                    ProcessOneRow(worksheet, ColCount, row, sbBom);
+                };
+
+                rowData["boms"] = sbBom.ToString();
+                importData.Add(rowData);
+            }
+
+            _appService.BuildImportWork(importData, taskId);
+
+        }
     }
+   
 }

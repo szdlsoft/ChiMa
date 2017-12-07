@@ -81,6 +81,7 @@ function crudInit(options) {
     domainCrud.onBeforeKoCleanNode = options.onBeforeKoCleanNode || function () { };
     domainCrud.onAfterKoCleanNode = options.onAfterKoCleanNode || function () { };
 
+    domainCrud.importModal = options.importModal || "importModal";
     domainCrud.tbList = options.tbList || "tb_list";
     domainCrud.myModal = options.myModal || "myModal"; //暂时不用
     domainCrud.myForm = options.myForm || "myForm";//暂时不用
@@ -110,6 +111,63 @@ function uploadImg() {
             alert("上传文件出现错误！");
         }
     });
+}
+
+function ImportViewModel() {
+    var self = this;
+
+    self.uploadSuccess = ko.observable(false);
+    self.importComplete = ko.observable(false);
+    self.importPercent = ko.observable(0.01);
+    self.importCancel = ko.observable(false);
+    self.workId =  ko.observable('');
+
+    self.exeUpload = function () {
+        var formData = new FormData($("#uploadForm")[0]);
+        $.ajax({
+            type: "POST",
+            url: '/' + domainCrud.urlPath + '/Import',
+            contentType: false,
+            processData: false,
+            data: formData,
+            success: function (res) {
+                if (res.success) {
+                    abp.notify.success('上传文件成功', '任务号：' + res.result);
+                    self.uploadSuccess(true);
+                    self.workId(res.result);
+                    //启动定时器;
+                    self.timer = setInterval(self.query, 3000);
+                }
+                else {
+                    abp.notify.error('上传文件失败：', res.error.message);
+                }
+            },
+            error: function (res) {
+
+                alert("上传文件出现错误:" + res);
+            }
+        });
+    }
+
+    self.query = function () {
+        domainCrud.appService.queryWork({
+            taskId: self.workId
+        }).done(function (res) {
+            self.importComplete( res.complete);
+            self.importPercent(res.percent);
+        });
+    };
+    self.cancel = function () {
+        //停止定时器
+        clearTimeout(self.timer);
+        domainCrud.appService.cancelWork({
+            taskId: self.workId
+        }).done(function (res) {
+            self.importCancel( res.cancel);
+        });          
+    } 
+
+ 
 }
 
 //初始化表格
@@ -146,29 +204,8 @@ var operate = {
                
             });
         });
-        $('#btn_exeUpload').on("click", function () {
-            var formData = new FormData($("#uploadForm")[0]);
-            $.ajax({
-                type: "POST",
-                url: '/' + domainCrud.urlPath + '/Import',
-                contentType: false,
-                processData: false,
-                data: formData,
-                success: function (res) {
-                    if (res.success) {
-                        abp.notify.success('上传文件成功', '任务号：' + res.result);
-                        //tableInit.myViewModel.refresh();
-                    }
-                    else {
-                        abp.notify.error('上传文件失败：', res.error.message);
-                    }
-                },
-                error: function (res) {
-
-                    alert("上传文件出现错误:" + res);
-                }
-            });
-        });
+        
+        ko.applyBindings(new ImportViewModel(), document.getElementById(domainCrud.importModal));
     },
     //上传图像
     operateUploadImg: function () {

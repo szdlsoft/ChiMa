@@ -1,4 +1,5 @@
 using Abp.AspNetCore.Mvc.Controllers;
+using Abp.BackgroundJobs;
 using Abp.Domain.Uow;
 using Abp.IdentityFramework;
 using Microsoft.AspNetCore.Hosting;
@@ -17,6 +18,8 @@ namespace SixMan.ChiMa.Controllers
     public abstract class ChiMaControllerBase: AbpController
     {
         public IHostingEnvironment _hostingEnvironment { get; set; }
+
+
         protected ChiMaControllerBase()
         {
             LocalizationSourceName = ChiMaConsts.LocalizationSourceName;
@@ -55,8 +58,8 @@ namespace SixMan.ChiMa.Controllers
                     int importCount = 0
                         //Import(worksheet)
                         ;
-
-                    string importWorkId = BuildImportWork(worksheet);
+                    var importWorkId = Guid.NewGuid().ToString();
+                    BuildImportWork(worksheet, importWorkId);
 
                     System.IO.File.Delete(file.ToString());
                     //return Json($"{excelfile.FileName}共{rowCount}行 导入{importCount}行");
@@ -68,10 +71,8 @@ namespace SixMan.ChiMa.Controllers
                 //return Json(ex.Message);
             }
         }
-
-        private string BuildImportWork(ExcelWorksheet worksheet)
+        protected virtual void BuildImportWork(ExcelWorksheet worksheet, string taskId)
         {
-            return "abcd1234";
         }
 
         [HttpPost]

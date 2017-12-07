@@ -13,16 +13,21 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq.Dynamic.Core;
 using SixMan.ChiMa.Application.Interface;
 using Abp.Domain.Uow;
+using Abp.BackgroundJobs;
 
 namespace SixMan.ChiMa.Application.Base
 {
-    public abstract class AdvancedAsyncCrudAppService<TEntity, TEntityDto>
+
+    public  class AdvancedAsyncCrudAppService<TEntity, TEntityDto>
         : AsyncCrudAppService<TEntity, TEntityDto, long, SortSearchPagedResultRequestDto, TEntityDto, TEntityDto>
         , IAdvancedAsyncCrudAppService<TEntityDto>
         , IImportFromExcel
+        , IBackgroundJob<string>
         where TEntity : class, IEntity<long>,new()
         where TEntityDto : IEntityDto<long>
     {
+        public IBackgroundJobManager _backgroundJobManager { get; set; }
+
         protected AdvancedAsyncCrudAppService(IRepository<TEntity, long> repository) : base(repository)
         {          
 
@@ -112,7 +117,10 @@ namespace SixMan.ChiMa.Application.Base
         /// </summary>
         /// <param name="row"></param>
         /// <returns></returns>
-        protected abstract int ImportRow(Dictionary<string, string> row);
+        protected virtual int ImportRow(Dictionary<string, string> row)
+        {
+            return 0;
+        }
 
         [UnitOfWork(IsDisabled=true)]
         public int Import(List<Dictionary<string, string>> importData)
@@ -125,5 +133,46 @@ namespace SixMan.ChiMa.Application.Base
             return count;
         }
 
+        List<Dictionary<string, string>> _importData;
+        static ImportTaskInfo importTaskInfo;
+        
+        public void BuildImportWork(List<Dictionary<string, string>> importData, string taskId)
+        {
+            _importData = importData;
+            importTaskInfo = new ImportTaskInfo();
+
+            //_backgroundJobManager.Enqueue<AdvancedAsyncCrudAppService<TEntity, TEntityDto>, string>(taskId);
+            Task.Run(() => this.Execute(taskId));
+        }
+
+        public void Execute(string args)
+        {
+            int count = 0;
+            int total = _importData.Count;
+            foreach (var row in _importData)
+            {
+                if(importTaskInfo.Cancel)
+                {
+                    return;
+                }
+
+                ImportRow(row);
+
+                importTaskInfo.Percent = ((double)++count) / ((double)total);
+            }
+
+            importTaskInfo.Complete = true;
+        }
+
+        public ImportTaskInfo QueryWork(string taskId)
+        {
+            return importTaskInfo;
+        }
+
+        public ImportTaskInfo CancelWork(string taskId)
+        {
+            importTaskInfo.Cancel = true;
+            return importTaskInfo;
+        }
     }
 }
