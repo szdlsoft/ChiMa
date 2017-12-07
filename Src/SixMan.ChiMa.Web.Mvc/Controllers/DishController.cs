@@ -21,6 +21,7 @@ using SixMan.ChiMa.Web.Extensions;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using SixMan.ChiMa.Application.Food.Dto;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using SixMan.ChiMa.Application.Interface;
 
 namespace SixMan.ChiMa.Web.Controllers
 {
@@ -63,6 +64,13 @@ namespace SixMan.ChiMa.Web.Controllers
                     {                        
                          rowData[key] = value;
                     });
+
+                //过滤掉非法行
+                if (string.IsNullOrEmpty( rowData["Description"]))
+                {
+                    continue;
+                }
+
                 //读菜品续行的bom
                 //var sbBom = new StringBuilder();
                 while (true)
@@ -115,7 +123,7 @@ namespace SixMan.ChiMa.Web.Controllers
             }
         }
 
-        protected override  void BuildImportWork(ExcelWorksheet worksheet, string taskId)
+        protected override ImportTaskInfo BuildImportWork(ExcelWorksheet worksheet)
         {
             int rowCount = worksheet.Dimension.Rows;
             int ColCount = worksheet.Dimension.Columns;
@@ -150,7 +158,7 @@ namespace SixMan.ChiMa.Web.Controllers
                 importData.Add(rowData);
             }
 
-            _appService.BuildImportWork(importData, taskId);
+            return _appService.BuildImportWork(importData, "菜品导入");
 
         }
     }

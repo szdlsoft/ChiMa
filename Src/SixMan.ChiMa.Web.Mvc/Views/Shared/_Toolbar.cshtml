@@ -20,17 +20,35 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" ><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="importModalLabel">导入</h4>
             </div>
-            <form id="uploadForm" data-bind="ifnot:uploadSuccess">
+            <form id="uploadForm" data-bind="ifnot:importRunning">
                 <input id="uploadFile" type="file" name="excelfile" />
                 <button  type="button" class="btn btn-default" data-bind="click:exeUpload">
                     <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>执行导入
                 </button>
             </form>
-            <div  data-bind="if:uploadSuccess">
-                任务号: <b data-bind="text: workId"> </b>   
-                完成比例: <b data-bind="text: importPercent"> </b> 
-                是否完成：<b data-bind="text: importComplete"> </b> 
-                是否取消：<b data-bind="text: importCancel"> </b> 
+            <div  data-bind="if:importRunning">
+                <div>
+                    正在执行的导入任务: <b data-bind="text: workId"> </b>
+                </div>
+
+                
+                <div class="progress progress-striped active">
+                    <div class="progress-bar progress-bar-success" role="progressbar"
+                          aria-valuemin="0" aria-valuemax="100" 
+                          @*data-bind="attr:{'aria-valuenow': importPercent} "*@
+                          data-bind="style:{width: importPercent} "
+                          >
+                        <span class="sr-only" data-bind="text: importPercent"> 完成</span>
+                    </div>
+                </div>
+                <div>
+                    完成:<b data-bind="text: importPercent"> </b>
+                </div>
+
+                <div>
+                    是否完成：<b data-bind="text: importComplete"> </b>
+                    是否取消：<b data-bind="text: importCancel"> </b>
+                </div>
                 <div>
                     <button type="button" class="btn btn-default" data-bind="click:cancel">
                         <span class="glyphicon glyphicon-off"></span>取消导入

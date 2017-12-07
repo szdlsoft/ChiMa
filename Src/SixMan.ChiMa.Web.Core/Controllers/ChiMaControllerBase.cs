@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OfficeOpenXml;
+using SixMan.ChiMa.Application.Interface;
 using SixMan.ChiMa.Domain;
 using System;
 using System.Collections.Generic;
@@ -58,12 +59,12 @@ namespace SixMan.ChiMa.Controllers
                     int importCount = 0
                         //Import(worksheet)
                         ;
-                    var importWorkId = Guid.NewGuid().ToString();
-                    BuildImportWork(worksheet, importWorkId);
+                    //var importWorkId = Guid.NewGuid().ToString();
+                    var importTaskInfo = BuildImportWork(worksheet);
 
                     System.IO.File.Delete(file.ToString());
                     //return Json($"{excelfile.FileName}共{rowCount}行 导入{importCount}行");
-                    return Json(importWorkId);
+                    return Json(importTaskInfo);
                 }
             }
             finally 
@@ -71,8 +72,9 @@ namespace SixMan.ChiMa.Controllers
                 //return Json(ex.Message);
             }
         }
-        protected virtual void BuildImportWork(ExcelWorksheet worksheet, string taskId)
+        protected virtual ImportTaskInfo BuildImportWork(ExcelWorksheet worksheet)
         {
+            return null;
         }
 
         [HttpPost]

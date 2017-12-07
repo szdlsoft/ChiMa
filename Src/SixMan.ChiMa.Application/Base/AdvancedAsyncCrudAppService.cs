@@ -22,7 +22,6 @@ namespace SixMan.ChiMa.Application.Base
         : AsyncCrudAppService<TEntity, TEntityDto, long, SortSearchPagedResultRequestDto, TEntityDto, TEntityDto>
         , IAdvancedAsyncCrudAppService<TEntityDto>
         , IImportFromExcel
-        , IBackgroundJob<string>
         where TEntity : class, IEntity<long>,new()
         where TEntityDto : IEntityDto<long>
     {
@@ -133,35 +132,52 @@ namespace SixMan.ChiMa.Application.Base
             return count;
         }
 
-        List<Dictionary<string, string>> _importData;
-        static ImportTaskInfo importTaskInfo;
-        
-        public void BuildImportWork(List<Dictionary<string, string>> importData, string taskId)
-        {
-            _importData = importData;
-            importTaskInfo = new ImportTaskInfo();
+        static ImportTaskInfo importTaskInfo = new ImportTaskInfo(); //导入任务信息单例
 
-            //_backgroundJobManager.Enqueue<AdvancedAsyncCrudAppService<TEntity, TEntityDto>, string>(taskId);
-            Task.Run(() => this.Execute(taskId));
+        public ImportTaskInfo BuildImportWork(List<Dictionary<string, string>> importData, string taskId)
+        {
+            if(! importTaskInfo.IsRunning) //同时只能运行一个导入任务
+            {
+
+                importTaskInfo.TaskId = taskId;
+                Task.Run(() => this.Execute(taskId, importData));
+            }
+
+            return importTaskInfo;
         }
 
-        public void Execute(string args)
+        public void Execute(string args, List<Dictionary<string, string>> _importData)
         {
             int count = 0;
             int total = _importData.Count;
-            foreach (var row in _importData)
-            {
-                if(importTaskInfo.Cancel)
+
+            importTaskInfo.IsRunning = true;
+            importTaskInfo.Complete = false;
+            importTaskInfo.Cancel = false;
+            importTaskInfo.Percent = 0;
+
+            try {
+                foreach (var row in _importData)
                 {
-                    return;
+                    if(importTaskInfo.Cancel)
+                    {
+                        break;
+                    }
+
+                    ImportRow(row);
+
+                    importTaskInfo.Percent = (100 * (++count))/ total;
                 }
-
-                ImportRow(row);
-
-                importTaskInfo.Percent = ((double)++count) / ((double)total);
             }
-
-            importTaskInfo.Complete = true;
+            catch(Exception ex)
+            {
+                Logger.Error(ex.Message);                
+            }
+            finally
+            {
+                importTaskInfo.Complete = true;
+                importTaskInfo.IsRunning = false;
+            } 
         }
 
         public ImportTaskInfo QueryWork(string taskId)

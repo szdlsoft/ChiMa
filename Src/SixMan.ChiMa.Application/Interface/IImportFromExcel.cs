@@ -13,7 +13,7 @@ namespace SixMan.ChiMa.Application.Interface
     {
         int Import(List<Dictionary<string, string>> importData);
 
-        void BuildImportWork(List<Dictionary<string, string>> importData, string taskId);
+        ImportTaskInfo BuildImportWork(List<Dictionary<string, string>> importData, string taskId);
 
         ImportTaskInfo QueryWork(string taskId);
 

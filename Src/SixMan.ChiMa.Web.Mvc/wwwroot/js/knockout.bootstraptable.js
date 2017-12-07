@@ -116,11 +116,11 @@ function uploadImg() {
 function ImportViewModel() {
     var self = this;
 
-    self.uploadSuccess = ko.observable(false);
+    self.importRunning = ko.observable(false);
     self.importComplete = ko.observable(false);
-    self.importPercent = ko.observable(0.01);
+    self.importPercent = ko.observable('20%');
     self.importCancel = ko.observable(false);
-    self.workId =  ko.observable('');
+    self.workId = ko.observable('');
 
     self.exeUpload = function () {
         var formData = new FormData($("#uploadForm")[0]);
@@ -132,11 +132,12 @@ function ImportViewModel() {
             data: formData,
             success: function (res) {
                 if (res.success) {
-                    abp.notify.success('上传文件成功', '任务号：' + res.result);
-                    self.uploadSuccess(true);
-                    self.workId(res.result);
+                    abp.notify.success('上传文件成功', '导入任务：' + res.result.taskId);
+                    self.update(res.result);
+                    //self.importRunning(true);
+                    //self.workId(res.result);
                     //启动定时器;
-                    self.timer = setInterval(self.query, 3000);
+                    //self.startTimer();
                 }
                 else {
                     abp.notify.error('上传文件失败：', res.error.message);
@@ -147,27 +148,44 @@ function ImportViewModel() {
                 alert("上传文件出现错误:" + res);
             }
         });
+        self.startTimer();
+    }
+
+    self.startTimer = function () {
+        if (!self.timer) {
+            self.timer = setInterval(self.query, 3000);
+        }
+    }
+
+    self.stopTimer = function () {
+        if (self.timer) {
+            clearTimeout(self.timer);
+            self.timer = null;
+        }
     }
 
     self.query = function () {
         domainCrud.appService.queryWork({
             taskId: self.workId
-        }).done(function (res) {
-            self.importComplete( res.complete);
-            self.importPercent(res.percent);
-        });
+        }).done(self.update);
     };
     self.cancel = function () {
         //停止定时器
         clearTimeout(self.timer);
         domainCrud.appService.cancelWork({
             taskId: self.workId
-        }).done(function (res) {
-            self.importCancel( res.cancel);
-        });          
-    } 
+        }).done(self.update);          
+    }
 
- 
+    self.update = function (res) {
+        self.importRunning(res.isRunning);
+        self.importComplete(res.complete);
+        self.importPercent(res.percent.toString()+'%');
+        self.workId(res.taskId);
+        //启动定时器;
+       
+        //self.startTimer();
+    } 
 }
 
 //初始化表格
@@ -204,8 +222,9 @@ var operate = {
                
             });
         });
-        
-        ko.applyBindings(new ImportViewModel(), document.getElementById(domainCrud.importModal));
+        var importVM = new ImportViewModel();
+        importVM.query();
+        ko.applyBindings(importVM, document.getElementById(domainCrud.importModal));
     },
     //上传图像
     operateUploadImg: function () {
