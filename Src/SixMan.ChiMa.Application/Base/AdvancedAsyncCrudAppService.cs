@@ -121,19 +121,20 @@ namespace SixMan.ChiMa.Application.Base
             return 0;
         }
 
-        [UnitOfWork(IsDisabled=true)]
-        public int Import(List<Dictionary<string, string>> importData)
-        {
-            int count = 0;
-            foreach (var row in importData)
-            {
-                count += ImportRow(row);
-            }
-            return count;
-        }
+        //[UnitOfWork(IsDisabled=true)]
+        //public int Import(List<Dictionary<string, string>> importData)
+        //{
+        //    int count = 0;
+        //    foreach (var row in importData)
+        //    {
+        //        count += ImportRow(row);
+        //    }
+        //    return count;
+        //}
 
         static ImportTaskInfo importTaskInfo = new ImportTaskInfo(); //导入任务信息单例
 
+        [UnitOfWork(IsDisabled = true)]
         public ImportTaskInfo BuildImportWork(List<Dictionary<string, string>> importData, string taskId)
         {
             if(! importTaskInfo.IsRunning) //同时只能运行一个导入任务
@@ -146,7 +147,8 @@ namespace SixMan.ChiMa.Application.Base
             return importTaskInfo;
         }
 
-        public void Execute(string args, List<Dictionary<string, string>> _importData)
+        [UnitOfWork(IsDisabled = true)]
+        private void Execute(string args, List<Dictionary<string, string>> _importData)
         {
             int count = 0;
             int total = _importData.Count;

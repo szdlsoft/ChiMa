@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.AspNetCore.Swagger;
 
 #if FEATURE_SIGNALR
 using Owin;
@@ -44,6 +45,12 @@ namespace SixMan.ChiMa.Web.Startup
             services.AddScoped<IWebResourceManager, WebResourceManager>();
 
             services.AddCloudscribePagination();
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new Info { Title = "ChiMa API", Version = "v1" });
+                options.DocInclusionPredicate((docName, description) => true);
+            });
 
             //Configure Abp and Dependency Injection
             return services.AddAbp<ChiMaWebMvcModule>(options =>
@@ -94,6 +101,13 @@ namespace SixMan.ChiMa.Web.Startup
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseSwagger();
+            //Enable middleware to serve swagger - ui assets(HTML, JS, CSS etc.)
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "ChiMa API V1");
+            }); //URL: /swagger 
         }
 
 #if FEATURE_SIGNALR

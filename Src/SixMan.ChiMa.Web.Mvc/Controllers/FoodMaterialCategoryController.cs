@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SixMan.ChiMa.Application.Food;
 using SixMan.ChiMa.Controllers;
-using SixMan.ChiMa.Web.Models.Category;
 using SixMan.ChiMa.Web.Models.FoodMaterialCategory;
 using SixMan.ChiMa.Web.Models.Users;
 using System;

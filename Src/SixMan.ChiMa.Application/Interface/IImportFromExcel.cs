@@ -11,7 +11,7 @@ namespace SixMan.ChiMa.Application.Interface
     /// </summary>
     public interface IImportFromExcel
     {
-        int Import(List<Dictionary<string, string>> importData);
+        //int Import(List<Dictionary<string, string>> importData);
 
         ImportTaskInfo BuildImportWork(List<Dictionary<string, string>> importData, string taskId);
 
