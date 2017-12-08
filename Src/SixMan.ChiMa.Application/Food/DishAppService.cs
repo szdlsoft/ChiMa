@@ -52,7 +52,7 @@ namespace SixMan.ChiMa.Application.Food
             {
                 d.FoodMaterialName = entity.DishBoms.Where(e => e.Id == d.Id).FirstOrDefault()?.FoodMaterial?.Description;
             }
-            dto.Photo = dto.Photo ?? $"Dish/{entity.Id}.jpg";
+            //dto.Photo = dto.Photo ?? $"Dish/{entity.Id}.jpg";
 
             return dto;
         }       

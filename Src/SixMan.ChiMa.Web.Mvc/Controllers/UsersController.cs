@@ -16,6 +16,8 @@ namespace SixMan.ChiMa.Web.Controllers
     {
         private readonly IUserAppService _userAppService;
 
+        protected override string ServiceName => throw new System.NotImplementedException();
+
         public UsersController(IUserAppService userAppService)
         {
             _userAppService = userAppService;

@@ -52,7 +52,7 @@ namespace SixMan.ChiMa.Application.Food
             var dto = base.MapToEntityDto(entity);
             dto.Category = entity.FoodMaterialCategory?.Name;
             //dto.FoodMaterialCategoryId = entity.FoodMaterialCategory?.Id;
-            dto.Photo = dto.Photo ?? $"FoodMaterial/{entity.Id}.jpg";
+            //dto.Photo = dto.Photo ?? $"FoodMaterial/{entity.Id}.jpg";
 
             return dto;
         }

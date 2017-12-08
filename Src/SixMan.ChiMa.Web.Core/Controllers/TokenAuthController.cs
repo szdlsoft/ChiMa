@@ -33,6 +33,8 @@ namespace SixMan.ChiMa.Controllers
         private readonly IExternalAuthManager _externalAuthManager;
         private readonly UserRegistrationManager _userRegistrationManager;
 
+        protected override string ServiceName => "";
+
         public TokenAuthController(
             LogInManager logInManager,
             ITenantCache tenantCache,

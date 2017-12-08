@@ -14,6 +14,8 @@ namespace SixMan.ChiMa.Web.Controllers
     {
         private readonly IRoleAppService _roleAppService;
 
+        protected override string ServiceName => throw new System.NotImplementedException();
+
         public RolesController(IRoleAppService roleAppService)
         {
             _roleAppService = roleAppService;

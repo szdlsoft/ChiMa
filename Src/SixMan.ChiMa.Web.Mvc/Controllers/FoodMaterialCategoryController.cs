@@ -20,6 +20,8 @@ namespace SixMan.ChiMa.Web.Controllers
     {
         private readonly IFoodMaterialCategoryAppService _appService;
 
+        protected override string ServiceName => throw new NotImplementedException();
+
         public FoodMaterialCategoryController(IFoodMaterialCategoryAppService appService)
         {
             _appService = appService;

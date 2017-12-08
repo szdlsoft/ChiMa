@@ -14,6 +14,8 @@ namespace SixMan.ChiMa.Web.Controllers
     {
         private readonly ITenantAppService _tenantAppService;
 
+        protected override string ServiceName => throw new System.NotImplementedException();
+
         public TenantsController(ITenantAppService tenantAppService)
         {
             _tenantAppService = tenantAppService;

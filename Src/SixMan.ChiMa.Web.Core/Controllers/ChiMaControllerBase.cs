@@ -2,6 +2,7 @@ using Abp.AspNetCore.Mvc.Controllers;
 using Abp.BackgroundJobs;
 using Abp.Domain.Uow;
 using Abp.IdentityFramework;
+using Abp.Web.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -16,10 +17,9 @@ using System.Text;
 
 namespace SixMan.ChiMa.Controllers
 {
-    public abstract class ChiMaControllerBase: AbpController
+    public abstract class ChiMaControllerBase : AbpController
     {
         public IHostingEnvironment _hostingEnvironment { get; set; }
-
 
         protected ChiMaControllerBase()
         {
@@ -31,10 +31,11 @@ namespace SixMan.ChiMa.Controllers
             identityResult.CheckErrors(LocalizationManager);
         }
 
-        protected virtual int Import(ExcelWorksheet worksheet)
-        {
-            return 0;
-        }
+        //protected virtual int Import(ExcelWorksheet worksheet)
+        //{
+        //    return 0;
+        //}
+        protected abstract string ServiceName { get; }
 
         [HttpPost]
         [UnitOfWork(IsDisabled = true)]
@@ -56,10 +57,6 @@ namespace SixMan.ChiMa.Controllers
                     ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
                     int rowCount = worksheet.Dimension.Rows;
 
-                    int importCount = 0
-                        //Import(worksheet)
-                        ;
-                    //var importWorkId = Guid.NewGuid().ToString();
                     var importTaskInfo = BuildImportWork(worksheet);
 
                     System.IO.File.Delete(file.ToString());
@@ -67,7 +64,7 @@ namespace SixMan.ChiMa.Controllers
                     return Json(importTaskInfo);
                 }
             }
-            finally 
+            finally
             {
                 //return Json(ex.Message);
             }
@@ -79,27 +76,36 @@ namespace SixMan.ChiMa.Controllers
 
         [HttpPost]
         [UnitOfWork(IsDisabled = true)]
-        public IActionResult UploadImg(string photo, IFormFile imgfile)
+        [WrapResult]
+        public IActionResult UploadImg(int id, IFormFile imgfile)
         {
             //string photo = Request.Form["photo"];
             //IFormFile imgfile = Request.Form.Files[0];
             string sWebRootFolder = _hostingEnvironment.WebRootPath;
             string sImgRootFolder = Path.Combine(sWebRootFolder, "Images");
+
+            string photo = GetPhotoPath(id);
             string sFileName = photo;
             FileInfo file = new FileInfo(Path.Combine(sImgRootFolder, sFileName));
-            try
+            //try
+            //{
+            using (FileStream fs = new FileStream(file.ToString(), FileMode.Create))
             {
-                using (FileStream fs = new FileStream(file.ToString(), FileMode.Create))
-                {
-                    imgfile.CopyTo(fs);
-                    fs.Flush();
-                }
-                return Content($"{photo} 上传成功");
+                imgfile.CopyTo(fs);
+                fs.Flush();
             }
-            catch (Exception ex)
-            {
-                return Content(ex.Message);
-            }
+            //return Content($"{photo} 上传成功");
+            return Json(photo);
+            //}
+            //catch (Exception ex)
+            //{
+            //    return Content(ex.Message);
+            //}
+        }
+
+        private string GetPhotoPath(int id)
+        {
+            return $"{ServiceName}/{id}.jpg";
         }
     }
 }

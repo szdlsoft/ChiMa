@@ -19,6 +19,8 @@ namespace SixMan.ChiMa.Web.Mvc.Controllers
 
         private readonly ICategoryAppService _appService;
 
+        protected override string ServiceName => throw new NotImplementedException();
+
         public CategoryController(ICategoryAppService appService)
         {
             _appService = appService;

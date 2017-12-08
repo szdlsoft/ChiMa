@@ -96,7 +96,7 @@ function crudInit(options) {
 
 function uploadImg() {
     var formData = new FormData();
-    formData.append('photo', $("#photo")[0].value);
+    formData.append('id',  operate.EntityModel.id());
     formData.append('imgfile', $("#imgfile")[0].files[0]);
     $.ajax({
         type: "POST",
@@ -104,8 +104,14 @@ function uploadImg() {
         contentType: false,
         processData: false,
         data: formData,
-        success: function (message) {
-            alert(message);
+        success: function (res) {
+            if (res.success) {
+                operate.EntityModel.photo(res.result);
+                abp.notify.success('上传文件成功：', res.result);
+            }
+            else {
+                abp.message.error('上传文件出现错误:', res.error.message);
+            }
         },
         error: function () {
             alert("上传文件出现错误！");
@@ -227,26 +233,32 @@ var operate = {
         ko.applyBindings(importVM, document.getElementById(domainCrud.importModal));
     },
     //上传图像
-    operateUploadImg: function () {
-        $('#btn_upload_img').on("click", function () {
-            var formData = new FormData();
-            formData.append('photo', $("#photo")[0].value);
-            formData.append('imgfile', $("#imgfile")[0].files[0]);
-            $.ajax({
-                type: "POST",
-                url: '/' + domainCrud.urlPath + '/UploadImg',
-                contentType: false,
-                processData: false,
-                data: formData,
-                success: function (message) {
-                    alert(message);
-                },
-                error: function () {
-                    alert("上传文件出现错误！");
-                }
-            });
-        });
-    },
+    //operateUploadImg: function () {
+    //    $('#btn_upload_img').on("click", function () {
+    //        var formData = new FormData();
+    //        //formData.append('photo', $("#photo")[0].value);
+    //        formData.append('photo', operate.EntityModel.id());
+    //        formData.append('imgfile', $("#imgfile")[0].files[0]);
+    //        $.ajax({
+    //            type: "POST",
+    //            url: '/' + domainCrud.urlPath + '/UploadImg',
+    //            contentType: false,
+    //            processData: false,
+    //            data: formData,
+    //            success: function (res) {
+    //                if (res.success) {
+    //                    operate.EntityModel.photo(res.result);
+    //                }
+    //                else {
+    //                    abp.message.error('上传文件出现错误:', res.error.message);
+    //                }
+    //            },
+    //            error: function () {
+    //                alert("上传文件出现错误！");
+    //            }
+    //        });
+    //    });
+    //},
     //新增
     operateAdd: function () {
         $('#btn_add').on("click", function () {

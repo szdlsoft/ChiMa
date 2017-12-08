@@ -48,6 +48,8 @@ namespace SixMan.ChiMa.Web.Controllers
         private readonly ITenantCache _tenantCache;
         private readonly INotificationPublisher _notificationPublisher;
 
+        protected override string ServiceName => throw new NotImplementedException();
+
         public AccountController(
             UserManager userManager,
             IMultiTenancyConfig multiTenancyConfig,
