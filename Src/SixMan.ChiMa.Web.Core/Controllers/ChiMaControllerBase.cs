@@ -59,13 +59,19 @@ namespace SixMan.ChiMa.Controllers
 
                     var importTaskInfo = BuildImportWork(worksheet);
 
-                    System.IO.File.Delete(file.ToString());
+                    //System.IO.File.Delete(file.ToString());
                     //return Json($"{excelfile.FileName}共{rowCount}行 导入{importCount}行");
                     return Json(importTaskInfo);
                 }
             }
+            catch(Exception ex)
+            {
+                Logger.Error(ex.Message);
+                throw ex;
+            }
             finally
             {
+                System.IO.File.Delete(file.ToString());
                 //return Json(ex.Message);
             }
         }

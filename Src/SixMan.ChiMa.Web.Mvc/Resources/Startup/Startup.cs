@@ -36,7 +36,8 @@ namespace SixMan.ChiMa.Web.Startup
             //MVC
             services.AddMvc(options =>
             {
-                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+                //options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+                
             });
 
             IdentityRegistrar.Register(services);
@@ -81,6 +82,8 @@ namespace SixMan.ChiMa.Web.Startup
 
             app.UseAuthentication();
             app.UseJwtTokenMiddleware();
+
+            
 
 #if FEATURE_SIGNALR
             //Integrate to OWIN

@@ -142,7 +142,13 @@ namespace SixMan.ChiMa.Web.Controllers
                         rowData[key] = value;
                     });
                     //过滤掉非法行
-                    if (string.IsNullOrEmpty(rowData["Description"]))
+                    if (  ! rowData.ContainsKey("Description")
+                         || string.IsNullOrEmpty(rowData["Description"]))
+                    {
+                        continue;
+                    }
+                    if (!rowData.ContainsKey("ImportId")
+                         || string.IsNullOrEmpty(rowData["ImportId"]))
                     {
                         continue;
                     }

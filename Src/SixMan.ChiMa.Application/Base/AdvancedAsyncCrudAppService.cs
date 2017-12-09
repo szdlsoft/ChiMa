@@ -134,6 +134,7 @@ namespace SixMan.ChiMa.Application.Base
 
         static ImportTaskInfo importTaskInfo = new ImportTaskInfo(); //导入任务信息单例
 
+        [RemoteService(isEnabled:false)]
         [UnitOfWork(IsDisabled = true)]
         public ImportTaskInfo BuildImportWork(List<Dictionary<string, string>> importData, string taskId)
         {
