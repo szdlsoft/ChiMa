@@ -63,19 +63,19 @@ namespace SixMan.ChiMa.Migrations
             migrationBuilder.AddColumn<string>(
                 name: "MatchingDescription",
                 table: "DishBom",
-                type: "nvarchar(max)",
+                
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "CookMethod",
                 table: "Dish",
-                type: "nvarchar(max)",
+                
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "DishCategory",
                 table: "Dish",
-                type: "nvarchar(max)",
+                
                 nullable: true);
 
             migrationBuilder.AddColumn<long>(
@@ -87,7 +87,7 @@ namespace SixMan.ChiMa.Migrations
             migrationBuilder.AddColumn<string>(
                 name: "Taste",
                 table: "Dish",
-                type: "nvarchar(max)",
+                
                 nullable: true);
         }
 

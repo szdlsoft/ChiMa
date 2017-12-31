@@ -16,15 +16,15 @@ namespace SixMan.ChiMa.Migrations
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     AffectDegree = table.Column<int>(type: "int", nullable: false),
-                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreationTime = table.Column<DateTime>( nullable: false),
                     CreatorUserId = table.Column<long>(type: "bigint", nullable: true),
                     DeleterUserId = table.Column<long>(type: "bigint", nullable: true),
-                    DeletionTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ExtensionData = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeletionTime = table.Column<DateTime>( nullable: true),
+                    ExtensionData = table.Column<string>( nullable: true),
                     FoodMaterialId = table.Column<long>(type: "bigint", nullable: false),
                     HealthConcernId = table.Column<long>(type: "bigint", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    LastModificationTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    LastModificationTime = table.Column<DateTime>( nullable: true),
                     LastModifierUserId = table.Column<long>(type: "bigint", nullable: true)
                 },
                 constraints: table =>
@@ -45,13 +45,13 @@ namespace SixMan.ChiMa.Migrations
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Code = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreationTime = table.Column<DateTime>( nullable: false),
                     CreatorUserId = table.Column<long>(type: "bigint", nullable: true),
                     DeleterUserId = table.Column<long>(type: "bigint", nullable: true),
-                    DeletionTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ExtensionData = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeletionTime = table.Column<DateTime>( nullable: true),
+                    ExtensionData = table.Column<string>( nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    LastModificationTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    LastModificationTime = table.Column<DateTime>( nullable: true),
                     LastModifierUserId = table.Column<long>(type: "bigint", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
@@ -66,15 +66,15 @@ namespace SixMan.ChiMa.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreationTime = table.Column<DateTime>( nullable: false),
                     CreatorUserId = table.Column<long>(type: "bigint", nullable: true),
                     DeleterUserId = table.Column<long>(type: "bigint", nullable: true),
-                    DeletionTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DeletionTime = table.Column<DateTime>( nullable: true),
                     Description = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
-                    ExtensionData = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ExtensionData = table.Column<string>( nullable: true),
                     HealthConcernCategoryId = table.Column<long>(type: "bigint", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    LastModificationTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    LastModificationTime = table.Column<DateTime>( nullable: true),
                     LastModifierUserId = table.Column<long>(type: "bigint", nullable: true)
                 },
                 constraints: table =>

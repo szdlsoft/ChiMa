@@ -9,21 +9,21 @@ namespace SixMan.ChiMa.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_FoodMaterial_FoodMaterialCategory_FoodMaterialCategoryId",
-                table: "FoodMaterial");
+            //migrationBuilder.DropForeignKey(
+            //    name: "FK_FoodMaterial_FoodMaterialCategory_FoodMaterialCategoryId",
+            //    table: "FoodMaterial");
 
-            migrationBuilder.DropForeignKey(
-                name: "FK_FoodMaterialHealthAffect_FoodMaterial_FoodMaterialId",
-                table: "FoodMaterialHealthAffect");
+            //migrationBuilder.DropForeignKey(
+            //    name: "FK_FoodMaterialHealthAffect_FoodMaterial_FoodMaterialId",
+            //    table: "FoodMaterialHealthAffect");
 
-            migrationBuilder.DropForeignKey(
-                name: "FK_FoodMaterialHealthAffect_HealthConcern_HealthConcernId",
-                table: "FoodMaterialHealthAffect");
+            //migrationBuilder.DropForeignKey(
+            //    name: "FK_FoodMaterialHealthAffect_HealthConcern_HealthConcernId",
+            //    table: "FoodMaterialHealthAffect");
 
-            migrationBuilder.DropForeignKey(
-                name: "FK_HealthConcern_HealthConcernCategory_HealthConcernCategoryId",
-                table: "HealthConcern");
+            //migrationBuilder.DropForeignKey(
+            //    name: "FK_HealthConcern_HealthConcernCategory_HealthConcernCategoryId",
+            //    table: "HealthConcern");
 
             migrationBuilder.AlterColumn<long>(
                 name: "HealthConcernCategoryId",
@@ -59,15 +59,15 @@ namespace SixMan.ChiMa.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreationTime = table.Column<DateTime>( nullable: false),
                     CreatorUserId = table.Column<long>(type: "bigint", nullable: true),
                     DeleterUserId = table.Column<long>(type: "bigint", nullable: true),
-                    DeletionTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ExtensionData = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeletionTime = table.Column<DateTime>( nullable: true),
+                    ExtensionData = table.Column<string>( nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    LastModificationTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    LastModificationTime = table.Column<DateTime>( nullable: true),
                     LastModifierUserId = table.Column<long>(type: "bigint", nullable: true),
-                    UUID = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    UUID = table.Column<Guid>( nullable: false)
                 },
                 constraints: table =>
                 {
@@ -80,14 +80,14 @@ namespace SixMan.ChiMa.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreationTime = table.Column<DateTime>( nullable: false),
                     CreatorUserId = table.Column<long>(type: "bigint", nullable: true),
                     DeleterUserId = table.Column<long>(type: "bigint", nullable: true),
-                    DeletionTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ExtensionData = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeletionTime = table.Column<DateTime>( nullable: true),
+                    ExtensionData = table.Column<string>( nullable: true),
                     FamilyId = table.Column<long>(type: "bigint", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    LastModificationTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    LastModificationTime = table.Column<DateTime>( nullable: true),
                     LastModifierUserId = table.Column<long>(type: "bigint", nullable: true),
                     PersonKind = table.Column<int>(type: "int", nullable: false),
                     Sex = table.Column<bool>(type: "bit", nullable: true),
@@ -112,15 +112,15 @@ namespace SixMan.ChiMa.Migrations
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     AffectDegree = table.Column<int>(type: "int", nullable: false),
-                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreationTime = table.Column<DateTime>( nullable: false),
                     CreatorUserId = table.Column<long>(type: "bigint", nullable: true),
                     DeleterUserId = table.Column<long>(type: "bigint", nullable: true),
-                    DeletionTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ExtensionData = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeletionTime = table.Column<DateTime>( nullable: true),
+                    ExtensionData = table.Column<string>( nullable: true),
                     FamilyMemberId = table.Column<long>(type: "bigint", nullable: true),
                     HealthConcernId = table.Column<long>(type: "bigint", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    LastModificationTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    LastModificationTime = table.Column<DateTime>( nullable: true),
                     LastModifierUserId = table.Column<long>(type: "bigint", nullable: true)
                 },
                 constraints: table =>

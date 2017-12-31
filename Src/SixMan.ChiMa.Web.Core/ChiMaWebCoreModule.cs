@@ -52,6 +52,7 @@ namespace SixMan.ChiMa
                  .CreateControllersForAppServices(
                      typeof(ChiMaApplicationModule).GetAssembly()
                  );
+            //Configuration.Modules.AbpMvc();
 
             ConfigureTokenAuth();
         }

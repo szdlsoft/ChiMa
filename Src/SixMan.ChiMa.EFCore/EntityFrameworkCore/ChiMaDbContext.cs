@@ -8,6 +8,8 @@ using SixMan.ChiMa.Domain.Dish;
 using SixMan.ChiMa.Domain.Base;
 using SixMan.ChiMa.Domain.Family;
 using SixMan.ChiMa.Domain.Common;
+using Abp.Notifications;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace SixMan.ChiMa.EFCore
 {
@@ -44,6 +46,9 @@ namespace SixMan.ChiMa.EFCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Ignore<NotificationInfo>();
+            modelBuilder.Ignore<NotificationSubscriptionInfo>();
+
             base.OnModelCreating(modelBuilder);
             //一下会建新表
             //modelBuilder.Entity<FoodMaterialCategory>().HasBaseType<CategoryBase>();
@@ -62,6 +67,8 @@ namespace SixMan.ChiMa.EFCore
                 .HasOne(ui => ui.User)
                 .WithOne(u => u.UserInfo)
                 .HasForeignKey<UserInfo>(ui => ui.UserId);
+
+
         }
     }
 }

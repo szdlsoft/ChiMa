@@ -21,6 +21,9 @@ namespace SixMan.ChiMa.Web.Startup
         public override void PreInitialize()
         {
             Configuration.Navigation.Providers.Add<ChiMaNavigationProvider>();
+
+            //Configuration.Modules.AbpMvc();
+
         }
 
         public override void Initialize()

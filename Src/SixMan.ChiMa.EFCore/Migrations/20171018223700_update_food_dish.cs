@@ -208,13 +208,13 @@ namespace SixMan.ChiMa.Migrations
             migrationBuilder.AddColumn<string>(
                 name: "PreProcess",
                 table: "DishBom",
-                type: "nvarchar(max)",
+                
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "EnglishName",
                 table: "Dish",
-                type: "nvarchar(max)",
+                
                 nullable: true);
         }
 

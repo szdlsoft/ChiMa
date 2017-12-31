@@ -130,30 +130,38 @@ function ImportViewModel() {
 
     self.exeUpload = function () {
         var formData = new FormData($("#uploadForm")[0]);
-        $.ajax({
-            type: "POST",
+        //$.ajax({
+        //    type: "POST",
+        //    url: '/' + domainCrud.urlPath + '/Import',
+        //    contentType: false,
+        //    processData: false,
+        //    data: formData,
+        //    success: function (res) {
+        //        if (res.success) {
+        //            abp.notify.success('上传文件成功', '导入任务：' + res.result.taskId);
+        //            self.update(res.result);
+        //        }
+        //        else {
+        //            abp.notify.error('上传文件失败：', res.error.message);
+        //        }
+        //    },
+        //    error: function (res) {
+
+        //        alert("上传文件出现错误:" + res);
+        //    }
+        //});
+
+        abp.ajax({
             url: '/' + domainCrud.urlPath + '/Import',
             contentType: false,
             processData: false,
             data: formData,
-            success: function (res) {
-                if (res.success) {
-                    abp.notify.success('上传文件成功', '导入任务：' + res.result.taskId);
-                    self.update(res.result);
-                    //self.importRunning(true);
-                    //self.workId(res.result);
-                    //启动定时器;
-                    //self.startTimer();
-                }
-                else {
-                    abp.notify.error('上传文件失败：', res.error.message);
-                }
-            },
-            error: function (res) {
-
-                alert("上传文件出现错误:" + res);
-            }
+        }).done(function (data) {
+            abp.notify.success('上传文件成功', '导入任务：' + data.taskId);
+            self.update(data);
         });
+
+
         self.startTimer();
     }
 
