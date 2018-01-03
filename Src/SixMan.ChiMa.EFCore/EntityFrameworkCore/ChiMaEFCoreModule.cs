@@ -35,11 +35,14 @@ namespace SixMan.ChiMa.EFCore
                         ChiMaDbContextConfigurer.Configure(options.DbContextOptions, options.ConnectionString);
                     }
 
-                    options.DbContextOptions.UseLoggerFactory(MyLoggerFactory);
+                    //options.DbContextOptions.UseLoggerFactory(MyLoggerFactory);
                 });
             }
         }
 
+        /// <summary>
+        /// 显示sql
+        /// </summary>
         public static readonly LoggerFactory MyLoggerFactory
             = new LoggerFactory(new[]
             {

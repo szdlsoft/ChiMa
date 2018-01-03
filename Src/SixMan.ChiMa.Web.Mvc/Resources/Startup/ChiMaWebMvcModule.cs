@@ -23,6 +23,7 @@ namespace SixMan.ChiMa.Web.Startup
             Configuration.Navigation.Providers.Add<ChiMaNavigationProvider>();
 
             //Configuration.Modules.AbpMvc();
+            Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
 
         }
 

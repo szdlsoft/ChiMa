@@ -5368,3 +5368,633 @@ INFO  2017-12-31 19:37:04,942 [24   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2017-12-31 19:37:05,062 [23   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
 INFO  2017-12-31 19:37:05,077 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Food.DishAppService.GetAll (SixMan.ChiMa.Application) in 170.1353ms
 INFO  2017-12-31 19:37:05,094 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 251.301ms 200 application/json; charset=utf-8
+DEBUG 2018-01-02 18:07:53,247 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-02 18:07:53,312 [1    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2018-01-02 18:07:53,330 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Web.Startup.ChiMaWebMvcModule, SixMan.ChiMa.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,336 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.ChiMaWebCoreModule, SixMan.ChiMa.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,337 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,337 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,337 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,340 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,340 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,341 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,341 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:53,346 [1    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2018-01-02 18:07:53,775 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-02 18:07:54,239 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-01-02 18:07:54,265 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-02 18:07:54,271 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-01-02 18:07:54,274 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-01-02 18:07:54,276 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-02 18:07:54,410 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-01-02 18:07:54,476 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2018-01-02 18:07:54,476 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-01-02 18:07:54,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-01-02 18:07:54,481 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-01-02 18:07:54,481 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-01-02 18:07:54,481 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-01-02 18:07:54,481 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-01-02 18:07:54,481 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-01-02 18:07:54,481 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-01-02 18:07:54,482 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-01-02 18:07:54,482 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-01-02 18:07:54,482 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.DishBomDto
+DEBUG 2018-01-02 18:07:54,482 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.DishDto
+DEBUG 2018-01-02 18:07:54,482 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-01-02 18:07:54,482 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-01-02 18:07:54,482 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+INFO  2018-01-02 18:11:46,219 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/  
+WARN  2018-01-02 18:11:48,209 [6    ] Mvc.Authorization.AbpAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.<OnAuthorizationAsync>d__8.MoveNext() in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.<OnAuthorizationAsync>d__8.MoveNext() in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-01-02 18:11:48,225 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-01-02 18:11:48,228 [6    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-01-02 18:11:48,241 [6    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2018-01-02 18:11:48,245 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 177.7982ms
+INFO  2018-01-02 18:11:48,262 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2048.1591ms 302 
+INFO  2018-01-02 18:11:48,275 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/Account/Login?ReturnUrl=%2F  
+INFO  2018-01-02 18:11:50,139 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) with arguments (, /, ) - ModelState is Valid
+INFO  2018-01-02 18:11:54,819 [5    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-01-02 18:11:56,366 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) in 8022.4972ms
+INFO  2018-01-02 18:11:56,373 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8097.893ms 200 text/html; charset=utf-8
+INFO  2018-01-02 18:11:56,426 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/fonts/roboto/roboto.css?v=DWPiEyLnt8XZ68WQeudmZPGSejowhmQNUUhaX8dYF1Q  
+INFO  2018-01-02 18:11:56,426 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap/dist/css/bootstrap.css?v=rYUBh-J0b_zGCzbG02wJhid-ncHyd0BsoUYpjLLSowk  
+INFO  2018-01-02 18:11:56,426 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/toastr/toastr.css?v=W8a9WvLyUO7CXtOC4f9LoUMwkywM7JSq-Xm5kNsYW08  
+INFO  2018-01-02 18:11:56,426 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/fonts/material-icons/materialicons.css?v=2SsVsQpWRHM3EJ4D4MT4RRpiEXbEuK0vEjPxVr5P7Ek  
+INFO  2018-01-02 18:11:56,427 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/sweetalert/dist/sweetalert.css?v=k66BSDvi6XBdtM2RH6QQvCz2wk81XcWsiZ3kn6uFTmM  
+INFO  2018-01-02 18:11:56,429 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/material-icons/materialicons.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\material-icons\materialicons.css'
+INFO  2018-01-02 18:11:56,429 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+INFO  2018-01-02 18:11:56,429 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/toastr/toastr.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\toastr\toastr.css'
+INFO  2018-01-02 18:11:56,429 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/roboto.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\roboto.css'
+INFO  2018-01-02 18:11:56,429 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert/dist/sweetalert.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\sweetalert\dist\sweetalert.css'
+INFO  2018-01-02 18:11:56,436 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css?v=l7wu43l7XpKWzFn29hiH8AFe4I_CNzbCPmaAQivPYMg  
+INFO  2018-01-02 18:11:56,439 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\famfamfam-flags\dist\sprite\famfamfam-flags.css'
+INFO  2018-01-02 18:11:56,445 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.4427ms 200 text/css
+INFO  2018-01-02 18:11:56,446 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.4086ms 200 text/css
+INFO  2018-01-02 18:11:56,445 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.3399ms 200 text/css
+INFO  2018-01-02 18:11:56,446 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.0766ms 200 text/css
+INFO  2018-01-02 18:11:56,447 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.8672ms 200 text/css
+INFO  2018-01-02 18:11:56,463 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 36.7513ms 200 text/css
+INFO  2018-01-02 18:11:56,558 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/font-awesome/css/font-awesome.css?v=NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w  
+INFO  2018-01-02 18:11:56,575 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/font-awesome/css/font-awesome.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\font-awesome\css\font-awesome.css'
+INFO  2018-01-02 18:11:56,577 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/Waves/dist/waves.css?v=0zP86LzXedNkkBjePtKrMTAPuIy6EzHfGlyYvsmGLBw  
+INFO  2018-01-02 18:11:56,586 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Waves/dist/waves.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Waves\dist\waves.css'
+INFO  2018-01-02 18:11:56,586 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/materialize.css?v=OdWlipUYj8b9Oa4RyT45njteIcxH-4pGocqe0r0V8js  
+INFO  2018-01-02 18:11:56,587 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/materialize.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\css\materialize.css'
+INFO  2018-01-02 18:11:56,588 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/style.css?v=nIUqvgmhV7KfZPO7fQUdDF7wWBSsEL5K3bnNmGT8YQw  
+INFO  2018-01-02 18:11:56,589 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/style.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\css\style.css'
+INFO  2018-01-02 18:11:56,590 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.8294ms 200 text/css
+INFO  2018-01-02 18:11:56,590 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.9236ms 200 text/css
+INFO  2018-01-02 18:11:56,592 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 29.2953ms 200 text/css
+INFO  2018-01-02 18:11:56,582 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/animate.css/animate.css?v=00w68NO3TLuHjKRHJmjrrgJBDtG_6OhbJEu1gtHcsuo  
+INFO  2018-01-02 18:11:56,599 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/animate.css/animate.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\animate.css\animate.css'
+INFO  2018-01-02 18:11:56,600 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.8869ms 200 text/css
+INFO  2018-01-02 18:11:56,601 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.0395ms 200 text/css
+INFO  2018-01-02 18:11:56,614 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/view-resources/Views/Account/_Layout.css?v=vIEtxnpR3ZrYbYcueRr_mJ9XuJJzDprh4sMCwvRBcqk  
+INFO  2018-01-02 18:11:56,617 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/_Layout.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Account\_Layout.css'
+INFO  2018-01-02 18:11:56,619 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.0388ms 200 text/css
+INFO  2018-01-02 18:11:56,668 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/view-resources/Views/Account/Login.css?v=Hq5aBVr9vqsOYI_zoZha7PxZnLUdiilICi-gjP3RrfU  
+INFO  2018-01-02 18:11:56,668 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/json2/json2.js?v=EZJ68U7eUi8uSP0MRRUalYten2eOlhREE9kJOIbIeYg  
+INFO  2018-01-02 18:11:56,668 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/Login.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Account\Login.css'
+INFO  2018-01-02 18:11:56,668 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/json2/json2.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\json2\json2.js'
+INFO  2018-01-02 18:11:56,669 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3768ms 200 text/css
+INFO  2018-01-02 18:11:56,669 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6132ms 200 application/javascript
+INFO  2018-01-02 18:11:56,675 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery/dist/jquery.js?v=oYqpLeqZe9cetUDV-TFiBZHp3uJ-X4F5eLs4W6uSTSE  
+INFO  2018-01-02 18:11:56,676 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap/dist/js/bootstrap.js?v=3vw5dArBhZ2OJ4XtRzIIQJYn6Hrd1fePLeqsuToS1R0  
+INFO  2018-01-02 18:11:56,676 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery\dist\jquery.js'
+INFO  2018-01-02 18:11:56,677 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+INFO  2018-01-02 18:11:56,677 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/moment/min/moment-with-locales.js?v=7CN4bWPV0U57HDA4YjdCBKCAynhqdWErjNn-5rrsW_I  
+INFO  2018-01-02 18:11:56,678 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.0668ms 200 application/javascript
+INFO  2018-01-02 18:11:56,679 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/moment/min/moment-with-locales.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\moment\min\moment-with-locales.js'
+INFO  2018-01-02 18:11:56,682 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.1155ms 200 application/javascript
+INFO  2018-01-02 18:11:56,719 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 41.806ms 200 application/javascript
+INFO  2018-01-02 18:11:56,749 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery-validation/dist/jquery.validate.js?v=KuzD50lDGNI5jq_ipt4hwDpSJk3fhseTR1jdvaBoZLs  
+INFO  2018-01-02 18:11:56,749 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+INFO  2018-01-02 18:11:56,750 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6746ms 200 application/javascript
+INFO  2018-01-02 18:11:56,816 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/sweetalert/dist/sweetalert-dev.js?v=Y6AEuvugryve80FgzPE3e2EONgfiYPcaSaqF-vIFGIA  
+INFO  2018-01-02 18:11:56,816 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/spin.js/spin.js?v=GySbz3oZXNlwoawo5PpYy0iM38B-q3jyi_HLw00uxy0  
+INFO  2018-01-02 18:11:56,816 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/toastr/toastr.js?v=C7DJ6LzTt1Hvj9fd-yRnySs3I4T2B8XmQ3TqXQjc00g  
+INFO  2018-01-02 18:11:56,817 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert/dist/sweetalert-dev.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\sweetalert\dist\sweetalert-dev.js'
+INFO  2018-01-02 18:11:56,817 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/toastr/toastr.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\toastr\toastr.js'
+INFO  2018-01-02 18:11:56,817 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/spin.js/spin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\spin.js\spin.js'
+INFO  2018-01-02 18:11:56,818 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.4169ms 200 application/javascript
+INFO  2018-01-02 18:11:56,818 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6247ms 200 application/javascript
+INFO  2018-01-02 18:11:56,819 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.3223ms 200 application/javascript
+INFO  2018-01-02 18:11:56,827 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/blockUI/jquery.blockUI.js?v=oQaw-JJuUcJQ9QVYMcFnPxICDT-hv8-kuxT2FNzTGhc  
+INFO  2018-01-02 18:11:56,833 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/blockUI/jquery.blockUI.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\blockUI\jquery.blockUI.js'
+INFO  2018-01-02 18:11:56,835 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.0234ms 200 application/javascript
+INFO  2018-01-02 18:11:56,848 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/spin.js/jquery.spin.js?v=EG38bUU5b2M64hy9cNAzu_cQBEsiBYsDifOcoHqNd2k  
+INFO  2018-01-02 18:11:56,851 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/spin.js/jquery.spin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\spin.js\jquery.spin.js'
+INFO  2018-01-02 18:11:56,852 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.5046ms 200 application/javascript
+INFO  2018-01-02 18:11:56,860 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/Waves/dist/waves.js?v=Lar7zQhqgdoUsaqhuwkgnWgsC-eRWIxHhJPV-QtrDog  
+INFO  2018-01-02 18:11:56,862 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Waves/dist/waves.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Waves\dist\waves.js'
+INFO  2018-01-02 18:11:56,865 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.2441ms 200 application/javascript
+INFO  2018-01-02 18:11:56,882 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/abp-web-resources/Abp/Framework/scripts/abp.js?v=I0CubvW8_esRw0C3pJAxZNnJ50c-ey8hcnHnY3EDFCs  
+INFO  2018-01-02 18:11:56,883 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/abp.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\abp.js'
+INFO  2018-01-02 18:11:56,884 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.4187ms 200 application/javascript
+INFO  2018-01-02 18:11:56,912 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js?v=kgwv_knqbBGWov46FOIyKJkElndhius8GmAb4fiDnSI  
+INFO  2018-01-02 18:11:56,913 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.jquery.js'
+INFO  2018-01-02 18:11:56,913 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js?v=QiSp17ew3zyFmdlcKq4HCIOw7UaqE8MC46Ekv50GzPs  
+INFO  2018-01-02 18:11:56,914 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.3239ms 200 application/javascript
+INFO  2018-01-02 18:11:56,915 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.toastr.js'
+INFO  2018-01-02 18:11:56,917 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.5187ms 200 application/javascript
+INFO  2018-01-02 18:11:56,932 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js?v=vMuHbqHh635SKL2RG2qsGGCDyHg1yFeGqhPKpS34g4k  
+INFO  2018-01-02 18:11:56,934 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.blockUI.js'
+INFO  2018-01-02 18:11:56,935 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.6444ms 200 application/javascript
+INFO  2018-01-02 18:11:56,935 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js?v=djoKib6ssm5DDzbXLe5pD7ayfFg3siaoEk-BFYzQlvI  
+INFO  2018-01-02 18:11:56,936 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.spin.js'
+INFO  2018-01-02 18:11:56,936 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js?v=RaK_bqL9zcfooV7iieu-qPXft0_1IEOHnAiysV2s5eo  
+INFO  2018-01-02 18:11:56,937 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.8065ms 200 application/javascript
+INFO  2018-01-02 18:11:56,937 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.sweet-alert.js'
+INFO  2018-01-02 18:11:56,938 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.6127ms 200 application/javascript
+INFO  2018-01-02 18:11:56,972 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/fonts/roboto/CWB0XYA8bzo0kSThX0UTuA.woff2  
+INFO  2018-01-02 18:11:56,972 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/fonts/roboto/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2  
+INFO  2018-01-02 18:11:56,973 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/CWB0XYA8bzo0kSThX0UTuA.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\CWB0XYA8bzo0kSThX0UTuA.woff2'
+INFO  2018-01-02 18:11:56,973 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/roboto/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\roboto\d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2'
+INFO  2018-01-02 18:11:56,977 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/fonts/material-icons/materialicons.woff2  
+INFO  2018-01-02 18:11:56,993 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/fonts/material-icons/materialicons.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\fonts\material-icons\materialicons.woff2'
+INFO  2018-01-02 18:11:56,993 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20.6254ms 200 font/woff2
+INFO  2018-01-02 18:11:56,993 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 24.8959ms 200 font/woff2
+INFO  2018-01-02 18:11:56,995 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/main.js?v=GmU_olKtI9zeSkSj74hvcxYvV346pQbe6-QCCCstV7c  
+INFO  2018-01-02 18:11:56,995 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/admin.js?v=rFjFALFzVDU8tWiHtkJ4QGfTpdf9IiPLvc3a-xXLleU  
+INFO  2018-01-02 18:11:56,996 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/AbpServiceProxies/GetAll?v=636505132744131123  
+INFO  2018-01-02 18:11:56,996 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/main.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\js\main.js'
+INFO  2018-01-02 18:11:56,996 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/admin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\js\admin.js'
+INFO  2018-01-02 18:11:56,996 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.0871ms 200 application/javascript
+INFO  2018-01-02 18:11:56,997 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3132ms 200 application/javascript
+INFO  2018-01-02 18:11:56,998 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20.7206ms 200 font/woff2
+INFO  2018-01-02 18:11:57,047 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/AbpScripts/GetScripts?v=636505132744131123  
+INFO  2018-01-02 18:11:57,048 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/view-resources/Views/Account/Login.js?v=o2PUQBkwW7VjtzD5RNxKPa3oShr3fMFHds_2dwIAV5M  
+INFO  2018-01-02 18:11:57,049 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/Login.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Account\Login.js'
+INFO  2018-01-02 18:11:57,059 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.9858ms 200 application/javascript
+INFO  2018-01-02 18:11:57,095 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-01-02 18:11:57,108 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-01-02 18:11:57,194 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/famfamfam-flags/dist/sprite/famfamfam-flags.png  
+INFO  2018-01-02 18:11:57,195 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/famfamfam-flags/dist/sprite/famfamfam-flags.png'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\famfamfam-flags\dist\sprite\famfamfam-flags.png'
+INFO  2018-01-02 18:11:57,237 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 42.2634ms 200 image/png
+WARN  2018-01-02 18:11:57,253 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+WARN  2018-01-02 18:11:57,263 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'DishFood' in localization source 'ChiMa'!
+WARN  2018-01-02 18:11:57,269 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterialCategory' in localization source 'ChiMa'!
+WARN  2018-01-02 18:11:57,269 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterial' in localization source 'ChiMa'!
+WARN  2018-01-02 18:11:57,269 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Dish' in localization source 'ChiMa'!
+INFO  2018-01-02 18:11:57,317 [16   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-02 18:11:57,319 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 233.9774ms
+INFO  2018-01-02 18:11:57,319 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 323.1766ms 200 text/plain; charset=utf-8
+INFO  2018-01-02 18:11:57,503 [16   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-01-02 18:11:57,503 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 420.4979ms
+INFO  2018-01-02 18:11:57,507 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 459.715ms 200 application/x-javascript; charset=utf-8
+INFO  2018-01-02 18:11:57,732 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico  
+INFO  2018-01-02 18:11:57,733 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\favicon.ico'
+INFO  2018-01-02 18:11:57,734 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.8466ms 200 image/x-icon
+INFO  2018-01-02 18:12:07,738 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://127.0.0.1:5000/Account/Login application/x-www-form-urlencoded 272
+INFO  2018-01-02 18:12:07,789 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) with arguments (SixMan.ChiMa.Web.Models.Account.LoginViewModel, /, ) - ModelState is Valid
+INFO  2018-01-02 18:12:08,809 [17   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application signed in.
+INFO  2018-01-02 18:12:08,923 [18   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-01-02 18:12:08,948 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) in 1199.6205ms
+INFO  2018-01-02 18:12:08,952 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1213.8839ms 200 application/json; charset=utf-8
+INFO  2018-01-02 18:12:08,969 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/  
+INFO  2018-01-02 18:12:09,008 [5    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:12:09,041 [5    ] uthorization.DefaultAuthorizationService - Authorization was successful for user: admin.
+INFO  2018-01-02 18:12:09,365 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+INFO  2018-01-02 18:12:09,686 [18   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+WARN  2018-01-02 18:12:11,129 [18   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+WARN  2018-01-02 18:12:11,455 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'DishFood' in localization source 'ChiMa'!
+WARN  2018-01-02 18:12:11,461 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterialCategory' in localization source 'ChiMa'!
+WARN  2018-01-02 18:12:11,461 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterial' in localization source 'ChiMa'!
+WARN  2018-01-02 18:12:11,461 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'Dish' in localization source 'ChiMa'!
+INFO  2018-01-02 18:12:12,103 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 3093.0047ms
+INFO  2018-01-02 18:12:12,106 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3137.0059ms 200 text/html; charset=utf-8
+INFO  2018-01-02 18:12:12,148 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap-select/dist/css/bootstrap-select.css?v=a7N4Jki3LzSbThclvqbu4nF45twcjuc772JGFhY9qwk  
+INFO  2018-01-02 18:12:12,149 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-select/dist/css/bootstrap-select.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-select\dist\css\bootstrap-select.css'
+INFO  2018-01-02 18:12:12,150 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3073ms 200 text/css
+INFO  2018-01-02 18:12:12,163 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/themes/all-themes.css?v=XaAlkmhL9gA6mBxpcxGYAWxggxkIpRmT9qGbKejs6eA  
+INFO  2018-01-02 18:12:12,165 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/themes/all-themes.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\css\themes\all-themes.css'
+INFO  2018-01-02 18:12:12,165 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/view-resources/Views/Shared/_Layout.css?v=uq7unI_U0xZr0Pbyzeu6KfbJKHVFuv0wNJ4CrrhQknw  
+INFO  2018-01-02 18:12:12,166 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.5455ms 200 text/css
+INFO  2018-01-02 18:12:12,166 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/_Layout.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Shared\_Layout.css'
+INFO  2018-01-02 18:12:12,167 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.9814ms 200 text/css
+INFO  2018-01-02 18:12:12,211 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css?v=HAPJ4ILpFTka99BM4To9Fq_8-xzi-FIdrrRkbH1GlZI  
+INFO  2018-01-02 18:12:12,211 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap-table/dist/bootstrap-table.min.css?v=yqIeIwu2ATUy7sjkSLLgvhxNFoCP3ZvSU5XjxgLnVgk  
+INFO  2018-01-02 18:12:12,212 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bDialog-master/b.dialog.bootstrap3.css?v=GwbADGDvZL0Z6RNknx3QcDcBoRsk5QIHNtyK3gR08gs  
+INFO  2018-01-02 18:12:12,212 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-table/dist/bootstrap-table.min.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-table\dist\bootstrap-table.min.css'
+INFO  2018-01-02 18:12:12,212 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\x-editable\dist\bootstrap3-editable\css\bootstrap-editable.css'
+INFO  2018-01-02 18:12:12,213 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/morris.js/morris.css?v=szHusaozbQctTn4FX-3l5E0A5zoxz7-ne4fr8NgWJlw  
+INFO  2018-01-02 18:12:12,213 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bDialog-master/b.dialog.bootstrap3.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bDialog-master\b.dialog.bootstrap3.css'
+INFO  2018-01-02 18:12:12,213 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.1947ms 200 text/css
+INFO  2018-01-02 18:12:12,214 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.233ms 200 text/css
+INFO  2018-01-02 18:12:12,214 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/morris.js/morris.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\morris.js\morris.css'
+INFO  2018-01-02 18:12:12,214 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.245ms 200 text/css
+INFO  2018-01-02 18:12:12,213 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.7646ms 200 text/css
+INFO  2018-01-02 18:12:12,236 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js?v=KRy14h9pmPIVHFM19sEMkiOqzL35bXrJZtrRpOQIhiQ  
+INFO  2018-01-02 18:12:12,238 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+INFO  2018-01-02 18:12:12,240 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.3741ms 200 application/javascript
+INFO  2018-01-02 18:12:12,256 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap-select/dist/js/bootstrap-select.js?v=_KDPX2Vvqq8sySMxlLNJxt9j6Cmb8i_xp602ozhYxzI  
+INFO  2018-01-02 18:12:12,258 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-select/dist/js/bootstrap-select.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-select\dist\js\bootstrap-select.js'
+INFO  2018-01-02 18:12:12,260 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.5285ms 200 application/javascript
+INFO  2018-01-02 18:12:12,272 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery-slimscroll/jquery.slimscroll.js?v=4K6ZHzwMYR5_eU2SeDIaByus_qki9IFY8hmxl5U6D1Y  
+INFO  2018-01-02 18:12:12,274 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-slimscroll/jquery.slimscroll.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-slimscroll\jquery.slimscroll.js'
+INFO  2018-01-02 18:12:12,276 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.5942ms 200 application/javascript
+INFO  2018-01-02 18:12:12,283 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/knockout/dist/knockout.js?v=SU8Ktvieb7jQ86Q5Ugen8GQIyXLK2uoX-CFV26ASVV8  
+INFO  2018-01-02 18:12:12,284 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/knockout/dist/knockout.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\knockout\dist\knockout.js'
+INFO  2018-01-02 18:12:12,285 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.7924ms 200 application/javascript
+INFO  2018-01-02 18:12:12,299 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/knockout-mapping/knockout.mapping.js?v=IGidKlkIhnqcYwA598MWol5Peg_RKaJmEl9ym25s0RQ  
+INFO  2018-01-02 18:12:12,300 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/knockout-mapping/knockout.mapping.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\knockout-mapping\knockout.mapping.js'
+INFO  2018-01-02 18:12:12,301 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.3841ms 200 application/javascript
+INFO  2018-01-02 18:12:12,313 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.js?v=leiXr1xYHVK3qHOUWvvRSOCe6QFmwtgbmYDknG27t_A  
+INFO  2018-01-02 18:12:12,314 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\x-editable\dist\bootstrap3-editable\js\bootstrap-editable.js'
+INFO  2018-01-02 18:12:12,324 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.2741ms 200 application/javascript
+INFO  2018-01-02 18:12:12,333 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap-table/dist/bootstrap-table.js?v=DfDAzq8YNt1L4F8Fc2Jr0omV8yW2dc877FBMM9glZkU  
+INFO  2018-01-02 18:12:12,335 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-table/dist/bootstrap-table.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-table\dist\bootstrap-table.js'
+INFO  2018-01-02 18:12:12,343 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.3354ms 200 application/javascript
+INFO  2018-01-02 18:12:12,343 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js?v=Kr5pppbyjxOWxEZeDnMV-o_LwrYrvV0RLzoinWiVS-s  
+INFO  2018-01-02 18:12:12,343 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap-table/dist/extensions/editable/bootstrap-table-editable.js?v=pBUD9fiFSI_a44dkhsIL2ecGYqAYqZ47G49mDgK2KZM  
+INFO  2018-01-02 18:12:12,344 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-table/dist/locale/bootstrap-table-zh-CN.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-table\dist\locale\bootstrap-table-zh-CN.js'
+INFO  2018-01-02 18:12:12,344 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-table/dist/extensions/editable/bootstrap-table-editable.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bootstrap-table\dist\extensions\editable\bootstrap-table-editable.js'
+INFO  2018-01-02 18:12:12,350 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.1705ms 200 application/javascript
+INFO  2018-01-02 18:12:12,350 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bDialog-master/b.dialog.js?v=5JYGMnpjxSbngt4OILcETNwC1fUDUwbnFkkwsEqfXsM  
+INFO  2018-01-02 18:12:12,351 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.9014ms 200 application/javascript
+INFO  2018-01-02 18:12:12,351 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bDialog-master/b.dialog.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\bDialog-master\b.dialog.js'
+INFO  2018-01-02 18:12:12,354 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.4733ms 200 application/javascript
+INFO  2018-01-02 18:12:12,354 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/push.js/push.js?v=HDxbpm8oBKwe1bmX9Z1SahYYA7zEbc1dk7LfopvOvoE  
+INFO  2018-01-02 18:12:12,355 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/knockout.bootstraptable.js?v=Yt-tuKvLPUZ4U9r1MzPzsFS9cdD9Wrvd8pKHfTET_a8  
+INFO  2018-01-02 18:12:12,356 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/knockout.bootstraptable.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\js\knockout.bootstraptable.js'
+INFO  2018-01-02 18:12:12,356 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/push.js/push.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\push.js\push.js'
+INFO  2018-01-02 18:12:12,357 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.9073ms 200 application/javascript
+INFO  2018-01-02 18:12:12,357 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.1551ms 200 application/javascript
+INFO  2018-01-02 18:12:12,384 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/admin.js  
+INFO  2018-01-02 18:12:12,387 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/admin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\js\admin.js'
+INFO  2018-01-02 18:12:12,392 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.9304ms 200 application/javascript
+INFO  2018-01-02 18:12:12,388 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/view-resources/Views/Shared/_Layout.js?v=jOYc7_5N1zFKt3qTihQ-9Kc0wjSMXkAeHUXNyvn8sYo  
+INFO  2018-01-02 18:12:12,400 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/_Layout.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Shared\_Layout.js'
+INFO  2018-01-02 18:12:12,401 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.7791ms 200 application/javascript
+INFO  2018-01-02 18:12:12,409 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/AbpServiceProxies/GetAll?v=636505132744131123  
+INFO  2018-01-02 18:12:12,409 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/AbpScripts/GetScripts?v=636505132744131123  
+INFO  2018-01-02 18:12:12,414 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery-countTo/jquery.countTo.js?v=AGGYFLOyVnIKn_2UCDl9D_5VWf8wHWCOtm9YU0P9g6I  
+INFO  2018-01-02 18:12:12,416 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-countTo/jquery.countTo.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-countTo\jquery.countTo.js'
+INFO  2018-01-02 18:12:12,418 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.1377ms 200 application/javascript
+INFO  2018-01-02 18:12:12,419 [17   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:12:12,419 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/raphael/raphael.js?v=MPXjTSEImVJI1834JAHubdK7Lts1VTUPJmCQ9zKAjyA  
+INFO  2018-01-02 18:12:12,424 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/raphael/raphael.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\raphael\raphael.js'
+INFO  2018-01-02 18:12:12,425 [20   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:12:12,433 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-01-02 18:12:12,434 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-01-02 18:12:12,435 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-02 18:12:12,436 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 10.4426ms
+INFO  2018-01-02 18:12:12,436 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 27.2733ms 200 text/plain; charset=utf-8
+INFO  2018-01-02 18:12:12,440 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20.3699ms 200 application/javascript
+INFO  2018-01-02 18:12:12,451 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+INFO  2018-01-02 18:12:12,452 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2'
+INFO  2018-01-02 18:12:12,458 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/morris.js/morris.js?v=cQB75DEaDbn4oSiaWgdoh3TuZCHSO-kYdD_Ehka48Ro  
+INFO  2018-01-02 18:12:12,459 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/morris.js/morris.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\morris.js\morris.js'
+INFO  2018-01-02 18:12:12,472 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.7971ms 200 application/javascript
+INFO  2018-01-02 18:12:12,479 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 27.6778ms 200 font/woff2
+INFO  2018-01-02 18:12:12,479 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/chart.js/dist/Chart.bundle.js?v=TQAtDUIU_0XtXZLNjMBV8noK8jNSngwHlgtC_PvsRAk  
+INFO  2018-01-02 18:12:12,479 [16   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/chart.js/dist/Chart.bundle.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\chart.js\dist\Chart.bundle.js'
+WARN  2018-01-02 18:12:12,480 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+INFO  2018-01-02 18:12:12,497 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/Flot/jquery.flot.resize.js?v=i59RRvMkqw-28mDu6YRzKo77gmM7k9aPZMtcw45wgu4  
+INFO  2018-01-02 18:12:12,498 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/Flot/jquery.flot.js?v=t7kx8nPDixJ3ucbB9OBcTsCYhaSHvdrzJ54tfkmjjhI  
+INFO  2018-01-02 18:12:12,498 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.resize.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.resize.js'
+INFO  2018-01-02 18:12:12,498 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.js'
+INFO  2018-01-02 18:12:12,499 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.1678ms 200 application/javascript
+INFO  2018-01-02 18:12:12,500 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.3342ms 200 application/javascript
+INFO  2018-01-02 18:12:12,502 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23.3646ms 200 application/javascript
+INFO  2018-01-02 18:12:12,502 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/Flot/jquery.flot.pie.js?v=RsEWYd9gdLG1bCIcU8j59Rkvf_1O7HtzoD1TRUs22cU  
+INFO  2018-01-02 18:12:12,506 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.pie.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.pie.js'
+INFO  2018-01-02 18:12:12,507 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.7914ms 200 application/javascript
+INFO  2018-01-02 18:12:12,513 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/Flot/jquery.flot.categories.js?v=boFmSyjqeVxzSQb0qhVhRkCnWsf705mn-5CEBAaYNRo  
+INFO  2018-01-02 18:12:12,514 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.categories.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.categories.js'
+INFO  2018-01-02 18:12:12,516 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.5006ms 200 application/javascript
+WARN  2018-01-02 18:12:12,524 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'DishFood' in localization source 'ChiMa'!
+INFO  2018-01-02 18:12:12,551 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/Flot/jquery.flot.time.js?v=pYLIMq3HE4prBar2HxbrrCdHAfG-Sv6nfnOaHDS5xBo  
+WARN  2018-01-02 18:12:12,552 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterialCategory' in localization source 'ChiMa'!
+WARN  2018-01-02 18:12:12,552 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterial' in localization source 'ChiMa'!
+INFO  2018-01-02 18:12:12,552 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery-sparkline/dist/jquery.sparkline.js?v=k0LZZpXY4vJp6vbA5CL5bb20Ou0IO3Shz-J6U6Vq56c  
+WARN  2018-01-02 18:12:12,552 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'Dish' in localization source 'ChiMa'!
+INFO  2018-01-02 18:12:12,552 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/Flot/jquery.flot.time.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\Flot\jquery.flot.time.js'
+INFO  2018-01-02 18:12:12,552 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-sparkline/dist/jquery.sparkline.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\lib\jquery-sparkline\dist\jquery.sparkline.js'
+INFO  2018-01-02 18:12:12,553 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.9195ms 200 application/javascript
+INFO  2018-01-02 18:12:12,554 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.3436ms 200 application/javascript
+INFO  2018-01-02 18:12:12,564 [20   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-01-02 18:12:12,567 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 140.1411ms
+INFO  2018-01-02 18:12:12,568 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 159.2775ms 200 application/x-javascript; charset=utf-8
+INFO  2018-01-02 18:12:12,571 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/view-resources/Views/Home/Index.js?v=tRGDdqeVjO63iaO1qvGPpKF2NuT2riEOyYovlY_otk0  
+INFO  2018-01-02 18:12:12,571 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/images/user-img-background.jpg  
+INFO  2018-01-02 18:12:12,571 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/images/user.png  
+INFO  2018-01-02 18:12:12,572 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Home/Index.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Home\Index.js'
+INFO  2018-01-02 18:12:12,572 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/user-img-background.jpg'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\images\user-img-background.jpg'
+INFO  2018-01-02 18:12:12,572 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/user.png'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\images\user.png'
+INFO  2018-01-02 18:12:12,572 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.1921ms 200 application/javascript
+INFO  2018-01-02 18:12:12,574 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.0139ms 200 image/png
+INFO  2018-01-02 18:12:12,574 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.3672ms 200 image/jpeg
+INFO  2018-01-02 18:14:19,519 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger  
+INFO  2018-01-02 18:14:19,526 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,544 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 24.3963ms 301 
+INFO  2018-01-02 18:14:19,553 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/  
+INFO  2018-01-02 18:14:19,558 [11   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,561 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/index.html'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,563 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.9903ms 200 text/html
+INFO  2018-01-02 18:14:19,599 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/css/typography.css  
+INFO  2018-01-02 18:14:19,608 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,608 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/css/reset.css  
+INFO  2018-01-02 18:14:19,608 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/object-assign-pollyfill.js  
+INFO  2018-01-02 18:14:19,610 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/typography.css'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,611 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.3216ms 200 text/css
+INFO  2018-01-02 18:14:19,614 [22   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,614 [23   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,614 [22   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/reset.css'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,614 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/object-assign-pollyfill.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,615 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.6252ms 200 text/css
+INFO  2018-01-02 18:14:19,615 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.9363ms 200 application/javascript
+INFO  2018-01-02 18:14:19,638 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/jquery-1.8.0.min.js  
+INFO  2018-01-02 18:14:19,638 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/jquery.slideto.min.js  
+INFO  2018-01-02 18:14:19,639 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/css/screen.css  
+INFO  2018-01-02 18:14:19,649 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,649 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery.slideto.min.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,650 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.2951ms 200 application/javascript
+INFO  2018-01-02 18:14:19,650 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/jquery.wiggle.min.js  
+INFO  2018-01-02 18:14:19,657 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,657 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery.wiggle.min.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,658 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.9778ms 200 application/javascript
+INFO  2018-01-02 18:14:19,665 [24   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,665 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-1.8.0.min.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,667 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 29.4135ms 200 application/javascript
+INFO  2018-01-02 18:14:19,668 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/jquery.ba-bbq.min.js  
+INFO  2018-01-02 18:14:19,668 [22   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,668 [22   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/screen.css'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,669 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 30.2604ms 200 text/css
+INFO  2018-01-02 18:14:19,669 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/handlebars-4.0.5.js  
+INFO  2018-01-02 18:14:19,674 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,674 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery.ba-bbq.min.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,675 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.4844ms 200 application/javascript
+INFO  2018-01-02 18:14:19,677 [22   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,678 [22   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/handlebars-4.0.5.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,685 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.5225ms 200 application/javascript
+INFO  2018-01-02 18:14:19,723 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/lodash.min.js  
+INFO  2018-01-02 18:14:19,724 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/backbone-min.js  
+INFO  2018-01-02 18:14:19,730 [24   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,730 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/lodash.min.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,731 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.6343ms 200 application/javascript
+INFO  2018-01-02 18:14:19,731 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/swagger-ui.min.js  
+INFO  2018-01-02 18:14:19,739 [24   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,740 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.min.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,740 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/highlight.9.1.0.pack.js  
+INFO  2018-01-02 18:14:19,744 [25   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,744 [25   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/backbone-min.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,745 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.108ms 200 application/javascript
+INFO  2018-01-02 18:14:19,747 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/jsoneditor.min.js  
+INFO  2018-01-02 18:14:19,747 [24   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,761 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/highlight.9.1.0.pack.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,761 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.2287ms 200 application/javascript
+INFO  2018-01-02 18:14:19,748 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/highlight.9.1.0.pack_extended.js  
+INFO  2018-01-02 18:14:19,770 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,770 [21   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jsoneditor.min.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,788 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 41.329ms 200 application/javascript
+INFO  2018-01-02 18:14:19,789 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 57.8802ms 200 application/javascript
+INFO  2018-01-02 18:14:19,793 [23   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,793 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/highlight.9.1.0.pack_extended.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,794 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 45.9498ms 200 application/javascript
+INFO  2018-01-02 18:14:19,809 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/marked.js  
+INFO  2018-01-02 18:14:19,843 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/lib/swagger-oauth.js  
+INFO  2018-01-02 18:14:19,844 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,845 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/marked.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,846 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 37.2573ms 200 application/javascript
+INFO  2018-01-02 18:14:19,856 [22   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,856 [22   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/swagger-oauth.js'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,857 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.576ms 200 application/javascript
+INFO  2018-01-02 18:14:19,858 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/logo_small.png  
+INFO  2018-01-02 18:14:19,874 [24   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,875 [24   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/logo_small.png'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,875 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.5219ms 200 image/png
+INFO  2018-01-02 18:14:19,882 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/css/print.css  
+INFO  2018-01-02 18:14:19,890 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:19,891 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/print.css'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:19,891 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.2347ms 200 text/css
+INFO  2018-01-02 18:14:20,254 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/v1/swagger.json  
+INFO  2018-01-02 18:14:20,258 [16   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:20,296 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:14:20,304 [11   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:20,304 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/favicon-16x16.png'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:20,304 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.5815ms 200 image/png
+INFO  2018-01-02 18:14:20,338 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-32x32.png  
+INFO  2018-01-02 18:14:20,344 [6    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:20,344 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:20,345 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.6867ms 200 image/png
+INFO  2018-01-02 18:14:20,704 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 449.8837ms 200 application/json
+INFO  2018-01-02 18:14:48,082 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/throbber.gif  
+INFO  2018-01-02 18:14:48,086 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:48,087 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/throbber.gif'. Physical path: 'N/A'
+INFO  2018-01-02 18:14:48,087 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.5423ms 200 image/gif
+INFO  2018-01-02 18:14:48,167 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:14:48,177 [25   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:48,179 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:14:48,181 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.0484ms 304 image/png
+INFO  2018-01-02 18:14:59,262 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:14:59,271 [11   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:14:59,272 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:14:59,272 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.2758ms 304 image/png
+INFO  2018-01-02 18:15:50,774 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:15:50,782 [11   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:15:50,783 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:15:50,783 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.9804ms 304 image/png
+INFO  2018-01-02 18:15:55,852 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:15:55,860 [11   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:15:55,861 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:15:55,861 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.2799ms 304 image/png
+INFO  2018-01-02 18:15:59,608 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:15:59,631 [25   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:15:59,632 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:15:59,633 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 24.9727ms 304 image/png
+INFO  2018-01-02 18:16:01,302 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:16:01,311 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:16:01,311 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:16:01,312 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.0509ms 304 image/png
+INFO  2018-01-02 18:16:25,346 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:16:25,355 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:16:25,355 [21   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:16:25,356 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.0339ms 304 image/png
+INFO  2018-01-02 18:16:28,066 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:16:28,076 [28   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:16:28,076 [28   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:16:28,077 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.1304ms 304 image/png
+INFO  2018-01-02 18:16:34,642 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:16:34,654 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:16:34,655 [21   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:16:34,655 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.2211ms 304 image/png
+INFO  2018-01-02 18:16:38,599 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:16:38,608 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:16:38,608 [21   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:16:38,609 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.4024ms 304 image/png
+INFO  2018-01-02 18:24:16,714 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:24:16,724 [26   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:24:16,724 [26   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:24:16,725 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.6581ms 304 image/png
+INFO  2018-01-02 18:24:18,644 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:24:18,654 [28   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:24:18,654 [28   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:24:18,655 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.3804ms 304 image/png
+INFO  2018-01-02 18:24:22,964 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:24:22,973 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:24:22,973 [21   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:24:22,974 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.4165ms 304 image/png
+INFO  2018-01-02 18:25:49,639 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://127.0.0.1:5000/api/TokenAuth/Authenticate application/json-patch+json 89
+INFO  2018-01-02 18:25:49,646 [27   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:25:50,264 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Controllers.TokenAuthController.Authenticate (SixMan.ChiMa.Web.Core) with arguments (SixMan.ChiMa.Models.TokenAuth.AuthenticateModel) - ModelState is Valid
+INFO  2018-01-02 18:25:50,499 [29   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-02 18:25:50,503 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Controllers.TokenAuthController.Authenticate (SixMan.ChiMa.Web.Core) in 846.6608ms
+INFO  2018-01-02 18:25:50,507 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 867.846ms 200 application/json; charset=utf-8
+INFO  2018-01-02 18:26:29,183 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://127.0.0.1:5000/api/TokenAuth/Authenticate application/json-patch+json 91
+INFO  2018-01-02 18:26:29,192 [28   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:26:29,199 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Controllers.TokenAuthController.Authenticate (SixMan.ChiMa.Web.Core) with arguments (SixMan.ChiMa.Models.TokenAuth.AuthenticateModel) - ModelState is Valid
+WARN  2018-01-02 18:26:29,235 [29   ] icrosoft.AspNetCore.Identity.UserManager - Invalid password for user 1.
+WARN  2018-01-02 18:26:29,389 [33   ] Mvc.ExceptionHandling.AbpExceptionFilter - Login failed!
+Abp.UI.UserFriendlyException: Login failed!
+   at SixMan.ChiMa.Controllers.TokenAuthController.<GetLoginResultAsync>d__16.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Controllers\TokenAuthController.cs:line 196
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at SixMan.ChiMa.Controllers.TokenAuthController.<Authenticate>d__10.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Controllers\TokenAuthController.cs:line 59
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+INFO  2018-01-02 18:26:29,414 [33   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-02 18:26:29,417 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Controllers.TokenAuthController.Authenticate (SixMan.ChiMa.Web.Core) in 223.6798ms
+INFO  2018-01-02 18:26:29,417 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 234.3306ms 500 application/json; charset=utf-8
+INFO  2018-01-02 18:27:12,051 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://127.0.0.1:5000/api/TokenAuth/Authenticate application/json-patch+json 89
+INFO  2018-01-02 18:27:12,060 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:27:12,067 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Controllers.TokenAuthController.Authenticate (SixMan.ChiMa.Web.Core) with arguments (SixMan.ChiMa.Models.TokenAuth.AuthenticateModel) - ModelState is Valid
+INFO  2018-01-02 18:27:12,201 [32   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-02 18:27:12,201 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Controllers.TokenAuthController.Authenticate (SixMan.ChiMa.Web.Core) in 139.4951ms
+INFO  2018-01-02 18:27:12,202 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 150.5918ms 200 application/json; charset=utf-8
+INFO  2018-01-02 18:59:49,101 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 18:59:49,411 [32   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 18:59:49,416 [32   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 18:59:49,423 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 323.0964ms 304 image/png
+INFO  2018-01-02 19:25:53,069 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://127.0.0.1:5000/swagger/images/favicon-16x16.png  
+INFO  2018-01-02 19:25:53,206 [28   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-02 19:25:53,211 [28   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-02 19:25:53,213 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 144.956ms 304 image/png
+DEBUG 2018-01-03 17:43:07,367 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-03 17:43:07,446 [1    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2018-01-03 17:43:07,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Web.Startup.ChiMaWebMvcModule, SixMan.ChiMa.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.ChiMaWebCoreModule, SixMan.ChiMa.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,488 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,489 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,490 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,491 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,492 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,492 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,494 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,495 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:07,502 [1    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2018-01-03 17:43:08,190 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:43:09,009 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-01-03 17:43:09,039 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-03 17:43:09,049 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-01-03 17:43:09,054 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-01-03 17:43:09,056 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-03 17:43:09,171 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2018-01-03 17:43:09,171 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-01-03 17:43:09,177 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-01-03 17:43:09,179 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-01-03 17:43:09,180 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-01-03 17:43:09,180 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-01-03 17:43:09,180 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-01-03 17:43:09,180 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-01-03 17:43:09,180 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-01-03 17:43:09,181 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-01-03 17:43:09,182 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-01-03 17:43:09,182 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.DishBomDto
+DEBUG 2018-01-03 17:43:09,182 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.DishDto
+DEBUG 2018-01-03 17:43:09,182 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-01-03 17:43:09,182 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-01-03 17:43:09,182 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2018-01-03 17:54:26,805 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-03 17:54:26,874 [1    ] Abp.Modules.AbpModuleManager             - Found 14 ABP modules in total.
+DEBUG 2018-01-03 17:54:26,902 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Web.Startup.ChiMaWebMvcModule, SixMan.ChiMa.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,909 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.ChiMaWebCoreModule, SixMan.ChiMa.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,910 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,910 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,911 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,912 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,916 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,916 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,917 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,918 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,918 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:26,925 [1    ] Abp.Modules.AbpModuleManager             - 14 modules loaded.
+DEBUG 2018-01-03 17:54:27,459 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-03 17:54:28,021 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-01-03 17:54:28,047 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-03 17:54:28,057 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-01-03 17:54:28,062 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-01-03 17:54:28,063 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-03 17:54:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2018-01-03 17:54:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-01-03 17:54:28,161 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-01-03 17:54:28,162 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-01-03 17:54:28,162 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-01-03 17:54:28,162 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-01-03 17:54:28,162 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-01-03 17:54:28,162 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-01-03 17:54:28,162 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-01-03 17:54:28,163 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-01-03 17:54:28,163 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-01-03 17:54:28,163 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.DishBomDto
+DEBUG 2018-01-03 17:54:28,163 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.DishDto
+DEBUG 2018-01-03 17:54:28,163 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-01-03 17:54:28,163 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-01-03 17:54:28,163 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
