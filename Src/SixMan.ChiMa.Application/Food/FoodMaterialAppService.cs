@@ -12,9 +12,11 @@ using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Domain.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Abp.Domain.Uow;
+using Abp.Authorization;
 
 namespace SixMan.ChiMa.Application.Food
 {
+    [AbpAuthorize]
     public class FoodMaterialAppService
        : AdvancedAsyncCrudAppService<FoodMaterial, FoodMaterialDto>
         , IFoodMaterialAppService

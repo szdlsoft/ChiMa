@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
+using SixMan.ChiMa.Web.Resources.Startup;
 
 #if FEATURE_SIGNALR
 using Owin;
@@ -51,6 +52,7 @@ namespace SixMan.ChiMa.Web.Startup
             {
                 options.SwaggerDoc("v1", new Info { Title = "ChiMa API", Version = "v1" });
                 options.DocInclusionPredicate((docName, description) => true);
+                options.OperationFilter<AddAuthTokenHeaderParameter>();
             });
 
             //Configure Abp and Dependency Injection

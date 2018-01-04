@@ -12,9 +12,11 @@ using System.Linq;
 using SixMan.ChiMa.Domain.Food.Repository;
 using SixMan.ChiMa.Domain.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Abp.Authorization;
 
 namespace SixMan.ChiMa.Application.Food
 {
+    [AbpAuthorize]
     public class FoodMaterialCategoryAppService
         : AdvancedAsyncCrudAppService<FoodMaterialCategory, FoodMaterialCategoryDto>
         , IFoodMaterialCategoryAppService

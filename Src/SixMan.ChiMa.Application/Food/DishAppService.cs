@@ -1,4 +1,5 @@
-﻿using Abp.Domain.Repositories;
+﻿using Abp.Authorization;
+using Abp.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food.Dto;
@@ -11,6 +12,7 @@ using System.Linq;
 
 namespace SixMan.ChiMa.Application.Food
 {
+    [AbpAuthorize]
     public class DishAppService
        : AdvancedAsyncCrudAppService<Dish, DishDto>
         , IDishAppService
