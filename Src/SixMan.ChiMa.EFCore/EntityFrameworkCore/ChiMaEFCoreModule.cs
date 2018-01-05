@@ -58,7 +58,7 @@ namespace SixMan.ChiMa.EFCore
 
         public override void PostInitialize()
         {
-            if (!SkipDbSeed)
+            if ( false && !SkipDbSeed)
             {
                 SeedHelper.SeedHostDb(IocManager);
             }
