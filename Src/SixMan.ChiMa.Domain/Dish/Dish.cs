@@ -3,6 +3,7 @@ using SixMan.ChiMa.Domain.Family;
 using SixMan.ChiMa.Domain.Interface;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace SixMan.ChiMa.Domain.Dish
@@ -44,6 +45,10 @@ namespace SixMan.ChiMa.Domain.Dish
         /// </summary>
         public int? CookTime { get; set; }
         /// <summary>
+        /// 制作难度
+        /// </summary>
+        public int? Difficulty { get; set; }
+        /// <summary>
         /// 自制人
         /// 如为空表示是公共的
         /// </summary>
@@ -52,6 +57,22 @@ namespace SixMan.ChiMa.Domain.Dish
         /// 是否为公开，如不公开，仅在自制人可视
         /// </summary>
         public bool Public { get; set; }
+        /// <summary>
+        /// 星数
+        /// </summary>
+        public int? Star { get; set; }
+
+        /// <summary>
+        /// 横向图
+        /// </summary>
+        [StringLength(MaxUrlLength)]
+        public string HPhoto { get; set; }
+
+        /// <summary>
+        /// 大图
+        /// </summary>
+        [StringLength(MaxUrlLength)]
+        public string BPhoto { get; set; }
         /// <summary>
         /// 食材配比
         /// </summary>
@@ -65,6 +86,11 @@ namespace SixMan.ChiMa.Domain.Dish
         /// 用户评论
         /// </summary>
         public ICollection<UserCommentDish> UserComments { get; set; }
-      
+        /// <summary>
+        /// 用户喜欢
+        /// </summary>
+        public ICollection<UserFavoriteDish> UserUserFavorites { get; set; }
+
+
     }
 }

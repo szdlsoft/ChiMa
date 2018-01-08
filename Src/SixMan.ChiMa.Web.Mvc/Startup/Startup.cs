@@ -14,6 +14,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
 using SixMan.ChiMa.Web.Resources.Startup;
+using Abp.AspNetCore.Mvc.Results.Wrapping;
+using Castle.MicroKernel.Registration;
 
 #if FEATURE_SIGNALR
 using Owin;
@@ -62,7 +64,12 @@ namespace SixMan.ChiMa.Web.Startup
                 options.IocManager.IocContainer.AddFacility<LoggingFacility>(
                     f => f.UseAbpLog4Net().WithConfig("log4net.config")
                 );
+                // 替换 IAbpActionResultWrapperFactory
+                options.IocManager.IocContainer.Register(Component.For<IAbpActionResultWrapperFactory>()
+                    .ImplementedBy<NullAbpActionResultWrapperFactory>().LifestyleSingleton().IsDefault());
             });
+
+ 
 
 
         }
