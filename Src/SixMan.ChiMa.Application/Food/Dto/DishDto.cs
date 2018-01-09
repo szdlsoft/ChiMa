@@ -44,7 +44,10 @@ namespace SixMan.ChiMa.Application.Food.Dto
         /// <summary>
         /// 烹饪时间
         /// </summary>
-        [Display(Name = "预处理时间", Order = 16)] public int? CookTime { get; set; }
- 
+        [Display(Name = "烹饪时间", Order = 16)] public int? CookTime { get; set; }
+        [Display(Name = "制作难度", Order = 16)] public int? Difficulty { get; set; }
+        [Display(Name = "星数", Order = 16)] public int? Star { get; set; }
+        [Display(Name = "横向图", Order = 16)] public string HPhoto { get; set; }
+        [Display(Name = "大图", Order = 16)] public string BPhoto { get; set; }
     }
 }

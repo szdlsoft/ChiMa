@@ -17,6 +17,10 @@ namespace SixMan.ChiMa.Domain.Food
         /// </summary>
         [ForeignKey("ParentId")]
         public FoodMaterialCategory Parent { get; set; }
+        /// <summary>
+        /// 分类索引号 
+        /// </summary>
+        public int? IndexNo { get; set; }
 
         public List<FoodMaterialCategory> Childern { get; set; }
 

@@ -25,6 +25,20 @@ namespace SixMan.ChiMa.Domain.Food
         public FoodMaterialCategory FoodMaterialCategory { get; set; }
         public long? FoodMaterialCategoryId { get; set; }
         /// <summary>
+        /// 单价
+        /// </summary>
+        public double? Price { get; set; }
+        /// <summary>
+        /// 单位
+        /// </summary>
+        [StringLength(DescriptionBase.MaxDescriptionLength)]
+        public string Unit { get; set; }
+        /// <summary>
+        /// 主材？
+        /// </summary>
+        public bool IsMain { get; set; }
+
+        /// <summary>
         /// 可食率
         /// </summary>
         public int? EdiblePercent { get; set; }
