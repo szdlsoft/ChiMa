@@ -22,6 +22,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using SixMan.ChiMa.Application.Food.Dto;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using SixMan.ChiMa.Application.Interface;
+using SixMan.ChiMa.Application.Dish;
 
 namespace SixMan.ChiMa.Web.Controllers
 {

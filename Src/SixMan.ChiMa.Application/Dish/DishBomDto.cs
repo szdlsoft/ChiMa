@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SixMan.ChiMa.Application.Food.Dto
+namespace SixMan.ChiMa.Application.Dish
 {
     [AutoMap(typeof(DishBom))]
     public class DishBomDto

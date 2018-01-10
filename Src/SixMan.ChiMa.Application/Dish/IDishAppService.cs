@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SixMan.ChiMa.Application.Food
+namespace SixMan.ChiMa.Application.Dish
 {
     public interface IDishAppService
         : IAdvancedAsyncCrudAppService<DishDto>

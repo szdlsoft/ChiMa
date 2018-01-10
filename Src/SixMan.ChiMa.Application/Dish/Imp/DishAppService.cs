@@ -2,7 +2,6 @@
 using Abp.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using SixMan.ChiMa.Application.Base;
-using SixMan.ChiMa.Application.Food.Dto;
 using SixMan.ChiMa.Domain.Dish;
 using SixMan.ChiMa.Domain.Extensions;
 using SixMan.ChiMa.Domain.Food;
@@ -10,24 +9,24 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SixMan.ChiMa.Application.Food
+namespace SixMan.ChiMa.Application.Dish
 {
     [AbpAuthorize]
     public class DishAppService
-       : AdvancedAsyncCrudAppService<Dish, DishDto>
+       : AdvancedAsyncCrudAppService<SixMan.ChiMa.Domain.Dish.Dish, DishDto>
         , IDishAppService
 
     {
         private IRepository<FoodMaterial, long> _foodMaterialRepository;
         public IRepository<DishBom, long> _dishBomRepository { get; set; }
-        public DishAppService(IRepository<Dish, long> repository
+        public DishAppService(IRepository<SixMan.ChiMa.Domain.Dish.Dish, long> repository
                                     , IRepository<FoodMaterial, long> foodMaterialRepository) 
             : base(repository)
         {
             _foodMaterialRepository = foodMaterialRepository;
         }
 
-        protected override IQueryable<Dish> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
+        protected override IQueryable<SixMan.ChiMa.Domain.Dish.Dish> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
         {
             var query = base.CreateFilteredQuery(input);
             if (input.Search.IsNotNullOrEmpty())
@@ -40,14 +39,14 @@ namespace SixMan.ChiMa.Application.Food
             return query;
         }
 
-        protected override IQueryable<Dish> ApplyInclude(IQueryable<Dish> query)
+        protected override IQueryable<SixMan.ChiMa.Domain.Dish.Dish> ApplyInclude(IQueryable<SixMan.ChiMa.Domain.Dish.Dish> query)
         {
             query = query.Include(d => d.DishBoms)
                            .ThenInclude(b => b.FoodMaterial);
             return query;
         }
 
-        protected override DishDto MapToEntityDto(Dish entity)
+        protected override DishDto MapToEntityDto(SixMan.ChiMa.Domain.Dish.Dish entity)
         {
             var dto = base.MapToEntityDto(entity);
             foreach( var d in dto.DishBoms)
@@ -75,7 +74,7 @@ namespace SixMan.ChiMa.Application.Food
 
             try
             {
-                var entity = new Dish();
+                var entity = new SixMan.ChiMa.Domain.Dish.Dish();
                 IList<DishBom> boms = GetDishBoms(row["boms"] , entity);
 
                 entity.Import(row);
@@ -91,7 +90,7 @@ namespace SixMan.ChiMa.Application.Food
             }
         }
 
-        private IList<DishBom> GetDishBoms(string boms, Dish dish)
+        private IList<DishBom> GetDishBoms(string boms, SixMan.ChiMa.Domain.Dish.Dish dish)
         {
             List<DishBom> result = new List<DishBom>();
             foreach ( var bom in boms.Split(';'))
@@ -118,13 +117,13 @@ namespace SixMan.ChiMa.Application.Food
             return result;
         }
 
-        protected override void Delete(Dish entity)
+        protected override void Delete(SixMan.ChiMa.Domain.Dish.Dish entity)
         {
             _dishBomRepository.Delete(db => db.DishId == entity.Id);
             Repository.Delete(entity);
         }
 
-        protected override void AttachChild(DishDto dto, Dish entity)
+        protected override void AttachChild(DishDto dto, SixMan.ChiMa.Domain.Dish.Dish entity)
         {
             var dishBoms = dto.DishBoms;
             entity.DishBoms = new List<DishBom>(); //取消关联
