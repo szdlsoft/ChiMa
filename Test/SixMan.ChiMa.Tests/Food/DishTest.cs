@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Shouldly;
 using SixMan.ChiMa.Application.Base;
+using SixMan.ChiMa.Application.Dish;
 using SixMan.ChiMa.Application.Food;
 using SixMan.ChiMa.Application.Food.Dto;
 using System;

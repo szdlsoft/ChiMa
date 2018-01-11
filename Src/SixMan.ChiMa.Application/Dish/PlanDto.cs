@@ -7,7 +7,7 @@ namespace SixMan.ChiMa.Application.Dish
 {
     [AutoMap(typeof(SixMan.ChiMa.Domain.Dish.Plan))]
     public class PlanDto
-        : MultiMediaBaseDto
+        : ChiMaEntityBaseDto
     {
         /// <summary>
         /// 家庭

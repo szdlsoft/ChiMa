@@ -63,6 +63,7 @@ namespace SixMan.ChiMa.EFCore
             //modelBuilder.Entity<CookMethod>().HasBaseType<CategoryBase>();
             //efcore 不支持ComplexType
             //modelBuilder.ComplexType<Range>();
+
             modelBuilder.Entity<FamilyMember>().OwnsOne<Range>(fm => fm.Age);
             modelBuilder.Entity<FamilyMember>().OwnsOne<Range>(fm => fm.Income);
 
@@ -71,8 +72,20 @@ namespace SixMan.ChiMa.EFCore
                 .HasOne(ui => ui.User)
                 .WithOne(u => u.UserInfo)
                 .HasForeignKey<UserInfo>(ui => ui.UserId);
+            //家庭
+            modelBuilder.Entity<Family>()
+                .HasMany(f => f.Users)
+                .WithOne(u => u.Family)
+                //.HasForeignKey<Family>(f => f.FamilyId);
+                ;
+            //modelBuilder.Entity<UserInfo>()
+            //    .HasOne(ui => ui.Family)
+            //    ; 
 
+            modelBuilder.Entity<Family>()
+                .HasOne(f => f.Creater)
 
+                ;
         }
     }
 }

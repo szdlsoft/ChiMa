@@ -45,6 +45,7 @@ namespace SixMan.ChiMa.Domain.Family
         [ForeignKey("UserId")]
         public User User { get; set; }
         //家庭
+        [ForeignKey("FamilyId")]
         public Family Family { get; set; }
         //关注
         [InverseProperty("Attention")]

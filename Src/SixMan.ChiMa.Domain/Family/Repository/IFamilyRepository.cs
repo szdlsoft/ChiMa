@@ -9,6 +9,6 @@ namespace SixMan.ChiMa.Domain.Family
     public interface IFamilyRepository
         : IRepository<Domain.Family.Family, long>
     {
-        Domain.Family.Family GetByUser(long? userId);
+        Domain.Family.Family GetByUser(long userId);
     }
 }

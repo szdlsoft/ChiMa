@@ -8,6 +8,6 @@ namespace SixMan.ChiMa.Application.Dish
     public interface IPlanAppService
         : IAdvancedAsyncCrudAppService<PlanDto>
     {
-        IList<PlanDto> Get(DateTime planDate);
+        IList<PlanDto> GetGetPlans(DateTime planDate);
     }
 }

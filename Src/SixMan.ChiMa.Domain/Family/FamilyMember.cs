@@ -17,6 +17,11 @@ namespace SixMan.ChiMa.Domain.Family
     {
         public Family Family { get; set; }
         /// <summary>
+        /// 注意：家庭成员不一定有用户信息！
+        /// 用户信息可为空
+        /// </summary>
+        public UserInfo UserInfo { get; set; }
+        /// <summary>
         /// 人员类别
         /// </summary>
         public PersonEnum PersonKind { get; set; }
