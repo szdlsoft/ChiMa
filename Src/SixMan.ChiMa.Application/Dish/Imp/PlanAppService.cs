@@ -15,7 +15,7 @@ namespace SixMan.ChiMa.Application.Dish
     {
         protected readonly IPlansGenerator _plansGenerator;
         protected readonly IFamilyAppService _familyService;
-        protected PlanAppService(IPlanRepository repository
+        public PlanAppService(IPlanRepository repository
                                 , IFamilyAppService familyService
                                 , IPlansGenerator plansGenerator) 
             : base(repository)
@@ -34,9 +34,11 @@ namespace SixMan.ChiMa.Application.Dish
             }
             SixMan.ChiMa.Domain.Family.Family family = _familyService.GetByUser(AbpSession.UserId.Value);
             //IList<Plan> list = PlanRepository.Get(planDate, family.Id);
-            IList<Plan> list = Repository.GetAllIncluding( p => p.PlanDate == planDate
-                                                             && p.Family.Id ==  family.Id)
-                                                      .ToList();
+            IList<Plan> list = Repository.GetAllIncluding( p => p.Family )
+                                         .Where(
+                                                p => p.PlanDate == planDate
+                                                && p.Family.Id ==  family.Id)
+                                         .ToList();
 
             if ( list.Count() < 1)//没有计划，需加入计划并生成一个新的内容，如已计划请返回原有数据
             {

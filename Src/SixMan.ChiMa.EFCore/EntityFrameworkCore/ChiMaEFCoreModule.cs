@@ -35,7 +35,7 @@ namespace SixMan.ChiMa.EFCore
                         ChiMaDbContextConfigurer.Configure(options.DbContextOptions, options.ConnectionString);
                     }
 
-                    //options.DbContextOptions.UseLoggerFactory(MyLoggerFactory);
+                    options.DbContextOptions.UseLoggerFactory(MyLoggerFactory);
                 });
             }
         }

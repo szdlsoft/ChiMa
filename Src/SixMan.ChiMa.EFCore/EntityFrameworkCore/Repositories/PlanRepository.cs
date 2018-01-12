@@ -10,7 +10,7 @@ namespace SixMan.ChiMa.EFCore.Repositories
         : ChiMaRepositoryBase<Plan, long>
           , IPlanRepository
     {
-        protected PlanRepository(IDbContextProvider<ChiMaDbContext> dbContextProvider) 
+        public PlanRepository(IDbContextProvider<ChiMaDbContext> dbContextProvider) 
             : base(dbContextProvider)
         {
         }

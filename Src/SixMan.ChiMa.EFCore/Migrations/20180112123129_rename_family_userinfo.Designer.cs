@@ -16,9 +16,10 @@ using System;
 namespace SixMan.ChiMa.Migrations
 {
     [DbContext(typeof(ChiMaDbContext))]
-    partial class ChiMaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180112123129_rename_family_userinfo")]
+    partial class rename_family_userinfo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1113,6 +1114,8 @@ namespace SixMan.ChiMa.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<long?>("CreateUserInfoId");
+
                     b.Property<DateTime>("CreationTime");
 
                     b.Property<long?>("CreatorUserId");
@@ -1132,6 +1135,8 @@ namespace SixMan.ChiMa.Migrations
                     b.Property<Guid>("UUID");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CreateUserInfoId");
 
                     b.ToTable("Family");
                 });
@@ -1399,8 +1404,6 @@ namespace SixMan.ChiMa.Migrations
                         .HasMaxLength(512);
 
                     b.Property<bool>("IsDeleted");
-
-                    b.Property<bool>("IsFamilyCreater");
 
                     b.Property<DateTime?>("LastModificationTime");
 
@@ -1994,6 +1997,13 @@ namespace SixMan.ChiMa.Migrations
                     b.HasOne("SixMan.ChiMa.Domain.Family.Family", "Family")
                         .WithMany()
                         .HasForeignKey("FamilyId");
+                });
+
+            modelBuilder.Entity("SixMan.ChiMa.Domain.Family.Family", b =>
+                {
+                    b.HasOne("SixMan.ChiMa.Domain.Family.UserInfo", "CreateUserInfo")
+                        .WithMany()
+                        .HasForeignKey("CreateUserInfoId");
                 });
 
             modelBuilder.Entity("SixMan.ChiMa.Domain.Family.FamilyMember", b =>

@@ -47,6 +47,10 @@ namespace SixMan.ChiMa.Domain.Family
         //家庭
         [ForeignKey("FamilyId")]
         public Family Family { get; set; }
+        /// <summary>
+        /// 家庭的创建人
+        /// </summary>
+        public bool IsFamilyCreater { get; set; }
         //关注
         [InverseProperty("Attention")]
 

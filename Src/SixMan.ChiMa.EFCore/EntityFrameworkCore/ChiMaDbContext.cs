@@ -74,7 +74,7 @@ namespace SixMan.ChiMa.EFCore
                 .HasForeignKey<UserInfo>(ui => ui.UserId);
             //家庭
             modelBuilder.Entity<Family>()
-                .HasMany(f => f.Users)
+                .HasMany(f => f.UserInfos)
                 .WithOne(u => u.Family)
                 //.HasForeignKey<Family>(f => f.FamilyId);
                 ;
@@ -82,10 +82,10 @@ namespace SixMan.ChiMa.EFCore
             //    .HasOne(ui => ui.Family)
             //    ; 
 
-            modelBuilder.Entity<Family>()
-                .HasOne(f => f.Creater)
+            //modelBuilder.Entity<Family>()
+            //    .HasOne(f => f.CreateUserInfo)
 
-                ;
+            //    ;
         }
     }
 }

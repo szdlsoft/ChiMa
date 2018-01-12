@@ -18,10 +18,10 @@ namespace SixMan.ChiMa.Domain.Family
         /// </summary>
         public Guid UUID { get; set; }
         public ICollection<FamilyMember> Members { get; set; }
-        public ICollection<UserInfo> Users { get; set; }
+        public ICollection<UserInfo> UserInfos { get; set; }
         /// <summary>
         /// 家庭创建人
-        /// </summary>
-        public UserInfo Creater { get; set; }
+        /// </summary>        
+        //public UserInfo CreateUserInfo { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace SixMan.ChiMa.Application.Family
         , IFamilyAppService
     {
         IRepository<UserInfo, long> _userInfoRepository;
-        protected FamilyAppService(IFamilyRepository repository
+        public FamilyAppService(IFamilyRepository repository
                                   , IRepository<UserInfo,long> userInfoRepository
                                     ) 
             : base(repository)
@@ -25,8 +25,12 @@ namespace SixMan.ChiMa.Application.Family
 
         public Domain.Family.Family GetByUser(long userId)
         {
-            //Domain.Family.Family family = familyResponsitory.GetByUser(userId);
-            Domain.Family.Family family = Repository.GetAllIncluding(f => f.Users.Any(u => u.Id == userId)).FirstOrDefault();
+            Domain.Family.Family family = familyResponsitory.GetByUser(userId);
+            //Domain.Family.Family family = Repository.GetAllIncluding(f => f.UserInfos)
+
+            //                                       .Where(f => f.UserInfos.Any(ui => ui.Id == userId))
+            //                                       .FirstOrDefault();
+            //Domain.Family.Family family = Repository.Single(f => f.Users.Any(u => u.Id == userId));
             if ( family == null)
             {
                 family = CreateFamily(userId);
@@ -36,14 +40,22 @@ namespace SixMan.ChiMa.Application.Family
 
         private Domain.Family.Family CreateFamily(long userId)
         {
+            var CreateUserInfo = new UserInfo()
+            {
+                UserId = userId,
+                IsFamilyCreater = true
+            };
+
             Domain.Family.Family entity = new Domain.Family.Family()
             {
                 UUID = Guid.NewGuid(),
-                Creater = new UserInfo()
-                {
-                    UserId = userId
-                }
+                //CreateUserInfo = new UserInfo()
+                //{
+                //    UserId = userId
+                //}
             };
+
+            entity.UserInfos = new List<UserInfo>() { CreateUserInfo };
 
             return Repository.Get( Repository.InsertAndGetId(entity));
         }
