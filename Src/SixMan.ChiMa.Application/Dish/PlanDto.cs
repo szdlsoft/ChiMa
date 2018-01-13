@@ -16,7 +16,7 @@ namespace SixMan.ChiMa.Application.Dish
         /// <summary>
         /// 菜谱
         /// </summary>
-        public SixMan.ChiMa.Domain.Dish.Dish Dish { get; set; }
+        public DishDto Dish { get; set; }
         /// <summary>
         /// 计划：年，月，日
         /// </summary>

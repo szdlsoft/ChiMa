@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Abp.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace SixMan.ChiMa.EFCore.Repositories
 {
@@ -15,9 +17,15 @@ namespace SixMan.ChiMa.EFCore.Repositories
         {
         }
 
-        public IList<Plan> Get(DateTime planDate, long id)
+        public IList<Plan> Get(DateTime planDate, long familyId)
         {
-            throw new NotImplementedException();
+            var q = GetAll()
+                    .Include(p => p.Family)
+                    .Include(p => p.Dish)
+                    .Where(p => p.Family.Id == familyId
+                             && p.PlanDate == planDate  )
+                    ;
+            return q.ToList();
         }
     }
 }

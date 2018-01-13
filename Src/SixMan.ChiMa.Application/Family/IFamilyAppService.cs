@@ -9,6 +9,6 @@ namespace SixMan.ChiMa.Application.Family
     public interface IFamilyAppService
     : IAdvancedAsyncCrudAppService<FamilyDto>
     {
-        Domain.Family.Family GetByUser(long userId);
+        Domain.Family.Family GetOrCreate();
     }
 }

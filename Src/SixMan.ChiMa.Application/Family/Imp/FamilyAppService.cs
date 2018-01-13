@@ -5,9 +5,11 @@ using System.Text;
 using SixMan.ChiMa.Domain.Family;
 using Abp.Domain.Repositories;
 using System.Linq;
+using Abp.Authorization;
 
 namespace SixMan.ChiMa.Application.Family
 {
+    [AbpAuthorize]
     public class FamilyAppService
         : AdvancedAsyncCrudAppService<SixMan.ChiMa.Domain.Family.Family, FamilyDto>
         , IFamilyAppService
@@ -23,8 +25,13 @@ namespace SixMan.ChiMa.Application.Family
 
         protected IFamilyRepository familyResponsitory => Repository as IFamilyRepository;
 
-        public Domain.Family.Family GetByUser(long userId)
+        public Domain.Family.Family GetOrCreate()
         {
+            if (!AbpSession.UserId.HasValue)
+            {
+                throw new Exception("未登录，不能获取菜单计划！");
+            }
+            long userId = AbpSession.UserId.Value;
             Domain.Family.Family family = familyResponsitory.GetByUser(userId);
             //Domain.Family.Family family = Repository.GetAllIncluding(f => f.UserInfos)
 

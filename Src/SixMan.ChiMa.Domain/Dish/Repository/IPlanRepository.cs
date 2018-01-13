@@ -9,6 +9,6 @@ namespace SixMan.ChiMa.Domain.Dish
     public interface IPlanRepository
         : IRepository<Plan, long>
     {
-        IList<Plan> Get(DateTime planDate, long id);
+        IList<Plan> Get(DateTime planDate, long familyId);
     }
 }
