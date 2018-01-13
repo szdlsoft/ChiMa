@@ -44,7 +44,8 @@ namespace SixMan.ChiMa.Tests
                 new TenantRoleAndUserBuilder(context, 1).Create();
             });
 
-            LoginAsDefaultTenantAdmin();
+            //LoginAsDefaultTenantAdmin();
+            LoginAsHostAdmin();
         }
 
         #region UsingDbContext
@@ -153,7 +154,8 @@ namespace SixMan.ChiMa.Tests
             var user =
                 UsingDbContext(
                     context =>
-                        context.Users.FirstOrDefault(u => u.TenantId == AbpSession.TenantId && u.UserName == userName));
+                        context.Users.FirstOrDefault(u => u.TenantId == 1 && u.UserName == userName));
+            //context.Users.FirstOrDefault(u => u.TenantId == AbpSession.TenantId && u.UserName == userName));
             if (user == null)
             {
                 throw new Exception("There is no user: " + userName + " for host.");

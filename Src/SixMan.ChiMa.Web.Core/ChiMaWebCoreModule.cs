@@ -50,8 +50,11 @@ namespace SixMan.ChiMa
 
             Configuration.Modules.AbpAspNetCore()
                  .CreateControllersForAppServices(
-                     typeof(ChiMaApplicationModule).GetAssembly()
-                 );
+                     typeof(ChiMaApplicationModule).GetAssembly(),
+                     useConventionalHttpVerbs:true
+                 )
+                 //.WithConventionalVerbs()
+                 ;
             //Configuration.Modules.AbpMvc();
 
             ConfigureTokenAuth();

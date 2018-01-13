@@ -17,9 +17,10 @@ using System;
 namespace SixMan.ChiMa.Migrations
 {
     [DbContext(typeof(ChiMaDbContext))]
-    partial class ChiMaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180113102042_rename_userinfo")]
+    partial class rename_userinfo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

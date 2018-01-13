@@ -13,7 +13,7 @@ namespace SixMan.ChiMa.Domain.Family
     public class UserBrowseDish
         : ChiMaEntityBase
     {
-        public UserInfo User { get; set; }
+        public UserInfo UserInfo { get; set; }
         public SixMan.ChiMa.Domain.Dish.Dish Dish { get; set; }
         /// <summary>
         /// 浏览时间

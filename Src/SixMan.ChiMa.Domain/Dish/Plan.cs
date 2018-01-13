@@ -26,13 +26,18 @@ namespace SixMan.ChiMa.Domain.Dish
         /// </summary>
         public DateTime PlanDate { get; set; }
         /// <summary>
-        /// 类型索引号，
+        /// 餐别
         /// </summary>
-        public int KindNO { get; set; }
+        public MealType MealType { get; set; }
+        /// <summary>
+        /// 序号
+        /// 在本餐中的第几个菜
+        /// </summary>
+        public int MealNo{ get; set; }
         /// <summary>
         /// 类型（早， 加1， 中， 加2，晚，加3），从1开始算
-        /// </summary>
-        [StringLength(DescriptionBase.MaxDescriptionLength)]
-        public string Kinds { get; set; }
+        ///// </summary>
+        //[StringLength(DescriptionBase.MaxDescriptionLength)]
+        //public string Kinds { get; set; }
     }
 }

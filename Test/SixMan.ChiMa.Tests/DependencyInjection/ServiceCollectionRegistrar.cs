@@ -17,19 +17,30 @@ namespace SixMan.ChiMa.Tests.DependencyInjection
 
             IdentityRegistrar.Register(services);
 
-            services.AddEntityFrameworkInMemoryDatabase();
+            //services.AddEntityFrameworkInMemoryDatabase();
 
-            var serviceProvider = WindsorRegistrationHelper.CreateServiceProvider(iocManager.IocContainer, services);
+            //var serviceProvider = WindsorRegistrationHelper.CreateServiceProvider(iocManager.IocContainer, services);
 
+            //var builder = new DbContextOptionsBuilder<ChiMaDbContext>();
+            //builder.UseInMemoryDatabase(Guid.NewGuid().ToString()).UseInternalServiceProvider(serviceProvider);
+
+            //iocManager.IocContainer.Register(
+            //    Component
+            //        .For<DbContextOptions<ChiMaDbContext>>()
+            //        .Instance(builder.Options)
+            //        .LifestyleSingleton()
+            //);
+
+            //用mysql
             var builder = new DbContextOptionsBuilder<ChiMaDbContext>();
-            builder.UseInMemoryDatabase(Guid.NewGuid().ToString()).UseInternalServiceProvider(serviceProvider);
-
+            ChiMaDbContextConfigurer.Configure(builder, "Server=localhost;port=3306;database=ChiMaDb;uid=root;password=root;character set=utf8;Old Guids=true");
             iocManager.IocContainer.Register(
                 Component
                     .For<DbContextOptions<ChiMaDbContext>>()
                     .Instance(builder.Options)
                     .LifestyleSingleton()
             );
+
         }
     }
 }

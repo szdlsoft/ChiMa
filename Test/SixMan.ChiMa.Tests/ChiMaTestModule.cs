@@ -25,6 +25,7 @@ namespace SixMan.ChiMa.Tests
         public ChiMaTestModule(ChiMaEFCoreModule abpProjectNameEntityFrameworkModule)
         {
             abpProjectNameEntityFrameworkModule.SkipDbContextRegistration = true;
+            //用内存数据库？
         }
 
         public override void PreInitialize()

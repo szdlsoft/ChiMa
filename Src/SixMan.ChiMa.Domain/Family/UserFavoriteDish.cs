@@ -13,7 +13,8 @@ namespace SixMan.ChiMa.Domain.Family
     public class UserFavoriteDish
         : ChiMaEntityBase
     {
-        public UserInfo User { get; set; }
+        public long UserInfoId { get; set; }
+        public UserInfo UserInfo { get; set; }
         public SixMan.ChiMa.Domain.Dish.Dish Dish { get; set; }
 
     }

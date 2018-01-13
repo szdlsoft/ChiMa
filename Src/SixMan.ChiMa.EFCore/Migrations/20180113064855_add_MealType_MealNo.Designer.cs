@@ -17,9 +17,10 @@ using System;
 namespace SixMan.ChiMa.Migrations
 {
     [DbContext(typeof(ChiMaDbContext))]
-    partial class ChiMaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180113064855_add_MealType_MealNo")]
+    partial class add_MealType_MealNo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1286,13 +1287,13 @@ namespace SixMan.ChiMa.Migrations
 
                     b.Property<long?>("LastModifierUserId");
 
-                    b.Property<long?>("UserInfoId");
+                    b.Property<long?>("UserId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("DishId");
 
-                    b.HasIndex("UserInfoId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("UserBrowseDish");
                 });
@@ -1325,13 +1326,13 @@ namespace SixMan.ChiMa.Migrations
 
                     b.Property<int?>("Rate");
 
-                    b.Property<long?>("UserInfoId");
+                    b.Property<long?>("UserId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("DishId");
 
-                    b.HasIndex("UserInfoId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("UserCommentDish");
                 });
@@ -1359,13 +1360,13 @@ namespace SixMan.ChiMa.Migrations
 
                     b.Property<long?>("LastModifierUserId");
 
-                    b.Property<long?>("UserInfoId");
+                    b.Property<long?>("UserId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("DishId");
 
-                    b.HasIndex("UserInfoId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("UserFavoriteDish");
                 });
@@ -2071,9 +2072,9 @@ namespace SixMan.ChiMa.Migrations
                         .WithMany()
                         .HasForeignKey("DishId");
 
-                    b.HasOne("SixMan.ChiMa.Domain.Family.UserInfo", "UserInfo")
+                    b.HasOne("SixMan.ChiMa.Domain.Family.UserInfo", "User")
                         .WithMany("BrowseDishs")
-                        .HasForeignKey("UserInfoId");
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("SixMan.ChiMa.Domain.Family.UserCommentDish", b =>
@@ -2082,9 +2083,9 @@ namespace SixMan.ChiMa.Migrations
                         .WithMany("UserComments")
                         .HasForeignKey("DishId");
 
-                    b.HasOne("SixMan.ChiMa.Domain.Family.UserInfo", "UserInfo")
+                    b.HasOne("SixMan.ChiMa.Domain.Family.UserInfo", "User")
                         .WithMany()
-                        .HasForeignKey("UserInfoId");
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("SixMan.ChiMa.Domain.Family.UserFavoriteDish", b =>
@@ -2093,9 +2094,9 @@ namespace SixMan.ChiMa.Migrations
                         .WithMany("UserUserFavorites")
                         .HasForeignKey("DishId");
 
-                    b.HasOne("SixMan.ChiMa.Domain.Family.UserInfo", "UserInfo")
+                    b.HasOne("SixMan.ChiMa.Domain.Family.UserInfo", "User")
                         .WithMany("FavoriteDishs")
-                        .HasForeignKey("UserInfoId");
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("SixMan.ChiMa.Domain.Family.UserInfo", b =>

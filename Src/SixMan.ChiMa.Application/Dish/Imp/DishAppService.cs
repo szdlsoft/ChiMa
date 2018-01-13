@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Domain.Dish;
 using SixMan.ChiMa.Domain.Extensions;
+using SixMan.ChiMa.Domain.Family;
 using SixMan.ChiMa.Domain.Food;
 using System;
 using System.Collections.Generic;
@@ -18,12 +19,15 @@ namespace SixMan.ChiMa.Application.Dish
 
     {
         private IRepository<FoodMaterial, long> _foodMaterialRepository;
+        IRepository<UserFavoriteDish, long> _userFavoriteDishRepository;
         public IRepository<DishBom, long> _dishBomRepository { get; set; }
         public DishAppService(IRepository<SixMan.ChiMa.Domain.Dish.Dish, long> repository
-                                    , IRepository<FoodMaterial, long> foodMaterialRepository) 
+                                    , IRepository<FoodMaterial, long> foodMaterialRepository
+                                    , IRepository<UserFavoriteDish, long> userFavoriteDishRepository) 
             : base(repository)
         {
             _foodMaterialRepository = foodMaterialRepository;
+            _userFavoriteDishRepository = userFavoriteDishRepository;
         }
 
         protected override IQueryable<SixMan.ChiMa.Domain.Dish.Dish> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
@@ -160,29 +164,31 @@ namespace SixMan.ChiMa.Application.Dish
 
         }
 
-//        菜谱（需要用户认证）
-//    2.1 获取需要的月份的菜谱计划，用于菜谱日历的显示
-//请求参数：年，月 GET
-//返回内容： 集合， 成员需包含内容： 年， 月， 日， 标记备注（可空）
-//    2.2 获取指定日期的菜谱，用于用户菜谱的显示
-//请求参数：年，月，日 GET
-//返回内容： 集合， 成员需包含内容：主键，年，月，日，菜名，横向图url，大图ur，类型索引号，类型（早，中，晚，加餐），星数，评论数，喜欢数， 我是否喜欢， 制作时间，制作难度，今日上桌数
-//注意： 当服务端收到语法后，哪2.1没有计划，需加入计划并生成一个新的内容，如已计划请返回原有数据。
+  
 
-//    2.3 更新指定菜
-//请求参数： 2.2 获取到的主键 POST&PUT
-//返回内容：单对象，成员同2.2
-//        注意： POST为删除给定的菜，并生成一个新菜，主键可以保持不变。PUT为刷新给定的菜的内容
-//    2.4 删除指定菜
-//请求参数：2.2或2.3 获取到的主键 DELETE
-//返回内容：无，或出错信息
-//    2.5 新增菜
-//请求参数：类型索引号 POST
-//返回内容：单对象，成员同2.2    
-//    2.6 我的喜好变更
-//请求参数： 2.2或2.3获取到的主键，我的喜好选择， POST
-//返回内容：无或出错
-//注意：请注意喜欢数的同步
+        //        菜谱（需要用户认证）
+        //    2.1 获取需要的月份的菜谱计划，用于菜谱日历的显示
+        //请求参数：年，月 GET
+        //返回内容： 集合， 成员需包含内容： 年， 月， 日， 标记备注（可空）
+        //    2.2 获取指定日期的菜谱，用于用户菜谱的显示
+        //请求参数：年，月，日 GET
+        //返回内容： 集合， 成员需包含内容：主键，年，月，日，菜名，横向图url，大图ur，类型索引号，类型（早，中，晚，加餐），星数，评论数，喜欢数， 我是否喜欢， 制作时间，制作难度，今日上桌数
+        //注意： 当服务端收到语法后，哪2.1没有计划，需加入计划并生成一个新的内容，如已计划请返回原有数据。
+
+        //    2.3 更新指定菜
+        //请求参数： 2.2 获取到的主键 POST&PUT
+        //返回内容：单对象，成员同2.2
+        //        注意： POST为删除给定的菜，并生成一个新菜，主键可以保持不变。PUT为刷新给定的菜的内容
+        //    2.4 删除指定菜
+        //请求参数：2.2或2.3 获取到的主键 DELETE
+        //返回内容：无，或出错信息
+        //    2.5 新增菜
+        //请求参数：类型索引号 POST
+        //返回内容：单对象，成员同2.2    
+        //    2.6 我的喜好变更
+        //请求参数： 2.2或2.3获取到的主键，我的喜好选择， POST
+        //返回内容：无或出错
+        //注意：请注意喜欢数的同步
 
     }
 }

@@ -22,10 +22,14 @@ namespace SixMan.ChiMa.EFCore.Repositories
             var q = GetAll()
                     .Include(p => p.Family)
                     .Include(p => p.Dish)
+                    .ThenInclude(d => d.UserComments)
+                    .Include(p => p.Dish)
+                    .ThenInclude(d => d.UserUserFavorites )
                     .Where(p => p.Family.Id == familyId
                              && p.PlanDate == planDate  )
                     ;
-            return q.ToList();
+            var result = q.ToList();
+            return result;
         }
     }
 }

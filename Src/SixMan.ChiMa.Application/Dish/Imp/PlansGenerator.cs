@@ -35,42 +35,48 @@ namespace SixMan.ChiMa.Application.Dish
             plans.Add(new Plan()
             {
                 Dish = dishs[0],
-                KindNO = 1,
+                MealType = MealType.早餐,
+                MealNo = 1
             });
             plans.Add(new Plan()
             {
                 Dish = dishs[1],
-                KindNO = 1,
+                MealType = MealType.早餐,
+                MealNo = 2
             });
 
             //中
             plans.Add(new Plan()
             {
                 Dish = dishs[2],
-                KindNO = 2,
+                MealType = MealType.中餐,
+                MealNo = 1
             });
             plans.Add(new Plan()
             {
                 Dish = dishs[3],
-                KindNO = 2,
+                MealType = MealType.中餐,
+                MealNo = 2
             });
             //晚
             plans.Add(new Plan()
             {
                 Dish = dishs[4],
-                KindNO = 3,
+                MealType = MealType.晚餐,
+                MealNo = 1
             });
             plans.Add(new Plan()
             {
                 Dish = dishs[5],
-                KindNO = 3,
+                MealType = MealType.晚餐,
+                MealNo = 2
             });
 
             foreach( var p in plans)
             {
                 p.Family = family;
                 p.PlanDate = planDate;
-                p.Kinds = "早，中，晚";
+                //p.Kinds = "早，中，晚";
             }
 
             return plans;

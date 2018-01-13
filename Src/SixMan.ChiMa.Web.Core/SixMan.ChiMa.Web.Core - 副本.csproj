@@ -16,11 +16,14 @@
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <RootNamespace>SixMan.ChiMa</RootNamespace>
     <ApplicationIcon />
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <StartupObject />
   </PropertyGroup>
 
-  
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <DefineConstants>FEATURE_SIGNALR</DefineConstants>
+  </PropertyGroup>
+
     <ItemGroup>
     <ProjectReference Include="..\SixMan.ChiMa.Application\SixMan.ChiMa.Application.csproj" />
     <ProjectReference Include="..\SixMan.ChiMa.EFCore\SixMan.ChiMa.EFCore.csproj" />
@@ -37,6 +40,12 @@
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.0" />
   </ItemGroup>
 
-  
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+
+    <PackageReference Include="Abp.Web.SignalR" Version="3.1.1" />
+    <PackageReference Include="Abp.Owin" Version="3.1.1" />
+  </ItemGroup>
 
 </Project>

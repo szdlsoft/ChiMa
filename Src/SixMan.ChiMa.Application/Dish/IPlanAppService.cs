@@ -6,7 +6,7 @@ using System.Text;
 namespace SixMan.ChiMa.Application.Dish
 {
     public interface IPlanAppService
-        : IAdvancedAsyncCrudAppService<PlanDto>
+        : IMobileAppService
     {
         /// <summary>
         /// 2.1 获取需要的月份的菜谱计划，用于菜谱日历的显示
@@ -20,5 +20,6 @@ namespace SixMan.ChiMa.Application.Dish
         /// <param name="planDate"></param>
         /// <returns></returns>
         IList<PlanDto> GetByDate(DateTime planDate);
+
     }
 }
