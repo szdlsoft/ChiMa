@@ -9,6 +9,7 @@ namespace SixMan.ChiMa.Application
 {
     public interface IMobileAppService<TEntityDto, TCreateInput, TUpdateInput>
         : ICrudAppService<TEntityDto, long, PagedAndSortedResultRequestDto, TCreateInput, TUpdateInput, EntityDto<long>, EntityDto<long>>
+         , IReadAppService<TEntityDto>
            where TEntityDto : IEntityDto<long>
            where TUpdateInput : IEntityDto<long>
           
@@ -16,8 +17,9 @@ namespace SixMan.ChiMa.Application
     }
 
     public interface IReadAppService<TEntityDto>
+        : IApplicationService, ITransientDependency
         where TEntityDto : IEntityDto<long>
     {
-        TEntityDto Get(IEntityDto<long> input);
+        TEntityDto Get(EntityDto<long> input);
     }
 }

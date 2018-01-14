@@ -12,7 +12,7 @@ namespace SixMan.ChiMa.Application.Family
 {
     [AbpAuthorize]
     public class FamilyAppService
-        : MobileAppServiceBase<Domain.Family.Family, FamilyDto, FamilyDto, FamilyDto>
+        : MobileAppServiceBase<Domain.Family.Family, FamilyDto>
         , IFamilyAppService
     {
         //IRepository<UserInfo, long> _userInfoRepository;

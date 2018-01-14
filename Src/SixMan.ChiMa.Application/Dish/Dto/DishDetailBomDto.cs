@@ -27,9 +27,6 @@ namespace SixMan.ChiMa.Application.Dish
         /// 配比的任意描述
         /// </summary>
         public string MatchingDescription { get; set; }
-        /// <summary>
-        /// 预处理烹饪方法
-        /// </summary>
-        public string PreProcess { get; set; }
+        
     }
 }

@@ -12,7 +12,7 @@ namespace SixMan.ChiMa.Application.Dish
         /// <summary>
         /// 食材配比
         /// </summary>
-        public ICollection<DishBomDto> DishBoms { get; set; }
+        public ICollection<DetailDishBomDto> DishBoms { get; set; }
 
         /// <summary>
         /// 营养含量

@@ -10,7 +10,7 @@ namespace SixMan.ChiMa.Application.Dish
     public interface IDishDetailsAppService
         : IReadAppService<DishDetailsDto>
     {
-        CookeryDto CreateCookery(CookeryCreateDto Cookery);
+        //CookeryDto CreateCookery(CookeryCreateDto Cookery);
         CookeryNoteDto CreateCookeryNote(CookeryNoteCreateDto CookeryNote);
 
     }

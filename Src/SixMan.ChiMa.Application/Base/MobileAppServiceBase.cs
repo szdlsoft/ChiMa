@@ -104,7 +104,15 @@ namespace SixMan.ChiMa.Application
 
             return _familyResponsitory.Get(_familyResponsitory.InsertAndGetId(entity));
         }
+    }
 
-
+    public class MobileAppServiceBase<TEntity, TEntityDto>
+        : MobileAppServiceBase<TEntity, TEntityDto, TEntityDto, TEntityDto>
+        where TEntity : class, IEntity<long>
+        where TEntityDto : IEntityDto<long>
+    {
+        protected MobileAppServiceBase(IRepository<TEntity, long> repository) : base(repository)
+        {
+        }
     }
 }

@@ -17,9 +17,10 @@ using System;
 namespace SixMan.ChiMa.Migrations
 {
     [DbContext(typeof(ChiMaDbContext))]
-    partial class ChiMaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180114104156_add_cookery_content")]
+    partial class add_cookery_content
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

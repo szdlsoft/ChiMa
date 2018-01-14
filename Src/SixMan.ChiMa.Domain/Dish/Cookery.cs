@@ -14,6 +14,7 @@ namespace SixMan.ChiMa.Domain.Dish
         : MultiMediaContentBase
         , IOrder, IContent
     {
+        public Dish Dish { get; set; }
         /// <summary>
         /// 序号
         /// </summary>
