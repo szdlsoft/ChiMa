@@ -14,4 +14,10 @@ namespace SixMan.ChiMa.Application
           
     {
     }
+
+    public interface IReadAppService<TEntityDto>
+        where TEntityDto : IEntityDto<long>
+    {
+        TEntityDto Get(IEntityDto<long> input);
+    }
 }

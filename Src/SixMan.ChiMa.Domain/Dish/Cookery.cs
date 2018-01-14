@@ -11,8 +11,8 @@ namespace SixMan.ChiMa.Domain.Dish
     /// 烹饪法步骤
     /// </summary>
     public class Cookery
-        : MultiMediaBase
-        , IOrder
+        : MultiMediaContentBase
+        , IOrder, IContent
     {
         /// <summary>
         /// 序号
@@ -25,5 +25,6 @@ namespace SixMan.ChiMa.Domain.Dish
         public int? Time { get; set; }
 
         public ICollection<CookeryNote> CookeryNotes { get; set; }
+        
     }
 }
