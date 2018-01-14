@@ -13,10 +13,12 @@ namespace SixMan.ChiMa.Domain.Dish
     public class Plan
         : ChiMaEntityBase
     {
+        public long FamilyId { get; set; }
         /// <summary>
         /// 家庭
         /// </summary>
         public SixMan.ChiMa.Domain.Family.Family Family { get; set; }
+        public long DishId { get; set; }
         /// <summary>
         /// 菜谱
         /// </summary>

@@ -32,6 +32,7 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<DishBom> DishBom { get; set; }
         public virtual DbSet<Cookery> Cookery { get; set; }
         public virtual DbSet<Plan> Plan { get; set; }
+        public virtual DbSet<CookeryNote> CookeryNote { get; set; }
         //家庭
         public virtual DbSet<Family> Family { get; set; }
         public virtual DbSet<FamilyMember> FamilyMember { get; set; }

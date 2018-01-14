@@ -23,5 +23,7 @@ namespace SixMan.ChiMa.Domain.Dish
         /// 时间
         /// </summary>
         public int? Time { get; set; }
+
+        public ICollection<CookeryNote> CookeryNotes { get; set; }
     }
 }

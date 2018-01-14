@@ -12,59 +12,58 @@ namespace SixMan.ChiMa.Application.Family
 {
     [AbpAuthorize]
     public class FamilyAppService
-        : MobileAppService<SixMan.ChiMa.Domain.Family.Family, FamilyDto>
+        : MobileAppServiceBase<Domain.Family.Family, FamilyDto, FamilyDto, FamilyDto>
         , IFamilyAppService
     {
-        IRepository<UserInfo, long> _userInfoRepository;
+        //IRepository<UserInfo, long> _userInfoRepository;
         IRepository<SixMan.ChiMa.Domain.Dish.Dish, long> _dishRepository;
         IRepository<UserFavoriteDish, long> _userFavoriteDishRepository;
         public FamilyAppService(IFamilyRepository repository
-                                  , IRepository<UserInfo,long> userInfoRepository
                                   , IRepository<SixMan.ChiMa.Domain.Dish.Dish, long> dishRepository
                                   , IRepository<UserFavoriteDish, long> userFavoriteDishRepository
                                     ) 
             : base(repository)
         {
-            _userInfoRepository = userInfoRepository;
+            //_userInfoRepository = userInfoRepository;
             _dishRepository = dishRepository;
             _userFavoriteDishRepository = userFavoriteDishRepository;
         }
 
-        protected IFamilyRepository familyResponsitory => Repository as IFamilyRepository;
+        //protected IFamilyRepository familyResponsitory => Repository as IFamilyRepository;
 
-        public Domain.Family.Family GetOrCreate()
-        {
-            if (!AbpSession.UserId.HasValue)
-            {
-                throw new Exception("未登录，不能获取菜单计划！");
-            }
-            long userId = AbpSession.UserId.Value;
-            Domain.Family.Family family = familyResponsitory.GetByUser(userId);
-            if ( family == null)
-            {
-                family = CreateFamily(userId);
-            }
-            return family;
-        }       
+        //public Domain.Family.Family GetOrCreate()
+        //{
+        //    if (!AbpSession.UserId.HasValue)
+        //    {
+        //        throw new Exception("未登录，不能获取菜单计划！");
+        //    }
+        //    long userId = AbpSession.UserId.Value;
+        //    Domain.Family.Family family = familyResponsitory.GetByUser(userId);
+        //    if ( family == null)
+        //    {
+        //        family = CreateFamily(userId);
+        //    }
+        //    return family;
+        //}       
 
-        private Domain.Family.Family CreateFamily(long userId)
-        {
-            //var CreateUserInfo = new UserInfo()
-            //{
-            //    UserId = userId,
-            //    IsFamilyCreater = true
-            //};
-            UserInfo.IsFamilyCreater = true;
+        //private Domain.Family.Family CreateFamily(long userId)
+        //{
+        //    //var CreateUserInfo = new UserInfo()
+        //    //{
+        //    //    UserId = userId,
+        //    //    IsFamilyCreater = true
+        //    //};
+        //    UserInfo.IsFamilyCreater = true;
 
-            Domain.Family.Family entity = new Domain.Family.Family()
-            {
-                UUID = Guid.NewGuid(),
-            };
+        //    Domain.Family.Family entity = new Domain.Family.Family()
+        //    {
+        //        UUID = Guid.NewGuid(),
+        //    };
 
-            entity.UserInfos = new List<UserInfo>() { UserInfo };
+        //    entity.UserInfos = new List<UserInfo>() { UserInfo };
 
-            return Repository.Get( Repository.InsertAndGetId(entity));
-        }
+        //    return Repository.Get( Repository.InsertAndGetId(entity));
+        //}
 
         public void UpdateMyFavorites(UpdateFavoriteInput input)
         {

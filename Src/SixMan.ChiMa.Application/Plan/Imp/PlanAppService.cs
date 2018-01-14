@@ -13,25 +13,51 @@ namespace SixMan.ChiMa.Application.Dish
 {
     [AbpAuthorize]
     public class PlanAppService
-        : MobileAppService<Plan,PlanDto>
+        : MobileAppServiceBase<Plan, PlanDto, PlanCreateDto, PlanUpdateDto>
         , IPlanAppService
     {
         protected readonly IPlanRepository _repository;
         protected readonly IPlansGenerator _plansGenerator;
-        protected readonly IFamilyAppService _familyService;
+        //protected readonly IFamilyAppService _familyService;
         public PlanAppService(IPlanRepository repository
-                                , IFamilyAppService familyService
                                 , IPlansGenerator plansGenerator) 
             : base(repository)
         {
             _repository = repository;
             _plansGenerator = plansGenerator;
-            _familyService = familyService;
+            //_familyService = familyService;
         }
+
+        protected override Plan GetEntityById(long id)
+        {
+            return Repository.GetAllIncluding( p => p.Dish
+                                               , p => p.Dish.UserComments
+                                               , p => p.Dish.UserUserFavorites)
+                             .Where( p => p.Id == id)
+                             .FirstOrDefault();
+        }
+
+        public override PlanDto Update(PlanUpdateDto input)
+        {
+            CheckUpdatePermission();
+
+            var entity = GetEntityById(input.Id);
+
+            MapToEntity(input, entity);
+            CurrentUnitOfWork.SaveChanges();
+
+            return MapToEntityDto(entity);
+       }
 
         //protected IPlanRepository _repository => Repository as IPlanRepository;
         protected override PlanDto MapToEntityDto(Plan entity)
         {
+            if( entity.Dish == null
+                || entity.Dish.UserComments == null) //确保关联数据获取！
+            {
+                entity = GetEntityById(entity.Id);
+            }
+
             var dto = base.MapToEntityDto(entity);
 
             dto.Dish.UserCommentCount = entity.Dish.UserComments.Count();
@@ -41,28 +67,35 @@ namespace SixMan.ChiMa.Application.Dish
             return dto;
         }
 
+        protected override Plan MapToEntity(PlanCreateDto createInput)
+        {
+            var entity = base.MapToEntity(createInput);
+            entity.FamilyId = Family.Id;
+
+            return entity; 
+        }
+
         public IList<PlanDto> GetByDate(DateTime planDate)
         {            
-            SixMan.ChiMa.Domain.Family.Family family = _familyService.GetOrCreate();
-            IList<Plan> list = _repository.Get(planDate, family.Id );
+            //SixMan.ChiMa.Domain.Family.Family family = _familyService.GetOrCreate();
+            IList<Plan> list = _repository.Get(planDate, Family.Id );
 
             if ( list.Count() < 1)//没有计划，需加入计划并生成一个新的内容，如已计划请返回原有数据
             {
-                IList<Plan> newPlans = _plansGenerator.BuildPlans(planDate, family);
-                list = SaveAndGet(newPlans);
+                IList<Plan> newPlans = _plansGenerator.BuildPlans(planDate, Family);
+                SaveList(newPlans);
+                list = _repository.Get(planDate, Family.Id);
             }            
 
             return list.Select(MapToEntityDto).ToList();
         }   
 
-        private IList<Plan> SaveAndGet(IList<Plan> newPlans)
+        private void SaveList(IList<Plan> newPlans)
         {
             foreach( var plan in newPlans)
             {
                 plan.Id = _repository.InsertAndGetId(plan);
             }
-
-            return newPlans;
         }
 
         public IList<DayPlanFlag> GetByMonth(DateTime month)
