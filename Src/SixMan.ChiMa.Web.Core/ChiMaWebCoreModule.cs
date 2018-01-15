@@ -53,6 +53,7 @@ namespace SixMan.ChiMa
                      typeof(ChiMaApplicationModule).GetAssembly(),
                      useConventionalHttpVerbs:true
                  )
+                 //.Where( t => !( t is IMobileAppService))
                  //.WithConventionalVerbs()
                  ;
             //Configuration.Modules.AbpMvc();

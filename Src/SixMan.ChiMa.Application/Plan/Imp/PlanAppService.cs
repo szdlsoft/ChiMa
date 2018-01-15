@@ -8,6 +8,7 @@ using SixMan.ChiMa.Domain.Family;
 using SixMan.ChiMa.Application.Family;
 using Abp.Authorization;
 using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 
 namespace SixMan.ChiMa.Application.Dish
 {
@@ -37,7 +38,7 @@ namespace SixMan.ChiMa.Application.Dish
                              .FirstOrDefault();
         }
 
-        public override PlanDto Update(PlanUpdateDto input)
+        public  PlanDto Update(PlanUpdateDto input)
         {
             CheckUpdatePermission();
 
@@ -122,6 +123,25 @@ namespace SixMan.ChiMa.Application.Dish
             }
 
             return monthFlags;
+        }
+
+        public virtual PlanDto Create(PlanCreateDto input)
+        {
+            CheckCreatePermission();
+
+            var entity = MapToEntity(input);
+
+            Repository.Insert(entity);
+            CurrentUnitOfWork.SaveChanges();
+
+            return MapToEntityDto(entity);
+        }
+
+        public virtual void Delete(EntityDto<long> input)
+        {
+            CheckDeletePermission();
+
+            Repository.Delete(input.Id);
         }
 
     }

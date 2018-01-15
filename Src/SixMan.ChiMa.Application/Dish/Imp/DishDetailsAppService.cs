@@ -14,12 +14,12 @@ namespace SixMan.ChiMa.Application.Dish.Imp
         : MobileAppServiceBase<Domain.Dish.Dish, DishDetailsDto>
         , IDishDetailsAppService
     {
-        IRepository<CookeryNote, long> _cookeryNoteRepositor;
+        IRepository<CookeryNote, long> _cookeryNoteRepository;
         public DishDetailsAppService(IDishRepository repository
                                     ,IRepository<CookeryNote, long> cookeryNoteRepository)
             : base(repository)
         {
-            _cookeryNoteRepositor = cookeryNoteRepository;
+            _cookeryNoteRepository = cookeryNoteRepository;
         }
 
         IDishRepository dishRepository => Repository as IDishRepository;
@@ -65,9 +65,17 @@ namespace SixMan.ChiMa.Application.Dish.Imp
             
         }
 
-        public CookeryNoteDto CreateCookeryNote(CookeryNoteCreateDto CookeryNote)
+        public CookeryNoteDto CreateCookeryNote(CookeryNoteCreateDto CookeryNoteDto)
         {
-            throw new NotImplementedException();
+            var note = new CookeryNote()
+            {
+                CookeryId = CookeryNoteDto.CookeyId,
+                UserInfoId = UserInfo.Id,
+                Description = CookeryNoteDto.Description
+            };
+
+            return ObjectMapper.Map<CookeryNoteDto>( _cookeryNoteRepository.Get( _cookeryNoteRepository.InsertAndGetId(note)));
         }
+
     }
 }

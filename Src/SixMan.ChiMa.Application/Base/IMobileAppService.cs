@@ -8,8 +8,11 @@ using System.Text;
 namespace SixMan.ChiMa.Application
 {
     public interface IMobileAppService<TEntityDto, TCreateInput, TUpdateInput>
-        : ICrudAppService<TEntityDto, long, PagedAndSortedResultRequestDto, TCreateInput, TUpdateInput, EntityDto<long>, EntityDto<long>>
-         , IReadAppService<TEntityDto>
+        : 
+        //ICrudAppService<TEntityDto, long, PagedAndSortedResultRequestDto, TCreateInput, TUpdateInput, EntityDto<long>, EntityDto<long>>
+         //, 
+        IReadAppService<TEntityDto>
+        //, IDeleteAppService
            where TEntityDto : IEntityDto<long>
            where TUpdateInput : IEntityDto<long>
           
@@ -17,9 +20,20 @@ namespace SixMan.ChiMa.Application
     }
 
     public interface IReadAppService<TEntityDto>
-        : IApplicationService, ITransientDependency
+        : IApplicationService, ITransientDependency, IMobileAppService
         where TEntityDto : IEntityDto<long>
     {
         TEntityDto Get(EntityDto<long> input);
+    }
+
+    public interface IDeleteAppService
+    {
+        void Delete(EntityDto<long> input);
+
+    }
+
+    public interface IMobileAppService
+    {
+
     }
 }

@@ -11,7 +11,7 @@ using Abp.Dependency;
 namespace SixMan.ChiMa.Application
 {
     public class MobileAppServiceBase<TEntity, TEntityDto, TCreateInput, TUpdateInput>
-        : CrudAppService<TEntity, TEntityDto, long, PagedAndSortedResultRequestDto, TCreateInput, TUpdateInput>
+        : CrudAppServiceBase<TEntity, TEntityDto, long, PagedAndSortedResultRequestDto, TCreateInput, TUpdateInput>
         , IMobileAppService<TEntityDto, TCreateInput, TUpdateInput>
         where TEntity : class, IEntity<long>
         where TEntityDto : IEntityDto<long>
@@ -104,6 +104,21 @@ namespace SixMan.ChiMa.Application
 
             return _familyResponsitory.Get(_familyResponsitory.InsertAndGetId(entity));
         }
+
+        public TEntityDto Get(EntityDto<long> input)
+        {
+            CheckGetPermission();
+
+            var entity = GetEntityById(input.Id);
+            return MapToEntityDto(entity);
+        }
+
+       
+
+        protected virtual TEntity GetEntityById(long id)
+        {
+            return Repository.Get(id);
+        }
     }
 
     public class MobileAppServiceBase<TEntity, TEntityDto>
@@ -115,4 +130,5 @@ namespace SixMan.ChiMa.Application
         {
         }
     }
+
 }

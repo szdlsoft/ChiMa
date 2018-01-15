@@ -12,7 +12,9 @@ namespace SixMan.ChiMa.Domain.Dish
     public class CookeryNote
         : MultiMediaBase
     {
+        public long CookeryId { get; set; }
         public Cookery Cookery { get; set; }
-        public UserInfo UerInfo { get; set; }
+        public long UserInfoId { get; set; }
+        public UserInfo UserInfo { get; set; }
     }
 }

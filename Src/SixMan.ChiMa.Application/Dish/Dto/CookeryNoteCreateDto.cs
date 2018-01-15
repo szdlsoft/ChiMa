@@ -12,6 +12,6 @@ namespace SixMan.ChiMa.Application.Dish
         [Required]
         [StringLength(DescriptionBaseDto.MaxDescriptionLength)]
         [MinLength(DescriptionBaseDto.MinDescriptionLength)]
-        public string Content { get; set; }
+        public string Description { get; set; }
     }
 }
