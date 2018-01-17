@@ -12,7 +12,8 @@ namespace SixMan.ChiMa.Application
 {
     public class MobileAppServiceBase<TEntity, TEntityDto, TCreateInput, TUpdateInput>
         : CrudAppServiceBase<TEntity, TEntityDto, long, PagedAndSortedResultRequestDto, TCreateInput, TUpdateInput>
-        , IMobileAppService<TEntityDto, TCreateInput, TUpdateInput>
+        //, IMobileAppService<TEntityDto, TCreateInput, TUpdateInput>
+        , IReadAppService<TEntityDto>
         where TEntity : class, IEntity<long>
         where TEntityDto : IEntityDto<long>
         where TUpdateInput : IEntityDto<long>
@@ -111,13 +112,35 @@ namespace SixMan.ChiMa.Application
 
             var entity = GetEntityById(input.Id);
             return MapToEntityDto(entity);
-        }
-
-       
+        }       
 
         protected virtual TEntity GetEntityById(long id)
         {
             return Repository.Get(id);
+        }
+
+        protected TEntityDto CreateImp(TCreateInput input)
+        {
+            CheckCreatePermission();
+
+            var entity = MapToEntity(input);
+
+            Repository.Insert(entity);
+            CurrentUnitOfWork.SaveChanges();
+
+            return MapToEntityDto(entity);
+        }
+
+        protected TEntityDto UpdateImp(TUpdateInput input)
+        {
+            CheckUpdatePermission();
+
+            var entity = GetEntityById(input.Id);
+
+            MapToEntity(input, entity);
+            CurrentUnitOfWork.SaveChanges();
+
+            return MapToEntityDto(entity);
         }
     }
 
@@ -130,5 +153,23 @@ namespace SixMan.ChiMa.Application
         {
         }
     }
+
+    //public class MobileCrudAppServiceBase<TEntity, TEntityDto, TCreateInput, TUpdateInput>
+    //    : CrudAppService<TEntity, TEntityDto, long, PagedAndSortedResultRequestDto, TCreateInput, TUpdateInput>
+    //    , IReadAppService<TEntityDto>
+    //    , ICreateAppService<TEntityDto, TCreateInput>
+    //    , IUpdateAppService<TEntityDto, TUpdateInput>
+    //    , IDeleteAppService
+    //    where TEntity : class, IEntity<long>
+    //    where TEntityDto : IEntityDto<long>
+    //    where TUpdateInput : IEntityDto<long>
+    //{
+    //    protected readonly IFamilyRepository _familyResponsitory;
+    //    protected readonly IRepository<UserInfo, long> _userInfoRepository;
+    //    protected MobileCrudAppServiceBase(IRepository<TEntity, long> repository) : base(repository)
+    //    {
+
+    //    }
+    //}
 
 }

@@ -8,7 +8,7 @@ using SixMan.ChiMa.Application.Dish;
 namespace SixMan.ChiMa.Application.Family
 {
     public interface IFamilyAppService
-    :  IMobileAppService<FamilyDto, FamilyDto, FamilyDto>
+    : IReadAppService<FamilyDto>
     {
         /// <summary>
         /// 获得或创建家庭

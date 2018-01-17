@@ -6,7 +6,11 @@ using System.Text;
 namespace SixMan.ChiMa.Application.Dish
 {
     public interface IPlanAppService
-        : IMobileAppService<PlanDto,  PlanCreateDto, PlanUpdateDto>
+        //: IMobileAppService<PlanDto,  PlanCreateDto, PlanUpdateDto>
+        : IReadAppService<PlanDto>
+        , ICreateAppService<PlanDto, PlanCreateDto>
+        , IUpdateAppService<PlanDto, PlanUpdateDto>
+        , IDeleteAppService
     {
         /// <summary>
         /// 2.1 获取需要的月份的菜谱计划，用于菜谱日历的显示

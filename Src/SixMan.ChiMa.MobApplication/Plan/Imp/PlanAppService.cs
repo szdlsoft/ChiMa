@@ -40,14 +40,7 @@ namespace SixMan.ChiMa.Application.Dish
 
         public  PlanDto Update(PlanUpdateDto input)
         {
-            CheckUpdatePermission();
-
-            var entity = GetEntityById(input.Id);
-
-            MapToEntity(input, entity);
-            CurrentUnitOfWork.SaveChanges();
-
-            return MapToEntityDto(entity);
+            return Update(input);
        }
 
         //protected IPlanRepository _repository => Repository as IPlanRepository;
@@ -126,15 +119,9 @@ namespace SixMan.ChiMa.Application.Dish
         }
 
         public virtual PlanDto Create(PlanCreateDto input)
-        {
-            CheckCreatePermission();
+        {          
 
-            var entity = MapToEntity(input);
-
-            Repository.Insert(entity);
-            CurrentUnitOfWork.SaveChanges();
-
-            return MapToEntityDto(entity);
+            return CreateImp(input);
         }
 
         public virtual void Delete(EntityDto<long> input)
