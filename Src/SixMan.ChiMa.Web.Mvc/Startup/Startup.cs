@@ -55,6 +55,7 @@ namespace SixMan.ChiMa.Web.Startup
                 options.SwaggerDoc("v1", new Info { Title = "ChiMa API", Version = "v1" });
                 options.DocInclusionPredicate((docName, description) => true);
                 options.OperationFilter<AddAuthTokenHeaderParameter>();
+                options.OrderActionsBy(ad => ad.RelativePath);
             });
 
             //Configure Abp and Dependency Injection

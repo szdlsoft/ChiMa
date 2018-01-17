@@ -13,6 +13,7 @@ using SixMan.ChiMa.Configuration;
 using SixMan.ChiMa.EFCore;
 using SixMan.ChiMa.Application;
 using SixMan.ChiMa.Domain;
+using System.Linq;
 
 #if FEATURE_SIGNALR
 using Abp.Web.SignalR;
@@ -22,6 +23,7 @@ namespace SixMan.ChiMa
 {
     [DependsOn(
          typeof(ChiMaApplicationModule),
+        typeof(ChiMaMobApplicationModule),
          typeof(ChiMaEFCoreModule),
          typeof(AbpAspNetCoreModule)
 #if FEATURE_SIGNALR 
@@ -51,14 +53,35 @@ namespace SixMan.ChiMa
             Configuration.Modules.AbpAspNetCore()
                  .CreateControllersForAppServices(
                      typeof(ChiMaApplicationModule).GetAssembly(),
-                     useConventionalHttpVerbs:true
+                     useConventionalHttpVerbs: true
                  )
-                 //.Where( t => !( t is IMobileAppService))
+                 //.Where( IsNotMoile )
+                 //.WithConventionalVerbs()
+                 ;
+            Configuration.Modules.AbpAspNetCore()
+                 .CreateControllersForAppServices(
+                     typeof(ChiMaMobApplicationModule).GetAssembly(),
+                     useConventionalHttpVerbs: true,
+                     moduleName: "mob"
+                 )
+                 //.Where(IsMoile)
                  //.WithConventionalVerbs()
                  ;
             //Configuration.Modules.AbpMvc();
 
             ConfigureTokenAuth();
+        }
+
+        bool IsMoile(Type type)
+        {
+            bool result = type.GetInterfaces().Any(i => i == typeof( IMobileAppService));
+            return result;
+        }
+
+        bool IsNotMoile(Type type)
+        {
+            bool result = type.GetInterfaces().Any(i => i == typeof(IMobileAppService));
+            return !result;
         }
 
         private void ConfigureTokenAuth()

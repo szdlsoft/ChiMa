@@ -24,6 +24,7 @@
     <ItemGroup>
     <ProjectReference Include="..\SixMan.ChiMa.Application\SixMan.ChiMa.Application.csproj" />
     <ProjectReference Include="..\SixMan.ChiMa.EFCore\SixMan.ChiMa.EFCore.csproj" />
+    <ProjectReference Include="..\SixMan.ChiMa.MobApplication\SixMan.ChiMa.MobApplication.csproj" />
   </ItemGroup>
 
   <ItemGroup>
