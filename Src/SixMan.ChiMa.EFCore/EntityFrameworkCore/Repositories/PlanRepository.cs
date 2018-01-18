@@ -5,6 +5,8 @@ using System.Text;
 using Abp.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using SixMan.ChiMa.Domain.Base;
+using SixMan.ChiMa.Domain.Food;
 
 namespace SixMan.ChiMa.EFCore.Repositories
 {
@@ -30,6 +32,43 @@ namespace SixMan.ChiMa.EFCore.Repositories
                     ;
             var result = q.ToList();
             return result;
+        }
+
+        public IList<FoodMaterialVolume> GetByRange(long familyId, DateRange dateRange)
+        {
+            List<FoodMaterialVolume> planNeeds = new List<FoodMaterialVolume>();
+            var q = GetAllIncluding(p => p.Family
+                                    , p => p.Dish
+                                    , p => p.Dish.DishBoms)
+                    .Where(p => p.Family.Id == familyId
+                        && p.PlanDate >= dateRange.From
+                        && p.PlanDate <= dateRange.To);
+                    
+            var planList = q.ToList();
+            foreach ( var p in planList)
+            {
+                var d = p.Dish;
+                if (d.DishBoms == null) continue;
+                foreach( var db in d.DishBoms)
+                {
+                    var fmv = planNeeds.FirstOrDefault(pn => pn.FoodMaterial.Id == db.FoodMaterialId);
+                    if( fmv == null)
+                    {
+                        var  fm = Context.FoodMaterial.Find(db.FoodMaterialId);
+                        planNeeds.Add(new FoodMaterialVolume() {
+                            FoodMaterial = fm,
+                            Volume = (int)(db.Matching * 100) //暂时写死
+                        }
+                            );
+                    }
+                    else
+                    {
+                        fmv.Volume += (int)(db.Matching * 100); //暂时写死
+                    }
+                }
+
+            }
+            return planNeeds;
         }
     }
 }

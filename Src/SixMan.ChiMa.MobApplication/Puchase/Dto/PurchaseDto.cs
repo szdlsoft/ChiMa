@@ -10,19 +10,18 @@ namespace SixMan.ChiMa.Application
     public class PurchaseDto
         : MobileBaseDto
     {
-        
         /// <summary>
         /// 采购日期
         /// </summary>
-        public DateTime? PurchaseTime { get; set; }
-        /// <summary>
-        /// 制作时间
-        /// </summary>
-        public DateTime? MakeTime { get; set; }
+        //public DateTime? PurchaseTime { get; set; }
+        ///// <summary>
+        ///// 制作时间
+        ///// </summary>
+        //public DateTime? MakeTime { get; set; }
         /// <summary>
         /// 食材
         /// </summary>
-        public FoodMaterial FoodMaterial { get; set; }
+        public MobFoodMaterialDto FoodMaterial { get; set; }
         /// <summary>
         /// 采购量 
         /// </summary>

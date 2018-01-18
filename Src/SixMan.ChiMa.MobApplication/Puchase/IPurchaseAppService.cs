@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SixMan.ChiMa.Domain.Base;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,6 +10,6 @@ namespace SixMan.ChiMa.Application
         , ICreateAppService<PurchaseDto, PurchaseCreateDto>
         , IUpdateAppService<PurchaseDto, PurchaseUpdateDto>
     {
-        IList<PurchaseDto> GetByDateRange(DateRangeDto dateRange);
+        IList<PurchaseDto> GetByDateRange(DateRange dateRange);
     }
 }
