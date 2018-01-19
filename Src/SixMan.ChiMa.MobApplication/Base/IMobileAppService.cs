@@ -35,7 +35,7 @@ namespace SixMan.ChiMa.Application
     }
 
     public interface IReadAppService<TEntityDto>
-        : IApplicationService, ITransientDependency, IMobileAppService
+        :  IMobileAppService
         where TEntityDto : IEntityDto<long>
     {
         TEntityDto Get(EntityDto<long> input);
@@ -48,6 +48,7 @@ namespace SixMan.ChiMa.Application
     }
 
     public interface IMobileAppService
+        : IApplicationService, ITransientDependency
     {
 
     }

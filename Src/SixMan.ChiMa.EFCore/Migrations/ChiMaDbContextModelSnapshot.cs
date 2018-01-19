@@ -1569,6 +1569,9 @@ namespace SixMan.ChiMa.Migrations
                     b.Property<string>("Season")
                         .HasMaxLength(50);
 
+                    b.Property<string>("StorageMode")
+                        .HasMaxLength(256);
+
                     b.Property<double?>("Thiamin");
 
                     b.Property<string>("Unit")
@@ -1695,9 +1698,6 @@ namespace SixMan.ChiMa.Migrations
                     b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<long?>("LastModifierUserId");
-
-                    b.Property<string>("StorageMode")
-                        .HasMaxLength(256);
 
                     b.HasKey("Id");
 

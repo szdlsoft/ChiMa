@@ -24,5 +24,10 @@ namespace SixMan.ChiMa.Application
         /// </summary>
         public bool IsMain { get; set; }
 
+        /// <summary>
+        /// 存储方式
+        /// </summary>
+        public string StorageMode { get; set; }
+
     }
 }

@@ -6,6 +6,8 @@ using Abp.Domain.Repositories;
 using System.Linq;
 using SixMan.ChiMa.Domain.Dish;
 using SixMan.ChiMa.Domain.Base;
+using Abp.Events.Bus;
+using SixMan.ChiMa.Domain;
 
 namespace SixMan.ChiMa.Application
 {
@@ -14,11 +16,13 @@ namespace SixMan.ChiMa.Application
         , IPurchaseAppService
     {
         IPlanRepository _planRepository;
+        public IEventBus EventBus { get; set; }
         public PurchaseAppService(IRepository<Purchase, long> repository
                                   ,IPlanRepository planRepository) 
             : base(repository)
         {
             _planRepository = planRepository;
+            EventBus = NullEventBus.Instance;
         }
 
         protected override Purchase MapToEntity(PurchaseCreateDto createInput)
@@ -37,7 +41,19 @@ namespace SixMan.ChiMa.Application
         }
         public PurchaseDto Update(PurchaseUpdateDto input)
         {
-            return UpdateImp(input);
+            var result = UpdateImp(input);
+
+            var entity = Repository.GetAllIncluding(pc => pc.FoodMaterial)
+                                   .Where(pc => pc.Id == input.Id)
+                                   .FirstOrDefault();
+
+            EventBus.Trigger(new FoodMaterialInventoryChangeEvent()
+            {
+                FoodMaterial = entity.FoodMaterial,
+                Volume = (entity.HasPurchased ? 1 : -1) * entity.Volume
+            });
+
+            return result;
         }
 
         public IList<PurchaseDto> GetByDateRange(DateRange dateRange)

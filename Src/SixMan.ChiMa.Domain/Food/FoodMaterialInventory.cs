@@ -18,10 +18,6 @@ namespace SixMan.ChiMa.Domain.Food
         /// 库存
         /// </summary>
         public int? Inventory { get; set; }
-        /// <summary>
-        /// 存储方式
-        /// </summary>
-        [StringLength(DescriptionBase.MaxDescriptionLength)]
-        public string StorageMode { get; set; }
+        
     }
 }

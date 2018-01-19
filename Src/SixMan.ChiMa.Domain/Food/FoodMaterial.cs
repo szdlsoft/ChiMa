@@ -39,6 +39,12 @@ namespace SixMan.ChiMa.Domain.Food
         public bool IsMain { get; set; }
 
         /// <summary>
+        /// 存储方式
+        /// </summary>
+        [StringLength(DescriptionBase.MaxDescriptionLength)]
+        public string StorageMode { get; set; }
+
+        /// <summary>
         /// 可食率
         /// </summary>
         public int? EdiblePercent { get; set; }
