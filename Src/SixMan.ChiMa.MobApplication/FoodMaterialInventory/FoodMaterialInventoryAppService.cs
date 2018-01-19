@@ -6,6 +6,7 @@ using Abp.Domain.Repositories;
 using System.Linq;
 using Abp.Events.Bus;
 using SixMan.ChiMa.Domain;
+using Abp.Application.Services;
 
 namespace SixMan.ChiMa.Application
 {
@@ -28,6 +29,7 @@ namespace SixMan.ChiMa.Application
                              .ToList();
         }
 
+        [RemoteService(isEnabled:false)]
         public void HandleEvent(FoodMaterialInventoryChangeEvent eventData)
         {
             var fmi = Repository.GetAllIncluding(fi => fi.FoodMaterial
