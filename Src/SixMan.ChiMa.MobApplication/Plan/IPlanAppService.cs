@@ -7,7 +7,7 @@ namespace SixMan.ChiMa.Application.Dish
 {
     public interface IPlanAppService
         //: IMobileAppService<PlanDto,  PlanCreateDto, PlanUpdateDto>
-        : IReadAppService<PlanDto>
+        : IMobileAppService
         , ICreateAppService<PlanDto, PlanCreateDto>
         , IUpdateAppService<PlanDto, PlanUpdateDto>
         , IDeleteAppService

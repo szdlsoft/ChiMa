@@ -16,6 +16,7 @@ namespace SixMan.ChiMa.Domain.Family
     /// </summary>
     public class UserInfo
         : ChiMaEntityBase
+        , IHaveFamilyId
     {
         //手机号
         [MaxLength(CategoryBase.MaxNameLength)]

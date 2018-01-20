@@ -10,7 +10,7 @@ using SixMan.ChiMa.Domain;
 namespace SixMan.ChiMa.Application.Family
 {
     public interface IFamilyAppService
-    : IReadAppService<FamilyDto>
+    : IMobileAppService
     , IEventHandler<MobUserCreateEvent>
     {
         /// <summary>

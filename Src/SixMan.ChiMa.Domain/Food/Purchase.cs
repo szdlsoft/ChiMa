@@ -7,7 +7,10 @@ namespace SixMan.ChiMa.Domain.Food
 {
     public class Purchase
         : ChiMaEntityBase
+        , IHaveFamilyId
     {
+        public long FamilyId { get; set; }
+
         /// <summary>
         /// 家庭
         /// </summary>
@@ -32,7 +35,5 @@ namespace SixMan.ChiMa.Domain.Food
         /// 是否已经采购
         /// </summary>
         public bool HasPurchased { get; set; }
-
-       
     }
 }

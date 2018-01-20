@@ -7,6 +7,7 @@ using System.Linq;
 
 namespace SixMan.ChiMa.Application
 {
+    [Abp.Authorization.AbpAuthorize]
     public class FoodDetailsAppService
         : MobileAppServiceBase<FoodMaterial, MobFoodMaterialDto>
         , IFoodDetailsAppService

@@ -6,7 +6,7 @@ using System.Text;
 namespace SixMan.ChiMa.Application
 {
     public interface IPurchaseAppService
-        : IReadAppService<PurchaseDto>
+        : IMobileAppService
         , ICreateAppService<PurchaseDto, PurchaseCreateDto>
         , IUpdateAppService<PurchaseDto, PurchaseUpdateDto>
     {

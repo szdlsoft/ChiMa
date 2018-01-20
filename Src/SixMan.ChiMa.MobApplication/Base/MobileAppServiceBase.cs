@@ -13,7 +13,9 @@ namespace SixMan.ChiMa.Application
     public class MobileAppServiceBase<TEntity, TEntityDto, TCreateInput, TUpdateInput>
         : CrudAppServiceBase<TEntity, TEntityDto, long, PagedAndSortedResultRequestDto, TCreateInput, TUpdateInput>
         //, IMobileAppService<TEntityDto, TCreateInput, TUpdateInput>
-        , IReadAppService<TEntityDto>
+        //, IReadAppService<TEntityDto>
+        ,IMobileAppService
+
         where TEntity : class, IEntity<long>
         where TEntityDto : IEntityDto<long>
         where TUpdateInput : IEntityDto<long>
@@ -106,7 +108,7 @@ namespace SixMan.ChiMa.Application
             return _familyResponsitory.Get(_familyResponsitory.InsertAndGetId(entity));
         }
 
-        public TEntityDto Get(EntityDto<long> input)
+        protected TEntityDto GetImp(EntityDto<long> input)
         {
             CheckGetPermission();
 

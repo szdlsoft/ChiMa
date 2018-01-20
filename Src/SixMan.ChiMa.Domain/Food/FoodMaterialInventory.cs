@@ -8,7 +8,9 @@ namespace SixMan.ChiMa.Domain.Food
 {
     public class FoodMaterialInventory
         : ChiMaEntityBase
+        , IHaveFamilyId
     {
+        public long FamilyId { get; set; }
         /// <summary>
         /// 家庭
         /// </summary>

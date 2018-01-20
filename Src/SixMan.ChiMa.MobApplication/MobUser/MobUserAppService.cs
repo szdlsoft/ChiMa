@@ -11,7 +11,6 @@ using Abp.Authorization.Users;
 using SixMan.ChiMa.Domain.MultiTenancy;
 using System.Security.Claims;
 using Abp.Runtime.Security;
-using System.IdentityModel.Tokens.Jwt;
 using Abp.Events.Bus;
 using SixMan.ChiMa.Domain;
 

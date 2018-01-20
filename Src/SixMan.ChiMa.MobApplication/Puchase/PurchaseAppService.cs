@@ -11,6 +11,7 @@ using SixMan.ChiMa.Domain;
 
 namespace SixMan.ChiMa.Application
 {
+    [Abp.Authorization.AbpAuthorize]
     public class PurchaseAppService
         : MobileAppServiceBase<Purchase, PurchaseDto, PurchaseCreateDto,PurchaseUpdateDto>
         , IPurchaseAppService

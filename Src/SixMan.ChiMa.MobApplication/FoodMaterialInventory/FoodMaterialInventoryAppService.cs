@@ -10,6 +10,7 @@ using Abp.Application.Services;
 
 namespace SixMan.ChiMa.Application
 {
+    [Abp.Authorization.AbpAuthorize]
     public class FoodMaterialInventoryAppService
         : MobileAppServiceBase<FoodMaterialInventory, FoodMaterialInventoryDto>
         , IFoodMaterialInventoryAppService

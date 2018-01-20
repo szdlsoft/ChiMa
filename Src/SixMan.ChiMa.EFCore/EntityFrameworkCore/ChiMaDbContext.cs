@@ -10,6 +10,7 @@ using SixMan.ChiMa.Domain.Family;
 using SixMan.ChiMa.Domain.Common;
 using Abp.Notifications;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using SixMan.ChiMa.Domain;
 
 namespace SixMan.ChiMa.EFCore
 {
@@ -87,6 +88,10 @@ namespace SixMan.ChiMa.EFCore
             //    .HasOne(f => f.CreateUserInfo)
 
             //    ;
+
+            //设置家庭过滤器
+            //modelBuilder.Filter("FamilyFilter", 
+            //    (IHaveFamilyId entity, int familyId) => entity.FamilyId == familyId, 0);
         }
     }
 }

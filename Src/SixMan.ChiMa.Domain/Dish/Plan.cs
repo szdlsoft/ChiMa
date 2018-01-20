@@ -12,6 +12,7 @@ namespace SixMan.ChiMa.Domain.Dish
     /// </summary>
     public class Plan
         : ChiMaEntityBase
+        , IHaveFamilyId
     {
         public long FamilyId { get; set; }
         /// <summary>

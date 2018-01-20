@@ -7,9 +7,11 @@ using SixMan.ChiMa.Domain.Dish;
 using System.Linq;
 using SixMan.ChiMa.Domain.Food;
 using SixMan.ChiMa.Domain.Extensions;
+using Abp.Authorization;
 
 namespace SixMan.ChiMa.Application.Dish.Imp
 {
+    [Abp.Authorization.AbpAuthorize]
     public class DishDetailsAppService
         : MobileAppServiceBase<Domain.Dish.Dish, DishDetailsDto>
         , IDishDetailsAppService
@@ -77,6 +79,9 @@ namespace SixMan.ChiMa.Application.Dish.Imp
             return ObjectMapper.Map<CookeryNoteDto>( _cookeryNoteRepository.Get( _cookeryNoteRepository.InsertAndGetId(note)));
         }
 
-       
+        public DishDetailsDto Get(EntityDto<long> input)
+        {
+            return GetImp(input);
+        }
     }
 }
