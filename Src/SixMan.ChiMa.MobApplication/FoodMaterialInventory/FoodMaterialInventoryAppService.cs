@@ -14,10 +14,10 @@ namespace SixMan.ChiMa.Application
         : MobileAppServiceBase<FoodMaterialInventory, FoodMaterialInventoryDto>
         , IFoodMaterialInventoryAppService
     {
-        public IEventBus EventBus { get; set; }
+        //public IEventBus EventBus { get; set; }
         public FoodMaterialInventoryAppService(IRepository<FoodMaterialInventory, long> repository) : base(repository)
         {
-            EventBus = NullEventBus.Instance;
+            //EventBus = NullEventBus.Instance;
         }
 
         public IList<FoodMaterialInventoryDto> GetList()

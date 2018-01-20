@@ -131,5 +131,13 @@ namespace SixMan.ChiMa.Application.Dish
             Repository.Delete(input.Id);
         }
 
+        public IList<PlanDto> GetTodayAtTable()
+        {
+            return Repository.GetAll()
+                             .Take(3)
+                             .Select(MapToEntityDto)
+                             .ToList();
+        }
+
     }
 }

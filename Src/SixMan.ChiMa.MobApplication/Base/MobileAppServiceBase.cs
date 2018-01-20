@@ -51,15 +51,15 @@ namespace SixMan.ChiMa.Application
             //var userInfoRepository = IocManager.Instance.IocContainer.Resolve<IRepository<UserInfo, long>>();
 
             var userInfo = _userInfoRepository.Single(ui => ui.User.Id == userId);
-            if(userInfo == null)
-            {
-                userInfo = new UserInfo()
-                {
-                    UserId = userId,
-                };
+            //if(userInfo == null)
+            //{
+            //    userInfo = new UserInfo()
+            //    {
+            //        UserId = userId,
+            //    };
 
-                userInfo = _userInfoRepository.Get(_userInfoRepository.InsertAndGetId(userInfo));
-            }
+            //    userInfo = _userInfoRepository.Get(_userInfoRepository.InsertAndGetId(userInfo));
+            //}
 
             return userInfo;
         }
@@ -85,10 +85,10 @@ namespace SixMan.ChiMa.Application
             }
             long userId = AbpSession.UserId.Value;
             Domain.Family.Family family = _familyResponsitory.GetByUser(userId);
-            if (family == null)
-            {
-                family = CreateFamily(userId);
-            }
+            //if (family == null)
+            //{
+            //    family = CreateFamily(userId);
+            //}
             return family;
         }
 

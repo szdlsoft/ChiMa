@@ -45,6 +45,7 @@ namespace SixMan.ChiMa.Domain.Family
         [ForeignKey("UserId")]
         public User User { get; set; }
         //家庭
+        public long FamilyId { get; set; }
         [ForeignKey("FamilyId")]
         public Family Family { get; set; }
         /// <summary>

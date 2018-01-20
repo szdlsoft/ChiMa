@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.Text;
 using SixMan.ChiMa.Domain.Family;
 using SixMan.ChiMa.Application.Dish;
+using Abp.Events.Bus.Handlers;
+using SixMan.ChiMa.Domain;
 
 namespace SixMan.ChiMa.Application.Family
 {
     public interface IFamilyAppService
     : IReadAppService<FamilyDto>
+    , IEventHandler<MobUserCreateEvent>
     {
         /// <summary>
         /// 获得或创建家庭

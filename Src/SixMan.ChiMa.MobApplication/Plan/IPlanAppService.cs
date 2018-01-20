@@ -24,6 +24,11 @@ namespace SixMan.ChiMa.Application.Dish
         /// <param name="planDate"></param>
         /// <returns></returns>
         IList<PlanDto> GetByDate(DateTime planDate);
+        /// <summary>
+        /// 今日上桌
+        /// </summary>
+        /// <returns></returns>
+        IList<PlanDto> GetTodayAtTable();
 
     }
 }

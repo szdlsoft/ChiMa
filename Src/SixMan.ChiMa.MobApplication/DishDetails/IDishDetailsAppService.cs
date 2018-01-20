@@ -12,6 +12,6 @@ namespace SixMan.ChiMa.Application.Dish
     {
         //CookeryDto CreateCookery(CookeryCreateDto Cookery);
         CookeryNoteDto CreateCookeryNote(CookeryNoteCreateDto CookeryNote);
-
+       
     }
 }

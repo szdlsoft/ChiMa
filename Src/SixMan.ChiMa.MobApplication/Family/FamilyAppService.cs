@@ -7,6 +7,9 @@ using Abp.Domain.Repositories;
 using System.Linq;
 using Abp.Authorization;
 using SixMan.ChiMa.Application.Dish;
+using SixMan.ChiMa.Domain;
+using Abp.Application.Services;
+using SixMan.ChiMa.Domain.Authorization.Users;
 
 namespace SixMan.ChiMa.Application.Family
 {
@@ -29,41 +32,53 @@ namespace SixMan.ChiMa.Application.Family
             _userFavoriteDishRepository = userFavoriteDishRepository;
         }
 
-        //protected IFamilyRepository familyResponsitory => Repository as IFamilyRepository;
+        [RemoteService(isEnabled:false)]
+        public void HandleEvent(MobUserCreateEvent eventData)
+        {
+            if( eventData.FamilyId == null
+                || eventData.FamilyId.Value == 0)
+            {
+                CreateFamily(eventData.User);
+            }
+            else
+            {
+                CreateUserInfo(eventData);
+            }
+        }
 
-        //public Domain.Family.Family GetOrCreate()
-        //{
-        //    if (!AbpSession.UserId.HasValue)
-        //    {
-        //        throw new Exception("未登录，不能获取菜单计划！");
-        //    }
-        //    long userId = AbpSession.UserId.Value;
-        //    Domain.Family.Family family = familyResponsitory.GetByUser(userId);
-        //    if ( family == null)
-        //    {
-        //        family = CreateFamily(userId);
-        //    }
-        //    return family;
-        //}       
+        private void CreateFamily(User user)
+        {
+            Domain.Family.Family entity = new Domain.Family.Family()
+            {
+                UUID = Guid.NewGuid(),
+            };
+            //entity = Repository.Get( Repository.InsertAndGetId(entity));
 
-        //private Domain.Family.Family CreateFamily(long userId)
-        //{
-        //    //var CreateUserInfo = new UserInfo()
-        //    //{
-        //    //    UserId = userId,
-        //    //    IsFamilyCreater = true
-        //    //};
-        //    UserInfo.IsFamilyCreater = true;
+            var CreateUserInfo = new UserInfo()
+            {
+                UserId = user.Id,
+                IsFamilyCreater = true,
+            };
 
-        //    Domain.Family.Family entity = new Domain.Family.Family()
-        //    {
-        //        UUID = Guid.NewGuid(),
-        //    };
+            entity.UserInfos = new List<UserInfo>() { CreateUserInfo }; //这个办法，是可以的创建关联子记录 
 
-        //    entity.UserInfos = new List<UserInfo>() { UserInfo };
+            Repository.Insert(entity);
 
-        //    return Repository.Get( Repository.InsertAndGetId(entity));
-        //}
+            //var id =  _userInfoRepository.InsertOrUpdateAndGetId(UserInfo);
+
+        }
+
+        private void CreateUserInfo(MobUserCreateEvent eventData)
+        {
+            var CreateUserInfo = new UserInfo()
+            {
+                UserId = eventData.User.Id,
+                FamilyId = eventData.FamilyId.Value,
+                IsFamilyCreater = true
+            };
+
+            _userInfoRepository.Insert(CreateUserInfo);
+        }       
 
         public void UpdateMyFavorites(UpdateFavoriteInput input)
         {

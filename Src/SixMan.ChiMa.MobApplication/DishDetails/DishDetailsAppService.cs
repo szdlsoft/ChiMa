@@ -77,5 +77,6 @@ namespace SixMan.ChiMa.Application.Dish.Imp
             return ObjectMapper.Map<CookeryNoteDto>( _cookeryNoteRepository.Get( _cookeryNoteRepository.InsertAndGetId(note)));
         }
 
+       
     }
 }
