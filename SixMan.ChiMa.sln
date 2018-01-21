@@ -43,6 +43,17 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary(仅仅用来画类图)", "Src\ClassLibrary2\ClassLibrary(仅仅用来画类图).csproj", "{884CD90A-B184-49AA-AA7E-DBBE964C8067}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "设计", "设计", "{54BD3356-6026-46E4-A74C-8608F05E2D96}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\吃嘛数据库设计\180120150902.sql = Doc\吃嘛数据库设计\180120150902.sql
+		Doc\吃嘛数据库设计\compare-job-3459.sql = Doc\吃嘛数据库设计\compare-job-3459.sql
+		Doc\吃嘛数据库设计\muouupju.sql = Doc\吃嘛数据库设计\muouupju.sql
+		Doc\吃嘛数据库设计\sql逆向.pdm = Doc\吃嘛数据库设计\sql逆向.pdm
+		Doc\吃嘛数据库设计\吃嘛数据库设计.pjb = Doc\吃嘛数据库设计\吃嘛数据库设计.pjb
+		Doc\吃嘛数据库设计\吃嘛数据库设计.prj = Doc\吃嘛数据库设计\吃嘛数据库设计.prj
+		Doc\吃嘛数据库设计\阿里云appsettings.json = Doc\吃嘛数据库设计\阿里云appsettings.json
+		Doc\吃嘛数据库设计\食材库.pdb = Doc\吃嘛数据库设计\食材库.pdb
+		Doc\吃嘛数据库设计\食材库.pdm = Doc\吃嘛数据库设计\食材库.pdm
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.Web.Mvc", "Src\SixMan.ChiMa.Web.Mvc\SixMan.ChiMa.Web.Mvc.csproj", "{D8A364C3-73E8-4278-AE0A-00B46968C546}"
 EndProject
@@ -51,6 +62,69 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.Tests", "Test\SixMan.ChiMa.Tests\SixMan.ChiMa.Tests.csproj", "{2CF5950F-48E7-4483-B123-6100B02E2D49}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.MobApplication", "Src\SixMan.ChiMa.MobApplication\SixMan.ChiMa.MobApplication.csproj", "{D3E91C43-9F93-4A47-9C57-8A086608CB62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MigrationBackup", "MigrationBackup", "{38E3FD36-2ED0-4137-B2AD-20187EBE9002}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\吃嘛数据库设计\MigrationBackup\20170424115119_Initial_Migrations.cs = Doc\吃嘛数据库设计\MigrationBackup\20170424115119_Initial_Migrations.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20170424115119_Initial_Migrations.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20170424115119_Initial_Migrations.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20170608053244_Upgraded_To_Abp_2_1_0.cs = Doc\吃嘛数据库设计\MigrationBackup\20170608053244_Upgraded_To_Abp_2_1_0.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20170608053244_Upgraded_To_Abp_2_1_0.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20170608053244_Upgraded_To_Abp_2_1_0.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20170621153937_Added_Description_And_IsActive_To_Role.cs = Doc\吃嘛数据库设计\MigrationBackup\20170621153937_Added_Description_And_IsActive_To_Role.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20170621153937_Added_Description_And_IsActive_To_Role.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20170621153937_Added_Description_And_IsActive_To_Role.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20170703134115_Remove_IsActive_From_Role.cs = Doc\吃嘛数据库设计\MigrationBackup\20170703134115_Remove_IsActive_From_Role.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20170703134115_Remove_IsActive_From_Role.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20170703134115_Remove_IsActive_From_Role.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20170804083601_Upgraded_To_Abp_v2.2.2.cs = Doc\吃嘛数据库设计\MigrationBackup\20170804083601_Upgraded_To_Abp_v2.2.2.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20170804083601_Upgraded_To_Abp_v2.2.2.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20170804083601_Upgraded_To_Abp_v2.2.2.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171015095354_AddFoodCategory.cs = Doc\吃嘛数据库设计\MigrationBackup\20171015095354_AddFoodCategory.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171015095354_AddFoodCategory.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171015095354_AddFoodCategory.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171016120701_Add_FoodMateria.cs = Doc\吃嘛数据库设计\MigrationBackup\20171016120701_Add_FoodMateria.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171016120701_Add_FoodMateria.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171016120701_Add_FoodMateria.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171016124231_Add_hc_h_mha.cs = Doc\吃嘛数据库设计\MigrationBackup\20171016124231_Add_hc_h_mha.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171016124231_Add_hc_h_mha.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171016124231_Add_hc_h_mha.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171016125113_Add_mha_Foreign_Key.cs = Doc\吃嘛数据库设计\MigrationBackup\20171016125113_Add_mha_Foreign_Key.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171016125113_Add_mha_Foreign_Key.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171016125113_Add_mha_Foreign_Key.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171016221007_Add_Dish_6_Tables.cs = Doc\吃嘛数据库设计\MigrationBackup\20171016221007_Add_Dish_6_Tables.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171016221007_Add_Dish_6_Tables.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171016221007_Add_Dish_6_Tables.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171018223700_update_food_dish.cs = Doc\吃嘛数据库设计\MigrationBackup\20171018223700_update_food_dish.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171018223700_update_food_dish.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171018223700_update_food_dish.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171021113013_FoodMateialCategory_Add_Parent.cs = Doc\吃嘛数据库设计\MigrationBackup\20171021113013_FoodMateialCategory_Add_Parent.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171021113013_FoodMateialCategory_Add_Parent.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171021113013_FoodMateialCategory_Add_Parent.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171021115433_Add_MulitMedia.cs = Doc\吃嘛数据库设计\MigrationBackup\20171021115433_Add_MulitMedia.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171021115433_Add_MulitMedia.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171021115433_Add_MulitMedia.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171026141054_Add_Familys.cs = Doc\吃嘛数据库设计\MigrationBackup\20171026141054_Add_Familys.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171026141054_Add_Familys.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171026141054_Add_Familys.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171026221531_Add_UserInfo.cs = Doc\吃嘛数据库设计\MigrationBackup\20171026221531_Add_UserInfo.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171026221531_Add_UserInfo.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171026221531_Add_UserInfo.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171027125934_Add_UserXXXDish.cs = Doc\吃嘛数据库设计\MigrationBackup\20171027125934_Add_UserXXXDish.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171027125934_Add_UserXXXDish.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171027125934_Add_UserXXXDish.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171130061116_AdjustDishAndFoodMaterial.cs = Doc\吃嘛数据库设计\MigrationBackup\20171130061116_AdjustDishAndFoodMaterial.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171130061116_AdjustDishAndFoodMaterial.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171130061116_AdjustDishAndFoodMaterial.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171130063753_AddDishBomOrder.cs = Doc\吃嘛数据库设计\MigrationBackup\20171130063753_AddDishBomOrder.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20171130063753_AddDishBomOrder.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20171130063753_AddDishBomOrder.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180108121148_add-plan.cs = Doc\吃嘛数据库设计\MigrationBackup\20180108121148_add-plan.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180108121148_add-plan.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180108121148_add-plan.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180109115904_add_plan_purchase_inventory.cs = Doc\吃嘛数据库设计\MigrationBackup\20180109115904_add_plan_purchase_inventory.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180109115904_add_plan_purchase_inventory.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180109115904_add_plan_purchase_inventory.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180111113601_add_familymenber_userinfo.cs = Doc\吃嘛数据库设计\MigrationBackup\20180111113601_add_familymenber_userinfo.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180111113601_add_familymenber_userinfo.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180111113601_add_familymenber_userinfo.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180112123129_rename_family_userinfo.cs = Doc\吃嘛数据库设计\MigrationBackup\20180112123129_rename_family_userinfo.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180112123129_rename_family_userinfo.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180112123129_rename_family_userinfo.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180112140216_remove_family_createUserInfo.cs = Doc\吃嘛数据库设计\MigrationBackup\20180112140216_remove_family_createUserInfo.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180112140216_remove_family_createUserInfo.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180112140216_remove_family_createUserInfo.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180113064855_add_MealType_MealNo.cs = Doc\吃嘛数据库设计\MigrationBackup\20180113064855_add_MealType_MealNo.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180113064855_add_MealType_MealNo.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180113064855_add_MealType_MealNo.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180113102042_rename_userinfo.cs = Doc\吃嘛数据库设计\MigrationBackup\20180113102042_rename_userinfo.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180113102042_rename_userinfo.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180113102042_rename_userinfo.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180114012716_add_CokeryNote.cs = Doc\吃嘛数据库设计\MigrationBackup\20180114012716_add_CokeryNote.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180114012716_add_CokeryNote.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180114012716_add_CokeryNote.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180114104156_add_cookery_content.cs = Doc\吃嘛数据库设计\MigrationBackup\20180114104156_add_cookery_content.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180114104156_add_cookery_content.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180114104156_add_cookery_content.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180115095900_repair_cookerynot_userinfo.cs = Doc\吃嘛数据库设计\MigrationBackup\20180115095900_repair_cookerynot_userinfo.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180115095900_repair_cookerynot_userinfo.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180115095900_repair_cookerynot_userinfo.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180119093744_update-StorageMode.cs = Doc\吃嘛数据库设计\MigrationBackup\20180119093744_update-StorageMode.cs
+		Doc\吃嘛数据库设计\MigrationBackup\20180119093744_update-StorageMode.Designer.cs = Doc\吃嘛数据库设计\MigrationBackup\20180119093744_update-StorageMode.Designer.cs
+		Doc\吃嘛数据库设计\MigrationBackup\ChiMaDbContextModelSnapshot.cs = Doc\吃嘛数据库设计\MigrationBackup\ChiMaDbContextModelSnapshot.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -112,6 +186,7 @@ Global
 		{EAE89D93-302B-4747-AA19-F2E9C6E6766B} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
 		{2CF5950F-48E7-4483-B123-6100B02E2D49} = {249065D3-B69F-44EC-BF8F-A0720FC1CA08}
 		{D3E91C43-9F93-4A47-9C57-8A086608CB62} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
+		{38E3FD36-2ED0-4137-B2AD-20187EBE9002} = {54BD3356-6026-46E4-A74C-8608F05E2D96}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E10C072C-15D7-4DD0-805A-0CD7E471545F}

@@ -1,0 +1,22 @@
+﻿{
+  "ConnectionStrings": {
+    "Default": "Server=rm-uf6e0zfbx0ly2pq5n.mysql.rds.aliyuncs.com;port=3306;database=ChiMaDb;uid=root;password=sdl*6510;character set=utf8;Old Guids=true"
+  },
+  "Authentication": {
+    "JwtBearer": {
+      "IsEnabled": "true",
+      "SecurityKey": "ChiMa_C421AAEE0D114E9C",
+      "Issuer": "ChiMa",
+      "Audience": "ChiMa"
+    }
+  },
+  "Logging": {
+    "IncludeScopes": false,
+    "LogLevel": {
+      "Default": "Debug",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  }
+}
+cd /home/sdl/SixMan.ChiMa.Web.Mvc
