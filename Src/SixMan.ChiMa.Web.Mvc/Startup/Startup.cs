@@ -66,8 +66,8 @@ namespace SixMan.ChiMa.Web.Startup
                     f => f.UseAbpLog4Net().WithConfig("log4net.config")
                 );
                 // 替换 IAbpActionResultWrapperFactory
-                options.IocManager.IocContainer.Register(Component.For<IAbpActionResultWrapperFactory>()
-                    .ImplementedBy<NullAbpActionResultWrapperFactory>().LifestyleSingleton().IsDefault());
+                //options.IocManager.IocContainer.Register(Component.For<IAbpActionResultWrapperFactory>()
+                //    .ImplementedBy<NullAbpActionResultWrapperFactory>().LifestyleSingleton().IsDefault());
             });
 
  

@@ -8,9 +8,11 @@ using SixMan.ChiMa.Domain.Dish;
 using SixMan.ChiMa.Domain.Base;
 using Abp.Events.Bus;
 using SixMan.ChiMa.Domain;
+using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application
 {
+    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
     [Abp.Authorization.AbpAuthorize]
     public class PurchaseAppService
         : MobileAppServiceBase<Purchase, PurchaseDto, PurchaseCreateDto,PurchaseUpdateDto>

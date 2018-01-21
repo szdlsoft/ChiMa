@@ -13,9 +13,11 @@ using System.Security.Claims;
 using Abp.Runtime.Security;
 using Abp.Events.Bus;
 using SixMan.ChiMa.Domain;
+using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application.MobUser
 {
+    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
     public class MobUserAppService
         : MobileAppServiceBase<User, MobUserDto, MobCreateUserDto, MobUserDto>
         , IMobUserAppService

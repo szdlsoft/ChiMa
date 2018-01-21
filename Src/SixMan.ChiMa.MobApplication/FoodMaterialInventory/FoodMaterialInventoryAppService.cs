@@ -7,9 +7,11 @@ using System.Linq;
 using Abp.Events.Bus;
 using SixMan.ChiMa.Domain;
 using Abp.Application.Services;
+using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application
 {
+    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
     [Abp.Authorization.AbpAuthorize]
     public class FoodMaterialInventoryAppService
         : MobileAppServiceBase<FoodMaterialInventory, FoodMaterialInventoryDto>

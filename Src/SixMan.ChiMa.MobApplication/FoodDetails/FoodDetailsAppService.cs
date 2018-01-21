@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Text;
 using Abp.Domain.Repositories;
 using System.Linq;
+using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application
 {
+    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
     [Abp.Authorization.AbpAuthorize]
     public class FoodDetailsAppService
         : MobileAppServiceBase<FoodMaterial, MobFoodMaterialDto>

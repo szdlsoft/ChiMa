@@ -10,10 +10,12 @@ using SixMan.ChiMa.Application.Dish;
 using SixMan.ChiMa.Domain;
 using Abp.Application.Services;
 using SixMan.ChiMa.Domain.Authorization.Users;
+using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application.Family
 {
-   
+    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
+
     public class FamilyAppService
         : MobileAppServiceBase<Domain.Family.Family, FamilyDto>
         , IFamilyAppService

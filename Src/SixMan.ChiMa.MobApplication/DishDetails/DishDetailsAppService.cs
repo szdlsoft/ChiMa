@@ -8,9 +8,11 @@ using System.Linq;
 using SixMan.ChiMa.Domain.Food;
 using SixMan.ChiMa.Domain.Extensions;
 using Abp.Authorization;
+using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application.Dish.Imp
 {
+    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
     [Abp.Authorization.AbpAuthorize]
     public class DishDetailsAppService
         : MobileAppServiceBase<Domain.Dish.Dish, DishDetailsDto>

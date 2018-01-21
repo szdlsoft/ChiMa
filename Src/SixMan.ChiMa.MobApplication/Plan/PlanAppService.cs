@@ -9,9 +9,11 @@ using SixMan.ChiMa.Application.Family;
 using Abp.Authorization;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
+using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application.Dish
 {
+    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
     [AbpAuthorize]
     public class PlanAppService
         : MobileAppServiceBase<Plan, PlanDto, PlanCreateDto, PlanUpdateDto>
