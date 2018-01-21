@@ -14,11 +14,11 @@ using SixMan.ChiMa.Domain.Family;
 using SixMan.ChiMa.EFCore;
 using System;
 
-namespace SixMan.ChiMa.Migrations
+namespace SixMan.ChiMa.EFCore.Migrations
 {
     [DbContext(typeof(ChiMaDbContext))]
-    [Migration("20180115095900_repair_cookerynot_userinfo")]
-    partial class repair_cookerynot_userinfo
+    [Migration("20180121061339_new_reset")]
+    partial class new_reset
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1444,7 +1444,7 @@ namespace SixMan.ChiMa.Migrations
 
                     b.Property<string>("ExtensionData");
 
-                    b.Property<long?>("FamilyId");
+                    b.Property<long>("FamilyId");
 
                     b.Property<string>("HeadPortrait")
                         .HasMaxLength(512);
@@ -1570,6 +1570,9 @@ namespace SixMan.ChiMa.Migrations
                     b.Property<string>("Season")
                         .HasMaxLength(50);
 
+                    b.Property<string>("StorageMode")
+                        .HasMaxLength(256);
+
                     b.Property<double?>("Thiamin");
 
                     b.Property<string>("Unit")
@@ -1685,7 +1688,7 @@ namespace SixMan.ChiMa.Migrations
 
                     b.Property<string>("ExtensionData");
 
-                    b.Property<long?>("FamilyId");
+                    b.Property<long>("FamilyId");
 
                     b.Property<long?>("FoodMaterialId");
 
@@ -1696,9 +1699,6 @@ namespace SixMan.ChiMa.Migrations
                     b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<long?>("LastModifierUserId");
-
-                    b.Property<string>("StorageMode")
-                        .HasMaxLength(256);
 
                     b.HasKey("Id");
 
@@ -1791,7 +1791,7 @@ namespace SixMan.ChiMa.Migrations
 
                     b.Property<string>("ExtensionData");
 
-                    b.Property<long?>("FamilyId");
+                    b.Property<long>("FamilyId");
 
                     b.Property<long?>("FoodMaterialId");
 
@@ -2177,7 +2177,8 @@ namespace SixMan.ChiMa.Migrations
 
                     b.HasOne("SixMan.ChiMa.Domain.Family.Family", "Family")
                         .WithMany("UserInfos")
-                        .HasForeignKey("FamilyId");
+                        .HasForeignKey("FamilyId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("SixMan.ChiMa.Domain.Authorization.Users.User", "User")
                         .WithOne("UserInfo")
@@ -2214,7 +2215,8 @@ namespace SixMan.ChiMa.Migrations
                 {
                     b.HasOne("SixMan.ChiMa.Domain.Family.Family", "Family")
                         .WithMany()
-                        .HasForeignKey("FamilyId");
+                        .HasForeignKey("FamilyId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("SixMan.ChiMa.Domain.Food.FoodMaterial", "FoodMaterial")
                         .WithMany()
@@ -2232,7 +2234,8 @@ namespace SixMan.ChiMa.Migrations
                 {
                     b.HasOne("SixMan.ChiMa.Domain.Family.Family", "Family")
                         .WithMany()
-                        .HasForeignKey("FamilyId");
+                        .HasForeignKey("FamilyId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("SixMan.ChiMa.Domain.Food.FoodMaterial", "FoodMaterial")
                         .WithMany()
