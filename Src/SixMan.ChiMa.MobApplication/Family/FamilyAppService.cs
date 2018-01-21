@@ -13,7 +13,7 @@ using SixMan.ChiMa.Domain.Authorization.Users;
 
 namespace SixMan.ChiMa.Application.Family
 {
-    [AbpAuthorize]
+   
     public class FamilyAppService
         : MobileAppServiceBase<Domain.Family.Family, FamilyDto>
         , IFamilyAppService
@@ -78,8 +78,9 @@ namespace SixMan.ChiMa.Application.Family
             };
 
             _userInfoRepository.Insert(CreateUserInfo);
-        }       
+        }
 
+        [AbpAuthorize]
         public void UpdateMyFavorites(UpdateFavoriteInput input)
         {
             var dish = _dishRepository.GetAllIncluding(d => d.UserUserFavorites)
