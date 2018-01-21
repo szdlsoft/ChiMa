@@ -7,6 +7,7 @@ using Abp.EntityFrameworkCore.Uow;
 using Abp.MultiTenancy;
 using SixMan.ChiMa.EFCore.Seed.Host;
 using SixMan.ChiMa.EFCore.Seed.Tenants;
+using SixMan.ChiMa.EFCore.EntityFrameworkCore.Seed.FoodAndDish;
 
 namespace SixMan.ChiMa.EFCore.Seed
 {
@@ -27,6 +28,9 @@ namespace SixMan.ChiMa.EFCore.Seed
             // Default tenant seed (in host database).
             new DefaultTenantBuilder(context).Create();
             new TenantRoleAndUserBuilder(context, 1).Create();
+
+            //
+            new FoodAndDishBuilder(context).Create();
         }
 
         private static void WithDbContext<TDbContext>(IIocResolver iocResolver, Action<TDbContext> contextAction)

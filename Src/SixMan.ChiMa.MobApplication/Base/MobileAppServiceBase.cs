@@ -7,6 +7,7 @@ using System.Text;
 using Abp.Domain.Repositories;
 using SixMan.ChiMa.Domain.Family;
 using Abp.Dependency;
+using Abp;
 
 namespace SixMan.ChiMa.Application
 {
@@ -53,15 +54,16 @@ namespace SixMan.ChiMa.Application
             //var userInfoRepository = IocManager.Instance.IocContainer.Resolve<IRepository<UserInfo, long>>();
 
             var userInfo = _userInfoRepository.Single(ui => ui.User.Id == userId);
-            //if(userInfo == null)
-            //{
-            //    userInfo = new UserInfo()
-            //    {
-            //        UserId = userId,
-            //    };
+            if (userInfo == null)
+            {
+                //userInfo = new UserInfo()
+                //{
+                //    UserId = userId,
+                //};
 
-            //    userInfo = _userInfoRepository.Get(_userInfoRepository.InsertAndGetId(userInfo));
-            //}
+                //userInfo = _userInfoRepository.Get(_userInfoRepository.InsertAndGetId(userInfo));
+                throw new AbpException("请使用手机用户登陆！");
+            }
 
             return userInfo;
         }
@@ -83,14 +85,14 @@ namespace SixMan.ChiMa.Application
         {
             if (!AbpSession.UserId.HasValue)
             {
-                throw new Exception("未登录，不能获取菜单计划！");
+                throw new AbpException("未登录，不能获取菜单计划！");
             }
             long userId = AbpSession.UserId.Value;
             Domain.Family.Family family = _familyResponsitory.GetByUser(userId);
-            //if (family == null)
-            //{
-            //    family = CreateFamily(userId);
-            //}
+            if (family == null)
+            {
+                throw new AbpException("请使用手机用户登陆！");
+            }
             return family;
         }
 
