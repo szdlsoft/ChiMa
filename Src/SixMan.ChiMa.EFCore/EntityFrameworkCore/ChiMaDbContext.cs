@@ -11,6 +11,10 @@ using SixMan.ChiMa.Domain.Common;
 using Abp.Notifications;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SixMan.ChiMa.Domain;
+using System.Reflection;
+using Microsoft.EntityFrameworkCore.Metadata;
+using System;
+using System.Linq.Expressions;
 
 namespace SixMan.ChiMa.EFCore
 {
@@ -43,6 +47,12 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<UserFavoriteDish> UserFavoriteDish { get; set; }
         public virtual DbSet<UserBrowseDish> UserBrowseDish { get; set; }
         public virtual DbSet<UserCommentDish> UserCommentDish { get; set; }
+
+        //过滤器设置
+        protected virtual long? CurrentFamilyId => GetCurrentFamilyOrNull();       
+
+        protected virtual bool FamilyFilterEnabled => CurrentUnitOfWorkProvider?.Current?.IsFilterEnabled(ChimaDataFilter.FamillyDataFilter) == true;
+        private static MethodInfo ConfigureGlobalFiltersMethodInfo = typeof(ChiMaDbContext).GetMethod(nameof(ConfigureChimaFilters), BindingFlags.Instance | BindingFlags.NonPublic);
 
 
         public ChiMaDbContext(DbContextOptions<ChiMaDbContext> options)
@@ -90,9 +100,50 @@ namespace SixMan.ChiMa.EFCore
             //    ;
 
             //设置家庭过滤器
-            //modelBuilder.Filter("FamilyFilter", 
+            //modelBuilder.Filter("FamilyFilter",
             //    (IHaveFamilyId entity, int familyId) => entity.FamilyId == familyId, 0);
+
             //modelBuilder.Entity<FoodMaterialInventory>().HasQueryFilter(fi => fi.FamilyId == 0);
+
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                ConfigureGlobalFiltersMethodInfo
+                    .MakeGenericMethod(entityType.ClrType)
+                    .Invoke(this, new object[] { modelBuilder, entityType });
+            }
+        }
+        private long? GetCurrentFamilyOrNull()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected void ConfigureChimaFilters<TEntity>(ModelBuilder modelBuilder, IMutableEntityType entityType)
+           where TEntity : class
+        {
+            if ( ShouldFilterFamily<TEntity>(entityType))
+            {
+                var filterExpression = CreateFamilyFilterExpression<TEntity>();
+                if (filterExpression != null)
+                {
+                    modelBuilder.Entity<TEntity>().HasQueryFilter(filterExpression);
+                }
+            }
+        }
+
+        private Expression<Func<TEntity, bool>> CreateFamilyFilterExpression<TEntity>() where TEntity : class
+        {
+            Expression<Func<TEntity, bool>> mayHaveFamilyFilter = e => ((IHaveFamilyId)e).FamilyId == CurrentFamilyId || (((IHaveFamilyId)e).FamilyId == CurrentFamilyId) == FamilyFilterEnabled;
+            return mayHaveFamilyFilter;
+        }
+
+        protected virtual bool ShouldFilterFamily<TEntity>(IMutableEntityType entityType) where TEntity : class
+        {
+            if (typeof(IHaveFamilyId).IsAssignableFrom(typeof(TEntity)))
+            {
+                return true;
+            }           
+
+            return false;
         }
     }
 }
