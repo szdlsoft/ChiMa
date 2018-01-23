@@ -9,6 +9,7 @@ using SixMan.ChiMa.Domain.Family;
 using Abp.Dependency;
 using Abp;
 using Abp.UI;
+using SixMan.ChiMa.Domain;
 
 namespace SixMan.ChiMa.Application
 {
@@ -28,7 +29,16 @@ namespace SixMan.ChiMa.Application
         {
             _userInfoRepository = IocManager.Instance.IocContainer.Resolve<IRepository<UserInfo, long>>();
             _familyResponsitory = IocManager.Instance.IocContainer.Resolve<IFamilyRepository>();
+
+            //SetFilterPara();
         }
+
+        [RemoteService(isEnabled:false)]
+        public void SetFilterPara()
+        {
+            CurrentUnitOfWork.SetFilterParameter(ChimaDataFilter.FamillyDataFilter, ChimaDataFilter.FamillyPara, Family);
+        }
+
 
         UserInfo _userInfo = null;
         protected UserInfo UserInfo
@@ -77,13 +87,15 @@ namespace SixMan.ChiMa.Application
                 if (_family == null)
                 {
                     _family = GetOrCreateFamily();
-                }
+                }             
 
                 return _family;
             }
         }
         private Domain.Family.Family GetOrCreateFamily()
         {
+            CurrentUnitOfWork.DisableFilter(ChimaDataFilter.FamillyDataFilter);
+
             if (!AbpSession.UserId.HasValue)
             {
                 throw new UserFriendlyException("未登录，不能获取菜单计划！");
@@ -94,22 +106,25 @@ namespace SixMan.ChiMa.Application
             {
                 throw new UserFriendlyException("请使用手机用户登陆！");
             }
+
+            CurrentUnitOfWork.EnableFilter(ChimaDataFilter.FamillyDataFilter);
+
             return family;
         }
 
-        private Domain.Family.Family CreateFamily(long userId)
-        {           
-            UserInfo.IsFamilyCreater = true;
+        //private Domain.Family.Family CreateFamily(long userId)
+        //{           
+        //    UserInfo.IsFamilyCreater = true;
 
-            Domain.Family.Family entity = new Domain.Family.Family()
-            {
-                UUID = Guid.NewGuid(),
-            };
+        //    Domain.Family.Family entity = new Domain.Family.Family()
+        //    {
+        //        UUID = Guid.NewGuid(),
+        //    };
 
-            entity.UserInfos = new List<UserInfo>() { UserInfo };
+        //    entity.UserInfos = new List<UserInfo>() { UserInfo };
 
-            return _familyResponsitory.Get(_familyResponsitory.InsertAndGetId(entity));
-        }
+        //    return _familyResponsitory.Get(_familyResponsitory.InsertAndGetId(entity));
+        //}
 
         protected TEntityDto GetImp(EntityDto<long> input)
         {

@@ -1,4 +1,5 @@
-﻿using Abp.EntityFrameworkCore.Configuration;
+﻿using System;
+using Abp.EntityFrameworkCore.Configuration;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Abp.Zero.EntityFrameworkCore;
@@ -35,9 +36,16 @@ namespace SixMan.ChiMa.EFCore
                         ChiMaDbContextConfigurer.Configure(options.DbContextOptions, options.ConnectionString);
                     }
 
-                    options.DbContextOptions.UseLoggerFactory(MyLoggerFactory);
+                    //options.DbContextOptions.UseLoggerFactory(MyLoggerFactory);
                 });
             }
+
+            AddUnitOfWorkFilters();
+        }
+
+        private void AddUnitOfWorkFilters()
+        {
+            Configuration.UnitOfWork.RegisterFilter(ChimaDataFilter.FamillyDataFilter, true);
         }
 
         /// <summary>

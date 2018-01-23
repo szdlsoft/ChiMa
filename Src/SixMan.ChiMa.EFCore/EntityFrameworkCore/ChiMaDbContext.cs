@@ -14,6 +14,7 @@ using SixMan.ChiMa.Domain;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore.Metadata;
 using System;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace SixMan.ChiMa.EFCore
@@ -49,7 +50,7 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<UserCommentDish> UserCommentDish { get; set; }
 
         //过滤器设置
-        protected virtual long? CurrentFamilyId => GetCurrentFamilyOrNull();       
+        protected virtual long? CurrentFamilyId => GetCurrentFamilyIdOrNull();       
 
         protected virtual bool FamilyFilterEnabled => CurrentUnitOfWorkProvider?.Current?.IsFilterEnabled(ChimaDataFilter.FamillyDataFilter) == true;
         private static MethodInfo ConfigureGlobalFiltersMethodInfo = typeof(ChiMaDbContext).GetMethod(nameof(ConfigureChimaFilters), BindingFlags.Instance | BindingFlags.NonPublic);
@@ -102,6 +103,7 @@ namespace SixMan.ChiMa.EFCore
             //设置家庭过滤器
             //modelBuilder.Filter("FamilyFilter",
             //    (IHaveFamilyId entity, int familyId) => entity.FamilyId == familyId, 0);
+            CurrentUnitOfWorkProvider?.Current.EnableFilter(ChimaDataFilter.FamillyDataFilter);
 
             //modelBuilder.Entity<FoodMaterialInventory>().HasQueryFilter(fi => fi.FamilyId == 0);
 
@@ -112,9 +114,17 @@ namespace SixMan.ChiMa.EFCore
                     .Invoke(this, new object[] { modelBuilder, entityType });
             }
         }
-        private long? GetCurrentFamilyOrNull()
+        private long? GetCurrentFamilyIdOrNull()
         {
-            throw new NotImplementedException();
+            var para = CurrentUnitOfWorkProvider?.Current.Filters.FirstOrDefault(f => f.FilterName == ChimaDataFilter.FamillyDataFilter)?.FilterParameters;
+            if( para != null)
+            {
+                if(para.ContainsKey(ChimaDataFilter.FamillyPara))
+                {
+                    return (para[ChimaDataFilter.FamillyPara] as Family).Id;
+                }
+            }
+            return null;
         }
 
         protected void ConfigureChimaFilters<TEntity>(ModelBuilder modelBuilder, IMutableEntityType entityType)

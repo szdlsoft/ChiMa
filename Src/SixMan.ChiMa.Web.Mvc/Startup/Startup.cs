@@ -16,6 +16,7 @@ using Swashbuckle.AspNetCore.Swagger;
 using SixMan.ChiMa.Web.Resources.Startup;
 using Abp.AspNetCore.Mvc.Results.Wrapping;
 using Castle.MicroKernel.Registration;
+using SixMan.ChiMa.Filters;
 
 #if FEATURE_SIGNALR
 using Owin;
@@ -40,6 +41,7 @@ namespace SixMan.ChiMa.Web.Startup
             services.AddMvc(options =>
             {
                 //options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+                options.Filters.AddService(typeof(SetFamilyParaFilter));
                 
             });
 

@@ -10,6 +10,7 @@ using Abp.Authorization;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Web.Models;
+using SixMan.ChiMa.Domain;
 
 namespace SixMan.ChiMa.Application.Dish
 {
@@ -18,6 +19,7 @@ namespace SixMan.ChiMa.Application.Dish
     public class PlanAppService
         : MobileAppServiceBase<Plan, PlanDto, PlanCreateDto, PlanUpdateDto>
         , IPlanAppService
+        , ISetFamilyPara
     {
         protected readonly IPlanRepository _repository;
         protected readonly IPlansGenerator _plansGenerator;
@@ -110,11 +112,15 @@ namespace SixMan.ChiMa.Application.Dish
 
             for ( DateTime day = month; day <= lastMonthDay; day = day.AddDays(1))
             {
-                monthFlags.Add(new DayPlanFlag()
+                bool hasPlan = monthPlanDayList.Any(mpd => mpd == day);
+                if (hasPlan)
                 {
-                    Day = day,
-                    HasPlan = monthPlanDayList.Any(mpd => mpd == day)
-                });
+                    monthFlags.Add(new DayPlanFlag()
+                    {
+                        Day = day,
+                        HasPlan = true
+                    });
+                }
             }
 
             return monthFlags;
@@ -135,10 +141,16 @@ namespace SixMan.ChiMa.Application.Dish
 
         public IList<PlanDto> GetTodayAtTable()
         {
-            return Repository.GetAll()
+            CurrentUnitOfWork.DisableFilter(ChimaDataFilter.FamillyDataFilter);
+
+            var result = Repository.GetAll()
                              .Take(3)
                              .Select(MapToEntityDto)
                              .ToList();
+
+            CurrentUnitOfWork.EnableFilter(ChimaDataFilter.FamillyDataFilter);
+
+            return result;
         }
 
     }
