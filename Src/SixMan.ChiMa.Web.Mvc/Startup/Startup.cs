@@ -42,7 +42,8 @@ namespace SixMan.ChiMa.Web.Startup
             {
                 //options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
                 options.Filters.AddService(typeof(SetFamilyParaFilter));
-                
+                options.Filters.AddService(typeof(ChimaExceptionFilter));
+
             });
 
             IdentityRegistrar.Register(services);
@@ -61,7 +62,7 @@ namespace SixMan.ChiMa.Web.Startup
             });
 
             //Configure Abp and Dependency Injection
-            return services.AddAbp<ChiMaWebMvcModule>(options =>
+            var result = services.AddAbp<ChiMaWebMvcModule>(options =>
             {
                 //Configure Log4Net logging
                 options.IocManager.IocContainer.AddFacility<LoggingFacility>(
@@ -72,9 +73,13 @@ namespace SixMan.ChiMa.Web.Startup
                 //    .ImplementedBy<NullAbpActionResultWrapperFactory>().LifestyleSingleton().IsDefault());
             });
 
- 
+            //Configure MVC
+            //services.Configure<MvcOptions>(mvcOptions =>
+            //{
+            //    mvcOptions.Filters.AddService(typeof(ChimaExceptionFilter), -99);
+            //});
 
-
+            return result;
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

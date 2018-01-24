@@ -14,7 +14,7 @@ using SixMan.ChiMa.Domain;
 
 namespace SixMan.ChiMa.Application.Dish
 {
-    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
+    [WrapResult(WrapOnSuccess = false, WrapOnError = false)]
     [AbpAuthorize]
     public class PlanAppService
         : MobileAppServiceBase<Plan, PlanDto, PlanCreateDto, PlanUpdateDto>

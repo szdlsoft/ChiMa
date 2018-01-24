@@ -11,7 +11,7 @@ using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application
 {
-    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
+    [WrapResult(WrapOnSuccess = false, WrapOnError = false)]
     [Abp.Authorization.AbpAuthorize]
     public class FoodMaterialInventoryAppService
         : MobileAppServiceBase<FoodMaterialInventory, FoodMaterialInventoryDto>
