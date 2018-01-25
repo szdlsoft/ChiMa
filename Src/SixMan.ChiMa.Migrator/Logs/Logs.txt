@@ -395,3 +395,53 @@ INFO  2018-01-21 15:52:53,611 [1    ] SixMan.ChiMa.Migrator.Log                -
 INFO  2018-01-21 15:53:02,885 [1    ] SixMan.ChiMa.Migrator.Log                - HOST database migration completed.
 INFO  2018-01-21 15:53:02,890 [1    ] SixMan.ChiMa.Migrator.Log                - --------------------------------------------------------
 INFO  2018-01-21 15:53:03,167 [1    ] SixMan.ChiMa.Migrator.Log                - All databases have been migrated.
+DEBUG 2018-01-25 18:36:40,049 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 18:36:40,096 [1    ] Abp.Modules.AbpModuleManager             - Found 9 ABP modules in total.
+DEBUG 2018-01-25 18:36:40,229 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Migrator.ChiMaMigratorModule, SixMan.ChiMa.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:36:40,234 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:36:40,236 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:36:40,236 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:36:40,237 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:36:40,237 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:36:40,238 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:36:40,240 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:36:40,240 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:36:40,245 [1    ] Abp.Modules.AbpModuleManager             - 9 modules loaded.
+DEBUG 2018-01-25 18:36:40,867 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:36:41,487 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 18:36:41,507 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 18:36:41,513 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-01-25 18:36:41,517 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+INFO  2018-01-25 18:36:41,737 [1    ] SixMan.ChiMa.Migrator.Log                - Host database: Server=localhost;port=3306;database=ChiMaDb3;uid=root;password=root;character set=utf8;Old Guids=true
+INFO  2018-01-25 18:36:41,738 [1    ] SixMan.ChiMa.Migrator.Log                - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2018-01-25 18:36:48,554 [1    ] SixMan.ChiMa.Migrator.Log                - HOST database migration started...
+INFO  2018-01-25 18:36:55,086 [1    ] SixMan.ChiMa.Migrator.Log                - HOST database migration completed.
+INFO  2018-01-25 18:36:55,087 [1    ] SixMan.ChiMa.Migrator.Log                - --------------------------------------------------------
+INFO  2018-01-25 18:36:55,132 [1    ] SixMan.ChiMa.Migrator.Log                - All databases have been migrated.
+DEBUG 2018-01-25 18:36:57,217 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-25 18:36:57,218 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-01-25 18:47:06,795 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-25 18:47:06,842 [1    ] Abp.Modules.AbpModuleManager             - Found 9 ABP modules in total.
+DEBUG 2018-01-25 18:47:06,956 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Migrator.ChiMaMigratorModule, SixMan.ChiMa.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:47:06,960 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:47:06,960 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:47:06,961 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:47:06,961 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:47:06,961 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:47:06,962 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:47:06,963 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:47:06,963 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:47:06,968 [1    ] Abp.Modules.AbpModuleManager             - 9 modules loaded.
+DEBUG 2018-01-25 18:47:07,277 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-25 18:47:07,855 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-25 18:47:07,872 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-25 18:47:07,877 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-01-25 18:47:07,880 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+INFO  2018-01-25 18:47:08,242 [1    ] SixMan.ChiMa.Migrator.Log                - Host database: Server=localhost;port=3306;database=ChiMaDb3;uid=root;password=root;character set=utf8;Old Guids=true
+INFO  2018-01-25 18:47:08,242 [1    ] SixMan.ChiMa.Migrator.Log                - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2018-01-25 18:47:12,663 [1    ] SixMan.ChiMa.Migrator.Log                - HOST database migration started...
+INFO  2018-01-25 18:47:19,232 [1    ] SixMan.ChiMa.Migrator.Log                - HOST database migration completed.
+INFO  2018-01-25 18:47:19,232 [1    ] SixMan.ChiMa.Migrator.Log                - --------------------------------------------------------
+INFO  2018-01-25 18:47:19,273 [1    ] SixMan.ChiMa.Migrator.Log                - All databases have been migrated.
+DEBUG 2018-01-25 18:47:39,202 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-25 18:47:39,203 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.

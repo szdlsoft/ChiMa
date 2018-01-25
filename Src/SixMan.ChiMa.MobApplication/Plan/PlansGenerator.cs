@@ -26,11 +26,12 @@ namespace SixMan.ChiMa.Application.Dish
         {
             List<Plan> plans = new List<Plan>();
 
-            IList<Domain.Dish.Dish> dishs = _dishRepository.GetAll()
+            IList<Domain.Dish.Dish> allDishs = _dishRepository.GetAll()
                                             .OrderBy(d => d.Description)
-                                            .Take(6)
+                                            .Take(100)
                                             .ToList();
 
+            IList<Domain.Dish.Dish> dishs = RadomGet(allDishs);
             //早
             plans.Add(new Plan()
             {
@@ -80,6 +81,33 @@ namespace SixMan.ChiMa.Application.Dish
             }
 
             return plans;
+        }
+
+        /// <summary>
+        /// 随机取6个菜,只要不同就行
+        /// 总的菜必须大于6，否则会死循环！
+        /// </summary>
+        /// <param name="allDishs"></param>
+        /// <returns></returns>
+        private IList<Domain.Dish.Dish> RadomGet(IList<Domain.Dish.Dish> allDishs, int radomNum = 6)
+        {
+            List<Domain.Dish.Dish> randomDishs = new List<Domain.Dish.Dish>();
+
+            int count = allDishs.Count();
+            var random = new Random(DateTime.Now.Millisecond);
+            for (int i=0; i< radomNum; i++)
+            {
+                int randomIndex = 0;
+                do
+                {
+                    randomIndex = random.Next(0, count - 1);
+                }
+                while (randomDishs.Exists(rd => rd == allDishs[randomIndex]));
+
+                randomDishs.Add(allDishs[randomIndex]);
+            }
+
+            return randomDishs;
         }
     }
 }

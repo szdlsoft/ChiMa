@@ -4,12 +4,17 @@ using System.Collections.Generic;
 using System.Text;
 using SixMan.ChiMa.Domain.Food;
 using SixMan.ChiMa.Domain.Dish;
+using Abp;
 
 namespace SixMan.ChiMa.EFCore.EntityFrameworkCore.Seed.FoodAndDish
 {
     public class FoodAndDishBuilder
     {
         private readonly ChiMaDbContext _context;
+
+        private const int foodMaterialCategoryNumber = 10;
+        private const int foodMaterialNumber = 20;
+        private const int dishlNumber = 30;
 
         public FoodAndDishBuilder(ChiMaDbContext context)
         {
@@ -18,14 +23,37 @@ namespace SixMan.ChiMa.EFCore.EntityFrameworkCore.Seed.FoodAndDish
 
         public void Create()
         {
-            //加10个食材
-           if( _context.FoodMaterial.Count() < 2)//没有2个才加
+            //10个类别
+            //加20个食材
+            if (_context.FoodMaterialCategory.Count() < 2)//没有2个才加
             {
-                for(int i=0; i<10; i++)
+                for (int i = 0; i < foodMaterialCategoryNumber; i++)
                 {
+                    _context.FoodMaterialCategory.Add(new FoodMaterialCategory()
+                    {
+                        Name = $"测试食材类别{i + 1}",
+                        Code = (i + 1).ToString(),
+                        IndexNo = i + 1
+                    });
+                }
+
+                _context.SaveChanges();
+            }
+
+
+
+            //加20个食材
+            if ( _context.FoodMaterial.Count() < 2)//没有2个才加
+            {
+                FoodMaterialCategory[] fms = _context.FoodMaterialCategory.Take(foodMaterialCategoryNumber).ToArray();
+                for (int i=0; i< foodMaterialNumber; i++)
+                {
+                    string name = $"测试食材{i + 1}";
                     _context.FoodMaterial.Add(new FoodMaterial()
                     {
-                        Description = $"食材{i+1}",
+                        Description = name,
+                        FoodMaterialCategory = fms[i % foodMaterialCategoryNumber],
+                        Photo = $"images/FoodMaterial/{name}.jpg"
                     });
                 }
 
@@ -33,27 +61,37 @@ namespace SixMan.ChiMa.EFCore.EntityFrameworkCore.Seed.FoodAndDish
             }
 
 
-            //加10个菜 
+            //加30个菜 
             if (_context.Dish.Count() < 1)//没有才加
             {
-                FoodMaterial[] fms = _context.FoodMaterial.Take(2).ToArray();
+                FoodMaterial[] fms = _context.FoodMaterial.Take(foodMaterialNumber).ToArray();
 
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 100; i++)
                 {
+                    string name = $"测试菜品{i + 1}";
                     _context.Dish.Add(new Dish()
                     {
-                        Description = $"菜品{i + 1}",
+                        Description = name,
                         DishBoms = new List<DishBom>()
                         {
-                            new DishBom(){ FoodMaterial = fms[0], Matching = 0.2 },
-                            new DishBom(){ FoodMaterial = fms[1], Matching = 0.3 },
-                        }
+                            new DishBom(){ FoodMaterial = fms[i % foodMaterialNumber], Matching = GetRandomDouble() },
+                            new DishBom(){ FoodMaterial = fms[(i+1)% foodMaterialNumber], Matching = GetRandomDouble() },
+                        },
+                        Photo = $"images/Dish/{name}.jpg",
+                        HPhoto =$"images/Dish/{name}_h.jpg",
+                        BPhoto=$"images/Dish/{name}_b.jpg",
+
                     });
                 }
 
                 _context.SaveChanges();
             }
 
+        }
+
+        private double GetRandomDouble()
+        {
+            return ((double)RandomHelper.GetRandom(0,99)) / 100.0 ;
         }
     }
 }
