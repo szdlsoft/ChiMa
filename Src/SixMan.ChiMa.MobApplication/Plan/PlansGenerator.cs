@@ -27,8 +27,8 @@ namespace SixMan.ChiMa.Application.Dish
             List<Plan> plans = new List<Plan>();
 
             IList<Domain.Dish.Dish> allDishs = _dishRepository.GetAll()
-                                            .OrderBy(d => d.Description)
-                                            .Take(100)
+                                            .OrderBy(d => d.Id)
+                                            .Take(10)
                                             .ToList();
 
             IList<Domain.Dish.Dish> dishs = RadomGet(allDishs);

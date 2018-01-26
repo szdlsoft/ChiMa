@@ -7,7 +7,7 @@ using System.Text;
 namespace SixMan.ChiMa.Application
 {
     public interface IFoodMaterialInventoryAppService
-        : IEventHandler<FoodMaterialInventoryChangeEvent>,
+        : 
           IMobileAppService
     {
         IList<FoodMaterialInventoryDto> GetList();

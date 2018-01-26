@@ -1,4 +1,18 @@
-﻿using System;
+﻿/**************************************************************
+ * 版本  说明
+ * 1.0.1  修复domain event handler 的bug
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * **********************************************************/
+
+using System;
 using System.IO;
 using Abp.Reflection.Extensions;
 
@@ -13,7 +27,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.0.0.0";
+        public const string Version = "1.0.1";
 
         /// <summary>
         /// Gets release (last build) date of the application.

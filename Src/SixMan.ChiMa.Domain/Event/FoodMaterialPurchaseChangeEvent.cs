@@ -9,6 +9,7 @@ namespace SixMan.ChiMa.Domain
     public class FoodMaterialInventoryChangeEvent
         : EventData
     {
+        public Family.Family Family { get; set; }
         public FoodMaterial FoodMaterial { get; set; }
         /// <summary>
         /// 发生额

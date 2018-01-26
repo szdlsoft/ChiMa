@@ -11,7 +11,6 @@ namespace SixMan.ChiMa.Application.Family
 {
     public interface IFamilyAppService
     : IMobileAppService
-    , IEventHandler<MobUserCreateEvent>
     {
         /// <summary>
         /// 获得或创建家庭

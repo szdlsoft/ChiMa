@@ -32,28 +32,6 @@ namespace SixMan.ChiMa.Application
                              .ToList();
         }
 
-        [RemoteService(isEnabled:false)]
-        public void HandleEvent(FoodMaterialInventoryChangeEvent eventData)
-        {
-            var fmi = Repository.GetAllIncluding(fi => fi.FoodMaterial
-                                                 , fi => fi.Family)
-                             .Where(fi => fi.Family.Id == Family.Id
-                                       && fi.FoodMaterial.Id == eventData.FoodMaterial.Id)
-                             .FirstOrDefault();
-            if( fmi == null)
-            {
-                Repository.Insert(new FoodMaterialInventory()
-                {
-                    FoodMaterial = eventData.FoodMaterial,
-                    Inventory = eventData.Volume,
-                    Family = Family
-                });
-            }
-            else
-            {
-                fmi.Inventory += eventData.Volume;
-                Repository.Update(fmi);
-            }
-        }
+       
     }
 }

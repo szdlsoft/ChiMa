@@ -52,6 +52,7 @@ namespace SixMan.ChiMa.Application
 
             EventBus.Trigger(new FoodMaterialInventoryChangeEvent()
             {
+                Family = Family,
                 FoodMaterial = entity.FoodMaterial,
                 Volume = (entity.HasPurchased ? 1 : -1) * entity.Volume
             });

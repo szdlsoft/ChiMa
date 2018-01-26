@@ -34,53 +34,7 @@ namespace SixMan.ChiMa.Application.Family
             _userFavoriteDishRepository = userFavoriteDishRepository;
         }
 
-        [RemoteService(isEnabled:false)]
-        public void HandleEvent(MobUserCreateEvent eventData)
-        {
-            if( eventData.FamilyId == null
-                || eventData.FamilyId.Value == 0)
-            {
-                CreateFamily(eventData.User);
-            }
-            else
-            {
-                CreateUserInfo(eventData);
-            }
-        }
-
-        private void CreateFamily(User user)
-        {
-            Domain.Family.Family entity = new Domain.Family.Family()
-            {
-                UUID = Guid.NewGuid(),
-            };
-            //entity = Repository.Get( Repository.InsertAndGetId(entity));
-
-            var CreateUserInfo = new UserInfo()
-            {
-                UserId = user.Id,
-                IsFamilyCreater = true,
-            };
-
-            entity.UserInfos = new List<UserInfo>() { CreateUserInfo }; //这个办法，是可以的创建关联子记录 
-
-            Repository.Insert(entity);
-
-            //var id =  _userInfoRepository.InsertOrUpdateAndGetId(UserInfo);
-
-        }
-
-        private void CreateUserInfo(MobUserCreateEvent eventData)
-        {
-            var CreateUserInfo = new UserInfo()
-            {
-                UserId = eventData.User.Id,
-                FamilyId = eventData.FamilyId.Value,
-                IsFamilyCreater = true
-            };
-
-            _userInfoRepository.Insert(CreateUserInfo);
-        }
+       
 
         [AbpAuthorize]
         public void UpdateMyFavorites(UpdateFavoriteInput input)
