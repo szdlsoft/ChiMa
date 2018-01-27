@@ -14,7 +14,7 @@ using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application.Family
 {
-    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
+    [WrapResult(WrapOnSuccess = false, WrapOnError = false)]
 
     public class FamilyAppService
         : MobileAppServiceBase<Domain.Family.Family, FamilyDto>

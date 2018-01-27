@@ -14,7 +14,7 @@ namespace SixMan.ChiMa.EFCore.EntityFrameworkCore.Seed.FoodAndDish
 
         private const int foodMaterialCategoryNumber = 10;
         private const int foodMaterialNumber = 20;
-        private const int dishlNumber = 30;
+        private const int dishlNumber = 10;
 
         public FoodAndDishBuilder(ChiMaDbContext context)
         {
@@ -66,7 +66,7 @@ namespace SixMan.ChiMa.EFCore.EntityFrameworkCore.Seed.FoodAndDish
             {
                 FoodMaterial[] fms = _context.FoodMaterial.Take(foodMaterialNumber).ToArray();
 
-                for (int i = 0; i < 100; i++)
+                for (int i = 0; i < dishlNumber; i++)
                 {
                     string name = $"测试菜品{i + 1}";
                     _context.Dish.Add(new Dish()

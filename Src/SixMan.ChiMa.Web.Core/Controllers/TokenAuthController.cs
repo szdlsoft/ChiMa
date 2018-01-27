@@ -19,9 +19,11 @@ using SixMan.ChiMa.Models.TokenAuth;
 using SixMan.ChiMa.Domain.MultiTenancy;
 using SixMan.ChiMa.Application.Authorization;
 using SixMan.ChiMa.Application;
+using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Controllers
 {
+    [WrapResult(WrapOnSuccess = false, WrapOnError = false)]
     [Route("api/[controller]/[action]")]
     public class TokenAuthController : ChiMaControllerBase
     {

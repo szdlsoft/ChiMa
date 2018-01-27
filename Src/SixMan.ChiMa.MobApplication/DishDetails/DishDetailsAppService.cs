@@ -12,7 +12,7 @@ using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application.Dish.Imp
 {
-    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
+    [WrapResult(WrapOnSuccess = false, WrapOnError = false)]
     [Abp.Authorization.AbpAuthorize]
     public class DishDetailsAppService
         : MobileAppServiceBase<Domain.Dish.Dish, DishDetailsDto>
