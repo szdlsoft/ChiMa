@@ -17,6 +17,7 @@ using SixMan.ChiMa.Web.Resources.Startup;
 using Abp.AspNetCore.Mvc.Results.Wrapping;
 using Castle.MicroKernel.Registration;
 using SixMan.ChiMa.Filters;
+using SixMan.ChiMa.Domain;
 
 #if FEATURE_SIGNALR
 using Owin;
@@ -56,7 +57,7 @@ namespace SixMan.ChiMa.Web.Startup
 
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Info { Title = "ChiMa API", Version = "v1" });
+                options.SwaggerDoc("v1", new Info { Title = "ChiMa API", Version = $"v{AppVersionHelper.Version}" });
                 options.DocInclusionPredicate((docName, description) => true);
                 options.OperationFilter<AddAuthTokenHeaderParameter>();
                 options.OrderActionsBy(ad => ad.RelativePath);

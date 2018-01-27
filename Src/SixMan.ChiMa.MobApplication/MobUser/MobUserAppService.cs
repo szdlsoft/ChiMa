@@ -14,12 +14,15 @@ using Abp.Runtime.Security;
 using Abp.Events.Bus;
 using SixMan.ChiMa.Domain;
 using Abp.Web.Models;
+using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 
 namespace SixMan.ChiMa.Application.MobUser
 {
     [WrapResult(WrapOnSuccess = false, WrapOnError = false)]
     public class MobUserAppService
-        : MobileAppServiceBase<User, MobUserDto, MobCreateUserDto, MobUserDto>
+        //: MobileAppServiceBase<User, MobUserDto, MobCreateUserDto, MobUserDto>
+        :  CrudAppServiceBase<User, MobUserDto, long, PagedAndSortedResultRequestDto, MobCreateUserDto, MobUserDto>
         , IMobUserAppService
     {
         public const string MOB_ROLE = "Mob";

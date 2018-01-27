@@ -18,6 +18,7 @@ namespace SixMan.ChiMa.Application
         //, IMobileAppService<TEntityDto, TCreateInput, TUpdateInput>
         //, IReadAppService<TEntityDto>
         ,IMobileAppService
+        , ISetFamilyPara
 
         where TEntity : class, IEntity<long>
         where TEntityDto : IEntityDto<long>

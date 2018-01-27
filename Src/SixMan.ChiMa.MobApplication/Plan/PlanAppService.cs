@@ -19,7 +19,7 @@ namespace SixMan.ChiMa.Application.Dish
     public class PlanAppService
         : MobileAppServiceBase<Plan, PlanDto, PlanCreateDto, PlanUpdateDto>
         , IPlanAppService
-        , ISetFamilyPara
+        
     {
         protected readonly IPlanRepository _repository;
         protected readonly IPlansGenerator _plansGenerator;

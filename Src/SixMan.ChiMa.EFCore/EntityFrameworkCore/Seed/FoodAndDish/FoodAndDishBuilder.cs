@@ -5,6 +5,7 @@ using System.Text;
 using SixMan.ChiMa.Domain.Food;
 using SixMan.ChiMa.Domain.Dish;
 using Abp;
+using Microsoft.EntityFrameworkCore;
 
 namespace SixMan.ChiMa.EFCore.EntityFrameworkCore.Seed.FoodAndDish
 {
@@ -61,7 +62,7 @@ namespace SixMan.ChiMa.EFCore.EntityFrameworkCore.Seed.FoodAndDish
             }
 
 
-            //加30个菜 
+            //加10个菜 
             if (_context.Dish.Count() < 1)//没有才加
             {
                 FoodMaterial[] fms = _context.FoodMaterial.Take(foodMaterialNumber).ToArray();
@@ -87,6 +88,29 @@ namespace SixMan.ChiMa.EFCore.EntityFrameworkCore.Seed.FoodAndDish
                 _context.SaveChanges();
             }
 
+            //加烹饪步骤
+            var dishs = _context.Dish
+                .Include(d => d.Cookerys)
+                .Where(d => d.Description.Contains("测试菜品")).ToList();
+            foreach (var d in dishs)
+            {
+                if (d.Cookerys.Count() < 1)
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        string name = $"{d.Description}_测试烹饪步骤{i + 1}";
+                        _context.Cookery.Add(new Cookery()
+                        {
+                            Dish = d,
+                            Description = name,
+                            Photo = $"images/Dish/{name}.jpg",
+                            Order = i + 1,
+                            Time = i + 5
+                        });
+                    }
+                }
+            }
+            _context.SaveChanges();
         }
 
         private double GetRandomDouble()

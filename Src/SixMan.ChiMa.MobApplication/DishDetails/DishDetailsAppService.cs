@@ -9,6 +9,7 @@ using SixMan.ChiMa.Domain.Food;
 using SixMan.ChiMa.Domain.Extensions;
 using Abp.Authorization;
 using Abp.Web.Models;
+using Abp.UI;
 
 namespace SixMan.ChiMa.Application.Dish.Imp
 {
@@ -19,11 +20,15 @@ namespace SixMan.ChiMa.Application.Dish.Imp
         , IDishDetailsAppService
     {
         IRepository<CookeryNote, long> _cookeryNoteRepository;
+        IRepository<Cookery, long> _cookeryRepository;
         public DishDetailsAppService(IDishRepository repository
-                                    ,IRepository<CookeryNote, long> cookeryNoteRepository)
+                                    ,IRepository<CookeryNote, long> cookeryNoteRepository
+                                    ,IRepository<Cookery, long> cookeryRepository
+                                    )
             : base(repository)
         {
             _cookeryNoteRepository = cookeryNoteRepository;
+            _cookeryRepository = cookeryRepository;
         }
 
         IDishRepository dishRepository => Repository as IDishRepository;
@@ -71,6 +76,7 @@ namespace SixMan.ChiMa.Application.Dish.Imp
 
         public CookeryNoteDto CreateCookeryNote(CookeryNoteCreateDto CookeryNoteDto)
         {
+            EnsureCookId(CookeryNoteDto.CookeyId);
             var note = new CookeryNote()
             {
                 CookeryId = CookeryNoteDto.CookeyId,
@@ -80,6 +86,14 @@ namespace SixMan.ChiMa.Application.Dish.Imp
 
             return ObjectMapper.Map<CookeryNoteDto>( _cookeryNoteRepository.Get( _cookeryNoteRepository.InsertAndGetId(note)));
         }
+
+        private void EnsureCookId(long cookeyId)
+        {
+            if(_cookeryRepository.Get(cookeyId) == null)
+            {
+                throw new UserFriendlyException($"id={cookeyId} 的烹饪步骤不存在！");
+            }
+        }      
 
         public DishDetailsDto Get(EntityDto<long> input)
         {
