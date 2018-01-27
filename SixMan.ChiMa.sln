@@ -10,6 +10,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Test", "3 Test", "{249065D3-B69F-44EC-BF8F-A0720FC1CA08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Release", "4 Release", "{7B2711D1-C9FD-476C-8EE4-CB255B0E5893}"
+	ProjectSection(SolutionItems) = preProject
+		Release\publish = Release\publish
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.EFCore", "Src\SixMan.ChiMa.EFCore\SixMan.ChiMa.EFCore.csproj", "{B87D54EB-8728-4FB5-B9DA-C87A85B63DAF}"
 EndProject
