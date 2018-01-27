@@ -41,13 +41,7 @@ namespace SixMan.ChiMa.Filters
             EventBus = NullEventBus.Instance;
         }
 
-        private static TAttribute GetSingleAttributeOfMemberOrDeclaringTypeOrDefault<TAttribute>(MemberInfo memberInfo, TAttribute defaultValue = default(TAttribute), bool inherit = true)
-            where TAttribute : class
-        {
-            return memberInfo.GetCustomAttributes(true).OfType<TAttribute>().FirstOrDefault()
-                   ?? memberInfo.DeclaringType?.GetTypeInfo().GetCustomAttributes(true).OfType<TAttribute>().FirstOrDefault()
-                   ?? defaultValue;
-        }
+      
 
         public void OnException(ExceptionContext context)
         {
@@ -57,7 +51,7 @@ namespace SixMan.ChiMa.Filters
             }
 
             var wrapResultAttribute =
-                GetSingleAttributeOfMemberOrDeclaringTypeOrDefault(
+                AttributeHelper.GetSingleAttributeOfMemberOrDeclaringTypeOrDefault(
                     context.ActionDescriptor.GetMethodInfo(),
                     _configuration.DefaultWrapResultAttribute
                 );

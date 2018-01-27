@@ -17,7 +17,7 @@ using Abp.Web.Models;
 
 namespace SixMan.ChiMa.Application.MobUser
 {
-    [WrapResult(WrapOnSuccess = false, WrapOnError = true)]
+    [WrapResult(WrapOnSuccess = false, WrapOnError = false)]
     public class MobUserAppService
         : MobileAppServiceBase<User, MobUserDto, MobCreateUserDto, MobUserDto>
         , IMobUserAppService

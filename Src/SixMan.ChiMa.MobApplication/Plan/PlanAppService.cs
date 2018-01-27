@@ -44,7 +44,7 @@ namespace SixMan.ChiMa.Application.Dish
 
         public  PlanDto Update(PlanUpdateDto input)
         {
-            return Update(input);
+            return UpdateImp(input);
        }
 
         //protected IPlanRepository _repository => Repository as IPlanRepository;

@@ -43,6 +43,7 @@ namespace SixMan.ChiMa.Web.Startup
                 //options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
                 options.Filters.AddService(typeof(SetFamilyParaFilter));
                 options.Filters.AddService(typeof(ChimaExceptionFilter));
+                options.Filters.AddService(typeof(ChimaAuthorizationFilter), -1);
 
             });
 
@@ -74,10 +75,10 @@ namespace SixMan.ChiMa.Web.Startup
             });
 
             //Configure MVC
-            //services.Configure<MvcOptions>(mvcOptions =>
-            //{
-            //    mvcOptions.Filters.AddService(typeof(ChimaExceptionFilter), -99);
-            //});
+            services.Configure<MvcOptions>(mvcOptions =>
+            {
+                mvcOptions.Filters.AddService(typeof(ChimaExceptionFilter), -99);
+            });
 
             return result;
         }
