@@ -21,7 +21,7 @@ namespace SixMan.ChiMa.Application.Dish
         /// <summary>
         /// 餐别
         /// </summary>
-        public MealType MealType { get; set; }
+        public string MealType { get; set; }
         /// <summary>
         /// 序号
         /// 在本餐中的第几个菜

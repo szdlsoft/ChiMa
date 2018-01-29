@@ -57,7 +57,7 @@ namespace SixMan.ChiMa.Web.Startup
 
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Info { Title = "ChiMa API", Version = $"v{AppVersionHelper.Version}" });
+                options.SwaggerDoc("v1", new Info { Title = "ChiMa API", Version = $"V{AppVersionHelper.Version}" });
                 options.DocInclusionPredicate((docName, description) => true);
                 options.OperationFilter<AddAuthTokenHeaderParameter>();
                 options.OrderActionsBy(ad => ad.RelativePath);
@@ -128,7 +128,7 @@ namespace SixMan.ChiMa.Web.Startup
             //Enable middleware to serve swagger - ui assets(HTML, JS, CSS etc.)
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "ChiMa API V1");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", $"ChiMa API V{AppVersionHelper.Version}");
             }); //URL: /swagger 
         }
 

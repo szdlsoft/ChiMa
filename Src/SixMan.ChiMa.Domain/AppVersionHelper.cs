@@ -7,6 +7,8 @@
  *           b: 单元测试的确实， inmenmoru 至少找出逻辑上的bug
  *           c: Filter的经验不足，其实它是全局性的，要当心
  *    2 烹饪步骤的数据
+ * 1.0.2.03  PlanDto的MealType改为文字返回，并根据mealtype和orderno排序
+ *           Swagger ui 显示版本号
  * 
  * 
  * 
@@ -32,7 +34,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.0.1";
+        public const string Version = "1.0.2.03";
 
         /// <summary>
         /// Gets release (last build) date of the application.

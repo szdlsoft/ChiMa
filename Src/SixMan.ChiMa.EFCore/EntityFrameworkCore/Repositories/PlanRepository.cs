@@ -29,6 +29,8 @@ namespace SixMan.ChiMa.EFCore.Repositories
                     .ThenInclude(d => d.UserUserFavorites )
                     .Where(p => p.Family.Id == familyId
                              && p.PlanDate == planDate  )
+                    .OrderBy(p => p.MealType)
+                    .ThenBy(p => p.MealNo)
                     ;
             var result = q.ToList();
             return result;
