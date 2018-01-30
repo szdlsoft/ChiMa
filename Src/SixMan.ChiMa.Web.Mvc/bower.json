@@ -33,6 +33,7 @@
     "x-editable": "1.5.1",
     "bootstrap-editable-table": "v1.0.3",
     "bootstrap-editable": "*",
-    "jquery-validation-unobtrusive": "v3.2.6"
+    "jquery-validation-unobtrusive": "v3.2.6",
+    "jQuery-EasyUI": "v1.5.3"
   }
 }

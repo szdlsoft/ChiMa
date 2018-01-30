@@ -13,6 +13,7 @@ using SixMan.ChiMa.Domain.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Abp.Domain.Uow;
 using Abp.Authorization;
+using Abp.Runtime.Validation;
 
 namespace SixMan.ChiMa.Application.Food
 {
@@ -28,6 +29,12 @@ namespace SixMan.ChiMa.Application.Food
             : base(repository)
         {
             _categoryRepository = categoryRepository;
+        }
+
+        [DisableValidationAttribute]
+        public override Task<PagedResultDto<FoodMaterialDto>> GetAll(SortSearchPagedResultRequestDto input)
+        {
+            return base.GetAll(input);
         }
 
         protected override IQueryable<FoodMaterial> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
@@ -113,6 +120,16 @@ namespace SixMan.ChiMa.Application.Food
             }
 
             return category;
+        }
+
+        public Task<PagedResultDto<FoodMaterialDto>> GetList(PagedResultRequestDto input)
+        {
+
+            return base.GetAll(new SortSearchPagedResultRequestDto()
+            {
+                SkipCount = input.SkipCount,
+                MaxResultCount = input.MaxResultCount
+            });
         }
     }
 }

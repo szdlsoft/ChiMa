@@ -53,7 +53,7 @@ namespace SixMan.ChiMa
             Configuration.Modules.AbpAspNetCore()
                  .CreateControllersForAppServices(
                      typeof(ChiMaApplicationModule).GetAssembly(),
-                     useConventionalHttpVerbs: true
+                     useConventionalHttpVerbs: false
                  )
                  //.Where( IsNotMoile )
                  //.WithConventionalVerbs()

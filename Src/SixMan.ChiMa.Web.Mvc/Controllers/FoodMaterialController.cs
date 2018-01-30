@@ -44,45 +44,21 @@ namespace SixMan.ChiMa.Web.Controllers
 
         public ActionResult Index()
         {
-            var vm = new EditFoodMaterialModalViewModel()
-            {
-                Categories = categoryService.GetAll(SortSearchPagedResultRequestDto.All)
-                        .Result.Items
-                        .Select(c => new { Id = c.Id, Name = c.Name })
-                        .ToJson(),
-                Meta = metaProvider.GetMetadataForType(typeof(FoodMaterialDto))
-            };
+            //var vm = new EditFoodMaterialModalViewModel()
+            //{
+            //    Categories = categoryService.GetAll(SortSearchPagedResultRequestDto.All)
+            //            .Result.Items
+            //            .Select(c => new { Id = c.Id, Name = c.Name })
+            //            .ToJson(),
+            //    Meta = metaProvider.GetMetadataForType(typeof(FoodMaterialDto))
+            //};
 
-            vm.ModelExplorer = new ModelExplorer(metaProvider, vm.Meta, new FoodMaterialDto());
+            //vm.ModelExplorer = new ModelExplorer(metaProvider, vm.Meta, new FoodMaterialDto());
 
-            return View(vm);
+            return View();
         }
 
-        //protected override int Import(ExcelWorksheet worksheet)
-        //{
-        //    int rowCount = worksheet.Dimension.Rows;
-        //    int ColCount = worksheet.Dimension.Columns;
-        //    var importData = new List<Dictionary<string, string>>();
-        //    //rowCount = 20;
-        //    for (int row = 5; row <= rowCount; row++)
-        //    {
-        //        var rowData = new Dictionary<string, string>();
-        //        for (int col = 1; col <= ColCount; col++)
-        //        {
-        //            var key = worksheet.Cells[2, col].Value?.ToString();
-        //            var value = worksheet.Cells[row, col].Value?.ToString();
-        //            if (key != null
-        //                && value != null)
-        //            {
-        //                rowData[key] = value;
-        //            }
-        //        }
-        //        importData.Add(rowData);
-        //    }
-        //    int importCount = _appService.Import(importData);
-        //    return importCount;
-        //}
-
+       
         protected override ImportTaskInfo BuildImportWork(ExcelWorksheet worksheet)
         {
             int rowCount = worksheet.Dimension.Rows;

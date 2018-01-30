@@ -9,67 +9,11 @@
 @{
     ViewBag.CurrentPageName = PageNames.FoodMaterial; //The menu item will be active for this page.
 }
-    @await Component.InvokeAsync(typeof(ListPageViewComponent), Model.Meta)
 
-    @Html.Partial("~/Views/Shared/Modals/_CrudModalHeader.cshtml") 
-            <div class="modal-body">
-                <bg-form id="myForm" asp-action="SignUp" asp-for="@Model">
-                    @Html.Partial("~/Views/Shared/Modals/_CrudPhoto.cshtml") 
-                    <div class="form-group" id="div_FoodMaterialCategoryId">
-                        <label for="txt_category">类别</label>
-                        <select data-bind="options:categories, optionsText:'Name', optionsValue:'Id', value: foodMaterialCategoryId" id="txt_category"></select>
-                    </div>
-
-                </bg-form>
-            </div>
-     @Html.Partial("~/Views/Shared/Modals/_CrudModalFooterWithSaveAndCancel.cshtml") 
-       
+<div id="listGrid" style="width:100%;height:auto">
+</div>
 
 @section scripts
-{
- @*<script src="~/view-resources/Views/Shared/domainCrud.js"  asp-append-version="true"></script>*@
- <script>
-    //初始化
-    $(function () {
-        //0, 设置service
-        //ko.appService = abp.services.app.foodMaterial;
-        //crudInit('FoodMaterial');
-        crudInit({
-            urlPath: 'FoodMaterial',
-            appService: abp.services.app.foodMaterial,
-           
-        });
-    });
-
-     function EntityModel() {
-         var self = this;
-
-         self.id = ko.observable();
-          @foreach (var property in Model.Meta.EditProperties())
-            {
-                @:self.@property.JsonPropertyName() = ko.observable();
-            }
-
-         self.categories = ko.observableArray(@Model.Categories);
-        @*var enityModel = {
-            id: ko.observable(),
-            @foreach (var property in Model.Meta.EditProperties())
-            {
-                @(@property.JsonPropertyName() + " : ko.observable(),");
-            }
-            categories: ko.observableArray(@Model.Categories),
-            whenchage: function (p) {
-                alert('here:' + p);
-
-            },
-        };
-        return enityModel;*@
-    }
-
-     function colFormater(value, row, index) {
-         return value;
-     }
-
-  </script> 
-
+ {
+    <script src="~/view-resources/Views/FoodMaterial/Index.js" asp-append-version="true"></script>
 }

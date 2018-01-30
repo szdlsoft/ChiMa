@@ -1,234 +1,204 @@
-﻿//(function() {
-//    $(function() {
-
-//        //var _foodMaterialService = abp.services.app.foodMaterial;
-//        setfoodMaterialService = function (foodMaterialService) {
-//            _foodMaterialService = foodMaterialService;
-//        }
-
-//        var _$modal = $('#foodMaterialCreateModal');
-//        var _$form = _$modal.find('form');
-       
-
-//        $('#RefreshButton').click(function () {
-//            refreshUserList();
-//        });
-
-//        $('.delete-foodMaterial').click(function () {
-//            var foodMaterialId = $(this).attr("data-foodMaterial-id");
-//            var foodMaterialDescription = $(this).attr('data-foodMaterial-description');
-
-//            deleteFoodMaterial(foodMaterialId, foodMaterialDescription);
-//        });
-
-//        $('.edit-foodMaterial').click(function (e) {
-//            var foodMaterialId = $(this).attr("data-foodMaterial-id");
-
-//            e.preventDefault();
-//            $.ajax({
-//                url: abp.appPath + 'FoodMaterial/EditFoodMaterialModal?foodMaterialId=' + foodMaterialId,
-//                type: 'POST',
-//                contentType: 'application/html',
-//                success: function (content) {
-//                    $('#foodMaterialEditModal div.modal-content').html(content);
-//                },
-//                error: function (e) { }
-//            });
-//        });
-
-//        _$form.find('button[type="submit"]').click(function (e) {
-//            e.preventDefault();
-
-//            if (!_$form.valid()) {
-//                return;
-//            }
-
-//            var foodMaterial = _$form.serializeFormToObject(); //serializeFormToObject is defined in main.js
-            
-
-//            abp.ui.setBusy(_$modal);
-//            _foodMaterialService.create(foodMaterial).done(function () {
-//                _$modal.modal('hide');
-//                location.reload(true); //reload page to see new foodMaterial!
-//            }).always(function () {
-//                abp.ui.clearBusy(_$modal);
-//            });
-//        });
-        
-//        _$modal.on('shown.bs.modal', function () {
-//            _$modal.find('input:not([type=hidden]):first').focus();
-//        });
-
-//        function refreshUserList() {
-//            location.reload(true); //reload page to see new category!
-//        }
-
-//        function deleteFoodMaterial(foodMaterialId, foodMaterialDescription) {
-//            abp.message.confirm(
-//                "Delete foodMaterial '" + foodMaterialDescription + "'?",
-//                function (isConfirmed) {
-//                    if (isConfirmed) {
-//                        _foodMaterialService.delete({
-//                            id: foodMaterialId
-//                        }).done(function () {
-//                            refreshUserList();
-//                        });
-//                    }
-//                }
-//            );
-//        }
-//    });
-//})();
-
-//初始化
-$(function () {
-    //0, 设置service
-    var _foodMaterialService = abp.services.app.foodMaterial;
-
-    //1、初始化表格
-    tableInit.Init();
-
-    //2、注册增删改事件
-    operate.operateInit();
+﻿$(function () {
+    //initDateFormat();
+    //initActionListQuery();
+    initListDataGrid();
+    //initForm();
 });
 
-//初始化表格
-var tableInit = {
-    Init: function () {
-        //绑定table的viewmodel
-        this.myViewModel = new ko.bootstrapTableViewModel({
-            url: '/api/services/app/FoodMaterial/GetFoodMaterials',         //请求后台的URL（*）
-            method: 'get',                      //请求方式（*）
-            toolbar: '#toolbar',                //工具按钮用哪个容器
-            queryParams: function (param) {
-                return { limit: param.limit, offset: param.offset };
-            },//传递参数（*）
-            pagination: true,                   //是否显示分页（*）
-            sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
-            pageNumber: 1,                      //初始化加载第一页，默认第一页
-            pageSize: 10,                       //每页的记录行数（*）
-            pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
-        });
-        ko.applyBindings(this.myViewModel, document.getElementById("tb_dept"));
-    }
-};
-
-//操作
-var operate = {
-    //初始化按钮事件
-    operateInit: function () {
-        this.operateAdd();
-        this.operateUpdate();
-        this.operateDelete();
-        this.DepartmentModel = {
-            id: ko.observable(),
-            description: ko.observable(),
-            season: ko.observable()
+function initDateFormat() {
+    // 对Date的扩展，将 Date 转化为指定格式的String
+    // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
+    // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)
+    // 例子：
+    // (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423
+    // (new Date()).Format("yyyy-M-d h:m:s.S")   ==> 2006-7-2 8:9:4.18
+    Date.prototype.Format = function (fmt) { //author: meizz
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds() //毫秒
         };
-    },
-    //新增
-    operateAdd: function () {
-        $('#btn_add').on("click", function () {
-            $("#myModal").modal().on("shown.bs.modal", function () {
-                var oEmptyModel = {
-                    id: ko.observable(),
-                    description: ko.observable(),
-                    season: ko.observable()
-                };
-                ko.utils.extend(operate.DepartmentModel, oEmptyModel);
-                ko.applyBindings(operate.DepartmentModel, document.getElementById("myModal"));
-                operate.operateSave();
-            }).on('hidden.bs.modal', function () {
-                ko.cleanNode(document.getElementById("myModal"));
-            });
-        });
-    },
-    //编辑
-    operateUpdate: function () {
-        $('#btn_edit').on("click", function () {
-            $("#myModal").modal().on("shown.bs.modal", function () {
-                var arrselectedData = tableInit.myViewModel.getSelections();
-                if (!operate.operateCheck(arrselectedData)) { return; }
-                //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
-                ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
-                ko.applyBindings(operate.DepartmentModel, document.getElementById("myModal"));
-                operate.operateSave();
-            }).on('hidden.bs.modal', function () {
-                //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
-                ko.cleanNode(document.getElementById("myModal"));
-            });
-        });
-    },
-    //删除
-    operateDelete: function () {
-        $('#btn_delete').on("click", function () {
-            var arrselectedData = tableInit.myViewModel.getSelections();
-            //var data = JSON.stringify(arrselectedData);
-            var idsData = arrselectedData.map(function (item) {
-                return item.id;
-            }).join(",");
-            var oDataModel = ko.toJS(arrselectedData);
-            var _appService = abp.services.app.foodMaterial;
-            abp.message.confirm(
-            "Delete foodMaterial '"  + "'?",
-                function (isConfirmed) {
-                    if (isConfirmed) {
-                        _appService.deleteList({
-                            ids: idsData
-                        }
-                        ).done(function () {
-                            tableInit.myViewModel.refresh();
-                        });
-                    }
-                }
-            );
-            // $.ajax({
-            //     url: "/FoodMaterial/Delete",
-            //     type: "post",
-            //     contentType: 'application/json',
-            //     data: JSON.stringify(arrselectedData),
-            //     success: function (data, status) {
-            //         //alert(status);
-            //         tableInit.myViewModel.refresh();
-            //     }
-            // });
-        });
-    },
-    //保存数据
-    operateSave: function () {
-        $('#btn_submit').on("click", function () {
-            //取到当前的viewmodel
-            var oViewModel = operate.DepartmentModel;
-            //将Viewmodel转换为数据model
-            var oDataModel = ko.toJS(oViewModel);
-            var funcName = oDataModel.id ? "Update" : "Add";
-
-            var _appService = abp.services.app.foodMaterial;
-            if( funcName === "Add"){
-                _appService.create(oDataModel).done(function (res) {
-                    alert(JSON.stringify(res) );
-                    tableInit.myViewModel.refresh();
-                });                
-            }
-            else{
-                _appService.update(oDataModel).done(function (res) {
-                    alert(JSON.stringify(res) );
-                    tableInit.myViewModel.refresh();
-                });            
-            }
-
-        });
-    },
-    //数据校验
-    operateCheck: function (arr) {
-        if (arr.length <= 0) {
-            alert("请至少选择一行数据");
-            return false;
-        }
-        if (arr.length > 1) {
-            alert("只能编辑一行数据");
-            return false;
-        }
-        return true;
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
     }
+}
+
+function initActionListQuery() {
+    $('#typeKey').combobox({
+        url: '/api/services/app/testAction/GetTypeKeys',
+        valueField: 'text',
+        textField: 'text',
+        editable: false,
+        onSelect: function (rec) {
+            $('#tooling').combobox('reload', '/api/services/app/testAction/GetToolings?keyType=' + rec.text);
+            $('#defect').combobox('reload', '/api/services/app/testAction/GetDefects?keyType=' + rec.text);
+        },
+        loadFilter: filterData,
+        onBeforeLoad: function (param) {
+            console.log(param);
+        }
+    });
+
+    $('#tooling').combobox({
+        valueField: 'text',
+        textField: 'text',
+        editable: false,
+        loadFilter: filterData,
+        onSelect: function (rec) {
+            $('#cavity').combobox('reload', '/api/services/app/testAction/GetCavityies?keyType=' + rec.id + '&tooling=' + rec.text);
+        }
+    });
+    $('#cavity').combobox({
+        valueField: 'text',
+        textField: 'text',
+        editable: true,
+        loadFilter: filterData,
+        multiple: true,
+    });
+    $('#defect').combobox({
+        valueField: 'text',
+        textField: 'text',
+        editable: true,
+        loadFilter: filterData,
+        multiple: true,
+    });
+
+    $('#driQuery').combobox({
+        url: '/api/services/app/testAction/GetDris',
+        valueField: 'text',
+        textField: 'text',
+        editable: false,
+        loadFilter: filterData,
+    });
+
+    $('#ipqcQuery').click(function () {
+        $('#listGrid').datagrid('reload');
+    });
+
+}
+
+function filterData(data) {
+    if (data.result) {
+        return data.result;
+    } else {
+        return data;
+    }
+}
+
+function initListDataGrid() {
+    $('#listGrid').datagrid({
+        //url: '/api/services/app/foodMaterial/GetAll',
+        columns: [[
+            { field: 'id', title: 'id', width: 50, align: 'right' },
+            { field: 'description', title: '名称', width: 50, align: 'right' },
+        ]],
+        loadFilter: function (data) {
+            console.log(data);
+            if (data.result) {
+                if (data.result.items) {
+                    var pageData = {};
+                    pageData.total = data.result.totalCount;
+                    pageData.rows = data.result.items;
+                    return pageData;
+                }
+
+            } else
+            if(data.items){
+                return data.items;
+            } else {
+                return data;
+            }
+        },
+        pagination: true,
+        onBeforeLoad: function (param) {
+
+            param.skipCount = (param.page - 1) * param.rows;
+            param.maxResultCount = param.rows;
+
+            //param.porductId = $('#typeKey').val();
+            //param.tooling = $('#tooling').val();
+            //param.cavity = $('#cavity').val();
+            //param.defect = $('#defect').val();
+            //param.dateFrom = $('#dateFrom').val();
+            //param.dateTo = $('#dateTo').val();
+
+            //param.dri = $('#driQuery').val();
+            //param.status = $('#statusQuery').val();
+
+            var temp = {};
+            temp.skipCount = param.skipCount;
+            temp.maxResultCount = param.maxResultCount;
+
+            param = temp;
+
+            console.log(param);
+        },
+        //onClickRow: function (index, row) {
+        //    if (row) {
+        //        $('#dlg').dialog('open').dialog('setTitle', 'Edit Action');
+        //        $('#fm').form('load', row);
+        //        url = '/api/services/app/testAction/Update?id=' + row.id;
+        //    }
+        //}
+    });
+
+    var _appService = abp.services.app.foodMaterial;
+    //var parms = $('#listGrid').datagrid();
+    var parms = {
+        skipCount: 0,
+        maxResultCount:10
+    }
+    var data = _appService.getAll(parms)
+        .done(function (data) {
+            $('#listGrid').datagrid("loadData", data);
+        });
+
+}
+
+var url;
+
+function saveAction() {
+    $('#fm').form('submit', {
+        url: url,
+        onSubmit: function () {
+            return $(this).form('validate');
+        },
+        success: function (result) {
+            var result = eval('(' + result + ')');
+            if (result.success) {
+                $('#dlg').dialog('close');		// close the dialog
+                $('#listGrid').datagrid('reload');	// reload the user data
+            } else {
+                $.messager.show({
+                    title: 'Error',
+                    msg: result.error.message
+                });
+            }
+        }
+    });
+}
+
+function initForm() {
+    $('.easyui-datebox').datebox({
+        formatter: function (date) {
+            if (date) {
+                return new Date(date).Format("yyyy-MM-dd");
+            }
+            return date;
+        },
+        parser: function (s) {
+            var t = Date.parse(s);
+            if (!isNaN(t)) {
+                return new Date(t);
+            } else {
+                return new Date();
+            }
+        }
+    });
 }
