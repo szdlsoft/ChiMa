@@ -22358,3 +22358,564 @@ INFO  2018-01-30 22:00:58,038 [28   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2018-01-30 22:00:58,298 [40   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
 INFO  2018-01-30 22:00:58,298 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Food.FoodMaterialAppService.GetAll (SixMan.ChiMa.Application) in 264.7347ms
 INFO  2018-01-30 22:00:58,299 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 277.1554ms 200 application/json; charset=utf-8
+DEBUG 2018-01-31 19:51:42,038 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-31 19:51:42,118 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-01-31 19:51:42,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Web.Startup.ChiMaWebMvcModule, SixMan.ChiMa.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,145 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.ChiMaWebCoreModule, SixMan.ChiMa.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,146 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,147 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,148 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,149 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,149 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,151 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,152 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaMobApplicationModule, SixMan.ChiMa.MobApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,153 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,153 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,156 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:42,163 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-01-31 19:51:42,783 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 19:51:43,447 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-01-31 19:51:43,476 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-31 19:51:43,485 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-01-31 19:51:43,491 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-01-31 19:51:43,493 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-31 19:51:43,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 32 classes define auto mapping attributes
+DEBUG 2018-01-31 19:51:43,602 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-01-31 19:51:43,609 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-01-31 19:51:43,611 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-01-31 19:51:43,611 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-01-31 19:51:43,611 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-01-31 19:51:43,611 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-01-31 19:51:43,611 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-01-31 19:51:43,611 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-01-31 19:51:43,612 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.FoodMaterialInventoryDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MobCreateUserDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MobUserDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MobFoodMaterialCategoryDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MobFoodMaterialDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.PurchaseDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.PurchaseUpdateDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Family.FamilyDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.CookeryCreateDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.CookeryDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.CookeryNoteDto
+DEBUG 2018-01-31 19:51:43,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DetailDishBomDto
+DEBUG 2018-01-31 19:51:43,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDetailsDto
+DEBUG 2018-01-31 19:51:43,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.PlanCreateDto
+DEBUG 2018-01-31 19:51:43,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.PlanDishDto
+DEBUG 2018-01-31 19:51:43,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.PlanDto
+DEBUG 2018-01-31 19:51:43,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.PlanUpdateDto
+DEBUG 2018-01-31 19:51:43,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+INFO  2018-01-31 19:51:50,280 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/  
+INFO  2018-01-31 19:51:50,832 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/index.html'. Physical path: 'N/A'
+INFO  2018-01-31 19:51:50,843 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 575.6592ms 200 text/html
+INFO  2018-01-31 19:51:50,851 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/css/reset.css  
+INFO  2018-01-31 19:51:50,851 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/css/typography.css  
+INFO  2018-01-31 19:51:50,855 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/css/screen.css  
+INFO  2018-01-31 19:51:50,858 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/object-assign-pollyfill.js  
+INFO  2018-01-31 19:51:50,862 [5    ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/typography.css was not modified
+INFO  2018-01-31 19:51:50,862 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/object-assign-pollyfill.js was not modified
+INFO  2018-01-31 19:51:50,862 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/screen.css was not modified
+INFO  2018-01-31 19:51:50,866 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.6905ms 304 text/css
+INFO  2018-01-31 19:51:50,866 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.2661ms 304 text/css
+INFO  2018-01-31 19:51:50,866 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.4535ms 304 application/javascript
+INFO  2018-01-31 19:51:50,869 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/reset.css was not modified
+INFO  2018-01-31 19:51:50,884 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.7962ms 304 text/css
+INFO  2018-01-31 19:51:50,885 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/jquery-1.8.0.min.js  
+INFO  2018-01-31 19:51:50,885 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/lodash.min.js  
+INFO  2018-01-31 19:51:50,886 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/jquery.wiggle.min.js  
+INFO  2018-01-31 19:51:50,887 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/lodash.min.js was not modified
+INFO  2018-01-31 19:51:50,889 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.6458ms 304 application/javascript
+INFO  2018-01-31 19:51:50,889 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/handlebars-4.0.5.js  
+INFO  2018-01-31 19:51:50,890 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.wiggle.min.js was not modified
+INFO  2018-01-31 19:51:50,890 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.9505ms 304 application/javascript
+INFO  2018-01-31 19:51:50,891 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/backbone-min.js  
+INFO  2018-01-31 19:51:50,893 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/handlebars-4.0.5.js was not modified
+INFO  2018-01-31 19:51:50,894 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.3409ms 304 application/javascript
+INFO  2018-01-31 19:51:50,894 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/backbone-min.js was not modified
+INFO  2018-01-31 19:51:50,894 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.229ms 304 application/javascript
+INFO  2018-01-31 19:51:50,894 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/jquery.ba-bbq.min.js  
+INFO  2018-01-31 19:51:50,896 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery-1.8.0.min.js was not modified
+INFO  2018-01-31 19:51:50,897 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.1109ms 304 application/javascript
+INFO  2018-01-31 19:51:50,897 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/swagger-ui.min.js  
+INFO  2018-01-31 19:51:50,898 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/jquery.slideto.min.js  
+INFO  2018-01-31 19:51:50,901 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.ba-bbq.min.js was not modified
+INFO  2018-01-31 19:51:50,900 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.min.js was not modified
+INFO  2018-01-31 19:51:50,901 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.061ms 304 application/javascript
+INFO  2018-01-31 19:51:50,902 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.7807ms 304 application/javascript
+INFO  2018-01-31 19:51:50,902 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/highlight.9.1.0.pack.js  
+INFO  2018-01-31 19:51:50,902 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/highlight.9.1.0.pack_extended.js  
+INFO  2018-01-31 19:51:50,904 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/highlight.9.1.0.pack_extended.js was not modified
+INFO  2018-01-31 19:51:50,904 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.2937ms 304 application/javascript
+INFO  2018-01-31 19:51:50,906 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/jsoneditor.min.js  
+INFO  2018-01-31 19:51:50,910 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jsoneditor.min.js was not modified
+INFO  2018-01-31 19:51:50,911 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.8709ms 304 application/javascript
+INFO  2018-01-31 19:51:50,911 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/marked.js  
+INFO  2018-01-31 19:51:50,917 [5    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jquery.slideto.min.js was not modified
+INFO  2018-01-31 19:51:50,917 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/lib/swagger-oauth.js  
+INFO  2018-01-31 19:51:50,920 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.3648ms 304 application/javascript
+INFO  2018-01-31 19:51:50,927 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/marked.js was not modified
+INFO  2018-01-31 19:51:50,926 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/swagger-oauth.js was not modified
+INFO  2018-01-31 19:51:50,930 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/highlight.9.1.0.pack.js was not modified
+INFO  2018-01-31 19:51:50,931 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.9684ms 304 application/javascript
+INFO  2018-01-31 19:51:50,931 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.6658ms 304 application/javascript
+INFO  2018-01-31 19:51:50,932 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 29.8317ms 304 application/javascript
+INFO  2018-01-31 19:51:50,941 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/images/logo_small.png  
+INFO  2018-01-31 19:51:50,944 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/logo_small.png was not modified
+INFO  2018-01-31 19:51:50,945 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.7811ms 304 image/png
+INFO  2018-01-31 19:51:50,948 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/css/print.css  
+INFO  2018-01-31 19:51:50,950 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/print.css was not modified
+INFO  2018-01-31 19:51:50,950 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.4396ms 304 text/css
+INFO  2018-01-31 19:51:51,278 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+INFO  2018-01-31 19:51:51,312 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/images/favicon-16x16.png  
+INFO  2018-01-31 19:51:51,313 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-31 19:51:51,313 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.4707ms 304 image/png
+INFO  2018-01-31 19:51:51,721 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 442.6149ms 200 application/json
+INFO  2018-01-31 19:51:59,887 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/images/throbber.gif  
+INFO  2018-01-31 19:51:59,889 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/throbber.gif was not modified
+INFO  2018-01-31 19:51:59,889 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.9938ms 304 image/gif
+INFO  2018-01-31 19:51:59,979 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Swagger/images/favicon-16x16.png  
+INFO  2018-01-31 19:51:59,981 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/favicon-16x16.png was not modified
+INFO  2018-01-31 19:51:59,981 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.4294ms 304 image/png
+INFO  2018-01-31 19:52:08,719 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+WARN  2018-01-31 19:52:09,950 [6    ] n.ChiMa.Filters.ChimaAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Filters.ChimaAuthorizationFilter.<OnAuthorizationAsync>d__9.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Filters\ChimaAuthorizationFilter.cs:line 64
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Filters.ChimaAuthorizationFilter.<OnAuthorizationAsync>d__9.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Filters\ChimaAuthorizationFilter.cs:line 64
+INFO  2018-01-31 19:52:09,961 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'SixMan.ChiMa.Filters.ChimaAuthorizationFilter'.
+INFO  2018-01-31 19:52:09,969 [6    ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-31 19:52:09,988 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 169.2999ms
+INFO  2018-01-31 19:52:10,001 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1281.4989ms 401 application/json; charset=utf-8
+INFO  2018-01-31 19:52:22,352 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/  
+WARN  2018-01-31 19:52:22,369 [5    ] n.ChiMa.Filters.ChimaAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Filters.ChimaAuthorizationFilter.<OnAuthorizationAsync>d__9.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Filters\ChimaAuthorizationFilter.cs:line 64
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Filters.ChimaAuthorizationFilter.<OnAuthorizationAsync>d__9.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Filters\ChimaAuthorizationFilter.cs:line 64
+INFO  2018-01-31 19:52:22,376 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'SixMan.ChiMa.Filters.ChimaAuthorizationFilter'.
+INFO  2018-01-31 19:52:22,378 [5    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-01-31 19:52:22,385 [5    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2018-01-31 19:52:22,385 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 22.5054ms
+INFO  2018-01-31 19:52:22,386 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 33.946ms 302 
+INFO  2018-01-31 19:52:22,389 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Account/Login?ReturnUrl=%2F  
+INFO  2018-01-31 19:52:23,293 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) with arguments (, /, ) - ModelState is Valid
+INFO  2018-01-31 19:52:23,525 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/  
+WARN  2018-01-31 19:52:23,547 [14   ] n.ChiMa.Filters.ChimaAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Filters.ChimaAuthorizationFilter.<OnAuthorizationAsync>d__9.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Filters\ChimaAuthorizationFilter.cs:line 64
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SixMan.ChiMa.Filters.ChimaAuthorizationFilter.<OnAuthorizationAsync>d__9.MoveNext() in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Core\Filters\ChimaAuthorizationFilter.cs:line 64
+INFO  2018-01-31 19:52:23,565 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'SixMan.ChiMa.Filters.ChimaAuthorizationFilter'.
+INFO  2018-01-31 19:52:23,565 [14   ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-01-31 19:52:23,566 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2018-01-31 19:52:23,566 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 32.6114ms
+INFO  2018-01-31 19:52:23,566 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 41.5872ms 302 
+INFO  2018-01-31 19:52:23,578 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/Account/Login?ReturnUrl=%2F  
+INFO  2018-01-31 19:52:23,602 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) with arguments (, /, ) - ModelState is Valid
+INFO  2018-01-31 19:52:27,455 [14   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-01-31 19:52:27,455 [13   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-01-31 19:52:28,608 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) in 6210.8859ms
+INFO  2018-01-31 19:52:28,610 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) in 5016.0644ms
+INFO  2018-01-31 19:52:28,614 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6224.5102ms 200 text/html; charset=utf-8
+INFO  2018-01-31 19:52:28,614 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5043.9441ms 200 text/html; charset=utf-8
+INFO  2018-01-31 19:52:28,638 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/css/materialize.css?v=OdWlipUYj8b9Oa4RyT45njteIcxH-4pGocqe0r0V8js  
+INFO  2018-01-31 19:52:28,639 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/materialize.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\css\materialize.css'
+INFO  2018-01-31 19:52:28,663 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Account/_Layout.css?v=vIEtxnpR3ZrYbYcueRr_mJ9XuJJzDprh4sMCwvRBcqk  
+INFO  2018-01-31 19:52:28,665 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/_Layout.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Account\_Layout.css'
+INFO  2018-01-31 19:52:28,666 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Account/Login.css?v=Hq5aBVr9vqsOYI_zoZha7PxZnLUdiilICi-gjP3RrfU  
+INFO  2018-01-31 19:52:28,667 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/Login.css'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Account\Login.css'
+INFO  2018-01-31 19:52:28,673 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/js/admin.js?v=rFjFALFzVDU8tWiHtkJ4QGfTpdf9IiPLvc3a-xXLleU  
+INFO  2018-01-31 19:52:28,674 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/admin.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\js\admin.js'
+INFO  2018-01-31 19:52:28,674 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636530251035064324  
+INFO  2018-01-31 19:52:28,684 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636530251035064324  
+INFO  2018-01-31 19:52:28,685 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 52.495ms 200 text/css
+INFO  2018-01-31 19:52:28,685 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.6122ms 200 application/javascript
+INFO  2018-01-31 19:52:28,688 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 22.3347ms 200 text/css
+INFO  2018-01-31 19:52:28,689 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Account/Login.js?v=o2PUQBkwW7VjtzD5RNxKPa3oShr3fMFHds_2dwIAV5M  
+INFO  2018-01-31 19:52:28,689 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/Login.js'. Physical path: 'D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\view-resources\Views\Account\Login.js'
+INFO  2018-01-31 19:52:28,690 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.9413ms 200 application/javascript
+INFO  2018-01-31 19:52:28,693 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 28.2876ms 200 text/css
+INFO  2018-01-31 19:52:28,723 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-01-31 19:52:28,744 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-01-31 19:52:28,882 [5    ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-31 19:52:28,884 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 164.5404ms
+INFO  2018-01-31 19:52:28,884 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 210.1703ms 200 text/plain; charset=utf-8
+WARN  2018-01-31 19:52:28,906 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:28,920 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'DishFood' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:28,929 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterialCategory' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:28,929 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterial' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:28,929 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Dish' in localization source 'ChiMa'!
+INFO  2018-01-31 19:52:28,999 [13   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-01-31 19:52:28,999 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 294.7303ms
+INFO  2018-01-31 19:52:28,999 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 315.791ms 200 application/x-javascript; charset=utf-8
+INFO  2018-01-31 19:52:30,354 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:5000/Account/Login application/x-www-form-urlencoded 258
+INFO  2018-01-31 19:52:30,393 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) with arguments (SixMan.ChiMa.Web.Models.Account.LoginViewModel, /, ) - ModelState is Valid
+INFO  2018-01-31 19:52:31,063 [15   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application signed in.
+INFO  2018-01-31 19:52:31,237 [12   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-01-31 19:52:31,244 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.AccountController.Login (SixMan.ChiMa.Web.Mvc) in 877.7721ms
+INFO  2018-01-31 19:52:31,245 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 891.5155ms 200 application/json; charset=utf-8
+INFO  2018-01-31 19:52:31,260 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/  
+INFO  2018-01-31 19:52:31,297 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 19:52:31,326 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: 136001.
+INFO  2018-01-31 19:52:31,550 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) with arguments ((null)) - ModelState is Valid
+INFO  2018-01-31 19:52:31,870 [15   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+WARN  2018-01-31 19:52:32,926 [14   ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:33,032 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'DishFood' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:33,036 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterialCategory' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:33,036 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterial' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:33,036 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'Dish' in localization source 'ChiMa'!
+INFO  2018-01-31 19:52:33,549 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Web.Controllers.HomeController.Index (SixMan.ChiMa.Web.Mvc) in 2249.6465ms
+INFO  2018-01-31 19:52:33,555 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2295.0131ms 200 text/html; charset=utf-8
+INFO  2018-01-31 19:52:33,587 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jQuery-EasyUI/themes/default/easyui.css  
+INFO  2018-01-31 19:52:33,590 [17   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jQuery-EasyUI/themes/default/easyui.css was not modified
+INFO  2018-01-31 19:52:33,590 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.229ms 304 text/css
+INFO  2018-01-31 19:52:33,589 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jQuery-EasyUI/themes/icon.css  
+INFO  2018-01-31 19:52:33,594 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jQuery-EasyUI/themes/icon.css was not modified
+INFO  2018-01-31 19:52:33,594 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.1952ms 304 text/css
+INFO  2018-01-31 19:52:33,629 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/lib/jQuery-EasyUI/jquery.easyui.min.js?v=J07IqVdHdg96EVR2TODTw_rUXFGbey_xUJioxRFuAoc  
+INFO  2018-01-31 19:52:33,630 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/jQuery-EasyUI/jquery.easyui.min.js was not modified
+INFO  2018-01-31 19:52:33,632 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.2497ms 304 application/javascript
+INFO  2018-01-31 19:52:33,675 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=636530251035064324  
+INFO  2018-01-31 19:52:33,684 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=636530251035064324  
+INFO  2018-01-31 19:52:33,687 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 19:52:33,689 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-01-31 19:52:33,690 [5    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 19:52:33,690 [13   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-31 19:52:33,690 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 2.3769ms
+INFO  2018-01-31 19:52:33,691 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.6015ms 200 text/plain; charset=utf-8
+INFO  2018-01-31 19:52:33,694 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+WARN  2018-01-31 19:52:33,728 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'System' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:33,739 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'DishFood' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:33,742 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterialCategory' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:33,742 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'FoodMaterial' in localization source 'ChiMa'!
+WARN  2018-01-31 19:52:33,743 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'Dish' in localization source 'ChiMa'!
+INFO  2018-01-31 19:52:33,744 [5    ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-01-31 19:52:33,745 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 53.1896ms
+INFO  2018-01-31 19:52:33,746 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 62.4948ms 200 application/x-javascript; charset=utf-8
+INFO  2018-01-31 19:52:37,786 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 19:52:37,791 [6    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 19:52:38,344 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+INFO  2018-01-31 19:52:38,576 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 782.1726ms
+INFO  2018-01-31 19:52:38,578 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 791.8742ms 200 
+INFO  2018-01-31 19:52:45,651 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 19:52:45,658 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 19:52:45,694 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+ERROR 2018-01-31 19:52:45,741 [15   ] ixMan.ChiMa.Filters.ChimaExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at SixMan.ChiMa.Application.Family.FamilyAppService.<UpdateMyFavorites>b__3_0(UserFavoriteDish f) in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.MobApplication\Family\FamilyAppService.cs:line 50
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites(UpdateFavoriteInput input) in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.MobApplication\Family\FamilyAppService.cs:line 50
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+INFO  2018-01-31 19:52:45,759 [15   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-31 19:52:45,759 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 99.0738ms
+INFO  2018-01-31 19:52:45,759 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 108.6713ms 500 application/json; charset=utf-8
+INFO  2018-01-31 19:53:39,475 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 19:53:39,531 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 19:53:39,941 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+ERROR 2018-01-31 19:54:44,018 [15   ] ixMan.ChiMa.Filters.ChimaExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at SixMan.ChiMa.Application.Family.FamilyAppService.<UpdateMyFavorites>b__3_0(UserFavoriteDish f) in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.MobApplication\Family\FamilyAppService.cs:line 50
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites(UpdateFavoriteInput input) in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.MobApplication\Family\FamilyAppService.cs:line 50
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+INFO  2018-01-31 19:54:44,046 [15   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-31 19:54:44,055 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 64511.7154ms
+INFO  2018-01-31 19:54:44,071 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 64623.6307ms 500 application/json; charset=utf-8
+INFO  2018-01-31 19:57:32,274 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 19:57:32,317 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 19:57:40,608 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+ERROR 2018-01-31 19:58:37,722 [15   ] ixMan.ChiMa.Filters.ChimaExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at SixMan.ChiMa.Application.Family.FamilyAppService.<UpdateMyFavorites>b__3_0(UserFavoriteDish f) in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.MobApplication\Family\FamilyAppService.cs:line 50
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites(UpdateFavoriteInput input) in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.MobApplication\Family\FamilyAppService.cs:line 50
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+INFO  2018-01-31 19:58:37,744 [15   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-31 19:58:37,771 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 65425.2231ms
+INFO  2018-01-31 19:58:37,780 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 65531.9236ms 500 application/json; charset=utf-8
+INFO  2018-01-31 20:01:00,330 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:01:00,368 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:01:04,873 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+WARN  2018-01-31 20:04:26,496 [32   ] Microsoft.AspNetCore.Server.Kestrel      - Heartbeat took longer than "00:00:01" at "01/31/2018 12:04:17 +00:00".
+INFO  2018-01-31 20:04:26,533 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 206156.3808ms
+INFO  2018-01-31 20:04:26,562 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 206225.1946ms 200 
+INFO  2018-01-31 20:04:38,543 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:04:38,556 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:04:42,959 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+ERROR 2018-01-31 20:05:43,195 [31   ] ixMan.ChiMa.Filters.ChimaExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at SixMan.ChiMa.Application.Family.FamilyAppService.<UpdateMyFavorites>b__3_0(UserFavoriteDish f) in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.MobApplication\Family\FamilyAppService.cs:line 50
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites(UpdateFavoriteInput input) in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.MobApplication\Family\FamilyAppService.cs:line 50
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+INFO  2018-01-31 20:05:43,219 [31   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-31 20:05:43,247 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 64662.6447ms
+INFO  2018-01-31 20:05:43,256 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 64724.7095ms 500 application/json; charset=utf-8
+INFO  2018-01-31 20:05:46,028 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:05:46,060 [33   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:05:46,130 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+ERROR 2018-01-31 20:05:55,789 [36   ] ixMan.ChiMa.Filters.ChimaExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at SixMan.ChiMa.Application.Family.FamilyAppService.<UpdateMyFavorites>b__3_0(UserFavoriteDish f) in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.MobApplication\Family\FamilyAppService.cs:line 50
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites(UpdateFavoriteInput input) in D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.MobApplication\Family\FamilyAppService.cs:line 50
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.<>c__DisplayClass33_0.<WrapVoidMethod>b__0(Object target, Object[] parameters)
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+INFO  2018-01-31 20:05:55,810 [36   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-01-31 20:05:55,811 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 9749.0879ms
+INFO  2018-01-31 20:05:55,811 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9791.0511ms 500 application/json; charset=utf-8
+DEBUG 2018-01-31 20:21:10,940 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-31 20:21:10,997 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-01-31 20:21:11,015 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Web.Startup.ChiMaWebMvcModule, SixMan.ChiMa.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.ChiMaWebCoreModule, SixMan.ChiMa.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,020 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,020 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,020 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,021 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,021 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaMobApplicationModule, SixMan.ChiMa.MobApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,024 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,024 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,028 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-01-31 20:21:11,455 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 20:21:11,880 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-01-31 20:21:11,897 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-31 20:21:11,902 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-01-31 20:21:11,905 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-01-31 20:21:11,906 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-01-31 20:21:11,967 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 32 classes define auto mapping attributes
+DEBUG 2018-01-31 20:21:11,967 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-01-31 20:21:11,970 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-01-31 20:21:11,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-01-31 20:21:11,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-01-31 20:21:11,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-01-31 20:21:11,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-01-31 20:21:11,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-01-31 20:21:11,972 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-01-31 20:21:11,972 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-01-31 20:21:11,972 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-01-31 20:21:11,972 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-01-31 20:21:11,972 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-01-31 20:21:11,972 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-01-31 20:21:11,972 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.FoodMaterialInventoryDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MobCreateUserDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MobUserDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MobFoodMaterialCategoryDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MobFoodMaterialDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.PurchaseDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.PurchaseUpdateDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Family.FamilyDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.CookeryCreateDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.CookeryDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.CookeryNoteDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DetailDishBomDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDetailsDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.PlanCreateDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.PlanDishDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.PlanDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.PlanUpdateDto
+DEBUG 2018-01-31 20:21:11,973 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+INFO  2018-01-31 20:21:20,027 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:21:21,105 [5    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:21:21,912 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+INFO  2018-01-31 20:21:22,167 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 818.2584ms
+INFO  2018-01-31 20:21:22,177 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2161.5938ms 200 
+INFO  2018-01-31 20:21:25,078 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:21:25,087 [5    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:21:25,123 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+INFO  2018-01-31 20:21:25,164 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 73.3428ms
+INFO  2018-01-31 20:21:25,165 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 87.5474ms 200 
+INFO  2018-01-31 20:21:26,557 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:21:26,563 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:21:26,590 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+INFO  2018-01-31 20:21:26,631 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 65.9491ms
+INFO  2018-01-31 20:21:26,631 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 74.6872ms 200 
+INFO  2018-01-31 20:21:27,484 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:21:27,490 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:21:27,517 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+INFO  2018-01-31 20:21:27,574 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 82.0054ms
+INFO  2018-01-31 20:21:27,581 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 97.4393ms 200 
+INFO  2018-01-31 20:21:34,581 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 41
+INFO  2018-01-31 20:21:34,588 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:21:34,614 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+INFO  2018-01-31 20:21:34,697 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 107.4894ms
+INFO  2018-01-31 20:21:34,698 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 117.2725ms 200 
+INFO  2018-01-31 20:21:43,852 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:21:43,858 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:21:43,885 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+INFO  2018-01-31 20:21:43,934 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 73.6142ms
+INFO  2018-01-31 20:21:43,934 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 81.8834ms 200 
+INFO  2018-01-31 20:21:44,996 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:21:45,004 [5    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:21:45,035 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+INFO  2018-01-31 20:21:45,068 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 62.8587ms
+INFO  2018-01-31 20:21:45,069 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 72.5927ms 200 
+INFO  2018-01-31 20:21:45,773 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:21:45,781 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:21:45,810 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+INFO  2018-01-31 20:21:45,844 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 61.065ms
+INFO  2018-01-31 20:21:45,845 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 72.0073ms 200 
+INFO  2018-01-31 20:21:46,428 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:5000/api/services/mob/Family/UpdateMyFavorites application/json-patch+json 40
+INFO  2018-01-31 20:21:46,437 [6    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was successfully authenticated.
+INFO  2018-01-31 20:21:46,467 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) with arguments (SixMan.ChiMa.Application.Family.UpdateFavoriteInput) - ModelState is Valid
+INFO  2018-01-31 20:21:46,503 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action SixMan.ChiMa.Application.Family.FamilyAppService.UpdateMyFavorites (SixMan.ChiMa.MobApplication) in 64.5189ms
+INFO  2018-01-31 20:21:46,504 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 75.5849ms 200 

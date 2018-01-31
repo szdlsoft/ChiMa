@@ -11,6 +11,7 @@ using SixMan.ChiMa.Domain;
 using Abp.Application.Services;
 using SixMan.ChiMa.Domain.Authorization.Users;
 using Abp.Web.Models;
+using SixMan.ChiMa.Domain.Dish;
 
 namespace SixMan.ChiMa.Application.Family
 {
@@ -21,10 +22,10 @@ namespace SixMan.ChiMa.Application.Family
         , IFamilyAppService
     {
         //IRepository<UserInfo, long> _userInfoRepository;
-        IRepository<SixMan.ChiMa.Domain.Dish.Dish, long> _dishRepository;
+        IDishRepository _dishRepository;
         IRepository<UserFavoriteDish, long> _userFavoriteDishRepository;
         public FamilyAppService(IFamilyRepository repository
-                                  , IRepository<SixMan.ChiMa.Domain.Dish.Dish, long> dishRepository
+                                  , IDishRepository dishRepository
                                   , IRepository<UserFavoriteDish, long> userFavoriteDishRepository
                                     ) 
             : base(repository)
@@ -39,9 +40,11 @@ namespace SixMan.ChiMa.Application.Family
         [AbpAuthorize]
         public void UpdateMyFavorites(UpdateFavoriteInput input)
         {
-            var dish = _dishRepository.GetAllIncluding(d => d.UserUserFavorites)
-                                 .Where(d => d.Id == input.DishId)
-                                 .FirstOrDefault();
+            //var dish = _dishRepository.GetAllIncluding(d => d.UserUserFavorites)                                      
+            //                     .Where(d => d.Id == input.DishId)
+            //                     .FirstOrDefault();
+            var dish = _dishRepository.GetAWithUserFavorites(input.DishId);
+
             if (dish == null)
             {
                 throw new Exception($"Id= {input.DishId} 的菜品不存在！");

@@ -18,6 +18,15 @@ namespace SixMan.ChiMa.EFCore.EntityFrameworkCore.Repositories
         {
         }
 
+        public Dish GetAWithUserFavorites(long id)
+        {
+            return Context.Dish
+                          .Include(d => d.UserUserFavorites)                          
+                          .ThenInclude( uf => uf.UserInfo)
+                          .Where(d => d.Id == id)
+                          .SingleOrDefault();
+        }
+
         public Dish GetWithDetails(long id)
         {
             //var q = from d in Context.Dish

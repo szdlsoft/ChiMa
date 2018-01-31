@@ -9,5 +9,7 @@ namespace SixMan.ChiMa.Domain.Dish
         :  IRepository<Dish, long>
     {
         Dish GetWithDetails(long id);
+
+        Dish GetAWithUserFavorites(long id);
     }
 }

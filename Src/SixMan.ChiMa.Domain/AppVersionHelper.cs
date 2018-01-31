@@ -14,7 +14,7 @@
  *    2 烹饪步骤的数据
  * 1.0.2.03  PlanDto的MealType改为文字返回，并根据mealtype和orderno排序
  *           Swagger ui 显示版本号
- * 
+ * 1.0.3.04  Fix UpdateMyFavorites 两次调用会出错
  * 
  * 
  * 
@@ -39,7 +39,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.0.2.03";
+        public const string Version = "1.0.3.04";
 
         /// <summary>
         /// Gets release (last build) date of the application.
