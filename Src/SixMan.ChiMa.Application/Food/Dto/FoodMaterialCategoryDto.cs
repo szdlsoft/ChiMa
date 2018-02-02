@@ -20,18 +20,23 @@ namespace SixMan.ChiMa.Application.Food.Dto
         public string Code { get; set; }
 
         /// <summary>
-        /// 单价
+        /// 分类索引号 
         /// </summary>
-        public double? Price { get; set; }
-        /// <summary>
-        /// 单位
-        /// </summary>
-        public string Unit { get; set; }
+        public int? IndexNo { get; set; }
 
         /// <summary>
-        /// 库存
-        /// </summary>
-        public int? Inventory { get; set; }
+        /// 单价
+        ///// </summary>
+        //public double? Price { get; set; }
+        ///// <summary>
+        ///// 单位
+        ///// </summary>
+        //public string Unit { get; set; }
+
+        ///// <summary>
+        ///// 库存
+        ///// </summary>
+        //public int? Inventory { get; set; }
 
         //分类索引号从 Category里获取
     }

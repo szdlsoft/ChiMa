@@ -3,6 +3,9 @@
     //initActionListQuery();
     initListDataGrid();
     //initForm();
+
+    //reloadData();
+
 });
 
 function initDateFormat() {
@@ -96,7 +99,9 @@ function initListDataGrid() {
         //url: '/api/services/app/foodMaterial/GetAll',
         columns: [[
             { field: 'id', title: 'id', width: 50, align: 'right' },
-            { field: 'description', title: '名称', width: 50, align: 'right' },
+            { field: 'description', title: '名称', width: 100, align: 'right' },
+            { field: 'foodMaterialCategoryName', title: '类别', width: 100, align: 'right' },
+            { field: 'foodMaterialCategoryIndexNo', title: '类别索引号', width: 100, align: 'right' },
         ]],
         loadFilter: function (data) {
             console.log(data);
@@ -108,9 +113,13 @@ function initListDataGrid() {
                     return pageData;
                 }
 
-            } else
-            if(data.items){
-                return data.items;
+            }
+            else
+            if (data.items) {
+                var pageData = {};
+                pageData.total = data.totalCount;
+                pageData.rows = data.items;
+                return pageData;
             } else {
                 return data;
             }
@@ -131,14 +140,24 @@ function initListDataGrid() {
             //param.dri = $('#driQuery').val();
             //param.status = $('#statusQuery').val();
 
-            var temp = {};
-            temp.skipCount = param.skipCount;
-            temp.maxResultCount = param.maxResultCount;
+            //var temp = {};
+            //temp.skipCount = param.skipCount;
+            //temp.maxResultCount = param.maxResultCount;
 
-            param = temp;
+            //param = temp;
+            //console.log(param);
 
-            console.log(param);
         },
+        loader: function (param, success, error) {
+            console.log(param);
+            var _appService = abp.services.app.foodMaterial;
+            var data = _appService.getAll(param)
+                .done(function (data) {
+                    //listGrid.datagrid("loadData", data);
+                    success(data);
+                });
+        }
+
         //onClickRow: function (index, row) {
         //    if (row) {
         //        $('#dlg').dialog('open').dialog('setTitle', 'Edit Action');
@@ -148,17 +167,39 @@ function initListDataGrid() {
         //}
     });
 
-    var _appService = abp.services.app.foodMaterial;
-    //var parms = $('#listGrid').datagrid();
-    var parms = {
-        skipCount: 0,
-        maxResultCount:10
-    }
-    var data = _appService.getAll(parms)
-        .done(function (data) {
-            $('#listGrid').datagrid("loadData", data);
-        });
+   
 
+}
+
+function reloadData() {
+    var _appService = abp.services.app.foodMaterial;
+    var listGrid = $('#listGrid');
+    var pager = listGrid.datagrid("getPager");
+
+    $(pager).pagination({
+        onRefresh: function (pageNumber, pageSize) {
+            alert(pageNumber);
+            alert(pageSize);
+        },
+        onChangePageSize: function () {
+            alert('pagesize changed');
+        },
+        onSelectPage: function (pageNumber, pageSize) {
+            r
+        }  
+    });
+
+    var pagerOptions = pager.data("pagination").options;
+    var params = {};    
+    params.skipCount = pagerOptions.pageNumber;
+    params.maxResultCount = pagerOptions.pageSize;
+    console.log(params);
+
+
+    var data = _appService.getAll(params)
+        .done(function (data) {
+            listGrid.datagrid("loadData", data);
+        });
 }
 
 var url;

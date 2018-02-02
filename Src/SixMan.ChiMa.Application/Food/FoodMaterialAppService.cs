@@ -59,8 +59,8 @@ namespace SixMan.ChiMa.Application.Food
         protected override FoodMaterialDto MapToEntityDto(FoodMaterial entity)
         {
             var dto = base.MapToEntityDto(entity);
-            dto.Category = entity.FoodMaterialCategory?.Name;
-            //dto.FoodMaterialCategoryId = entity.FoodMaterialCategory?.Id;
+            dto.FoodMaterialCategoryName = entity.FoodMaterialCategory?.Name;
+            dto.FoodMaterialCategoryIndexNo = entity.FoodMaterialCategory?.IndexNo;
             //dto.Photo = dto.Photo ?? $"FoodMaterial/{entity.Id}.jpg";
 
             return dto;
