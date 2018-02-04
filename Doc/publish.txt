@@ -1,0 +1,7 @@
+cd D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc
+dotnet publish  -o D:\work\ChiMa\SixMan.ChiMa\Release\Web
+
+cd /home/sdl/Web
+netstat -lnp
+kill -9 
+nohup dotnet SixMan.ChiMa.Web.Mvc.dll &
