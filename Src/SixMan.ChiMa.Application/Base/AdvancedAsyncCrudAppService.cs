@@ -194,4 +194,121 @@ namespace SixMan.ChiMa.Application.Base
             return importTaskInfo;
         }
     }
+
+
+    public class AdvancedAsyncCrudAppServiceBase<TEntity, TEntityDto, TGetAllInput, TCreateInput, TUpdateInput>
+    : AsyncCrudAppService<TEntity, TEntityDto, long, TGetAllInput, TCreateInput, TUpdateInput>
+    , IAdvancedAsyncCrudAppServiceBase< TEntityDto, TGetAllInput, TCreateInput, TUpdateInput>
+    , IImportFromExcel
+        where TEntity : class, IEntity<long>, new()
+        where TEntityDto : IEntityDto<long>
+        where TCreateInput : IEntityDto<long>
+        where TUpdateInput : IEntityDto<long>
+
+    {
+        public AdvancedAsyncCrudAppServiceBase(IRepository<TEntity, long> repository) : base(repository)
+        {
+        }
+
+        public override async Task<PagedResultDto<TEntityDto>> GetAll(TGetAllInput input)
+        {
+            CheckGetAllPermission();
+
+            var query = CreateFilteredQuery(input);
+
+            var totalCount = await AsyncQueryableExecuter.CountAsync(query);
+
+            query = ApplySorting(query, input);
+            query = ApplyPaging(query, input);
+
+            query = ApplyInclude(query);
+
+
+            var entities = await AsyncQueryableExecuter.ToListAsync(query);
+
+            return new PagedResultDto<TEntityDto>(
+                totalCount,
+                entities.Select(MapToEntityDto).ToList()
+            );
+        }
+
+        protected virtual IQueryable<TEntity> ApplyInclude(IQueryable<TEntity> query)
+        {
+            return query;
+        }
+
+        /// <summary>
+        /// 导入一行数据
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
+        protected virtual int ImportRow(Dictionary<string, string> row)
+        {
+            return 0;
+        }
+
+        static ImportTaskInfo importTaskInfo = new ImportTaskInfo(); //导入任务信息单例
+
+        [RemoteService(isEnabled: false)]
+        [UnitOfWork(IsDisabled = true)]
+        public ImportTaskInfo BuildImportWork(List<Dictionary<string, string>> importData, string taskId)
+        {
+            if (!importTaskInfo.IsRunning) //同时只能运行一个导入任务
+            {
+
+                importTaskInfo.TaskId = taskId;
+                Task.Run(() => this.Execute(taskId, importData));
+            }
+
+            return importTaskInfo;
+        }
+
+        [UnitOfWork(IsDisabled = true)]
+        private void Execute(string args, List<Dictionary<string, string>> _importData)
+        {
+            int count = 0;
+            int total = _importData.Count;
+
+            importTaskInfo.IsRunning = true;
+            importTaskInfo.Complete = false;
+            importTaskInfo.Cancel = false;
+            importTaskInfo.Percent = 0;
+
+            try
+            {
+                foreach (var row in _importData)
+                {
+                    if (importTaskInfo.Cancel)
+                    {
+                        break;
+                    }
+
+                    ImportRow(row);
+
+                    importTaskInfo.Percent = (100 * (++count)) / total;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex.Message);
+            }
+            finally
+            {
+                importTaskInfo.Complete = true;
+                importTaskInfo.IsRunning = false;
+            }
+        }
+
+        public ImportTaskInfo QueryWork(string taskId)
+        {
+            return importTaskInfo;
+        }
+
+        public ImportTaskInfo CancelWork(string taskId)
+        {
+            importTaskInfo.Cancel = true;
+            return importTaskInfo;
+        }
+    }
+
 }

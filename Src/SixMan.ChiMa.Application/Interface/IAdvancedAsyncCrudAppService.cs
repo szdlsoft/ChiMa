@@ -16,4 +16,14 @@ namespace SixMan.ChiMa.Application.Base
         void DeleteList(DeletListDto list);
 
     }
+
+    public interface IAdvancedAsyncCrudAppServiceBase< TEntityDto, TGetAllInput, TCreateInput, TUpdateInput>
+        : IAsyncCrudAppService<TEntityDto, long, TGetAllInput, TCreateInput, TUpdateInput>
+        where TEntityDto : IEntityDto<long>
+        where TCreateInput : IEntityDto<long>
+        where TUpdateInput : IEntityDto<long>
+    {
+
+    }
+
 }

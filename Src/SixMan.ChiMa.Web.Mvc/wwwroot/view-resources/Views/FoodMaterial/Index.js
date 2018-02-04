@@ -1,6 +1,6 @@
 ﻿$(function () {
     //initDateFormat();
-    //initActionListQuery();
+    initQuery();
     initListDataGrid();
     //initForm();
 
@@ -32,21 +32,33 @@ function initDateFormat() {
     }
 }
 
-function initActionListQuery() {
-    $('#typeKey').combobox({
-        url: '/api/services/app/testAction/GetTypeKeys',
-        valueField: 'text',
-        textField: 'text',
+function initQuery() {
+    $('#foodMaterialCategory').combobox({
+        //url: '/api/services/app/testAction/GetTypeKeys',
+        valueField: 'id',
+        textField: 'name',
         editable: false,
-        onSelect: function (rec) {
-            $('#tooling').combobox('reload', '/api/services/app/testAction/GetToolings?keyType=' + rec.text);
-            $('#defect').combobox('reload', '/api/services/app/testAction/GetDefects?keyType=' + rec.text);
-        },
         loadFilter: filterData,
         onBeforeLoad: function (param) {
             console.log(param);
-        }
+        },
+        loader: function (param, success, error) {
+            console.log(param);
+            var _appService = abp.services.app.foodMaterialCategory;
+            var data = _appService.getAll(param)
+                .done(function (data) {
+                    success(data);
+                });
+        },
+
     });
+
+    $('#foodMaterialName').textbox({
+        prompt:'食材名称',
+    });
+
+
+    /*
 
     $('#tooling').combobox({
         valueField: 'text',
@@ -79,17 +91,26 @@ function initActionListQuery() {
         editable: false,
         loadFilter: filterData,
     });
+    */
 
-    $('#ipqcQuery').click(function () {
+    $('#query').click(function () {
         $('#listGrid').datagrid('reload');
     });
+
 
 }
 
 function filterData(data) {
     if (data.result) {
         return data.result;
-    } else {
+    } 
+    else
+    if( data.items)
+    {
+        return data.items;
+    }
+    else
+    {
         return data;
     }
 }
@@ -130,8 +151,8 @@ function initListDataGrid() {
             param.skipCount = (param.page - 1) * param.rows;
             param.maxResultCount = param.rows;
 
-            //param.porductId = $('#typeKey').val();
-            //param.tooling = $('#tooling').val();
+            param.foodMaterialCategoryId = $('#foodMaterialCategory').val();
+            param.name = $('#foodMaterialName').val();
             //param.cavity = $('#cavity').val();
             //param.defect = $('#defect').val();
             //param.dateFrom = $('#dateFrom').val();
@@ -156,7 +177,7 @@ function initListDataGrid() {
                     //listGrid.datagrid("loadData", data);
                     success(data);
                 });
-        }
+        },
 
         //onClickRow: function (index, row) {
         //    if (row) {
@@ -164,7 +185,22 @@ function initListDataGrid() {
         //        $('#fm').form('load', row);
         //        url = '/api/services/app/testAction/Update?id=' + row.id;
         //    }
-        //}
+        //},
+        toolbar: [
+            {
+                iconCls: 'icon-edit',
+                handler: function(){
+                    alert('edit')
+                }
+            },
+            '-',
+            {
+                iconCls: 'icon-help',
+                handler: function(){
+                    alert('help')
+                }
+            }
+        ],
     });
 
    

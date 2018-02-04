@@ -19,8 +19,8 @@ namespace SixMan.ChiMa.Application.Food
 {
     [AbpAuthorize]
     public class FoodMaterialAppService
-       : AdvancedAsyncCrudAppService<FoodMaterial, FoodMaterialDto>
-        , IFoodMaterialAppService
+        : AdvancedAsyncCrudAppServiceBase<FoodMaterial, FoodMaterialDto,  FoodMateialPagedResultRequestDto, FoodMaterialDto, FoodMaterialDto>
+       , IFoodMaterialAppService
 
     {
         private IRepository<FoodMaterialCategory, long> _categoryRepository;
@@ -32,20 +32,28 @@ namespace SixMan.ChiMa.Application.Food
         }
 
         [DisableValidationAttribute]
-        public override Task<PagedResultDto<FoodMaterialDto>> GetAll(SortSearchPagedResultRequestDto input)
+        public override Task<PagedResultDto<FoodMaterialDto>> GetAll(FoodMateialPagedResultRequestDto input)
         {
             return base.GetAll(input);
         }
 
-        protected override IQueryable<FoodMaterial> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
+        protected override IQueryable<FoodMaterial> CreateFilteredQuery(FoodMateialPagedResultRequestDto input)
         {
             var query = base.CreateFilteredQuery(input);
-            if (input.Search.IsNotNullOrEmpty())
-            {
+
+            if(input.FoodMaterialCategoryId != null){
                 query = from c in query
-                        where EF.Functions.Like(c.Description, $"%{input.Search}%")
+                        where c.FoodMaterialCategoryId == input.FoodMaterialCategoryId
                         select c;
             }
+
+            if (input.Name.IsNotNullOrEmpty())
+            {
+                query = from c in query
+                        where EF.Functions.Like(c.Description, $"%{input.Name}%")
+                        select c;
+            }
+
 
             return query;
         }
@@ -122,14 +130,6 @@ namespace SixMan.ChiMa.Application.Food
             return category;
         }
 
-        public Task<PagedResultDto<FoodMaterialDto>> GetList(PagedResultRequestDto input)
-        {
-
-            return base.GetAll(new SortSearchPagedResultRequestDto()
-            {
-                SkipCount = input.SkipCount,
-                MaxResultCount = input.MaxResultCount
-            });
-        }
+       
     }
 }

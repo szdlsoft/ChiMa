@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace SixMan.ChiMa.Application.Food
 {
     public interface IFoodMaterialAppService
-        : IAdvancedAsyncCrudAppService<FoodMaterialDto>
+        : IAdvancedAsyncCrudAppServiceBase<FoodMaterialDto, FoodMateialPagedResultRequestDto, FoodMaterialDto, FoodMaterialDto> 
         , IImportFromExcel
     {
         //: IAsyncCrudAppService<FoodMaterialDto, long, PagedResultRequestDto, FoodMaterialDto, FoodMaterialDto>
@@ -21,6 +21,6 @@ namespace SixMan.ChiMa.Application.Food
         //    PagedResultDto<FoodMaterialDto> GetFoodMaterials(int offset , int limit );
         //    void DeleteList(DeletListDto list);
         //int Import(List<Dictionary<string, string>> importData);
-        Task<PagedResultDto<FoodMaterialDto>> GetList(PagedResultRequestDto input);
+        //Task<PagedResultDto<FoodMaterialDto>> GetList(FoodMateialPagedResultRequestDto input);
     }
 }

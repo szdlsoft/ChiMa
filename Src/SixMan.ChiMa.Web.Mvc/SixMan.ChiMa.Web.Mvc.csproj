@@ -72,7 +72,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\view-resources\Views\_Bundles\" />
-    <Folder Include="wwwroot\view-resources\Views\_Bundles\" />
   </ItemGroup>
 
   <ItemGroup>
