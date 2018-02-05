@@ -145,7 +145,9 @@ namespace SixMan.ChiMa.Application.Food.Dto
 
         public int? FoodMaterialCategoryIndexNo { get; set; }
 
-        public FoodMaterialCategoryDto FoodMaterialCategory { get; set; }
+        //public FoodMaterialCategoryDto FoodMaterialCategory { get; set; }
+
+        public long? FoodMaterialCategoryId { get; set; }
 
     }
 }

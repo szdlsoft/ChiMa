@@ -1,4 +1,9 @@
-﻿$(function () {
+﻿
+var _appService ;
+
+$(function () {
+    _appService = abp.services.app.foodMaterial;
+
     //initDateFormat();
     initQuery();
     initListDataGrid();
@@ -33,7 +38,9 @@ function initDateFormat() {
 }
 
 function initQuery() {
-    $('#foodMaterialCategory').combobox({
+    var fmcComboboxs = [$('#foodMaterialCategory'), $("[name$='foodMaterialCategoryId'")];
+    $.each(fmcComboboxs, (function(){
+       $(this).combobox({
         //url: '/api/services/app/testAction/GetTypeKeys',
         valueField: 'id',
         textField: 'name',
@@ -51,7 +58,8 @@ function initQuery() {
                 });
         },
 
-    });
+      })
+    }));
 
     $('#foodMaterialName').textbox({
         prompt:'食材名称',
@@ -118,6 +126,7 @@ function filterData(data) {
 function initListDataGrid() {
     $('#listGrid').datagrid({
         //url: '/api/services/app/foodMaterial/GetAll',
+        singleSelect: true,
         columns: [[
             { field: 'id', title: 'id', width: 50, align: 'right' },
             { field: 'description', title: '名称', width: 100, align: 'right' },
@@ -171,7 +180,7 @@ function initListDataGrid() {
         },
         loader: function (param, success, error) {
             console.log(param);
-            var _appService = abp.services.app.foodMaterial;
+            //var _appService = abp.services.app.foodMaterial;
             var data = _appService.getAll(param)
                 .done(function (data) {
                     //listGrid.datagrid("loadData", data);
@@ -188,77 +197,67 @@ function initListDataGrid() {
         //},
         toolbar: [
             {
-                iconCls: 'icon-edit',
+                iconCls: 'icon-add',
+                text:'添加',
                 handler: function(){
-                    alert('edit')
+                    create();
+                }
+            },            
+            {
+                iconCls: 'icon-edit',
+                text:'编辑',
+                handler: function(){
+                    edit();
+                }
+            },
+            {
+                iconCls: 'icon-remove',
+                text:'删除',
+                handler: function(){
+                    alert('remove')
                 }
             },
             '-',
             {
-                iconCls: 'icon-help',
+                iconCls: 'icon-reload',
+                text:'刷新',
                 handler: function(){
-                    alert('help')
+                    alert('refresh')
                 }
             }
         ],
     });
-
-   
-
 }
 
-function reloadData() {
-    var _appService = abp.services.app.foodMaterial;
-    var listGrid = $('#listGrid');
-    var pager = listGrid.datagrid("getPager");
-
-    $(pager).pagination({
-        onRefresh: function (pageNumber, pageSize) {
-            alert(pageNumber);
-            alert(pageSize);
-        },
-        onChangePageSize: function () {
-            alert('pagesize changed');
-        },
-        onSelectPage: function (pageNumber, pageSize) {
-            r
-        }  
-    });
-
-    var pagerOptions = pager.data("pagination").options;
-    var params = {};    
-    params.skipCount = pagerOptions.pageNumber;
-    params.maxResultCount = pagerOptions.pageSize;
-    console.log(params);
-
-
-    var data = _appService.getAll(params)
-        .done(function (data) {
-            listGrid.datagrid("loadData", data);
-        });
+function create(){
+    $('#dlg').dialog('open').dialog('center').dialog('setTitle','添加食材');
+    $('#fm').form('clear');
 }
 
-var url;
+function edit(){
+    var row = $('#listGrid').datagrid('getSelected');
+    if (row){
+         $('#dlg').dialog('open').dialog('center').dialog('setTitle','编辑食材');
+         $('#fm').form('load',row);
+    }
+}
 
-function saveAction() {
-    $('#fm').form('submit', {
-        url: url,
-        onSubmit: function () {
-            return $(this).form('validate');
-        },
-        success: function (result) {
-            var result = eval('(' + result + ')');
-            if (result.success) {
-                $('#dlg').dialog('close');		// close the dialog
-                $('#listGrid').datagrid('reload');	// reload the user data
-            } else {
-                $.messager.show({
-                    title: 'Error',
-                    msg: result.error.message
-                });
-            }
+function save() {
+    var _$form = $('form[name=editForm]');
+
+    if (!_$form.valid()) {
+            return;
         }
+
+    var entity = _$form.serializeFormToObject(); //serializeFormToObject is defined in main.js
+    abp.ui.setBusy(_$form);
+    _appService.creatOrUpdate(entity).done(function () {
+        $('#dlg').dialog('close');      // close the dialog
+        $('#listGrid').datagrid('reload');  // reload the user data
+    }).always(function () {
+        abp.ui.clearBusy(_$form);
     });
+
 }
 
 function initForm() {

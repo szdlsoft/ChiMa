@@ -69,6 +69,7 @@ namespace SixMan.ChiMa.Application.Food
             var dto = base.MapToEntityDto(entity);
             dto.FoodMaterialCategoryName = entity.FoodMaterialCategory?.Name;
             dto.FoodMaterialCategoryIndexNo = entity.FoodMaterialCategory?.IndexNo;
+            dto.FoodMaterialCategoryId = entity.FoodMaterialCategory?.Id;
             //dto.Photo = dto.Photo ?? $"FoodMaterial/{entity.Id}.jpg";
 
             return dto;
@@ -130,6 +131,16 @@ namespace SixMan.ChiMa.Application.Food
             return category;
         }
 
-       
+        public void CreatOrUpdate(FoodMaterialDto input)
+        {
+            if( input.Id == 0)
+            {
+                Create(input);
+            }
+            else
+            {
+                Update(input);    
+            }
+        }
     }
 }

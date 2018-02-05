@@ -22,5 +22,6 @@ namespace SixMan.ChiMa.Application.Food
         //    void DeleteList(DeletListDto list);
         //int Import(List<Dictionary<string, string>> importData);
         //Task<PagedResultDto<FoodMaterialDto>> GetList(FoodMateialPagedResultRequestDto input);
+        void CreatOrUpdate(FoodMaterialDto input);
     }
 }
