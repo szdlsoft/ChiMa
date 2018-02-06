@@ -278,3 +278,28 @@ function initForm() {
         }
     });
 }
+
+function uploadImg() {
+    var formData = new FormData();
+    formData.append('id', operate.EntityModel.id());
+    formData.append('imgfile', $("#imgfile")[0].files[0]);
+    $.ajax({
+        type: "POST",
+        url: '/' + domainCrud.urlPath + '/UploadImg',
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (res) {
+            if (res.success) {
+                operate.EntityModel.photo(res.result);
+                abp.notify.success('上传文件成功：', res.result);
+            }
+            else {
+                abp.message.error('上传文件出现错误:', res.error.message);
+            }
+        },
+        error: function () {
+            alert("上传文件出现错误！");
+        }
+    });
+}
