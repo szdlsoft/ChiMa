@@ -32,19 +32,29 @@
             <div style="margin-bottom:10px">
                 <input name="foodMaterialCategoryId" id="foodMaterialCategory"   label="类别:" style="width:100%">
             </div>
-            <div class="form-group" id="div_Photo">
-                <input  name="photo"  id="photo" readonly="readonly"  class="easyui-textbox"  label="名称:"  style="width:100%"/>
-                <input  id="imgfile" class="easyui-filebox" data-options="buttonText:'选择文件',accept:'image/*.img'"  style="width:80%">
-                <button id="btn_upload_img" type="button" class="btn btn-default" onClick="uploadImg2();">
-                    <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>上传
-                </button>
-            </div>
+            
         </form>
     </div>
     <div id="dlg-buttons">
         <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="save()" style="width:90px">Save</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
     </div>
+
+<div id="dlgUploadImg" class="easyui-dialog" style="width:500px"
+     closed="true" buttons="#dlg-buttons">
+    <form id="fmUploadImg" method="post" name="editFormUploadImg" style="margin:0;padding:20px 50px">        
+        <div class="form-group" id="div_Photo">
+            <input name="photo" id="photo" readonly="readonly" class="easyui-textbox" label="名称:" style="width:100%" />
+            <input id="imgfile" class="easyui-filebox" data-options="buttonText:'选择文件',accept:'image/*.img'" style="width:80%">
+            <button id="btn_upload_img" type="button" class="btn btn-default" onClick="uploadImg2();">
+                <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>上传
+            </button>
+        </div>
+    </form>
+</div>
+<div id="dlg-buttons">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlgUploadImg').dialog('close')" style="width:90px">Cancel</a>
+</div>
 
 @section scripts
  {
@@ -144,6 +154,8 @@
                      { field: 'description', title: '名称', width: 100, align: 'right' },
                      { field: 'foodMaterialCategoryName', title: '类别', width: 100, align: 'right' },
                      { field: 'foodMaterialCategoryIndexNo', title: '类别索引号', width: 100, align: 'right' },
+                     { field: 'photo', title: '图片', width: 100, align: 'right', formatter: showImg },
+                     { field: 'photo', title: '操作', width: 100, align: 'right', formatter: uploadPopup },
                  ]],
                  loadFilter: function (data) {
                      console.log(data);
@@ -185,6 +197,9 @@
                              success(data);
                          });
                  },
+                 onLoadSuccess: function (data) {
+                     $("a[name='opera']").linkbutton({ text: '上传图片', plain: true, iconCls: 'icon-upload' });
+                 },  
 
                  //onClickRow: function (index, row) {
                  //    if (row) {
@@ -284,18 +299,22 @@
                  return;
              }
              var formData = new FormData();
-             var filePath = 'FoodMaterial' + '/' + $('#description').val() + '.jpg';
+             //var filePath = 'FoodMaterial' + '/' + $('#description').val() + '.jpg';
+             var filePath =  $('#photo').val() ;
              formData.append('photoFilePath', filePath);
              formData.append('imgfile', file);
              $.ajax({
                  type: "POST",
-                 url: '/Image'  + '/Upload',
+                 url: '/Image/Upload',
                  contentType: false,
                  processData: false,
                  data: formData,
                  success: function (res) {
                      if (res.success) {
                          abp.notify.success('上传文件成功：', res.result);
+
+                         $('#dlgUploadImg').dialog('close');
+                         $('#listGrid').datagrid('reload');
                      }
                      else {
                          abp.message.error('上传文件出现错误:', res.error.message);
@@ -305,6 +324,29 @@
                      alert("上传文件出现错误！");
                  }
              });
+         }
+
+         function showImg(value, row, index) {
+             if ( row.hasImage  &&  value) {
+                 return "<img style='width:24px;height:24px;' border='1' src='" + value + "'/>";
+             }
+             else {
+                 return "";
+             }
+         }  
+
+         function uploadPopup(value, row, index) {
+             var str = '<a href="#" name="opera" class="easyui-linkbutton" onclick="showUploadImgDialog(' + value + ')"></a>';
+             return str;  
+         } 
+
+         function showUploadImgDialog(photo) {
+             if (row) {
+                 $('#dlgUploadImg').dialog('open').dialog('center').dialog('setTitle', '上传图片');
+                 $('#fmUploadImg').form('load', { 'photo': photo});
+             }
+
+
          }
 
      </script>
