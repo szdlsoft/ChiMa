@@ -19,7 +19,7 @@
  * 1.0.4.06  Add 食材列表 工具栏、查询
  * 1.0.4.07  Add 食材  新增、编辑 如果选择了Catetegory还有bug要处理
  * 1.0.4.08 2018-02-06  食材图像上传，路径和条件要处理
- * 
+ * 1.0.4.09 2018-02-08  食材搞定
  * 
  * 
  * 
@@ -40,7 +40,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.0.4.08";
+        public const string Version = "1.0.4.09";
 
         /// <summary>
         /// Gets release (last build) date of the application.
