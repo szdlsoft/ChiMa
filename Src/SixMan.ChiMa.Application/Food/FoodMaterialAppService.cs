@@ -14,6 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using Abp.Domain.Uow;
 using Abp.Authorization;
 using Abp.Runtime.Validation;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace SixMan.ChiMa.Application.Food
 {
@@ -23,6 +25,7 @@ namespace SixMan.ChiMa.Application.Food
        , IFoodMaterialAppService
 
     {
+
         private IRepository<FoodMaterialCategory, long> _categoryRepository;
         public FoodMaterialAppService(IRepository<FoodMaterial, long> repository
                                     , IRepository<FoodMaterialCategory, long> categoryRepository) 
@@ -70,7 +73,9 @@ namespace SixMan.ChiMa.Application.Food
             dto.FoodMaterialCategoryName = entity.FoodMaterialCategory?.Name;
             dto.FoodMaterialCategoryIndexNo = entity.FoodMaterialCategory?.IndexNo;
             dto.FoodMaterialCategoryId = entity.FoodMaterialCategory?.Id;
-            //dto.Photo = dto.Photo ?? $"FoodMaterial/{entity.Id}.jpg";
+            dto.Photo = dto.Photo ?? $"images/FoodMaterial/{entity.Description}.jpg";
+
+            dto.HasImage = FileExist( dto.Photo);
 
             return dto;
         }

@@ -149,5 +149,7 @@ namespace SixMan.ChiMa.Application.Food.Dto
 
         public long? FoodMaterialCategoryId { get; set; }
 
+        public bool HasImage { get; set; }
+
     }
 }

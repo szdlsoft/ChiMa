@@ -123,7 +123,7 @@
 
              $('#foodMaterialName').textbox({
                  prompt: '食材名称',
-             });            
+             });
 
              $('#query').click(function () {
                  $('#listGrid').datagrid('reload');
@@ -154,8 +154,11 @@
                      { field: 'description', title: '名称', width: 100, align: 'right' },
                      { field: 'foodMaterialCategoryName', title: '类别', width: 100, align: 'right' },
                      { field: 'foodMaterialCategoryIndexNo', title: '类别索引号', width: 100, align: 'right' },
-                     { field: 'photo', title: '图片', width: 100, align: 'right', formatter: showImg },
-                     { field: 'photo', title: '操作', width: 100, align: 'right', formatter: uploadPopup },
+                     { field: 'photo2', title: '图片', width: 100, align: 'right', formatter: showImg },
+                     {
+                         field: 'photo', title: '操作', width: 100, align: 'right'
+                         , formatter: uploadPopup
+                     },
                  ]],
                  loadFilter: function (data) {
                      console.log(data);
@@ -199,7 +202,7 @@
                  },
                  onLoadSuccess: function (data) {
                      $("a[name='opera']").linkbutton({ text: '上传图片', plain: true, iconCls: 'icon-upload' });
-                 },  
+                 },
 
                  //onClickRow: function (index, row) {
                  //    if (row) {
@@ -327,21 +330,23 @@
          }
 
          function showImg(value, row, index) {
-             if ( row.hasImage  &&  value) {
-                 return "<img style='width:24px;height:24px;' border='1' src='" + value + "'/>";
+             var str = "";
+             if ( row.hasImage  &&  row.photo) {
+                 str = "<img style='width:24px;height:24px;' border='1' src='" + row.photo + "'/>";
              }
-             else {
-                 return "";
-             }
-         }  
+
+             return str;
+         }
 
          function uploadPopup(value, row, index) {
-             var str = '<a href="#" name="opera" class="easyui-linkbutton" onclick="showUploadImgDialog(' + value + ')"></a>';
-             return str;  
-         } 
+             var str = '<a href="#" name="opera" class="easyui-linkbutton" onclick="showUploadImgDialog(\'' + value + '\')"></a>';
+             //var str = "<a href='#' name='opera' class='easyui-linkbutton' onclick='showUploadImgDialog('" + value + "');'></a>";
+             //var str = "<input type='button' value='click'>" ;
+             return str;
+         }
 
          function showUploadImgDialog(photo) {
-             if (row) {
+             if (photo) {
                  $('#dlgUploadImg').dialog('open').dialog('center').dialog('setTitle', '上传图片');
                  $('#fmUploadImg').form('load', { 'photo': photo});
              }

@@ -14,6 +14,8 @@ using System.Linq.Dynamic.Core;
 using SixMan.ChiMa.Application.Interface;
 using Abp.Domain.Uow;
 using Abp.BackgroundJobs;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace SixMan.ChiMa.Application.Base
 {
@@ -206,6 +208,8 @@ namespace SixMan.ChiMa.Application.Base
         where TUpdateInput : IEntityDto<long>
 
     {
+        public IHostingEnvironment _hostingEnvironment { get; set; }
+
         public AdvancedAsyncCrudAppServiceBase(IRepository<TEntity, long> repository) : base(repository)
         {
         }
@@ -308,6 +312,11 @@ namespace SixMan.ChiMa.Application.Base
         {
             importTaskInfo.Cancel = true;
             return importTaskInfo;
+        }
+
+        protected bool FileExist(string relativePath)
+        {
+            return File.Exists(Path.Combine(_hostingEnvironment.WebRootPath, relativePath.ToAntiSlash()));
         }
     }
 

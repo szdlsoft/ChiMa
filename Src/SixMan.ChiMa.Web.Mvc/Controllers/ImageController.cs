@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Abp.AspNetCore.Mvc.Controllers;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using SixMan.ChiMa.Domain.Extensions;
 
 namespace SixMan.ChiMa.Web.Mvc.Controllers
 {
@@ -23,13 +24,20 @@ namespace SixMan.ChiMa.Web.Mvc.Controllers
             //string photo = Request.Form["photo"];
             //IFormFile imgfile = Request.Form.Files[0];
             string sWebRootFolder = _hostingEnvironment.WebRootPath;
-            string sImgRootFolder = Path.Combine(sWebRootFolder, "Images");
-
-            FileInfo file = new FileInfo(Path.Combine(sImgRootFolder, photoFilePath));
-            using (FileStream fs = new FileStream(file.ToString(), FileMode.Create))
+            //string sImgRootFolder = Path.Combine(sWebRootFolder, "Images");
+            string phsicalPath = Path.Combine(sWebRootFolder, photoFilePath.ToAntiSlash());
+            //FileInfo file = new FileInfo(Path.Combine(sWebRootFolder, photoFilePath));
+            try
             {
-                imgfile.CopyTo(fs);
-                fs.Flush();
+                using (FileStream fs = new FileStream(phsicalPath, FileMode.Create))
+                {
+                    imgfile.CopyTo(fs);
+                    fs.Flush();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
             }
             return Json(photoFilePath);
         }

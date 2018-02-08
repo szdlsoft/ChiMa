@@ -46,5 +46,14 @@ namespace SixMan.ChiMa.Domain.Extensions
                 return name.ToCamelCase();
             }
         }
+        /// <summary>
+        /// '/' 变 '\\'
+        /// </summary>
+        /// <param name="slashName"></param>
+        /// <returns></returns>
+        public static string ToAntiSlash(this string slashName)
+        {
+            return slashName.Replace('/', '\\');
+        }
     }
 }
