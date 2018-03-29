@@ -60,7 +60,7 @@ namespace SixMan.ChiMa.Tests.Food
 
             });
 
-            var foodMaterial = _foodMaterialAppService.GetAll(new SortSearchPagedResultRequestDto { MaxResultCount = 20, SkipCount = 0 })
+            var foodMaterial = _foodMaterialAppService.GetAll(new FoodMateialPagedResultRequestDto { MaxResultCount = 20, SkipCount = 0 })
                 .Result.Items[0];
 
 
