@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Doc", "1 Doc", "{3F143782-E980-4B0C-B65E-3F1057DE916C}"
 	ProjectSection(SolutionItems) = preProject
@@ -133,6 +133,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MigrationBackup", "Migratio
 		Doc\吃嘛数据库设计\MigrationBackup\ChiMaDbContextModelSnapshot.cs = Doc\吃嘛数据库设计\MigrationBackup\ChiMaDbContextModelSnapshot.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixMan.ChiMa.Crawler", "Src\SixMan.ChiMa.Crawler\SixMan.ChiMa.Crawler.csproj", "{7C3E9AEE-2653-40A7-AFB9-66F8129D29CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -175,6 +177,10 @@ Global
 		{D3E91C43-9F93-4A47-9C57-8A086608CB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3E91C43-9F93-4A47-9C57-8A086608CB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3E91C43-9F93-4A47-9C57-8A086608CB62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3E9AEE-2653-40A7-AFB9-66F8129D29CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3E9AEE-2653-40A7-AFB9-66F8129D29CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3E9AEE-2653-40A7-AFB9-66F8129D29CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3E9AEE-2653-40A7-AFB9-66F8129D29CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -194,6 +200,7 @@ Global
 		{2CF5950F-48E7-4483-B123-6100B02E2D49} = {249065D3-B69F-44EC-BF8F-A0720FC1CA08}
 		{D3E91C43-9F93-4A47-9C57-8A086608CB62} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
 		{38E3FD36-2ED0-4137-B2AD-20187EBE9002} = {54BD3356-6026-46E4-A74C-8608F05E2D96}
+		{7C3E9AEE-2653-40A7-AFB9-66F8129D29CB} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E10C072C-15D7-4DD0-805A-0CD7E471545F}
