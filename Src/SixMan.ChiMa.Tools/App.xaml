@@ -1,0 +1,9 @@
+﻿<Application x:Class="SixMan.ChiMa.Tools.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SixMan.ChiMa.Tools"
+             StartupUri="Page1.xaml">
+    <Application.Resources>
+        
+    </Application.Resources>
+</Application>

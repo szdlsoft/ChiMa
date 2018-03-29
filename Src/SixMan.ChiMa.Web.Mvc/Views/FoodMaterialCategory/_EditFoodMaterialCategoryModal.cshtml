@@ -1,0 +1,83 @@
+﻿@using SixMan.ChiMa.Web.Models.Common.Modals
+@model SixMan.ChiMa.Web.Models.FoodMaterialCategory.EditFoodMaterialCategoryModalViewModel
+@{
+    Layout = null;
+}
+@Html.Partial("~/Views/Shared/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(L("EditFoodMaterialCategory")))
+
+<div class="modal-body">
+    <form name="FoodMaterialCategoryEditForm" role="form" novalidate class="form-validation">
+        <input type="hidden" name="Id" value="@Model.Category.Id" />       
+            <div role="tabpanel" class="tab-pane animated fadeIn active" id="edit-user-details">               
+                <div class="row clearfix">
+                    <div class="col-sm-6">
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input id="name" type="text" name="Name" value="@Model.Category.Name" required maxlength="32" class="validate form-control">
+                                <label for="name" class="form-label">@L("Name")</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input id="surname" type="text" name="Code" value="@Model.Category.Code" required maxlength="32" class="validate form-control">
+                                <label for="surname" class="form-label">@L("Code")</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>            
+
+    </form>
+</div>
+
+@Html.Partial("~/Views/Shared/Modals/_ModalFooterWithSaveAndCancel.cshtml")
+
+@*<script src="~/view-resources/Views/FoodMateriaCategory/_EditFoodMaterialCategoryModal.js" asp-append-version="true"></script>*@
+<script>
+    (function ($) {
+
+        var _FoodMaterialCategoryService = abp.services.app.foodMaterialCategory;
+        var _$modal = $('#categoryEditModal');
+        var _$form = $('form[name=FoodMaterialCategoryEditForm]');
+
+        function save() {
+
+            if (!_$form.valid()) {
+                return;
+            }
+
+            var FoodMaterialCategory = _$form.serializeFormToObject(); //serializeFormToObject is defined in main.js
+
+
+            abp.ui.setBusy(_$form);
+            _FoodMaterialCategoryService.update(FoodMaterialCategory).done(function () {
+                _$modal.modal('hide');
+                location.reload(true); //reload page to see edited FoodMaterialCategory!
+            }).always(function () {
+                abp.ui.clearBusy(_$modal);
+            });
+        }
+
+        //Handle save button click
+        _$form.closest('div.modal-content').find(".save-button").click(function (e) {
+            e.preventDefault();
+            save();
+        });
+
+        //Handle enter key
+        _$form.find('input').on('keypress', function (e) {
+            if (e.which === 13) {
+                e.preventDefault();
+                save();
+            }
+        });
+
+        $.AdminBSB.input.activate(_$form);
+
+        _$modal.on('shown.bs.modal', function () {
+            _$form.find('input[type=text]:first').focus();
+        });
+    })(jQuery);
+</script>
