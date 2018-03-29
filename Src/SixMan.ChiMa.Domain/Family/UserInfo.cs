@@ -34,7 +34,7 @@ namespace SixMan.ChiMa.Domain.Family
         //职业
         public Career Career { get; set; }
         //家乡
-        public City City { get; set; }
+        public Area Area { get; set; }
         //个性签名
         [MaxLength(DescriptionBase.MaxDescriptionLength)]
         public string Signature { get; set; }

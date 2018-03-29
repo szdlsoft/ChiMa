@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using Microsoft.EntityFrameworkCore.ValueGeneration;
+using SixMan.ChiMa.Domain.Common;
 using SixMan.ChiMa.Domain.Dish;
 using SixMan.ChiMa.Domain.Family;
 using SixMan.ChiMa.EFCore;
@@ -840,6 +841,34 @@ namespace SixMan.ChiMa.EFCore.Migrations
                     b.ToTable("AbpUsers");
                 });
 
+            modelBuilder.Entity("SixMan.ChiMa.Domain.Common.Area", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<double>("LATITUDE");
+
+                    b.Property<byte>("LEVEL");
+
+                    b.Property<double>("LONGITUDE");
+
+                    b.Property<string>("Name");
+
+                    b.Property<int?>("Parent_Id");
+
+                    b.Property<string>("SHORT_NAME");
+
+                    b.Property<int>("SORT");
+
+                    b.Property<bool>("STATUS");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Parent_Id");
+
+                    b.ToTable("Area");
+                });
+
             modelBuilder.Entity("SixMan.ChiMa.Domain.Common.Career", b =>
                 {
                     b.Property<long>("Id")
@@ -871,43 +900,6 @@ namespace SixMan.ChiMa.EFCore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Career");
-                });
-
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Common.City", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Code")
-                        .HasMaxLength(50);
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<long?>("DeleterUserId");
-
-                    b.Property<DateTime?>("DeletionTime");
-
-                    b.Property<string>("ExtensionData");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
-                    b.Property<long?>("ParentId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ParentId");
-
-                    b.ToTable("City");
                 });
 
             modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.Cookery", b =>
@@ -1425,11 +1417,11 @@ namespace SixMan.ChiMa.EFCore.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int?>("AreaId");
+
                     b.Property<DateTime?>("BirthDay");
 
                     b.Property<long?>("CareerId");
-
-                    b.Property<long?>("CityId");
 
                     b.Property<DateTime>("CreationTime");
 
@@ -1471,9 +1463,9 @@ namespace SixMan.ChiMa.EFCore.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CareerId");
+                    b.HasIndex("AreaId");
 
-                    b.HasIndex("CityId");
+                    b.HasIndex("CareerId");
 
                     b.HasIndex("FamilyId");
 
@@ -2001,11 +1993,11 @@ namespace SixMan.ChiMa.EFCore.Migrations
                         .HasForeignKey("LastModifierUserId");
                 });
 
-            modelBuilder.Entity("SixMan.ChiMa.Domain.Common.City", b =>
+            modelBuilder.Entity("SixMan.ChiMa.Domain.Common.Area", b =>
                 {
-                    b.HasOne("SixMan.ChiMa.Domain.Common.City", "Parent")
+                    b.HasOne("SixMan.ChiMa.Domain.Common.Area", "Parent")
                         .WithMany()
-                        .HasForeignKey("ParentId");
+                        .HasForeignKey("Parent_Id");
                 });
 
             modelBuilder.Entity("SixMan.ChiMa.Domain.Dish.Cookery", b =>
@@ -2166,13 +2158,13 @@ namespace SixMan.ChiMa.EFCore.Migrations
 
             modelBuilder.Entity("SixMan.ChiMa.Domain.Family.UserInfo", b =>
                 {
+                    b.HasOne("SixMan.ChiMa.Domain.Common.Area", "Area")
+                        .WithMany()
+                        .HasForeignKey("AreaId");
+
                     b.HasOne("SixMan.ChiMa.Domain.Common.Career", "Career")
                         .WithMany()
                         .HasForeignKey("CareerId");
-
-                    b.HasOne("SixMan.ChiMa.Domain.Common.City", "City")
-                        .WithMany()
-                        .HasForeignKey("CityId");
 
                     b.HasOne("SixMan.ChiMa.Domain.Family.Family", "Family")
                         .WithMany("UserInfos")
