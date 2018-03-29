@@ -10,3 +10,39 @@ DEBUG 2018-03-29 14:47:07,606 [1    ] Abp.Modules.AbpModuleManager             -
 DEBUG 2018-03-29 14:47:07,608 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2018-03-29 14:47:07,609 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2018-03-29 14:47:07,609 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-03-29 14:58:54,950 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-29 14:58:54,978 [1    ] Abp.Modules.AbpModuleManager             - Found 2 ABP modules in total.
+DEBUG 2018-03-29 14:58:54,984 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 14:58:54,989 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 14:58:54,993 [1    ] Abp.Modules.AbpModuleManager             - 2 modules loaded.
+DEBUG 2018-03-29 14:58:55,180 [1    ] Abp.Localization.LocalizationManager     - Initializing 1 localization sources.
+DEBUG 2018-03-29 14:58:55,261 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-29 14:58:55,493 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 14:58:55,495 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-03-29 14:58:55,497 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 14:58:55,498 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 14:58:55,498 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-03-29 15:20:53,077 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-29 15:20:53,112 [1    ] Abp.Modules.AbpModuleManager             - Found 2 ABP modules in total.
+DEBUG 2018-03-29 15:20:53,122 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 15:20:53,129 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 15:20:53,133 [1    ] Abp.Modules.AbpModuleManager             - 2 modules loaded.
+DEBUG 2018-03-29 15:20:53,359 [1    ] Abp.Localization.LocalizationManager     - Initializing 1 localization sources.
+DEBUG 2018-03-29 15:20:53,454 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-29 15:20:53,757 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 15:20:53,760 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-03-29 15:20:53,762 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 15:20:53,764 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 15:20:53,764 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-03-29 15:23:46,071 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-29 15:23:46,102 [1    ] Abp.Modules.AbpModuleManager             - Found 2 ABP modules in total.
+DEBUG 2018-03-29 15:23:46,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 15:23:46,116 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-29 15:23:46,122 [1    ] Abp.Modules.AbpModuleManager             - 2 modules loaded.
+DEBUG 2018-03-29 15:23:46,338 [1    ] Abp.Localization.LocalizationManager     - Initializing 1 localization sources.
+DEBUG 2018-03-29 15:23:46,424 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-29 15:23:46,709 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 15:23:46,711 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-03-29 15:23:46,714 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 15:23:46,716 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-29 15:23:46,716 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
