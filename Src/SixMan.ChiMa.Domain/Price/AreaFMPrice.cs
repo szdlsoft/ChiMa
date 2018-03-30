@@ -20,5 +20,7 @@ namespace SixMan.ChiMa.Domain.Price
         /// 发布信息时间
         /// </summary>
         public DateTime PublishTime { get; set; }
+
+        public ICollection<FMPriceItem> FMPriceItems { get; set; }
     }
 }

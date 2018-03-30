@@ -1,6 +1,7 @@
 ﻿using Abp.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -54,6 +55,30 @@ namespace SixMan.ChiMa.Domain.Extensions
         public static string ToAntiSlash(this string slashName)
         {
             return slashName.Replace('/', '\\');
+        }
+        /// <summary>
+        /// 取括号中得内容
+        /// 例如：  苏州市部分农贸市场零售均价（2018年03月29日） 得到：2018年03月29日
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static string BracketsSub(this string str)
+        {
+            var start = str.IndexOfAny(new char[] { '(', '（' });
+            var length = str.IndexOfAny(new char[] { ')', '）' }, start);
+
+            return str.Substring(start + 1, length );
+        }
+
+        /// <summary>
+        /// 解析2018年03月29日
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static DateTime ToDate(this string str)
+        {
+            return DateTime.ParseExact(str, "yyyy年MM月DD日", CultureInfo.InvariantCulture);
         }
     }
 }

@@ -5,11 +5,14 @@ using AngleSharp.Dom.Html;
 using AngleSharp.Parser.Html;
 using HttpCode.Core;
 using Quartz;
+using SixMan.ChiMa.Domain.Price;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using SixMan.ChiMa.Domain.Extensions;
 
 namespace SixMan.ChiMa.Crawler.CrawlerTasks
 {
@@ -17,10 +20,14 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
     /// 苏州菜价爬虫
     /// </summary>
     public class SZFMPriceCrawler
-        : JobBase
+        : CrawlerBase
         , ICrawlerTask
     {
         public Type TaskType => typeof(SZFMPriceCrawler);
+
+        protected string Area => "苏州市";
+
+
 
         public void ConfigureJob(JobBuilder job)
         {
@@ -45,28 +52,45 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             HttpItems items = new HttpItems();
             //首页
             items.Url = "http://mssz.cn/newweb/index.jsp";//请求地址
-            items.Method = "Get";//请求方式 post
+            items.Method = "Get";//请求方式 
             HttpResults hr = await httpHelpers.GetHtmlAsync(items);
             //Console.WriteLine(hr.Html);
             var parser = new HtmlParser();
             var document = await parser.ParseAsync(hr.Html);
 
-            //价格页
-            string priceUri = GetPriceUri(document);
-            items.Url = priceUri;//请求地址
-            hr = httpHelpers.GetHtml(items);
+            DateTime publishTime = GetPublisTime(document);
+            if( publishTime <= priceManager.GetLatest(Area))
+            {
+                return;
+            }
 
-            document = parser.Parse(hr.Html);
-            ShowPrice(document);
+            //价格页
+            items.Url = GetPriceUri(document);
+            hr = await httpHelpers.GetHtmlAsync(items);
+
+            document = await parser.ParseAsync(hr.Html);
+            //ShowPrice(document);
+            IEnumerable<FMPriceItem> prices = GetPrices(document);
+            priceManager.Save(Area, publishTime, prices);
         }
 
+        private DateTime GetPublisTime(IHtmlDocument htmlDocument)
+        {
+            string dateStr = htmlDocument.All.Where(m => m.LocalName == "a"
+                                                             && m.TextContent.Contains("苏州市部分农贸市场零售均价"))
+                                                     .FirstOrDefault()?.TextContent.BracketsSub();
+
+            Log("publish time: ", dateStr);
+
+            return dateStr.ToDate();
+        }
 
         private  void Log(string title, string msg = null)
         {
             Logger.Info($"{title}:{msg}");
         }
 
-        private  void ShowPrice(IHtmlDocument doc)
+        private IEnumerable<FMPriceItem> GetPrices(IHtmlDocument doc)
         {
             //var table = doc.All.Where( m => m.LocalName == "table"
             //                             && m.TextContent.Contains("苏州市部分农贸市场零售均价")
@@ -82,6 +106,16 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                 do
                 {
                     sb.Append(node.TextContent + " ");
+                    var ss = node.TextContent.Split(' ', ' ');
+                    if( ss.Length > 1)
+                    {
+                        yield return new FMPriceItem()
+                        {
+                            Name = ss[0],
+                            Price = double.Parse(ss[1])
+                        };
+                    }
+
                     node = node.NextElementSibling;
                 }
                 while (node != null);

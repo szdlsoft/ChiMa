@@ -726,3 +726,122 @@ DEBUG 2018-03-30 14:19:52,743 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    -
 DEBUG 2018-03-30 14:19:52,743 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - No executing jobs remaining, all threads stopped.
 DEBUG 2018-03-30 14:19:52,743 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutdown of threadpool complete.
 INFO  2018-03-30 14:19:52,752 [5    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete.
+DEBUG 2018-03-30 15:56:47,130 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-30 15:56:47,797 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2018-03-30 15:56:48,741 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,749 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,750 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,751 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,752 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,753 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,753 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,756 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,757 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,758 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,758 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:56:48,765 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+INFO  2018-03-30 15:56:49,999 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-03-30 15:56:50,209 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-03-30 15:56:50,340 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-03-30 15:56:50,392 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-03-30 15:56:50,396 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-03-30 15:56:50,425 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-03-30 15:56:50,426 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-03-30 15:56:50,426 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-03-30 15:56:50,429 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-03-30 15:56:51,546 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-30 15:58:28,973 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+FATAL 2018-03-30 15:58:29,209 [1    ] Abp.AbpBootstrapper                      - System.IO.FileNotFoundException: Could not load file or assembly 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeType type, RuntimeType caType, Boolean inherit)
+   at Abp.Modules.AbpModule.FindDependedModuleTypes(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 106
+   at Abp.Modules.AbpModule.AddModuleAndDependenciesRecursively(List`1 modules, Type module) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 143
+   at Abp.Modules.AbpModule.FindDependedModuleTypesRecursivelyIncludingGivenModule(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 124
+   at Abp.Modules.AbpModuleManager.FindAllModuleTypes(List`1& plugInModuleTypes) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 86
+   at Abp.Modules.AbpModuleManager.LoadAllModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 67
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+
+
+System.IO.FileNotFoundException: Could not load file or assembly 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeType type, RuntimeType caType, Boolean inherit)
+   at Abp.Modules.AbpModule.FindDependedModuleTypes(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 106
+   at Abp.Modules.AbpModule.AddModuleAndDependenciesRecursively(List`1 modules, Type module) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 143
+   at Abp.Modules.AbpModule.FindDependedModuleTypesRecursivelyIncludingGivenModule(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 124
+   at Abp.Modules.AbpModuleManager.FindAllModuleTypes(List`1& plugInModuleTypes) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 86
+   at Abp.Modules.AbpModuleManager.LoadAllModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 67
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+
+
+DEBUG 2018-03-30 16:01:31,340 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+FATAL 2018-03-30 16:01:31,697 [1    ] Abp.AbpBootstrapper                      - System.IO.FileNotFoundException: Could not load file or assembly 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeType type, RuntimeType caType, Boolean inherit)
+   at Abp.Modules.AbpModule.FindDependedModuleTypes(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 106
+   at Abp.Modules.AbpModule.AddModuleAndDependenciesRecursively(List`1 modules, Type module) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 143
+   at Abp.Modules.AbpModule.FindDependedModuleTypesRecursivelyIncludingGivenModule(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 124
+   at Abp.Modules.AbpModuleManager.FindAllModuleTypes(List`1& plugInModuleTypes) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 86
+   at Abp.Modules.AbpModuleManager.LoadAllModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 67
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+
+
+System.IO.FileNotFoundException: Could not load file or assembly 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeType type, RuntimeType caType, Boolean inherit)
+   at Abp.Modules.AbpModule.FindDependedModuleTypes(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 106
+   at Abp.Modules.AbpModule.AddModuleAndDependenciesRecursively(List`1 modules, Type module) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 143
+   at Abp.Modules.AbpModule.FindDependedModuleTypesRecursivelyIncludingGivenModule(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 124
+   at Abp.Modules.AbpModuleManager.FindAllModuleTypes(List`1& plugInModuleTypes) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 86
+   at Abp.Modules.AbpModuleManager.LoadAllModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 67
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+
+
+DEBUG 2018-03-30 16:08:03,089 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+FATAL 2018-03-30 16:08:03,205 [1    ] Abp.AbpBootstrapper                      - System.IO.FileNotFoundException: Could not load file or assembly 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeType type, RuntimeType caType, Boolean inherit)
+   at Abp.Modules.AbpModule.FindDependedModuleTypes(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 106
+   at Abp.Modules.AbpModule.AddModuleAndDependenciesRecursively(List`1 modules, Type module) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 143
+   at Abp.Modules.AbpModule.FindDependedModuleTypesRecursivelyIncludingGivenModule(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 124
+   at Abp.Modules.AbpModuleManager.FindAllModuleTypes(List`1& plugInModuleTypes) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 86
+   at Abp.Modules.AbpModuleManager.LoadAllModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 67
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+
+
+System.IO.FileNotFoundException: Could not load file or assembly 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeType type, RuntimeType caType, Boolean inherit)
+   at Abp.Modules.AbpModule.FindDependedModuleTypes(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 106
+   at Abp.Modules.AbpModule.AddModuleAndDependenciesRecursively(List`1 modules, Type module) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 143
+   at Abp.Modules.AbpModule.FindDependedModuleTypesRecursivelyIncludingGivenModule(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 124
+   at Abp.Modules.AbpModuleManager.FindAllModuleTypes(List`1& plugInModuleTypes) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 86
+   at Abp.Modules.AbpModuleManager.LoadAllModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 67
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+
+

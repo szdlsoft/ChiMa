@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SixMan.ChiMa.Application\SixMan.ChiMa.Application.csproj" />
+    <ProjectReference Include="..\SixMan.ChiMa.DomainService\SixMan.ChiMa.DomainService.csproj" />
     <ProjectReference Include="..\SixMan.ChiMa.Domain\SixMan.ChiMa.Domain.csproj" />
     <ProjectReference Include="..\SixMan.ChiMa.EFCore\SixMan.ChiMa.EFCore.csproj" />
   </ItemGroup>

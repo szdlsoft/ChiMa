@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using SixMan.ChiMa.Application;
 using SixMan.ChiMa.Domain;
 using SixMan.ChiMa.Domain.Configuration;
+using SixMan.ChiMa.DomainService;
 using SixMan.ChiMa.EFCore;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ using System.Text;
 
 namespace SixMan.ChiMa.Crawler
 {
+    [DependsOn(typeof(ChiMaDomainServiceModule))]
     [DependsOn(typeof(ChiMaEFCoreModule))]
     [DependsOn(typeof(ChiMaApplicationModule))]
     [DependsOn(typeof(AbpQuartzModule))]
