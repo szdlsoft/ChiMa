@@ -2,6 +2,7 @@
 using SixMan.ChiMa.Domain.Base;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -16,12 +17,15 @@ namespace SixMan.ChiMa.Domain.Common
         : ChiMaSmallEntityBase
     {
         /// <summary>
-        /// 名称'
+        /// 名称
         /// </summary>
+        [Required]
+        [StringLength(3 * LengthConstants.MaxNameLength)]
         public string Name { get; set; }
         /// <summary>
         /// '简称'
         /// </summary>
+        [StringLength(LengthConstants.MaxNameLength)]
         public string SHORT_NAME { get; set; }
         /// <summary>
         /// '经度'

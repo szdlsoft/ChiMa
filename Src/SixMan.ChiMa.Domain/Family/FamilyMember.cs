@@ -37,17 +37,17 @@ namespace SixMan.ChiMa.Domain.Family
         public Range Age{ get; set; }
 
         //家庭昵称
-        [MaxLength(CategoryBase.MaxNameLength)]
+        [MaxLength(LengthConstants.MaxNameLength)]
         public string NickName { get; set; }
         //身高
         public int Height { get; set; }
         //体重
         public int Weight { get; set; }
         //忌口
-        [MaxLength(DescriptionBase.MaxDescriptionLength)]
+        [MaxLength(LengthConstants.MaxDescriptionLength)]
         public string AvoidFoods { get; set; }
         //慢性病
-        [MaxLength(DescriptionBase.MaxDescriptionLength)]
+        [MaxLength(LengthConstants.MaxDescriptionLength)]
         public string Chronic { get; set; }
         //职业
         public Career Career { get; set; }

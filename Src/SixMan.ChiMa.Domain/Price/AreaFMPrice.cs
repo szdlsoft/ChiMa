@@ -10,7 +10,7 @@ namespace SixMan.ChiMa.Domain.Price
     /// 地区食材报价
     /// </summary>
     public class AreaFMPrice
-         : ChiMaSmallEntityBase
+         : ChiMaLargeEntityBase
     { 
         /// <summary>
         /// 报价地区

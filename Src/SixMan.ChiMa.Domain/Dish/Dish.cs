@@ -65,13 +65,13 @@ namespace SixMan.ChiMa.Domain.Dish
         /// <summary>
         /// 横向图
         /// </summary>
-        [StringLength(MaxUrlLength)]
+        [StringLength(LengthConstants.MaxUrlLength)]
         public string HPhoto { get; set; }
 
         /// <summary>
         /// 大图
         /// </summary>
-        [StringLength(MaxUrlLength)]
+        [StringLength(LengthConstants.MaxUrlLength)]
         public string BPhoto { get; set; }
         /// <summary>
         /// 食材配比

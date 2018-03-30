@@ -19,13 +19,13 @@ namespace SixMan.ChiMa.Domain.Family
         , IHaveFamilyId
     {
         //手机号
-        [MaxLength(CategoryBase.MaxNameLength)]
+        [MaxLength(LengthConstants.MaxNameLength)]
         public string Mobile { get; set; }
         //头像
-        [StringLength(MultiMediaBase.MaxUrlLength)]
+        [StringLength(LengthConstants.MaxUrlLength)]
         public string HeadPortrait { get; set; }
         //昵称
-        [MaxLength(CategoryBase.MaxNameLength)]
+        [MaxLength(LengthConstants.MaxNameLength)]
         public string NickName { get; set; }
         //性别
         public bool? Sex { get; set; }
@@ -36,7 +36,7 @@ namespace SixMan.ChiMa.Domain.Family
         //家乡
         public Area Area { get; set; }
         //个性签名
-        [MaxLength(DescriptionBase.MaxDescriptionLength)]
+        [MaxLength(LengthConstants.MaxDescriptionLength)]
         public string Signature { get; set; }
         //积分
         public int Credits { get; set; }

@@ -1,4 +1,5 @@
 ﻿using Abp.AutoMapper;
+using SixMan.ChiMa.Domain;
 using SixMan.ChiMa.Domain.Base;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace SixMan.ChiMa.Application.Dish
         /// </summary>
         public int? Time { get; set; }
         [Required]
-        [MinLength(MultiMediaContentBase.MaxContentLength)]       
+        [MinLength(LengthConstants.MaxContentLength)]       
         public string Content { get; set; }
     }
 }

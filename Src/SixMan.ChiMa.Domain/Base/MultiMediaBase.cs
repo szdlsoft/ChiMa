@@ -12,13 +12,12 @@ namespace SixMan.ChiMa.Domain.Base
        : DescriptionBase
        , IMultiMedia
     {
-        public const int MaxUrlLength = 512;
 
-        [StringLength(MaxUrlLength)]
+        [StringLength(LengthConstants.MaxUrlLength)]
         public string Photo { get ; set ; }
-        [StringLength(MaxUrlLength)]
+        [StringLength(LengthConstants.MaxUrlLength)]
         public string Audio { get ; set ; }
-        [StringLength(MaxUrlLength)]
+        [StringLength(LengthConstants.MaxUrlLength)]
         public string Video { get ; set ; }
     }
 }

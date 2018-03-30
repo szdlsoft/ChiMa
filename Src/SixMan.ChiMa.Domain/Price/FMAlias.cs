@@ -8,22 +8,19 @@ using System.Text;
 namespace SixMan.ChiMa.Domain.Price
 {
     /// <summary>
-    /// 食材价格
+    /// 食材别名库
+    /// 爬虫得到得价格信息，是食材得名字，导入到系统，需要对照表
     /// </summary>
-    public class FMPriceItem
-        : ChiMaLargeEntityBase
+    public class FMAlias
+        : ChiMaSmallEntityBase
     {
-        public AreaFMPrice AreaFMPrice { get; set; }
         public FoodMaterial FoodMaterial { get; set; }
         /// <summary>
-        /// 单价
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// 单位
+        /// 别名
         /// </summary>
         [Required]
         [StringLength(LengthConstants.MaxNameLength)]
-        public string Unit { get; set; }
+        public string Name { get; set; }
+
     }
 }

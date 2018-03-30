@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
+using SixMan.ChiMa.Domain;
 using SixMan.ChiMa.Domain.Base;
 using SixMan.ChiMa.Domain.Food;
 using System;
@@ -14,9 +15,9 @@ namespace SixMan.ChiMa.Application.Food.Dto
         :  EntityDto<long>
     { 
         [Required]
-        [StringLength(CategoryBase.MaxNameLength)]
+        [StringLength(LengthConstants.MaxNameLength)]
         public string Name { get; set; }
-        [StringLength(CategoryBase.MaxCodeLength)]
+        [StringLength(LengthConstants.MaxCodeLength)]
         public string Code { get; set; }
 
         /// <summary>

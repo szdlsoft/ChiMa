@@ -10,8 +10,7 @@ namespace SixMan.ChiMa.Domain.Base
         : MultiMediaBase
         , IContent
     {
-        public const int MaxContentLength = 4096;
-        [StringLength(MaxUrlLength)]
+        [StringLength(LengthConstants.MaxContentLength)]
         public string Content { get; set; }
     }
 }

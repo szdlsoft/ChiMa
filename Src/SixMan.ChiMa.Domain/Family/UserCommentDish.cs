@@ -19,7 +19,7 @@ namespace SixMan.ChiMa.Domain.Family
         /// <summary>
         /// 评论内容
         /// </summary>
-        [MaxLength(DescriptionBase.MaxDescriptionLength)]
+        [MaxLength(LengthConstants.MaxDescriptionLength)]
         public string Content { get; set; }
         /// <summary>
         /// 点赞

@@ -10,9 +10,8 @@ namespace SixMan.ChiMa.Domain.Base
         : ChiMaEntityBase
         , IDescription
     {
-        public const int MaxDescriptionLength = 256;
         [Required]
-        [StringLength(MaxDescriptionLength)]
+        [StringLength(LengthConstants.MaxDescriptionLength)]
         ///描述
         public string Description { get; set; }
     }

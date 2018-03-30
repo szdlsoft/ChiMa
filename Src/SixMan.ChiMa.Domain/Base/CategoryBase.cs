@@ -11,14 +11,11 @@ namespace SixMan.ChiMa.Domain.Base
         : ChiMaEntityBase
         , ICategory
     {
-        public const int MinNameLength = 50;
-        public const int MaxNameLength = 50;
-        public const int MaxCodeLength = 50;
 
         [Required]
-        [StringLength( MaxNameLength)]
+        [StringLength(LengthConstants.MaxNameLength)]
         public string Name { get; set; }
-        [StringLength(MaxCodeLength)]
+        [StringLength(LengthConstants.MaxCodeLength)]
         public string Code { get; set; }
 
         public CategoryBase()

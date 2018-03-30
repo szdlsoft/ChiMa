@@ -61,4 +61,20 @@ namespace SixMan.ChiMa.Domain.Base
             return null;
         }
     }
+
+    /// <summary>
+    /// 少量固定数据的基类
+    /// </summary>
+    public abstract class ChiMaSmallEntityBase
+        : Entity
+    {
+    }
+
+    /// <summary>
+    /// 海量量固定数据的基类
+    /// </summary>
+    public abstract class ChiMaLargeEntityBase
+        : Entity<long>
+    {
+    }
 }

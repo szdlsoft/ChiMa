@@ -31,7 +31,7 @@ namespace SixMan.ChiMa.Domain.Food
         /// <summary>
         /// 单位
         /// </summary>
-        [StringLength(DescriptionBase.MaxDescriptionLength)]
+        [StringLength(LengthConstants.MaxDescriptionLength)]
         public string Unit { get; set; }
         /// <summary>
         /// 主材？
@@ -41,7 +41,7 @@ namespace SixMan.ChiMa.Domain.Food
         /// <summary>
         /// 存储方式
         /// </summary>
-        [StringLength(DescriptionBase.MaxDescriptionLength)]
+        [StringLength(LengthConstants.MaxDescriptionLength)]
         public string StorageMode { get; set; }
 
         /// <summary>

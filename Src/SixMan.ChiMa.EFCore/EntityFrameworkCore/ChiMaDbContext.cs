@@ -16,6 +16,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
+using SixMan.ChiMa.Domain.Price;
 
 namespace SixMan.ChiMa.EFCore
 {
@@ -48,6 +49,11 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<UserFavoriteDish> UserFavoriteDish { get; set; }
         public virtual DbSet<UserBrowseDish> UserBrowseDish { get; set; }
         public virtual DbSet<UserCommentDish> UserCommentDish { get; set; }
+
+        //价格
+        public virtual DbSet<AreaFMPrice> AreaFMPrice { get; set; }
+        public virtual DbSet<FMPriceItem> FMPriceItem { get; set; }
+        public virtual DbSet<FMAlias> FMAlias { get; set; }
 
         //过滤器设置
         protected virtual long? CurrentFamilyId => GetCurrentFamilyIdOrNull();       
