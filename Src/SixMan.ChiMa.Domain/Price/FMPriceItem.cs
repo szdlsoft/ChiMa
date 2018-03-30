@@ -16,6 +16,11 @@ namespace SixMan.ChiMa.Domain.Price
         public AreaFMPrice AreaFMPrice { get; set; }
         public FoodMaterial FoodMaterial { get; set; }
         /// <summary>
+        /// 地区食材名，需要和FoodMaterial，进行关联！
+        /// </summary>
+        [StringLength(LengthConstants.MaxNameLength)]
+        public string Name { get; set; }
+        /// <summary>
         /// 单价
         /// </summary>
         public double Price { get; set; }

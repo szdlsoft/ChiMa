@@ -14,81 +14,43 @@ namespace SixMan.ChiMa.Crawler
 {
     class Program
     {
+        private static IIocManager iocManager;
         static void Main(string[] args)
         {
             Console.WriteLine("ChiMa Crawler start !");
             using (var bootstrapper = AbpBootstrapper.Create<ChiMaCrawlerModule>())
             {
-                bootstrapper.IocManager.IocContainer
-                    .AddFacility<LoggingFacility>(f => f.UseAbpLog4Net()
-                        .WithConfig("log4net.config")
-                    );
-
-                bootstrapper.Initialize();
-            }
-
-            HttpHelpers httpHelpers = new HttpHelpers();
-            HttpItems items = new HttpItems();
-            //首页
-            items.Url = "http://mssz.cn/newweb/index.jsp";//请求地址
-            items.Method = "Get";//请求方式 post
-            HttpResults hr = httpHelpers.GetHtml(items);
-            //Console.WriteLine(hr.Html);
-            var parser = new HtmlParser();
-            var document = parser.Parse(hr.Html);
-
-            //价格页
-            string priceUri = GetPriceUri(document);
-            items.Url = priceUri;//请求地址
-            hr = httpHelpers.GetHtml(items);
-
-            document = parser.Parse(hr.Html);
-            ShowPrice(document);
-
+                InitAbp(bootstrapper);
+                RunTasks();
+            }          
 
             Console.WriteLine("Press ENTER to exit...");
             Console.ReadKey();
-
         }
 
-        private static void Log(string title, string msg = null)
+        private static void RunTasks()
         {
-            Console.WriteLine($"{title}:{msg}");
-        } 
+            IChiMaQuartzScheduleJobManager taskManager = iocManager.Resolve<IChiMaQuartzScheduleJobManager>();
 
-        private static void ShowPrice(IHtmlDocument doc)
-        {
-            //var table = doc.All.Where( m => m.LocalName == "table"
-            //                             && m.TextContent.Contains("苏州市部分农贸市场零售均价")
-            //                          ).FirstOrDefault();
-            var tds = doc.All.Where(m => m.LocalName == "td"
-                                     && (m.ClassList.Contains("xl65")
-                                        || m.ClassList.Contains("xl66"))
-                                    ).ToList();
-            foreach (var td in tds)
+            var tasks = iocManager.ResolveAll<ICrawlerTask>();
+
+            foreach( var task in tasks)
             {
-                StringBuilder sb = new StringBuilder();
-                IElement node = td;
-                do
-                {
-                    sb.Append(node.TextContent + " ");
-                    node = node.NextElementSibling;
-                }
-                while (node != null);
-
-                Log("Price: ", sb.ToString());
+                taskManager.ScheduleAsync(task);
             }
         }
 
-        private static string GetPriceUri(IHtmlDocument htmlDocument)
+        private static void InitAbp(AbpBootstrapper bootstrapper)
         {
-            string uri = htmlDocument.All.Where(m => m.LocalName == "a"
-                                                  && m.TextContent.Contains("苏州市部分农贸市场零售均价"))
-                                          .FirstOrDefault()?.GetAttribute("href");
+            bootstrapper.IocManager.IocContainer
+                .AddFacility<LoggingFacility>(f => f.UseAbpLog4Net()
+                    .WithConfig("log4net.config")
+                );
 
-            Log("GetPriceUri: ", uri);
+            bootstrapper.Initialize();
+            iocManager = bootstrapper.IocManager;
+        }   
 
-            return uri;
-        }
+
     }
 }

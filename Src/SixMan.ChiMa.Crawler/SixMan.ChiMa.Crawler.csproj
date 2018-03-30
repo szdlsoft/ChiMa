@@ -6,10 +6,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Abp" Version="3.5.0" />
     <PackageReference Include="Abp.Castle.Log4Net" Version="3.5.0" />
+    <PackageReference Include="Abp.Quartz" Version="3.5.0" />
+    <PackageReference Include="Abp.ZeroCore" Version="3.5.0" />
     <PackageReference Include="AngleSharp" Version="0.9.9.2" />
     <PackageReference Include="HttpCode.Core" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SixMan.ChiMa.Application\SixMan.ChiMa.Application.csproj" />
+    <ProjectReference Include="..\SixMan.ChiMa.Domain\SixMan.ChiMa.Domain.csproj" />
+    <ProjectReference Include="..\SixMan.ChiMa.EFCore\SixMan.ChiMa.EFCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
