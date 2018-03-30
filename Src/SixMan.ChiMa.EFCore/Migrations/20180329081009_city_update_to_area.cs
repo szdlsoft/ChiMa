@@ -74,7 +74,7 @@ namespace SixMan.ChiMa.EFCore.Migrations
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
             //导入全国area 数据
-            migrationBuilder.Sql(File.OpenText(@".\Seed\areas.sql").ReadToEnd());
+            //migrationBuilder.Sql(File.OpenText(@".\Seed\areas.sql").ReadToEnd());
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
