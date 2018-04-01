@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using SixMan.ChiMa.Domain.Extensions;
+using Abp.Domain.Uow;
 
 namespace SixMan.ChiMa.Crawler.CrawlerTasks
 {
@@ -46,7 +47,25 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                                 });
         }
 
+        [UnitOfWork]
         public override async Task Execute(IJobExecutionContext context)
+        {
+            try
+            {
+                //var publishTime = priceManager.GetLatest(Area);
+                Console.WriteLine("开始 爬苏州在线的菜价。。。。");
+                await ExecuteImp(context);
+                Console.WriteLine("结束 爬苏州在线的菜价  ");
+            }
+            catch( Exception ex)
+            {
+                //Logger.Error(ex.Message);
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+        }
+
+        private  async Task ExecuteImp(IJobExecutionContext context)
         {
             HttpHelpers httpHelpers = new HttpHelpers();
             HttpItems items = new HttpItems();

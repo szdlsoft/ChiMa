@@ -51,6 +51,7 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<UserCommentDish> UserCommentDish { get; set; }
 
         //价格
+        public virtual DbSet<Area> Area { get; set; }
         public virtual DbSet<AreaFMPrice> AreaFMPrice { get; set; }
         public virtual DbSet<FMPriceItem> FMPriceItem { get; set; }
         public virtual DbSet<FMAlias> FMAlias { get; set; }

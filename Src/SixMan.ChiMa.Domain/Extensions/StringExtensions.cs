@@ -66,9 +66,9 @@ namespace SixMan.ChiMa.Domain.Extensions
         public static string BracketsSub(this string str)
         {
             var start = str.IndexOfAny(new char[] { '(', '（' });
-            var length = str.IndexOfAny(new char[] { ')', '）' }, start);
+            var end = str.IndexOfAny(new char[] { ')', '）' }, start);
 
-            return str.Substring(start + 1, length );
+            return str.Substring(start + 1, end - start - 1 );
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace SixMan.ChiMa.Domain.Extensions
         /// <returns></returns>
         public static DateTime ToDate(this string str)
         {
-            return DateTime.ParseExact(str, "yyyy年MM月DD日", CultureInfo.InvariantCulture);
+            return DateTime.ParseExact(str, "yyyy年MM月dd日", CultureInfo.InvariantCulture);
         }
     }
 }
