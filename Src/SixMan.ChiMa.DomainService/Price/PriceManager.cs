@@ -25,12 +25,18 @@ namespace SixMan.ChiMa.DomainService.Price
 
         public void Save(string areaName, DateTime publishTime, IEnumerable<FMPriceItem> prices)
         {
+            var priceList = prices.ToList();
+            if( priceList.Count < 1) // 没有价格信息
+            {
+                return;
+            }
+
             Area area = AreaRepository.FirstOrDefault(a => a.Name == areaName);
             AreaFMPrice afp = new AreaFMPrice()
             {
                 Area = area,
                 PublishTime = publishTime,
-                FMPriceItems = prices.ToList()
+                FMPriceItems = priceList
             };
 
             AreaFMPriceRepository.Insert(afp);

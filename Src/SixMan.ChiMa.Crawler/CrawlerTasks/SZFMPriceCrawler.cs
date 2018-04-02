@@ -114,33 +114,48 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             //var table = doc.All.Where( m => m.LocalName == "table"
             //                             && m.TextContent.Contains("苏州市部分农贸市场零售均价")
             //                          ).FirstOrDefault();
-            var tds = doc.All.Where(m => m.LocalName == "td"
-                                     && (m.ClassList.Contains("xl65")
-                                        || m.ClassList.Contains("xl66"))
-                                    ).ToList();
-            foreach (var td in tds)
+            //var tds = doc.All.Where(m => m.LocalName == "td"
+            //                         && (m.ClassList.Contains("xl65")
+            //                            || m.ClassList.Contains("xl66"))
+            //                        ).ToList();
+            var trs = doc.QuerySelectorAll("div#table table tbody tr"); // 找出价格行
+            bool pinmingFound = false; // 找到品名行
+            foreach (var tr in trs)
             {
-                StringBuilder sb = new StringBuilder();
-                IElement node = td;
-                do
+                if( pinmingFound )
                 {
-                    sb.Append(node.TextContent + " ");
-                    var ss = node.TextContent.Split(' ', ' ');
-                    if( ss.Length > 1)
-                    {
-                        yield return new FMPriceItem()
-                        {
-                            Name = ss[0],
-                            Price = double.Parse(ss[1])
-                        };
-                    }
+                    string name1 = tr.Children[0].TextContent;
+                    string price1 = tr.Children[1].TextContent;
+                    string name2 = tr.Children[2].TextContent;
+                    string price2 = tr.Children[3].TextContent;
+                    FMPriceItem item1 = GetFMPriceItem(name1, price1);
+                    FMPriceItem item2 = GetFMPriceItem(name2, price2);
 
-                    node = node.NextElementSibling;
+                    if (item1 != null) yield return item1;
+                    if (item2 != null) yield return item2;
                 }
-                while (node != null);
+                else
+                {
+                    pinmingFound = tr.FirstElementChild.TextContent == "品名";
+                }              
 
-                Log("Price: ", sb.ToString());
             }
+        }
+
+        private FMPriceItem GetFMPriceItem(string name, string price)
+        {
+            FMPriceItem item = null;
+            if (name.IsNotNullOrEmpty())
+            {
+                item = new FMPriceItem()
+                {
+                    Name = name,
+                    Price = price.GetDouble(),
+                    Unit = @"元/500克"
+                };
+            }
+
+            return item;
         }
 
         private  string GetPriceUri(IHtmlDocument htmlDocument)

@@ -13,7 +13,7 @@ namespace SixMan.ChiMa.Domain.Extensions
     {
         public static bool IsNullOrEmpty(this string str)
         {
-            return string.IsNullOrEmpty(str);
+            return str == null || string.IsNullOrEmpty(str.Trim());
         }
 
         public static bool IsNotNullOrEmpty(this string str)
@@ -76,9 +76,30 @@ namespace SixMan.ChiMa.Domain.Extensions
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        public static DateTime ToDate(this string str)
+        public static DateTime ToDate(this string str )
         {
-            return DateTime.ParseExact(str, "yyyy年MM月dd日", CultureInfo.InvariantCulture);
+            var defaultValue = new DateTime(1980, 1, 1);
+            if (DateTime.TryParseExact(str, "yyyy年MM月dd日", CultureInfo.InvariantCulture, DateTimeStyles.AllowInnerWhite, out DateTime value))
+            {
+                return value;
+            }
+
+            return defaultValue;
+        }
+
+        public static double GetDouble(this string str, double defaultValue = 0 )
+        {
+            if( str.IsNullOrEmpty())
+            {
+                return defaultValue;
+            } 
+
+            if( double.TryParse(str, out double value))
+            {
+                return value;
+            }
+
+            return defaultValue;
         }
     }
 }
