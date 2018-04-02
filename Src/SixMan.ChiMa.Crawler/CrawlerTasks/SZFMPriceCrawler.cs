@@ -151,7 +151,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                 {
                     Name = name,
                     Price = price.GetDouble(),
-                    Unit = @"元/500克"
+                    Unit = @"500克"
                 };
             }
 
