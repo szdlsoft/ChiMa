@@ -3,7 +3,12 @@ using AngleSharp.Parser.Html;
 using HttpCode.Core;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SixMan.ChiMa.Crawler
 {
@@ -22,6 +27,57 @@ namespace SixMan.ChiMa.Crawler
             var document = await parser.ParseAsync(hr.Html);
 
             return document;
+        }
+
+
+
+        /// <summary>
+        /// 返回最后一段URL
+        /// 例如： //www.meishichina.com/YuanLiao/ZhuQianJiaRou/  返回 ZhuQianJiaRou
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        internal static string GetUrlLast(string url)
+        {
+            return url.Trim('/').Split('/').Last();
+        }
+
+        internal static Task<IHtmlDocument> GetDocumentAddHttpPrefix(string url)
+        {
+            return GetDocument($"http:{url}");
+        }
+
+        internal static async Task GetImgAndSave(string sourceImgUrl, string imagePath)
+        {
+            string fullPath = Path.Combine(CrawlerConfig.ImageRootPath, imagePath);
+
+            if (File.Exists(fullPath))
+            {
+                return;
+            }
+
+            using (Image img = await GetImage(sourceImgUrl))
+            {
+                img.Save(fullPath);
+            }
+
+        }
+
+        private static async Task<Image> GetImage(string sourceImgUrl)
+        {
+            System.Net.CookieContainer cc = new System.Net.CookieContainer();//自动处理Cookie对象
+            HttpHelpers httpHelpers = new HttpHelpers();
+            HttpItems items = new HttpItems();
+            items.Url = sourceImgUrl;//请求地址
+            items.Method = "Get";//请求方式 
+            //items.IsGetImage = true;
+            items.Container = cc;//自动处理Cookie时,每次提交时对cc赋值即可
+            items.ResultType = ResultType.Byte;//设置请求返回值类型为Byte
+
+            var hr = await httpHelpers.GetHtmlAsync(items);
+
+
+            return  httpHelpers.GetImg(hr);
         }
     }
 }

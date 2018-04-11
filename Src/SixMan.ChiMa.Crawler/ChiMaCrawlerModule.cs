@@ -40,7 +40,9 @@ namespace SixMan.ChiMa.Crawler
             );
 
             Configuration.BackgroundJobs.IsJobExecutionEnabled = true;
-          
+            CrawlerConfig.ImageRootPath = _appConfiguration.GetSection("ApplicationSet").GetSection("ImagePath").Value;
+
+
         }
 
         public override void Initialize()
