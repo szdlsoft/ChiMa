@@ -135,7 +135,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MigrationBackup", "Migratio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.Crawler", "Src\SixMan.ChiMa.Crawler\SixMan.ChiMa.Crawler.csproj", "{7C3E9AEE-2653-40A7-AFB9-66F8129D29CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixMan.ChiMa.DomainService", "Src\SixMan.ChiMa.DomainService\SixMan.ChiMa.DomainService.csproj", "{8E213F97-A132-463B-953D-A54774BD02D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.DomainService", "Src\SixMan.ChiMa.DomainService\SixMan.ChiMa.DomainService.csproj", "{8E213F97-A132-463B-953D-A54774BD02D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
