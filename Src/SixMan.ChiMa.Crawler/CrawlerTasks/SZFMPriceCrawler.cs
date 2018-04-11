@@ -21,7 +21,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
     /// 苏州菜价爬虫
     /// </summary>
     public class SZFMPriceCrawler
-        : CrawlerBase
+        : PriceCrawlerBase
         , ICrawlerTask
     {
         public Type TaskType => typeof(SZFMPriceCrawler);

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SixMan.ChiMa.Crawler.CrawlerTasks
 {
-    public abstract class CrawlerBase
+    public abstract class PriceCrawlerBase
         : JobBase
     {
         public IPriceManager priceManager { get; set; }
