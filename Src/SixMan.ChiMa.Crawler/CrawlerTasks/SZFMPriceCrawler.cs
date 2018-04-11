@@ -21,7 +21,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
     /// 苏州菜价爬虫
     /// </summary>
     public class SZFMPriceCrawler
-        : CrawlerBase
+        : PriceCrawlerBase
         , ICrawlerTask
     {
         public Type TaskType => typeof(SZFMPriceCrawler);
@@ -39,12 +39,12 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
         public void ConfigureTrigger(TriggerBuilder trigger)
         {
             trigger.StartNow()
-                                .WithSimpleSchedule(schedule =>
-                                {
-                                    schedule.RepeatForever()
-                                        .WithIntervalInSeconds(600)
-                                        .Build();
-                                });
+            .WithSimpleSchedule(schedule =>
+            {
+                schedule.RepeatForever()
+                    .WithIntervalInSeconds(600)
+                    .Build();
+            });
         }
 
         [UnitOfWork]
