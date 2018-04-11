@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SixMan.ChiMa.Crawler.CrawlerTasks
+namespace SixMan.ChiMa.Crawler
 {
     public abstract class PriceCrawlerBase
         : JobBase

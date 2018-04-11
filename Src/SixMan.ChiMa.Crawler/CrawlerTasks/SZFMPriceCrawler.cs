@@ -39,12 +39,12 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
         public void ConfigureTrigger(TriggerBuilder trigger)
         {
             trigger.StartNow()
-                                .WithSimpleSchedule(schedule =>
-                                {
-                                    schedule.RepeatForever()
-                                        .WithIntervalInSeconds(600)
-                                        .Build();
-                                });
+            .WithSimpleSchedule(schedule =>
+            {
+                schedule.RepeatForever()
+                    .WithIntervalInSeconds(600)
+                    .Build();
+            });
         }
 
         [UnitOfWork]
