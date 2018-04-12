@@ -12,11 +12,13 @@ using Abp.Zero.EntityFrameworkCore;
 using SixMan.ChiMa.EFCore;
 using SixMan.ChiMa.Tests.DependencyInjection;
 using SixMan.ChiMa.Application;
+using SixMan.ChiMa.DomainService;
 
 namespace SixMan.ChiMa.Tests
 {
     [DependsOn(
         typeof(ChiMaApplicationModule),
+        typeof(ChiMaDomainServiceModule),
         typeof(ChiMaEFCoreModule),
         typeof(AbpTestBaseModule)
         )]

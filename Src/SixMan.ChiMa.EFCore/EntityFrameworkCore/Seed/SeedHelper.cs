@@ -30,7 +30,7 @@ namespace SixMan.ChiMa.EFCore.Seed
             new TenantRoleAndUserBuilder(context, 1).Create();
 
             //
-            new FoodAndDishBuilder(context).Create();
+            //new FoodAndDishBuilder(context).Create();
         }
 
         private static void WithDbContext<TDbContext>(IIocResolver iocResolver, Action<TDbContext> contextAction)

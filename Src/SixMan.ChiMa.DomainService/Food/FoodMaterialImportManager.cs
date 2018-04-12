@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 
 namespace SixMan.ChiMa.DomainService
 {
+    //[UnitOfWork(false)]
     public class FoodMaterialImportManager
         : IFoodMaterialImportManager
         , Abp.Dependency.ISingletonDependency
@@ -17,6 +18,8 @@ namespace SixMan.ChiMa.DomainService
         public IRepository<FoodMaterial, long> FoodMaterialRepository { get; set; }
         public IRepository<Nutrition> NutritionRepository { get; set; }
         public IRepository<FoodMaterialNutrition> FoodMaterialNutritionRepository { get; set; }
+
+        public IUnitOfWork unitOfWork { get; set; }
 
         public bool HasImport(string topCatName, string middleCatName)
         {
@@ -34,6 +37,8 @@ namespace SixMan.ChiMa.DomainService
         [UnitOfWork]
         public void ImportCategory(FoodMaterialRawDataItem item)
         {
+            //unitOfWork.Options.IsTransactional = false;
+
             FoodMaterialCategory cat = GetOrCreateCategory(item);
             foreach( var food in item.FoodMaterials)
             {
@@ -50,6 +55,11 @@ namespace SixMan.ChiMa.DomainService
                 {
                     Name = item.Top,
                 });
+
+                //top = FoodMaterialCategoryRepository.Get(top.Id);
+
+                //var top2 = FoodMaterialCategoryRepository.FirstOrDefault(c => c.Name == item.Top);
+                //var top3 = top2;
             }
             var middle = FoodMaterialCategoryRepository.FirstOrDefault(c => c.Name == item.Middle);
             if( middle == null)
@@ -63,7 +73,7 @@ namespace SixMan.ChiMa.DomainService
             return middle;
         }
 
-        private void ImportFoodMaterial(FoodMaterialCategory cat, FooMaterialItem food)
+        private void ImportFoodMaterial(FoodMaterialCategory cat, FoodMaterialItem food)
         {
             FoodMaterial fm = Mapper.Map<FoodMaterial>(food);
             fm.FoodMaterialCategory = cat;

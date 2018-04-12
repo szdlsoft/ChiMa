@@ -7,6 +7,7 @@ using AngleSharp.Parser.Html;
 using HttpCode.Core;
 using Quartz;
 using SixMan.ChiMa.Domain;
+using SixMan.ChiMa.Domain.Food;
 using SixMan.ChiMa.DomainService;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
         public Type TaskType => typeof(MeiShiChinaCrawler);
 
         public IFoodMaterialImportManager importer { get; set; }
+        public IUnitOfWorkManager unitOfWorkManager { get; set; }
 
         FoodMaterialRawData rawData;
 
@@ -50,7 +52,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
         }
 
 
-        [UnitOfWork]
+        //[UnitOfWork]
         public override async Task Execute(IJobExecutionContext context)
         {
             try
@@ -82,6 +84,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             for( int i =1; i <= lis.Length-2; i++) // 去掉一头一尾
             {
                 await ImportTopCategoryAsync(lis[i]);
+                //break;
 
             }
 
@@ -114,20 +117,20 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
                 var ul = midDiv.LastElementChild;  //ul
                 var foodMaterials = new FoodMaterialCollection();
-                foreach ( var li in ul.GetElementsByTagName("li"))
-                {
-                    var a = li.FirstElementChild;
-                    var foodMaterialName = a.TextContent;
-                    var foodMaterialHref = a.GetAttribute("href");
+                //foreach (var li in ul.GetElementsByTagName("li"))
+                //{
+                //    var a = li.FirstElementChild;
+                //    var foodMaterialName = a.TextContent;
+                //    var foodMaterialHref = a.GetAttribute("href");
 
-                    var foodMaterial = await TryGetFoodMaterial(foodMaterialName, foodMaterialHref);
-                    if( foodMaterial != null)
-                    {
-                        foodMaterials.Add(foodMaterial);                 
+                //    var foodMaterial = await TryGetFoodMaterial(foodMaterialName, foodMaterialHref);
+                //    if (foodMaterial != null)
+                //    {
+                //        foodMaterials.Add(foodMaterial);
 
-                    }
-                }
-                Logger.Info($"    {middleCatName} 有{foodMaterials.Count}个食材 ");
+                //    }
+                //}
+                //Logger.Info($"    {middleCatName} 有{foodMaterials.Count}个食材 ");
 
                 var rawItem = new FoodMaterialRawDataItem()
                 {
@@ -135,14 +138,23 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                     Middle = middleCatName,
                     FoodMaterials = foodMaterials
                 };
-                importer.ImportCategory(rawItem);
+                //using( var uow = unitOfWorkManager.Begin())
+                //{
+                    importer.ImportCategory(rawItem);
+                    //uow.Complete();
+                //}
+
                 rawData.Add(rawItem);
+
+                string msg = $"导入{topCatName} {middleCatName}耗时：{DateTime.Now.Subtract(startTime).TotalSeconds}";
+                Console.WriteLine(msg);
+                Logger.Info(msg);
+                //break;
             }
 
-            Logger.Info($"导入{topCatName}耗时：{DateTime.Now.Subtract(startTime).TotalSeconds}");
         }
 
-        private async Task<FooMaterialItem> TryGetFoodMaterial(string foodMaterialName, string foodMaterialHref)
+        private async Task<FoodMaterialItem> TryGetFoodMaterial(string foodMaterialName, string foodMaterialHref)
         {
             try
             {
@@ -156,16 +168,16 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             return null;
         }
 
-        private async Task<FooMaterialItem> GetFoodMaterial(string foodMaterialName, string foodMaterialHref)
+        private async Task<FoodMaterialItem> GetFoodMaterial(string foodMaterialName, string foodMaterialHref)
         {
             string englishName = CrawlerHelper.GetUrlLast(foodMaterialHref);
 
-            var foodMaterial = new FooMaterialItem()
+            var foodMaterial = new FoodMaterialItem()
             {
                 Description = foodMaterialName,
                 EnglishName = englishName,
                 SourceUrl = foodMaterialHref,
-                Photo = "FoodMaterial\\" + englishName + ".jpg"
+                Photo = FoodMaterial.GetImageUrlPath(englishName),
             };
 
             IHtmlDocument foodMaterialDoc = await CrawlerHelper.GetDocumentAddHttpPrefixAsync(foodMaterialHref + "/useful");
@@ -176,7 +188,9 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                 throw new AbpException($"{foodMaterialName} 找不到 category_pic");
             }
 
-            CrawlerHelper.DownloadImgAndSaveAsync(sourceImgUrl, foodMaterial.Photo);
+            //string localImgPath = "FoodMaterial\\" + englishName + ".jpg";
+            string localImgPath = FoodMaterial.GetImageLocalPath(englishName);
+            CrawlerHelper.DownloadImgAndSaveAsync(sourceImgUrl, localImgPath);
 
             var nutritionsUL = foodMaterialDoc.QuerySelector(".category_use_table.mt10.clear")?.FirstElementChild;
             foodMaterial.Nutritions = new List<string>();

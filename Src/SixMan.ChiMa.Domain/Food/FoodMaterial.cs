@@ -79,6 +79,25 @@ namespace SixMan.ChiMa.Domain.Food
         /// </summary>
         public ICollection<FoodMaterialNutrition> FoodMaterialNutritions { get; set; }
 
+        /// <summary>
+        /// 获取 图像相对路径，用于url
+        /// </summary>
+        /// <param name="englishName"></param>
+        /// <returns></returns>
+        public static string GetImageUrlPath(string englishName)
+        {
+            return $"images/FoodMaterial/{englishName}.jpg";
+        }
+        /// <summary>
+        /// 获取 图像的本地路径(相对于root的)
+        /// </summary>
+        /// <param name="englishName"></param>
+        /// <returns></returns>
+        public static string GetImageLocalPath(string englishName)
+        {
+            return $"images\\FoodMaterial\\{englishName}.jpg";
+        }
+
 
         ///// <summary>
         ///// 导入数据

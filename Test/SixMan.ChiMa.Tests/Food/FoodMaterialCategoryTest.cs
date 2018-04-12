@@ -1,9 +1,12 @@
 ﻿using Abp.Application.Services.Dto;
+using Abp.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Shouldly;
 using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food;
 using SixMan.ChiMa.Application.Food.Dto;
+using SixMan.ChiMa.Domain.Food;
+using SixMan.ChiMa.DomainService;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,10 +18,14 @@ namespace SixMan.ChiMa.Tests.Food
     public class FoodMaterialCategoryTest : ChiMaTestBase
     {
         private readonly IFoodMaterialCategoryAppService _appService;
+        private readonly IFoodMaterialImportManager _importManager;
+        private IRepository<FoodMaterialCategory, long> _foodMaterialCategoryRepository;
 
         public FoodMaterialCategoryTest()
         {
             _appService = Resolve<IFoodMaterialCategoryAppService>();
+            _importManager = Resolve<IFoodMaterialImportManager>();
+            _foodMaterialCategoryRepository = Resolve<IRepository<FoodMaterialCategory, long>>();
         }
 
         [Fact]
@@ -48,6 +55,19 @@ namespace SixMan.ChiMa.Tests.Food
 
                 
             });
+        }
+
+        [Fact]
+        public void CreateFoodMaterialCategory_Test()
+        {
+            _foodMaterialCategoryRepository.Insert(new FoodMaterialCategory()
+            {
+                Name = "ABC"
+            });
+
+            var entity = _foodMaterialCategoryRepository.FirstOrDefault(f => f.Name == "ABC");
+
+            _foodMaterialCategoryRepository.Delete(entity);
         }
     }
 }

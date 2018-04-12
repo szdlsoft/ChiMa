@@ -6,6 +6,6 @@ namespace SixMan.ChiMa.Crawler
 {
     public static class CrawlerConfig
     {
-        public static string ImageRootPath;
+        public static string RootPath;
     }
 }

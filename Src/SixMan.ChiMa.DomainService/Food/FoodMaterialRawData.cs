@@ -32,7 +32,7 @@ namespace SixMan.ChiMa.DomainService
     }
 
     public class FoodMaterialCollection
-        : List<FooMaterialItem>
+        : List<FoodMaterialItem>
     {
 
     }
@@ -41,7 +41,7 @@ namespace SixMan.ChiMa.DomainService
     /// 食材
     /// </summary>
     [AutoMap(typeof(SixMan.ChiMa.Domain.Food.FoodMaterial))]
-    public class FooMaterialItem
+    public class FoodMaterialItem
     {
         /// <summary>
         /// 名称
