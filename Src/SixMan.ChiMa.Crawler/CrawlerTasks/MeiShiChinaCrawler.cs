@@ -1,4 +1,5 @@
-﻿using Abp.Domain.Uow;
+﻿using Abp;
+using Abp.Domain.Uow;
 using Abp.Quartz;
 using AngleSharp.Dom;
 using AngleSharp.Dom.Html;
@@ -6,6 +7,7 @@ using AngleSharp.Parser.Html;
 using HttpCode.Core;
 using Quartz;
 using SixMan.ChiMa.Domain;
+using SixMan.ChiMa.DomainService;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -55,8 +57,10 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             {
                 //var publishTime = priceManager.GetLatest(Area);
                 Console.WriteLine("开始 美食天下的食材菜谱。。。。");
+                var startTime = DateTime.Now;
                 await ExecuteImp(context);
                 Console.WriteLine("结束 爬美食天下的食材菜谱  ");
+                Logger.Info($"导入美食天下的食材菜谱总耗时：{DateTime.Now.Subtract(startTime).TotalSeconds}");
             }
             catch (Exception ex)
             {
@@ -77,16 +81,19 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
             for( int i =1; i <= lis.Length-2; i++) // 去掉一头一尾
             {
-                await ImportTopCategory(lis[i]);
+                await ImportTopCategoryAsync(lis[i]);
+
             }
 
-            importer.Import(rawData);
+            //importer.Import(rawData);
             Logger.Info($"共有{rawData.TopCount} 个大类 {rawData.MiddleCount} 个中类 {rawData.MaterialCount} 个食材 ");
 
         }
 
-        private async Task ImportTopCategory(IElement element)
+        private async Task ImportTopCategoryAsync(IElement element)
         {
+            var startTime = DateTime.Now;
+
             var topCatName = element.InnerHtml;
             var topCatUrl = element.GetAttribute("href");
             Logger.Info($"导入食材顶级分类: {topCatName} {topCatUrl}");
@@ -113,7 +120,12 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                     var foodMaterialName = a.TextContent;
                     var foodMaterialHref = a.GetAttribute("href");
 
-                    foodMaterials.Add(await GetFoodMaterial(foodMaterialName, foodMaterialHref));                   
+                    var foodMaterial = await TryGetFoodMaterial(foodMaterialName, foodMaterialHref);
+                    if( foodMaterial != null)
+                    {
+                        foodMaterials.Add(foodMaterial);                 
+
+                    }
                 }
                 Logger.Info($"    {middleCatName} 有{foodMaterials.Count}个食材 ");
 
@@ -123,9 +135,25 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                     Middle = middleCatName,
                     FoodMaterials = foodMaterials
                 };
-
+                importer.ImportCategory(rawItem);
                 rawData.Add(rawItem);
             }
+
+            Logger.Info($"导入{topCatName}耗时：{DateTime.Now.Subtract(startTime).TotalSeconds}");
+        }
+
+        private async Task<FooMaterialItem> TryGetFoodMaterial(string foodMaterialName, string foodMaterialHref)
+        {
+            try
+            {
+                return await GetFoodMaterial(foodMaterialName, foodMaterialHref);
+            }
+            catch( Exception ex)
+            {
+                Logger.Debug($"导入{foodMaterialName} {foodMaterialHref} " + ex.Message);
+            }
+
+            return null;
         }
 
         private async Task<FooMaterialItem> GetFoodMaterial(string foodMaterialName, string foodMaterialHref)
@@ -134,16 +162,21 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
             var foodMaterial = new FooMaterialItem()
             {
-                Name = foodMaterialName,
+                Description = foodMaterialName,
                 EnglishName = englishName,
                 SourceUrl = foodMaterialHref,
-                ImagePath = "FoodMaterial\\" + englishName + ".bmp"
+                Photo = "FoodMaterial\\" + englishName + ".jpg"
             };
 
             IHtmlDocument foodMaterialDoc = await CrawlerHelper.GetDocumentAddHttpPrefixAsync(foodMaterialHref + "/useful");
 
-            var sourceImgUrl = foodMaterialDoc.QuerySelector("#category_pic").GetAttribute("data-src");
-            await CrawlerHelper.GetImgAndSaveAsync(sourceImgUrl, foodMaterial.ImagePath);
+            var sourceImgUrl = foodMaterialDoc.QuerySelector("#category_pic")?.GetAttribute("data-src");
+            if( sourceImgUrl == null)
+            {
+                throw new AbpException($"{foodMaterialName} 找不到 category_pic");
+            }
+
+            CrawlerHelper.DownloadImgAndSaveAsync(sourceImgUrl, foodMaterial.Photo);
 
             var nutritionsUL = foodMaterialDoc.QuerySelector(".category_use_table.mt10.clear")?.FirstElementChild;
             foodMaterial.Nutritions = new List<string>();

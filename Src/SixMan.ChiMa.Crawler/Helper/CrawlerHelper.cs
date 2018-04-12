@@ -48,7 +48,7 @@ namespace SixMan.ChiMa.Crawler
             return GetDocumentASync($"http:{url}");
         }
 
-        internal static async Task GetImgAndSaveAsync(string sourceImgUrl, string imagePath)
+        internal static async Task DownloadImgAndSaveAsync(string sourceImgUrl, string imagePath)
         {
             string fullPath = Path.Combine(CrawlerConfig.ImageRootPath, imagePath);
 

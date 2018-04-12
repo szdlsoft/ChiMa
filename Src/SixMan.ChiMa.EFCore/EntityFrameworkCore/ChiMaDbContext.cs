@@ -31,6 +31,11 @@ namespace SixMan.ChiMa.EFCore
 
         public virtual DbSet<FoodMaterialInventory> FoodMaterialInventory { get; set; }
         public virtual DbSet<Purchase> Purchase { get; set; }
+
+        public virtual DbSet<FoodMaterialNutrition> FoodMaterialNutrition { get; set; }
+        public virtual DbSet<Nutrition> Nutrition { get; set; }
+
+
         //菜品
         //public virtual DbSet<DishCategory> DishCategory { get; set; }
         //public virtual DbSet<Taste> Taste { get; set; }

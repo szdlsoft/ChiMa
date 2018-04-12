@@ -1494,20 +1494,8 @@ namespace SixMan.ChiMa.EFCore.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<double?>("ASH");
-
                     b.Property<string>("Audio")
                         .HasMaxLength(512);
-
-                    b.Property<double?>("CA");
-
-                    b.Property<double?>("CHO");
-
-                    b.Property<double?>("CU");
-
-                    b.Property<double?>("Carotene");
-
-                    b.Property<double?>("Cholesterol");
 
                     b.Property<DateTime>("CreationTime");
 
@@ -1523,17 +1511,10 @@ namespace SixMan.ChiMa.EFCore.Migrations
 
                     b.Property<int?>("EdiblePercent");
 
-                    b.Property<double?>("EnergyKcal");
-
-                    b.Property<double?>("EnergyKj");
+                    b.Property<string>("EnglishName")
+                        .HasMaxLength(50);
 
                     b.Property<string>("ExtensionData");
-
-                    b.Property<double?>("FE");
-
-                    b.Property<double?>("Fat");
-
-                    b.Property<double?>("Fibrin");
 
                     b.Property<long?>("FoodMaterialCategoryId");
 
@@ -1543,58 +1524,29 @@ namespace SixMan.ChiMa.EFCore.Migrations
 
                     b.Property<bool>("IsMain");
 
-                    b.Property<double?>("K");
-
                     b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<long?>("LastModifierUserId");
-
-                    b.Property<double?>("MG");
-
-                    b.Property<double?>("MN");
-
-                    b.Property<double?>("NA");
-
-                    b.Property<double?>("Niacin");
-
-                    b.Property<double?>("P");
 
                     b.Property<string>("Photo")
                         .HasMaxLength(512);
 
                     b.Property<double?>("Price");
 
-                    b.Property<double?>("Protein");
-
-                    b.Property<double?>("Retinol");
-
-                    b.Property<double?>("Riboflavin");
-
-                    b.Property<double?>("SE");
-
                     b.Property<string>("Season")
                         .HasMaxLength(50);
 
+                    b.Property<string>("SourceUrl")
+                        .HasMaxLength(200);
+
                     b.Property<string>("StorageMode")
                         .HasMaxLength(256);
-
-                    b.Property<double?>("Thiamin");
 
                     b.Property<string>("Unit")
                         .HasMaxLength(256);
 
                     b.Property<string>("Video")
                         .HasMaxLength(512);
-
-                    b.Property<double?>("VitaminA");
-
-                    b.Property<double?>("VitaminC");
-
-                    b.Property<double?>("VitaminE");
-
-                    b.Property<double?>("Water");
-
-                    b.Property<double?>("ZN");
 
                     b.HasKey("Id");
 
@@ -1714,6 +1666,26 @@ namespace SixMan.ChiMa.EFCore.Migrations
                     b.ToTable("FoodMaterialInventory");
                 });
 
+            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.FoodMaterialNutrition", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<double>("Content");
+
+                    b.Property<long?>("FoodMaterialId");
+
+                    b.Property<int?>("NutritionId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FoodMaterialId");
+
+                    b.HasIndex("NutritionId");
+
+                    b.ToTable("FoodMaterialNutrition");
+                });
+
             modelBuilder.Entity("SixMan.ChiMa.Domain.Food.HealthConcern", b =>
                 {
                     b.Property<long>("Id")
@@ -1779,6 +1751,25 @@ namespace SixMan.ChiMa.EFCore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("HealthConcernCategory");
+                });
+
+            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.Nutrition", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Category")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Unit")
+                        .HasMaxLength(50);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Nutrition");
                 });
 
             modelBuilder.Entity("SixMan.ChiMa.Domain.Food.Purchase", b =>
@@ -2287,6 +2278,17 @@ namespace SixMan.ChiMa.EFCore.Migrations
                     b.HasOne("SixMan.ChiMa.Domain.Food.FoodMaterial", "FoodMaterial")
                         .WithMany()
                         .HasForeignKey("FoodMaterialId");
+                });
+
+            modelBuilder.Entity("SixMan.ChiMa.Domain.Food.FoodMaterialNutrition", b =>
+                {
+                    b.HasOne("SixMan.ChiMa.Domain.Food.FoodMaterial", "FoodMaterial")
+                        .WithMany("FoodMaterialNutritions")
+                        .HasForeignKey("FoodMaterialId");
+
+                    b.HasOne("SixMan.ChiMa.Domain.Food.Nutrition", "Nutrition")
+                        .WithMany()
+                        .HasForeignKey("NutritionId");
                 });
 
             modelBuilder.Entity("SixMan.ChiMa.Domain.Food.HealthConcern", b =>

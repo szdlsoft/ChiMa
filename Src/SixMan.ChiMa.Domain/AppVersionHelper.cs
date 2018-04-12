@@ -36,8 +36,9 @@
  *                     还剩下，机械td的问题TBD
  * 1.1.3   2018-04-2   szfm price crawler 异常处理  
  * 1.1.4   2018-04-11  重构Crawler、美食天下食材分类导入
- * 1.1.5   2018-04-12  美食天下食材(含分类、图片、营养成分）导入Task
- *                      导入Manager
+ * 1.2.1   2018-04-12  美食天下食材(含分类、图片、营养成分）导入Task
+ *                     Add 营养成分
+ *                     导入Manager
  * 
  * **********************************************************/
 
@@ -56,7 +57,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.1.5";
+        public const string Version = "1.2.1";
 
         /// <summary>
         /// Gets release (last build) date of the application.
