@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +15,7 @@ namespace SixMan.ChiMa.Crawler
 {
     public static class CrawlerHelper
     {
-        internal static async System.Threading.Tasks.Task<IHtmlDocument> GetDocument(string url)
+        internal static async System.Threading.Tasks.Task<IHtmlDocument> GetDocumentASync(string url)
         {
             HttpHelpers httpHelpers = new HttpHelpers();
             HttpItems items = new HttpItems();
@@ -42,12 +43,12 @@ namespace SixMan.ChiMa.Crawler
             return url.Trim('/').Split('/').Last();
         }
 
-        internal static Task<IHtmlDocument> GetDocumentAddHttpPrefix(string url)
+        internal static Task<IHtmlDocument> GetDocumentAddHttpPrefixAsync(string url)
         {
-            return GetDocument($"http:{url}");
+            return GetDocumentASync($"http:{url}");
         }
 
-        internal static async Task GetImgAndSave(string sourceImgUrl, string imagePath)
+        internal static async Task GetImgAndSaveAsync(string sourceImgUrl, string imagePath)
         {
             string fullPath = Path.Combine(CrawlerConfig.ImageRootPath, imagePath);
 
@@ -56,14 +57,19 @@ namespace SixMan.ChiMa.Crawler
                 return;
             }
 
-            using (Image img = await GetImage(sourceImgUrl))
+            using (WebClient client = new WebClient())
             {
-                img.Save(fullPath);
+                await client.DownloadFileTaskAsync(sourceImgUrl, fullPath);
             }
+
+            //using (Image img = await GetImage(sourceImgUrl))
+            //{
+            //    img.Save(fullPath);
+            //}
 
         }
 
-        private static async Task<Image> GetImage(string sourceImgUrl)
+        private static async Task<Image> GetImageASync(string sourceImgUrl)
         {
             System.Net.CookieContainer cc = new System.Net.CookieContainer();//自动处理Cookie对象
             HttpHelpers httpHelpers = new HttpHelpers();

@@ -20,14 +20,14 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
     {
         public Type TaskType => typeof(MeiShiChinaCrawler);
 
-        public IFoodMaterialImport importer { get; set; }
+        public IFoodMaterialImportManager importer { get; set; }
 
         FoodMaterialRawData rawData;
 
         public MeiShiChinaCrawler()
                     :base()
         {
-            importer = NullFoodMaterialImport.Instance;
+            importer = NullFoodMaterialImportManager.Instance;
         }
 
         public void ConfigureJob(JobBuilder job)
@@ -69,7 +69,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
         private async Task ExecuteImp(IJobExecutionContext context)
         {
             rawData = new FoodMaterialRawData();
-            IHtmlDocument doc = await CrawlerHelper.GetDocument( " http://www.meishichina.com/YuanLiao/");
+            IHtmlDocument doc = await CrawlerHelper.GetDocumentASync( " http://www.meishichina.com/YuanLiao/");
 
             var lis = doc.QuerySelectorAll(".nav_wrap2 li a"); // 找出价格行
 
@@ -92,16 +92,20 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             Logger.Info($"导入食材顶级分类: {topCatName} {topCatUrl}");
 
             //var url = $"http:{topCatUrl}";
-            var topDoc = await CrawlerHelper.GetDocumentAddHttpPrefix(topCatUrl);
+            var topDoc = await CrawlerHelper.GetDocumentAddHttpPrefixAsync(topCatUrl);
 
             var middleDivs = topDoc.QuerySelectorAll(".category_sub.clear");
             Logger.Info($"   有{middleDivs.Length} 中类 ");
 
             foreach( var midDiv in middleDivs)
             {
-                var middleName = midDiv.FirstElementChild.TextContent; //h2 // node 是可视树， element 是逻辑树
-                var ul = midDiv.LastElementChild;  //ul
+                var middleCatName = midDiv.FirstElementChild.TextContent; //h2 // node 是可视树，用xpath， element 是逻辑树,用selector
+                if(importer.HasImport(topCatName, middleCatName))
+                {
+                    continue; // 已经导入的，就不重复导入
+                }
 
+                var ul = midDiv.LastElementChild;  //ul
                 var foodMaterials = new FoodMaterialCollection();
                 foreach ( var li in ul.GetElementsByTagName("li"))
                 {
@@ -111,21 +115,17 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
                     foodMaterials.Add(await GetFoodMaterial(foodMaterialName, foodMaterialHref));                   
                 }
-                Logger.Info($"    {middleName} 有{foodMaterials.Count}个食材 ");
+                Logger.Info($"    {middleCatName} 有{foodMaterials.Count}个食材 ");
 
                 var rawItem = new FoodMaterialRawDataItem()
                 {
                     Top = topCatName,
-                    Middle = middleName,
+                    Middle = middleCatName,
                     FoodMaterials = foodMaterials
                 };
 
                 rawData.Add(rawItem);
-
-                //Logger.Info(sb.ToString());
             }
-
-
         }
 
         private async Task<FooMaterialItem> GetFoodMaterial(string foodMaterialName, string foodMaterialHref)
@@ -140,20 +140,20 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                 ImagePath = "FoodMaterial\\" + englishName + ".bmp"
             };
 
-            IHtmlDocument foodMaterialDoc = await CrawlerHelper.GetDocumentAddHttpPrefix(foodMaterialHref + "/useful");
+            IHtmlDocument foodMaterialDoc = await CrawlerHelper.GetDocumentAddHttpPrefixAsync(foodMaterialHref + "/useful");
 
             var sourceImgUrl = foodMaterialDoc.QuerySelector("#category_pic").GetAttribute("data-src");
-            await CrawlerHelper.GetImgAndSave(sourceImgUrl, foodMaterial.ImagePath);
+            await CrawlerHelper.GetImgAndSaveAsync(sourceImgUrl, foodMaterial.ImagePath);
 
-            var nutritionsUL = foodMaterialDoc.QuerySelector("category_use_table.mt10.clear")?.FirstElementChild;
+            var nutritionsUL = foodMaterialDoc.QuerySelector(".category_use_table.mt10.clear")?.FirstElementChild;
             foodMaterial.Nutritions = new List<string>();
             if( nutritionsUL != null)
             {
                 foreach (var li in nutritionsUL.GetElementsByTagName("li"))
                 {
                     var name = li.TextContent;
-                    var value = li.FirstElementChild.TextContent;
-                    foodMaterial.Nutritions.Add($"{name} {value}");                
+                    //var value = li.FirstElementChild.TextContent;
+                    foodMaterial.Nutritions.Add(name);                
                 }
             }
 
