@@ -38,8 +38,10 @@
  * 1.1.4   2018-04-11  重构Crawler、美食天下食材分类导入
  * 1.2.1   2018-04-12  Add美食天下食材(含分类、图片、营养成分）导入Task
  *                     Add 营养成分
- *                     ADD 导入Manager
- *                     UPD 取消 FoodAndDishBuilder， 改为爬数据
+ *                     Add 导入Manager
+ *                     Upd 取消 FoodAndDishBuilder， 改为爬数据
+ * 1.2.2  2018-04-13   Add NeedDownloadFoodMaterialImage
+ *                     Add 爬到的食材数据按分类，持久化到文件中，便于部署；重构importManager、CrawlerConfig
  * **********************************************************/
 
 using System;
@@ -57,7 +59,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.2.1";
+        public const string Version = "1.2.2";
 
         /// <summary>
         /// Gets release (last build) date of the application.

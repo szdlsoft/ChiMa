@@ -39,14 +39,9 @@ namespace SixMan.ChiMa.Crawler
                 ChiMaConsts.ConnectionStringName
             );
 
-            //Configuration.UnitOfWork.IsTransactional = false;
-            //Configuration.UnitOfWork.IsTransactionScopeAvailable = false;
-            //Configuration.UnitOfWork.Scope = System.Transactions.TransactionScopeOption.RequiresNew;
-
             Configuration.BackgroundJobs.IsJobExecutionEnabled = true;
-            CrawlerConfig.RootPath = _appConfiguration.GetSection("ApplicationSet").GetSection("RootPath").Value;
 
-
+            CrawlerConfig.Load(_appConfiguration);
         }
 
         public override void Initialize()

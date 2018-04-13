@@ -23,15 +23,15 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
     {
         public Type TaskType => typeof(MeiShiChinaCrawler);
 
-        public IFoodMaterialImportManager importer { get; set; }
-        public IUnitOfWorkManager unitOfWorkManager { get; set; }
+        public IFoodMaterialDataStore importer { get; set; }
+   
 
         FoodMaterialRawData rawData;
 
         public MeiShiChinaCrawler()
                     :base()
         {
-            importer = NullFoodMaterialImportManager.Instance;
+            importer = NullFoodMaterialDataStore.Instance;
         }
 
         public void ConfigureJob(JobBuilder job)
@@ -110,7 +110,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             foreach( var midDiv in middleDivs)
             {
                 var middleCatName = midDiv.FirstElementChild.TextContent; //h2 // node 是可视树，用xpath， element 是逻辑树,用selector
-                if(importer.HasImport(topCatName, middleCatName))
+                if(importer.HasSave(topCatName, middleCatName))
                 {
                     continue; // 已经导入的，就不重复导入
                 }
@@ -138,11 +138,8 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                     Middle = middleCatName,
                     FoodMaterials = foodMaterials
                 };
-                //using( var uow = unitOfWorkManager.Begin())
-                //{
-                    importer.ImportCategory(rawItem);
-                    //uow.Complete();
-                //}
+
+                importer.SaveCategory(rawItem);
 
                 rawData.Add(rawItem);
 
@@ -189,8 +186,11 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             }
 
             //string localImgPath = "FoodMaterial\\" + englishName + ".jpg";
-            string localImgPath = FoodMaterial.GetImageLocalPath(englishName);
-            CrawlerHelper.DownloadImgAndSaveAsync(sourceImgUrl, localImgPath);
+            if(CrawlerConfig.NeedDownloadFoodMaterialImage && sourceImgUrl != null)
+            {
+                string localImgPath = FoodMaterial.GetImageLocalPath(englishName);
+                CrawlerHelper.DownloadImgAndSaveAsync(sourceImgUrl, localImgPath);
+            }
 
             var nutritionsUL = foodMaterialDoc.QuerySelector(".category_use_table.mt10.clear")?.FirstElementChild;
             foodMaterial.Nutritions = new List<string>();
