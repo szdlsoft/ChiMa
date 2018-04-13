@@ -117,20 +117,20 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
                 var ul = midDiv.LastElementChild;  //ul
                 var foodMaterials = new FoodMaterialCollection();
-                //foreach (var li in ul.GetElementsByTagName("li"))
-                //{
-                //    var a = li.FirstElementChild;
-                //    var foodMaterialName = a.TextContent;
-                //    var foodMaterialHref = a.GetAttribute("href");
+                foreach (var li in ul.GetElementsByTagName("li"))
+                {
+                    var a = li.FirstElementChild;
+                    var foodMaterialName = a.TextContent;
+                    var foodMaterialHref = a.GetAttribute("href");
 
-                //    var foodMaterial = await TryGetFoodMaterial(foodMaterialName, foodMaterialHref);
-                //    if (foodMaterial != null)
-                //    {
-                //        foodMaterials.Add(foodMaterial);
+                    var foodMaterial = await TryGetFoodMaterial(foodMaterialName, foodMaterialHref);
+                    if (foodMaterial != null)
+                    {
+                        foodMaterials.Add(foodMaterial);
 
-                //    }
-                //}
-                //Logger.Info($"    {middleCatName} 有{foodMaterials.Count}个食材 ");
+                    }
+                }
+                Logger.Info($"    {middleCatName} 有{foodMaterials.Count}个食材 ");
 
                 var rawItem = new FoodMaterialRawDataItem()
                 {
@@ -185,7 +185,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             var sourceImgUrl = foodMaterialDoc.QuerySelector("#category_pic")?.GetAttribute("data-src");
             if( sourceImgUrl == null)
             {
-                throw new AbpException($"{foodMaterialName} 找不到 category_pic");
+                Logger.Error($"{foodMaterialName} 找不到 category_pic");
             }
 
             //string localImgPath = "FoodMaterial\\" + englishName + ".jpg";

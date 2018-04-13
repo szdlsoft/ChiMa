@@ -50,6 +50,10 @@ namespace SixMan.ChiMa.Crawler
 
         internal static async Task DownloadImgAndSaveAsync(string sourceImgUrl, string imagePath)
         {
+            if( sourceImgUrl == null)
+            {
+                return;
+            }
             string fullPath = Path.Combine(CrawlerConfig.RootPath,  imagePath);
 
             if (File.Exists(fullPath))

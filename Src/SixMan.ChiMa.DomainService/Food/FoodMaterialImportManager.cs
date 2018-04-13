@@ -4,6 +4,7 @@ using AutoMapper;
 using SixMan.ChiMa.Domain.Food;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -33,50 +34,73 @@ namespace SixMan.ChiMa.DomainService
                 ImportCategory(item);
             }
         }
-
-        [UnitOfWork]
+        
         public void ImportCategory(FoodMaterialRawDataItem item)
         {
-            //unitOfWork.Options.IsTransactional = false;
+            FoodMaterialCategory cat = ImportOnlyCategorys(item.Top, item.Middle);
+            ImportOnlyNutritions(item.FoodMaterials.SelectMany(f => f.Nutritions).Distinct().ToList());
 
-            FoodMaterialCategory cat = GetOrCreateCategory(item);
-            foreach( var food in item.FoodMaterials)
+            foreach (var fm in item.FoodMaterials)
             {
-                ImportFoodMaterial(cat, food);
+                SaveFoodMaterials(fm, cat);
+            }
+        }       
+
+        [UnitOfWork]
+        public virtual void ImportOnlyNutritions(IEnumerable<string> nutritions)
+        {
+            List<Tuple<string, string>> nuts = new List<Tuple<string, string>>();
+            foreach( var nutrition in nutritions)
+            {
+                ParseNutrition(nutrition, out string name, out string unit);
+                if( ! nuts.Exists( item=> item.Item1 == name && item.Item2 == unit))
+                {
+                    nuts.Add(new Tuple<string, string>(name, unit));  //去重复
+                }
+            }
+
+            foreach( var nut in nuts)
+            {
+                SaveNutrition(nut.Item1, nut.Item2);
             }
         }
 
-        private FoodMaterialCategory GetOrCreateCategory(FoodMaterialRawDataItem item)
+        private void ParseNutrition(string nutrition, out string name, out string unit)
         {
-            var top = FoodMaterialCategoryRepository.FirstOrDefault( c => c.Name == item.Top );
-            if( top == null)
+            var matches = nutritionRegex.Match(nutrition).Groups;
+            name = matches["name"].Value;
+            unit = matches["unit"].Value;
+        }
+
+        [UnitOfWork]
+        public virtual FoodMaterialCategory ImportOnlyCategorys(string topStr, string middleStr)
+        {
+            var top = FoodMaterialCategoryRepository.FirstOrDefault(c => c.Name == topStr);
+            if (top == null)
             {
                 top = FoodMaterialCategoryRepository.Insert(new FoodMaterialCategory()
                 {
-                    Name = item.Top,
+                    Name = topStr,
                 });
-
-                //top = FoodMaterialCategoryRepository.Get(top.Id);
-
-                //var top2 = FoodMaterialCategoryRepository.FirstOrDefault(c => c.Name == item.Top);
-                //var top3 = top2;
             }
-            var middle = FoodMaterialCategoryRepository.FirstOrDefault(c => c.Name == item.Middle);
-            if( middle == null)
+            var middle = FoodMaterialCategoryRepository.FirstOrDefault(c => c.Name == middleStr);
+            if (middle == null)
             {
                 middle = FoodMaterialCategoryRepository.Insert(new FoodMaterialCategory()
                 {
-                    Name = item.Middle,
+                    Name = middleStr,
                     Parent = top,
                 });
             }
-            return middle;
-        }
 
-        private void ImportFoodMaterial(FoodMaterialCategory cat, FoodMaterialItem food)
+            return middle;
+        }       
+
+        [UnitOfWork]
+        public virtual void SaveFoodMaterials( FoodMaterialItem food,FoodMaterialCategory cat)
         {
             FoodMaterial fm = Mapper.Map<FoodMaterial>(food);
-            fm.FoodMaterialCategory = cat;
+            fm.FoodMaterialCategory = GetCategory(cat.Name); ;
 
             fm = FoodMaterialRepository.Insert(fm);
 
@@ -86,7 +110,13 @@ namespace SixMan.ChiMa.DomainService
             }
 
         }
-        static Regex nutritionRegex = new Regex(@"(?<name>\w+)\((?<unit>\w+)\)\s*\((?<content>\w+)\)");
+
+        private FoodMaterialCategory GetCategory(string name)
+        {
+            return FoodMaterialCategoryRepository.FirstOrDefault(c => c.Name == name); ;
+        }
+
+        static Regex nutritionRegex = new Regex(@"(?<name>\w+)\((?<unit>\w+)\)\s*\((?<content>[\d\.]+)\)");
         /// <summary>
         /// 
         /// </summary>
@@ -104,7 +134,7 @@ namespace SixMan.ChiMa.DomainService
             double content = 0;
             double.TryParse( matches["content"].Value, out content);
 
-            Nutrition nut = GetOrCreateNutrition(name, unit);
+            Nutrition nut = GetNutrition(name, unit);
 
             FoodMaterialNutritionRepository.Insert(new FoodMaterialNutrition()
             {
@@ -114,7 +144,13 @@ namespace SixMan.ChiMa.DomainService
             });
         }
 
-        private Nutrition GetOrCreateNutrition(string name, string unit)
+        private Nutrition GetNutrition(string name, string unit)
+        {
+            return NutritionRepository.FirstOrDefault(c => c.Name == name
+                                                               && c.Unit == unit);
+        }
+
+        private void SaveNutrition(string name, string unit)
         {
             var entity = NutritionRepository.FirstOrDefault(c => c.Name == name
                                                                && c.Unit == unit);
@@ -126,8 +162,6 @@ namespace SixMan.ChiMa.DomainService
                     Unit = unit,
                 });
             }
-
-            return entity;
         }
     }
 }
