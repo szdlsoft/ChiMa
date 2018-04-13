@@ -70,6 +70,10 @@ namespace SixMan.ChiMa.DomainService
             var matches = nutritionRegex.Match(nutrition).Groups;
             name = matches["name"].Value;
             unit = matches["unit"].Value;
+            if(string.IsNullOrEmpty(name))
+            {
+                name = nutrition; //如正则没解析成功，则copy全串
+            }
         }
 
         [UnitOfWork]

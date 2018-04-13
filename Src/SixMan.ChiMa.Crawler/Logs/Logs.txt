@@ -20936,3 +20936,18 @@ INFO  2018-04-13 14:37:31,743 [10   ] .Crawler.CrawlerTasks.MeiShiChinaCrawler -
 INFO  2018-04-13 14:37:34,653 [10   ] .Crawler.CrawlerTasks.MeiShiChinaCrawler - 导入米面豆乳 方便食品类耗时：68.8037443
 INFO  2018-04-13 14:37:34,653 [10   ] .Crawler.CrawlerTasks.MeiShiChinaCrawler - 导入食材顶级分类: 调味品 //www.meishichina.com/YuanLiao/category/tiaoweipinl/
 INFO  2018-04-13 14:37:34,821 [6    ] .Crawler.CrawlerTasks.MeiShiChinaCrawler -    有2 中类 
+INFO  2018-04-13 14:38:32,179 [16   ] .Crawler.CrawlerTasks.MeiShiChinaCrawler -     调味品 有231个食材 
+INFO  2018-04-13 14:38:46,062 [16   ] .Crawler.CrawlerTasks.MeiShiChinaCrawler - 导入调味品 调味品耗时：71.409303
+INFO  2018-04-13 14:38:47,098 [15   ] .Crawler.CrawlerTasks.MeiShiChinaCrawler -     食用油 有5个食材 
+INFO  2018-04-13 14:38:47,969 [15   ] .Crawler.CrawlerTasks.MeiShiChinaCrawler - 导入调味品 食用油耗时：73.3158503
+INFO  2018-04-13 14:38:47,969 [15   ] .Crawler.CrawlerTasks.MeiShiChinaCrawler - 导入食材顶级分类: 药食及其他 //www.meishichina.com/YuanLiao/category/yaoshiqita/
+INFO  2018-04-13 14:38:48,124 [16   ] .Crawler.CrawlerTasks.MeiShiChinaCrawler -    有1 中类 
+INFO  2018-04-13 14:39:09,692 [3    ] .Crawler.CrawlerTasks.MeiShiChinaCrawler -     药食及其他 有94个食材 
+INFO  2018-04-13 14:39:15,486 [3    ] .Crawler.CrawlerTasks.MeiShiChinaCrawler - 导入药食及其他 药食及其他耗时：27.5164051
+INFO  2018-04-13 14:39:15,491 [3    ] .Crawler.CrawlerTasks.MeiShiChinaCrawler - 共有7 个大类 30 个中类 1754 个食材 
+INFO  2018-04-13 14:39:15,491 [3    ] .Crawler.CrawlerTasks.MeiShiChinaCrawler - 导入美食天下的食材菜谱总耗时：568.7620973
+DEBUG 2018-04-13 14:39:15,491 [3    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaCrawler sucessfully executed.
+DEBUG 2018-04-13 14:39:15,491 [3    ] Quartz.Core.JobRunShell                  - Trigger instruction : NoInstruction
+DEBUG 2018-04-13 14:39:15,492 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - No executing jobs remaining, all threads stopped.
+DEBUG 2018-04-13 14:39:15,492 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutdown of threadpool complete.
+INFO  2018-04-13 14:39:15,501 [5    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete.
