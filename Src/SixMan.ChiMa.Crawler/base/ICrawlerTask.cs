@@ -16,5 +16,7 @@ namespace SixMan.ChiMa.Crawler
         void ConfigureTrigger(TriggerBuilder trigger);
 
         Type TaskType { get; }
+
+        string Name { get; }
     }
 }

@@ -68,7 +68,11 @@ namespace SixMan.ChiMa.Crawler
 
             foreach (var task in tasks)
             {
-                taskManager.ScheduleAsync(task);
+                if (CrawlerConfig.GetTaskEnabled(task.Name))
+                {
+                    taskManager.ScheduleAsync(task);
+                }
+
             }
 
             //var task = Resolve<MeiShiChinaCrawler>();

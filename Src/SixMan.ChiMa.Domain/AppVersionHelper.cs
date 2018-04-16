@@ -42,6 +42,7 @@
  *                     Upd 取消 FoodAndDishBuilder， 改为爬数据
  * 1.2.2  2018-04-13   Add NeedDownloadFoodMaterialImage
  *                     Add 爬到的食材数据按分类，持久化到文件中，便于部署；重构importManager、CrawlerConfig
+ * 1.2.3  2018-04-16   Add 爬菜谱总体设计,爬菜谱类别                    
  * **********************************************************/
 
 using System;
@@ -59,7 +60,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.2.2";
+        public const string Version = "1.2.3";
 
         /// <summary>
         /// Gets release (last build) date of the application.

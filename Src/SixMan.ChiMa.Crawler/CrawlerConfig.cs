@@ -11,21 +11,31 @@ namespace SixMan.ChiMa.Crawler
         public static bool NeedCrawlerFoodMaterial = true;
         public static bool NeedDownloadFoodMaterialImage = true;
 
+        private static IConfigurationSection _appSetting = null;
+
         internal static void Load(IConfigurationRoot appConfiguration)
         {
             RootPath = appConfiguration.GetConfigStr("RootPath");
             NeedCrawlerFoodMaterial = appConfiguration.GetConfigBool("NeedCrawlerFoodMaterial");
             NeedDownloadFoodMaterialImage = appConfiguration.GetConfigBool("NeedDownloadFoodMaterialImage");
+
+            _appSetting = appConfiguration.GetSection("ApplicationSet");
         }
 
-        private static bool GetConfigBool( this IConfigurationRoot appConfiguration, string key)
+        public static bool GetConfigBool( this IConfigurationRoot appConfiguration, string key)
         {
             return bool.Parse(appConfiguration.GetSection("ApplicationSet").GetSection(key).Value);
         }
 
-        private static string GetConfigStr(this IConfigurationRoot appConfiguration, string key)
+        public static string GetConfigStr(this IConfigurationRoot appConfiguration, string key)
         {
             return appConfiguration.GetSection("ApplicationSet").GetSection(key).Value;
+        }
+
+        internal static bool GetTaskEnabled( string name )
+        {
+            string strValue = _appSetting.GetSection(name).Value ?? "true";
+            return bool.Parse(strValue);
         }
     }
 }

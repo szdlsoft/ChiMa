@@ -17,18 +17,19 @@ using System.Threading.Tasks;
 
 namespace SixMan.ChiMa.Crawler.CrawlerTasks
 {
-    public class MeiShiChinaCrawler
+    public class MeiShiChinaFMCrawler
          : JobBase
          , ICrawlerTask
     {
-        public Type TaskType => typeof(MeiShiChinaCrawler);
+        public Type TaskType => typeof(MeiShiChinaFMCrawler);
 
         public IFoodMaterialDataStore importer { get; set; }
-   
+
+        public string Name => "MeiShiChinaFM";
 
         FoodMaterialRawData rawData;
 
-        public MeiShiChinaCrawler()
+        public MeiShiChinaFMCrawler()
                     :base()
         {
             importer = NullFoodMaterialDataStore.Instance;
@@ -36,7 +37,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
         public void ConfigureJob(JobBuilder job)
         {
-            job.WithIdentity("美食天下", "食材菜谱")
+            job.WithIdentity("美食天下", "食材")
                                          .WithDescription("美食天下");
         }
 

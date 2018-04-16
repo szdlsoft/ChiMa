@@ -28,7 +28,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
         protected string Area => "苏州市";
 
-
+        public string Name => "SZFMPrice";
 
         public void ConfigureJob(JobBuilder job)
         {
