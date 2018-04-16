@@ -1,5 +1,6 @@
 ﻿using Abp.Quartz;
 using Quartz;
+using SixMan.ChiMa.DomainService;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -50,7 +51,91 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             }
         }
 
-        private Task ExecuteImp(IJobExecutionContext context)
+        private async Task ExecuteImp(IJobExecutionContext context)
+        {
+            //爬类别
+            DishCategoryRawData dcr = GetDishCategoryRawData();
+            if (dcr == null)
+            {
+                CrawlDishCategory();
+                return;
+            }
+            //爬列表
+            foreach( var dcrItem in dcr)
+            {
+                CrawDishList(dcrItem);
+                if( UserBreaker())
+                {
+                    return;
+                }
+            }
+
+            //爬详情
+            DishListRawData dlr = GetCrawDishList();
+            foreach( var dlrItem in dlr)
+            {
+                CrawlDishDetails(dlrItem); //同时写数据库
+                if (UserBreaker())
+                {
+                    return;
+                }
+            }
+
+            //爬img
+            DishImageRawData dir = GetDishImage();
+            foreach( var dirItem in dir)
+            {
+                CrawlDishImage(dirItem);
+                if (UserBreaker())
+                {
+                    return;
+                }
+            }
+
+
+        }
+
+        private bool UserBreaker()
+        {
+            if (Console.KeyAvailable)
+            {
+                return Console.ReadKey(true).Key == ConsoleKey.F1;
+            }
+
+            return false;
+        }
+
+        private DishCategoryRawData GetDishCategoryRawData()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CrawlDishCategory()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CrawDishList(DishCategoryRawDataItem dcrItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        private DishListRawData GetCrawDishList()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CrawlDishDetails(DishListRawDataItem dlrItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        private DishImageRawData GetDishImage()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CrawlDishImage(DishImageRawDataItem dirItem)
         {
             throw new NotImplementedException();
         }
