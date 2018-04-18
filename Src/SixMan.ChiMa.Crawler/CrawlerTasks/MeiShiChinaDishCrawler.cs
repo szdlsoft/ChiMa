@@ -63,7 +63,10 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             //爬列表
             foreach( var dcrItem in dcr)
             {
-                CrawDishList(dcrItem);
+                if(dcrItem.NeedCrawl)
+                {
+                    CrawDishList(dcrItem);
+                }
                 if( UserBreaker())
                 {
                     return;
@@ -82,7 +85,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             }
 
             //爬img
-            DishImageRawData dir = GetDishImage();
+            DishDetailsRawData dir = GetDishDetails();
             foreach( var dirItem in dir)
             {
                 CrawlDishImage(dirItem);
@@ -107,37 +110,45 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
         private DishCategoryRawData GetDishCategoryRawData()
         {
-            throw new NotImplementedException();
+            return SerializeHelper.Get<DishCategoryRawData>("Dish","DishCategory");
         }
 
         private void CrawlDishCategory()
+        {
+            DishCategoryRawData data = CrawDishCategoryData();
+            SerializeHelper.Save<DishCategoryRawData>("Dish", "DishCategory");
+        }
+
+        private DishCategoryRawData CrawDishCategoryData()
         {
             throw new NotImplementedException();
         }
 
         private void CrawDishList(DishCategoryRawDataItem dcrItem)
         {
-            throw new NotImplementedException();
         }
 
         private DishListRawData GetCrawDishList()
         {
-            throw new NotImplementedException();
+            // 获取需要下载列表文件
+            // 一次只 下一个
+            return null;
         }
 
         private void CrawlDishDetails(DishListRawDataItem dlrItem)
         {
-            throw new NotImplementedException();
         }
 
-        private DishImageRawData GetDishImage()
+        private DishDetailsRawData GetDishDetails()
         {
-            throw new NotImplementedException();
+            // 从 DishDetailsRawData 获取img
+            return null;
         }
 
-        private void CrawlDishImage(DishImageRawDataItem dirItem)
+        private void CrawlDishImage(DishDetailsRawDataItem dirItem)
         {
-            throw new NotImplementedException();
+            // 每次下载1000个！
+            //并发下载
         }
     }
 }

@@ -10,7 +10,8 @@ namespace SixMan.ChiMa.DomainService
     }
 
     public class DishListRawDataItem
-    {
-
+        : List<DishDetailsRawDataItem>
+    {        
+        public string Tag { get; set; }        
     }
 }
