@@ -1,0 +1,1730 @@
+[
+  {
+    "Tag": "常见菜式,热菜",
+    "ListUrl": "//home.meishichina.com/recipe/recai/",
+    "PagesNumber": 100,
+    "NeedCrawl": true
+  },
+  {
+    "Tag": "常见菜式,凉菜",
+    "ListUrl": "//home.meishichina.com/recipe/liangcai/",
+    "PagesNumber": 100,
+    "NeedCrawl": true
+  },
+  {
+    "Tag": "常见菜式,汤羹",
+    "ListUrl": "//home.meishichina.com/recipe/tanggeng/",
+    "PagesNumber": 100,
+    "NeedCrawl": true
+  },
+  {
+    "Tag": "常见菜式,主食",
+    "ListUrl": "//home.meishichina.com/recipe/zhushi/",
+    "PagesNumber": 100,
+    "NeedCrawl": true
+  },
+  {
+    "Tag": "常见菜式,小吃",
+    "ListUrl": "//home.meishichina.com/recipe/xiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": true
+  },
+  {
+    "Tag": "常见菜式,家常菜",
+    "ListUrl": "//home.meishichina.com/recipe/jiachang/",
+    "PagesNumber": 100,
+    "NeedCrawl": true
+  },
+  {
+    "Tag": "常见菜式,泡酱腌菜",
+    "ListUrl": "//home.meishichina.com/recipe/jiangpaoyancai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "常见菜式,西餐",
+    "ListUrl": "//home.meishichina.com/recipe/xican/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "常见菜式,烘焙",
+    "ListUrl": "//home.meishichina.com/recipe/hongbei/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "常见菜式,烤箱菜",
+    "ListUrl": "//home.meishichina.com/recipe/kaoxiangcai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "常见菜式,饮品",
+    "ListUrl": "//home.meishichina.com/recipe/yinpin/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "常见菜式,零食",
+    "ListUrl": "//home.meishichina.com/recipe/lingshi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "常见菜式,火锅",
+    "ListUrl": "//home.meishichina.com/recipe/huoguo/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "常见菜式,自制食材",
+    "ListUrl": "//home.meishichina.com/recipe/zizhishicai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "常见菜式,海鲜",
+    "ListUrl": "//home.meishichina.com/recipe/haixian/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "常见菜式,宴客菜",
+    "ListUrl": "//home.meishichina.com/recipe/yankecai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,米饭",
+    "ListUrl": "//home.meishichina.com/recipe/mifan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,炒饭",
+    "ListUrl": "//home.meishichina.com/recipe/chaofan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,面食",
+    "ListUrl": "//home.meishichina.com/recipe/mianshi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,包子",
+    "ListUrl": "//home.meishichina.com/recipe/baozi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,饺子",
+    "ListUrl": "//home.meishichina.com/recipe/jiaozi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,馒头花卷",
+    "ListUrl": "//home.meishichina.com/recipe/mantou/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,面条",
+    "ListUrl": "//home.meishichina.com/recipe/miantiao/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,饼",
+    "ListUrl": "//home.meishichina.com/recipe/bing/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,粥",
+    "ListUrl": "//home.meishichina.com/recipe/zhou/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,馄饨",
+    "ListUrl": "//home.meishichina.com/recipe/hundun/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,五谷杂粮",
+    "ListUrl": "//home.meishichina.com/recipe/wuguzaliang/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,北京小吃",
+    "ListUrl": "//home.meishichina.com/recipe/beijingxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,陕西小吃",
+    "ListUrl": "//home.meishichina.com/recipe/shanxixiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,广东小吃",
+    "ListUrl": "//home.meishichina.com/recipe/guangdongxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,四川小吃",
+    "ListUrl": "//home.meishichina.com/recipe/sichuanxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,重庆小吃",
+    "ListUrl": "//home.meishichina.com/recipe/chongqingxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,天津小吃",
+    "ListUrl": "//home.meishichina.com/recipe/tianjinxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,上海小吃",
+    "ListUrl": "//home.meishichina.com/recipe/shanghaixiochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,福建小吃",
+    "ListUrl": "//home.meishichina.com/recipe/fujianxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,湖南小吃",
+    "ListUrl": "//home.meishichina.com/recipe/hunanxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,湖北小吃",
+    "ListUrl": "//home.meishichina.com/recipe/hubeixiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,江西小吃",
+    "ListUrl": "//home.meishichina.com/recipe/jiangxixiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,山东小吃",
+    "ListUrl": "//home.meishichina.com/recipe/shandongxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,山西小吃",
+    "ListUrl": "//home.meishichina.com/recipe/jinxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,河南小吃",
+    "ListUrl": "//home.meishichina.com/recipe/henanxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,台湾小吃",
+    "ListUrl": "//home.meishichina.com/recipe/taiwanxiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,江浙小吃",
+    "ListUrl": "//home.meishichina.com/recipe/jiangzhexiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,云贵小吃",
+    "ListUrl": "//home.meishichina.com/recipe/yunguixiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,东北小吃",
+    "ListUrl": "//home.meishichina.com/recipe/dongbeixiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "主食,小吃,西北小吃",
+    "ListUrl": "//home.meishichina.com/recipe/xibeixiaochi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,甜品",
+    "ListUrl": "//home.meishichina.com/recipe/tianpin/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,冰品",
+    "ListUrl": "//home.meishichina.com/recipe/bingpin/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,果汁",
+    "ListUrl": "//home.meishichina.com/recipe/guozhi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,糖水",
+    "ListUrl": "//home.meishichina.com/recipe/tangshui/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,布丁",
+    "ListUrl": "//home.meishichina.com/recipe/buding/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,果酱",
+    "ListUrl": "//home.meishichina.com/recipe/guojiang/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,果冻",
+    "ListUrl": "//home.meishichina.com/recipe/guodong/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,酸奶",
+    "ListUrl": "//home.meishichina.com/recipe/suannai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,鸡尾酒",
+    "ListUrl": "//home.meishichina.com/recipe/jiweijiu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,咖啡",
+    "ListUrl": "//home.meishichina.com/recipe/kafei/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,豆浆",
+    "ListUrl": "//home.meishichina.com/recipe/doujiang/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,奶昔",
+    "ListUrl": "//home.meishichina.com/recipe/naixi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "甜品,饮品,冰淇淋",
+    "ListUrl": "//home.meishichina.com/recipe/bingqilin/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "适宜人群,孕妇",
+    "ListUrl": "//home.meishichina.com/recipe/yunfu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "适宜人群,产妇",
+    "ListUrl": "//home.meishichina.com/recipe/chanfu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "适宜人群,婴儿",
+    "ListUrl": "//home.meishichina.com/recipe/yinger/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "适宜人群,儿童",
+    "ListUrl": "//home.meishichina.com/recipe/ertong/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "适宜人群,老人",
+    "ListUrl": "//home.meishichina.com/recipe/laoren/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "适宜人群,幼儿",
+    "ListUrl": "//home.meishichina.com/recipe/youer/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "适宜人群,哺乳期",
+    "ListUrl": "//home.meishichina.com/recipe/buruqi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "适宜人群,青少年",
+    "ListUrl": "//home.meishichina.com/recipe/qingshaonian/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,健康食谱",
+    "ListUrl": "//home.meishichina.com/recipe/jiankangshipu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,减肥瘦身",
+    "ListUrl": "//home.meishichina.com/recipe/shoushen/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,贫血",
+    "ListUrl": "//home.meishichina.com/recipe/pinxue/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,痛经",
+    "ListUrl": "//home.meishichina.com/recipe/tongjing/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,清热祛火",
+    "ListUrl": "//home.meishichina.com/recipe/qingrequhuo/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,滋阴",
+    "ListUrl": "//home.meishichina.com/recipe/ziyin/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,壮阳",
+    "ListUrl": "//home.meishichina.com/recipe/zhuangyang/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,便秘",
+    "ListUrl": "//home.meishichina.com/recipe/bianmi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,排毒养颜",
+    "ListUrl": "//home.meishichina.com/recipe/paiduyangyan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,滋润补水",
+    "ListUrl": "//home.meishichina.com/recipe/ziyinbushuui/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,健脾养胃",
+    "ListUrl": "//home.meishichina.com/recipe/jianbiyangwei/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,护肝明目",
+    "ListUrl": "//home.meishichina.com/recipe/huganmingmu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,清肺止咳",
+    "ListUrl": "//home.meishichina.com/recipe/qingfeizhike/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,下奶",
+    "ListUrl": "//home.meishichina.com/recipe/xianai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,补钙",
+    "ListUrl": "//home.meishichina.com/recipe/bugai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,醒酒",
+    "ListUrl": "//home.meishichina.com/recipe/xingjiu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,抗过敏",
+    "ListUrl": "//home.meishichina.com/recipe/kangguomin/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,防辐射",
+    "ListUrl": "//home.meishichina.com/recipe/fangfushe/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,提高免疫力",
+    "ListUrl": "//home.meishichina.com/recipe/tigaomianyili/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,流感",
+    "ListUrl": "//home.meishichina.com/recipe/liugan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,驱寒暖身",
+    "ListUrl": "//home.meishichina.com/recipe/quhannuanshen/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,秋冬进补",
+    "ListUrl": "//home.meishichina.com/recipe/qiudongjinbu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "食疗食补,消暑解渴",
+    "ListUrl": "//home.meishichina.com/recipe/xiaoshujieke/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,早餐",
+    "ListUrl": "//home.meishichina.com/recipe/zaocan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,下午茶",
+    "ListUrl": "//home.meishichina.com/recipe/xiawucha/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,二人世界",
+    "ListUrl": "//home.meishichina.com/recipe/erren/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,野餐",
+    "ListUrl": "//home.meishichina.com/recipe/yecan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,开胃菜",
+    "ListUrl": "//home.meishichina.com/recipe/kaiweicai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,私房菜",
+    "ListUrl": "//home.meishichina.com/recipe/sifangcai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,快餐",
+    "ListUrl": "//home.meishichina.com/recipe/kuaican/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,快手菜",
+    "ListUrl": "//home.meishichina.com/recipe/kuaishoucai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,宿舍时代",
+    "ListUrl": "//home.meishichina.com/recipe/susheshidai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,中式宴请",
+    "ListUrl": "//home.meishichina.com/recipe/zhongshiyanqing/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "场景,西式宴请",
+    "ListUrl": "//home.meishichina.com/recipe/xishiyanqing/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "饮食方式,素食",
+    "ListUrl": "//home.meishichina.com/recipe/sushi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "饮食方式,素菜",
+    "ListUrl": "//home.meishichina.com/recipe/sucai2/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "饮食方式,清真菜",
+    "ListUrl": "//home.meishichina.com/recipe/qingzhencai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "饮食方式,春季食谱",
+    "ListUrl": "//home.meishichina.com/recipe/chunji/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "饮食方式,夏季食谱",
+    "ListUrl": "//home.meishichina.com/recipe/xiaji/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "饮食方式,秋季食谱",
+    "ListUrl": "//home.meishichina.com/recipe/qiuji/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "饮食方式,冬季食谱",
+    "ListUrl": "//home.meishichina.com/recipe/dongji/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "饮食方式,小清新",
+    "ListUrl": "//home.meishichina.com/recipe/xiaoqingxin/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "饮食方式,高颜值",
+    "ListUrl": "//home.meishichina.com/recipe/gaoyanzhi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,川菜",
+    "ListUrl": "//home.meishichina.com/recipe/chuancai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,鲁菜",
+    "ListUrl": "//home.meishichina.com/recipe/lucai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,闽菜",
+    "ListUrl": "//home.meishichina.com/recipe/mincai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,粤菜",
+    "ListUrl": "//home.meishichina.com/recipe/yuecai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,苏菜",
+    "ListUrl": "//home.meishichina.com/recipe/sucai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,浙菜",
+    "ListUrl": "//home.meishichina.com/recipe/zhecai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,湘菜",
+    "ListUrl": "//home.meishichina.com/recipe/xiangcai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,徽菜",
+    "ListUrl": "//home.meishichina.com/recipe/huicai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,淮扬菜",
+    "ListUrl": "//home.meishichina.com/recipe/huaiyangcai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,豫菜",
+    "ListUrl": "//home.meishichina.com/recipe/yucai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,晋菜",
+    "ListUrl": "//home.meishichina.com/recipe/jincai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,鄂菜",
+    "ListUrl": "//home.meishichina.com/recipe/ecai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,云南菜",
+    "ListUrl": "//home.meishichina.com/recipe/yunnancai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,北京菜",
+    "ListUrl": "//home.meishichina.com/recipe/beijingcai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,东北菜",
+    "ListUrl": "//home.meishichina.com/recipe/dongbeicai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,西北菜",
+    "ListUrl": "//home.meishichina.com/recipe/xibeicai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,贵州菜",
+    "ListUrl": "//home.meishichina.com/recipe/guizhoucai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,上海菜",
+    "ListUrl": "//home.meishichina.com/recipe/shanghaicai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,新疆菜",
+    "ListUrl": "//home.meishichina.com/recipe/xinjiangcai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,客家菜",
+    "ListUrl": "//home.meishichina.com/recipe/kejiacai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,台湾美食",
+    "ListUrl": "//home.meishichina.com/recipe/taiwancai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,香港美食",
+    "ListUrl": "//home.meishichina.com/recipe/xianggangcai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,澳门美食",
+    "ListUrl": "//home.meishichina.com/recipe/aomeicai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,赣菜",
+    "ListUrl": "//home.meishichina.com/recipe/gancai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "中式菜系,中式菜系",
+    "ListUrl": "//home.meishichina.com/recipe/zhongshicaixi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,日本料理",
+    "ListUrl": "//home.meishichina.com/recipe/ribencai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,韩国料理",
+    "ListUrl": "//home.meishichina.com/recipe/hanguocai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,泰国菜",
+    "ListUrl": "//home.meishichina.com/recipe/taiguocai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,印度菜",
+    "ListUrl": "//home.meishichina.com/recipe/yiducai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,法国菜",
+    "ListUrl": "//home.meishichina.com/recipe/faguocai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,意大利菜",
+    "ListUrl": "//home.meishichina.com/recipe/yidalicai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,西班牙菜",
+    "ListUrl": "//home.meishichina.com/recipe/xibanya/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,英国菜",
+    "ListUrl": "//home.meishichina.com/recipe/yingguocai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,越南菜",
+    "ListUrl": "//home.meishichina.com/recipe/yuenancai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,墨西哥菜",
+    "ListUrl": "//home.meishichina.com/recipe/moxigecai/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "外国美食,外国美食",
+    "ListUrl": "//home.meishichina.com/recipe/waiguomeishi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,蛋糕",
+    "ListUrl": "//home.meishichina.com/recipe/dangao/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,面包",
+    "ListUrl": "//home.meishichina.com/recipe/mianbao/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,饼干",
+    "ListUrl": "//home.meishichina.com/recipe/binggan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,派塔",
+    "ListUrl": "//home.meishichina.com/recipe/paita/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,吐司",
+    "ListUrl": "//home.meishichina.com/recipe/tusi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,戚风蛋糕",
+    "ListUrl": "//home.meishichina.com/recipe/qifeng/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,纸杯蛋糕",
+    "ListUrl": "//home.meishichina.com/recipe/zhibei/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,蛋糕卷",
+    "ListUrl": "//home.meishichina.com/recipe/dangaojuan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,玛芬蛋糕",
+    "ListUrl": "//home.meishichina.com/recipe/mafen/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,乳酪蛋糕",
+    "ListUrl": "//home.meishichina.com/recipe/rulao/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,芝士蛋糕",
+    "ListUrl": "//home.meishichina.com/recipe/zhishi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,奶油蛋糕",
+    "ListUrl": "//home.meishichina.com/recipe/naiyou/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,批萨",
+    "ListUrl": "//home.meishichina.com/recipe/pisa/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,慕斯",
+    "ListUrl": "//home.meishichina.com/recipe/musi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,曲奇",
+    "ListUrl": "//home.meishichina.com/recipe/quqi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "烘焙,翻糖",
+    "ListUrl": "//home.meishichina.com/recipe/fantang/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "传统美食,粽子",
+    "ListUrl": "//home.meishichina.com/recipe/zongzi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "传统美食,月饼",
+    "ListUrl": "//home.meishichina.com/recipe/yuebing/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "传统美食,春饼",
+    "ListUrl": "//home.meishichina.com/recipe/chunbing/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "传统美食,元宵",
+    "ListUrl": "//home.meishichina.com/recipe/yuanxiao/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "传统美食,汤圆",
+    "ListUrl": "//home.meishichina.com/recipe/tangyuan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "传统美食,青团",
+    "ListUrl": "//home.meishichina.com/recipe/qingtuan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "传统美食,腊八粥",
+    "ListUrl": "//home.meishichina.com/recipe/labazhou/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "传统美食,春卷",
+    "ListUrl": "//home.meishichina.com/recipe/chunjuan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "传统美食,传统美食",
+    "ListUrl": "//home.meishichina.com/recipe/chuantongmeishi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,立冬",
+    "ListUrl": "//home.meishichina.com/recipe/lidong/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,冬至",
+    "ListUrl": "//home.meishichina.com/recipe/dongzhi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,腊八",
+    "ListUrl": "//home.meishichina.com/recipe/laba/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,端午节",
+    "ListUrl": "//home.meishichina.com/recipe/duanwu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,中秋",
+    "ListUrl": "//home.meishichina.com/recipe/zhongqiu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,立春",
+    "ListUrl": "//home.meishichina.com/recipe/lichun/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,元宵节",
+    "ListUrl": "//home.meishichina.com/recipe/yuanxiaojie/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,贴秋膘",
+    "ListUrl": "//home.meishichina.com/recipe/tieqiubiao/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,清明",
+    "ListUrl": "//home.meishichina.com/recipe/qingming/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,年夜饭",
+    "ListUrl": "//home.meishichina.com/recipe/nianyefan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,圣诞节",
+    "ListUrl": "//home.meishichina.com/recipe/shengdanjie/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,感恩节",
+    "ListUrl": "//home.meishichina.com/recipe/ganenjie/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,万圣节",
+    "ListUrl": "//home.meishichina.com/recipe/wanshengjie/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,情人节",
+    "ListUrl": "//home.meishichina.com/recipe/qingrenjie/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,复活节",
+    "ListUrl": "//home.meishichina.com/recipe/fuhuojie/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,雨水",
+    "ListUrl": "//home.meishichina.com/recipe/yushui/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,惊蛰",
+    "ListUrl": "//home.meishichina.com/recipe/jingzhi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,春分",
+    "ListUrl": "//home.meishichina.com/recipe/chunfen/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,谷雨",
+    "ListUrl": "//home.meishichina.com/recipe/guyu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,立夏",
+    "ListUrl": "//home.meishichina.com/recipe/lixia/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,小满",
+    "ListUrl": "//home.meishichina.com/recipe/xiaoman/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,芒种",
+    "ListUrl": "//home.meishichina.com/recipe/mangzhong/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,夏至",
+    "ListUrl": "//home.meishichina.com/recipe/xiazhi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,小暑",
+    "ListUrl": "//home.meishichina.com/recipe/xiaoshu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,大暑",
+    "ListUrl": "//home.meishichina.com/recipe/dashu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,立秋",
+    "ListUrl": "//home.meishichina.com/recipe/xiqiu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,处暑",
+    "ListUrl": "//home.meishichina.com/recipe/chushu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,白露",
+    "ListUrl": "//home.meishichina.com/recipe/bailu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,秋分",
+    "ListUrl": "//home.meishichina.com/recipe/qiufen/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,寒露",
+    "ListUrl": "//home.meishichina.com/recipe/hanlu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,霜降",
+    "ListUrl": "//home.meishichina.com/recipe/shuangjiang/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,小雪",
+    "ListUrl": "//home.meishichina.com/recipe/xiaoxue/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,大雪",
+    "ListUrl": "//home.meishichina.com/recipe/daxue/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,小寒",
+    "ListUrl": "//home.meishichina.com/recipe/xiaohan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,大寒",
+    "ListUrl": "//home.meishichina.com/recipe/dahan/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,二月二",
+    "ListUrl": "//home.meishichina.com/recipe/eryueer/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,母亲节",
+    "ListUrl": "//home.meishichina.com/recipe/muqinjie/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,父亲节",
+    "ListUrl": "//home.meishichina.com/recipe/fuqinjie/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,儿童节",
+    "ListUrl": "//home.meishichina.com/recipe/ertongjie/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,七夕",
+    "ListUrl": "//home.meishichina.com/recipe/qixi/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,重阳节",
+    "ListUrl": "//home.meishichina.com/recipe/chongyangjie/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "节日食俗,节日习俗",
+    "ListUrl": "//home.meishichina.com/recipe/jierixisu/",
+    "PagesNumber": 100,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按制作难度,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-level-view-1.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按制作难度,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-level-view-2.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按制作难度,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-level-view-3.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按制作难度,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-level-view-4.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按所需时间,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-during-view-1.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按所需时间,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-during-view-2.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按所需时间,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-during-view-3.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按所需时间,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-during-view-4.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按所需时间,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-during-view-5.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按所需时间,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-during-view-6.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按所需时间,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-during-view-7.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按所需时间,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-during-view-8.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-1.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-2.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-3.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-4.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-5.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-6.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-7.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-8.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-9.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-10.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-11.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-12.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-13.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-14.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-15.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-16.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-17.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-18.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-19.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-20.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-21.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-22.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-23.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-24.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-25.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-26.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-27.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-28.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按菜品口味,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-cuisine-view-50.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-1.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-2.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-3.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-4.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-5.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-6.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-7.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-8.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-9.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-10.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-11.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-12.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-13.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-14.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-15.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-16.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-17.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-18.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-19.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-20.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-21.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-22.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-30.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-23.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-24.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-25.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-26.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-27.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-28.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-29.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-31.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-32.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-33.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  },
+  {
+    "Tag": "按主要工艺,",
+    "ListUrl": "//home.meishichina.com/recipe-type-do-technics-view-50.html",
+    "PagesNumber": 0,
+    "NeedCrawl": false
+  }
+]

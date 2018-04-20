@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,9 +13,9 @@ namespace SixMan.ChiMa.DomainService
     }
 
     public class DishCategoryRawDataItem
-    {       
+    {
         /// <summary>
-        /// 类别
+        /// 类别，有多个以,来分割
         /// </summary>
         public string Tag { get; set; }
         /// <summary>
@@ -29,5 +30,10 @@ namespace SixMan.ChiMa.DomainService
         /// 需要爬
         /// </summary>
         public bool NeedCrawl { get; set; }
+        /// <summary>
+        /// Tag 转文件名
+        /// </summary>
+        [JsonIgnore]
+        public string FileName => "DishList_" +  Tag.Replace(",", "_");
     }
 }

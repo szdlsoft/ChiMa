@@ -89,5 +89,21 @@ namespace SixMan.ChiMa.Crawler
 
             return  httpHelpers.GetImg(hr);
         }
+
+        internal static string GetRedirectUrl(string listUrl)
+        {
+            HttpHelpers httpHelpers = new HttpHelpers();
+            HttpItems items = new HttpItems();
+            //首页
+            items.Url = listUrl;//请求地址
+            items.Allowautoredirect = false;
+            HttpResults hr =  httpHelpers.GetHtml(items);
+            //Console.WriteLine(hr.Html);
+
+            return //hr.ResponseUrl 
+                    hr.RedirectUrl 
+                   //?? hr.Header["Location"].ToString()
+                   ;
+        }
     }
 }

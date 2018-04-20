@@ -20951,3 +20951,1054 @@ DEBUG 2018-04-13 14:39:15,491 [3    ] Quartz.Core.JobRunShell                  -
 DEBUG 2018-04-13 14:39:15,492 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - No executing jobs remaining, all threads stopped.
 DEBUG 2018-04-13 14:39:15,492 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutdown of threadpool complete.
 INFO  2018-04-13 14:39:15,501 [5    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete.
+DEBUG 2018-04-20 14:07:05,077 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 14:07:07,473 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 14:07:10,808 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,815 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,815 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,816 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,817 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,817 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,817 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,818 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,822 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:10,829 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 14:07:15,044 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:07:15,286 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 14:07:15,436 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 14:07:15,475 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 14:07:15,478 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 14:07:15,500 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 14:07:15,500 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 14:07:15,500 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 14:07:15,505 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 14:07:16,966 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:07:19,486 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 14:07:19,742 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 14:07:19,826 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 14:07:19,884 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 14:07:20,997 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 14:07:21,107 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 14:07:21,107 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 14:07:21,115 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 14:07:21,116 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 14:07:21,118 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 14:07:21,118 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 14:07:21,118 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 14:07:21,119 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 14:07:21,119 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 14:07:21,119 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 14:07:21,119 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 14:07:21,119 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 14:07:21,119 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 14:07:21,119 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 14:07:21,119 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 14:07:21,930 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:07:21,936 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 14:07:21,936 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:07:21,988 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 14:07:21,990 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 14:07:22,026 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 14:07:23,934 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:07:24,052 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 14:07:24,089 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 14:07:24,093 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 14:07:24,093 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 14:07:24,096 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 14:07:24,098 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:07:24,099 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:07:24,115 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  2018-04-20 14:07:24,120 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 14:07:24,151 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 14:07:24,151 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 14:07:24,151 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 14:07:24,154 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 14:07:24,155 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 14:07:24,200 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 14:07:24,202 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+ERROR 2018-04-20 14:07:25,072 [6    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - The method or operation is not implemented.
+DEBUG 2018-04-20 14:07:25,084 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler sucessfully executed.
+DEBUG 2018-04-20 14:07:25,086 [6    ] Quartz.Core.JobRunShell                  - Trigger instruction : NoInstruction
+DEBUG 2018-04-20 14:07:25,106 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - No executing jobs remaining, all threads stopped.
+DEBUG 2018-04-20 14:07:25,106 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutdown of threadpool complete.
+INFO  2018-04-20 14:07:25,119 [5    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete.
+DEBUG 2018-04-20 14:09:14,272 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 14:09:14,462 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 14:09:15,229 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,246 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,247 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,248 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,252 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,252 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,254 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,258 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,259 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,261 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,263 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,266 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:15,287 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 14:09:16,420 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:09:16,566 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 14:09:16,648 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 14:09:16,677 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 14:09:16,681 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 14:09:16,698 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 14:09:16,699 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 14:09:16,699 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 14:09:16,703 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 14:09:17,528 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:09:18,993 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 14:09:19,100 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 14:09:19,220 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 14:09:19,273 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 14:09:20,125 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 14:09:20,272 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 14:09:20,272 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 14:09:20,279 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 14:09:20,280 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 14:09:20,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 14:09:20,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 14:09:20,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 14:09:20,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 14:09:20,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 14:09:20,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 14:09:20,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 14:09:20,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 14:09:20,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 14:09:20,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 14:09:20,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 14:09:20,864 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:09:20,878 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 14:09:20,878 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:09:20,916 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 14:09:20,921 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 14:09:20,927 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 14:09:22,849 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:09:22,893 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 14:09:22,901 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 14:09:22,906 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 14:09:22,906 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 14:09:22,909 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 14:09:22,910 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:09:22,912 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:09:22,926 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  2018-04-20 14:09:22,941 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 14:09:23,035 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 14:09:23,036 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 14:09:23,036 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 14:09:23,039 [9    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 14:09:23,039 [9    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 14:09:23,064 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 14:09:23,066 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+DEBUG 2018-04-20 14:12:37,489 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 14:12:38,172 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 14:12:39,423 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,431 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,434 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,435 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,435 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,436 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,440 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,441 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,442 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,442 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:39,451 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 14:12:40,149 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:12:40,276 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 14:12:40,355 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 14:12:40,384 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 14:12:40,386 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 14:12:40,404 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 14:12:40,404 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 14:12:40,404 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 14:12:40,408 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 14:12:41,180 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:12:42,186 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 14:12:42,274 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 14:12:42,365 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 14:12:42,409 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 14:12:43,162 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 14:12:43,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 14:12:43,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 14:12:43,291 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 14:12:43,292 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 14:12:43,293 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 14:12:43,293 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 14:12:43,293 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 14:12:43,293 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 14:12:43,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 14:12:43,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 14:12:43,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 14:12:43,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 14:12:43,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 14:12:43,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 14:12:43,294 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 14:12:43,930 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:12:43,935 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 14:12:43,935 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:12:43,960 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 14:12:43,963 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 14:12:43,967 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 14:12:46,161 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:12:46,207 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 14:12:46,213 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 14:12:46,218 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 14:12:46,218 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 14:12:46,222 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 14:12:46,223 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:12:46,234 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:12:46,249 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+DEBUG 2018-04-20 14:12:46,249 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 14:12:46,273 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 14:12:46,283 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 14:12:46,283 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 14:12:46,283 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 14:12:46,286 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 14:12:46,286 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 14:12:46,325 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 14:12:46,327 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 14:12:58,879 [9    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+ERROR 2018-04-20 14:14:21,378 [9    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - Specified argument was out of the range of valid values.
+Parameter name: index
+DEBUG 2018-04-20 14:14:21,388 [9    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler sucessfully executed.
+DEBUG 2018-04-20 14:14:21,389 [9    ] Quartz.Core.JobRunShell                  - Trigger instruction : NoInstruction
+DEBUG 2018-04-20 14:14:21,406 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - No executing jobs remaining, all threads stopped.
+DEBUG 2018-04-20 14:14:21,406 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutdown of threadpool complete.
+INFO  2018-04-20 14:14:21,452 [5    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete.
+DEBUG 2018-04-20 14:16:14,402 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 14:16:15,243 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 14:16:16,386 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,392 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,395 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,396 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,397 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,397 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,398 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,398 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:16,404 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 14:16:17,206 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:16:17,336 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 14:16:17,425 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 14:16:17,451 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 14:16:17,453 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 14:16:17,469 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 14:16:17,469 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 14:16:17,469 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 14:16:17,471 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 14:16:18,281 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:16:19,785 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 14:16:19,871 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 14:16:19,970 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 14:16:20,006 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 14:16:20,672 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 14:16:20,770 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 14:16:20,770 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 14:16:20,776 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 14:16:20,777 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 14:16:20,778 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 14:16:20,778 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 14:16:20,778 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 14:16:20,778 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 14:16:20,778 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 14:16:20,779 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 14:16:20,779 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 14:16:20,779 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 14:16:20,779 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 14:16:20,779 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 14:16:20,779 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 14:16:21,402 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:16:21,410 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 14:16:21,410 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:16:21,433 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 14:16:21,434 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 14:16:21,443 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 14:16:22,970 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:16:23,001 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 14:16:23,005 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 14:16:23,008 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 14:16:23,008 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 14:16:23,010 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 14:16:23,011 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:16:23,012 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:16:23,026 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  2018-04-20 14:16:23,032 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 14:16:23,068 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 14:16:23,068 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 14:16:23,068 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 14:16:23,072 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 14:16:23,072 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 14:16:23,120 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 14:16:23,121 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 14:16:29,593 [10   ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+ERROR 2018-04-20 14:17:49,088 [10   ] wler.CrawlerTasks.MeiShiChinaDishCrawler - Could not find a part of the path 'D:\Work\ChiMa\Src\SixMan.ChiMa.Web.Mvc\wwwroot\CrawlerData\Dish\DishCategory.json'.
+DEBUG 2018-04-20 14:17:49,102 [10   ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler sucessfully executed.
+DEBUG 2018-04-20 14:17:49,104 [10   ] Quartz.Core.JobRunShell                  - Trigger instruction : NoInstruction
+DEBUG 2018-04-20 14:17:49,125 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - No executing jobs remaining, all threads stopped.
+DEBUG 2018-04-20 14:17:49,125 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutdown of threadpool complete.
+INFO  2018-04-20 14:17:49,425 [5    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete.
+DEBUG 2018-04-20 14:19:30,305 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 14:19:30,866 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 14:19:31,753 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,764 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,765 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,766 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,766 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,767 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,769 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,770 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,772 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,773 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,774 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:31,784 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 14:19:32,686 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:19:32,791 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 14:19:32,873 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 14:19:32,903 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 14:19:32,905 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 14:19:32,927 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 14:19:32,927 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 14:19:32,927 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 14:19:32,929 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 14:19:34,159 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 14:19:35,084 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 14:19:35,228 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 14:19:35,359 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 14:19:35,424 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 14:19:36,163 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 14:19:36,249 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 14:19:36,249 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 14:19:36,255 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 14:19:36,256 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 14:19:36,257 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 14:19:36,831 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:19:36,838 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 14:19:36,838 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:19:36,857 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 14:19:36,860 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 14:19:36,868 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 14:19:38,405 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 14:19:38,445 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 14:19:38,454 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 14:19:38,459 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 14:19:38,459 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 14:19:38,463 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 14:19:38,464 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:19:38,465 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 14:19:38,482 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+DEBUG 2018-04-20 14:19:38,485 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 14:19:38,501 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 14:19:38,512 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 14:19:38,512 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 14:19:38,512 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 14:19:38,515 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 14:19:38,515 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 14:19:38,557 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 14:19:38,558 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 14:19:45,073 [8    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+INFO  2018-04-20 14:20:02,439 [8    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 导入美食天下的菜谱总耗时：23.8786961
+DEBUG 2018-04-20 14:20:02,458 [8    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler sucessfully executed.
+DEBUG 2018-04-20 14:20:02,461 [8    ] Quartz.Core.JobRunShell                  - Trigger instruction : NoInstruction
+DEBUG 2018-04-20 14:20:02,503 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - No executing jobs remaining, all threads stopped.
+DEBUG 2018-04-20 14:20:02,503 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutdown of threadpool complete.
+INFO  2018-04-20 14:20:02,520 [5    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete.
+DEBUG 2018-04-20 15:02:04,824 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 15:02:05,192 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 15:02:05,991 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,003 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,004 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,005 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,008 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,008 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,009 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,011 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,011 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,012 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,013 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,015 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:06,039 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 15:02:06,870 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:02:07,049 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 15:02:07,144 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 15:02:07,166 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 15:02:07,169 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 15:02:07,185 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 15:02:07,185 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 15:02:07,185 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 15:02:07,188 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 15:02:08,094 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:09,470 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 15:02:09,613 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 15:02:09,688 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 15:02:09,727 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 15:02:10,512 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:02:10,608 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 15:02:10,608 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 15:02:10,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 15:02:10,615 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 15:02:10,615 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 15:02:10,615 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 15:02:10,615 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 15:02:10,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 15:02:10,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 15:02:10,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 15:02:10,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 15:02:10,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 15:02:10,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 15:02:10,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 15:02:10,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 15:02:11,417 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:02:11,426 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:02:11,426 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:02:11,451 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 15:02:11,459 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 15:02:11,461 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:02:13,206 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:02:13,247 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 15:02:13,253 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 15:02:13,257 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:02:13,257 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 15:02:13,260 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 15:02:13,261 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:02:13,262 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:02:13,280 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  2018-04-20 15:02:13,286 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 15:02:13,315 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:02:13,315 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 15:02:13,315 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 15:02:13,320 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 15:02:13,320 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 15:02:13,400 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 15:02:13,401 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 15:02:20,334 [9    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+ERROR 2018-04-20 15:02:21,081 [9    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 请检查输入的网址!
+DEBUG 2018-04-20 15:02:21,097 [9    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler sucessfully executed.
+DEBUG 2018-04-20 15:02:21,099 [9    ] Quartz.Core.JobRunShell                  - Trigger instruction : NoInstruction
+DEBUG 2018-04-20 15:02:21,123 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - No executing jobs remaining, all threads stopped.
+DEBUG 2018-04-20 15:02:21,123 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutdown of threadpool complete.
+INFO  2018-04-20 15:02:21,136 [5    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete.
+DEBUG 2018-04-20 15:02:52,608 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 15:02:53,196 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 15:02:54,457 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,470 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,471 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,472 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,472 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,473 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,474 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:54,485 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 15:02:55,170 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:02:55,320 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 15:02:55,404 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 15:02:55,434 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 15:02:55,437 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 15:02:55,463 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 15:02:55,464 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 15:02:55,464 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 15:02:55,471 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 15:02:56,383 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:02:57,503 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 15:02:57,606 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 15:02:57,698 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 15:02:57,733 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 15:02:58,455 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:02:58,564 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 15:02:58,565 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 15:02:58,573 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 15:02:58,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 15:02:58,575 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 15:02:58,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 15:02:58,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 15:02:58,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 15:02:58,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 15:02:58,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 15:02:58,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 15:02:58,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 15:02:58,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 15:02:58,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 15:02:58,576 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 15:02:59,481 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:02:59,500 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:02:59,500 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:02:59,552 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 15:02:59,555 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 15:02:59,563 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:03:01,463 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:03:01,503 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 15:03:01,508 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 15:03:01,513 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:03:01,513 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 15:03:01,516 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 15:03:01,517 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:03:01,518 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:03:01,528 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+DEBUG 2018-04-20 15:03:01,532 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:03:01,532 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 15:03:01,617 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:03:01,617 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 15:03:01,617 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 15:03:01,620 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 15:03:01,620 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 15:03:01,691 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 15:03:01,692 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 15:03:08,232 [9    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+DEBUG 2018-04-20 15:03:57,745 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 15:03:58,024 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 15:03:58,526 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,532 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,533 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,535 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,535 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,536 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,540 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,540 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,541 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:03:58,551 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 15:03:59,421 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:03:59,609 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 15:03:59,750 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 15:03:59,779 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 15:03:59,781 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 15:03:59,794 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 15:03:59,795 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 15:03:59,795 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 15:03:59,798 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 15:04:00,647 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:04:02,458 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 15:04:02,560 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 15:04:02,638 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 15:04:02,675 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 15:04:03,453 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:04:03,539 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 15:04:03,539 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 15:04:03,545 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 15:04:03,547 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 15:04:03,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 15:04:04,335 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:04:04,339 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:04:04,340 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:04:04,360 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 15:04:04,361 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 15:04:04,369 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:04:05,868 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:04:05,902 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 15:04:05,911 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 15:04:05,914 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:04:05,914 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 15:04:05,917 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 15:04:05,918 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:04:05,918 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:04:05,942 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:04:05,942 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  2018-04-20 15:04:05,950 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 15:04:05,982 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:04:05,982 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 15:04:05,983 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 15:04:05,986 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 15:04:05,986 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 15:04:06,025 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 15:04:06,026 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 15:04:13,080 [9    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+DEBUG 2018-04-20 15:05:43,698 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 15:05:44,250 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 15:05:44,807 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,815 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,816 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,816 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,817 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,818 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,818 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,818 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,822 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,822 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,823 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:44,834 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 15:05:45,524 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:05:45,680 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 15:05:45,775 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 15:05:45,802 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 15:05:45,805 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 15:05:45,825 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 15:05:45,826 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 15:05:45,826 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 15:05:45,831 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 15:05:46,840 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:05:48,724 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 15:05:48,829 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 15:05:48,958 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 15:05:48,997 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 15:05:49,948 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:05:50,074 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 15:05:50,074 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 15:05:50,085 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 15:05:50,087 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 15:05:50,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 15:05:50,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 15:05:50,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 15:05:50,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 15:05:50,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 15:05:50,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 15:05:50,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 15:05:50,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 15:05:50,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 15:05:50,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 15:05:50,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 15:05:50,848 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:05:50,852 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:05:50,853 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:05:50,872 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 15:05:50,873 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 15:05:50,882 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:05:52,581 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:05:52,629 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 15:05:52,636 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 15:05:52,643 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:05:52,643 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 15:05:52,645 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 15:05:52,646 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:05:52,647 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:05:52,661 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+DEBUG 2018-04-20 15:05:52,663 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:05:52,682 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 15:05:52,692 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:05:52,692 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 15:05:52,692 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 15:05:52,696 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 15:05:52,696 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 15:05:52,739 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 15:05:52,740 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 15:05:59,593 [9    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+DEBUG 2018-04-20 15:07:34,675 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 15:07:35,080 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 15:07:36,696 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,709 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,712 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,713 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,714 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,715 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,715 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,717 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,722 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,723 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,724 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,726 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:36,741 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 15:07:37,896 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:07:38,083 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 15:07:38,163 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 15:07:38,216 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 15:07:38,218 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 15:07:38,264 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 15:07:38,265 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 15:07:38,265 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 15:07:38,268 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 15:07:39,917 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:07:41,209 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 15:07:41,310 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 15:07:41,385 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 15:07:41,429 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 15:07:42,285 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:07:42,413 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 15:07:42,413 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 15:07:42,422 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 15:07:42,424 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 15:07:42,425 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 15:07:42,425 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 15:07:42,425 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 15:07:42,425 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 15:07:42,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 15:07:42,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 15:07:42,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 15:07:42,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 15:07:42,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 15:07:42,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 15:07:42,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 15:07:43,138 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:07:43,143 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:07:43,143 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:07:43,161 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 15:07:43,163 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 15:07:43,171 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:07:44,698 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:07:44,749 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 15:07:44,753 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 15:07:44,756 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:07:44,756 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 15:07:44,759 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 15:07:44,761 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:07:44,762 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:07:44,775 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  2018-04-20 15:07:44,781 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 15:07:44,807 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:07:44,807 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 15:07:44,807 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 15:07:44,815 [8    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 15:07:44,815 [8    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 15:07:44,914 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 15:07:44,919 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 15:07:51,696 [5    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+DEBUG 2018-04-20 15:10:55,712 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 15:10:55,781 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 15:10:56,052 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,062 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,063 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,064 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,065 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,067 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,069 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,070 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,074 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,080 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:56,091 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 15:10:56,739 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:10:56,857 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 15:10:56,890 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 15:10:56,910 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 15:10:56,912 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 15:10:56,925 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 15:10:56,926 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 15:10:56,926 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 15:10:56,930 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 15:10:57,309 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:10:57,931 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 15:10:58,022 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 15:10:58,111 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 15:10:58,150 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 15:10:58,396 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:10:58,521 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 15:10:58,522 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 15:10:58,528 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 15:10:58,529 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 15:10:58,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 15:10:59,369 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:10:59,373 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:10:59,374 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:10:59,392 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 15:10:59,394 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 15:10:59,400 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:10:59,735 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:10:59,769 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 15:10:59,774 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 15:10:59,778 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:10:59,778 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 15:10:59,780 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 15:10:59,781 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:10:59,783 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:10:59,794 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+DEBUG 2018-04-20 15:10:59,798 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:10:59,801 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 15:10:59,809 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:10:59,809 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 15:10:59,809 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 15:10:59,812 [8    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 15:10:59,812 [8    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 15:10:59,864 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 15:10:59,865 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 15:11:01,103 [9    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+DEBUG 2018-04-20 15:11:22,971 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 15:11:23,029 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 15:11:23,210 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,217 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,218 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,219 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,221 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,221 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,221 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,222 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,223 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,224 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,224 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,225 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,228 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:23,236 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 15:11:24,009 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:11:24,160 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 15:11:24,208 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 15:11:24,232 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 15:11:24,236 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 15:11:24,248 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 15:11:24,248 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 15:11:24,248 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 15:11:24,251 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 15:11:24,763 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:11:25,869 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 15:11:25,984 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 15:11:26,086 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 15:11:26,127 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 15:11:26,304 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:11:26,395 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 15:11:26,395 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 15:11:26,402 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 15:11:26,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 15:11:26,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 15:11:26,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 15:11:26,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 15:11:26,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 15:11:26,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 15:11:26,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 15:11:26,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 15:11:26,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 15:11:26,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 15:11:26,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 15:11:26,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 15:11:26,981 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:11:26,988 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:11:26,988 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:11:27,009 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 15:11:27,010 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 15:11:27,015 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:11:27,967 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:11:28,014 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 15:11:28,042 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 15:11:28,048 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:11:28,048 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 15:11:28,051 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 15:11:28,052 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:11:28,053 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:11:28,068 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:11:28,071 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  2018-04-20 15:11:28,079 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 15:11:28,090 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:11:28,090 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 15:11:28,090 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 15:11:28,095 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 15:11:28,095 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 15:11:28,138 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 15:11:28,139 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 15:11:29,504 [10   ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+ERROR 2018-04-20 15:12:30,072 [10   ] wler.CrawlerTasks.MeiShiChinaDishCrawler - Length cannot be less than zero.
+Parameter name: length
+DEBUG 2018-04-20 15:12:30,085 [10   ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler sucessfully executed.
+DEBUG 2018-04-20 15:12:30,087 [10   ] Quartz.Core.JobRunShell                  - Trigger instruction : NoInstruction
+DEBUG 2018-04-20 15:12:30,106 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - No executing jobs remaining, all threads stopped.
+DEBUG 2018-04-20 15:12:30,106 [5    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutdown of threadpool complete.
+INFO  2018-04-20 15:12:30,118 [5    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete.
+DEBUG 2018-04-20 15:22:03,633 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-20 15:22:03,709 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-04-20 15:22:03,883 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,888 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,889 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,890 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,891 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,891 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,892 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,892 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,893 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,894 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,895 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,897 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:03,903 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-04-20 15:22:04,339 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:22:04,436 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-04-20 15:22:04,472 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-04-20 15:22:04,493 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-04-20 15:22:04,496 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-04-20 15:22:04,511 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-04-20 15:22:04,511 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-04-20 15:22:04,511 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-04-20 15:22:04,513 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-04-20 15:22:04,886 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-20 15:22:05,497 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-20 15:22:05,600 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-20 15:22:05,715 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-20 15:22:05,782 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-20 15:22:06,214 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:22:06,309 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2018-04-20 15:22:06,309 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-04-20 15:22:06,318 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-04-20 15:22:06,320 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-04-20 15:22:06,321 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-04-20 15:22:06,321 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-04-20 15:22:06,321 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-04-20 15:22:06,321 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-04-20 15:22:06,321 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-04-20 15:22:06,321 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-04-20 15:22:06,321 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-04-20 15:22:06,321 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-04-20 15:22:06,322 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-04-20 15:22:06,322 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-04-20 15:22:06,322 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-04-20 15:22:07,300 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:22:07,304 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:22:07,304 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:22:07,324 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  2018-04-20 15:22:07,326 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2018-04-20 15:22:07,336 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:22:07,739 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-04-20 15:22:07,772 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 1 triggers
+DEBUG 2018-04-20 15:22:07,778 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-20 15:22:07,781 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-20 15:22:07,781 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2018-04-20 15:22:07,785 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+INFO  2018-04-20 15:22:07,786 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:22:07,787 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-04-20 15:22:07,796 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+DEBUG 2018-04-20 15:22:07,799 [5    ] Quartz.Core.QuartzSchedulerThread        - Batch acquisition of 0 triggers
+INFO  2018-04-20 15:22:07,801 [1    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+DEBUG 2018-04-20 15:22:07,808 [1    ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2018-04-20 15:22:07,808 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2018-04-20 15:22:07,809 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-20 15:22:07,811 [8    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutting down threadpool...
+DEBUG 2018-04-20 15:22:07,811 [8    ] Quartz.Simpl.TaskSchedulingThreadPool    - Waiting for 1 threads to complete.
+DEBUG 2018-04-20 15:22:07,869 [6    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler executing...
+DEBUG 2018-04-20 15:22:07,870 [6    ] Quartz.Core.JobRunShell                  - Calling Execute on job 菜谱.美食天下
+INFO  2018-04-20 15:22:09,239 [5    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 找到菜品顶级分类: 16 个
+INFO  2018-04-20 15:23:13,615 [5    ] wler.CrawlerTasks.MeiShiChinaDishCrawler - 导入美食天下的菜谱总耗时：65.7434066
+DEBUG 2018-04-20 15:23:13,632 [5    ] Abp.Quartz.AbpQuartzJobListener          - Job MeiShiChinaDishCrawler sucessfully executed.
+DEBUG 2018-04-20 15:23:13,634 [5    ] Quartz.Core.JobRunShell                  - Trigger instruction : NoInstruction
+DEBUG 2018-04-20 15:23:13,664 [8    ] Quartz.Simpl.TaskSchedulingThreadPool    - No executing jobs remaining, all threads stopped.
+DEBUG 2018-04-20 15:23:13,664 [8    ] Quartz.Simpl.TaskSchedulingThreadPool    - Shutdown of threadpool complete.
+INFO  2018-04-20 15:23:13,674 [8    ] Quartz.Core.QuartzScheduler              - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete.

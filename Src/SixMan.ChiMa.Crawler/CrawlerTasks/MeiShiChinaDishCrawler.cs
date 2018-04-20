@@ -1,4 +1,5 @@
 ﻿using Abp.Quartz;
+using AngleSharp.Dom.Html;
 using Quartz;
 using SixMan.ChiMa.DomainService;
 using System;
@@ -46,21 +47,22 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             }
             catch (Exception ex)
             {
-                Logger.Error(ex.Message);
+                Logger.Error(ex.Message, ex);
                 Console.WriteLine(ex.Message);
             }
         }
 
         private async Task ExecuteImp(IJobExecutionContext context)
         {
-            //爬类别
+            //1 爬类别
             DishCategoryRawData dcr = GetDishCategoryRawData();
             if (dcr == null)
             {
-                CrawlDishCategory();
+                await CrawlDishCategory();
+                // 经过手工修改，再进入 2
                 return;
             }
-            //爬列表
+            //2 爬列表
             foreach( var dcrItem in dcr)
             {
                 if(dcrItem.NeedCrawl)
@@ -69,28 +71,33 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                 }
                 if( UserBreaker())
                 {
+                    //可以按类别分别下
+                    //该下的下完，再进入 3
                     return;
                 }
             }
 
-            //爬详情
+            //3 爬详情
             DishListRawData dlr = GetCrawDishList();
             foreach( var dlrItem in dlr)
             {
-                CrawlDishDetails(dlrItem); //同时写数据库
+                CrawlDishDetails(dlrItem); 
                 if (UserBreaker())
                 {
+                    // 必须全部下完，才进入 4
                     return;
                 }
             }
 
-            //爬img
-            DishDetailsRawData dir = GetDishDetails();
+            //4 爬img
+            DishListRawData dir = GetDishDetails();
             foreach( var dirItem in dir)
             {
                 CrawlDishImage(dirItem);
                 if (UserBreaker())
                 {
+                    // 每次必须完成下一个类别
+                    // 显示进度，很关键
                     return;
                 }
             }
@@ -113,19 +120,78 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             return SerializeHelper.Get<DishCategoryRawData>("Dish","DishCategory");
         }
 
-        private void CrawlDishCategory()
+        private async Task CrawlDishCategory()
         {
-            DishCategoryRawData data = CrawDishCategoryData();
-            SerializeHelper.Save<DishCategoryRawData>("Dish", "DishCategory");
-        }
+            DishCategoryRawData cates = new DishCategoryRawData();
 
-        private DishCategoryRawData CrawDishCategoryData()
+            IHtmlDocument doc = await CrawlerHelper.GetDocumentASync("https://home.meishichina.com/recipe-type.html");
+            var divs = doc.QuerySelectorAll(".category_sub.clear"); // 找出顶级分类
+            Logger.Info($"找到菜品顶级分类: {divs.Length } 个");
+
+            foreach (var topDiv in divs) // 
+            {
+                string topTag = topDiv.FirstElementChild.TextContent.Replace("/",",");
+                var links = topDiv.FirstElementChild.NextElementSibling.GetElementsByTagName("a");
+                Console.Write(topTag);
+                foreach ( var a in links)
+                {
+                    string listUrl = a.GetAttribute("href");
+                    cates.Add(new DishCategoryRawDataItem()
+                    {
+                        Tag = topTag + "," + a.GetAttribute("title")??a.TextContent,
+                        ListUrl = listUrl,
+                        PagesNumber = GetPageNumber(listUrl),
+                    });
+                    Console.Write(".");
+                }
+                Console.WriteLine("");
+            }
+
+            SerializeHelper.Save("Dish", "DishCategory", cates);
+        }
+        /// <summary>
+        /// https://home.meishichina.com/recipe/huoguo/page/40/
+        /// 取出40部分
+        /// </summary>
+        /// <param name="listUrl"></param>
+        /// <returns></returns>
+        private int GetPageNumber(string listUrl)
         {
-            throw new NotImplementedException();
+            int pageNumber = 0;
+
+            string ridectUrl = CrawlerHelper.GetRedirectUrl("https:" + listUrl + "page/200/");
+
+            int len = ridectUrl.Length - 1;
+            if (len < 1 || ! ridectUrl.Contains("page/"))
+            {
+                return pageNumber;
+            } 
+
+            string temp = ridectUrl.Substring(0, len);
+            int pos = temp.LastIndexOf('/');
+
+            int.TryParse(temp.Substring(pos+1), out pageNumber);
+            return pageNumber;
         }
 
         private void CrawDishList(DishCategoryRawDataItem dcrItem)
         {
+            //如果已存在该列表的文件，就pass
+            Console.WriteLine(dcrItem.FileName);
+            if(SerializeHelper.Exist("Dish", dcrItem.FileName))
+            {
+                Console.WriteLine("已下载");
+                return;
+            }
+
+            DishDetailsRawData dishDatas = new DishDetailsRawData()
+            {
+                Tag = dcrItem.Tag,
+            };
+            // 按分页page 读取列表
+
+
+            SerializeHelper.Save("Dish" , dcrItem.FileName, dishDatas);
         }
 
         private DishListRawData GetCrawDishList()
@@ -135,20 +201,25 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             return null;
         }
 
-        private void CrawlDishDetails(DishListRawDataItem dlrItem)
+        private void CrawlDishDetails(DishDetailsRawData dlrItem)
         {
+            //如果已存在该列表的文件，就pass
+            //关键是相关信息和图片路径
         }
 
-        private DishDetailsRawData GetDishDetails()
+        private DishListRawData GetDishDetails()
         {
             // 从 DishDetailsRawData 获取img
+            // 已经填好小图和大图了！
+            // 按规则排序，便于分页处理
             return null;
         }
 
-        private void CrawlDishImage(DishDetailsRawDataItem dirItem)
+        private void CrawlDishImage(DishDetailsRawData dirItem)
         {
             // 每次下载1000个！
             //并发下载
+            //如果已存在，就不下
         }
     }
 }

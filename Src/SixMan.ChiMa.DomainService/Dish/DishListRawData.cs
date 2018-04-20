@@ -5,13 +5,13 @@ using System.Text;
 namespace SixMan.ChiMa.DomainService
 {
     public class DishListRawData
-        : List<DishListRawDataItem>
+        : List<DishDetailsRawData>
     {
     }
 
-    public class DishListRawDataItem
-        : List<DishDetailsRawDataItem>
-    {        
-        public string Tag { get; set; }        
-    }
+    //public class DishListRawDataItem
+    //    : List<DishDetailsRawDataItem>
+    //{        
+    //    public string Tag { get; set; }        
+    //}
 }
