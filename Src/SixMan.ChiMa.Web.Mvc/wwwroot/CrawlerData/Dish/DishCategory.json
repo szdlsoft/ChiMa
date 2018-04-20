@@ -39,103 +39,103 @@
     "Tag": "常见菜式,泡酱腌菜",
     "ListUrl": "//home.meishichina.com/recipe/jiangpaoyancai/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "常见菜式,西餐",
     "ListUrl": "//home.meishichina.com/recipe/xican/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "常见菜式,烘焙",
     "ListUrl": "//home.meishichina.com/recipe/hongbei/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "常见菜式,烤箱菜",
     "ListUrl": "//home.meishichina.com/recipe/kaoxiangcai/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "常见菜式,饮品",
     "ListUrl": "//home.meishichina.com/recipe/yinpin/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "常见菜式,零食",
     "ListUrl": "//home.meishichina.com/recipe/lingshi/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "常见菜式,火锅",
     "ListUrl": "//home.meishichina.com/recipe/huoguo/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "常见菜式,自制食材",
     "ListUrl": "//home.meishichina.com/recipe/zizhishicai/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "常见菜式,海鲜",
     "ListUrl": "//home.meishichina.com/recipe/haixian/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "常见菜式,宴客菜",
     "ListUrl": "//home.meishichina.com/recipe/yankecai/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,米饭",
     "ListUrl": "//home.meishichina.com/recipe/mifan/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,炒饭",
     "ListUrl": "//home.meishichina.com/recipe/chaofan/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,面食",
     "ListUrl": "//home.meishichina.com/recipe/mianshi/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,包子",
     "ListUrl": "//home.meishichina.com/recipe/baozi/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,饺子",
     "ListUrl": "//home.meishichina.com/recipe/jiaozi/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,馒头花卷",
     "ListUrl": "//home.meishichina.com/recipe/mantou/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,面条",
     "ListUrl": "//home.meishichina.com/recipe/miantiao/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,饼",
@@ -147,19 +147,19 @@
     "Tag": "主食,小吃,粥",
     "ListUrl": "//home.meishichina.com/recipe/zhou/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,馄饨",
     "ListUrl": "//home.meishichina.com/recipe/hundun/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,五谷杂粮",
     "ListUrl": "//home.meishichina.com/recipe/wuguzaliang/",
     "PagesNumber": 100,
-    "NeedCrawl": false
+    "NeedCrawl": true
   },
   {
     "Tag": "主食,小吃,北京小吃",

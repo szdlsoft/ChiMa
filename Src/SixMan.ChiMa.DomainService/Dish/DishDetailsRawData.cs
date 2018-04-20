@@ -13,6 +13,7 @@ namespace SixMan.ChiMa.DomainService
 
     public class DishDetailsRawDataItem
     {
+        public string DataId { get; set; }
         /// <summary>
         /// 菜名
         /// </summary>

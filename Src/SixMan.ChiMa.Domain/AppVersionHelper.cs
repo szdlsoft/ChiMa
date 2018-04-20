@@ -45,6 +45,7 @@
  * 1.2.3  2018-04-16   Add 爬菜谱总体设计,爬菜谱类别  
  * 1.2.4  2018-04-18   Add 爬菜谱类别 
  * 1.2.5  2018-04-20   Add 爬菜谱类别完成 爬菜谱框架
+ * 1.2.6  2018-04-20   Add 爬菜谱列表完成
  * **********************************************************/
 
 using System;
@@ -62,7 +63,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.2.5";
+        public const string Version = "1.2.6";
 
         /// <summary>
         /// Gets release (last build) date of the application.

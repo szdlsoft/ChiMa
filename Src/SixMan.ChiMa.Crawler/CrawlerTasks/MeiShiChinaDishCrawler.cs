@@ -4,6 +4,7 @@ using Quartz;
 using SixMan.ChiMa.DomainService;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -63,19 +64,23 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                 return;
             }
             //2 爬列表
+            List<Task> tasks = new List<Task>();
             foreach( var dcrItem in dcr)
             {
                 if(dcrItem.NeedCrawl)
                 {
-                    CrawDishList(dcrItem);
+                    var task = CrawDishList(dcrItem);
+                    tasks.Add(task);
                 }
-                if( UserBreaker())
-                {
-                    //可以按类别分别下
-                    //该下的下完，再进入 3
-                    return;
-                }
+                //if( UserBreaker())
+                //{
+                //    //可以按类别分别下
+                //    //该下的下完，再进入 3
+                //    return;
+                //}
             }
+
+            Task.WaitAll(tasks.ToArray());
 
             //3 爬详情
             DishListRawData dlr = GetCrawDishList();
@@ -174,7 +179,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             return pageNumber;
         }
 
-        private void CrawDishList(DishCategoryRawDataItem dcrItem)
+        private async Task CrawDishList(DishCategoryRawDataItem dcrItem)
         {
             //如果已存在该列表的文件，就pass
             Console.WriteLine(dcrItem.FileName);
@@ -189,9 +194,49 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                 Tag = dcrItem.Tag,
             };
             // 按分页page 读取列表
-
+            Console.WriteLine("");
+            for (int page = 1; page <=50; page++)
+            {
+                string listFullUrl = $"https:{dcrItem.ListUrl}/page/{page}/";
+                List<DishDetailsRawDataItem> pageDishs = await GetOnePageDishs(listFullUrl);
+                dishDatas.AddRange(pageDishs);
+            }
 
             SerializeHelper.Save("Dish" , dcrItem.FileName, dishDatas);
+        }
+        /// <summary>
+        /// 爬一页菜品
+        /// </summary>
+        /// <param name="listFullUrl"></param>
+        /// <returns></returns>
+        private async Task< List<DishDetailsRawDataItem>> GetOnePageDishs(string listFullUrl)
+        {
+            Console.Write(listFullUrl);
+            List<DishDetailsRawDataItem> pageDishs = new List<DishDetailsRawDataItem>();
+
+            IHtmlDocument doc = await CrawlerHelper.GetDocumentASync(listFullUrl);
+            var div = doc.QuerySelector("#J_list"); // 找出顶级分类
+            if (div == null) return pageDishs;
+            var lis = div.GetElementsByTagName("li");
+            if(lis == null || lis.Length < 10)
+            {
+                return pageDishs;
+            }
+            foreach(var li in lis)
+            {
+                Console.Write(".");
+                var link = li.GetElementsByTagName("a").First();
+                pageDishs.Add(new DishDetailsRawDataItem()
+                {
+                    SmallImageUrl = li.GetElementsByTagName("img").First().GetAttribute("data-src"),
+                    Name = link.GetAttribute("title"),
+                    Url = link.GetAttribute("href"),
+                    DataId = li.GetAttribute("data-id")
+                });
+            }
+            Console.WriteLine("");
+
+            return pageDishs;
         }
 
         private DishListRawData GetCrawDishList()
