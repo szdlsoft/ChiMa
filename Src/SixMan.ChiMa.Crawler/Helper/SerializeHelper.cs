@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SixMan.ChiMa.DomainService;
 using System;
 using System.Collections.Generic;
 using System.IO;

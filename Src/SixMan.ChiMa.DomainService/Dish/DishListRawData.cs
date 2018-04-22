@@ -7,6 +7,11 @@ namespace SixMan.ChiMa.DomainService
     public class DishListRawData
         : List<DishDetailsRawData>
     {
+
+        public DishListRawData(List<DishDetailsRawData> dishDetails)
+        {
+            this.AddRange(dishDetails);
+        }
     }
 
     //public class DishListRawDataItem

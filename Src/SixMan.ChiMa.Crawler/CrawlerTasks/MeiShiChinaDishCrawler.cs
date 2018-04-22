@@ -14,9 +14,21 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
         : JobBase
          , ICrawlerTask
     {
+        public ICrawlerDataStoreFactory _crawlerDataStoreBFactory { get; set; }
         public Type TaskType => typeof(MeiShiChinaDishCrawler);
 
         public string Name => "MeiShiChinaDish";
+
+        ICrawlerDataStore DishFileStore;
+        ICrawlerDataStore DishDetailsFileStore;
+
+        public MeiShiChinaDishCrawler(ICrawlerDataStoreFactory crawlerDataStoreBFactory)
+        {
+            _crawlerDataStoreBFactory = crawlerDataStoreBFactory;
+            DishFileStore = crawlerDataStoreBFactory.Create("Dish");
+            DishDetailsFileStore = crawlerDataStoreBFactory.Create("DishDetails");
+
+        }
 
         public void ConfigureJob(JobBuilder job)
         {
@@ -34,6 +46,8 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                                .Build();
                        });
         }
+
+        public bool OnlyOneTime => true;
 
         public override async Task Execute(IJobExecutionContext context)
         {
@@ -72,28 +86,22 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                     var task = CrawDishList(dcrItem);
                     tasks.Add(task);
                 }
-                //if( UserBreaker())
-                //{
-                //    //可以按类别分别下
-                //    //该下的下完，再进入 3
-                //    return;
-                //}
             }
-
             Task.WaitAll(tasks.ToArray());
 
             //3 爬详情
+            tasks.Clear();
             DishListRawData dlr = GetCrawDishList();
             foreach( var dlrItem in dlr)
             {
-                CrawlDishDetails(dlrItem); 
-                if (UserBreaker())
-                {
-                    // 必须全部下完，才进入 4
-                    return;
-                }
+                tasks.Add( CrawlDishDetails(dlrItem)); 
+                //if (UserBreaker())
+                //{
+                //    // 必须全部下完，才进入 4
+                //    return;
+                //}
             }
-
+            Task.WaitAll(tasks.ToArray());
             //4 爬img
             DishListRawData dir = GetDishDetails();
             foreach( var dirItem in dir)
@@ -242,14 +250,57 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
         private DishListRawData GetCrawDishList()
         {
             // 获取需要下载列表文件
+            List<DishDetailsRawData> dishDetails = DishFileStore.GetByPrefix<DishDetailsRawData>("DishList",( item, objName )=> item.Tag = objName);
+            DishListRawData data = new DishListRawData(dishDetails);
+
             // 一次只 下一个
-            return null;
+            return data;
         }
 
-        private void CrawlDishDetails(DishDetailsRawData dlrItem)
+        private async Task CrawlDishDetails(DishDetailsRawData dlr)
         {
+            Console.Write($"{dlr.CrawlerFileName} ");
             //如果已存在该列表的文件，就pass
+            if (DishDetailsFileStore.Exist(dlr))
+            {
+                Console.WriteLine($"已存在");
+                return;
+            }
             //关键是相关信息和图片路径
+            //补充 还不完整的信息
+            foreach( var item in dlr)
+            {
+                await FillDetail(item);
+                Console.Write(".");
+            }
+
+            DishDetailsFileStore.Save(dlr);
+
+            Console.WriteLine($"{dlr.CrawlerFileName} ok");
+        }
+
+        //补充 还不完整的信息
+        private async Task FillDetail(DishDetailsRawDataItem detail)
+        {
+            IHtmlDocument doc = await CrawlerHelper.GetDocumentASync($"https:{detail.Url}");
+            var img = doc.QuerySelector(".J_photo img"); // 找出大图url
+            detail.BigImageUrl = img.GetAttribute("src");
+
+            var tips = doc.QuerySelectorAll(".recipeTip.mt16");
+            if( tips == null || tips.Length < 3)
+            {
+                return;
+            }
+
+            var links = tips[2].GetElementsByTagName("a");
+            StringBuilder sb = new StringBuilder();
+            foreach(var a in links)
+            {
+                sb.Append( a.TextContent);
+                sb.Append(",");
+            }
+            detail.Tags = sb.ToString();
+
         }
 
         private DishListRawData GetDishDetails()

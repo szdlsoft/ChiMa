@@ -168,5 +168,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
             return uri;
         }
+
+        public bool OnlyOneTime => false;
     }
 }

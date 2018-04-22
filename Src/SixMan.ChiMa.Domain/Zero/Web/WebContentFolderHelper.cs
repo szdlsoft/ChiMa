@@ -16,7 +16,7 @@ namespace SixMan.ChiMa.Domain.Web
             var coreAssemblyDirectoryPath = Path.GetDirectoryName(typeof(ChiMaDomainModule).GetAssembly().Location);
             if (coreAssemblyDirectoryPath == null)
             {
-                throw new Exception("Could not find location of SixMan.ChiMa.Domain.Core assembly!");
+                throw new Exception("Could not find location of SixMan.ChiMa.Domain assembly!");
             }
 
             var directoryInfo = new DirectoryInfo(coreAssemblyDirectoryPath);

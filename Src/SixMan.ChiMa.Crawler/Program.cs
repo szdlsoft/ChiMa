@@ -60,7 +60,7 @@ namespace SixMan.ChiMa.Crawler
             return iocManager.Resolve<T>();
         }
 
-        private static  void RunTasks()
+        private static async  void RunTasks()
         {
             IChiMaQuartzScheduleJobManager taskManager = iocManager.Resolve<IChiMaQuartzScheduleJobManager>();
 
@@ -70,7 +70,14 @@ namespace SixMan.ChiMa.Crawler
             {
                 if (CrawlerConfig.GetTaskEnabled(task.Name))
                 {
-                    taskManager.ScheduleAsync(task);
+                    if( task.OnlyOneTime )
+                    {
+                        await task.Execute(null);
+                    }
+                    else
+                    {
+                        await taskManager.ScheduleAsync(task);
+                    }
                 }
 
             }

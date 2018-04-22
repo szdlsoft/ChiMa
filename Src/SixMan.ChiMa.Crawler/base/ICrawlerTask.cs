@@ -18,5 +18,7 @@ namespace SixMan.ChiMa.Crawler
         Type TaskType { get; }
 
         string Name { get; }
+
+        bool OnlyOneTime { get; }
     }
 }

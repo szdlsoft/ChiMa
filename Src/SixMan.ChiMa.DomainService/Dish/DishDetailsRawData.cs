@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,9 +7,12 @@ namespace SixMan.ChiMa.DomainService
 {
     public class DishDetailsRawData
         : List<DishDetailsRawDataItem>
+        , ICrawlerObject
     {
         public string Tag { get; set; }
 
+        [JsonIgnore]
+        public string CrawlerFileName => Tag.Replace(",", "_");
     }
 
     public class DishDetailsRawDataItem

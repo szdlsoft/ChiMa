@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 
-namespace SixMan.ChiMa.Crawler
+namespace SixMan.ChiMa.DomainService
 {
     public static class CrawlerConfig
     {
@@ -32,7 +32,7 @@ namespace SixMan.ChiMa.Crawler
             return appConfiguration.GetSection("ApplicationSet").GetSection(key).Value;
         }
 
-        internal static bool GetTaskEnabled( string name )
+        public static bool GetTaskEnabled( string name )
         {
             string strValue = _appSetting.GetSection(name).Value ?? "true";
             return bool.Parse(strValue);

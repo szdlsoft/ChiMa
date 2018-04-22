@@ -208,6 +208,6 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             return foodMaterial;
         }
 
-       
+        public bool OnlyOneTime => true;
     }
 }

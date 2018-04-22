@@ -41,7 +41,7 @@ namespace SixMan.ChiMa.Crawler
 
             Configuration.BackgroundJobs.IsJobExecutionEnabled = true;
 
-            CrawlerConfig.Load(_appConfiguration);
+            //CrawlerConfig.Load(_appConfiguration);
         }
 
         public override void Initialize()
