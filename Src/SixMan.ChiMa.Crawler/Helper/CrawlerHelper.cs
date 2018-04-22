@@ -40,6 +40,8 @@ namespace SixMan.ChiMa.DomainService
         /// <returns></returns>
         internal static string GetUrlLast(string url)
         {
+            if (url == null) return null;
+
             return url.Trim('/').Split('/').Last();
         }
 

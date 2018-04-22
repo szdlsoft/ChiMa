@@ -91,6 +91,8 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
             //3 爬详情
             tasks.Clear();
+            var start = DateTime.Now;
+            ShowAndLog($"爬详情 start:{start}");
             DishListRawData dlr = GetCrawDishList();
             foreach( var dlrItem in dlr)
             {
@@ -102,9 +104,11 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                 //}
             }
             Task.WaitAll(tasks.ToArray());
+            var end = DateTime.Now;
+            ShowAndLog($"爬详情 end:{end} 耗时:{end.Subtract(start).TotalMinutes}");
             //4 爬img
             DishListRawData dir = GetDishDetails();
-            foreach( var dirItem in dir)
+            foreach (var dirItem in dir)
             {
                 CrawlDishImage(dirItem);
                 if (UserBreaker())
@@ -116,6 +120,12 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             }
 
 
+        }
+
+        private void ShowAndLog(string msg)
+        {
+            Console.WriteLine(msg);
+            Logger.Info(msg);
         }
 
         private bool UserBreaker()
@@ -268,10 +278,13 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             }
             //关键是相关信息和图片路径
             //补充 还不完整的信息
+            int max = 10;
             foreach( var item in dlr)
             {
                 await FillDetail(item);
                 Console.Write(".");
+
+                //if (--max <= 0) break; //仅用于调试 
             }
 
             DishDetailsFileStore.Save(dlr);
@@ -283,23 +296,83 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
         private async Task FillDetail(DishDetailsRawDataItem detail)
         {
             IHtmlDocument doc = await CrawlerHelper.GetDocumentASync($"https:{detail.Url}");
+            //大图
             var img = doc.QuerySelector(".J_photo img"); // 找出大图url
-            detail.BigImageUrl = img.GetAttribute("src");
-
+            detail.BigImageUrl = img?.GetAttribute("src");
+            // 分类
             var tips = doc.QuerySelectorAll(".recipeTip.mt16");
-            if( tips == null || tips.Length < 3)
+            if( tips != null && tips.Length >= 3)
             {
-                return;
+                var links = tips[2].GetElementsByTagName("a");
+                StringBuilder sb = new StringBuilder();
+                foreach(var a in links)
+                {
+                    sb.Append( a.TextContent);
+                    sb.Append(",");
+                }
+                detail.Tags = sb.ToString();
+            }
+            // 配比bom
+            var particulars = doc.QuerySelectorAll(".particulars");
+            if (particulars != null && particulars.Length >= 2)
+            {
+                var boms = particulars.Select(p =>
+                   {
+                       var bom = new DishBomRawData();
+                       var bis = p.GetElementsByTagName("li").Select(li =>
+                           {
+                               var spans = li.Children;
+                               if (spans != null && spans.Length >= 2)
+                               {
+                                   var bi = new BomItem()
+                                   {
+                                       EnglishName = CrawlerHelper.GetUrlLast(spans[0].FirstElementChild?.GetAttribute("href")),
+                                       FoodMaterialName = spans[0].GetElementsByTagName("b").FirstOrDefault()?.TextContent,
+                                       Use = spans[1].TextContent,
+                                   };
+                                  return bi;
+                               }
+                               else
+                               {
+                                   return new BomItem();
+                               }
+                           }
+                        );
+                       bom.AddRange(bis);
+                       return bom;
+                   }).ToList();
+                if (boms != null && boms.Count >= 2)
+                {
+                    detail.DishBom = boms[0];
+                    detail.AuxDishBom = boms[1];
+                }
             }
 
-            var links = tips[2].GetElementsByTagName("a");
-            StringBuilder sb = new StringBuilder();
-            foreach(var a in links)
+            // 口味等
+            var specs = doc.QuerySelectorAll(".recipeCategory_sub_R.mt30.clear li").Select(li =>
             {
-                sb.Append( a.TextContent);
-                sb.Append(",");
+                return li.GetElementsByTagName("a").FirstOrDefault()?.TextContent;
+            }).ToList();
+            if( specs !=null && specs.Count >=4 )
+            {
+                detail.Taste = specs[0];
+                detail.Technology = specs[1];
+                detail.CookTime = specs[2];
+                detail.Difficulty = specs[3];
             }
-            detail.Tags = sb.ToString();
+            // 步骤
+            var steps = doc.QuerySelectorAll(".recipeStep li").Select(li =>
+           {
+               string url = li.GetElementsByTagName("img").FirstOrDefault()?.GetAttribute("src");
+               string content = li.LastElementChild?.TextContent;
+               return new CookeyItem()
+               {
+                   Photo = url,
+                   Content = content
+               };
+           }).ToList();
+
+            detail.Cookery = new CookeryRawData(steps);
 
         }
 
@@ -308,7 +381,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             // 从 DishDetailsRawData 获取img
             // 已经填好小图和大图了！
             // 按规则排序，便于分页处理
-            return null;
+            return new DishListRawData();
         }
 
         private void CrawlDishImage(DishDetailsRawData dirItem)
