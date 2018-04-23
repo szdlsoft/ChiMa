@@ -10,5 +10,8 @@ namespace SixMan.ChiMa.DomainService
         bool Exist(ICrawlerObject obj);
         void Save(ICrawlerObject obj);
         List<T> GetByPrefix<T>(string prefix, Action<T, string> OnAfterDeserialize);
+        List<T> GetAll<T>();
+        // img 处理
+
     }
 }

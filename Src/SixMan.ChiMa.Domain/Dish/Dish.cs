@@ -14,6 +14,8 @@ namespace SixMan.ChiMa.Domain.Dish
     public class Dish
         : MultiMediaBase
     {
+        public static string ImageLocalPath => $"images\\Dish";
+
         /// <summary>
         /// 导入id
         /// 防止重复导入

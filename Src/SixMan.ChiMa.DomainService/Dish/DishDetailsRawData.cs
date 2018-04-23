@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
+using SixMan.ChiMa.Domain.Dish;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace SixMan.ChiMa.DomainService
@@ -17,6 +19,12 @@ namespace SixMan.ChiMa.DomainService
 
     public class DishDetailsRawDataItem
     {
+        /// <summary>
+        /// 美食天下，菜品图像前缀
+        /// </summary>
+        public const string IMG_PREFIX = "MSTX";
+
+
         public string DataId { get; set; }
         /// <summary>
         /// 菜名
@@ -70,6 +78,28 @@ namespace SixMan.ChiMa.DomainService
         /// 辅材 食材配比
         /// </summary>
         public DishBomRawData AuxDishBom { get; set; }
+        /// <summary>
+        /// 菜品img名
+        /// 保证全局唯一性
+        /// </summary>
+        [JsonIgnore]
+        public string DishImgName => $"{IMG_PREFIX}_{DataId}";
+
+        public string SmallImageLocalPath()
+        {
+            return Path.Combine(Dish.ImageLocalPath, $"{DishImgName}_sml.jpg");
+        }
+
+        public string BigImageLocalPath()
+        {
+            return Path.Combine(Dish.ImageLocalPath, $"{DishImgName}_big.jpg"); 
+        }
+
+        public string CookeryLocalPath(int stepNum )
+        {
+            return Path.Combine(SixMan.ChiMa.Domain.Dish.Cookery.ImageLocalPath, $"{DishImgName}_{stepNum}.jpg");
+        }      
+
     }
 
     public class DishBomRawData
@@ -80,6 +110,10 @@ namespace SixMan.ChiMa.DomainService
     public class CookeryRawData
         : List<CookeyItem>
     {
+        public CookeryRawData()
+        {
+
+        }
         public CookeryRawData(List<CookeyItem> steps)
         {
             AddRange(steps);

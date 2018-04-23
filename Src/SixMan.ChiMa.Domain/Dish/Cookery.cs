@@ -14,6 +14,8 @@ namespace SixMan.ChiMa.Domain.Dish
         : MultiMediaContentBase
         , IOrder, IContent
     {
+        public static string ImageLocalPath => $"images\\Cookery";
+
         public Dish Dish { get; set; }
         /// <summary>
         /// 序号

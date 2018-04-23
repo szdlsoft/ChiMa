@@ -34,14 +34,15 @@ namespace SixMan.ChiMa.DomainService
         public List<T> GetByPrefix<T>(string prefix, Action<T,string> OnAfterDeserialize)
         {
             List<T> list = new List<T>();
-            foreach( var fileName in System.IO.Directory.GetFiles(Path, $"{prefix}_*.json"))
+            foreach ( var fileName in System.IO.Directory.GetFiles(Path, $"{prefix}_*.json"))
             {
                 T instance = Get<T>(fileName);
 
                 var fi = new System.IO.FileInfo(fileName);
                 string name = fi.Name.Substring(0, fi.Name.IndexOf(".json"));
                 string objName = name.Substring($"{prefix}_".Length );
-                OnAfterDeserialize(instance, objName);
+
+                OnAfterDeserialize?.Invoke(instance, objName);
 
 
                 list.Add( instance );
@@ -77,6 +78,17 @@ namespace SixMan.ChiMa.DomainService
                 file.Write(json);
                 file.Flush();
             }
+        }
+
+        public List<T> GetAll<T>()
+        {
+            List<T> list = new List<T>();
+            foreach (var fileName in System.IO.Directory.GetFiles(Path, $"*.json"))
+            {
+                T instance = Get<T>(fileName);
+                list.Add(instance);
+            }
+            return list;
         }
     }
 }

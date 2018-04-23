@@ -107,5 +107,24 @@ namespace SixMan.ChiMa.DomainService
                    //?? hr.Header["Location"].ToString()
                    ;
         }
+
+        internal static void DownloadImgAndSave(DishImgItem img)
+        {
+            if (img.SourcrUrl == null)
+            {
+                return;
+            }
+            string fullPath = Path.Combine(CrawlerConfig.RootPath, img.LocalPath);
+
+            if (File.Exists(fullPath))
+            {
+                return;
+            }
+
+            using (WebClient client = new WebClient())
+            {
+                client.DownloadFile(img.SourcrUrl, fullPath);
+            }
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using Abp.Quartz;
 using AngleSharp.Dom.Html;
 using Quartz;
+using SixMan.ChiMa.Domain.Dish;
+using SixMan.ChiMa.Domain.Extensions;
 using SixMan.ChiMa.DomainService;
 using System;
 using System.Collections.Generic;
@@ -106,19 +108,25 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             Task.WaitAll(tasks.ToArray());
             var end = DateTime.Now;
             ShowAndLog($"爬详情 end:{end} 耗时:{end.Subtract(start).TotalMinutes}");
-            //4 爬img
-            DishListRawData dir = GetDishDetails();
-            foreach (var dirItem in dir)
-            {
-                CrawlDishImage(dirItem);
-                if (UserBreaker())
-                {
-                    // 每次必须完成下一个类别
-                    // 显示进度，很关键
-                    return;
-                }
-            }
 
+            //4 爬img
+            start = DateTime.Now;
+            ShowAndLog($"爬img start:{start}");
+            DishImgRawData imgs = GetDishDetails();
+            ParallelOptions parallelOptions = new ParallelOptions()
+            {
+                MaxDegreeOfParallelism = 50,
+            };
+
+            Parallel.ForEach(imgs, parallelOptions
+                , (img) =>
+                {
+                    CrawlerHelper.DownloadImgAndSave(img);
+                    Console.Write(".");
+                } 
+                );
+            end = DateTime.Now;
+            ShowAndLog($"爬img end:{end} 耗时:{end.Subtract(start).TotalMinutes}");
 
         }
 
@@ -376,19 +384,21 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
         }
 
-        private DishListRawData GetDishDetails()
+        private DishImgRawData GetDishDetails()
         {
             // 从 DishDetailsRawData 获取img
-            // 已经填好小图和大图了！
-            // 按规则排序，便于分页处理
-            return new DishListRawData();
+            var dishCatDetails = new DishListRawData( DishDetailsFileStore.GetAll<DishDetailsRawData>());
+            IEnumerable<DishImgItem> imgs = dishCatDetails.GetImgs();
+            // 取掉重复
+            return new DishImgRawData(imgs.Distinct());
         }
+       
 
-        private void CrawlDishImage(DishDetailsRawData dirItem)
-        {
-            // 每次下载1000个！
-            //并发下载
-            //如果已存在，就不下
-        }
+        //private void CrawlDishImage(DishDetailsRawData dirItem)
+        //{
+        //    // 每次下载1000个！
+        //    //并发下载
+        //    //如果已存在，就不下
+        //}
     }
 }
