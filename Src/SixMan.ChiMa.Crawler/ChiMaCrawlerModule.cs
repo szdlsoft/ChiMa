@@ -39,7 +39,7 @@ namespace SixMan.ChiMa.Crawler
                 ChiMaConsts.ConnectionStringName
             );
 
-            Configuration.BackgroundJobs.IsJobExecutionEnabled = true;
+            Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
 
             //CrawlerConfig.Load(_appConfiguration);
         }
