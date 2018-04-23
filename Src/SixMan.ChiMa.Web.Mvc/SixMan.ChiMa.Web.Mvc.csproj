@@ -15,6 +15,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\images\Cookery\**" />
+    <Compile Remove="wwwroot\images\Dish\**" />
+    <Compile Remove="wwwroot\images\FoodMaterial\**" />
+    <Content Remove="wwwroot\images\Cookery\**" />
+    <Content Remove="wwwroot\images\Dish\**" />
+    <Content Remove="wwwroot\images\FoodMaterial\**" />
+    <EmbeddedResource Remove="wwwroot\images\Cookery\**" />
+    <EmbeddedResource Remove="wwwroot\images\Dish\**" />
+    <EmbeddedResource Remove="wwwroot\images\FoodMaterial\**" />
+    <None Remove="wwwroot\images\Cookery\**" />
+    <None Remove="wwwroot\images\Dish\**" />
+    <None Remove="wwwroot\images\FoodMaterial\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="app.config" />
     <None Update="Dockerfile">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
