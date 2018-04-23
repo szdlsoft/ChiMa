@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SixMan.ChiMa.Crawler.CrawlerTasks
@@ -121,8 +122,16 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             Parallel.ForEach(imgs, parallelOptions
                 , (img) =>
                 {
-                    CrawlerHelper.DownloadImgAndSave(img);
-                    Console.Write(".");
+                    try
+                    {
+                        CrawlerHelper.DownloadImgAndSave(img);
+                        Console.Write(".");
+                    }
+                    catch(System.Net.WebException ex)
+                    {
+                        ShowAndLog($"{img.SourcrUrl}:{ex.Message}");
+                        Thread.Sleep(100);
+                    }
                 } 
                 );
             end = DateTime.Now;

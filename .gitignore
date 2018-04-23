@@ -260,3 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 /Src/SixMan.ChiMa.Web.Mvc/wwwroot/CrawlerData/DishDetails
+/Src/SixMan.ChiMa.Web.Mvc/wwwroot/images/Cookery
+/Src/SixMan.ChiMa.Web.Mvc/wwwroot/images/Dish
