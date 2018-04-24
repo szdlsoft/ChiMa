@@ -48,7 +48,8 @@
  * 1.2.6  2018-04-20   Add 爬菜谱列表完成
  * 1.2.7  2018-04-22   Opt 小重构，文件仓库存储,一次性任务直接执行，配置统一到 web.mvc 下！
  *                     Add 爬菜品明细
- * 1.2.8  2018-04-23   Add 爬菜品img                  
+ * 1.2.8  2018-04-23   Add 爬菜品img 
+ * 1.2.9  2018-04-24   Add 爬数据导入数据库
  * **********************************************************/
 
 using System;
@@ -66,7 +67,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.2.7";
+        public const string Version = "1.2.9";
 
         /// <summary>
         /// Gets release (last build) date of the application.

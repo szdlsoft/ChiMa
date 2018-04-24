@@ -23,7 +23,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
     {
         public Type TaskType => typeof(MeiShiChinaFMCrawler);
 
-        public IFoodMaterialDataStore importer { get; set; }
+        public IFoodMaterialDataStore dataStore { get; set; }
 
         public string Name => "MeiShiChinaFM";
 
@@ -32,7 +32,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
         public MeiShiChinaFMCrawler()
                     :base()
         {
-            importer = NullFoodMaterialDataStore.Instance;
+            dataStore = NullFoodMaterialDataStore.Instance;
         }
 
         public void ConfigureJob(JobBuilder job)
@@ -111,7 +111,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             foreach( var midDiv in middleDivs)
             {
                 var middleCatName = midDiv.FirstElementChild.TextContent; //h2 // node 是可视树，用xpath， element 是逻辑树,用selector
-                if(importer.HasSave(topCatName, middleCatName))
+                if(dataStore.HasSave(topCatName, middleCatName))
                 {
                     continue; // 已经导入的，就不重复导入
                 }
@@ -140,7 +140,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                     FoodMaterials = foodMaterials
                 };
 
-                importer.SaveCategory(rawItem);
+                dataStore.SaveCategory(rawItem);
 
                 rawData.Add(rawItem);
 

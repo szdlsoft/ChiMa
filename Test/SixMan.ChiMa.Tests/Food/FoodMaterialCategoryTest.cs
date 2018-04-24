@@ -18,13 +18,13 @@ namespace SixMan.ChiMa.Tests.Food
     public class FoodMaterialCategoryTest : ChiMaTestBase
     {
         private readonly IFoodMaterialCategoryAppService _appService;
-        private readonly IFoodMaterialImportManager _importManager;
+        private readonly FoodMaterialManager _importManager;
         private IRepository<FoodMaterialCategory, long> _foodMaterialCategoryRepository;
 
         public FoodMaterialCategoryTest()
         {
             _appService = Resolve<IFoodMaterialCategoryAppService>();
-            _importManager = Resolve<IFoodMaterialImportManager>();
+            _importManager = Resolve<FoodMaterialManager>();
             _foodMaterialCategoryRepository = Resolve<IRepository<FoodMaterialCategory, long>>();
         }
 

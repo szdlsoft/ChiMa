@@ -10,6 +10,7 @@ using Abp.Runtime.Security;
 using SixMan.ChiMa.EFCore;
 using SixMan.ChiMa.EFCore.Seed;
 using SixMan.ChiMa.Domain.MultiTenancy;
+using SixMan.ChiMa.DomainService;
 
 namespace SixMan.ChiMa.Migrator
 {
@@ -21,17 +22,21 @@ namespace SixMan.ChiMa.Migrator
         private readonly IRepository<Tenant> _tenantRepository;
         private readonly IDbPerTenantConnectionStringResolver _connectionStringResolver;
 
+        private readonly IFoodMaterialAndDishImport _foodMaterialAndDishImport;
+
         public MultiTenantMigrateExecuter(
             AbpZeroDbMigrator migrator,
             IRepository<Tenant> tenantRepository,
             Log log,
-            IDbPerTenantConnectionStringResolver connectionStringResolver)
+            IDbPerTenantConnectionStringResolver connectionStringResolver,
+            IFoodMaterialAndDishImport foodMaterialAndDishImport)
         {
             Log = log;
 
             _migrator = migrator;
             _tenantRepository = tenantRepository;
             _connectionStringResolver = connectionStringResolver;
+            _foodMaterialAndDishImport = foodMaterialAndDishImport;
         }
 
         public void Run(bool skipConnVerification)
@@ -60,6 +65,8 @@ namespace SixMan.ChiMa.Migrator
             try
             {
                 _migrator.CreateOrMigrateForHost(SeedHelper.SeedHostDb);
+                Log.Write("导入爬数据 started...");
+                _foodMaterialAndDishImport.Execute();
             }
             catch (Exception ex)
             {

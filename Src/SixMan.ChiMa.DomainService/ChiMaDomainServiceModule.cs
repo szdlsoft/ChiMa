@@ -10,6 +10,7 @@ using System.Text;
 
 namespace SixMan.ChiMa.DomainService
 {
+    [DependsOn(typeof(Abp.AutoMapper.AbpAutoMapperModule))]
     [DependsOn(typeof(ChiMaDomainModule))]
     public  class ChiMaDomainServiceModule
         : AbpModule

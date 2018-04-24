@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Repositories;
+using Abp.Domain.Services;
 using Abp.Domain.Uow;
 using AutoMapper;
 using SixMan.ChiMa.Domain.Food;
@@ -11,9 +12,8 @@ using System.Text.RegularExpressions;
 namespace SixMan.ChiMa.DomainService
 {
     //[UnitOfWork(false)]
-    public class FoodMaterialImportManager
-        : IFoodMaterialImportManager
-        , Abp.Dependency.ISingletonDependency
+    public class FoodMaterialManager
+        :IDomainService
     {
         public IRepository<FoodMaterialCategory, long> FoodMaterialCategoryRepository { get; set; }
         public IRepository<FoodMaterial, long> FoodMaterialRepository { get; set; }
@@ -22,20 +22,12 @@ namespace SixMan.ChiMa.DomainService
 
         public IUnitOfWork unitOfWork { get; set; }
 
-        public bool HasImport(string topCatName, string middleCatName)
+        private bool HasImport(string topCatName, string middleCatName)
         {
             return FoodMaterialCategoryRepository.Count(  c => c.Name == middleCatName ) > 0;
-        }
-
-        public void Import(FoodMaterialRawData rawData)
-        {
-            foreach( var item in rawData)
-            {
-                ImportCategory(item);
-            }
-        }
+        } 
         
-        public void ImportCategory(FoodMaterialRawDataItem item)
+        public void Import(FoodMaterialRawDataItem item)
         {
             FoodMaterialCategory cat = ImportOnlyCategorys(item.Top, item.Middle);
             ImportOnlyNutritions(item.FoodMaterials.SelectMany(f => f.Nutritions).Distinct().ToList());

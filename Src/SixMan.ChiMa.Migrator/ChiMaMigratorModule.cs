@@ -7,9 +7,11 @@ using SixMan.ChiMa.Domain.Configuration;
 using SixMan.ChiMa.EFCore;
 using SixMan.ChiMa.Migrator.DependencyInjection;
 using SixMan.ChiMa.Domain;
+using SixMan.ChiMa.DomainService;
 
 namespace SixMan.ChiMa.Migrator
 {
+    [DependsOn(typeof(ChiMaDomainServiceModule))]
     [DependsOn(typeof(ChiMaEFCoreModule))]
     public class ChiMaMigratorModule : AbpModule
     {

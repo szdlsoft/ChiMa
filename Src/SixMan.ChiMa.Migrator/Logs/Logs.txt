@@ -570,3 +570,174 @@ INFO  2018-03-30 10:02:50,472 [1    ] SixMan.ChiMa.Migrator.Log                -
 INFO  2018-03-30 10:02:50,612 [1    ] SixMan.ChiMa.Migrator.Log                - All databases have been migrated.
 DEBUG 2018-03-30 10:06:11,752 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
 DEBUG 2018-03-30 10:06:11,754 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-24 09:57:44,305 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+FATAL 2018-04-24 09:57:47,465 [1    ] Abp.AbpBootstrapper                      - System.IO.FileNotFoundException: Could not load file or assembly 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeType type, RuntimeType caType, Boolean inherit)
+   at Abp.Modules.AbpModule.FindDependedModuleTypes(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 106
+   at Abp.Modules.AbpModule.AddModuleAndDependenciesRecursively(List`1 modules, Type module) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 143
+   at Abp.Modules.AbpModule.FindDependedModuleTypesRecursivelyIncludingGivenModule(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 124
+   at Abp.Modules.AbpModuleManager.FindAllModuleTypes(List`1& plugInModuleTypes) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 86
+   at Abp.Modules.AbpModuleManager.LoadAllModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 67
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 147
+
+
+System.IO.FileNotFoundException: Could not load file or assembly 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeType type, RuntimeType caType, Boolean inherit)
+   at Abp.Modules.AbpModule.FindDependedModuleTypes(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 106
+   at Abp.Modules.AbpModule.AddModuleAndDependenciesRecursively(List`1 modules, Type module) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 143
+   at Abp.Modules.AbpModule.FindDependedModuleTypesRecursivelyIncludingGivenModule(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 124
+   at Abp.Modules.AbpModuleManager.FindAllModuleTypes(List`1& plugInModuleTypes) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 86
+   at Abp.Modules.AbpModuleManager.LoadAllModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 67
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 147
+
+
+DEBUG 2018-04-24 10:02:35,930 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+FATAL 2018-04-24 10:02:36,204 [1    ] Abp.AbpBootstrapper                      - System.IO.FileNotFoundException: Could not load file or assembly 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeType type, RuntimeType caType, Boolean inherit)
+   at Abp.Modules.AbpModule.FindDependedModuleTypes(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 106
+   at Abp.Modules.AbpModule.AddModuleAndDependenciesRecursively(List`1 modules, Type module) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 143
+   at Abp.Modules.AbpModule.FindDependedModuleTypesRecursivelyIncludingGivenModule(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 124
+   at Abp.Modules.AbpModuleManager.FindAllModuleTypes(List`1& plugInModuleTypes) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 86
+   at Abp.Modules.AbpModuleManager.LoadAllModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 67
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 147
+
+
+System.IO.FileNotFoundException: Could not load file or assembly 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.CustomAttribute._CreateCaObject(RuntimeModule pModule, IRuntimeMethodInfo pCtor, Byte** ppBlob, Byte* pEndBlob, Int32* pcNamedArgs)
+   at System.Reflection.CustomAttribute.CreateCaObject(RuntimeModule module, IRuntimeMethodInfo ctor, IntPtr& blob, IntPtr blobEnd, Int32& namedArgs)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType, Boolean mustBeInheritable, IList derivedAttributes, Boolean isDecoratedTargetSecurityTransparent)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeType type, RuntimeType caType, Boolean inherit)
+   at Abp.Modules.AbpModule.FindDependedModuleTypes(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 106
+   at Abp.Modules.AbpModule.AddModuleAndDependenciesRecursively(List`1 modules, Type module) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 143
+   at Abp.Modules.AbpModule.FindDependedModuleTypesRecursivelyIncludingGivenModule(Type moduleType) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModule.cs:line 124
+   at Abp.Modules.AbpModuleManager.FindAllModuleTypes(List`1& plugInModuleTypes) in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 86
+   at Abp.Modules.AbpModuleManager.LoadAllModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 67
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 147
+
+
+DEBUG 2018-04-24 10:09:20,949 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-24 10:09:21,732 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-24 10:09:22,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Migrator.ChiMaMigratorModule, SixMan.ChiMa.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 10:09:40,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 10:09:40,309 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 10:09:40,310 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 10:09:40,311 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 10:09:40,313 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 10:09:40,313 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 10:09:40,314 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 10:09:40,316 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 10:09:40,317 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 10:09:40,326 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+FATAL 2018-04-24 10:09:41,707 [1    ] Abp.AbpBootstrapper                      - System.TypeLoadException: Method 'GetAsync' in type 'Abp.BackgroundJobs.BackgroundJobStore' from assembly 'Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at System.Reflection.RuntimeAssembly.GetExportedTypes(RuntimeAssembly assembly, ObjectHandleOnStack retTypes)
+   at System.Reflection.RuntimeAssembly.GetExportedTypes()
+   at Castle.Core.Internal.ReflectionUtil.GetAvailableTypes(Assembly assembly, Boolean includeNonExported)
+   at Castle.Windsor.Installer.AssemblyInstaller.Install(IWindsorContainer container, IConfigurationStore store)
+   at Castle.Windsor.WindsorContainer.Install(IWindsorInstaller[] installers, DefaultComponentInstaller scope)
+   at Castle.Windsor.WindsorContainer.Install(IWindsorInstaller[] installers)
+   at Abp.Dependency.IocManager.RegisterAssemblyByConvention(Assembly assembly, ConventionalRegistrationConfig config) in D:\Github\aspnetboilerplate\src\Abp\Dependency\IocManager.cs:line 88
+   at Abp.Zero.AbpZeroCommonModule.Initialize() in D:\Github\aspnetboilerplate\src\Abp.Zero.Common\Zero\AbpZeroCommonModule.cs:line 56
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 48
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+System.TypeLoadException: Method 'GetAsync' in type 'Abp.BackgroundJobs.BackgroundJobStore' from assembly 'Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null' does not have an implementation.
+   at System.Reflection.RuntimeAssembly.GetExportedTypes(RuntimeAssembly assembly, ObjectHandleOnStack retTypes)
+   at System.Reflection.RuntimeAssembly.GetExportedTypes()
+   at Castle.Core.Internal.ReflectionUtil.GetAvailableTypes(Assembly assembly, Boolean includeNonExported)
+   at Castle.Windsor.Installer.AssemblyInstaller.Install(IWindsorContainer container, IConfigurationStore store)
+   at Castle.Windsor.WindsorContainer.Install(IWindsorInstaller[] installers, DefaultComponentInstaller scope)
+   at Castle.Windsor.WindsorContainer.Install(IWindsorInstaller[] installers)
+   at Abp.Dependency.IocManager.RegisterAssemblyByConvention(Assembly assembly, ConventionalRegistrationConfig config) in D:\Github\aspnetboilerplate\src\Abp\Dependency\IocManager.cs:line 88
+   at Abp.Zero.AbpZeroCommonModule.Initialize() in D:\Github\aspnetboilerplate\src\Abp.Zero.Common\Zero\AbpZeroCommonModule.cs:line 56
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in D:\Github\aspnetboilerplate\src\Abp\Modules\AbpModuleManager.cs:line 48
+   at Abp.AbpBootstrapper.Initialize() in D:\Github\aspnetboilerplate\src\Abp\AbpBootstrapper.cs:line 155
+DEBUG 2018-04-24 11:28:43,141 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-24 11:28:43,580 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-24 11:28:44,378 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Migrator.ChiMaMigratorModule, SixMan.ChiMa.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:44,419 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:44,420 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:44,421 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:44,422 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:44,423 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:44,423 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:44,424 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:44,426 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:44,427 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:44,438 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-24 11:28:46,176 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:28:49,908 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-24 11:28:50,126 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-24 11:28:50,229 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-24 11:28:50,267 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+INFO  2018-04-24 11:28:51,869 [1    ] SixMan.ChiMa.Migrator.Log                - Host database: Server=localhost;port=3306;database=ChiMaDb3;uid=root;password=root;character set=utf8;Old Guids=true
+INFO  2018-04-24 11:28:51,869 [1    ] SixMan.ChiMa.Migrator.Log                - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2018-04-24 11:28:56,259 [1    ] SixMan.ChiMa.Migrator.Log                - HOST database migration started...
+INFO  2018-04-24 11:30:48,248 [1    ] SixMan.ChiMa.Migrator.Log                - 导入爬数据 started...
+INFO  2018-04-24 11:31:02,882 [1    ] SixMan.ChiMa.Migrator.Log                - An error occured during migration of host database:
+INFO  2018-04-24 11:31:03,008 [1    ] SixMan.ChiMa.Migrator.Log                - System.InvalidOperationException: Mapper not initialized. Call Initialize with appropriate configuration. If you are trying to use mapper instances through a container or otherwise, make sure you do not have any calls to the static Mapper.Map methods, and if you're using ProjectTo or UseAsDataSource extension methods, make sure you pass in the appropriate IConfigurationProvider instance.
+   at AutoMapper.Mapper.get_Instance()
+   at AutoMapper.Mapper.Map[TDestination](Object source)
+   at SixMan.ChiMa.DomainService.FoodMaterialManager.SaveFoodMaterials(FoodMaterialItem food, FoodMaterialCategory cat) in D:\Work\ChiMa\Src\SixMan.ChiMa.DomainService\Food\FoodMaterialManager.cs:line 98
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options) in D:\Github\aspnetboilerplate\src\Abp\Domain\Uow\UnitOfWorkInterceptor.cs:line 68
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at SixMan.ChiMa.DomainService.FoodMaterialManager.Import(FoodMaterialRawDataItem item) in D:\Work\ChiMa\Src\SixMan.ChiMa.DomainService\Food\FoodMaterialManager.cs:line 37
+   at SixMan.ChiMa.DomainService.FoodMaterialAndDishImport.Execute() in D:\Work\ChiMa\Src\SixMan.ChiMa.DomainService\Import\FoodMaterialAndDishImport.cs:line 30
+   at SixMan.ChiMa.Migrator.MultiTenantMigrateExecuter.Run(Boolean skipConnVerification) in D:\Work\ChiMa\Src\SixMan.ChiMa.Migrator\MultiTenantMigrateExecuter.cs:line 69
+INFO  2018-04-24 11:31:03,008 [1    ] SixMan.ChiMa.Migrator.Log                - Canceled migrations.
+DEBUG 2018-04-24 11:34:58,430 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-04-24 11:34:58,431 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-04-24 11:43:09,831 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-24 11:43:10,884 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-24 11:43:11,660 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Migrator.ChiMaMigratorModule, SixMan.ChiMa.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,680 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,681 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,683 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,685 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,686 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,686 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,686 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,687 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,687 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,688 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:11,695 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-24 11:43:12,621 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-24 11:43:14,546 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-04-24 11:43:14,687 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-24 11:43:14,788 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-04-24 11:43:14,839 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-04-24 11:43:14,991 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-04-24 11:43:14,991 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+INFO  2018-04-24 11:43:16,774 [1    ] SixMan.ChiMa.Migrator.Log                - Host database: Server=localhost;port=3306;database=ChiMaDb3;uid=root;password=root;character set=utf8;Old Guids=true
+INFO  2018-04-24 11:43:16,774 [1    ] SixMan.ChiMa.Migrator.Log                - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2018-04-24 11:43:20,450 [1    ] SixMan.ChiMa.Migrator.Log                - HOST database migration started...
+INFO  2018-04-24 11:43:30,106 [1    ] SixMan.ChiMa.Migrator.Log                - 导入爬数据 started...
+INFO  2018-04-24 11:46:11,433 [1    ] SixMan.ChiMa.Migrator.Log                - An error occured during migration of host database:
+INFO  2018-04-24 11:46:11,531 [1    ] SixMan.ChiMa.Migrator.Log                - Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'SixMan.ChiMa.DomainService.DishDetailsRawDataItem' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureArrayContract(JsonReader reader, Type objectType, JsonContract contract)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at SixMan.ChiMa.DomainService.CrawlerDataStoreDefault.Get[T](String fileName) in D:\Work\ChiMa\Src\SixMan.ChiMa.DomainService\CrawlerDataStore\CrawlerDataStoreDefault.cs:line 60
+   at SixMan.ChiMa.DomainService.CrawlerDataStoreDefault.GetAll[T]() in D:\Work\ChiMa\Src\SixMan.ChiMa.DomainService\CrawlerDataStore\CrawlerDataStoreDefault.cs:line 88
+   at SixMan.ChiMa.DomainService.FoodMaterialAndDishImport.Execute() in D:\Work\ChiMa\Src\SixMan.ChiMa.DomainService\Import\FoodMaterialAndDishImport.cs:line 34
+   at SixMan.ChiMa.Migrator.MultiTenantMigrateExecuter.Run(Boolean skipConnVerification) in D:\Work\ChiMa\Src\SixMan.ChiMa.Migrator\MultiTenantMigrateExecuter.cs:line 69
+INFO  2018-04-24 11:46:11,531 [1    ] SixMan.ChiMa.Migrator.Log                - Canceled migrations.

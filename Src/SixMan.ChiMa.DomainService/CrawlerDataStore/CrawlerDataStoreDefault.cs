@@ -50,7 +50,7 @@ namespace SixMan.ChiMa.DomainService
             return list;
         }
 
-        public  T Get<T>(string fileName)
+        private  T Get<T>(string fileName)
         {
             string fullPath = fileName;
             if (System.IO.File.Exists(fullPath))

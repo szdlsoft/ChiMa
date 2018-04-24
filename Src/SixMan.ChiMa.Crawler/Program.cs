@@ -36,7 +36,7 @@ namespace SixMan.ChiMa.Crawler
         private static void TestRepository()
         {
             IRepository<FoodMaterialCategory, long> _foodMaterialCategoryRepository = Resolve<IRepository<FoodMaterialCategory, long>>();
-            IFoodMaterialImportManager manager = Resolve<IFoodMaterialImportManager>();
+            FoodMaterialManager manager = Resolve<FoodMaterialManager>();
             //_foodMaterialCategoryRepository.Insert(new FoodMaterialCategory()
             //{
             //    Name = "ABC"
