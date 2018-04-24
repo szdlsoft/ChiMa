@@ -55,6 +55,17 @@ namespace SixMan.ChiMa.DomainService
                 }
             }
         }
+
+        internal IEnumerable<DishDetailsRawDataItem> GetDishs()
+        {
+            foreach(var dishs in this)
+            {
+                foreach( var dish in dishs)
+                {
+                    yield return dish;
+                }
+            }
+        }
     }
 
     //public class DishListRawDataItem

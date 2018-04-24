@@ -20,7 +20,8 @@ namespace SixMan.ChiMa.Domain.Dish
         /// 导入id
         /// 防止重复导入
         /// </summary>
-        public long? ImportId { get; set; }
+        [StringLength(LengthConstants.MaxCodeLength)]
+        public string ImportId { get; set; }
         /// <summary>
         /// 菜系
         /// </summary>
@@ -32,6 +33,7 @@ namespace SixMan.ChiMa.Domain.Dish
         /// <summary>
         /// 口味
         /// </summary>
+        [StringLength(LengthConstants.MaxDescriptionLength)]
         public string Taste { get; set; }
         /// <summary>
         /// 烹饪方式
@@ -45,11 +47,13 @@ namespace SixMan.ChiMa.Domain.Dish
         /// <summary>
         /// 烹饪时间
         /// </summary>
-        public int? CookTime { get; set; }
+        [StringLength(LengthConstants.MaxCodeLength)]
+        public string CookTime { get; set; }
         /// <summary>
         /// 制作难度
         /// </summary>
-        public int? Difficulty { get; set; }
+        [StringLength(LengthConstants.MaxCodeLength)]
+        public string Difficulty { get; set; }
         /// <summary>
         /// 自制人
         /// 如为空表示是公共的
@@ -93,6 +97,6 @@ namespace SixMan.ChiMa.Domain.Dish
         /// </summary>
         public ICollection<UserFavoriteDish> UserUserFavorites { get; set; }
 
-
+ 
     }
 }

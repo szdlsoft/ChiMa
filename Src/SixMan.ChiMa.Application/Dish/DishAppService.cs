@@ -70,7 +70,7 @@ namespace SixMan.ChiMa.Application.Dish
         {
             var ImportId = long.Parse( row["ImportId"]); //防止重复导入
             var count = Repository.GetAll().AsNoTracking()
-                        .Where(e => e.ImportId == ImportId).Count();
+                        .Where(e => e.ImportId == ImportId.ToString()).Count();
             if( count >  0)
             {
                 return 0;

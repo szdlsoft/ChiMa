@@ -22,13 +22,18 @@ namespace SixMan.ChiMa.DomainService
 
         public IUnitOfWork unitOfWork { get; set; }
 
-        private bool HasImport(string topCatName, string middleCatName)
+        private bool HasImport(FoodMaterialRawDataItem item)
         {
-            return FoodMaterialCategoryRepository.Count(  c => c.Name == middleCatName ) > 0;
+            return FoodMaterialCategoryRepository.Count(  c => c.Name == item.Middle ) > 0;
         } 
         
         public void Import(FoodMaterialRawDataItem item)
         {
+            if( HasImport(item)) //不重复导入
+            {
+                return;
+            }
+
             FoodMaterialCategory cat = ImportOnlyCategorys(item.Top, item.Middle);
             ImportOnlyNutritions(item.FoodMaterials.SelectMany(f => f.Nutritions).Distinct().ToList());
 

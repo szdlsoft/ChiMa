@@ -1,8 +1,10 @@
-﻿using Newtonsoft.Json;
+﻿using Abp.AutoMapper;
+using Newtonsoft.Json;
 using SixMan.ChiMa.Domain.Dish;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace SixMan.ChiMa.DomainService
@@ -17,6 +19,7 @@ namespace SixMan.ChiMa.DomainService
         public string CrawlerFileName => Tag.Replace(",", "_");
     }
 
+    [AutoMap(typeof(SixMan.ChiMa.Domain.Dish.Dish))]
     public class DishDetailsRawDataItem
     {
         /// <summary>
@@ -98,8 +101,12 @@ namespace SixMan.ChiMa.DomainService
         public string CookeryLocalPath(int stepNum )
         {
             return Path.Combine(SixMan.ChiMa.Domain.Dish.Cookery.ImageLocalPath, $"{DishImgName}_{stepNum}.jpg");
-        }      
+        }
 
+        public override string ToString()
+        {
+            return $"{Name}{Cookery.ToString()}";
+        }
     }
 
     public class DishBomRawData
@@ -117,6 +124,17 @@ namespace SixMan.ChiMa.DomainService
         public CookeryRawData(List<CookeyItem> steps)
         {
             AddRange(steps);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            this.ForEach(  c => 
+            {
+                sb.Append(c.Content);
+                sb.Append("  ");
+            });
+            return sb.ToString();
         }
     }
     /// <summary>

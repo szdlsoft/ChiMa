@@ -101,5 +101,33 @@ namespace SixMan.ChiMa.Domain.Extensions
 
             return defaultValue;
         }
+
+        public static String ToUTF8(this String str)
+        {
+            //if (str == null)
+            //{
+            //    return null;
+            //}
+            //str = str.Replace("[^\\u0000-\\uFFFF]", "");
+            //return str;
+            //StringBuilder sb = new StringBuilder();
+            //for (int i = 0; i < str.Length; i++)
+            //{
+            //    var c = str[i];
+            //    if ((str[i] & 0xF8) == 0xF0)
+            //    {
+            //        c = ' ';
+            //        i += 3;
+            //    }
+
+            //    sb.Append(c);
+            //}
+
+            //return sb.ToString();
+            //string -> byte[]
+            byte[] bytes = Encoding.UTF8.GetBytes(str);
+            //byte[] -> string
+            return Encoding.UTF8.GetString(bytes);
+        }
     }
 }

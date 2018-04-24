@@ -42,6 +42,11 @@ namespace SixMan.ChiMa.Domain.Dish
         /// 预处理烹饪方法
         /// </summary>
         public string PreProcess { get; set; }
-       
+
+        /// <summary>
+        /// 主材？
+        /// </summary>
+        public bool IsMain { get; set; }
+
     }
 }

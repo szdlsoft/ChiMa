@@ -13,11 +13,11 @@ namespace SixMan.ChiMa.Application.Dish
         /// <summary>
         /// 烹饪时间
         /// </summary>
-        public int? CookTime { get; set; }
+        public string CookTime { get; set; }
         /// <summary>
         /// 制作难度
         /// </summary>
-        public int? Difficulty { get; set; }
+        public string Difficulty { get; set; }
         /// <summary>
         /// 星数
         /// </summary>
