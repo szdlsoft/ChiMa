@@ -5,3 +5,12 @@ cd /home/sdl/Web
 netstat -lnp
 kill -9 
 nohup dotnet SixMan.ChiMa.Web.Mvc.dll &
+
+cd D:\Work\ChiMa\Src\SixMan.ChiMa.Web.Mvc
+dotnet publish  -o  d:\work\Release\ChiMa\Web
+
+cd D:\Work\ChiMa\Src\SixMan.ChiMa.Migrator
+dotnet publish -o d:\work\Release\ChiMa\DBMigrator
+
+cd /home/dbmigrator
+dotnet SixMan.ChiMa.Migrator.dll

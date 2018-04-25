@@ -36,6 +36,12 @@ namespace SixMan.ChiMa.Domain.Web
             //    return webMvcFolder;
             //}
 
+            var webFolder = Path.Combine(directoryInfo.FullName, "Web");
+            if (Directory.Exists(webFolder))
+            {
+                return webFolder;
+            }
+
             var webMvcFolder = Path.Combine(directoryInfo.FullName, "src", "SixMan.ChiMa.Web.Mvc");
             if (Directory.Exists(webMvcFolder))
             {
