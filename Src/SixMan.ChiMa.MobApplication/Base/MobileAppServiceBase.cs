@@ -10,6 +10,7 @@ using Abp.Dependency;
 using Abp;
 using Abp.UI;
 using SixMan.ChiMa.Domain;
+using Abp.Domain.Uow;
 
 namespace SixMan.ChiMa.Application
 {
@@ -35,6 +36,7 @@ namespace SixMan.ChiMa.Application
         }
 
         [RemoteService(isEnabled:false)]
+        [UnitOfWork]
         public void SetFilterPara()
         {
             CurrentUnitOfWork.SetFilterParameter(ChimaDataFilter.FamillyDataFilter, ChimaDataFilter.FamillyPara, Family);

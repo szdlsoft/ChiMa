@@ -50,8 +50,8 @@ namespace SixMan.ChiMa.DomainService
             {
                 ImportId = item.DataId,
                 Description = item.Name.ToUTF8(),
-                HPhoto = item.SmallImageLocalPath(),
-                BPhoto = item.BigImageLocalPath(),
+                HPhoto = item.SmallImageLocalPath().ToSlash(),
+                BPhoto = item.BigImageLocalPath().ToSlash(),
                 DishCategory = item.Tags,
                 Taste = item.Taste,
                 CookTime = item.CookTime,
@@ -79,7 +79,7 @@ namespace SixMan.ChiMa.DomainService
             {
                 Description = "abc",//r.Content.Substring(0, r.Content.Length > 30 ? 30 : r.Content.Length),
                 Content = r.Content,
-                Photo = item.CookeryLocalPath(start),
+                Photo = item.CookeryLocalPath(start).ToSlash(),
                 Order = start++,
             } ).ToList();
         }

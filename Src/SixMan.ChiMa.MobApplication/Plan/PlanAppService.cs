@@ -11,6 +11,7 @@ using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Web.Models;
 using SixMan.ChiMa.Domain;
+using SixMan.ChiMa.Domain.Extensions;
 
 namespace SixMan.ChiMa.Application.Dish
 {
@@ -75,6 +76,7 @@ namespace SixMan.ChiMa.Application.Dish
 
         public IList<PlanDto> GetByDate(DateTime planDate)
         {            
+            planDate = planDate.Date;
             //SixMan.ChiMa.Domain.Family.Family family = _familyService.GetOrCreate();
             IList<Plan> list = _repository.Get(planDate, Family.Id );
 
@@ -92,6 +94,10 @@ namespace SixMan.ChiMa.Application.Dish
         {
             foreach( var plan in newPlans)
             {
+                //plan.FamilyId = plan.Family.Id;
+                //plan.DishId = plan.Dish.Id;
+                //plan.Family = null;
+                //plan.Dish = null;
                 plan.Id = _repository.InsertAndGetId(plan);
             }
         }

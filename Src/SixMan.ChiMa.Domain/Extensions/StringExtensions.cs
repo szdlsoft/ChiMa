@@ -54,7 +54,25 @@ namespace SixMan.ChiMa.Domain.Extensions
         /// <returns></returns>
         public static string ToAntiSlash(this string slashName)
         {
+            if (slashName == null)
+            {
+                return null;
+            }
+
             return slashName.Replace('/', '\\');
+        }
+        /// <summary>
+        /// '\\'变  '/'
+        /// </summary>
+        /// <param name="antiSlashName"></param>
+        /// <returns></returns>
+        public static string ToSlash(this string antiSlashName)
+        {
+            if (antiSlashName == null)
+            {
+                return null;
+            }
+            return antiSlashName.Replace('\\', '/');
         }
         /// <summary>
         /// 取括号中得内容
@@ -104,10 +122,10 @@ namespace SixMan.ChiMa.Domain.Extensions
 
         public static String ToUTF8(this String str)
         {
-            //if (str == null)
-            //{
-            //    return null;
-            //}
+            if (str == null)
+            {
+                return null;
+            }
             //str = str.Replace("[^\\u0000-\\uFFFF]", "");
             //return str;
             //StringBuilder sb = new StringBuilder();

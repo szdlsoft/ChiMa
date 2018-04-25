@@ -62,9 +62,10 @@ namespace SixMan.ChiMa.EFCore
         public virtual DbSet<FMAlias> FMAlias { get; set; }
 
         //过滤器设置
-        protected virtual long? CurrentFamilyId => GetCurrentFamilyIdOrNull();       
+        protected virtual long? CurrentFamilyId => GetCurrentFamilyIdOrNull();
 
         protected virtual bool FamilyFilterEnabled => CurrentUnitOfWorkProvider?.Current?.IsFilterEnabled(ChimaDataFilter.FamillyDataFilter) == true;
+        //protected virtual bool FamilyFilterEnabled =>false;
         private static MethodInfo ConfigureGlobalFiltersMethodInfo = typeof(ChiMaDbContext).GetMethod(nameof(ConfigureChimaFilters), BindingFlags.Instance | BindingFlags.NonPublic);
 
 
