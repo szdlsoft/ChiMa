@@ -111,31 +111,31 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             ShowAndLog($"爬详情 end:{end} 耗时:{end.Subtract(start).TotalMinutes}");
 
             //4 爬img
-            start = DateTime.Now;
-            ShowAndLog($"爬img start:{start}");
-            DishImgRawData imgs = GetDishDetails();
-            ParallelOptions parallelOptions = new ParallelOptions()
-            {
-                MaxDegreeOfParallelism = 50,
-            };
+            //start = DateTime.Now;
+            //ShowAndLog($"爬img start:{start}");
+            //DishImgRawData imgs = GetDishDetails();
+            //ParallelOptions parallelOptions = new ParallelOptions()
+            //{
+            //    MaxDegreeOfParallelism = 50,
+            //};
 
-            Parallel.ForEach(imgs, parallelOptions
-                , (img) =>
-                {
-                    try
-                    {
-                        CrawlerHelper.DownloadImgAndSave(img);
-                        Console.Write(".");
-                    }
-                    catch(System.Net.WebException ex)
-                    {
-                        ShowAndLog($"{img.SourcrUrl}:{ex.Message}");
-                        Thread.Sleep(100);
-                    }
-                } 
-                );
-            end = DateTime.Now;
-            ShowAndLog($"爬img end:{end} 耗时:{end.Subtract(start).TotalMinutes}");
+            //Parallel.ForEach(imgs, parallelOptions
+            //    , (img) =>
+            //    {
+            //        try
+            //        {
+            //            CrawlerHelper.DownloadImgAndSave(img);
+            //            Console.Write(".");
+            //        }
+            //        catch(System.Net.WebException ex)
+            //        {
+            //            ShowAndLog($"{img.SourcrUrl}:{ex.Message}");
+            //            Thread.Sleep(100);
+            //        }
+            //    } 
+            //    );
+            //end = DateTime.Now;
+            //ShowAndLog($"爬img end:{end} 耗时:{end.Subtract(start).TotalMinutes}");
 
         }
 

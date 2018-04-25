@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using SixMan.ChiMa.Application;
 using SixMan.ChiMa.Domain;
 using SixMan.ChiMa.Domain.Configuration;
+using SixMan.ChiMa.Domain.Web;
 using SixMan.ChiMa.DomainService;
 using SixMan.ChiMa.EFCore;
 using System;
@@ -26,11 +27,15 @@ namespace SixMan.ChiMa.Crawler
 
         public ChiMaCrawlerModule(ChiMaEFCoreModule ChiMaEFCoreModule)
         {
-            ChiMaEFCoreModule.SkipDbSeed = true;
+            //ChiMaEFCoreModule.SkipDbSeed = true;
 
             _appConfiguration = AppConfigurations.Get(
                 typeof(ChiMaCrawlerModule).GetAssembly().GetDirectoryPathOrNull()
             );
+
+            // 就读哥数据库连接，没啥意义！
+            //_appConfiguration = AppConfigurations.Get(WebContentDirectoryFinder.CalculateContentRootFolder());
+
         }
 
         public override void PreInitialize()
