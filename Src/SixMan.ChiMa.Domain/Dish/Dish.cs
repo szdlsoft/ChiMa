@@ -14,7 +14,7 @@ namespace SixMan.ChiMa.Domain.Dish
     public class Dish
         : MultiMediaBase
     {
-        public static string ImageLocalPath => $"images\\Dish";
+        public static string ImageLocalPath => System.IO.Path.Combine( "images","Dish");
 
         /// <summary>
         /// 导入id

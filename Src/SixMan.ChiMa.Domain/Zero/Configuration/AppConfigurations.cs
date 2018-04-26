@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Abp.Extensions;
 using Abp.Reflection.Extensions;
+using System;
+using SixMan.ChiMa.Domain.Web;
 
 namespace SixMan.ChiMa.Domain.Configuration
 {
@@ -42,6 +44,14 @@ namespace SixMan.ChiMa.Domain.Configuration
             }
 
             return builder.Build();
+        }
+        /// <summary>
+        /// 获取配置，根据当前环境environmentName，并且到Web路径去查找appsettings.{environmentName}.json配置文件
+        /// </summary>
+        /// <returns></returns>
+        public static IConfigurationRoot GetWebConfigByEnviroment(string environment)
+        {
+            return Get(WebContentDirectoryFinder.CalculateContentRootFolder(), environment);
         }
     }
 }

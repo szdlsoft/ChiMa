@@ -15,17 +15,17 @@ namespace SixMan.ChiMa.DomainService
     public  class ChiMaDomainServiceModule
         : AbpModule
     {
-        private readonly IConfigurationRoot _appConfiguration;
+        //private readonly IConfigurationRoot _appConfiguration;
 
         public ChiMaDomainServiceModule()
         {
-            _appConfiguration = AppConfigurations.Get(WebContentDirectoryFinder.CalculateContentRootFolder());
+            //_appConfiguration = AppConfigurations.Get(WebContentDirectoryFinder.CalculateContentRootFolder());
 
         }
 
         public override void PreInitialize()
         {
-            CrawlerConfig.Load(_appConfiguration);
+            //CrawlerConfig.Load(_appConfiguration);
         }
 
         public override void Initialize()

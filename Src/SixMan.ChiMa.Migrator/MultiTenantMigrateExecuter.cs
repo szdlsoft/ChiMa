@@ -39,7 +39,7 @@ namespace SixMan.ChiMa.Migrator
             _foodMaterialAndDishImport = foodMaterialAndDishImport;
         }
 
-        public void Run(bool skipConnVerification)
+        public void Run(bool skipConnVerification = false)
         {
             var hostConnStr = _connectionStringResolver.GetNameOrConnectionString(new ConnectionStringResolveArgs(MultiTenancySides.Host));
             if (hostConnStr.IsNullOrWhiteSpace())

@@ -9,10 +9,19 @@ namespace SixMan.ChiMa.Migrator
 {
     public class Program
     {
+        public static string Environment { get; private set; } = "Development";
+
         private static bool _skipConnVerification = false;
 
         public static void Main(string[] args)
         {
+            if (args.Length > 0)
+            {
+                Environment = args[0];
+            }
+            Console.WriteLine($"Environment:{Environment}");
+            Console.ReadKey();
+
             ParseArgs(args);
 
             using (var bootstrapper = AbpBootstrapper.Create<ChiMaMigratorModule>())

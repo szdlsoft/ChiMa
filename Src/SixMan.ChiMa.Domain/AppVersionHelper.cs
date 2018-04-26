@@ -53,7 +53,10 @@
  *                     Upd Dish 结构，加入DataId Tags等
  * 1.3.2  2018-04-25   Fix plan family filter 的bug   
  * 1.3.3  2018-04-25   Add 爬img任务独立，crawler 配置也使用web相同配置，
- *                         生成计划时，过滤掉带“测试”词的！TBD
+ * 1.3.4  2018-04-26   Fix linux img crawler 文件路径BUG
+ *                     Add dnc Start 配置统一从WEB项目获取，并且自适应开发、生成环境，便于一键发布 
+ *                     Add 生成计划算法，考虑早、中、晚餐的来选择菜谱
+ *                     
  * **********************************************************/
 
 using System;
@@ -71,7 +74,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.3.3";
+        public const string Version = "1.3.4";
 
         /// <summary>
         /// Gets release (last build) date of the application.

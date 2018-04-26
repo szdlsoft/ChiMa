@@ -29,12 +29,13 @@ namespace SixMan.ChiMa.Crawler
         {
             //ChiMaEFCoreModule.SkipDbSeed = true;
 
-            _appConfiguration = AppConfigurations.Get(
-                typeof(ChiMaCrawlerModule).GetAssembly().GetDirectoryPathOrNull()
-            );
+            //_appConfiguration = AppConfigurations.Get(
+            //    typeof(ChiMaCrawlerModule).GetAssembly().GetDirectoryPathOrNull()
+            //);
 
             // 就读哥数据库连接，没啥意义！
             //_appConfiguration = AppConfigurations.Get(WebContentDirectoryFinder.CalculateContentRootFolder());
+            _appConfiguration = AppConfigurations.GetWebConfigByEnviroment(Program.Environment);
 
         }
 
@@ -46,7 +47,7 @@ namespace SixMan.ChiMa.Crawler
 
             Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
 
-            //CrawlerConfig.Load(_appConfiguration);
+            CrawlerConfig.Load(_appConfiguration);
         }
 
         public override void Initialize()

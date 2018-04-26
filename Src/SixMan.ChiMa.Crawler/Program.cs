@@ -7,25 +7,38 @@ using AngleSharp.Dom.Html;
 using AngleSharp.Parser.Html;
 using Castle.Facilities.Logging;
 using HttpCode.Core;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.DotNet.PlatformAbstractions;
+using Microsoft.Extensions.PlatformAbstractions;
 using SixMan.ChiMa.Crawler.CrawlerTasks;
 using SixMan.ChiMa.Domain.Food;
 using SixMan.ChiMa.DomainService;
 using System;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace SixMan.ChiMa.Crawler
 {
-    class Program
+    public class Program
     {
+        public static string Environment { get; private set; } = "Development";
+
         private static IIocManager iocManager;
         static void Main(string[] args)
         {
+            //var hostBuilder = new HostBuilder();
+            if( args.Length > 0)
+            {
+                Environment = args[0];
+            }
+            Console.WriteLine($"Environment:{Environment}");
+            Console.ReadKey();
+
             Console.WriteLine("ChiMa Crawler start !");
             using (var bootstrapper = AbpBootstrapper.Create<ChiMaCrawlerModule>())
             {
                 InitAbp(bootstrapper);
-                TestRepository();
                 RunTasks();
             }          
 
@@ -33,27 +46,7 @@ namespace SixMan.ChiMa.Crawler
             Console.ReadKey();
         }
 
-        private static void TestRepository()
-        {
-            IRepository<FoodMaterialCategory, long> _foodMaterialCategoryRepository = Resolve<IRepository<FoodMaterialCategory, long>>();
-            FoodMaterialManager manager = Resolve<FoodMaterialManager>();
-            //_foodMaterialCategoryRepository.Insert(new FoodMaterialCategory()
-            //{
-            //    Name = "ABC"
-            //});
-
-
-            //manager.ImportCategory(new FoodMaterialRawDataItem()
-            //{
-            //    Top = "123",
-            //    Middle = "456",
-            //    FoodMaterials = new FoodMaterialCollection()
-            //});
-
-            //var entity = _foodMaterialCategoryRepository.FirstOrDefault(f => f.Name == "123");
-
-            //_foodMaterialCategoryRepository.Delete(entity);
-        }
+        
 
         private static T Resolve<T>()
         {
@@ -93,6 +86,7 @@ namespace SixMan.ChiMa.Crawler
                 .AddFacility<LoggingFacility>(f => f.UseAbpLog4Net()
                     .WithConfig("log4net.config")
                 );
+            // 可以注入 _appConfiguration
 
             bootstrapper.Initialize();
             iocManager = bootstrapper.IocManager;

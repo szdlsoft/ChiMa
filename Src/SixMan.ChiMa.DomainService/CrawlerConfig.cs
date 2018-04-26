@@ -13,7 +13,7 @@ namespace SixMan.ChiMa.DomainService
 
         private static IConfigurationSection _appSetting = null;
 
-        internal static void Load(IConfigurationRoot appConfiguration)
+        public static void Load(IConfigurationRoot appConfiguration)
         {
             RootPath = appConfiguration.GetConfigStr("RootPath");
             NeedCrawlerFoodMaterial = appConfiguration.GetConfigBool("NeedCrawlerFoodMaterial");

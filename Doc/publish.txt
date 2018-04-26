@@ -17,4 +17,4 @@ dotnet SixMan.ChiMa.Migrator.dll
 
 cd D:\work\ChiMa\Src\SixMan.ChiMa.Crawler
 dotnet publish  -o D:\work\Release\Crawler
-dotnet SixMan.ChiMa.Crawler.dll
+dotnet SixMan.ChiMa.Crawler.dll Production

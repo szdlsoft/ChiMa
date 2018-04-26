@@ -21,9 +21,12 @@ namespace SixMan.ChiMa.Migrator
         {
             ChiMaEFCoreModule.SkipDbSeed = true;
 
-            _appConfiguration = AppConfigurations.Get(
-                typeof(ChiMaMigratorModule).GetAssembly().GetDirectoryPathOrNull()
-            );
+            //_appConfiguration = AppConfigurations.Get(
+            //    typeof(ChiMaMigratorModule).GetAssembly().GetDirectoryPathOrNull()
+            //);
+
+            _appConfiguration = AppConfigurations.GetWebConfigByEnviroment(Program.Environment);
+
         }
 
         public override void PreInitialize()
@@ -39,6 +42,8 @@ namespace SixMan.ChiMa.Migrator
                     Component.For<IEventBus>().Instance(NullEventBus.Instance)
                 );
             });
+
+            CrawlerConfig.Load(_appConfiguration);
         }
 
         public override void Initialize()
