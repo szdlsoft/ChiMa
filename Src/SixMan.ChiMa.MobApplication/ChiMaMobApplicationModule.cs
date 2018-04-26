@@ -14,6 +14,8 @@ namespace SixMan.ChiMa.Application
     {
         public override void PreInitialize()
         {
+            var t = 1;// 测试
+            t++;
         }
 
         public override void Initialize()

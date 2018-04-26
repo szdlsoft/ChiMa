@@ -11,7 +11,7 @@ namespace SixMan.ChiMa.Domain.Dish
         ,
         上午加餐=2
         ,
-        中餐=3
+        午餐=3
         ,
         下午加餐=4
         ,

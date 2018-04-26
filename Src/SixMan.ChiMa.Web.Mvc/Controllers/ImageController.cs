@@ -37,7 +37,7 @@ namespace SixMan.ChiMa.Web.Mvc.Controllers
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             return Json(photoFilePath);
         }

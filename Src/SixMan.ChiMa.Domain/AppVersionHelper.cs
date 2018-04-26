@@ -56,7 +56,8 @@
  * 1.3.4  2018-04-26   Fix linux img crawler 文件路径BUG
  *                     Add dnc Start 配置统一从WEB项目获取，并且自适应开发、生成环境，便于一键发布 
  *                     Add 生成计划算法，考虑早、中、晚餐的来选择菜谱
- *                     
+ *                     Fix JwtBearer 失效改为3天
+ *                     Fix Dish CookTime 字符串 转数字! TBD 让前端改吧
  * **********************************************************/
 
 using System;

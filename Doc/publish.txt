@@ -1,5 +1,5 @@
 cd D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc
-dotnet publish  -o D:\work\ChiMa\SixMan.ChiMa\Release\Web
+dotnet publish  -o D:\work\Release\ChiMa\Web
 
 cd /home/sdl/Web
 netstat -lnp
@@ -16,5 +16,24 @@ cd /home/dbmigrator
 dotnet SixMan.ChiMa.Migrator.dll
 
 cd D:\work\ChiMa\Src\SixMan.ChiMa.Crawler
-dotnet publish  -o D:\work\Release\Crawler
+dotnet publish  -o D:\work\Release\ChiMa\Crawler
 dotnet SixMan.ChiMa.Crawler.dll Production
+
+一 最近数据爬虫工作,告一段落,主要功能
+1: 从"美食天下"网爬食材和菜品
+2: 1000多种食材,包括图片\营养成分
+3: 10000多种菜品, 每个菜品2张图片(一小一大),包括菜品组成bom\菜品tag\口味\制作难度\烹饪时间\工艺\烹饪步骤; 
+4: 60000多种烹饪步骤, 包括一张图片/一段文字说明
+
+变动: 为了导入数据完整, 菜品 CookTime 字段由int改为string
+
+二 计划生成功能,尽量实用
+  因为有了足够的菜品库,所以采用随机法,具体如下
+  早餐 1主食 2热菜 1汤羹
+  午餐 1主食 1热菜 1凉菜 1汤羹
+  晚餐 1主食 2热菜 1汤羹
+
+  这块,还可逐步完善
+
+
+二 接下来一段时间,主攻:短信验证码

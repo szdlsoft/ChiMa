@@ -32,46 +32,50 @@ namespace SixMan.ChiMa.Application.Dish
                                             .ToList();
 
             IList<Domain.Dish.Dish> dishs = RadomGet(allDishs);
-            //早
-            plans.Add(new Plan()
-            {
-                Dish = dishs[0],
-                MealType = MealType.早餐,
-                MealNo = 1
-            });
-            plans.Add(new Plan()
-            {
-                Dish = dishs[1],
-                MealType = MealType.早餐,
-                MealNo = 2
-            });
+            //早餐 1主食 2热菜 1汤羹
+            plans.AddRange(GetDP(MealType.早餐, "主食", "热菜", "汤羹"));
 
-            //中
-            plans.Add(new Plan()
-            {
-                Dish = dishs[2],
-                MealType = MealType.中餐,
-                MealNo = 1
-            });
-            plans.Add(new Plan()
-            {
-                Dish = dishs[3],
-                MealType = MealType.中餐,
-                MealNo = 2
-            });
-            //晚
-            plans.Add(new Plan()
-            {
-                Dish = dishs[4],
-                MealType = MealType.晚餐,
-                MealNo = 1
-            });
-            plans.Add(new Plan()
-            {
-                Dish = dishs[5],
-                MealType = MealType.晚餐,
-                MealNo = 2
-            });
+            //plans.Add(new Plan()
+            //{
+            //    Dish = dishs[0],
+            //    MealType = MealType.早餐,
+            //    MealNo = 1
+            //});
+            //plans.Add(new Plan()
+            //{
+            //    Dish = dishs[1],
+            //    MealType = MealType.早餐,
+            //    MealNo = 2
+            //});
+
+            //午餐 1主食 1热菜 1凉菜 1汤羹
+            plans.AddRange(GetDP(MealType.午餐, "主食", "热菜",  "凉菜", "汤羹"));
+            //plans.Add(new Plan()
+            //{
+            //    Dish = dishs[2],
+            //    MealType = MealType.中餐,
+            //    MealNo = 1
+            //});
+            //plans.Add(new Plan()
+            //{
+            //    Dish = dishs[3],
+            //    MealType = MealType.中餐,
+            //    MealNo = 2
+            //});
+            //晚餐 1主食 2热菜 1汤羹
+            plans.AddRange(GetDP(MealType.晚餐, "主食", "热菜",  "汤羹"));
+            //plans.Add(new Plan()
+            //{
+            //    Dish = dishs[4],
+            //    MealType = MealType.晚餐,
+            //    MealNo = 1
+            //});
+            //plans.Add(new Plan()
+            //{
+            //    Dish = dishs[5],
+            //    MealType = MealType.晚餐,
+            //    MealNo = 2
+            //});
 
             foreach( var p in plans)
             {
@@ -81,6 +85,38 @@ namespace SixMan.ChiMa.Application.Dish
             }
 
             return plans;
+        }
+
+        private IEnumerable<Plan> GetDP(MealType mealType, params string[] tags )
+        {
+            int order = 1;
+            string meal = mealType.ToString();
+            foreach( var tag in tags)
+            {
+                var count = _dishRepository.Count(d => d.DishCategory.Contains(tag)
+                                        && d.DishCategory.Contains(meal));
+                var dish =
+                _dishRepository.GetAll()
+                               .Where(d => d.DishCategory.Contains(tag)
+                                        && d.DishCategory.Contains(meal))
+                               .Skip(RandomNum(count))
+                               .Take(1)
+                               .FirstOrDefault();
+                if( dish != null)
+                {
+                    yield return new Plan()
+                    {
+                        Dish = dish,
+                        MealType = mealType,
+                        MealNo = order++
+                    };
+                }
+            }
+        }
+        private int RandomNum(int count)
+        {
+            var random = new Random(DateTime.Now.Millisecond);
+            return random.Next(0, count - 1); ;
         }
 
         /// <summary>
