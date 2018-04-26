@@ -54,6 +54,12 @@ namespace SixMan.ChiMa.Application.Dish.Imp
                             entity.DishBoms.FirstOrDefault(dd => dd.Id == db.Id).FoodMaterial.Description);
 
             CaculateNutritionSum(dto, entity.DishBoms);
+            // 烹饪步骤没有文字说明bug , 导入时写死了abc
+            foreach( var cookery in dto.Cookerys)
+            {
+                cookery.Description = cookery.Content;
+            }
+
 
             return dto;
         }

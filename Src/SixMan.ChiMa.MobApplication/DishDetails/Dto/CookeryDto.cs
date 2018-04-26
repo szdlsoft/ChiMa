@@ -14,6 +14,8 @@ namespace SixMan.ChiMa.Application.Dish
         /// </summary>
         public int Order { get; set; }
 
+        public string Content { get; set; }
+
         /// <summary>
         /// 时间
         /// </summary>

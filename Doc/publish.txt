@@ -1,5 +1,6 @@
-cd D:\work\ChiMa\SixMan.ChiMa\Src\SixMan.ChiMa.Web.Mvc
+cd D:\work\ChiMa\Src\SixMan.ChiMa.Web.Mvc
 dotnet publish  -o D:\work\Release\ChiMa\Web
+dotnet build  -o D:\work\Release\ChiMa\Web
 
 cd /home/sdl/Web
 netstat -lnp
