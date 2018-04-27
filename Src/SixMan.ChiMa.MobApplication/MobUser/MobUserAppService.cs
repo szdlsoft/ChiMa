@@ -91,6 +91,24 @@ namespace SixMan.ChiMa.Application.MobUser
         protected virtual void CheckErrors(IdentityResult identityResult)
         {
             identityResult.CheckErrors(LocalizationManager);
-        }       
+        }
+
+        public IdentityResult Register(RegisterIntput userRegisterIntput)
+        {
+            return IdentityResult.Success;
+        }
+
+        public IdentityResult ResetPassword(ResetPasswordIntput userResetPasswordIntput)
+        {
+            return IdentityResult.Success;
+        }
+
+        public IdentityResult SendValidateCode(SendValidateCodeInput sendValidateCodeInput)
+        {
+            // 生成 
+            // 保存
+            // 发送
+            return IdentityResult.Success;
+        }
     }
 }
