@@ -58,7 +58,9 @@
  *                     Add 生成计划算法，考虑早、中、晚餐的来选择菜谱
  *                     Fix JwtBearer 失效改为3天
  *                     Fix Dish CookTime 字符串 转数字! TBD 让前端改吧
- * 1.3.5   2018-04-26  Fix 烹饪步骤没有文字说明bug, 导入的bug咱不改                 
+ * 1.3.5   2018-04-26  Fix 烹饪步骤没有文字说明bug, 导入的bug咱不改  
+ * 1.3.6   2018-04-27  Add 短信验证接口
+ * 
  * **********************************************************/
 
 using System;
@@ -76,7 +78,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.3.5";
+        public const string Version = "1.3.6";
 
         /// <summary>
         /// Gets release (last build) date of the application.
