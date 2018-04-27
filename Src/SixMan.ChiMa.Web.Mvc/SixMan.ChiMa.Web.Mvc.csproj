@@ -30,6 +30,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="App_Data\Logs\Logs.txt" />
+    <None Remove="App_Data\Logs\Logs.txt.1" />
+    <None Remove="App_Data\Logs\Logs.txt.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="app.config" />
     <None Update="Dockerfile">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -89,6 +95,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="App_Data\Logs\" />
     <Folder Include="wwwroot\view-resources\Views\_Bundles\" />
   </ItemGroup>
 
