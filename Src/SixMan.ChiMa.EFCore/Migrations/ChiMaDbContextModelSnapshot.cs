@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore.ValueGeneration;
 using SixMan.ChiMa.Domain.Common;
 using SixMan.ChiMa.Domain.Dish;
 using SixMan.ChiMa.Domain.Family;
+using SixMan.ChiMa.Domain.Mob;
 using SixMan.ChiMa.EFCore;
 using System;
 
@@ -1915,6 +1916,46 @@ namespace SixMan.ChiMa.EFCore.Migrations
                     b.HasIndex("FoodMaterialId");
 
                     b.ToTable("Purchase");
+                });
+
+            modelBuilder.Entity("SixMan.ChiMa.Domain.Mob.ValidateData", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<DateTime>("EffectiveTime");
+
+                    b.Property<string>("ExtensionData");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Mobile")
+                        .IsRequired()
+                        .HasMaxLength(11);
+
+                    b.Property<int>("SendNum");
+
+                    b.Property<string>("ValidateCode")
+                        .IsRequired()
+                        .HasMaxLength(4);
+
+                    b.Property<int>("ValidateType");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ValidateData");
                 });
 
             modelBuilder.Entity("SixMan.ChiMa.Domain.MultiTenancy.Tenant", b =>

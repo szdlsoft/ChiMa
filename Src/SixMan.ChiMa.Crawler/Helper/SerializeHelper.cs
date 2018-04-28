@@ -11,7 +11,7 @@ namespace SixMan.ChiMa.Crawler
     {
         private static string GetLoaclFilePath(string subDir, string fileName)
         {
-            return System.IO.Path.Combine(CrawlerConfig.RootPath, @"CrawlerData",  subDir, $"{fileName}.json");
+            return System.IO.Path.Combine(ChiMaConfig.RootPath, @"CrawlerData",  subDir, $"{fileName}.json");
         }
         internal static T Get<T>(string subDir, string fileName )
         {

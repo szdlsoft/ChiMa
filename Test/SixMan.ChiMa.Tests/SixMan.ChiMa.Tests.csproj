@@ -16,6 +16,7 @@
 <ProjectReference Include="..\..\Src\SixMan.ChiMa.Domain\SixMan.ChiMa.Domain.csproj" />
 <ProjectReference Include="..\..\Src\SixMan.ChiMa.EFCore\SixMan.ChiMa.EFCore.csproj" />
 <ProjectReference Include="..\..\Src\SixMan.ChiMa.MobApplication\SixMan.ChiMa.MobApplication.csproj" />
+<ProjectReference Include="..\..\Src\SixMan.ChiMa.MonyunSms\SixMan.ChiMa.MonyunSms.csproj" />
 </ItemGroup>
 <ItemGroup>
 <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />

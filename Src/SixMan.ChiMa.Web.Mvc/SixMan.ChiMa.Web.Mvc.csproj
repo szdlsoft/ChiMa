@@ -100,6 +100,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SixMan.ChiMa.DomainService\SixMan.ChiMa.DomainService.csproj" />
     <ProjectReference Include="..\SixMan.ChiMa.Web.Core\SixMan.ChiMa.Web.Core.csproj" />
   </ItemGroup>
 

@@ -4,12 +4,17 @@ using Abp.Reflection.Extensions;
 //using SixMan.ChiMa.Application.Authorization;
 using SixMan.ChiMa.Domain;
 using SixMan.ChiMa.Domain.Authorization;
+using SixMan.ChiMa.DomainService;
+using SixMan.ChiMa.MonyunSms;
 
 namespace SixMan.ChiMa.Application
 {
     [DependsOn(
         typeof(ChiMaDomainModule), 
-        typeof(AbpAutoMapperModule))]
+        typeof(AbpAutoMapperModule),
+        typeof(ChiMaDomainServiceModule),
+        typeof(ChiMaMonyunSmsModule)
+        )]
     public class ChiMaMobApplicationModule : AbpModule
     {
         public override void PreInitialize()

@@ -17,6 +17,7 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 using SixMan.ChiMa.Domain.Price;
+using SixMan.ChiMa.Domain.Mob;
 
 namespace SixMan.ChiMa.EFCore
 {
@@ -34,6 +35,8 @@ namespace SixMan.ChiMa.EFCore
 
         public virtual DbSet<FoodMaterialNutrition> FoodMaterialNutrition { get; set; }
         public virtual DbSet<Nutrition> Nutrition { get; set; }
+
+        public virtual DbSet<ValidateData> ValidateData { get; set; }
 
 
         //菜品

@@ -61,7 +61,7 @@ namespace SixMan.ChiMa.Crawler
 
             foreach (var task in tasks)
             {
-                if (CrawlerConfig.GetTaskEnabled(task.Name))
+                if (ChiMaConfig.GetTaskEnabled(task.Name))
                 {
                     if( task.OnlyOneTime )
                     {

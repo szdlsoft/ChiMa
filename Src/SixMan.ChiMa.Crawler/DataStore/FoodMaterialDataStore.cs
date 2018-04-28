@@ -10,7 +10,7 @@ namespace SixMan.ChiMa.Crawler
     {
         private string GetLoaclFilePath(string topCatName, string middleCatName)
         {
-            return System.IO.Path.Combine(CrawlerConfig.RootPath, @"CrawlerData\FoodMaterial", $"{topCatName}_{middleCatName}.json");
+            return System.IO.Path.Combine(ChiMaConfig.RootPath, @"CrawlerData\FoodMaterial", $"{topCatName}_{middleCatName}.json");
         }
         public bool HasSave(string topCatName, string middleCatName)
         {

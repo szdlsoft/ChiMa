@@ -18,18 +18,18 @@ namespace SixMan.ChiMa.Application
         /// </summary>
         /// <param name="userRegisterIntput"></param>
         /// <returns></returns>
-        IdentityResult Register(RegisterIntput userRegisterIntput);
+        void Register(RegisterIntput userRegisterIntput);
         /// <summary>
         /// 老用户重置密码
         /// </summary>
         /// <param name="userResetPasswordIntput"></param>
         /// <returns></returns>
-        IdentityResult ResetPassword(ResetPasswordIntput userResetPasswordIntput);
+        void ResetPassword(ResetPasswordIntput userResetPasswordIntput);
         /// <summary>
         /// 发送手机验证码短信
         /// </summary>
         /// <param name="sendValidateCodeInput"></param>
         /// <returns></returns>
-        IdentityResult SendValidateCode(SendValidateCodeInput sendValidateCodeInput);
+        void SendValidateCode(SendValidateCodeInput sendValidateCodeInput);
     }
 }

@@ -3,6 +3,7 @@ using Abp.Reflection.Extensions;
 using SixMan.ChiMa.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using SixMan.ChiMa.DomainService;
 
 namespace SixMan.ChiMa.Web.Startup
 {
@@ -24,6 +25,8 @@ namespace SixMan.ChiMa.Web.Startup
 
             //Configuration.Modules.AbpMvc();
             Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
+
+            ChiMaConfig.Load(_appConfiguration);
 
         }
 

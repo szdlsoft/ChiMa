@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SixMan.ChiMa.DomainService\SixMan.ChiMa.DomainService.csproj" />
     <ProjectReference Include="..\SixMan.ChiMa.Domain\SixMan.ChiMa.Domain.csproj" />
+    <ProjectReference Include="..\SixMan.ChiMa.MonyunSms\SixMan.ChiMa.MonyunSms.csproj" />
   </ItemGroup>
 
   <ItemGroup>

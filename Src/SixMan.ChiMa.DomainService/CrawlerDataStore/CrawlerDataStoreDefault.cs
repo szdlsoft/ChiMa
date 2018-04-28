@@ -14,7 +14,7 @@ namespace SixMan.ChiMa.DomainService
         {
             List<string> rootPaths = new List<string>
             {
-                CrawlerConfig.RootPath,
+                ChiMaConfig.RootPath,
                 @"CrawlerData",
             };
             rootPaths.AddRange(paths);

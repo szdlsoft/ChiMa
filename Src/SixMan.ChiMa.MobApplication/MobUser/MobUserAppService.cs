@@ -16,6 +16,9 @@ using SixMan.ChiMa.Domain;
 using Abp.Web.Models;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
+using SixMan.ChiMa.Domain.Mob;
+using SixMan.ChiMa.DomainService.Mob;
+using Abp.Domain.Uow;
 
 namespace SixMan.ChiMa.Application.MobUser
 {
@@ -32,17 +35,25 @@ namespace SixMan.ChiMa.Application.MobUser
         private readonly RoleManager _roleManager;
         private readonly IRepository<Role> _roleRepository;
         private readonly IPasswordHasher<User> _passwordHasher;
+
+        ValidateDataManager _validateDataManager;
+        ISMSSender _sMSSender;
         public MobUserAppService(IRepository<User, long> repository,
                                 UserManager userManager,
                                 RoleManager roleManager,
                                 IRepository<Role> roleRepository,
-                                IPasswordHasher<User> passwordHasher) 
+                                IPasswordHasher<User> passwordHasher,
+                                ValidateDataManager validateDataManager,
+                                ISMSSender sMSSender) 
             : base(repository)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _roleRepository = roleRepository;
             _passwordHasher = passwordHasher;
+
+            _validateDataManager = validateDataManager;
+            _sMSSender = sMSSender;
         }   
   
         public async Task<MobUserDto> Create(MobCreateUserDto input)
@@ -93,22 +104,58 @@ namespace SixMan.ChiMa.Application.MobUser
             identityResult.CheckErrors(LocalizationManager);
         }
 
-        public IdentityResult Register(RegisterIntput userRegisterIntput)
+        [UnitOfWork(IsDisabled =true)]
+        public  void Register(RegisterIntput userRegisterIntput)
         {
-            return IdentityResult.Success;
+            _validateDataManager.CheckValidateCode(userRegisterIntput.Mobile, ValidateType.Register, userRegisterIntput.ValidateCode);
+
+            CheckCreatePermission();
+
+            var user = new User();
+            user.UserName = userRegisterIntput.Mobile;
+            user.Name = user.UserName;
+            user.Surname = user.UserName;
+            user.EmailAddress = $"{user.UserName}@126.com";
+            user.IsActive = true;
+
+            user.TenantId = AbpSession.TenantId;
+            user.Password = _passwordHasher.HashPassword(user, userRegisterIntput.Password);
+            user.IsEmailConfirmed = true;
+
+            CheckErrors( _userManager.CreateAsync(user).Result );
+
+            CurrentUnitOfWork.SaveChanges();
+
+            EventBus.Trigger(new MobUserCreateEvent()
+            {
+                User = user,
+                FamilyId = userRegisterIntput.FamilyId
+            });
+
         }
 
-        public IdentityResult ResetPassword(ResetPasswordIntput userResetPasswordIntput)
+        public async void ResetPassword(ResetPasswordIntput userResetPasswordIntput)
         {
-            return IdentityResult.Success;
+            _validateDataManager.CheckValidateCode(userResetPasswordIntput.Mobile, ValidateType.ResetPassword, userResetPasswordIntput.ValidateCode);
+            User user = await _userManager.FindByNameAsync(userResetPasswordIntput.Mobile);
+            if( user != null)
+            {
+                string token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                CheckErrors( await _userManager.ResetPasswordAsync(user, token, userResetPasswordIntput.NewPassword));
+            }
+            else
+            {
+                throw new Abp.UI.UserFriendlyException($"{userResetPasswordIntput.Mobile} 用户不存在!");
+            }
         }
 
-        public IdentityResult SendValidateCode(SendValidateCodeInput sendValidateCodeInput)
+        //[UnitOfWork]
+        public void SendValidateCode(SendValidateCodeInput sendValidateCodeInput)
         {
-            // 生成 
-            // 保存
+            // 生成
+            SMessage message = _validateDataManager.Build(sendValidateCodeInput.Mobile, sendValidateCodeInput.ValidateType);
             // 发送
-            return IdentityResult.Success;
+            _sMSSender.Send(message);
         }
     }
 }

@@ -187,7 +187,7 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             }
 
             //string localImgPath = "FoodMaterial\\" + englishName + ".jpg";
-            if(CrawlerConfig.NeedDownloadFoodMaterialImage && sourceImgUrl != null)
+            if(ChiMaConfig.NeedDownloadFoodMaterialImage && sourceImgUrl != null)
             {
                 string localImgPath = FoodMaterial.GetImageLocalPath(englishName);
                 CrawlerHelper.DownloadImgAndSaveAsync(sourceImgUrl, localImgPath);

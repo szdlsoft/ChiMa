@@ -43,7 +43,7 @@ namespace SixMan.ChiMa.Migrator
                 );
             });
 
-            CrawlerConfig.Load(_appConfiguration);
+            ChiMaConfig.Load(_appConfiguration);
         }
 
         public override void Initialize()

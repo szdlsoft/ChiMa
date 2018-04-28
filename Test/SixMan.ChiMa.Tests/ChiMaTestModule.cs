@@ -13,6 +13,7 @@ using SixMan.ChiMa.EFCore;
 using SixMan.ChiMa.Tests.DependencyInjection;
 using SixMan.ChiMa.Application;
 using SixMan.ChiMa.DomainService;
+using SixMan.ChiMa.MonyunSms;
 
 namespace SixMan.ChiMa.Tests
 {
@@ -20,7 +21,8 @@ namespace SixMan.ChiMa.Tests
         typeof(ChiMaApplicationModule),
         typeof(ChiMaDomainServiceModule),
         typeof(ChiMaEFCoreModule),
-        typeof(AbpTestBaseModule)
+        typeof(AbpTestBaseModule),
+        typeof(ChiMaMonyunSmsModule)
         )]
     public class ChiMaTestModule : AbpModule
     {

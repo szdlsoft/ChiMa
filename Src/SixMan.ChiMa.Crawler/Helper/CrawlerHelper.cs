@@ -56,7 +56,7 @@ namespace SixMan.ChiMa.DomainService
             {
                 return;
             }
-            string fullPath = Path.Combine(CrawlerConfig.RootPath,  imagePath);
+            string fullPath = Path.Combine(ChiMaConfig.RootPath,  imagePath);
 
             if (File.Exists(fullPath))
             {
@@ -114,7 +114,7 @@ namespace SixMan.ChiMa.DomainService
             {
                 return;
             }
-            string fullPath = Path.Combine(CrawlerConfig.RootPath, img.LocalPath);
+            string fullPath = Path.Combine(ChiMaConfig.RootPath, img.LocalPath);
 
             if (File.Exists(fullPath))
             {

@@ -137,6 +137,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.Crawler", "Src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.DomainService", "Src\SixMan.ChiMa.DomainService\SixMan.ChiMa.DomainService.csproj", "{8E213F97-A132-463B-953D-A54774BD02D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixMan.ChiMa.MonyunSms", "Src\SixMan.ChiMa.MonyunSms\SixMan.ChiMa.MonyunSms.csproj", "{4E4C0540-A9A4-403C-A578-273DA805A2ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -187,6 +189,10 @@ Global
 		{8E213F97-A132-463B-953D-A54774BD02D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E213F97-A132-463B-953D-A54774BD02D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E213F97-A132-463B-953D-A54774BD02D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4C0540-A9A4-403C-A578-273DA805A2ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4C0540-A9A4-403C-A578-273DA805A2ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4C0540-A9A4-403C-A578-273DA805A2ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4C0540-A9A4-403C-A578-273DA805A2ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -208,6 +214,7 @@ Global
 		{38E3FD36-2ED0-4137-B2AD-20187EBE9002} = {54BD3356-6026-46E4-A74C-8608F05E2D96}
 		{7C3E9AEE-2653-40A7-AFB9-66F8129D29CB} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
 		{8E213F97-A132-463B-953D-A54774BD02D8} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
+		{4E4C0540-A9A4-403C-A578-273DA805A2ED} = {F85E4326-A408-49D4-885B-5E3C39C8860A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E10C072C-15D7-4DD0-805A-0CD7E471545F}

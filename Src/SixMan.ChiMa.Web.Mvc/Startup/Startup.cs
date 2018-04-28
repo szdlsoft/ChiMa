@@ -43,7 +43,7 @@ namespace SixMan.ChiMa.Web.Startup
             {
                 //options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
                 options.Filters.AddService(typeof(SetFamilyParaFilter));
-                options.Filters.AddService(typeof(ChimaExceptionFilter));
+                options.Filters.AddService(typeof(ChimaExceptionFilter), -99);
                 options.Filters.AddService(typeof(ChimaAuthorizationFilter), -1);
 
             });

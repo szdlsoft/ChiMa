@@ -33,6 +33,14 @@ namespace SixMan.ChiMa.Domain.Mob
         /// 有效时间
         /// </summary>
         public DateTime EffectiveTime { get; set; }
+        /// <summary>
+        /// 发送次数
+        /// </summary>
+        public int SendNum { get; set; }
 
+        public ValidateData()
+        {
+            SendNum = 0;
+        }
     }
 }
