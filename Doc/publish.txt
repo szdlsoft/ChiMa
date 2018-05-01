@@ -39,3 +39,20 @@ dotnet SixMan.ChiMa.Crawler.dll Production
 
 
 二 接下来一段时间,主攻:短信验证码
+
+2018-5-1
+
+1：以下接口均加入了短信码
+注册新用户
+/api/services/mob/MobUser/Register
+重置密码
+/api/services/mob/MobUser/ResetPassword
+发送短信验证码
+/api/services/mob/MobUser/SendValidateCode
+
+具体接口参见：http://106.14.145.42/swagger/  
+
+注意：短信使用的梦网云平台，
+测试账号权限：支持最多绑定5个手机号进行发送，只能发送短信验证码（固定签名和固定模板）。
+由于是免费测试，手机号只能静态绑定5个，要使用前，请将手机号给我，我来设置绑定！
+ 
