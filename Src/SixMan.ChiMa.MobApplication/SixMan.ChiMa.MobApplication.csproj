@@ -5,6 +5,10 @@
     <RootNamespace>SixMan.ChiMa.Application</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.0\SixMan.ChiMa.MobApplication.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\SixMan.ChiMa.DomainService\SixMan.ChiMa.DomainService.csproj" />
     <ProjectReference Include="..\SixMan.ChiMa.Domain\SixMan.ChiMa.Domain.csproj" />

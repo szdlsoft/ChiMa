@@ -9,11 +9,14 @@ using System.Text;
 
 namespace SixMan.ChiMa.Application.MobUser
 {
+    /// <summary>
+    /// 发送短信验证码信息
+    /// </summary>
     [AutoMap(typeof(ValidateData))]
     public class SendValidateCodeInput
     {
         /// <summary>
-        /// 手机号
+        /// 手机号：11位数字
         /// </summary>
         [Required]
         //[StringLength(ChiMaConsts.MobileLength, MinimumLength = ChiMaConsts.MobileLength)]
@@ -22,7 +25,7 @@ namespace SixMan.ChiMa.Application.MobUser
 
         public string Mobile { get; set; }
         /// <summary>
-        /// 验证类型
+        /// 验证类型：1位数字，0：注册用户；1：重设密码
         /// </summary>
         //[RegularExpression("^\\d{1}$", ErrorMessage = "1位数字，0：注册用户；1：重设密码")]
         [Display(Name = "验证类型")]

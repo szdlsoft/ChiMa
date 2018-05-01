@@ -8,10 +8,13 @@ using System.Text;
 
 namespace SixMan.ChiMa.Application.MobUser
 {
+    /// <summary>
+    /// 重设密码信息
+    /// </summary>
     public class ResetPasswordIntput
     {
         /// <summary>
-        /// 手机号
+        /// 手机号：11位数字
         /// </summary>
         [Required]
         //[StringLength(ChiMaConsts.MobileLength, MinimumLength = ChiMaConsts.MobileLength)]
@@ -19,8 +22,7 @@ namespace SixMan.ChiMa.Application.MobUser
         [Display(Name = "手机号")]
         public string Mobile { get; set; }
         /// <summary>
-        /// 手机短信验证码
-        /// 保证是手机本人注册
+        /// 手机短信验证码：4位数字
         /// </summary>
         [Required]
         //[StringLength(ChiMaConsts.ValidateCodeLength, MinimumLength = ChiMaConsts.ValidateCodeLength)]
@@ -29,8 +31,7 @@ namespace SixMan.ChiMa.Application.MobUser
 
         public string ValidateCode { get; set; }
         /// <summary>
-        /// 密码
-        /// 密码规则：
+        /// 新密码：6位数字或字母或下划线
         /// </summary>
         [Required]
         //[StringLength(AbpUserBase.MaxPlainPasswordLength)]

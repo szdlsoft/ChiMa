@@ -61,7 +61,9 @@ namespace SixMan.ChiMa.Web.Startup
                 options.DocInclusionPredicate((docName, description) => true);
                 options.OperationFilter<AddAuthTokenHeaderParameter>();
                 options.OrderActionsBy(ad => ad.RelativePath);
+                options.IncludeXmlComments(GetXmlCommentsPath());
             });
+
 
             //Configure Abp and Dependency Injection
             var result = services.AddAbp<ChiMaWebMvcModule>(options =>
@@ -82,6 +84,11 @@ namespace SixMan.ChiMa.Web.Startup
             });
 
             return result;
+        }
+
+        protected static string GetXmlCommentsPath()
+        {
+            return System.String.Format(@"{0}\SixMan.ChiMa.MobApplication.XML", System.AppDomain.CurrentDomain.BaseDirectory);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

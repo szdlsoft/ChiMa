@@ -14,7 +14,7 @@ namespace SixMan.ChiMa.Application.MobUser
     public class RegisterIntput
     {
         /// <summary>
-        /// 手机号
+        /// 手机号：11位数字
         /// </summary>
         [Required]
         //[StringLength(ChiMaConsts.MobileLength, MinimumLength = ChiMaConsts.MobileLength)]
@@ -22,8 +22,7 @@ namespace SixMan.ChiMa.Application.MobUser
         [Display(Name = "手机号")]
         public string Mobile { get; set; }
         /// <summary>
-        /// 手机短信验证码
-        /// 保证是手机本人注册
+        /// 手机短信验证码：4位数字
         /// </summary>
         [Required]
         //[StringLength(ChiMaConsts.ValidateCodeLength, MinimumLength = ChiMaConsts.ValidateCodeLength, ErrorMessage ="4位")]
@@ -31,8 +30,7 @@ namespace SixMan.ChiMa.Application.MobUser
         [Display(Name = "短信验证码")]
         public string ValidateCode { get; set; }
         /// <summary>
-        /// 密码
-        /// 密码规则：
+        /// 密码：6位数字或字母或下划线
         /// </summary>
         [Required]
         //[StringLength(AbpUserBase.MaxPlainPasswordLength)]
@@ -41,7 +39,7 @@ namespace SixMan.ChiMa.Application.MobUser
         [Display(Name = "密码")]
         public string Password { get; set; }
         /// <summary>
-        /// 家庭id号
+        /// 家庭id号：如没有可不填
         /// </summary>
         [Display(Name = "家庭ID")]
         public long? FamilyId { get; set; }
