@@ -16,11 +16,17 @@ namespace SixMan.ChiMa.Application.MobUser
         /// 手机号
         /// </summary>
         [Required]
-        [StringLength(ChiMaConsts.MobileLength, MinimumLength = ChiMaConsts.MobileLength)]
+        //[StringLength(ChiMaConsts.MobileLength, MinimumLength = ChiMaConsts.MobileLength)]
+        [RegularExpression("^((1[3,5,8][0-9])|(14[5,7])|(17[0,6,7,8])|(19[7]))\\d{8}$", ErrorMessage = "11位手机号。")]
+        [Display(Name = "手机号")]
+
         public string Mobile { get; set; }
         /// <summary>
         /// 验证类型
         /// </summary>
+        //[RegularExpression("^\\d{1}$", ErrorMessage = "1位数字，0：注册用户；1：重设密码")]
+        [Display(Name = "验证类型")]
+
         public ValidateType ValidateType { get; set; }
     }
 

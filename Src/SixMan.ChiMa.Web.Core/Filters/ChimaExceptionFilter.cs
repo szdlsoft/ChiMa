@@ -129,6 +129,11 @@ namespace SixMan.ChiMa.Filters
                 return (int)HttpStatusCode.NotFound;
             }
 
+            if (context.Exception is Abp.UI.UserFriendlyException)
+            {
+                return (int)HttpStatusCode.BadRequest;
+            }
+
             return (int)HttpStatusCode.InternalServerError;
         }
     }

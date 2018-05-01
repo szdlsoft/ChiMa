@@ -104,11 +104,15 @@ namespace SixMan.ChiMa.Application.MobUser
             identityResult.CheckErrors(LocalizationManager);
         }
 
-        [UnitOfWork(IsDisabled =true)]
+        [UnitOfWork(IsDisabled = true)]
         public  void Register(RegisterIntput userRegisterIntput)
         {
             _validateDataManager.CheckValidateCode(userRegisterIntput.Mobile, ValidateType.Register, userRegisterIntput.ValidateCode);
+            CreateUser(userRegisterIntput);
+        }
 
+        private void CreateUser(RegisterIntput userRegisterIntput)
+        {
             CheckCreatePermission();
 
             var user = new User();
@@ -122,7 +126,7 @@ namespace SixMan.ChiMa.Application.MobUser
             user.Password = _passwordHasher.HashPassword(user, userRegisterIntput.Password);
             user.IsEmailConfirmed = true;
 
-            CheckErrors( _userManager.CreateAsync(user).Result );
+            CheckErrors(_userManager.CreateAsync(user).Result);
 
             CurrentUnitOfWork.SaveChanges();
 
@@ -131,17 +135,17 @@ namespace SixMan.ChiMa.Application.MobUser
                 User = user,
                 FamilyId = userRegisterIntput.FamilyId
             });
-
         }
 
-        public async void ResetPassword(ResetPasswordIntput userResetPasswordIntput)
+        [UnitOfWork(IsDisabled = true)]
+        public  void ResetPassword(ResetPasswordIntput userResetPasswordIntput)
         {
             _validateDataManager.CheckValidateCode(userResetPasswordIntput.Mobile, ValidateType.ResetPassword, userResetPasswordIntput.ValidateCode);
-            User user = await _userManager.FindByNameAsync(userResetPasswordIntput.Mobile);
+            User user =  _userManager.FindByNameAsync(userResetPasswordIntput.Mobile).Result;
             if( user != null)
             {
-                string token = await _userManager.GeneratePasswordResetTokenAsync(user);
-                CheckErrors( await _userManager.ResetPasswordAsync(user, token, userResetPasswordIntput.NewPassword));
+                string token =  _userManager.GeneratePasswordResetTokenAsync(user).Result;
+                CheckErrors(  _userManager.ResetPasswordAsync(user, token, userResetPasswordIntput.NewPassword).Result);
             }
             else
             {
@@ -149,7 +153,7 @@ namespace SixMan.ChiMa.Application.MobUser
             }
         }
 
-        //[UnitOfWork]
+        [UnitOfWork(IsDisabled = true)]
         public void SendValidateCode(SendValidateCodeInput sendValidateCodeInput)
         {
             // 生成
