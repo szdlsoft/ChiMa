@@ -20,7 +20,7 @@ namespace SixMan.ChiMa.Migrator
                 Environment = args[0];
             }
             Console.WriteLine($"Environment:{Environment}");
-            Console.ReadKey();
+            //Console.ReadKey();
 
             ParseArgs(args);
 

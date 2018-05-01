@@ -65,8 +65,14 @@ namespace SixMan.ChiMa.Migrator
             try
             {
                 _migrator.CreateOrMigrateForHost(SeedHelper.SeedHostDb);
-                Log.Write("导入爬数据 started...");
-                _foodMaterialAndDishImport.Execute();
+                Log.Write("Import crawler data? (Y/N): ");
+                var command = Console.ReadLine();
+                if ( command.IsIn("Y", "y"))
+                {
+                    Log.Write("Import crawler dat started...");
+                    _foodMaterialAndDishImport.Execute();
+                    Log.Write("Import crawler dat end.");
+                }
             }
             catch (Exception ex)
             {

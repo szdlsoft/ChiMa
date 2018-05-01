@@ -13,8 +13,8 @@ dotnet publish  -o  d:\work\Release\ChiMa\Web
 cd D:\Work\ChiMa\Src\SixMan.ChiMa.Migrator
 dotnet publish -o d:\work\Release\ChiMa\DBMigrator
 
-cd /home/dbmigrator
-dotnet SixMan.ChiMa.Migrator.dll
+cd /home/sdl/DBMigrator
+dotnet SixMan.ChiMa.Migrator.dll Production
 
 cd D:\work\ChiMa\Src\SixMan.ChiMa.Crawler
 dotnet publish  -o D:\work\Release\ChiMa\Crawler

@@ -88,7 +88,7 @@ namespace SixMan.ChiMa.Web.Startup
 
         protected static string GetXmlCommentsPath()
         {
-            return System.String.Format(@"{0}\SixMan.ChiMa.MobApplication.XML", System.AppDomain.CurrentDomain.BaseDirectory);
+            return System.String.Format(@"{0}SixMan.ChiMa.MobApplication.xml", System.AppDomain.CurrentDomain.BaseDirectory);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
