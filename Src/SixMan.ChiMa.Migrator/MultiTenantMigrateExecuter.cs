@@ -65,6 +65,7 @@ namespace SixMan.ChiMa.Migrator
             try
             {
                 _migrator.CreateOrMigrateForHost(SeedHelper.SeedHostDb);
+
                 Log.Write("Import crawler data? (Y/N): ");
                 var command = Console.ReadLine();
                 if ( command.IsIn("Y", "y"))

@@ -9,6 +9,7 @@ using Abp.MultiTenancy;
 using SixMan.ChiMa.Domain.Authorization;
 using SixMan.ChiMa.Domain.Authorization.Roles;
 using SixMan.ChiMa.Domain.Authorization.Users;
+using SixMan.ChiMa.Domain.Zero.Authorization.Users;
 
 namespace SixMan.ChiMa.EFCore.Seed.Tenants
 {
@@ -30,6 +31,9 @@ namespace SixMan.ChiMa.EFCore.Seed.Tenants
 
         private void CreateRolesAndUsers()
         {
+            // System role and user for host
+            CreateRoleAndDefaulUser(StaticRoleNames.Host.System, PermissionNames.System, StaticUserNames.System);
+
             // Admin role
 
             var adminRole = _context.Roles.IgnoreQueryFilters().FirstOrDefault(r => r.TenantId == _tenantId && r.Name == StaticRoleNames.Tenants.Admin);
@@ -89,6 +93,57 @@ namespace SixMan.ChiMa.EFCore.Seed.Tenants
                     _context.SaveChanges();
                 }
             }
+        }
+
+        private void CreateRoleAndDefaulUser(string roleName, string permissionName, string userName)
+        {
+            // 建role
+            var role = _context.Roles.IgnoreQueryFilters().FirstOrDefault(r => r.TenantId == _tenantId && r.Name == roleName);
+            if (role == null)
+            {
+                role = _context.Roles.Add(new Role(_tenantId, roleName, roleName) { IsStatic = true, IsDefault = true }).Entity;
+                _context.SaveChanges();
+
+                // 设权限
+                _context.Permissions.Add(
+                        new RolePermissionSetting
+                        {
+                            TenantId = _tenantId,
+                            Name = permissionName,
+                            IsGranted = true,
+                            RoleId = role.Id
+                        });
+                _context.SaveChanges();
+            }
+
+            //加用户
+            var user = _context.Users.IgnoreQueryFilters().FirstOrDefault(u => u.TenantId == _tenantId && u.UserName == userName);
+            if (user == null)
+            {
+                var newUser = new User
+                {
+                    TenantId = _tenantId,
+                    UserName = userName,
+                    Name = userName,
+                    Surname = userName,
+                    EmailAddress = $"{userName}@aspnetboilerplate.com",
+                    IsEmailConfirmed = true,
+                    IsActive = true,
+                    Password = "AM4OLBpptxBYmM79lGOX9egzZk3vIQU3d/gFCJzaBjAPXzYIK3tQ2N7X4fcrHtElTw==" // 123qwe
+                };
+                newUser.SetNormalizedNames();
+
+                user = _context.Users.Add(newUser).Entity;
+                _context.SaveChanges();
+
+                // Assign user role to admin user
+                _context.UserRoles.Add(new UserRole(_tenantId, user.Id, role.Id));
+                _context.SaveChanges();
+
+            }
+
+
+
         }
     }
 }

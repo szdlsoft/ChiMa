@@ -7,6 +7,7 @@ using Abp.MultiTenancy;
 using SixMan.ChiMa.Domain.Authorization;
 using SixMan.ChiMa.Domain.Authorization.Roles;
 using SixMan.ChiMa.Domain.Authorization.Users;
+using SixMan.ChiMa.Domain.Zero.Authorization.Users;
 
 namespace SixMan.ChiMa.EFCore.Seed.Host
 {
@@ -26,6 +27,9 @@ namespace SixMan.ChiMa.EFCore.Seed.Host
 
         private void CreateHostRoleAndUsers()
         {
+            // System role and user for host
+            CreateRoleAndDefaulUser(StaticRoleNames.Host.System, PermissionNames.System, StaticUserNames.System);
+
             // Admin role for host
 
             var adminRoleForHost = _context.Roles.IgnoreQueryFilters().FirstOrDefault(r => r.TenantId == null && r.Name == StaticRoleNames.Host.Admin);
@@ -92,6 +96,51 @@ namespace SixMan.ChiMa.EFCore.Seed.Host
 
                 _context.SaveChanges();
             }
+        }
+
+        private void CreateRoleAndDefaulUser(string roleName, string permissionName, string userName )
+        {
+            // 建role
+            var role = _context.Roles.IgnoreQueryFilters().FirstOrDefault(r => r.TenantId == null && r.Name == roleName);
+            if (role == null)
+            {
+                role = _context.Roles.Add(new Role(null, roleName, roleName) { IsStatic = true, IsDefault = true }).Entity;
+                _context.SaveChanges();
+            }
+
+            //加用户
+            var user = _context.Users.IgnoreQueryFilters().FirstOrDefault(u => u.TenantId == null && u.UserName == userName);
+            if (user == null)
+            {
+                var newUser = new User
+                {
+                    TenantId = null,
+                    UserName = userName,
+                    Name = userName,
+                    Surname = userName,
+                    EmailAddress = $"{userName}@aspnetboilerplate.com",
+                    IsEmailConfirmed = true,
+                    IsActive = true,
+                    Password = "AM4OLBpptxBYmM79lGOX9egzZk3vIQU3d/gFCJzaBjAPXzYIK3tQ2N7X4fcrHtElTw==" // 123qwe
+                };
+
+                newUser.SetNormalizedNames();
+
+                user = _context.Users.Add(newUser).Entity;
+                _context.SaveChanges();
+            }
+
+                // 设权限
+            _context.Permissions.Add(
+                    new RolePermissionSetting
+                    {
+                        TenantId = null,
+                        Name = permissionName,
+                        IsGranted = true,
+                        RoleId = role.Id
+                    });
+            _context.SaveChanges();
+
         }
     }
 }

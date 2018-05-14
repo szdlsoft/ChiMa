@@ -19,16 +19,22 @@ using Abp.Application.Services.Dto;
 using SixMan.ChiMa.Domain.Mob;
 using SixMan.ChiMa.DomainService.Mob;
 using Abp.Domain.Uow;
+using Abp.Authorization;
+using SixMan.ChiMa.Domain.Authorization;
 
 namespace SixMan.ChiMa.Application.MobUser
 {
+    /// <summary>
+    /// 手机端用户服务
+    /// </summary>
     [WrapResult(WrapOnSuccess = false, WrapOnError = false)]
     public class MobUserAppService
         //: MobileAppServiceBase<User, MobUserDto, MobCreateUserDto, MobUserDto>
-        :  CrudAppServiceBase<User, MobUserDto, long, PagedAndSortedResultRequestDto, MobCreateUserDto, MobUserDto>
+        : ApplicationService 
+        //CrudAppServiceBase<User, MobUserDto, long, PagedAndSortedResultRequestDto, MobCreateUserDto, MobUserDto>
         , IMobUserAppService
     {
-        public const string MOB_ROLE = "Mob";
+        //public const string MOB_ROLE = "Mob";
         public IEventBus EventBus { get; set; }
 
         private readonly UserManager _userManager;
@@ -45,7 +51,7 @@ namespace SixMan.ChiMa.Application.MobUser
                                 IPasswordHasher<User> passwordHasher,
                                 ValidateDataManager validateDataManager,
                                 ISMSSender sMSSender) 
-            : base(repository)
+           // : base(repository)
         {
             _userManager = userManager;
             _roleManager = roleManager;
@@ -56,55 +62,61 @@ namespace SixMan.ChiMa.Application.MobUser
             _sMSSender = sMSSender;
         }   
   
-        public async Task<MobUserDto> Create(MobCreateUserDto input)
-        {
-            CheckCreatePermission();
+        //public async Task<MobUserDto> Create(MobCreateUserDto input)
+        //{
+        //    CheckCreatePermission();
 
-            var user = ObjectMapper.Map<User>(input);
-            user.Name = user.UserName;
-            user.Surname = user.UserName;
-            user.EmailAddress = $"{user.UserName}@126.com";
-            user.IsActive = true;
+        //    var user = ObjectMapper.Map<User>(input);
+        //    user.Name = user.UserName;
+        //    user.Surname = user.UserName;
+        //    user.EmailAddress = $"{user.UserName}@126.com";
+        //    user.IsActive = true;
 
-            user.TenantId = AbpSession.TenantId;
-            user.Password = _passwordHasher.HashPassword(user, input.Password);
-            user.IsEmailConfirmed = true;
+        //    user.TenantId = AbpSession.TenantId;
+        //    user.Password = _passwordHasher.HashPassword(user, input.Password);
+        //    user.IsEmailConfirmed = true;
 
-            CheckErrors(await _userManager.CreateAsync(user));
+        //    CheckErrors(await _userManager.CreateAsync(user));
 
-            //EnsureRole();
-            //CheckErrors(await _userManager.SetRoles(user, new string[] { MOB_ROLE }));
+        //    //EnsureRole();
+        //    //CheckErrors(await _userManager.SetRoles(user, new string[] { MOB_ROLE }));
 
-            CurrentUnitOfWork.SaveChanges();
+        //    CurrentUnitOfWork.SaveChanges();
 
-            EventBus.Trigger(new MobUserCreateEvent()
-            {
-                User = user,
-                FamilyId = input.FamilyId
-            });
+        //    EventBus.Trigger(new MobUserCreateEvent()
+        //    {
+        //        User = user,
+        //        FamilyId = input.FamilyId
+        //    });
 
-            return MapToEntityDto(user);
-        }
+        //    return MapToEntityDto(user);
+        //}
 
-        private async void EnsureRole()
-        {
-            var role = await _roleManager.GetRoleByNameAsync(MOB_ROLE);
-            if( role == null)
-            {
-                await _roleManager.CreateAsync(new Role()
-                {
-                    TenantId = AbpSession.TenantId,
-                    Name = MOB_ROLE,
-                });
-            }
-        }
+        //private async void EnsureRole()
+        //{
+        //    var role = await _roleManager.GetRoleByNameAsync(MOB_ROLE);
+        //    if( role == null)
+        //    {
+        //        await _roleManager.CreateAsync(new Role()
+        //        {
+        //            TenantId = AbpSession.TenantId,
+        //            Name = MOB_ROLE,
+        //        });
+        //    }
+        //}
 
-        protected virtual void CheckErrors(IdentityResult identityResult)
+        private  void CheckErrors(IdentityResult identityResult)
         {
             identityResult.CheckErrors(LocalizationManager);
         }
 
+        /// <summary>
+        /// 用户注册
+        /// 需要系统用户的token
+        /// </summary>
+        /// <param name="userRegisterIntput"></param>
         [UnitOfWork(IsDisabled = true)]
+        [AbpAuthorize(PermissionNames.System)]
         public  void Register(RegisterIntput userRegisterIntput)
         {
             _validateDataManager.CheckValidateCode(userRegisterIntput.Mobile, ValidateType.Register, userRegisterIntput.ValidateCode);
@@ -113,7 +125,7 @@ namespace SixMan.ChiMa.Application.MobUser
 
         private void CreateUser(RegisterIntput userRegisterIntput)
         {
-            CheckCreatePermission();
+            //CheckCreatePermission();
 
             var user = new User();
             user.UserName = userRegisterIntput.Mobile;
@@ -137,7 +149,13 @@ namespace SixMan.ChiMa.Application.MobUser
             });
         }
 
+        /// <summary>
+        /// 重设密码
+        /// 需要系统用户的token
+        /// </summary>
+        /// <param name="userResetPasswordIntput"></param>
         [UnitOfWork(IsDisabled = true)]
+        [AbpAuthorize(PermissionNames.System)]
         public  void ResetPassword(ResetPasswordIntput userResetPasswordIntput)
         {
             _validateDataManager.CheckValidateCode(userResetPasswordIntput.Mobile, ValidateType.ResetPassword, userResetPasswordIntput.ValidateCode);
@@ -152,8 +170,13 @@ namespace SixMan.ChiMa.Application.MobUser
                 throw new Abp.UI.UserFriendlyException($"{userResetPasswordIntput.Mobile} 用户不存在!");
             }
         }
-
+        /// <summary>
+        /// 发送短信验证码
+        /// 需要系统用户的token
+        /// </summary>
+        /// <param name="sendValidateCodeInput"></param>
         [UnitOfWork(IsDisabled = true)]
+        [AbpAuthorize(PermissionNames.System)]
         public void SendValidateCode(SendValidateCodeInput sendValidateCodeInput)
         {
             // 生成

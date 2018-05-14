@@ -30,12 +30,12 @@ namespace SixMan.ChiMa.Application.MobUser
         [Display(Name = "短信验证码")]
         public string ValidateCode { get; set; }
         /// <summary>
-        /// 密码：6位数字或字母或下划线
+        /// 密码：允许客户端做hash
         /// </summary>
         [Required]
         //[StringLength(AbpUserBase.MaxPlainPasswordLength)]
         [DisableAuditing]
-        [RegularExpression("^\\w{6}$", ErrorMessage = "6位数字或字母或下划线")]
+        //[RegularExpression("^\\w{6}$", ErrorMessage = "6位数字或字母或下划线")]  允许客户端做hash
         [Display(Name = "密码")]
         public string Password { get; set; }
         /// <summary>
