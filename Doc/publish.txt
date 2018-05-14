@@ -56,3 +56,17 @@ dotnet SixMan.ChiMa.Crawler.dll Production
 测试账号权限：支持最多绑定5个手机号进行发送，只能发送短信验证码（固定签名和固定模板）。
 由于是免费测试，手机号只能静态绑定5个，要使用前，请将手机号给我，我来设置绑定！
  
+2018-5-14 V1.4.3 
+1: 增加系统用户: 用户名/密码  System/chima123qwe
+   获取系统用户的Token方式不变(/api/TokenAuth/Authenticate)
+
+2：以下接口, 使用系统用户的Token,方能调用
+注册新用户(业务用户)
+/api/services/mob/MobUser/Register
+重置密码
+/api/services/mob/MobUser/ResetPassword
+发送短信验证码
+/api/services/mob/MobUser/SendValidateCode
+
+3: 其它接口,使用业务用户的token
+    获取业务用户的Token方式也不变( /api/TokenAuth/Authenticate) 
