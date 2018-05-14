@@ -3216,3 +3216,126 @@ INFO  2018-05-14 10:59:15,289 [1    ] SixMan.ChiMa.Migrator.Log                -
 INFO  2018-05-14 10:59:15,484 [1    ] SixMan.ChiMa.Migrator.Log                - All databases have been migrated.
 DEBUG 2018-05-14 10:59:21,234 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
 DEBUG 2018-05-14 10:59:21,237 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-05-14 12:39:44,291 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-14 12:39:44,628 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-05-14 12:39:45,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Migrator.ChiMaMigratorModule, SixMan.ChiMa.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,148 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,149 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,150 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,150 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,151 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,152 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,152 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,153 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:45,166 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-05-14 12:39:46,441 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:39:48,150 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-14 12:39:48,344 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-14 12:39:48,459 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-05-14 12:39:48,514 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-05-14 12:39:48,704 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 2 classes define auto mapping attributes
+DEBUG 2018-05-14 12:39:48,704 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.DishDetailsRawDataItem
+DEBUG 2018-05-14 12:39:48,714 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+INFO  2018-05-14 12:39:50,855 [1    ] SixMan.ChiMa.Migrator.Log                - Host database: Server=localhost;port=3306;database=ChiMaDb3;uid=root;password=root;character set=utf8;Old Guids=true
+INFO  2018-05-14 12:39:50,855 [1    ] SixMan.ChiMa.Migrator.Log                - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2018-05-14 12:39:53,964 [1    ] SixMan.ChiMa.Migrator.Log                - HOST database migration started...
+INFO  2018-05-14 12:40:01,230 [1    ] SixMan.ChiMa.Migrator.Log                - An error occured during migration of host database:
+INFO  2018-05-14 12:40:01,546 [1    ] SixMan.ChiMa.Migrator.Log                - Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Column 'NormalizedEmailAddress' cannot be null ---> MySql.Data.MySqlClient.MySqlException: Column 'NormalizedEmailAddress' cannot be null
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable`1.ConfiguredValueTaskAwaiter.GetResult()
+   at MySqlConnector.Core.ResultSet.<ReadResultSetHeaderAsync>d__1.MoveNext() in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 43
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 92
+   at MySql.Data.MySqlClient.MySqlDataReader.<ReadFirstResultSetAsync>d__65.MoveNext() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 297
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySql.Data.MySqlClient.MySqlDataReader.<CreateAsync>d__64.MoveNext() in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 287
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySqlConnector.Core.TextCommandExecutor.<ExecuteReaderAsync>d__3.MoveNext() in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 70
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlCommand.cs:line 172
+   at Microsoft.EntityFrameworkCore.Storage.Internal.MySqlRelationalCommand.<ExecuteAsync>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.MySqlRelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.MySqlBatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChanges() in D:\Github\aspnetboilerplate\src\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 198
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChanges() in D:\Github\aspnetboilerplate\src\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 154
+   at SixMan.ChiMa.EFCore.Seed.Tenants.TenantRoleAndUserBuilder.CreateRoleAndDefaulUser(String roleName, String permissionName, String userName, String password) in D:\Work\ChiMa\Src\SixMan.ChiMa.EFCore\EntityFrameworkCore\Seed\Tenants\TenantRoleAndUserBuilder.cs:line 127
+   at SixMan.ChiMa.EFCore.Seed.Tenants.TenantRoleAndUserBuilder.CreateRolesAndUsers() in D:\Work\ChiMa\Src\SixMan.ChiMa.EFCore\EntityFrameworkCore\Seed\Tenants\TenantRoleAndUserBuilder.cs:line 35
+   at SixMan.ChiMa.EFCore.Seed.Tenants.TenantRoleAndUserBuilder.Create() in D:\Work\ChiMa\Src\SixMan.ChiMa.EFCore\EntityFrameworkCore\Seed\Tenants\TenantRoleAndUserBuilder.cs:line 29
+   at SixMan.ChiMa.EFCore.Seed.SeedHelper.SeedHostDb(ChiMaDbContext context) in D:\Work\ChiMa\Src\SixMan.ChiMa.EFCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 30
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrate(AbpTenantBase tenant, Action`1 seedAction) in D:\Github\aspnetboilerplate\src\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 75
+   at SixMan.ChiMa.Migrator.MultiTenantMigrateExecuter.Run(Boolean skipConnVerification) in D:\Work\ChiMa\Src\SixMan.ChiMa.Migrator\MultiTenantMigrateExecuter.cs:line 67
+INFO  2018-05-14 12:40:01,546 [1    ] SixMan.ChiMa.Migrator.Log                - Canceled migrations.
+DEBUG 2018-05-14 12:41:32,528 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-14 12:41:35,016 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-05-14 12:41:35,488 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Migrator.ChiMaMigratorModule, SixMan.ChiMa.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,498 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,500 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,501 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,502 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,507 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,508 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,508 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,509 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:35,521 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-05-14 12:41:36,423 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:41:38,436 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-14 12:41:38,553 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-14 12:41:38,663 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-05-14 12:41:38,710 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-05-14 12:41:38,811 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 2 classes define auto mapping attributes
+DEBUG 2018-05-14 12:41:38,812 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.DishDetailsRawDataItem
+DEBUG 2018-05-14 12:41:38,820 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+INFO  2018-05-14 12:41:40,531 [1    ] SixMan.ChiMa.Migrator.Log                - Host database: Server=localhost;port=3306;database=ChiMaDb3;uid=root;password=root;character set=utf8;Old Guids=true
+INFO  2018-05-14 12:41:40,533 [1    ] SixMan.ChiMa.Migrator.Log                - Continue to migration for this host database and all tenants..? (Y/N): 
+DEBUG 2018-05-14 12:42:26,476 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-14 12:42:26,653 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-05-14 12:42:26,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Migrator.ChiMaMigratorModule, SixMan.ChiMa.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,958 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,961 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,962 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,963 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,963 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,964 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,964 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,965 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,965 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,966 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:26,978 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-05-14 12:42:27,854 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-14 12:42:29,782 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-14 12:42:30,043 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-14 12:42:30,273 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-05-14 12:42:30,358 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-05-14 12:42:30,584 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 2 classes define auto mapping attributes
+DEBUG 2018-05-14 12:42:30,585 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.DishDetailsRawDataItem
+DEBUG 2018-05-14 12:42:30,599 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+INFO  2018-05-14 12:42:32,275 [1    ] SixMan.ChiMa.Migrator.Log                - Host database: Server=localhost;port=3306;database=ChiMaDb3;uid=root;password=root;character set=utf8;Old Guids=true
+INFO  2018-05-14 12:42:32,276 [1    ] SixMan.ChiMa.Migrator.Log                - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2018-05-14 12:42:36,804 [1    ] SixMan.ChiMa.Migrator.Log                - HOST database migration started...
+INFO  2018-05-14 12:42:43,491 [1    ] SixMan.ChiMa.Migrator.Log                - Import crawler data? (Y/N): 
+INFO  2018-05-14 12:42:46,051 [1    ] SixMan.ChiMa.Migrator.Log                - HOST database migration completed.
+INFO  2018-05-14 12:42:46,052 [1    ] SixMan.ChiMa.Migrator.Log                - --------------------------------------------------------
+INFO  2018-05-14 12:42:46,171 [1    ] SixMan.ChiMa.Migrator.Log                - All databases have been migrated.
+DEBUG 2018-05-14 12:42:48,740 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-05-14 12:42:48,741 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.

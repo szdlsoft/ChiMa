@@ -1,6 +1,8 @@
 ﻿using System;
 using Abp.Authorization.Users;
 using Abp.Extensions;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
 using SixMan.ChiMa.Domain.Family;
 
 namespace SixMan.ChiMa.Domain.Authorization.Users
@@ -31,5 +33,23 @@ namespace SixMan.ChiMa.Domain.Authorization.Users
 
             return user;
         }
+
+        public static User CreateTeantUser(int tenantId, string userName, string password )
+        {
+            var user = new User()
+            {
+                TenantId = tenantId,
+                UserName = userName,
+                Name = userName,
+                Surname = userName,
+                EmailAddress = $"{userName}@chima.com",
+                IsEmailConfirmed = true,
+                IsActive = true,
+                //Password =  // 123qwe
+            };
+            user.SetNormalizedNames();
+            user.Password = new PasswordHasher<User>(new OptionsWrapper<PasswordHasherOptions>(new PasswordHasherOptions())).HashPassword(user, password);
+            return user;
+        }
     }
-}
+    }

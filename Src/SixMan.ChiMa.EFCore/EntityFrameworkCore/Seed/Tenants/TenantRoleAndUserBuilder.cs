@@ -32,7 +32,7 @@ namespace SixMan.ChiMa.EFCore.Seed.Tenants
         private void CreateRolesAndUsers()
         {
             // System role and user for host
-            CreateRoleAndDefaulUser(StaticRoleNames.Host.System, PermissionNames.System, StaticUserNames.System);
+            CreateRoleAndDefaulUser(StaticRoleNames.Host.System, PermissionNames.System, StaticUserNames.System, "chima123qwe");
 
             // Admin role
 
@@ -95,7 +95,7 @@ namespace SixMan.ChiMa.EFCore.Seed.Tenants
             }
         }
 
-        private void CreateRoleAndDefaulUser(string roleName, string permissionName, string userName)
+        private void CreateRoleAndDefaulUser(string roleName, string permissionName, string userName, string password)
         {
             // 建role
             var role = _context.Roles.IgnoreQueryFilters().FirstOrDefault(r => r.TenantId == _tenantId && r.Name == roleName);
@@ -120,19 +120,9 @@ namespace SixMan.ChiMa.EFCore.Seed.Tenants
             var user = _context.Users.IgnoreQueryFilters().FirstOrDefault(u => u.TenantId == _tenantId && u.UserName == userName);
             if (user == null)
             {
-                var newUser = new User
-                {
-                    TenantId = _tenantId,
-                    UserName = userName,
-                    Name = userName,
-                    Surname = userName,
-                    EmailAddress = $"{userName}@aspnetboilerplate.com",
-                    IsEmailConfirmed = true,
-                    IsActive = true,
-                    Password = "AM4OLBpptxBYmM79lGOX9egzZk3vIQU3d/gFCJzaBjAPXzYIK3tQ2N7X4fcrHtElTw==" // 123qwe
-                };
-                newUser.SetNormalizedNames();
-
+                User newUser = User.CreateTeantUser(_tenantId, userName, password);
+                
+                //newUser.Password = new PasswordHasher<User>(new OptionsWrapper<PasswordHasherOptions>(new PasswordHasherOptions())).HashPassword(newUser, "123qwe");
                 user = _context.Users.Add(newUser).Entity;
                 _context.SaveChanges();
 
