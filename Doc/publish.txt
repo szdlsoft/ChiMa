@@ -70,3 +70,9 @@ dotnet SixMan.ChiMa.Crawler.dll Production
 
 3: 其它接口,使用业务用户的token
     获取业务用户的Token方式也不变( /api/TokenAuth/Authenticate) 
+
+2018-5-15
+  证书创建：
+    New-SelfSignedCertificate -certstorelocation cert:\localmachine\my -dnsname chima.com
+	$pwd = ConvertTo-SecureString -String "sixman" -Force -AsPlainText
+	Export-PfxCertificate -cert cert:\localMachine\my\DACDA183C95F38421AB6DD021DBCB44BCB4A3ABD  -FilePath c:cert.pfx -Password $pwd
