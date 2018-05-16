@@ -64,6 +64,7 @@
  * 1.4.2   2018-05-01  Fix 注册用户时异常处理、
  *                     Add 密码规则、Swagger文档
  * 1.4.3   2018-05-14  Add 建立系统用户角色，在注册和发送短信码时，验证该角色权限
+ * 1.4.4   2018-05-15  Add 支持https 
  * 
  * **********************************************************/
 
@@ -82,7 +83,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.4.3";
+        public const string Version = "1.4.4";
 
         /// <summary>
         /// Gets release (last build) date of the application.

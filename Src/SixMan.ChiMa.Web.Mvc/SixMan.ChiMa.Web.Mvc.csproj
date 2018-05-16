@@ -35,6 +35,9 @@
 
   <ItemGroup>
     <None Include="app.config" />
+    <None Update="cert.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Dockerfile">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

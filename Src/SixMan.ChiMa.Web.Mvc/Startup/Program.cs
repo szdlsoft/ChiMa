@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System.IO;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SixMan.ChiMa.Web.Startup
 {
@@ -24,6 +26,20 @@ namespace SixMan.ChiMa.Web.Startup
                 .UseStartup<Startup>()
                 .UseConfiguration(config)
                 .Build();
+            //return new WebHostBuilder()
+            //    .PreferHostingUrls(false)
+            //    .CaptureStartupErrors(true)
+            //    .UseKestrel(options => options.Listen(IPAddress.Any, 443, listenOptions =>
+            //    {
+            //        listenOptions.UseHttps(new X509Certificate2("cert.pfx", "sixman"));
+            //        options.Limits.MaxConcurrentConnections = 100;
+            //        options.Limits.MaxConcurrentUpgradedConnections = 100;
+            //        options.Limits.MaxRequestBodySize = 10 * 1024;
+            //    }))
+            //    //.UseUrls("https://*:443")
+            //    .UseStartup<Startup>()
+            //    .UseConfiguration(config)
+            //    .Build();
         }
     }
 }
