@@ -90,6 +90,8 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             document = await parser.ParseAsync(hr.Html);
             //ShowPrice(document);
             IEnumerable<FMPriceItem> prices = GetPrices(document);
+
+
             priceManager.Save(Area, publishTime, prices);
         }
 
@@ -106,7 +108,9 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
         private  void Log(string title, string msg = null)
         {
-            Logger.Info($"{title}:{msg}");
+            var str = $"{title}:{msg}";
+            Logger.Info(str);
+            Console.WriteLine(str);
         }
 
         private IEnumerable<FMPriceItem> GetPrices(IHtmlDocument doc)
@@ -137,8 +141,8 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
                 else
                 {
                     pinmingFound = tr.FirstElementChild.TextContent == "品名";
-                }              
-
+                }
+                Console.Write(".");
             }
         }
 

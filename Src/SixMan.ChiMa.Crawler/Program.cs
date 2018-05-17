@@ -17,6 +17,7 @@ using System;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SixMan.ChiMa.Crawler
 {
@@ -25,7 +26,7 @@ namespace SixMan.ChiMa.Crawler
         public static string Environment { get; private set; } = "Development";
 
         private static IIocManager iocManager;
-        static void Main(string[] args)
+        static  void Main(string[] args)
         {
             //var hostBuilder = new HostBuilder();
             if( args.Length > 0)
@@ -33,13 +34,16 @@ namespace SixMan.ChiMa.Crawler
                 Environment = args[0];
             }
             Console.WriteLine($"Environment:{Environment}");
-            Console.ReadKey();
+           // Console.ReadKey();
 
             Console.WriteLine("ChiMa Crawler start !");
             using (var bootstrapper = AbpBootstrapper.Create<ChiMaCrawlerModule>())
             {
                 InitAbp(bootstrapper);
-                RunTasks();
+
+                var task = RunTasks();
+
+                task.Wait();
             }          
 
             Console.WriteLine("Press ENTER to exit...");
@@ -53,30 +57,30 @@ namespace SixMan.ChiMa.Crawler
             return iocManager.Resolve<T>();
         }
 
-        private static async  void RunTasks()
+        private static async  Task RunTasks()
         {
-            IChiMaQuartzScheduleJobManager taskManager = iocManager.Resolve<IChiMaQuartzScheduleJobManager>();
+            //IChiMaQuartzScheduleJobManager taskManager = iocManager.Resolve<IChiMaQuartzScheduleJobManager>();
 
-            var tasks = iocManager.ResolveAll<ICrawlerTask>();
+            //var tasks = iocManager.ResolveAll<ICrawlerTask>();
 
-            foreach (var task in tasks)
-            {
-                if (ChiMaConfig.GetTaskEnabled(task.Name))
-                {
-                    if( task.OnlyOneTime )
-                    {
-                        await task.Execute(null);
-                    }
-                    else
-                    {
-                        await taskManager.ScheduleAsync(task);
-                    }
-                }
+            //foreach (var task in tasks)
+            //{
+            //    if (ChiMaConfig.GetTaskEnabled(task.Name))
+            //    {
+            //        if( task.OnlyOneTime )
+            //        {
+            //            await task.Execute(null);
+            //        }
+            //        else
+            //        {
+            //            await taskManager.ScheduleAsync(task);
+            //        }
+            //    }
 
-            }
+            //}
 
-            //var task = Resolve<MeiShiChinaCrawler>();
-            // task.Execute(null);
+            var task = Resolve<SZFMPriceCrawler>();
+            await task.Execute(null);
 
         }
 
