@@ -24,16 +24,23 @@
 
 <div id="dlg" class="easyui-dialog" style="width:500px"
             closed="true" buttons="#dlg-buttons">
-        <form id="fm" method="post" name="editForm"  style="margin:0;padding:20px 50px">
-            <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">食材信息</div>
-            <div style="margin-bottom:10px">
-                <input id="description" name="description" class="easyui-textbox" required="required" label="名称:" style="width:100%">
-            </div>
-            <div style="margin-bottom:10px">
-                <input name="foodMaterialCategoryId" id="foodMaterialCategory"   label="类别:" style="width:100%">
-            </div>
-            
-        </form>
+    <form id="fm" method="post" name="editForm" style="margin:0;padding:20px 50px">
+        <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">食材信息</div>
+        <div style="margin-bottom:10px">
+            <input id="description" name="description" class="easyui-textbox" required="required" label="名称:" style="width:100%">
+        </div>
+        <div style="margin-bottom:10px">
+            <input name="foodMaterialCategoryId" id="foodMaterialCategory" label="类别:" style="width:100%">
+        </div>
+        <div style="margin-bottom:10px">
+            <input id="price" name="price" class="easyui-textbox" required="required" label="价格:" style="width:100%">
+        </div>
+        <div style="margin-bottom:10px">
+            <input id="photo" name="photo" class="easyui-textbox" required="required" label="图片:" readonly="readonly" style="width:100%">
+        </div>
+
+
+    </form>
     </div>
     <div id="dlg-buttons">
         <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="save()" style="width:90px">Save</a>
@@ -153,12 +160,12 @@
                      { field: 'id', title: 'id', width: 50, align: 'right' },
                      { field: 'description', title: '名称', width: 100, align: 'right' },
                      { field: 'foodMaterialCategoryName', title: '类别', width: 100, align: 'right' },
-                     { field: 'foodMaterialCategoryIndexNo', title: '类别索引号', width: 100, align: 'right' },
-                     { field: 'photo2', title: '图片', width: 100, align: 'right', formatter: showImg },
-                     {
-                         field: 'photo', title: '操作', width: 100, align: 'right'
-                         , formatter: uploadPopup
-                     },
+                     { field: 'price', title: '价格', width: 100, align: 'right' },
+                     { field: 'photo', title: '图片', width: 100, align: 'right', formatter: showImg },
+                     //{
+                     //    field: 'photo', title: '操作', width: 100, align: 'right'
+                     //    , formatter: uploadPopup
+                     //},
                  ]],
                  loadFilter: function (data) {
                      console.log(data);
@@ -201,7 +208,7 @@
                          });
                  },
                  onLoadSuccess: function (data) {
-                     $("a[name='opera']").linkbutton({ text: '上传图片', plain: true, iconCls: 'icon-upload' });
+                     //$("a[name='opera']").linkbutton({ text: '上传图片', plain: true, iconCls: 'icon-upload' });
                  },
 
                  //onClickRow: function (index, row) {
