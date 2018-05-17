@@ -55,6 +55,14 @@ namespace SixMan.ChiMa.DomainService.Price
             {
                 p.Name = p.Name.Trim();
                 p.FoodMaterial = FoodMaterialRepository.FirstOrDefault(fm => fm.Description.Contains(p.Name));
+
+                if( p.FoodMaterial != null)
+                {
+                    p.FoodMaterial.Price = p.Price;
+                    FoodMaterialRepository.Update(p.FoodMaterial);
+                }
+
+                Console.Write(".");
             }
         }
     }
