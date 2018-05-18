@@ -741,3 +741,61 @@ INFO  2018-05-17 18:51:54,782 [8    ] Ma.Crawler.CrawlerTasks.SZFMPriceCrawler -
 INFO  2018-05-17 18:51:55,161 [8    ] Ma.Crawler.CrawlerTasks.SZFMPriceCrawler - GetPriceUri: :http://mssz.cn/newweb/news.jsp?id=150270&tid=10301
 DEBUG 2018-05-17 18:51:56,744 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
 DEBUG 2018-05-17 18:51:56,745 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-05-18 15:30:44,353 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-18 15:30:44,580 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2018-05-18 15:30:45,148 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Crawler.ChiMaCrawlerModule, SixMan.ChiMa.Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,157 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.DomainService.ChiMaDomainServiceModule, SixMan.ChiMa.DomainService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,159 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,160 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,165 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Domain.ChiMaDomainModule, SixMan.ChiMa.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,186 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,187 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.EFCore.ChiMaEFCoreModule, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,188 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,190 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,193 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SixMan.ChiMa.Application.ChiMaApplicationModule, SixMan.ChiMa.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,194 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:45,203 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+INFO  2018-05-18 15:30:46,547 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+DEBUG 2018-05-18 15:30:46,700 [1    ] Quartz.Simpl.TaskSchedulingThreadPool    - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+INFO  2018-05-18 15:30:46,748 [1    ] Quartz.Core.SchedulerSignalerImpl        - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+INFO  2018-05-18 15:30:46,767 [1    ] Quartz.Core.QuartzScheduler              - Quartz Scheduler v.3.0.4.0 created.
+INFO  2018-05-18 15:30:46,774 [1    ] Quartz.Simpl.RAMJobStore                 - RAMJobStore initialized.
+INFO  2018-05-18 15:30:46,790 [1    ] Quartz.Core.QuartzScheduler              - Scheduler meta-data: Quartz Scheduler (v3.0.4.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  2018-05-18 15:30:46,791 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler 'DefaultQuartzScheduler' initialized
+INFO  2018-05-18 15:30:46,791 [1    ] Quartz.Impl.StdSchedulerFactory          - Quartz scheduler version: 3.0.4.0
+INFO  2018-05-18 15:30:46,795 [1    ] Quartz.Core.QuartzScheduler              - JobFactory set to: Abp.Quartz.AbpQuartzJobFactory
+DEBUG 2018-05-18 15:30:47,357 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SixMan.ChiMa.EFCore.ChiMaDbContext, SixMan.ChiMa.EFCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-18 15:30:48,254 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-18 15:30:48,409 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-18 15:30:48,505 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-05-18 15:30:48,552 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ChiMa
+DEBUG 2018-05-18 15:30:48,653 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2018-05-18 15:30:48,653 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.DishDetailsRawDataItem
+DEBUG 2018-05-18 15:30:48,659 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.DomainService.FoodMaterialItem
+DEBUG 2018-05-18 15:30:48,660 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.CreateUserDto
+DEBUG 2018-05-18 15:30:48,662 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Users.Dto.UserDto
+DEBUG 2018-05-18 15:30:48,663 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-05-18 15:30:48,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-05-18 15:30:48,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.CreateRoleDto
+DEBUG 2018-05-18 15:30:48,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.PermissionDto
+DEBUG 2018-05-18 15:30:48,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Roles.Dto.RoleDto
+DEBUG 2018-05-18 15:30:48,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-05-18 15:30:48,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.MultiTenancy.Dto.TenantDto
+DEBUG 2018-05-18 15:30:48,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialCategoryDto
+DEBUG 2018-05-18 15:30:48,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Food.Dto.FoodMaterialDto
+DEBUG 2018-05-18 15:30:48,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishBomDto
+DEBUG 2018-05-18 15:30:48,664 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SixMan.ChiMa.Application.Dish.DishDto
+INFO  2018-05-18 15:30:57,523 [1    ] Quartz.Impl.StdSchedulerFactory          - Default Quartz.NET properties loaded from embedded resource file
+INFO  2018-05-18 15:31:01,063 [6    ] Ma.Crawler.CrawlerTasks.SZFMPriceCrawler - publish time: :2018年05月18日
+INFO  2018-05-18 15:31:02,023 [6    ] Ma.Crawler.CrawlerTasks.SZFMPriceCrawler - GetPriceUri: :http://mssz.cn/newweb/news.jsp?id=150318&tid=10301
+DEBUG 2018-05-18 15:31:05,059 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-05-18 15:31:05,060 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.

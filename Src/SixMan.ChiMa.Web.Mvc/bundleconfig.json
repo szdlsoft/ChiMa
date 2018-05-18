@@ -56,6 +56,9 @@
 
       "wwwroot/lib/bootstrap-table/dist/bootstrap-table.min.css",
 
+      "wwwroot/lib/jQuery-EasyUI/themes/default/easyui.css",
+      "wwwroot/lib/jQuery-EasyUI/themes/icon.css",
+
       "wwwroot/css/materialize.css",
       "wwwroot/css/style.css",
       "wwwroot/css/themes/all-themes.css",
@@ -75,6 +78,9 @@
       "wwwroot/lib/sweetalert/dist/sweetalert-dev.js",
       "wwwroot/lib/spin.js/spin.js",
       "wwwroot/lib/spin.js/jquery.spin.js",
+
+      "wwwroot/lib//jQuery-EasyUI/jquery.easyui.min.js",
+
       "wwwroot/lib/bootstrap-select/dist/js/bootstrap-select.js",
       "wwwroot/lib/jquery-slimscroll/jquery.slimscroll.js",
       "wwwroot/lib/Waves/dist/waves.js",

@@ -36,7 +36,7 @@
 
     <title>ChiMa</title>
 
-    <environment names="Development">
+    <environment names="Development,Staging,Production">
         <link href="~/fonts/roboto/roboto.css" rel="stylesheet" asp-append-version="true" />
         <link href="~/fonts/material-icons/materialicons.css" rel="stylesheet" asp-append-version="true" />
         <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" asp-append-version="true" />
@@ -64,9 +64,9 @@
 
     </environment>
 
-    <environment names="Staging,Production">
+    @*<environment names="Staging,Production">
         <link href="~/view-resources/Views/_Bundles/shared-layout.min.css" rel="stylesheet" asp-append-version="true" />
-    </environment>
+    </environment>*@
 
     <!-- View specific styles -->
     @RenderSection("styles", required: false)
@@ -162,7 +162,7 @@
         </div>
     </section>
 
-    <environment names="Development">
+    <environment names="Development,Staging,Production">
         <script src="~/lib/json2/json2.js" asp-append-version="true"></script>
         <script src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
@@ -208,9 +208,9 @@
         }
     </environment>
 
-    <environment names="Staging,Production">
+    @*<environment names="Staging,Production">
         <script src="~/view-resources/Views/_Bundles/shared-layout.min.js" asp-append-version="true"></script>
-    </environment>
+    </environment>*@
 
     <script>
     //Localizing momentjs
