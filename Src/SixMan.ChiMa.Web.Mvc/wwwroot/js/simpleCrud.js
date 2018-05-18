@@ -142,8 +142,10 @@ function initListDataGrid( options ) {
         pagination: true,
         
         loader: function (param, success, error) {
-            console.log(param);
-            //var _appService = abp.services.app.foodMaterial;
+            //console.log(param);
+            param.skipCount = (param.page - 1) * param.rows;
+            param.maxResultCount = param.rows;
+
             var data = _appService.getAll(param)
                 .done(function (data) {
                     //listGrid.datagrid("loadData", data);

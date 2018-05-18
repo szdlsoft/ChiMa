@@ -91,13 +91,8 @@
                          } },
                  ]],
                  onBeforeLoad: function (param) {
-
-                     param.skipCount = (param.page - 1) * param.rows;
-                     param.maxResultCount = param.rows;
-
                      param.foodMaterialCategoryId = $('#foodMaterialCategory').val();
                      param.name = $('#foodMaterialName').val();
-
                  },
                  onLoadSuccess: function (data) {
                      //$("a[name='opera']").linkbutton({ text: '上传图片', plain: true, iconCls: 'icon-upload' });

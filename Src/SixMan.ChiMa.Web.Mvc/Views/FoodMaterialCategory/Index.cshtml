@@ -46,8 +46,6 @@
                     { field: 'name', title: '名称', width: 100, align: 'right' },                    
                 ]],
                 onBeforeLoad: function (param) {
-                    param.skipCount = (param.page - 1) * param.rows;
-                    param.maxResultCount = param.rows;
                     param.search = $('#foodMaterialCategoryName').val();
                 }
             });
