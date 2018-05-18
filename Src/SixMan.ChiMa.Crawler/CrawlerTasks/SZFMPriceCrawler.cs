@@ -59,9 +59,13 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             }
             catch( Exception ex)
             {
-                //Logger.Error(ex.Message);
+                Logger.Fatal(ex.Message,ex);
+                if( ex.InnerException != null)
+                {
+                    Logger.Error(ex.InnerException.Message, ex.InnerException);
+                }
+
                 Console.WriteLine(ex.Message);
-                throw;
             }
         }
 
@@ -73,6 +77,9 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             items.Url = "http://mssz.cn/newweb/index.jsp";//请求地址
             items.Method = "Get";//请求方式 
             HttpResults hr = await httpHelpers.GetHtmlAsync(items);
+
+            //Logger.Info(hr.Html);
+
             //Console.WriteLine(hr.Html);
             var parser = new HtmlParser();
             var document = await parser.ParseAsync(hr.Html);
@@ -84,6 +91,8 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
             }
 
             //价格页
+            //var priceUrl = @"http://mssz.cn/newweb/news.jsp?id=150318&tid=10301";
+            //items.Url = priceUrl;
             items.Url = GetPriceUri(document);
             hr = await httpHelpers.GetHtmlAsync(items);
 
@@ -97,6 +106,8 @@ namespace SixMan.ChiMa.Crawler.CrawlerTasks
 
         private DateTime GetPublisTime(IHtmlDocument htmlDocument)
         {
+            //return DateTime.Today;
+
             string dateStr = htmlDocument.All.Where(m => m.LocalName == "a"
                                                              && m.TextContent.Contains("苏州市部分农贸市场零售均价"))
                                                      .FirstOrDefault()?.TextContent.BracketsSub();

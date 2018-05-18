@@ -79,7 +79,7 @@
       "wwwroot/lib/spin.js/spin.js",
       "wwwroot/lib/spin.js/jquery.spin.js",
 
-      "wwwroot/lib//jQuery-EasyUI/jquery.easyui.min.js",
+      "wwwroot/lib/jQuery-EasyUI/jquery.easyui.min.js",
 
       "wwwroot/lib/bootstrap-select/dist/js/bootstrap-select.js",
       "wwwroot/lib/jquery-slimscroll/jquery.slimscroll.js",

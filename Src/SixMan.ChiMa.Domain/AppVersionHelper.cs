@@ -70,7 +70,8 @@
  * 1.4.6   2018-05-18  Opt 食材crud重构，以便在菜品中重用 
  *                     Add 完成菜品、视频分类的crud   
  *                     Fix Production 环境 jquery 没下载！
- * 
+ * 1.4.7   2018-05-18  Fix eayui css js 没加载
+ *                     Fix Production 环境 SZFMPriceCrawler 异常
  * **********************************************************/
 
 using System;
@@ -88,7 +89,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.4.6";
+        public const string Version = "1.4.7";
 
         /// <summary>
         /// Gets release (last build) date of the application.

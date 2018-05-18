@@ -20,6 +20,8 @@ cd D:\work\ChiMa\Src\SixMan.ChiMa.Crawler
 dotnet publish  -o D:\work\Release\ChiMa\Crawler
 dotnet SixMan.ChiMa.Crawler.dll Production
 
+Production环境，如有新的css js 加入需要bundle, 必须执行dotnet bundle才能生效！
+
 2018-4-26
 一 最近数据爬虫工作,告一段落,主要功能
 1: 从"美食天下"网爬食材和菜品
