@@ -15,6 +15,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
     <OutputPath>D:\work\ChiMa\SixMan.ChiMa\Release\</OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SixMan.UIAbstract" Version="1.0.1" />
+  </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\SixMan.ChiMa.Domain\SixMan.ChiMa.Domain.csproj" />

@@ -13,6 +13,7 @@ using SixMan.ChiMa.Domain.Food.Repository;
 using SixMan.ChiMa.Domain.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Abp.Authorization;
+using SixMan.UIAbstract.Lookup;
 
 namespace SixMan.ChiMa.Application.Food
 {
@@ -20,11 +21,18 @@ namespace SixMan.ChiMa.Application.Food
     public class FoodMaterialCategoryAppService
         : AdvancedAsyncCrudAppService<FoodMaterialCategory, FoodMaterialCategoryDto>
         , IFoodMaterialCategoryAppService
+        , ILookUpDataProvider
     {
         public FoodMaterialCategoryAppService(IRepository<FoodMaterialCategory, long> repository) 
             : base(repository)
         {
 
+        }
+
+        public LookUpSource GetLookUp()
+        {
+            return Repository.GetAll().Select( c => new LookUpItem(c.Id, c.Name) )
+                                      .ToLookUpSource();
         }
 
         protected override IQueryable<FoodMaterialCategory> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
