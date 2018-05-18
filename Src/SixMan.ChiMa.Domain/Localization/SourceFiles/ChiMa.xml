@@ -86,6 +86,10 @@
     <text name="UnknownTenantId{0}">Unknown tenantId {0}</text>
   
     <text name="System">System</text>
+    <text name="DishFood">菜品食材</text>
+    <text name="FoodMaterialCategory">食材分类</text>
+    <text name="FoodMaterial">食材</text>
+    <text name="Dish">菜品</text>
   
   </texts>
 </localizationDictionary>

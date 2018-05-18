@@ -136,16 +136,6 @@ namespace SixMan.ChiMa.Application.Food
             return category;
         }
 
-        public Task<FoodMaterialDto> CreatOrUpdate(FoodMaterialDto input)
-        {
-            if( input.Id == 0)
-            {
-                return Create(input);
-            }
-            else
-            {
-                return Update(input);    
-            }
-        }
+      
     }
 }

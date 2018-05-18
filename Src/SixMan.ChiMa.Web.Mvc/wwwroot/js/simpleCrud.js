@@ -1,6 +1,8 @@
 ﻿var _appService; //ABP后台服务代理
 var _entityName;     //实体名
 
+var _currentEntity;
+
 function _S( action ){
     return action + _entityName;
 }
@@ -11,6 +13,8 @@ function reload() {
 
 
 function create() {
+    _currentEntity = null;
+
     $('#dlg').dialog('open').dialog('center').dialog('setTitle', _S('添加'));
     $('#fm').form('clear');
 }
@@ -18,6 +22,7 @@ function create() {
 function edit() {
     var row = $('#listGrid').datagrid('getSelected');
     if (row) {
+        _currentEntity = row;
         $('#dlg').dialog('open').dialog('center').dialog('setTitle', _S('编辑'));
         $('#fm').form('load', row);
     }
@@ -31,8 +36,16 @@ function save() {
     }
 
     var entity = _$form.serializeFormToObject(); //serializeFormToObject is defined in main.js
+
+    if ( _currentEntity ) {
+        entity = $.extend(true, _currentEntity, entity);
+    }
+
     abp.ui.setBusy(_$form);
-    _appService.creatOrUpdate(entity).done(function () {
+
+    var saveAction = entity.id == 0 ? _appService.create : _appService.update;
+
+    saveAction(entity).done(function () {
         $('#dlg').dialog('close');      // close the dialog
         reload();  // reload the user data
     }).always(function () {

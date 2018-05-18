@@ -318,6 +318,18 @@ namespace SixMan.ChiMa.Application.Base
         {
             return File.Exists(Path.Combine(_hostingEnvironment.WebRootPath, relativePath.ToAntiSlash()));
         }
+
+        //public Task<TEntityDto> CreatOrUpdate(TEntityDto input)
+        //{
+        //    if (input.Id == 0)
+        //    {
+        //        return Create(input);
+        //    }
+        //    else
+        //    {
+        //        return Update(input);
+        //    }
+        //}
     }
 
 }

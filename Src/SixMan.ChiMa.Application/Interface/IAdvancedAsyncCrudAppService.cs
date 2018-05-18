@@ -23,7 +23,7 @@ namespace SixMan.ChiMa.Application.Base
         where TCreateInput : IEntityDto<long>
         where TUpdateInput : IEntityDto<long>
     {
-
+        //Task<TEntityDto> CreatOrUpdate(TEntityDto input);
     }
 
 }

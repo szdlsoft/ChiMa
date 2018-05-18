@@ -1,0 +1,282 @@
+﻿@using SixMan.ChiMa.Domain.Base
+@using SixMan.ChiMa.Web.Startup
+@using SixMan.ChiMa.Web.Models
+@using Microsoft.AspNetCore.Mvc.ModelBinding
+@using SixMan.ChiMa.Web.Views.Shared.Components.ListPage
+@using SixMan.ChiMa.Web.Extensions
+@using SixMan.ChiMa.Application
+@model MetaViewModel
+@{
+    ViewBag.CurrentPageName = PageNames.Dish; //The menu item will be active for this page.
+}
+    @await Component.InvokeAsync(typeof(ListPageViewComponent), Model.Meta)
+
+    @Html.Partial("~/Views/Shared/Modals/_CrudModalHeader.cshtml") 
+            <div class="modal-body">
+                <bg-form id="myForm" asp-action="SignUp" asp-for="@Model">
+                    @Html.Partial("~/Views/Shared/Modals/_CrudPhoto.cshtml") 
+                    <div class="form-group" id="div_DishBoms">                        
+                        <table id="tb_dishBoms" >
+                            <thead>
+                                <tr>                                    
+                                    <th data-field="foodMaterialName" data-editable="true">食材</th>
+                                    <th data-field="matching" data-editable="true"  >配比</th>                                   
+                                </tr>
+                            </thead>
+                            <tbody  data-bind="template: { name: 'dishBomItem-template', foreach: dishBoms }"  id="tbody_disBoms">                               
+                            </tbody>
+                        </table>
+                        <div>
+                            @*<button class="btn btn-primary btn-small" onclick="ShowAddDialog()">新增</button>*@
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" class="btn btn-primary btn-small"
+                                               href="#collapseAddMaterial">
+                                                新增
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseAddMaterial" class="panel-collapse collapse ">
+                                        <div class="panel-body">
+                                            <div>
+                                                <button type="button" class="btn btn-primary" onclick="AddBomItmes()">确定</button>
+                                            </div>
+                                            <table id="tb_foodMaterialList">
+                                                <thead>
+                                                    <tr>
+                                                        <th data-checkbox="true"></th>
+                                                        <th data-field="description">食材</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+
+</bg-form>
+               
+            </div>
+            <div>
+               
+            </div>
+     @Html.Partial("~/Views/Shared/Modals/_CrudModalFooterWithSaveAndCancel.cshtml") 
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="newBomItemModal" tabindex="-1" role="dialog" aria-labelledby="newBomItemModalLabel"  aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="newBomItemModalLabel">选择食材</h4>
+            </div>
+            <div class="modal-body">
+                @*<table id="tb_foodMaterialList">
+                    <thead>
+                        <tr>
+                            <th data-checkbox="true"></th>
+                            <th data-field="description">食材</th>
+                        </tr>
+                    </thead>
+                </table>*@
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" onclick="AddBomItmes()">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    @section scripts
+        {
+        @*<script src="~/view-resources/Views/Shared/domainCrud2.js" asp-append-version="true"></script>*@
+        <script type="text/html" id="dishBomItem-template">
+            <tr data-bind="ifnot:clientDelete">
+                <td>
+                    <input type="text" data-bind="value:foodMaterialName" />
+                </td>
+                <td>
+                    <input type="text" data-bind="value:matching" />
+                </td>
+                <td>
+                    删除：
+                    <input type="checkbox" data-bind="checked:clientDelete" />
+                </td>
+
+            </tr>
+        </script>
+        <script>
+    //初始化
+    $(function () {
+        //0, 设置service
+        //ko.appService = ;
+            crudInit({
+                urlPath : 'Dish',
+                appService: abp.services.app.dish,
+                onBeforeKoCleanNode: function () {
+                    $("#tb_foodMaterialList").bootstrapTable("destroy");
+                },
+                onAfterKoCleanNode: function () {
+                    comboboxInit();
+                }
+            });
+        comboboxInit();
+    });
+
+     function EntityModel() {
+         var self = this;
+
+         self.id = ko.observable();
+     @foreach (var property in Model.Meta.EditProperties())
+     {
+        if( property.PropertyName == "DishBoms")
+        {
+          @:self.@property.JsonPropertyName()  = ko.observableArray();
+        }
+        else
+        {
+          @:self.@property.JsonPropertyName()  = ko.observable();
+        }
+      }
+     self.addItem = function (foodMaterial) {
+         var bomItem = {
+             foodMaterialName: ko.observable(foodMaterial.description),
+             foodMaterialId: foodMaterial.id,
+             matching: ko.observable("0.01"),
+             clientDelete: ko.observable(false)
+         }
+         self.dishBoms.push(bomItem);
+     };
+
+     self.removeItem = function () {
+         $.each(self.dishBoms, function (index, item) {
+         });
+     };
+
+     }
+
+     function isArray(o) {
+         return Object.prototype.toString.call(o) == '[object Array]';
+     }
+
+     function colFormater(value, row, index) {
+         if (isArray(value)) {
+             var div = '<ul>';
+             $.each(value, function(index, item){
+                 var itemLi = '<li>' + item.foodMaterialName + ':' + item.matching +'</li>'
+                 div = div + itemLi;
+             });
+             div = div + "</ul>";
+             return div;
+         }
+         else {
+             return value;
+         }
+     }
+
+     function comboboxInit() {
+         $('#tb_foodMaterialList').bootstrapTable({
+             url: '/api/services/app/FoodMaterial/GetAll',         //请求后台的URL（*）
+             method: 'get',
+             search: true,                       //是否显示表格搜索，此搜索是客户端搜索，不会进服务端，所以，个人感觉意义不大
+             strictSearch: true,
+             showColumns: true,                  //是否显示所有的列
+             cache: false,
+             showRefresh: true,                  //是否显示刷新按钮
+             minimumCountColumns: 2,             //最少允许的列数
+             clickToSelect: true,                //是否启用点击选中行
+             showToggle: true,
+             totalField: 'totalCount',
+             dataField: 'items',
+             queryParams: function (param) {
+                 return {
+                     MaxResultCount: param.limit
+                     , SkipCount: param.offset
+                     , Search: param.search
+                     , Sort: param.sort
+                     , Order: param.order
+                 };
+             },//传递参数（*）
+             pagination: true,
+             sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
+             pageNumber: 1,                      //初始化加载第一页，默认第一页
+             pageSize: 10,                       //每页的记录行数（*）
+             pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+
+             responseHandler: function (res) {
+                 if (res.result) {
+                     return res.result;
+                 }
+                 return res;
+             },
+
+             onClickRow: function (row, $element) {
+                 var foodMaterialItem = row;
+
+             }
+
+         });
+
+            //HideAddDialog();
+     }
+
+            function ShowAddDialog() {
+
+                //$('#collapseAddMaterial').collapse('show');
+                $('#collapseAddMaterial').collapse('toggle');
+                //$('#tb_foodMaterialList').show();
+                //alert("hello");
+         //$('#myModal').modal('hide');
+         //       ko.cleanNode(document.getElementById("myModal"));
+         //$('#newBomItemModal').modal({
+         //    backdrop: 'static',
+         //}).on("show.bs.modal", function () {
+         //    //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
+         //    var temp = {};
+         //    })
+         //    .on("shown.bs.modal", function () {
+         //    //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
+         //        var temp = {};
+         //        ko.cleanNode(document.getElementById("myModal"));
+         //})
+         //    ;
+         //bDialog.open({
+         //    title: '选择食材',
+         //    width: 500,
+         //    height: 450,
+         //    dom: $('#newBomItemModal2').html()
+         //});
+         //$('#newBomItemModal').show('fast');
+     }
+
+     function AddBomItmes() {
+         //HideAddDialog();
+         //$('#newBomItemModal').modal('hide');
+         var arrRes = $("#tb_foodMaterialList").bootstrapTable("getSelections");
+            $('#collapseAddMaterial').collapse('toggle');
+          
+         $.each(arrRes, function (index, item) {
+             //ko.utils.extend(operate.EntityModel, ko.mapping.fromJS(arrselectedData[0]));
+             operate.EntityModel.addItem(item);
+         });
+            $("#tb_foodMaterialList").bootstrapTable("uncheckAll");
+            //$("#tb_foodMaterialList").bootstrapTable("destroy");
+            //comboboxInit();
+     }
+
+            function HideAddDialog() {
+                $('#tb_foodMaterialList').hide();
+            }
+
+          
+
+
+        </script>
+
+    }

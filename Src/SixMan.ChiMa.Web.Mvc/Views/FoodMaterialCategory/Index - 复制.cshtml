@@ -1,0 +1,172 @@
+﻿@using SixMan.ChiMa.Domain.Base
+@using SixMan.ChiMa.Web.Startup
+@using SixMan.ChiMa.Application.Food.Dto
+@model SixMan.ChiMa.Web.Models.PagedResultVM<FoodMaterialCategoryDto>
+@{
+    ViewBag.CurrentPageName = PageNames.FoodMaterialCategory; //The menu item will be active for this page.
+}
+@section scripts
+{
+   
+
+    @*<environment names="Development">
+        <script src="~/view-resources/Views/FoodMateriaCategory/Index.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/FoodMateriaCategory/Index.min.js" asp-append-version="true"></script>
+    </environment>*@
+    <script>
+        //初始化
+        $(function () {
+            //0, 设置service
+            ko.appService = abp.services.app.foodMaterialCategory;
+            ko.modal = $('#tb_category');
+            //1、初始化表格
+            tableInit.Init();
+            //2、注册增删改事件
+            operate.operateInit();
+        });
+
+        //初始化表格
+        var tableInit = {
+            Init: function () {
+                //绑定table的viewmodel
+                this.myViewModel = new ko.bootstrapTableViewModel({
+                    url: '/api/services/app/FoodMaterialCategory/GetAll',         //请求后台的URL（*）
+                    method: 'get',                      //请求方式（*）
+                    toolbar: '#toolbar',                //工具按钮用哪个容器
+                    sortable: true, //是否启用排序
+                    queryParams: function (param) {
+                        return {
+                            MaxResultCount: param.limit
+                            , SkipCount: param.offset
+                            , Search: param.search
+                            , Sort: param.sort
+                            , Order: param.order
+                        };
+                    },//传递参数（*）
+                    pagination: true,                   //是否显示分页（*）
+                    sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
+                    pageNumber: 1,                      //初始化加载第一页，默认第一页
+                    pageSize: 10,                       //每页的记录行数（*）
+                    pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+                    onEditableSave: function (field, row, oldValue, $el) {
+                        var dto = row;
+                        abp.ui.setBusy(ko.modal);
+                        ko.appService.update(dto).done(function (res) {
+                            abp.ui.clearBusy(ko.modal);
+                            alert("编辑成功");
+
+                        })                        
+                    }
+                });
+                ko.applyBindings(this.myViewModel, document.getElementById("tb_category"));
+            }
+        };
+
+        //操作
+        var operate = {
+            //初始化按钮事件
+            operateInit: function () {
+                this.operateAdd();
+                this.operateDelete();
+            },
+            //新增
+            operateAdd: function () {
+                $('#btn_add').on("click", function () {
+                    abp.ui.setBusy(ko.modal);
+                    ko.appService.add().done(function (data) {
+                        tableInit.myViewModel.insertRow(data);
+                        abp.ui.clearBusy(ko.modal);
+                    });
+                });
+            },
+
+            //删除
+            operateDelete: function () {
+                $('#btn_delete').on("click", function () {
+                    var arrselectedData = tableInit.myViewModel.getSelections();
+                    var idsData = arrselectedData.map(function (item) {
+                        return item.id;
+                    }).join(",");
+                    abp.message.confirm(
+                        "Delete foodMaterialCategory '" + "'?",
+                        function (isConfirmed) {
+                            if (isConfirmed) {
+                                abp.ui.setBusy(ko.modal);
+                                ko.appService.deleteList({
+                                    ids: idsData
+                                }
+                                ).done(function () {
+                                    abp.ui.clearBusy(ko.modal);
+                                    tableInit.myViewModel.refresh();
+
+                                });
+                            }
+                        }
+                    );
+
+                });
+            },
+            //保存数据
+            operateSave: function () {
+                $('#btn_submit').on("click", function () {
+                    //取到当前的viewmodel
+                    var oViewModel = operate.DepartmentModel;
+                    //将Viewmodel转换为数据model
+                    var oDataModel = ko.toJS(oViewModel);
+                    var funcName = oDataModel.id ? "Update" : "Add";
+
+                    var _appService = abp.services.app.foodMaterial;
+                    if (funcName === "Add") {
+                        _appService.create(oDataModel).done(function (res) {
+                            alert(JSON.stringify(res));
+                            tableInit.myViewModel.refresh();
+                        });
+                    }
+                    else {
+                        _appService.update(oDataModel).done(function (res) {
+                            alert(JSON.stringify(res));
+                            tableInit.myViewModel.refresh();
+                        });
+                    }
+
+                });
+            },
+            //数据校验
+            operateCheck: function (arr) {
+                if (arr.length <= 0) {
+                    alert("请至少选择一行数据");
+                    return false;
+                }
+                if (arr.length > 1) {
+                    alert("只能编辑一行数据");
+                    return false;
+                }
+                return true;
+            }
+        }
+
+    </script>   
+    
+}
+
+<div id="toolbar" class="btn-group">
+    <button id="btn_add" type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+    </button>    
+    <button id="btn_delete" type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+    </button>
+</div>
+
+<table id="tb_category" data-bind="myBootstrapTable:$root">
+    <thead>
+        <tr>
+            <th data-checkbox="true"></th>
+            <th data-field="code" data-editable="true"  data-sortable="true" data-sort-name="Code">编码</th>
+            <th data-field="name" data-editable="true"  data-sortable="true" data-sort-name="Name">名称</th>
+        </tr>
+    </thead>
+</table>
