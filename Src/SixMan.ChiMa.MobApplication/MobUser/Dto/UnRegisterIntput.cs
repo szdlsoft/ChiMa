@@ -21,14 +21,14 @@ namespace SixMan.ChiMa.Application.MobUser
         [RegularExpression("^((1[3,5,8][0-9])|(14[5,7])|(17[0,6,7,8])|(19[7]))\\d{8}$", ErrorMessage = "11位手机号。")]
         [Display(Name = "手机号")]
         public string Mobile { get; set; }
-        /// <summary>
-        /// 手机短信验证码：4位数字
-        /// </summary>
-        [Required]
-        //[StringLength(ChiMaConsts.ValidateCodeLength, MinimumLength = ChiMaConsts.ValidateCodeLength, ErrorMessage ="4位")]
-        [RegularExpression("^\\d{4}$", ErrorMessage = "4位数字")]
-        [Display(Name = "短信验证码")]
-        public string ValidateCode { get; set; }
+        ///// <summary>
+        ///// 手机短信验证码：4位数字
+        ///// </summary>
+        //[Required]
+        ////[StringLength(ChiMaConsts.ValidateCodeLength, MinimumLength = ChiMaConsts.ValidateCodeLength, ErrorMessage ="4位")]
+        //[RegularExpression("^\\d{4}$", ErrorMessage = "4位数字")]
+        //[Display(Name = "短信验证码")]
+        //public string ValidateCode { get; set; }
     }
 
    

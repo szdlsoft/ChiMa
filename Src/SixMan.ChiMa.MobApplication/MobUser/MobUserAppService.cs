@@ -190,7 +190,7 @@ namespace SixMan.ChiMa.Application.MobUser
         /// <param name="unUserRegisterIntput"></param>
         public void UnRegister(UnRegisterIntput unUserRegisterIntput)
         {
-            _validateDataManager.CheckValidateCode(unUserRegisterIntput.Mobile, ValidateType.UnRegister, unUserRegisterIntput.ValidateCode);
+            //_validateDataManager.CheckValidateCode(unUserRegisterIntput.Mobile, ValidateType.UnRegister, unUserRegisterIntput.ValidateCode);
 
             User user = _userManager.FindByNameAsync(unUserRegisterIntput.Mobile).Result;
             if (user != null)
