@@ -17,5 +17,9 @@ namespace SixMan.ChiMa.Domain.Mob
         /// 老用户重置密码
         /// </summary>
         ResetPassword = 1,
+        /// <summary>
+        /// 取消(删除)注册用户
+        /// </summary>
+        UnRegister = 2
     }
 }

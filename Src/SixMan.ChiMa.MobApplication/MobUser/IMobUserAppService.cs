@@ -31,5 +31,10 @@ namespace SixMan.ChiMa.Application
         /// <param name="sendValidateCodeInput"></param>
         /// <returns></returns>
         void SendValidateCode(SendValidateCodeInput sendValidateCodeInput);
+        /// <summary>
+        /// 取消（删除）注册用户
+        /// </summary>
+        /// <param name="unUserRegisterIntput"></param>
+        void UnRegister(UnRegisterIntput unUserRegisterIntput);
     }
 }

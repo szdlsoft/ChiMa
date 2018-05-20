@@ -184,5 +184,23 @@ namespace SixMan.ChiMa.Application.MobUser
             // 发送
             _sMSSender.Send(message);
         }
+        /// <summary>
+        /// 取消（删除）注册用户
+        /// </summary>
+        /// <param name="unUserRegisterIntput"></param>
+        public void UnRegister(UnRegisterIntput unUserRegisterIntput)
+        {
+            _validateDataManager.CheckValidateCode(unUserRegisterIntput.Mobile, ValidateType.UnRegister, unUserRegisterIntput.ValidateCode);
+
+            User user = _userManager.FindByNameAsync(unUserRegisterIntput.Mobile).Result;
+            if (user != null)
+            {
+                CheckErrors( _userManager.DeleteAsync(user).Result);
+            }
+            else
+            {
+                throw new Abp.UI.UserFriendlyException($"{unUserRegisterIntput.Mobile} 用户不存在!");
+            }
+        }
     }
 }
