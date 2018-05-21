@@ -6,7 +6,7 @@
 <div style="margin:5px">
     <div>
         <input id="foodMaterialCategoryName" class="easyui-textbox" data-options="prompt:'名称'" style="width:300px">
-        <a id="query" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="reload()">查询</a>
+        <a id="query" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="crud.reload()">查询</a>
 
     </div>
 </div>
@@ -20,30 +20,35 @@
         <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">食品分类信息</div>
         <input id="id" name="id" hidden="hidden" />
         <div style="margin-bottom:10px">
-            <input  name="name" class="easyui-textbox" required="required" label="名称:" style="width:100%">
+            <input name="name" class="easyui-textbox" required="required" label="名称:" style="width:100%">
         </div>
-        
+
     </form>
 </div>
 <div id="dlg-buttons">
-    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="save()" style="width:90px">Save</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="crud.save()" style="width:90px">Save</a>
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
 </div>
 
 
 @section scripts
     {
-    <script src="~/js/simpleCrud.js" asp-append-version="true"></script>
-
+    <script src="~/js/simpleCrud2.js" asp-append-version="true"></script>
+    var crud = {};
     <script>
         $(function () {
-            _appService = abp.services.app.foodMaterialCategory;
-            _entityName = "食材分类";
+            crud = new SimpleCrud({
+                appService: abp.services.app.foodMaterialCategory,
+                entityName: "食材分类",
+                listGrid: $("#listGrid"),
+                dlg: $("#dlg"),
+                fm: $("#fm")
+            });
 
-            initListDataGrid({
+            crud.initListDataGrid({
                 columns: [[
                     { field: 'id', title: 'id', width: 50, align: 'right' },
-                    { field: 'name', title: '名称', width: 100, align: 'right' },                    
+                    { field: 'name', title: '名称', width: 100, align: 'right' },
                 ]],
                 onBeforeLoad: function (param) {
                     param.search = $('#foodMaterialCategoryName').val();
