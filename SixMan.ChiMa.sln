@@ -26,6 +26,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.Migrator", "Sr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "需求", "需求", "{68E45EAA-002C-4494-A901-88BF1DB227BF}"
 	ProjectSection(SolutionItems) = preProject
+		Doc\需求\小柒料理软件需求规格说明书V1.docx = Doc\需求\小柒料理软件需求规格说明书V1.docx
 		Doc\需求\用户关系.jpg = Doc\需求\用户关系.jpg
 		Doc\需求\膳食管理库-200.xlsx = Doc\需求\膳食管理库-200.xlsx
 		Doc\需求\菜品关系.jpg = Doc\需求\菜品关系.jpg
@@ -137,7 +138,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.Crawler", "Src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.DomainService", "Src\SixMan.ChiMa.DomainService\SixMan.ChiMa.DomainService.csproj", "{8E213F97-A132-463B-953D-A54774BD02D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixMan.ChiMa.MonyunSms", "Src\SixMan.ChiMa.MonyunSms\SixMan.ChiMa.MonyunSms.csproj", "{4E4C0540-A9A4-403C-A578-273DA805A2ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SixMan.ChiMa.MonyunSms", "Src\SixMan.ChiMa.MonyunSms\SixMan.ChiMa.MonyunSms.csproj", "{4E4C0540-A9A4-403C-A578-273DA805A2ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -72,7 +72,9 @@
  *                     Fix Production 环境 jquery 没下载！
  * 1.4.7   2018-05-18  Fix eayui css js 没加载
  *                     Fix Production 环境 SZFMPriceCrawler 异常
- * 1.4.8   2018-05-20  Add 删除用户功能                    
+ * 1.4.8   2018-05-20  Add 删除用户功能   
+ * 1.4.9   2018-05-21 Opt simplcrud 组件化
+ * 
  * **********************************************************/
 
 using System;
@@ -90,7 +92,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.4.8";
+        public const string Version = "1.4.9";
 
         /// <summary>
         /// Gets release (last build) date of the application.

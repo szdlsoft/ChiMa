@@ -1,4 +1,8 @@
-﻿var _appService; //ABP后台服务代理
+﻿// 依赖：easyui , 
+// 依赖：apbproxy 后台服务
+// 
+
+var _appService; //ABP后台服务代理
 var _entityName;     //实体名
 
 var _currentEntity;
@@ -148,7 +152,6 @@ function initListDataGrid( options ) {
 
             var data = _appService.getAll(param)
                 .done(function (data) {
-                    //listGrid.datagrid("loadData", data);
                     success(data);
                 });
         },
@@ -204,30 +207,6 @@ function initCombobox( inputElementName, lookupService ) {
     });
 }
 
-function xinitCombobox() {
-    var fmcComboboxs = [$('#foodMaterialCategory'), $("[name$='foodMaterialCategoryId'")];
-    $.each(fmcComboboxs, function () {
-        $(this).combobox({
-            valueField: 'id',
-            textField: 'name',
-            editable: false,
-            loadFilter: filterData,
-            onBeforeLoad: function (param) {
-                console.log(param);
-            },
-            loader: function (param, success, error) {
-                console.log(param);
-                var _appService = abp.services.app.foodMaterialCategory;
-                var data = _appService.getAll(param)
-                    .done(function (data) {
-                        success(data);
-                    });
-            },
-
-        })
-    });
-
-}
 
 
 
