@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Doc", "1 Doc", "{3F143782-E980-4B0C-B65E-3F1057DE916C}"
 	ProjectSection(SolutionItems) = preProject
 		Doc\appsettings.Development.json = Doc\appsettings.Development.json
+		bower.json = bower.json
 		Doc\publish.txt = Doc\publish.txt
 	EndProjectSection
 EndProject
