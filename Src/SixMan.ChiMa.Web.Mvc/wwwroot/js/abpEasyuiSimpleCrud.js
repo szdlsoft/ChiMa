@@ -1,55 +1,47 @@
-﻿// 将simpleCrud 封装为可重用的对象！
+﻿// 将AbpEasyuiSimpleCrud 封装为可重用的对象！
 // 依赖：easyui ,
 // 依赖：apbproxy 后台服务
 // 
 
-function SimpleCrud(option) {
-    //this.appService = {};
-    //this.entityName = "实体名称";
-    //this.listGrid = $("#listGrid");
-    //this.dlg = $("#dlg");
-    //this.fm = $("#fm");
-
-    //this._S = _S;
-    //this.reload = reload;
-
+// 使用举例：
+//window.crud = new AbpEasyuiSimpleCrud({
+//    appService: abp.services.app.foodMaterialCategory,//ABP后台服务代理
+//    entityName: "食材分类",//实体名
+//    listGrid: $("#listGrid"),
+//    editDialog: $("#dlg"),
+//    editForm: $("#fm")
+//});
+function AbpEasyuiSimpleCrud(option) {
     this.currentEntity = {};
-
     $.extend(true, this, option);
-
 }
 
-//var this.appService; //ABP后台服务代理
-//var _entityName;     //实体名
-
-//var this.currentEntity;
-
-SimpleCrud.prototype._S = function ( action ){
+AbpEasyuiSimpleCrud.prototype._S = function ( action ){
     return action + this.entityName;
 }
 
-SimpleCrud.prototype.reload =function () {
+AbpEasyuiSimpleCrud.prototype.reload =function () {
     this.listGrid.datagrid('reload');
 }
 
 
-SimpleCrud.prototype.create = function () {
+AbpEasyuiSimpleCrud.prototype.create = function () {
     this.currentEntity = null;
 
-    this.dlg.dialog('open').dialog('center').dialog('setTitle', _S('添加'));
-    this.fm.form('clear');
+    this.editDialog.dialog('open').dialog('center').dialog('setTitle', _S('添加'));
+    this.editForm.form('clear');
 }
 
-SimpleCrud.prototype.edit = function () {
+AbpEasyuiSimpleCrud.prototype.edit = function () {
     var row = this.listGrid.datagrid('getSelected');
     if (row) {
         this.currentEntity = row;
-        this.dlg.dialog('open').dialog('center').dialog('setTitle', this._S('编辑'));
-        this.fm.form('load', row);
+        this.editDialog.dialog('open').dialog('center').dialog('setTitle', this._S('编辑'));
+        this.editForm.form('load', row);
     }
 }
 
-SimpleCrud.prototype.save = function () {
+AbpEasyuiSimpleCrud.prototype.save = function () {
     var self = this;
     var _$form = $('form[name=editForm]');
 
@@ -68,14 +60,14 @@ SimpleCrud.prototype.save = function () {
     var saveAction = entity.id == 0 ? this.appService.create : this.appService.update;
 
     saveAction(entity).done(function () {
-        self.dlg.dialog('close');      // close the dialog
+        self.editDialog.dialog('close');      // close the dialog
         self.reload();  // reload the user data
     }).always(function () {
         abp.ui.clearBusy(_$form);
     });
 }
 
-SimpleCrud.prototype.doDelete = function (row) {
+AbpEasyuiSimpleCrud.prototype.doDelete = function (row) {
     abp.ui.setBusy(this.listGrid);
     this.appService.delete(row).done(function () {
         reload();
@@ -84,7 +76,7 @@ SimpleCrud.prototype.doDelete = function (row) {
     });
 }
 
-SimpleCrud.prototype.del = function() {
+AbpEasyuiSimpleCrud.prototype.del = function() {
     var row = this.listGrid.datagrid('getSelected');
 
     if (row) {
@@ -136,7 +128,7 @@ function initForm() {
     });
 }
 
-SimpleCrud.prototype.initListDataGrid = function (options) {
+AbpEasyuiSimpleCrud.prototype.initListDataGrid = function (options) {
     var self = this; //在事件中使用
     //var appService = this.appService;
     //var edit = this.edit;

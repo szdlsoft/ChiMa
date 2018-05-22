@@ -33,16 +33,16 @@
 
 @section scripts
     {
-    <script src="~/js/simpleCrud2.js" asp-append-version="true"></script>
-    var crud = {};
+    <script src="~/js/abpEasyuiSimpleCrud.js" asp-append-version="true"></script>
+    @*var crud = {};*@
     <script>
         $(function () {
-            crud = new SimpleCrud({
+            window.crud = new AbpEasyuiSimpleCrud({
                 appService: abp.services.app.foodMaterialCategory,
                 entityName: "食材分类",
                 listGrid: $("#listGrid"),
-                dlg: $("#dlg"),
-                fm: $("#fm")
+                editDialog: $("#dlg"),
+                editForm: $("#fm")
             });
 
             crud.initListDataGrid({
