@@ -1,0 +1,25 @@
+{
+  "name": "abp_easyui_simple_crud",
+  "homepage": "https://github.com/szdlsoft/ChiMa.git",
+  "authors": [
+    "szdlsoft <szdlsoft@126.com>"
+  ],
+  "description": "使用abp后台服务，使用easyui前端框架，简单的crud",
+  "main": "abpEasyuiSimpleCrud.js",
+  "keywords": [
+    "abp",
+    "easyui",
+    "crud"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "Doc",
+    "Src",
+    "test",
+    "tests",
+    "*.*"
+  ]
+}
