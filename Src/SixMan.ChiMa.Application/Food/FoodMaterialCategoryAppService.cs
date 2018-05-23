@@ -35,6 +35,11 @@ namespace SixMan.ChiMa.Application.Food
                                       .ToLookUpSource();
         }
 
+        public FoodMaterialCategoryDto InitCreate()
+        {
+            return new FoodMaterialCategoryDto();
+        }
+
         protected override IQueryable<FoodMaterialCategory> CreateFilteredQuery(SortSearchPagedResultRequestDto input)
         {
             var query = base.CreateFilteredQuery(input);

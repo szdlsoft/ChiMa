@@ -2,6 +2,7 @@
 using Abp.Application.Services.Dto;
 using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food.Dto;
+using SixMan.ChiMa.Domain;
 using SixMan.ChiMa.Domain.Food;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace SixMan.ChiMa.Application.Food
 {
     public interface IFoodMaterialCategoryAppService 
         : IAdvancedAsyncCrudAppService<FoodMaterialCategoryDto>
+        , IInitCreate<FoodMaterialCategoryDto>
     {
         //FoodMaterialCategoryDto Add();
         //void DeleteList(DeletListDto list);

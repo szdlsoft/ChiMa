@@ -23,13 +23,15 @@ namespace SixMan.ChiMa.Application.MobUser
         public string Mobile { get; set; }
         /// <summary>
         /// 手机短信验证码：4位数字
-        /// </summary>
+        ///// </summary>
         [Required]
         //[StringLength(ChiMaConsts.ValidateCodeLength, MinimumLength = ChiMaConsts.ValidateCodeLength)]
         [RegularExpression("^\\d{4}$", ErrorMessage = "4位数字")]
         [Display(Name = "短信验证码")]
 
         public string ValidateCode { get; set; }
+        
+        //public string OldPassword { get; set; }
         /// <summary>
         /// 新密码：6位数字或字母或下划线
         /// </summary>
@@ -40,7 +42,6 @@ namespace SixMan.ChiMa.Application.MobUser
         [Display(Name = "密码")]
 
         public string NewPassword { get; set; }
-        /// <summary>
     }
 
    

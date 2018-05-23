@@ -75,6 +75,8 @@
  * 1.4.8   2018-05-20  Add 删除用户功能   
  * 1.4.9   2018-05-21  Opt simplcrud 组件化
  * 1.4.10  2018-05-22  Opt AbpEasyuiSimpleCrud 组件化
+ * 1.4.11  2018-05-23  Add AbpEasyuiSimpleCrud 用后台initCreate
+ *                     Upd 重置密码，不需要usermanager.reset, 直接hash保存
  * 
  * **********************************************************/
 
@@ -93,7 +95,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.4.10";
+        public const string Version = "1.4.11";
 
         /// <summary>
         /// Gets release (last build) date of the application.
