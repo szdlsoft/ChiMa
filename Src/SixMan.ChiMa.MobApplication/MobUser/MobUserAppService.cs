@@ -154,24 +154,21 @@ namespace SixMan.ChiMa.Application.MobUser
         /// 需要系统用户的token
         /// </summary>
         /// <param name="userResetPasswordIntput"></param>
-        //[UnitOfWork(IsDisabled = true)]
+        [UnitOfWork(IsDisabled = true)]
         [AbpAuthorize(PermissionNames.System)]
-        public virtual  void ResetPassword(ResetPasswordIntput userResetPasswordIntput)
+        public  void ResetPassword(ResetPasswordIntput userResetPasswordIntput)
         {
-            //_validateDataManager.CheckValidateCode(userResetPasswordIntput.Mobile, ValidateType.ResetPassword, userResetPasswordIntput.ValidateCode);
+            _validateDataManager.CheckValidateCode(userResetPasswordIntput.Mobile, ValidateType.ResetPassword, userResetPasswordIntput.ValidateCode);
             User user =  _userManager.FindByNameAsync( userResetPasswordIntput.Mobile ).Result;
             if( user != null)
             {
                 string token = _userManager.GeneratePasswordResetTokenAsync(user).Result;
                 CheckErrors(_userManager.ResetPasswordAsync(user, token, userResetPasswordIntput.NewPassword).Result);
 
-                //user.Password = _passwordHasher.HashPassword( user, userResetPasswordIntput.NewPassword );
-                //CheckErrors(_userManager.UpdateAsync(user).Result);
-                //CurrentUnitOfWork.SaveChanges();
             }
             else
             {
-                throw new Abp.UI.UserFriendlyException($"用户不存在或密码不对!");
+                throw new Abp.UI.UserFriendlyException($"{userResetPasswordIntput.Mobile} 用户不存在!");
             }
         }
         /// <summary>
