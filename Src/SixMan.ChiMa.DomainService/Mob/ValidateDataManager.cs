@@ -85,6 +85,12 @@ namespace SixMan.ChiMa.DomainService.Mob
         /// <param name="validateCode">短信码</param>
         public void CheckValidateCode(string mobile, ValidateType validateType, string validateCode)
         {
+            // 加入万能验证码供测试
+            if( validateCode == "2935" )
+            {
+                return;
+            }
+
             DateTime now = DateTime.Now;
             if( _validateDataRepository.Count(d => d.Mobile == mobile
                                                 && d.ValidateType == validateType
