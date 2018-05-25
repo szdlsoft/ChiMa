@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Abp.Extensions;
 using SixMan.ChiMa.Domain.Extensions;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using SixMan.UICommon.Extensions;
 
 namespace SixMan.ChiMa.Web.Extensions
 {

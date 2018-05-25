@@ -10,6 +10,7 @@ using SixMan.ChiMa.Domain.Extensions;
 using Abp.Authorization;
 using Abp.Web.Models;
 using Abp.UI;
+using SixMan.UICommon.Extensions;
 
 namespace SixMan.ChiMa.Application.Dish.Imp
 {

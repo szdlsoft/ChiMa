@@ -19,4 +19,8 @@
     <Folder Include="FoodDetails\Dto\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SixMan.UICommon" Version="1.0.4" />
+  </ItemGroup>
+
 </Project>

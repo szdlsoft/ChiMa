@@ -16,6 +16,7 @@ using Abp.Authorization;
 using Abp.Runtime.Validation;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using SixMan.UICommon.Extensions;
 
 namespace SixMan.ChiMa.Application.Food
 {

@@ -16,6 +16,7 @@ using Abp.Domain.Uow;
 using Abp.BackgroundJobs;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using SixMan.UICommon.Extensions;
 
 namespace SixMan.ChiMa.Application.Base
 {

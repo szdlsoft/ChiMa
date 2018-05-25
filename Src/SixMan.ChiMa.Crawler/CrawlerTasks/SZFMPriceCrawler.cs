@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 
 using SixMan.ChiMa.Domain.Extensions;
 using Abp.Domain.Uow;
+using SixMan.UICommon.Extensions;
 
 namespace SixMan.ChiMa.Crawler.CrawlerTasks
 {

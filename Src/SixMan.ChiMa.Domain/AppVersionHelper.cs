@@ -78,6 +78,7 @@
  * 1.4.11  2018-05-23  Add AbpEasyuiSimpleCrud 用后台initCreate *                     
  * 1.4.12  2018-05-24  Upd 重置密码，不需要正则验证
  * 1.4.13  2018-05-24  Add 加入万能验证码供测试
+ * 1.4.14  2018-05-25  Opt 公用库UICommon nuget
  * 
  * **********************************************************/
 
@@ -96,7 +97,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.4.13";
+        public const string Version = "1.4.14";
 
         /// <summary>
         /// Gets release (last build) date of the application.

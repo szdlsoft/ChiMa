@@ -4,6 +4,7 @@ using Abp.Domain.Uow;
 using SixMan.ChiMa.Domain.Dish;
 using SixMan.ChiMa.Domain.Extensions;
 using SixMan.ChiMa.Domain.Food;
+using SixMan.UICommon.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

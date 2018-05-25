@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SixMan.UIAbstract" Version="1.0.1" />
+    <PackageReference Include="SixMan.UICommon" Version="1.0.4" />
   </ItemGroup>
   
   <ItemGroup>

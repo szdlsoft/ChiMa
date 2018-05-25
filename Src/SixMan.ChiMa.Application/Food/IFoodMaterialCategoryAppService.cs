@@ -4,6 +4,7 @@ using SixMan.ChiMa.Application.Base;
 using SixMan.ChiMa.Application.Food.Dto;
 using SixMan.ChiMa.Domain;
 using SixMan.ChiMa.Domain.Food;
+using SixMan.UICommon;
 using System;
 using System.Collections.Generic;
 using System.Text;

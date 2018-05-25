@@ -10,6 +10,7 @@ using Abp.AspNetCore.Mvc.Controllers;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using SixMan.ChiMa.Domain.Extensions;
+using SixMan.UICommon.Extensions;
 
 namespace SixMan.ChiMa.Web.Mvc.Controllers
 {

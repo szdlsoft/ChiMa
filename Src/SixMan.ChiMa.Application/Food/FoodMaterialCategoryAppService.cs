@@ -13,7 +13,8 @@ using SixMan.ChiMa.Domain.Food.Repository;
 using SixMan.ChiMa.Domain.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Abp.Authorization;
-using SixMan.UIAbstract.Lookup;
+using SixMan.UICommon.Extensions;
+using SixMan.UICommon.Lookup;
 
 namespace SixMan.ChiMa.Application.Food
 {
