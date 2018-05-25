@@ -26,12 +26,12 @@ namespace SixMan.ChiMa.Application.Dish
         {
             List<Plan> plans = new List<Plan>();
 
-            IList<Domain.Dish.Dish> allDishs = _dishRepository.GetAll()
-                                            .OrderBy(d => d.Id)
-                                            .Take(10)
-                                            .ToList();
+            //IList<Domain.Dish.Dish> allDishs = _dishRepository.GetAll()
+            //                                .OrderBy(d => d.Id)
+            //                                .Take(10)
+            //                                .ToList();
 
-            IList<Domain.Dish.Dish> dishs = RadomGet(allDishs);
+            //IList<Domain.Dish.Dish> dishs = RadomGet(allDishs);
             //早餐 1主食 2热菜 1汤羹
             plans.AddRange(GetDP(MealType.早餐, "主食", "热菜", "汤羹"));
 
@@ -144,6 +144,29 @@ namespace SixMan.ChiMa.Application.Dish
             }
 
             return randomDishs;
+        }
+        /// <summary>
+        /// 根据参别，随机生成一个菜
+        /// </summary>
+        /// <param plan="plan"></param>
+        /// <returns></returns>
+        public long GetRandomChange(Plan plan)
+        {
+            string meal = plan.MealType.ToString();
+            var count = _dishRepository.Count(d => d.DishCategory.Contains(meal));
+
+            var dish =
+               _dishRepository.GetAll()
+                              .Where(d => d.DishCategory.Contains(meal))
+                              .Skip(RandomNum(count))
+                              .Take(1)
+                              .FirstOrDefault();
+            if (dish != null)
+            {
+                return dish.Id;
+            }
+
+            return plan.DishId;   //找不到，还用原来的
         }
     }
 }

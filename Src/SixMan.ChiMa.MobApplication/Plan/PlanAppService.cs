@@ -45,7 +45,19 @@ namespace SixMan.ChiMa.Application.Dish
 
         public  PlanDto Update(PlanUpdateDto input)
         {
-            return UpdateImp(input);
+            CheckUpdatePermission();
+
+            var entity = GetEntityById(input.Id);
+
+            MapToEntity(input, entity);
+            // dish 要随机换成新的菜
+            entity.DishId = _plansGenerator.GetRandomChange( entity )  ;
+
+            CurrentUnitOfWork.SaveChanges();
+
+            return MapToEntityDto(entity);
+
+            //return UpdateImp(input);
        }
 
         //protected IPlanRepository _repository => Repository as IPlanRepository;

@@ -10,5 +10,6 @@ namespace SixMan.ChiMa.Application.Dish
         : Abp.Dependency.ISingletonDependency
     {
         IList<Plan> BuildPlans(DateTime planDate, SixMan.ChiMa.Domain.Family.Family family);
+        long GetRandomChange(Plan plan);
     }
 }
