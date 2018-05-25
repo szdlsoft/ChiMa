@@ -59,6 +59,7 @@ namespace SixMan.ChiMa.EFCore.EntityFrameworkCore.Repositories
                                .Include(c => c.Dish)
                                .Include(c => c.CookeryNotes)
                                .Where(c => c.Dish.Id == id)
+                               .OrderBy( c => c.Order )
                                .ToList();
 
             return dish;

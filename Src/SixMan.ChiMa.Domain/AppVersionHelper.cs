@@ -79,6 +79,7 @@
  * 1.4.12  2018-05-24  Upd 重置密码，不需要正则验证
  * 1.4.13  2018-05-24  Add 加入万能验证码供测试
  * 1.4.14  2018-05-25  Opt 公用库UICommon nuget
+ * 1.4.15  2018-05-25  Fix 烹饪步骤乱序,后端已用order字段排序，前端好像还是显示乱序
  * 
  * **********************************************************/
 
@@ -97,7 +98,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.4.14";
+        public const string Version = "1.4.15";
 
         /// <summary>
         /// Gets release (last build) date of the application.
