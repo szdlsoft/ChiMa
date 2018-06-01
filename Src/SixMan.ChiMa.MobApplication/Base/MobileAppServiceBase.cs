@@ -27,12 +27,14 @@ namespace SixMan.ChiMa.Application
     {
         protected readonly IFamilyRepository _familyResponsitory;
         protected readonly IRepository<UserInfo, long> _userInfoRepository;
-        protected MobileAppServiceBase(IRepository<TEntity, long> repository) : base(repository)
+        public MobileAppServiceBase(IRepository<TEntity, long> repository) : base(repository)
         {
             _userInfoRepository = IocManager.Instance.IocContainer.Resolve<IRepository<UserInfo, long>>();
             _familyResponsitory = IocManager.Instance.IocContainer.Resolve<IFamilyRepository>();
 
             //SetFilterPara();
+            //var cuw = IocManager.Instance.IocContainer.Resolve<IUnitOfWorkManager>().Current;
+            //cuw.SetFilterParameter(ChimaDataFilter.FamillyDataFilter, ChimaDataFilter.FamillyPara, Family);
         }
 
         [RemoteService(isEnabled:false)]
