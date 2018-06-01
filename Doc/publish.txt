@@ -107,3 +107,8 @@ Production环境，如有新的css js 加入需要bundle, 必须执行dotnet bundle才能生效！
 1：食材分类数据维护
 2：食材数据维护
 3：菜品数据维护
+
+2018-06-01
+
+1: 上传用户头像接口 /api/Image/UploadHeadPortrait  注意：需要手机用户token, 头像图像格式jpg
+2:

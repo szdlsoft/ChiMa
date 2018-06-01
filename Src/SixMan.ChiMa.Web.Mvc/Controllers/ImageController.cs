@@ -11,25 +11,50 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using SixMan.ChiMa.Domain.Extensions;
 using SixMan.UICommon.Extensions;
+using Abp.Authorization;
+using SixMan.ChiMa.Domain;
+using Abp.UI;
+using Abp.Domain.Repositories;
+using SixMan.ChiMa.Domain.Family;
+using SixMan.UICommon.Helper;
 
 namespace SixMan.ChiMa.Web.Mvc.Controllers
 {
     public class ImageController : AbpController
     {
         public IHostingEnvironment _hostingEnvironment { get; set; }
-
-        [Route("api/[controller]")]
+        public IRepository<UserInfo, long> _userInfoRepository { get; set; }
+        /// <summary>
+        /// 上传头像(jpg格式)：需要手机用户登陆
+        /// </summary>
+        /// <param name="imgfile">头像文件</param>
+        /// <returns></returns>
+        [Route("api/[controller]/[action]")]
         [HttpPost]
         [UnitOfWork(IsDisabled = true)]
-        [WrapResult]
-        public IActionResult Upload(string photoFilePath, IFormFile imgfile)
+        [WrapResult(WrapOnSuccess = false, WrapOnError = false)]
+        //[AbpAuthorize]
+        public JsonResult UploadHeadPortrait( IFormFile imgfile )
         {
-            //string photo = Request.Form["photo"];
-            //IFormFile imgfile = Request.Form.Files[0];
-            string sWebRootFolder = _hostingEnvironment.WebRootPath;
-            //string sImgRootFolder = Path.Combine(sWebRootFolder, "Images");
-            string phsicalPath = Path.Combine(sWebRootFolder, photoFilePath.ToAntiSlash());
-            //FileInfo file = new FileInfo(Path.Combine(sWebRootFolder, photoFilePath));
+            CurrentUnitOfWork.DisableFilter(ChimaDataFilter.FamillyDataFilter);
+
+            if ( !AbpSession.UserId.HasValue)
+            {
+                throw new UserFriendlyException("请登陆！");
+            }
+
+            long userId = AbpSession.UserId.Value;
+            Logger.Info($"UploadHeadPortrait userId:{userId}");
+            var userInfo = _userInfoRepository.FirstOrDefault(ui => ui.User.Id == userId);
+            if (userInfo == null)
+            {              
+                throw new UserFriendlyException("请使用手机用户登陆！");
+            }
+
+            string headPortraitImgPath = Path.Combine(  _hostingEnvironment.WebRootPath, ChiMaConsts.ImagePath, UserInfo.HeadPortraitImgPath );
+            FileHelper.EnsureDirectory( headPortraitImgPath );
+            string fileName = $"{userInfo.Id}.jpg";
+            string phsicalPath = Path.Combine(headPortraitImgPath,  fileName );
             try
             {
                 using (FileStream fs = new FileStream(phsicalPath, FileMode.Create))
@@ -40,9 +65,10 @@ namespace SixMan.ChiMa.Web.Mvc.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logger.Fatal(ex.Message, ex);
+                throw new UserFriendlyException(ex.Message);
             }
-            return Json(photoFilePath);
+            return Json(phsicalPath);
         }
     }
 }

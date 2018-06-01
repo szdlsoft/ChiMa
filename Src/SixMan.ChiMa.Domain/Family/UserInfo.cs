@@ -18,6 +18,7 @@ namespace SixMan.ChiMa.Domain.Family
         : ChiMaEntityBase
         , IHaveFamilyId
     {
+        public const string HeadPortraitImgPath = "HeadPortrait";
         //手机号
         [MaxLength(LengthConstants.MaxNameLength)]
         public string Mobile { get; set; }

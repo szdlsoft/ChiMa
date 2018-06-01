@@ -172,7 +172,7 @@ namespace SixMan.ChiMa.Application
         where TEntity : class, IEntity<long>
         where TEntityDto : IEntityDto<long>
     {
-        protected MobileAppServiceBase(IRepository<TEntity, long> repository) : base(repository)
+        public MobileAppServiceBase(IRepository<TEntity, long> repository) : base(repository)
         {
         }
     }

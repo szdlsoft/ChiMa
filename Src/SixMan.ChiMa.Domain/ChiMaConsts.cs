@@ -15,5 +15,7 @@
         /// 验证码长度
         /// </summary>
         public const int ValidateCodeLength = 4;
+
+        public const string ImagePath = "images";
     }
 }
