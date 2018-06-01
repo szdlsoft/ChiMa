@@ -81,6 +81,9 @@
  * 1.4.14  2018-05-25  Opt 公用库UICommon nuget
  * 1.4.15  2018-05-25  Fix 烹饪步骤乱序,后端已用order字段排序，前端好像还是显示乱序
  *                     Upd Plan/Update 后台重新随机生成一个菜，替换原来的菜
+ * 1.4.16  2018-06-01  Add 用户头像上传，并且可以用swagger来测试
+ *                     Add 获取用户信息、修改用户信息
+ *                     
  * 
  * **********************************************************/
 
@@ -99,7 +102,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.4.15";
+        public const string Version = "1.4.16";
 
         /// <summary>
         /// Gets release (last build) date of the application.

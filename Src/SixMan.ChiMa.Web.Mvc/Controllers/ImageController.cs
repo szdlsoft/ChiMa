@@ -17,6 +17,8 @@ namespace SixMan.ChiMa.Web.Mvc.Controllers
     public class ImageController : AbpController
     {
         public IHostingEnvironment _hostingEnvironment { get; set; }
+
+        [Route("api/[controller]")]
         [HttpPost]
         [UnitOfWork(IsDisabled = true)]
         [WrapResult]

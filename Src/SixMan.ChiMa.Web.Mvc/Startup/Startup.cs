@@ -62,6 +62,7 @@ namespace SixMan.ChiMa.Web.Startup
                 options.OperationFilter<AddAuthTokenHeaderParameter>();
                 options.OrderActionsBy(ad => ad.RelativePath);
                 options.IncludeXmlComments(GetXmlCommentsPath());
+                options.OperationFilter<SwaggerFileUploadFilter>();
             });
 
 
