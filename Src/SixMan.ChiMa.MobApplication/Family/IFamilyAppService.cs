@@ -22,5 +22,16 @@ namespace SixMan.ChiMa.Application.Family
         /// </summary>
         /// <returns></returns>
         void UpdateMyFavorites(UpdateFavoriteInput input);
+        /// <summary>
+        /// 获取当前用户信息
+        /// </summary>
+        /// <returns></returns>
+        MobUserInfoDto GetCurrentUserInfo();
+        /// <summary>
+        /// 修改当前用户信息
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        MobUserInfoDto UpdateCurrentUserInfo(UpdateMobUserInfoInput input );
     }
 }

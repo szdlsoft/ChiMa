@@ -18,13 +18,9 @@ namespace SixMan.ChiMa.Domain.Family
         : ChiMaEntityBase
         , IHaveFamilyId
     {
-        public const string HeadPortraitImgPath = "HeadPortrait";
         //手机号
         [MaxLength(LengthConstants.MaxNameLength)]
         public string Mobile { get; set; }
-        //头像
-        [StringLength(LengthConstants.MaxUrlLength)]
-        public string HeadPortrait { get; set; }
         //昵称
         [MaxLength(LengthConstants.MaxNameLength)]
         public string NickName { get; set; }
@@ -39,6 +35,12 @@ namespace SixMan.ChiMa.Domain.Family
         //个性签名
         [MaxLength(LengthConstants.MaxDescriptionLength)]
         public string Signature { get; set; }
+        /// <summary>
+        /// 地址
+        /// </summary>
+        [MaxLength(LengthConstants.MaxDescriptionLength)]
+        public string Address { get; set; }
+
         //积分
         public int Credits { get; set; }
 
@@ -73,5 +75,35 @@ namespace SixMan.ChiMa.Domain.Family
         /// 自制的菜谱
         /// </summary>
         public ICollection<SixMan.ChiMa.Domain.Dish.Dish> HomeMadeDishs { get; set; }
+
+
+        //头像
+        [NotMapped]
+        public string HeadPortraitFileName => $"{Id}.jpg";
+
+        [NotMapped]
+        public string HeadPortrait => $"{ChiMaConsts.ImagePath}/{ChiMaConsts.HeadPortraitImgPath}/{HeadPortraitFileName}";
+
+        public static UserInfo Create( User user )
+        {
+            return Create( user, null, true) ;
+        }
+
+        public static UserInfo Create(User user, long? familyId, bool isFamilyCreater)
+        {
+            var userInfo = new UserInfo()
+            {
+                UserId = user.Id,
+                Mobile = user.UserName,
+                IsFamilyCreater = isFamilyCreater,
+            };
+
+            if( ! isFamilyCreater && familyId.HasValue)
+            {
+                userInfo.FamilyId = familyId.Value;
+            }
+
+            return userInfo;
+        }
     }
 }

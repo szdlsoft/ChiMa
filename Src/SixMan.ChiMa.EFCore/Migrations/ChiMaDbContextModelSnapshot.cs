@@ -1535,6 +1535,9 @@ namespace SixMan.ChiMa.EFCore.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Address")
+                        .HasMaxLength(256);
+
                     b.Property<int?>("AreaId");
 
                     b.Property<DateTime?>("BirthDay");
@@ -1554,9 +1557,6 @@ namespace SixMan.ChiMa.EFCore.Migrations
                     b.Property<string>("ExtensionData");
 
                     b.Property<long>("FamilyId");
-
-                    b.Property<string>("HeadPortrait")
-                        .HasMaxLength(512);
 
                     b.Property<bool>("IsDeleted");
 

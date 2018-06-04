@@ -12,6 +12,8 @@ using Abp.Application.Services;
 using SixMan.ChiMa.Domain.Authorization.Users;
 using Abp.Web.Models;
 using SixMan.ChiMa.Domain.Dish;
+using AutoMapper;
+using Abp.Domain.Uow;
 
 namespace SixMan.ChiMa.Application.Family
 {
@@ -24,6 +26,7 @@ namespace SixMan.ChiMa.Application.Family
         //IRepository<UserInfo, long> _userInfoRepository;
         IDishRepository _dishRepository;
         IRepository<UserFavoriteDish, long> _userFavoriteDishRepository;
+        //IRepository<UserInfo, long> _userInfoRepository;
         public FamilyAppService(IFamilyRepository repository
                                   , IDishRepository dishRepository
                                   , IRepository<UserFavoriteDish, long> userFavoriteDishRepository
@@ -34,8 +37,6 @@ namespace SixMan.ChiMa.Application.Family
             _dishRepository = dishRepository;
             _userFavoriteDishRepository = userFavoriteDishRepository;
         }
-
-       
 
         [AbpAuthorize]
         public void UpdateMyFavorites(UpdateFavoriteInput input)
@@ -73,5 +74,40 @@ namespace SixMan.ChiMa.Application.Family
             }
 
         }
+
+        [AbpAuthorize]
+        public MobUserInfoDto GetCurrentUserInfo()
+        { 
+            return MpaToMobUserInfoDto(UserInfo);
+        }
+
+        private MobUserInfoDto MpaToMobUserInfoDto(UserInfo userInfo)
+        {
+            var dto = Mapper.Map<UserInfo, MobUserInfoDto>(userInfo);
+            //dto.HeadPortrait = $"{ChiMaConsts.ImagePath}/{ UserInfo.HeadPortraitImgPath}/{dto.HeadPortrait}" ;
+            return dto;
+        }
+
+        [AbpAuthorize]
+        [UnitOfWork]
+        public virtual MobUserInfoDto UpdateCurrentUserInfo(UpdateMobUserInfoInput input)
+        {
+            try
+            {
+                UserInfo userInfo = ObjectMapper.Map(input, UserInfo);
+                return MpaToMobUserInfoDto( _userInfoRepository.Update(UserInfo));
+            }
+            catch (Exception ex)
+            {
+                Logger.Fatal(ex.Message, ex);
+                if( ex.InnerException != null)
+                {
+                    Logger.Fatal(ex.InnerException.Message, ex.InnerException);
+                }
+
+                throw new Abp.UI.UserFriendlyException(ex.Message);
+            }
+        }
+
     }
 }

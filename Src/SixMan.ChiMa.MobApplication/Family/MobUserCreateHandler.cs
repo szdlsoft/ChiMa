@@ -40,36 +40,14 @@ namespace SixMan.ChiMa.Application
 
         private void CreateFamily(User user)
         {
-            Domain.Family.Family entity = new Domain.Family.Family()
-            {
-                UUID = Guid.NewGuid(),
-            };
-            //entity = Repository.Get( Repository.InsertAndGetId(entity));
-
-            var CreateUserInfo = new UserInfo()
-            {
-                UserId = user.Id,
-                IsFamilyCreater = true,
-            };
-
-            entity.UserInfos = new List<UserInfo>() { CreateUserInfo }; //这个办法，是可以的创建关联子记录 
-
-            _familyResponsitory.Insert(entity);
-
-            //var id =  _userInfoRepository.InsertOrUpdateAndGetId(UserInfo);
-
+            Domain.Family.Family family = Domain.Family.Family.Create(user);
+            _familyResponsitory.Insert(family);
         }
 
         private void CreateUserInfo(MobUserCreateEvent eventData)
         {
-            var CreateUserInfo = new UserInfo()
-            {
-                UserId = eventData.User.Id,
-                FamilyId = eventData.FamilyId.Value,
-                IsFamilyCreater = true
-            };
-
-            _userInfoRepository.Insert(CreateUserInfo);
+            var userInfo = UserInfo.Create(eventData.User, eventData.FamilyId, false);
+            _userInfoRepository.Insert(userInfo);
         }
     }
 }

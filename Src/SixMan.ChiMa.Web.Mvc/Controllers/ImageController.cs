@@ -51,10 +51,10 @@ namespace SixMan.ChiMa.Web.Mvc.Controllers
                 throw new UserFriendlyException("请使用手机用户登陆！");
             }
 
-            string headPortraitImgPath = Path.Combine(  _hostingEnvironment.WebRootPath, ChiMaConsts.ImagePath, UserInfo.HeadPortraitImgPath );
+            string headPortraitImgPath = Path.Combine(  _hostingEnvironment.WebRootPath, ChiMaConsts.ImagePath, ChiMaConsts.HeadPortraitImgPath );
             FileHelper.EnsureDirectory( headPortraitImgPath );
-            string fileName = $"{userInfo.Id}.jpg";
-            string phsicalPath = Path.Combine(headPortraitImgPath,  fileName );
+            //string fileName = $"{userInfo.Id}.jpg";
+            string phsicalPath = Path.Combine(headPortraitImgPath,  userInfo.HeadPortraitFileName );
             try
             {
                 using (FileStream fs = new FileStream(phsicalPath, FileMode.Create))
@@ -68,7 +68,7 @@ namespace SixMan.ChiMa.Web.Mvc.Controllers
                 Logger.Fatal(ex.Message, ex);
                 throw new UserFriendlyException(ex.Message);
             }
-            return Json(phsicalPath);
+            return Json(userInfo.HeadPortrait);
         }
     }
 }

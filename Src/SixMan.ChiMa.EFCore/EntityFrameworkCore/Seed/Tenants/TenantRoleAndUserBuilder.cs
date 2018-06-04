@@ -132,6 +132,8 @@ namespace SixMan.ChiMa.EFCore.Seed.Tenants
 
             }
 
+            //同步UserInfo.Mobel 和 User.UserName
+
 
 
         }

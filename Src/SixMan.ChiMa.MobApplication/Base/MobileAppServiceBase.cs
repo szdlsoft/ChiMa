@@ -11,6 +11,7 @@ using Abp;
 using Abp.UI;
 using SixMan.ChiMa.Domain;
 using Abp.Domain.Uow;
+using System.Linq;
 
 namespace SixMan.ChiMa.Application
 {
@@ -81,16 +82,17 @@ namespace SixMan.ChiMa.Application
 
             //var userInfoRepository = IocManager.Instance.IocContainer.Resolve<IRepository<UserInfo, long>>();
 
-            var userInfo = _userInfoRepository.Single(ui => ui.User.Id == userId);
+            var userInfo = _userInfoRepository.GetAllIncluding(ui => ui.User,
+                                                               ui => ui.Family)
+                                              .Where(ui => ui.User.Id == userId)
+                                              .FirstOrDefault();
             if (userInfo == null)
             {
-                //userInfo = new UserInfo()
-                //{
-                //    UserId = userId,
-                //};
-
-                //userInfo = _userInfoRepository.Get(_userInfoRepository.InsertAndGetId(userInfo));
                 throw new UserFriendlyException("请使用手机用户登陆！");
+            }
+            if( userInfo.Mobile == null)
+            {
+                userInfo.Mobile = userInfo.User?.UserName; // 防止原来添加的用户mobile为空
             }
 
             return userInfo;

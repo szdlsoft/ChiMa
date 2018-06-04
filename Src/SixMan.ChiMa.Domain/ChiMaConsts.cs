@@ -17,5 +17,7 @@
         public const int ValidateCodeLength = 4;
 
         public const string ImagePath = "images";
+        public const string HeadPortraitImgPath = "HeadPortrait";
+
     }
 }
