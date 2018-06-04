@@ -159,14 +159,14 @@ namespace SixMan.ChiMa.Application.Dish
 
         public IList<PlanDto> GetTodayAtTable()
         {
-            CurrentUnitOfWork.DisableFilter(ChimaDataFilter.FamillyDataFilter);
+            DisableFamilyDataFilter();
 
             var result = Repository.GetAll()
                              .Take(3)
                              .Select(MapToEntityDto)
                              .ToList();
 
-            CurrentUnitOfWork.EnableFilter(ChimaDataFilter.FamillyDataFilter);
+            EnableFamilyDataFilter();
 
             return result;
         }

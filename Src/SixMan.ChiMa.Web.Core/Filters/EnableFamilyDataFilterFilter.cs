@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace SixMan.ChiMa.Filters
 {
-    public class SetFamilyParaFilter : IAsyncActionFilter, ITransientDependency
+    public class EnableFamilyDataFilterFilter : IAsyncActionFilter, ITransientDependency
     {
         private readonly IUnitOfWorkManager _unitOfWorkManager;
 
-        public SetFamilyParaFilter(IUnitOfWorkManager unitOfWorkManager)
+        public EnableFamilyDataFilterFilter(IUnitOfWorkManager unitOfWorkManager)
         {
             _unitOfWorkManager = unitOfWorkManager;
         }
@@ -21,9 +21,9 @@ namespace SixMan.ChiMa.Filters
         {
             using (var uow = _unitOfWorkManager.Begin())
             {
-                if (context.Controller is ISetFamilyPara)
+                if (context.Controller is IUseFamilyDataFilter)
                 {
-                    (context.Controller as ISetFamilyPara).SetFilterPara();
+                    (context.Controller as IUseFamilyDataFilter).UseFamilyDataFilter();
                 }
 
                 await next();

@@ -36,7 +36,7 @@ namespace SixMan.ChiMa.Web.Mvc.Controllers
         //[AbpAuthorize]
         public JsonResult UploadHeadPortrait( IFormFile imgfile )
         {
-            CurrentUnitOfWork.DisableFilter(ChimaDataFilter.FamillyDataFilter);
+            //CurrentUnitOfWork.DisableFilter(ChimaDataFilter.FamillyDataFilter);
 
             if ( !AbpSession.UserId.HasValue)
             {

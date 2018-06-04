@@ -119,7 +119,7 @@ namespace SixMan.ChiMa.EFCore
             //设置家庭过滤器
             //modelBuilder.Filter("FamilyFilter",
             //    (IHaveFamilyId entity, int familyId) => entity.FamilyId == familyId, 0);
-            CurrentUnitOfWorkProvider?.Current.EnableFilter(ChimaDataFilter.FamillyDataFilter);
+            //CurrentUnitOfWorkProvider?.Current.EnableFilter(ChimaDataFilter.FamillyDataFilter);
 
             //modelBuilder.Entity<FoodMaterialInventory>().HasQueryFilter(fi => fi.FamilyId == 0);
 

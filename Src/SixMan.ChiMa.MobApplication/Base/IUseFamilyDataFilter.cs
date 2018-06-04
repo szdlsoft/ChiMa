@@ -4,8 +4,8 @@ using System.Text;
 
 namespace SixMan.ChiMa.Application
 {
-    public interface ISetFamilyPara
+    public interface IUseFamilyDataFilter
     {
-        void SetFilterPara();
+        void UseFamilyDataFilter();
     }
 }

@@ -45,7 +45,7 @@ namespace SixMan.ChiMa.EFCore
 
         private void AddUnitOfWorkFilters()
         {
-            Configuration.UnitOfWork.RegisterFilter(ChimaDataFilter.FamillyDataFilter, true);
+            Configuration.UnitOfWork.RegisterFilter(ChimaDataFilter.FamillyDataFilter, false);
         }
 
         /// <summary>

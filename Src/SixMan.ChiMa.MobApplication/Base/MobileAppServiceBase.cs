@@ -19,7 +19,7 @@ namespace SixMan.ChiMa.Application
         //, IMobileAppService<TEntityDto, TCreateInput, TUpdateInput>
         //, IReadAppService<TEntityDto>
         ,IMobileAppService
-        , ISetFamilyPara
+        , IUseFamilyDataFilter
 
         where TEntity : class, IEntity<long>
         where TEntityDto : IEntityDto<long>
@@ -39,9 +39,21 @@ namespace SixMan.ChiMa.Application
 
         [RemoteService(isEnabled:false)]
         [UnitOfWork]
-        public void SetFilterPara()
+        public void UseFamilyDataFilter()
         {
             CurrentUnitOfWork.SetFilterParameter(ChimaDataFilter.FamillyDataFilter, ChimaDataFilter.FamillyPara, Family);
+            EnableFamilyDataFilter();
+        }
+
+        protected void EnableFamilyDataFilter()
+        {
+            CurrentUnitOfWork.EnableFilter(ChimaDataFilter.FamillyDataFilter);
+
+        }
+
+        protected void DisableFamilyDataFilter()
+        {
+            CurrentUnitOfWork.DisableFilter(ChimaDataFilter.FamillyDataFilter);
         }
 
 
@@ -99,7 +111,7 @@ namespace SixMan.ChiMa.Application
         }
         private Domain.Family.Family GetOrCreateFamily()
         {
-            CurrentUnitOfWork.DisableFilter(ChimaDataFilter.FamillyDataFilter);
+            DisableFamilyDataFilter();
 
             if (!AbpSession.UserId.HasValue)
             {
@@ -112,7 +124,7 @@ namespace SixMan.ChiMa.Application
                 throw new UserFriendlyException("请使用手机用户登陆！");
             }
 
-            CurrentUnitOfWork.EnableFilter(ChimaDataFilter.FamillyDataFilter);
+            EnableFamilyDataFilter();
 
             return family;
         }
