@@ -110,6 +110,10 @@ namespace SixMan.ChiMa.Application
 
                 return _family;
             }
+            set
+            {
+                _family = value;
+            }
         }
         private Domain.Family.Family GetOrCreateFamily()
         {

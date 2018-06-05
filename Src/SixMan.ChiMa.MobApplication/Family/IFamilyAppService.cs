@@ -33,5 +33,21 @@ namespace SixMan.ChiMa.Application.Family
         /// <param name="input"></param>
         /// <returns></returns>
         MobUserInfoDto UpdateCurrentUserInfo(UpdateMobUserInfoInput input );
+        /// <summary>
+        /// 加入新家庭
+        /// </summary>
+        /// <param name="newFamilyId"></param>
+        void JoinNewFamily(long newFamilyId);
+        /// <summary>
+        /// 获取家庭信息
+        /// </summary>
+        /// <returns></returns>
+        FamilyDto Get();
+        /// <summary>
+        /// 修改家庭成员
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        ICollection<FamilyMemberDto> UpdateMembers(UpdateMembersInput input);
     }
 }

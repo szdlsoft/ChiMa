@@ -85,6 +85,7 @@
  * 1.5.1  2018-06-04   Upd FamillyDataFilter
  *                     Add 获取用户信息、修改用户信息  
  *                     Upd UserInfo
+ * 1.5.2  2018-06-05   Add 加入家庭、获取家庭信息                     
  * 
  * **********************************************************/
 
@@ -103,7 +104,7 @@ namespace SixMan.ChiMa.Domain
         /// Gets current version of the application.
         /// It's also shown in the web page.
         /// </summary>
-        public const string Version = "1.5.1";
+        public const string Version = "1.5.2";
 
         /// <summary>
         /// Gets release (last build) date of the application.

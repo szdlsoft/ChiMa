@@ -14,9 +14,12 @@ namespace SixMan.ChiMa.Application.Family
         /// 全球唯一标识
         /// </summary>
         public Guid UUID { get; set; }        
-        /// <summary>
-        /// 家庭创建人
-        /// </summary>
-        public UserInfo Creater { get; set; }
+        ///// <summary>
+        ///// 家庭创建人
+        ///// </summary>
+        //public MobUserInfoDto Creater { get; set; }
+
+        public ICollection<FamilyMemberDto> Members { get; set; }
+        public ICollection<MobUserInfoDto> UserInfos { get; set; }
     }
 }

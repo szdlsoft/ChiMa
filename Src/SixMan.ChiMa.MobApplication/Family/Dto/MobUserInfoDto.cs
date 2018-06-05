@@ -32,5 +32,7 @@ namespace SixMan.ChiMa.Application.Family
         public int Credits { get; set; }
 
         public long FamilyId { get; set; }
+
+        public bool IsFamilyCreater { get; set; }
     }
 }

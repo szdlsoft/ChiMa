@@ -58,6 +58,12 @@ namespace SixMan.ChiMa.Domain.Family
         /// 人员健康关注
         /// </summary>
         public ICollection<PersonHealthAffect> FoodMaterialHealthAffects { get; set; }
+
+        public FamilyMember()
+        {
+            Age = new Range();
+            Income = new Range();
+        }
     }
 
 

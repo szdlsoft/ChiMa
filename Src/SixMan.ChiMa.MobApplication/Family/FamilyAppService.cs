@@ -23,19 +23,19 @@ namespace SixMan.ChiMa.Application.Family
         : MobileAppServiceBase<Domain.Family.Family, FamilyDto>
         , IFamilyAppService
     {
-        //IRepository<UserInfo, long> _userInfoRepository;
         IDishRepository _dishRepository;
         IRepository<UserFavoriteDish, long> _userFavoriteDishRepository;
-        //IRepository<UserInfo, long> _userInfoRepository;
+        IRepository<FamilyMember, long> _familyMemberRepository;
         public FamilyAppService(IFamilyRepository repository
                                   , IDishRepository dishRepository
                                   , IRepository<UserFavoriteDish, long> userFavoriteDishRepository
+                                  , IRepository<FamilyMember, long> familyMemberRepository
                                     ) 
             : base(repository)
         {
-            //_userInfoRepository = userInfoRepository;
             _dishRepository = dishRepository;
             _userFavoriteDishRepository = userFavoriteDishRepository;
+            _familyMemberRepository = familyMemberRepository;
         }
 
         [AbpAuthorize]
@@ -109,5 +109,58 @@ namespace SixMan.ChiMa.Application.Family
             }
         }
 
+        [AbpAuthorize]
+        public void JoinNewFamily( long newFamilyId )
+        {
+            if( Family.Id != newFamilyId)
+            {
+                Family = _familyResponsitory.Get(newFamilyId);
+
+                UserInfo.Family = Family;
+                UserInfo.FamilyId = Family.Id;
+
+                _userInfoRepository.Update(UserInfo);
+            }
+        }
+
+        [AbpAuthorize]
+        public FamilyDto Get()
+        {
+            var family = _familyResponsitory.GetAllIncluding( f => f.Members,
+                                                              f => f.UserInfos )
+                                             .Where( f => f.Id == Family.Id )
+                                             .FirstOrDefault();
+            return MapToEntityDto( family );
+        }
+
+        [AbpAuthorize]
+        public ICollection<FamilyMemberDto> UpdateMembers(UpdateMembersInput input)
+        {
+            List<FamilyMember> oldMembers = _familyMemberRepository.GetAll().ToList();
+            foreach( var inputMember in input)
+            {
+                var oldMember = oldMembers.FirstOrDefault(om => om.Id == inputMember.Id);
+                if (oldMember != null)
+                {
+                    var updateMember = Mapper.Map(inputMember, oldMember);
+                    _familyMemberRepository.Update(updateMember);
+
+                    oldMembers.Remove(oldMember);
+                }
+                else
+                {
+                    var newMember = Mapper.Map<FamilyMember>( inputMember );
+                    newMember.Family = Family;
+                    _familyMemberRepository.Insert(newMember);
+                }
+            }
+
+            foreach( var m in oldMembers)
+            {
+                _familyMemberRepository.Delete(m);
+            }
+
+            return Mapper.Map<List<FamilyMemberDto>>(_familyMemberRepository.GetAll().ToList());
+        }
     }
 }
