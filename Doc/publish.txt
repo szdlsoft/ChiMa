@@ -128,3 +128,5 @@ Production环境，如有新的css js 加入需要bundle, 必须执行dotnet bundle才能生效！
      weight: 体重,
      avoidFoods: 忌口,
      chronic: 慢性病,
+
+可以兼容的： 前端“创建家庭”对应的API 实际上就是 “设置家庭成员”；前端“加入家庭”对应的API 实际上就是 “修改当前用户所属家庭”
