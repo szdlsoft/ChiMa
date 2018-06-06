@@ -115,8 +115,16 @@ Production环境，如有新的css js 加入需要bundle, 必须执行dotnet bundle才能生效！
 3：修改当前用户信息 /api/services/mob/Family/UpdateCurrentUserInfo  注意：需要手机用户token
 
 2018-06-05
+以下功能已完成
 1：/api/services/mob/MobUser/Register 进行用户注册时，根据输入的FamilyId, 如为空则自动创建一个家庭，如不为空则加入该FamilyId家庭； 
   因此，注册时就会有一个家庭会和用户关联，无需再创建家庭。
-2 加入新家庭：  /api/services/mob/Family/JoinNewFamily   
+2 修改当前用户所属家庭：  /api/services/mob/Family/UpdateCurrentUserFamily   
 3 获取家庭信息 /api/services/mob/Family/Get
-4 修改家庭成员 /api/services/mob/Family/UpdateMembers
+4 设置家庭成员 /api/services/mob/Family/SetMembers
+     personKind字段： 幼儿   = 0 , 青少年  = 1 , 成人  = 2 , 老人  = 3, 高龄老人  = 4
+	 sex字段: false = 女, 男 = true
+	 nickName: 家庭昵称,
+     height: 身高,
+     weight: 体重,
+     avoidFoods: 忌口,
+     chronic: 慢性病,

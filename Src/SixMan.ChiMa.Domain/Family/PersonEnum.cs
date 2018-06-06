@@ -8,13 +8,20 @@ namespace SixMan.ChiMa.Domain.Family
 {
     public enum PersonEnum
     {
-        //小人
-        Child
+        //幼儿
+        Child = 0
         ,
-        //大人
-        Adult
+        //青少年
+        Young = 1
+        ,
+        //成人
+        Adult = 2
         ,
         //老人
-        Grand
+        Grand = 3
+        ,
+        //高龄老人
+        Eld = 4
+        
     }
 }

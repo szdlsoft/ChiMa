@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SixMan.ChiMa.Application.Family
 {
-    public class UpdateMembersInput
+    public class SetMembersInput
        : List<FamilyMemberDto>
     {
        

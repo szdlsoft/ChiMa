@@ -110,7 +110,7 @@ namespace SixMan.ChiMa.Application.Family
         }
 
         [AbpAuthorize]
-        public void JoinNewFamily( long newFamilyId )
+        public void UpdateCurrentUserFamily( long newFamilyId )
         {
             if( Family.Id != newFamilyId)
             {
@@ -134,7 +134,7 @@ namespace SixMan.ChiMa.Application.Family
         }
 
         [AbpAuthorize]
-        public ICollection<FamilyMemberDto> UpdateMembers(UpdateMembersInput input)
+        public ICollection<FamilyMemberDto> SetMembers(SetMembersInput input)
         {
             List<FamilyMember> oldMembers = _familyMemberRepository.GetAll().ToList();
             foreach( var inputMember in input)
@@ -159,6 +159,9 @@ namespace SixMan.ChiMa.Application.Family
             {
                 _familyMemberRepository.Delete(m);
             }
+
+            CurrentUnitOfWork.SaveChanges();
+
 
             return Mapper.Map<List<FamilyMemberDto>>(_familyMemberRepository.GetAll().ToList());
         }

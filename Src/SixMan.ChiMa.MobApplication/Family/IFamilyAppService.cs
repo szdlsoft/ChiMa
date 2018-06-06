@@ -37,7 +37,7 @@ namespace SixMan.ChiMa.Application.Family
         /// 加入新家庭
         /// </summary>
         /// <param name="newFamilyId"></param>
-        void JoinNewFamily(long newFamilyId);
+        void UpdateCurrentUserFamily(long newFamilyId);
         /// <summary>
         /// 获取家庭信息
         /// </summary>
@@ -48,6 +48,6 @@ namespace SixMan.ChiMa.Application.Family
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        ICollection<FamilyMemberDto> UpdateMembers(UpdateMembersInput input);
+        ICollection<FamilyMemberDto> SetMembers(SetMembersInput input);
     }
 }
